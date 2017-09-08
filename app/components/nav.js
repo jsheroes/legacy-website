@@ -68,7 +68,7 @@ export default class Nav extends Component {
                   )
                 })}
                 <p className="nav-links">
-                  <Link href="/2017/"><a target="_blank">JSHeroes 2017</a></Link>
+                  <Link href="https://2017.jsheroes.io"><a target="_blank">JSHeroes 2017</a></Link>
                   <Link href="/code-of-conduct"><a target="_blank">Code of Conduct</a></Link>
                 </p>
               </ul>
