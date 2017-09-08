@@ -8,16 +8,13 @@ import Footer from '../components/footer'
 configureAnchors({ offset: -60, scrollDuration: 1000 })
 const Main = props => (
   <div>
-    {/* we're using next/head to place this styles in the head tag */}
     <Head>
-
       <link href="static/img/favicon.png" rel="shortcut icon" />
-
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"/>
       <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
       <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
     </Head>
-    <Nav />
+    <Nav page={props.page}/>
     {props.children}
     <Footer />
 
@@ -47,7 +44,8 @@ const Main = props => (
 )
 
 Main.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.any,
+  page: PropTypes.string
 }
 
 export default Main

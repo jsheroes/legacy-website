@@ -51,7 +51,7 @@ Section.propTypes = {
   mainContainer: PropTypes.shape({
     style: PropTypes.object
   }),
-  children: PropTypes.string.isRequired
+  children: PropTypes.any
 }
 
 module.exports = Section

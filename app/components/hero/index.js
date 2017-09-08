@@ -66,7 +66,7 @@ class Hero extends Component {
           <meta property="og:title" content="JSHeroes 2018 | Prepare for takeoff" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="http://www.jsheroes.io/" />
-          <meta property="og:image" content="http://www.jsheroes.io/static/img/social_media/87995196.jpeg" />
+          <meta property="og:image" content="http://www.jsheroes.io/static/img/takeoff.png" />
           <meta property="og:image:type" content="image/png" />
           <meta property="og:description" content="Check the latest updates and register your interest for the next event!" />
           <meta property="og:locale" content="en_US" />
@@ -74,7 +74,7 @@ class Hero extends Component {
           <meta name="twitter:site" content="@jsheroes" />
           <meta name="twitter:title" content="Your JSHeroes 2017 Conference Info" />
           <meta name="twitter:description" content="Check the latest updates and register your interest for the next event!" />
-          <meta name="twitter:image" content="http://www.jsheroes.io/static/img/banners/newsletter_banner.png" />
+          <meta name="twitter:image" content="http://www.jsheroes.io/static/img/banners/takeoff.png" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@jsheroes" />
         </Head>
@@ -84,7 +84,7 @@ class Hero extends Component {
         >
           <ScrollableAnchor id={'home'}>
             <div className="header">
-              <video preload="auto" autoPlay muted loop poster="">
+              <video preload="auto" autoPlay muted loop poster="/static/img/video-cover.png">
                 <source src="/static/video/js-hero-loop.mp4" type="video/mp4" />
               </video>
               <div className="headOverlay">

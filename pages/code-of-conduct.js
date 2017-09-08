@@ -3,7 +3,7 @@ import ConductHero from '../app/components/conduct'
 import ConductMain from '../app/components/conduct/conduct.main'
 
 const ConductPage = props => (
-  <CompMain>
+  <CompMain page="code-of-conduct">
     <ConductHero />
     <ConductMain />
   </CompMain>

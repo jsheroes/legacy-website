@@ -13,11 +13,9 @@ export default class Nav extends Component {
       smallNav: false,
       currentHash: ''
     }
-
     this.handleScroll = this.handleScroll.bind(this)
     this.handleHashChange = this.handleHashChange.bind(this)
   }
-
   handleHashChange (ev) {
     this.setState({ currentHash: ev.newURL.split('#')[1] })
   }
@@ -52,6 +50,9 @@ export default class Nav extends Component {
           >
             <nav>
               <ul>
+                {this.props.page === 'code-of-conduct' &&
+                <Link href="/index"><a target="_blank"><img src="static/img/website_logo.png" alt="logo" /></a></Link>
+                }
                 {menuItems.map((item, key) => {
                   const active = `#${this.state.currentHash}` === item.url
                     ? 'active'
@@ -111,7 +112,6 @@ export default class Nav extends Component {
           }
 
           nav {
-            display: block!important;
             padding: 0 15px;
             margin: 0 auto;
           }
@@ -154,10 +154,6 @@ export default class Nav extends Component {
           }
 
           @media (max-width: ${mediaQueries.L}) {
-            .nav-wrapper img {
-              display: none;
-            }
-
             .nav-wrapper a {
               font-size: 16px;
             }
@@ -231,5 +227,6 @@ export default class Nav extends Component {
 }
 
 Nav.propTypes = {
-  style: PropTypes.string.isRequired
+  style: PropTypes.any,
+  page: PropTypes.string
 }
