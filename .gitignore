@@ -1,0 +1,6 @@
+.next
+.build
+.vscode
+npm-debug.log
+.idea
+node_modules
