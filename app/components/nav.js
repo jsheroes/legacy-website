@@ -13,30 +13,17 @@ export default class Nav extends Component {
       smallNav: false,
       currentHash: ''
     }
-    this.handleScroll = this.handleScroll.bind(this)
     this.handleHashChange = this.handleHashChange.bind(this)
   }
   handleHashChange (ev) {
     this.setState({ currentHash: ev.newURL.split('#')[1] })
   }
 
-  handleScroll () {
-    const scrollPosition =
-      window.pageYOffset || document.documentElement.scrollTop
-    if (scrollPosition > 50 && !this.state.smallNav) {
-      this.setState({ smallNav: true })
-    } else if (scrollPosition < 50 && this.state.smallNav) {
-      this.setState({ smallNav: false })
-    }
-  }
-
   componentDidMount () {
-    window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('hashchange', this.handleHashChange)
   }
 
   componentWillUnmount () {
-    window.removeEventListener('scroll', this.handleScroll)
     window.removeEventListener('hashchange', this.handleHashChange)
   }
 
@@ -44,14 +31,11 @@ export default class Nav extends Component {
     return (
       <div>
         <div className="nav-wrapper">
-          <div
-            style={this.props.style}
-            className={this.state.smallNav ? 'smallNav' : 'bigNav'}
-          >
+          <div className='bigNav'>
             <nav>
               <ul>
                 {this.props.page === 'code-of-conduct' &&
-                <Link href="/index"><a target="_blank"><img src="static/img/website_logo.png" alt="logo" /></a></Link>
+                <Link href="/index"><a target="_blank"><img src="static/img/website_logo.png" alt="logo" className="site-logo"/></a></Link>
                 }
                 {menuItems.map((item, key) => {
                   const active = `#${this.state.currentHash}` === item.url
@@ -76,15 +60,12 @@ export default class Nav extends Component {
           </div>
         </div>
         <style jsx >{`
-
-          .smallNav {
-            background-color: rgba(0,0,0,0.3);
-            transition: all .2s;
-            line-height: 45px;
+          .site-logo {
+            max-width: 140px;
           }
           .bigNav {
             background-color: transparent;
-            transition: all .2s;
+            transition: background-color .4s;
           }
           .nav-links {
             float: right;
@@ -100,11 +81,10 @@ export default class Nav extends Component {
           }
           .nav-wrapper div {
             width: 100%;
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             z-index: 3;
-            background-color: transparent;
             line-height: 75px;
             -webkit-transition: line-height .3s ease-out;
             -moz-transition: line-height .3s ease-out;
@@ -185,7 +165,7 @@ export default class Nav extends Component {
               float: none;
               line-height: 1px;
             }
-            .bigNav .fa, .smallNav .fa {
+            .bigNav .fa {
               font-size: 22px;
             }
           }

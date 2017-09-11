@@ -30,7 +30,7 @@ class Hero extends Component {
     window.addEventListener('resize', this.updateHeroSize)
   }
 
-  componentWillUnMount () {
+  componentWillUnmount () {
     window.removeEventListener('resize', this.updateHeroSize)
   }
 
