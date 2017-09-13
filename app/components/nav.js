@@ -11,19 +11,42 @@ export default class Nav extends Component {
     this.state = {
       height: 100,
       smallNav: false,
-      currentHash: ''
+      currentHash: '',
+      logoFixed: false
     }
+    this.handleScroll = this.handleScroll.bind(this)
     this.handleHashChange = this.handleHashChange.bind(this)
   }
   handleHashChange (ev) {
     this.setState({ currentHash: ev.newURL.split('#')[1] })
   }
 
+  handleScroll () {
+    const scrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop
+
+    if (scrollPosition > this.state.logoOffsetTop) {
+      this.setState({logoFixed: true})
+    } else {
+      this.setState({logoFixed: false})
+    }
+  }
+
   componentDidMount () {
+    const rect = document.getElementById('logo').getBoundingClientRect()
+    const docEl = document.documentElement
+    const logoElementOffsetTop = rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+
+    this.setState({
+      logoOffsetTop: logoElementOffsetTop
+    })
+
+    window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('hashchange', this.handleHashChange)
   }
 
   componentWillUnmount () {
+    window.removeEventListener('scroll', this.handleScroll)
     window.removeEventListener('hashchange', this.handleHashChange)
   }
 
@@ -31,12 +54,19 @@ export default class Nav extends Component {
     return (
       <div>
         <div className="nav-wrapper">
-          <div className='bigNav'>
+          <div className={ this.state.logoFixed ? 'fixed-logo-wrapper show' : 'fixed-logo-wrapper' }>
+            <Link href="/">
+              <a target="_blank" className="logo-anchor">
+                <img src="static/img/website_logo.png" alt="logo" className={ this.state.logoFixed ? 'logo-fixed show' : 'logo-fixed' }/>
+              </a>
+            </Link>
+          </div>
+          <div
+            style={this.props.style}
+            className={this.state.logoFixed ? 'smallNav' : 'bigNav'}
+          >
             <nav>
               <ul>
-                {this.props.page === 'code-of-conduct' &&
-                <Link href="/index"><a target="_blank"><img src="static/img/website_logo.png" alt="logo" className="site-logo"/></a></Link>
-                }
                 {menuItems.map((item, key) => {
                   const active = `#${this.state.currentHash}` === item.url
                     ? 'active'
@@ -60,12 +90,44 @@ export default class Nav extends Component {
           </div>
         </div>
         <style jsx >{`
-          .site-logo {
-            max-width: 140px;
+          .nav-wrapper .fixed-logo-wrapper {
+            height: 45px;
+            width: 150px;
+
+            position: fixed;
+            top: 10px;
+            left: 50%;
           }
-          .bigNav {
+          .nav-wrapper .fixed-logo-wrapper.show {
+            z-index: 101;
+          }
+          .nav-wrapper .fixed-logo-wrapper .logo-fixed {
+            opacity: 0;
+            width: 100%;
+            transform:translate(-75px);
+            transition: opacity .2s linear;
+          }
+          .nav-wrapper .fixed-logo-wrapper .logo-fixed.show {
+            opacity: 1;
+            transition: opacity .2s linear;
+          }
+          .nav-wrapper .smallNav {
+            background-color: rgba(0,0,0,0.3);
+            -webkit-transition: all .3s linear;
+            line-height: 60px!important;
+            transition: all .3s linear;
+            z-index: 100;
+          }
+          .nav-wrapper .bigNav {
             background-color: transparent;
-            transition: background-color .4s;
+            -webkit-transition: all .3s linear;
+            transition: all .3s linear;
+          }
+          .nav-wrapper .smallNav ul {
+            opacity: 0;
+            overflow: hidden;
+            height: 0;
+            transition: opacity .5s linear;
           }
           .nav-links {
             float: right;
@@ -81,7 +143,7 @@ export default class Nav extends Component {
           }
           .nav-wrapper div {
             width: 100%;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             z-index: 3;
@@ -92,6 +154,7 @@ export default class Nav extends Component {
           }
 
           nav {
+            min-height: 55px;
             padding: 0 15px;
             margin: 0 auto;
           }
@@ -165,7 +228,7 @@ export default class Nav extends Component {
               float: none;
               line-height: 1px;
             }
-            .bigNav .fa {
+            .bigNav .fa, .smallNav .fa {
               font-size: 22px;
             }
           }

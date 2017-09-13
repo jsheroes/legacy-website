@@ -33,7 +33,7 @@ class ScrollBtn extends Component {
   render () {
     return (
       <div className={`back-top ${this.state.show ? 'show' : ''}`}>
-        <a href="#home">
+        <a href="#top-section">
           <i className="fa fa-angle-up" />
         </a>
 

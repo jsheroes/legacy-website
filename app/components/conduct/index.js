@@ -54,11 +54,16 @@ const ConductHero = props => (
       mainContainer={{ style: heroDarkOverlay }}
     >
       <div className="dark-banner-overlay">
-        <h2 className="text-center">The JSHeroes Code of Conduct</h2>
+        <h2 className="text-center" id="logo">The <span className="logoJs">JS</span><span className="logoHeroes">Heroes</span> Code of Conduct</h2>
       </div>
     </Section>
-
     <style jsx>{`
+      .logoJs {
+        color: #0098ff;
+      }
+      .logoHeroes {
+        color: #e1ebef;
+      }
       .header-logo {
         padding: 10px;
       }

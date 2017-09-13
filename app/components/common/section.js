@@ -2,7 +2,7 @@ import { style, mediaQueries } from '../../constants'
 import PropTypes from 'prop-types'
 
 const Section = props => (
-  <section style={props.section.style}>
+  <section id="top-section" style={props.section.style}>
     <div style={props.mainContainer.style}>
       <style jsx>{`
       

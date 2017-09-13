@@ -11,10 +11,24 @@ class Hero extends Component {
 
     this.state = {
       windowHeight: 800,
-      top: 0
+      top: 0,
+      logoFixed: false,
+      logoElementOffsetTop: 0
     }
 
+    this.handleScroll = this.handleScroll.bind(this)
     this.updateHeroSize = this.updateHeroSize.bind(this)
+  }
+
+  handleScroll () {
+    const scrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop
+
+    if (scrollPosition > this.state.logoOffsetTop) {
+      this.setState({logoFixed: true})
+    } else {
+      this.setState({logoFixed: false})
+    }
   }
 
   updateHeroSize (ev) {
@@ -24,13 +38,20 @@ class Hero extends Component {
   }
 
   componentDidMount () {
+    const rect = document.getElementById('logo').getBoundingClientRect()
+    const docEl = document.documentElement
+    const logoElementOffsetTop = rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+
     this.setState({
+      logoOffsetTop: logoElementOffsetTop,
       windowHeight: window.innerHeight
     })
+    window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('resize', this.updateHeroSize)
   }
 
   componentWillUnmount () {
+    window.removeEventListener('scroll', this.handleScroll)
     window.removeEventListener('resize', this.updateHeroSize)
   }
 
@@ -92,8 +113,10 @@ class Hero extends Component {
 
               <div className="container header-container">
                 <div className="row">
-                  <div className="col-md-12 header-logo">
-                    <img src="static/img/website_logo.png" alt="logo" />
+                  <div className='col-md-12 header-logo'>
+                    <div className={ this.state.logoFixed ? 'hide' : '' } id="logo">
+                      <span className="logoJs">JS</span><span className="logoHeroes">Heroes</span>
+                    </div>
                   </div>
                 </div>
                 <div className="row">
@@ -130,16 +153,32 @@ class Hero extends Component {
           </ScrollableAnchor>
 
           <style jsx>{`
+          .logoJs {
+            color: #0098ff;
+          }
+          .logoHeroes {
+            color: #e1ebef;
+          }
           .header-container {
             margin-top: 20%;
           }
           .header-logo {
-            margin: 0 auto;
+            height: 45px;
           }
-          .header-logo img {
+          .header-logo>div {
             display: block;
             margin: 0 auto;
-            width: 22%;
+            width: 250px;
+            font-size: 54px;
+            font-weight: bold;
+            opacity: 1;
+            transition: opacity .1s linear;
+          }
+          .header-logo>div .logoJs {
+            letter-spacing: -3px;
+          }
+          .header-logo>div .logoHeroes {
+            letter-spacing: -1px;
           }
 
           .header-text {
