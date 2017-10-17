@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import ScrollableAnchor from 'react-scrollable-anchor'
+import Head from 'next/head';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
-import Section from '../../components/common/section'
+import Section from '../../components/common/section';
 
 const heroBcgImg = {
   position: 'relative',
@@ -10,8 +10,8 @@ const heroBcgImg = {
   backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
-  height: '50vh'
-}
+  height: '50vh',
+};
 
 const heroDarkOverlay = {
   display: 'block',
@@ -21,8 +21,8 @@ const heroDarkOverlay = {
   position: 'absolute',
   top: '0',
   left: '0',
-  background: 'hsla(0,0%,0%,.4) none repeat scroll 0 0'
-}
+  background: 'hsla(0,0%,0%,.4) none repeat scroll 0 0',
+};
 
 const NewsletterHero = props => (
   <div>
@@ -32,8 +32,10 @@ const NewsletterHero = props => (
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <meta name="keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter" />
       <meta name="description" content="read our first Newsletter for participants. See you soon ;)" />
-      <meta name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community,
-          meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter" />
+      <meta
+        name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community,
+          meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
+      />
       <title>JSHeroes 2017 | Newsletter</title>
       <meta property="og:title" content="Your JSHeroes 2017 Conference Info" />
       <meta property="og:type" content="website" />
@@ -60,6 +62,6 @@ const NewsletterHero = props => (
       </ScrollableAnchor>
     </Section>
   </div>
-)
+);
 
-module.exports = NewsletterHero
+module.exports = NewsletterHero;

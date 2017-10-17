@@ -4,3 +4,5 @@
 npm-debug.log
 .idea
 node_modules
+app/data/speakers.hidden.js
+static/img/speakers.hidden/

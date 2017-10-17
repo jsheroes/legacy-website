@@ -1,5 +1,5 @@
-import { style, mediaQueries } from '../../constants'
-import PropTypes from 'prop-types'
+import { style, mediaQueries } from '../../constants';
+import PropTypes from 'prop-types';
 
 const Section = props => (
   <section id="top-section" style={props.section.style}>
@@ -33,25 +33,25 @@ const Section = props => (
       {props.children}
     </div>
   </section>
-)
+);
 
 Section.defaultProps = {
   section: {
-    style: {}
+    style: {},
   },
   mainContainer: {
-    style: {}
-  }
-}
+    style: {},
+  },
+};
 
 Section.propTypes = {
   section: PropTypes.shape({
-    style: PropTypes.object
+    style: PropTypes.object,
   }),
   mainContainer: PropTypes.shape({
-    style: PropTypes.object
+    style: PropTypes.object,
   }),
-  children: PropTypes.any
-}
+  children: PropTypes.any,
+};
 
-module.exports = Section
+module.exports = Section;

@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import Section from '../../components/common/section'
-import { styles, mediaQueries } from '../../constants'
+import Link from 'next/link';
+import Section from '../../components/common/section';
+import { styles, mediaQueries } from '../../constants';
 
 const NewsletterMain = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
@@ -265,9 +265,9 @@ const NewsletterMain = () => (
           <p>Cluj JavaScripters</p>
         </div>
       </div>
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
     </div>
 
     <style jsx>{`
@@ -434,6 +434,6 @@ const NewsletterMain = () => (
       }
     `}</style>
   </Section>
-)
+);
 
-module.exports = NewsletterMain
+module.exports = NewsletterMain;

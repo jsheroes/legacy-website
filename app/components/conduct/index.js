@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Section from '../../components/common/section'
-import { styles, mediaQueries } from '../../constants'
+import Head from 'next/head';
+import Section from '../../components/common/section';
+import { styles, mediaQueries } from '../../constants';
 
 const heroBcgImg = {
   position: 'relative',
@@ -9,8 +9,8 @@ const heroBcgImg = {
   backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
-  height: '50vh'
-}
+  height: '50vh',
+};
 
 const heroDarkOverlay = {
   display: 'block',
@@ -20,8 +20,8 @@ const heroDarkOverlay = {
   position: 'absolute',
   top: '0',
   left: '0',
-  background: 'hsla(0,0%,0%,.6) none repeat scroll 0 0'
-}
+  background: 'hsla(0,0%,0%,.6) none repeat scroll 0 0',
+};
 
 const ConductHero = props => (
   <div>
@@ -105,6 +105,6 @@ const ConductHero = props => (
       }
     `}</style>
   </div>
-)
+);
 
-module.exports = ConductHero
+module.exports = ConductHero;

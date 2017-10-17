@@ -1,10 +1,10 @@
-import { Component } from 'react'
-import Link from 'next/link'
+import { Component } from 'react';
+import Link from 'next/link';
 
-import Section from '../../components/common/section'
+import Section from '../../components/common/section';
 
 class Updates extends Component {
-  render () {
+  render() {
     return (
       <Section>
         <div className="wrapper">
@@ -32,8 +32,8 @@ class Updates extends Component {
         }
       `}</style>
       </Section>
-    )
+    );
   }
 }
 
-module.exports = Updates
+module.exports = Updates;

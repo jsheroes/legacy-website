@@ -1,66 +1,66 @@
-import { Component } from 'react'
-import ScrollableAnchor from 'react-scrollable-anchor'
-import Head from 'next/head'
+import { Component } from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import Head from 'next/head';
 
-import Section from '../../components/common/section'
-import { mediaQueries } from '../../constants'
+import Section from '../../components/common/section';
+import { mediaQueries } from '../../constants';
 
 class Hero extends Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
       windowHeight: 800,
       top: 0,
       logoFixed: false,
-      logoElementOffsetTop: 0
-    }
+      logoElementOffsetTop: 0,
+    };
 
-    this.handleScroll = this.handleScroll.bind(this)
-    this.updateHeroSize = this.updateHeroSize.bind(this)
+    this.handleScroll = this.handleScroll.bind(this);
+    this.updateHeroSize = this.updateHeroSize.bind(this);
   }
 
-  handleScroll () {
+  handleScroll() {
     const scrollPosition =
-      window.pageYOffset || document.documentElement.scrollTop
+      window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollPosition > this.state.logoOffsetTop) {
-      this.setState({logoFixed: true})
+      this.setState({ logoFixed: true });
     } else {
-      this.setState({logoFixed: false})
+      this.setState({ logoFixed: false });
     }
   }
 
-  updateHeroSize (ev) {
+  updateHeroSize(ev) {
     this.setState({
-      windowHeight: ev.target.innerHeight
-    })
+      windowHeight: ev.target.innerHeight,
+    });
   }
 
-  componentDidMount () {
-    const rect = document.getElementById('logo').getBoundingClientRect()
-    const docEl = document.documentElement
-    const logoElementOffsetTop = rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+  componentDidMount() {
+    const rect = document.getElementById('logo').getBoundingClientRect();
+    const docEl = document.documentElement;
+    const logoElementOffsetTop = rect.top + (window.pageYOffset || docEl.scrollTop || 0);
 
     this.setState({
       logoOffsetTop: logoElementOffsetTop,
-      windowHeight: window.innerHeight
-    })
-    window.addEventListener('scroll', this.handleScroll)
-    window.addEventListener('resize', this.updateHeroSize)
+      windowHeight: window.innerHeight,
+    });
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.updateHeroSize);
   }
 
-  componentWillUnmount () {
-    window.removeEventListener('scroll', this.handleScroll)
-    window.removeEventListener('resize', this.updateHeroSize)
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.updateHeroSize);
   }
 
-  render () {
+  render() {
     const heroBcgImg = {
       position: 'relative',
       overflow: 'hidden',
-      height: this.state.windowHeight
-    }
+      height: this.state.windowHeight,
+    };
 
     const heroDarkOverlay = {
       display: 'block',
@@ -70,8 +70,8 @@ class Hero extends Component {
       position: 'absolute',
       top: '0',
       left: '0',
-      background: 'hsla(0,0%,0%,.6) none repeat scroll 0 0'
-    }
+      background: 'hsla(0,0%,0%,.6) none repeat scroll 0 0',
+    };
 
     return (
       <div>
@@ -81,8 +81,10 @@ class Hero extends Component {
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <meta name="keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter" />
           <meta name="description" content="read our first Newsletter for participants. See you soon ;)" />
-          <meta name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community,
-        meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter" />
+          <meta
+            name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community,
+        meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
+          />
           <title>JSHeroes 2018 | Prepare for takeoff</title>
           <meta property="og:title" content="JSHeroes 2018 | Prepare for takeoff" />
           <meta property="og:type" content="website" />
@@ -108,13 +110,12 @@ class Hero extends Component {
               <video preload="auto" autoPlay muted loop poster="/static/img/video-cover.png">
                 <source src="/static/video/js-hero-loop.mp4" type="video/mp4" />
               </video>
-              <div className="headOverlay">
-              </div>
+              <div className="headOverlay" />
 
               <div className="container header-container">
                 <div className="row">
-                  <div className='col-md-12 header-logo'>
-                    <div className={ this.state.logoFixed ? 'hide' : '' } id="logo">
+                  <div className="col-md-12 header-logo">
+                    <div className={this.state.logoFixed ? 'hide' : ''} id="logo">
                       <span className="logoJs">JS</span><span className="logoHeroes">Heroes</span>
                     </div>
                   </div>
@@ -269,8 +270,8 @@ class Hero extends Component {
           `}</style>
         </Section>
       </div>
-    )
+    );
   }
 }
 
-module.exports = Hero
+module.exports = Hero;

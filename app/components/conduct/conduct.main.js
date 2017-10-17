@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import Section from '../../components/common/section'
-import { styles, mediaQueries } from '../../constants'
+import Link from 'next/link';
+import Section from '../../components/common/section';
+import { styles, mediaQueries } from '../../constants';
 
 const ConductMain = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
@@ -163,6 +163,6 @@ const ConductMain = () => (
       }
     `}</style>
   </Section>
-)
+);
 
-module.exports = ConductMain
+module.exports = ConductMain;

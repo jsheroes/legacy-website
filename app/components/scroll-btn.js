@@ -1,36 +1,36 @@
-import { Component } from 'react'
-import { styles } from '../constants'
+import { Component } from 'react';
+import { styles } from '../constants';
 
 class ScrollBtn extends Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
-      show: false
-    }
+      show: false,
+    };
 
-    this.handleScroll = this.handleScroll.bind(this)
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
-  handleScroll () {
+  handleScroll() {
     const scrollPosition =
-      window.pageYOffset || document.documentElement.scrollTop
+      window.pageYOffset || document.documentElement.scrollTop;
     if (scrollPosition < 900) {
-      this.setState({ show: false })
+      this.setState({ show: false });
     } else if (scrollPosition >= 900) {
-      this.setState({ show: true })
+      this.setState({ show: true });
     }
   }
 
-  componentDidMount () {
-    window.addEventListener('scroll', this.handleScroll)
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
   }
 
-  componentWillUnmount () {
-    window.removeEventListener('scroll', this.handleScroll)
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
-  render () {
+  render() {
     return (
       <div className={`back-top ${this.state.show ? 'show' : ''}`}>
         <a href="#top-section">
@@ -85,8 +85,8 @@ class ScrollBtn extends Component {
           }
       `}</style>
       </div>
-    )
+    );
   }
 }
 
-module.exports = ScrollBtn
+module.exports = ScrollBtn;

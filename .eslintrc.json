@@ -1,5 +1,5 @@
 {
-    "extends": ["standard", "plugin:react/recommended"],
+    "extends": "airbnb",
     "parser": "babel-eslint",
     "parserOptions": {
         "sourceType": "module"
@@ -14,6 +14,7 @@
         "react/react-in-jsx-scope": 0,
         "react/prop-types": 1,
         "react/display-name": 1,
+        "react/jsx-filename-extension": 0,
         "complexity": [2, 5],
         "max-statements": [2, 7],
         "max-statements-per-line": [2, {

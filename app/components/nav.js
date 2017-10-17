@@ -1,63 +1,63 @@
-import { Component } from 'react'
-import PropTypes from 'prop-types'
+import { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import menuItems from '../data/menuitems'
-import Link from 'next/link'
-import { styles, mediaQueries } from '../constants'
+import menuItems from '../data/menuitems';
+import Link from 'next/link';
+import { styles, mediaQueries } from '../constants';
 
 export default class Nav extends Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       height: 100,
       smallNav: false,
       currentHash: '',
-      logoFixed: false
-    }
-    this.handleScroll = this.handleScroll.bind(this)
-    this.handleHashChange = this.handleHashChange.bind(this)
+      logoFixed: false,
+    };
+    this.handleScroll = this.handleScroll.bind(this);
+    this.handleHashChange = this.handleHashChange.bind(this);
   }
-  handleHashChange (ev) {
-    this.setState({ currentHash: ev.newURL.split('#')[1] })
+  handleHashChange(ev) {
+    this.setState({ currentHash: ev.newURL.split('#')[1] });
   }
 
-  handleScroll () {
+  handleScroll() {
     const scrollPosition =
-      window.pageYOffset || document.documentElement.scrollTop
+      window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollPosition > this.state.logoOffsetTop) {
-      this.setState({logoFixed: true})
+      this.setState({ logoFixed: true });
     } else {
-      this.setState({logoFixed: false})
+      this.setState({ logoFixed: false });
     }
   }
 
-  componentDidMount () {
-    const rect = document.getElementById('logo').getBoundingClientRect()
-    const docEl = document.documentElement
-    const logoElementOffsetTop = rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+  componentDidMount() {
+    const rect = document.getElementById('logo').getBoundingClientRect();
+    const docEl = document.documentElement;
+    const logoElementOffsetTop = rect.top + (window.pageYOffset || docEl.scrollTop || 0);
 
     this.setState({
-      logoOffsetTop: logoElementOffsetTop
-    })
+      logoOffsetTop: logoElementOffsetTop,
+    });
 
-    window.addEventListener('scroll', this.handleScroll)
-    window.addEventListener('hashchange', this.handleHashChange)
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('hashchange', this.handleHashChange);
   }
 
-  componentWillUnmount () {
-    window.removeEventListener('scroll', this.handleScroll)
-    window.removeEventListener('hashchange', this.handleHashChange)
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('hashchange', this.handleHashChange);
   }
 
-  render () {
+  render() {
     return (
       <div>
         <div className="nav-wrapper">
-          <div className={ this.state.logoFixed ? 'fixed-logo-wrapper show' : 'fixed-logo-wrapper' }>
+          <div className={this.state.logoFixed ? 'fixed-logo-wrapper show' : 'fixed-logo-wrapper'}>
             <Link href="/">
               <a target="_blank" className="logo-anchor">
-                <img src="static/img/website_logo.png" alt="logo" className={ this.state.logoFixed ? 'logo-fixed show' : 'logo-fixed' }/>
+                <img src="static/img/website_logo.png" alt="logo" className={this.state.logoFixed ? 'logo-fixed show' : 'logo-fixed'} />
               </a>
             </Link>
           </div>
@@ -70,16 +70,16 @@ export default class Nav extends Component {
                 {menuItems.map((item, key) => {
                   const active = `#${this.state.currentHash}` === item.url
                     ? 'active'
-                    : ''
+                    : '';
                   return (
                     <li key={key}>
                       <Link href={`${item.url}`}>
                         <a className={active} target="_blank">
-                          <i className={item.label} aria-hidden="true"></i>
+                          <i className={item.label} aria-hidden="true" />
                         </a>
                       </Link>
                     </li>
-                  )
+                  );
                 })}
                 <p className="nav-links">
                   <Link href="https://2017.jsheroes.io"><a target="_blank">JSHeroes 2017</a></Link>
@@ -265,11 +265,11 @@ export default class Nav extends Component {
 
         `}</style>
       </div>
-    )
+    );
   }
 }
 
 Nav.propTypes = {
   style: PropTypes.any,
-  page: PropTypes.string
-}
+  page: PropTypes.string,
+};

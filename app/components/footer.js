@@ -1,4 +1,4 @@
-import { styles } from '../constants'
+import { styles } from '../constants';
 
 const Footer = () => (
   <footer>
@@ -6,7 +6,7 @@ const Footer = () => (
       Do you want to organize a JSHeroes event? Drop us a line at <a href="mailto://welcome@jsheroes.io">welcome@jsheroes.io</a>
     </p>
 
-    <p>JSHeroes is made with <i className="fa fa-heart" aria-hidden="true"></i> by the community, for the community. Everyone is welcome, please treat each other with respect and empathy.</p>
+    <p>JSHeroes is made with <i className="fa fa-heart" aria-hidden="true" /> by the community, for the community. Everyone is welcome, please treat each other with respect and empathy.</p>
     <style jsx>{`
       footer {
         padding: 50px 15px 50px;
@@ -52,6 +52,6 @@ const Footer = () => (
 
     `}</style>
   </footer>
-)
+);
 
-module.exports = Footer
+module.exports = Footer;
