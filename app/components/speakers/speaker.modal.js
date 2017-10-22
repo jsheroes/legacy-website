@@ -1,4 +1,4 @@
-import { style, mediaQueries } from '../../constants';
+import { style } from '../../constants';
 import Speaker from './speaker';
 import Modal from '../common/modal';
 

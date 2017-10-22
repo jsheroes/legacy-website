@@ -24,7 +24,7 @@ const heroDarkOverlay = {
   background: 'hsla(0,0%,0%,.4) none repeat scroll 0 0',
 };
 
-const NewsletterHero = props => (
+const NewsletterHero = () => (
   <div>
     <Head>
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -33,8 +33,7 @@ const NewsletterHero = props => (
       <meta name="keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter" />
       <meta name="description" content="read our first Newsletter for participants. See you soon ;)" />
       <meta
-        name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community,
-          meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
+        name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
       />
       <title>JSHeroes 2017 | Newsletter</title>
       <meta property="og:title" content="Your JSHeroes 2017 Conference Info" />

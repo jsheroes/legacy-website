@@ -28,9 +28,9 @@ const Layout = props => (
       }
 
       body {
-        font-size: 18px;
-        font-family: Roboto, sans-serif;
-        font-weight: 300;
+        font-size: 18px !important;
+        font-family: Roboto, sans-serif !important;
+        font-weight: 300 !important;
       }
 
       ul {

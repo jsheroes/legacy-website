@@ -1,4 +1,4 @@
-import { style, mediaQueries } from '../../constants'
+import { style } from '../../constants';
 
 const Modal = props => (
   <div>
@@ -17,7 +17,7 @@ const Modal = props => (
       </div>
     </div>
   </div>
-)
+);
 
 const Style = () => (
   <style jsx>{`
@@ -94,6 +94,6 @@ const Style = () => (
       }
     }
   `}</style>
-)
+);
 
-module.exports = Modal
+export default Modal;

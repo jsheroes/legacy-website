@@ -1,5 +1,5 @@
-import { style, mediaQueries } from '../../constants';
 import PropTypes from 'prop-types';
+import { style, mediaQueries } from '../../constants';
 
 const Section = props => (
   <section id="top-section" style={props.section.style}>

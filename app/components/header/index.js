@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Section from '../../components/common/section';
 import { mediaQueries } from '../../constants';
 
-class Hero extends Component {
+class Header extends Component {
   constructor(props) {
     super(props);
 
@@ -18,23 +18,6 @@ class Hero extends Component {
 
     this.handleScroll = this.handleScroll.bind(this);
     this.updateHeroSize = this.updateHeroSize.bind(this);
-  }
-
-  handleScroll() {
-    const scrollPosition =
-      window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollPosition > this.state.logoOffsetTop) {
-      this.setState({ logoFixed: true });
-    } else {
-      this.setState({ logoFixed: false });
-    }
-  }
-
-  updateHeroSize(ev) {
-    this.setState({
-      windowHeight: ev.target.innerHeight,
-    });
   }
 
   componentDidMount() {
@@ -53,6 +36,23 @@ class Hero extends Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('resize', this.updateHeroSize);
+  }
+
+  handleScroll() {
+    const scrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollPosition > this.state.logoOffsetTop) {
+      this.setState({ logoFixed: true });
+    } else {
+      this.setState({ logoFixed: false });
+    }
+  }
+
+  updateHeroSize(ev) {
+    this.setState({
+      windowHeight: ev.target.innerHeight,
+    });
   }
 
   render() {
@@ -82,8 +82,7 @@ class Hero extends Component {
           <meta name="keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter" />
           <meta name="description" content="read our first Newsletter for participants. See you soon ;)" />
           <meta
-            name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community,
-        meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
+            name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
           />
           <title>JSHeroes 2018 | Prepare for takeoff</title>
           <meta property="og:title" content="JSHeroes 2018 | Prepare for takeoff" />
@@ -134,7 +133,7 @@ class Hero extends Component {
                       className="header-btn header-btn-left float-right"
                       rel="noopener noreferrer"
                     >
-                      Register Your Interest
+                      Buy your Ticket
                     </a>
                   </div>
 
@@ -274,4 +273,4 @@ class Hero extends Component {
   }
 }
 
-module.exports = Hero;
+export default Header;

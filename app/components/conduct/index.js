@@ -23,7 +23,7 @@ const heroDarkOverlay = {
   background: 'hsla(0,0%,0%,.6) none repeat scroll 0 0',
 };
 
-const ConductHero = props => (
+const ConductHero = () => (
   <div>
     <Head>
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />

@@ -10,6 +10,7 @@
     },
     "rules": {
         "semi": 2,
+        "max-len": 1,
         "react/jsx-uses-vars": 2,
         "react/react-in-jsx-scope": 0,
         "react/prop-types": 1,

@@ -1,17 +1,17 @@
 import { Component } from 'react';
+import ReactDOM from 'react-dom';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
 import speakers from '../../data/speakers';
 import Speaker from './speaker';
-import ReactDOM from 'react-dom';
 import Speakermodal from './speaker.modal';
 
 const speakersHTML = [];
 let speakersRow = [];
 
-speakers.map((speaker, key) => {
+speakers.forEach((speaker, key) => {
   speakersRow.push(
     <div key={key.toString()} className="speaker-box">
       <Speaker data={speaker} />
@@ -31,7 +31,7 @@ speakers.map((speaker, key) => {
   }
 });
 
-function openModal(index) {
+function openModal(index) { // eslint-disable-line max-statements
   const newModal = <Speakermodal data={speakers[index]} />;
 
   const modalContainer = document.createElement('div');
@@ -50,24 +50,23 @@ function openModal(index) {
   });
 }
 
+function addClickEvents() {
+  const elements = document.getElementsByClassName('speaker-sec');
+  elements.forEach((element, index) => {
+    element.addEventListener('click', () => {
+      openModal(index);
+    });
+  });
+}
+
 class Speakers extends Component {
   constructor(props) {
     super(props);
-
     this.addClickEvents = this.addClickEvents.bind(this);
   }
 
-  addClickEvents() {
-    const speakerRedirect = document.getElementsByClassName('speaker-sec');
-    for (let i = 0; i < speakerRedirect.length; i++) {
-      speakerRedirect[i].addEventListener('click', () => {
-        openModal(i);
-      });
-    }
-  }
-
   componentDidMount() {
-    this.addClickEvents();
+    addClickEvents();
   }
 
   render() {

@@ -12,6 +12,14 @@ class ScrollBtn extends Component {
     this.handleScroll = this.handleScroll.bind(this);
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
   handleScroll() {
     const scrollPosition =
       window.pageYOffset || document.documentElement.scrollTop;
@@ -20,14 +28,6 @@ class ScrollBtn extends Component {
     } else if (scrollPosition >= 900) {
       this.setState({ show: true });
     }
-  }
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
   }
 
   render() {
