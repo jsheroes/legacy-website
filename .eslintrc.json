@@ -16,6 +16,7 @@
         "react/require-default-props": 1,
         "react/forbid-prop-types": 1,
         "react/display-name": 1,
+        "react/no-did-mount-set-state": 1,
         "react/jsx-filename-extension": 0,
         "complexity": [2, 5],
         "max-statements": [2, 7],

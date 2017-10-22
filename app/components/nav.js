@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 import menuItems from '../data/menuitems';
-import Link from 'next/link';
 import { styles, mediaQueries } from '../constants';
 
 export default class Nav extends Component {
@@ -16,20 +16,6 @@ export default class Nav extends Component {
     };
     this.handleScroll = this.handleScroll.bind(this);
     this.handleHashChange = this.handleHashChange.bind(this);
-  }
-  handleHashChange(ev) {
-    this.setState({ currentHash: ev.newURL.split('#')[1] });
-  }
-
-  handleScroll() {
-    const scrollPosition =
-      window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollPosition > this.state.logoOffsetTop) {
-      this.setState({ logoFixed: true });
-    } else {
-      this.setState({ logoFixed: false });
-    }
   }
 
   componentDidMount() {
@@ -50,6 +36,21 @@ export default class Nav extends Component {
     window.removeEventListener('hashchange', this.handleHashChange);
   }
 
+  handleHashChange(ev) {
+    this.setState({ currentHash: ev.newURL.split('#')[1] });
+  }
+
+  handleScroll() {
+    const scrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollPosition > this.state.logoOffsetTop) {
+      this.setState({ logoFixed: true });
+    } else {
+      this.setState({ logoFixed: false });
+    }
+  }
+
   render() {
     return (
       <div>
@@ -67,12 +68,12 @@ export default class Nav extends Component {
           >
             <nav>
               <ul>
-                {menuItems.map((item, key) => {
+                {menuItems.map((item) => {
                   const active = `#${this.state.currentHash}` === item.url
                     ? 'active'
                     : '';
                   return (
-                    <li key={key}>
+                    <li key={item.url}>
                       <Link href={`${item.url}`}>
                         <a className={active} target="_blank">
                           <i className={item.label} aria-hidden="true" />
@@ -271,5 +272,4 @@ export default class Nav extends Component {
 
 Nav.propTypes = {
   style: PropTypes.any,
-  page: PropTypes.string,
 };
