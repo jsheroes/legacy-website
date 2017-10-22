@@ -1,12 +1,12 @@
-import CompMain from '../app/components/main';
+import Layout from '../app/components/layout';
 import Hero from '../app/components/hero';
 import Updates from '../app/components/updates';
 import ScrollBtn from '../app/components/scroll-btn';
 
 export default () => (
-  <CompMain>
+  <Layout>
     <Hero />
     <Updates />
     <ScrollBtn />
-  </CompMain>
+  </Layout>
 );

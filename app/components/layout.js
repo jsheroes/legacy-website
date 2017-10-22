@@ -6,7 +6,8 @@ import Nav from '../components/nav';
 import Footer from '../components/footer';
 
 configureAnchors({ offset: -60, scrollDuration: 1000 });
-const Main = props => (
+
+const Layout = props => (
   <div>
     <Head>
       <link href="static/img/favicon.png" rel="shortcut icon" />
@@ -29,6 +30,7 @@ const Main = props => (
       body {
         font-size: 18px;
         font-family: Roboto, sans-serif;
+        font-weight: 300;
       }
 
       ul {
@@ -43,9 +45,9 @@ const Main = props => (
   </div>
 );
 
-Main.propTypes = {
+Layout.propTypes = {
   children: PropTypes.any,
   page: PropTypes.string,
 };
 
-export default Main;
+export default Layout;
