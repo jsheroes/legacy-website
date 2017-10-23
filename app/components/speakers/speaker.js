@@ -49,6 +49,7 @@ const Speaker = props => (
         border: 0;
         max-width: 100%;
         height: auto;
+        filter: grayscale(100%);
       }
       .speaker-hover {
         height: 100%;
@@ -112,4 +113,4 @@ const Speaker = props => (
   </div>
 );
 
-module.exports = Speaker;
+export default Speaker;
