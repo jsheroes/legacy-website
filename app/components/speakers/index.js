@@ -8,29 +8,6 @@ import speakers from '../../data/speakers';
 import Speaker from './speaker';
 import Speakermodal from './speaker.modal';
 
-const speakersHTML = [];
-let speakersRow = [];
-
-speakers.forEach((speaker, key) => {
-  speakersRow.push(
-    <div key={key.toString()} className="speaker-box">
-      <Speaker data={speaker} />
-    </div>,
-  );
-
-  if (speakersRow.length === 4 || key === speakers.length - 1) {
-    speakersHTML.push(
-      <div
-        key={key.toString()}
-        className={`row ${speakersRow.length < 4 ? 'a-third' : ''}`}
-      >
-        {speakersRow}
-      </div>,
-    );
-    speakersRow = [];
-  }
-});
-
 function openModal(index) { // eslint-disable-line max-statements
   const newModal = <Speakermodal data={speakers[index]} />;
 
@@ -51,7 +28,7 @@ function openModal(index) { // eslint-disable-line max-statements
 }
 
 function addClickEvents() {
-  const elements = document.getElementsByClassName('speaker-sec');
+  const elements = document.querySelectorAll('.speaker-sec');
   elements.forEach((element, index) => {
     element.addEventListener('click', () => {
       openModal(index);
@@ -60,11 +37,6 @@ function addClickEvents() {
 }
 
 class Speakers extends Component {
-  constructor(props) {
-    super(props);
-    this.addClickEvents = this.addClickEvents.bind(this);
-  }
-
   componentDidMount() {
     addClickEvents();
   }
@@ -73,9 +45,9 @@ class Speakers extends Component {
     return (
       <Section>
         <ScrollableAnchor id={'speakers'}>
-          <div className="speakers-section section-padding">
+          <div className="speakers-section">
             <div className="row section-header">
-              <h2>Our Heroes</h2>
+              <h2>Our First Heroes</h2>
               <p>
                 The speakers that joined our mission are experts recognized by
                 global communities. They are people who define our working
@@ -85,16 +57,20 @@ class Speakers extends Component {
               </p>
             </div>
 
-            {speakersHTML}
+            { speakers.map(speaker => (
+              <div key={speaker.name} className="speaker-box">
+                <Speaker data={speaker} />
+              </div>
+             )) }
 
           </div>
         </ScrollableAnchor>
 
         <style jsx>{`
-          .speakers-section.section-padding {
-            padding: 80px 0; 
+          .speakers-section {
+            margin: 30px 0;
           }
-          
+
           .speakers-section .section-header {
             margin-bottom: 45px;
             padding-right: 15px;
@@ -122,9 +98,6 @@ class Speakers extends Component {
           }
           
           @media (min-width: ${mediaQueries.S}) {
-            .speakers-section.section-padding {
-              padding: 80px 0;
-            }
             .speakers-section .section-header h2 {
               font-size: 33px;
             }
@@ -133,15 +106,9 @@ class Speakers extends Component {
               line-height: 28px;
               margin-bottom: 20px;
             }
-            .speaker-box {
-              width: 50%
-            }
           }
           
           @media (min-width: ${mediaQueries.L}) {
-            .speakers-section.section-padding {
-              padding: 90px 0;
-            }
             .speakers-section .section-header h2 {
               font-size: 46px;
             }
@@ -153,9 +120,6 @@ class Speakers extends Component {
           }
           
           @media (min-width: ${mediaQueries.XL}) {
-            .speakers-section.section-padding {
-              padding: 140px 0; 
-            }
             .speakers-section .section-header h2 {
               font-size: 52px;
             }
@@ -165,13 +129,6 @@ class Speakers extends Component {
               margin-bottom: 40px;
             }
           }          
-          
-        `}</style>
-        <style jsx global>{`
-          .speakers-section .row {
-            display: table;
-            width: 100%;
-          }
           
           .speaker-box {
             width: 100%;
@@ -187,10 +144,6 @@ class Speakers extends Component {
           @media (min-width: ${mediaQueries.XL}) {
             .speaker-box {
               width: 25%
-            }
-            
-            .a-third .speaker-box {
-              width: 33.33333333%
             }
           }
         `}</style>
