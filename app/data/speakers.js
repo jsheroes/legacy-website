@@ -112,7 +112,7 @@ module.exports = [
     position: 'Principal frontend consultant',
     company: '500Tech',
     crazy: 'Hair Developer',
-    img: 'nir.jpg',
+    img: 'nir.png',
     twitter: 'https://twitter.com/nirkaufman',
     github: 'https://github.com/nirkaufman',
     website: 'https://ngnir.life',
