@@ -6,10 +6,10 @@ import menuItems from '../data/menuitems';
 const Footer = () => (
   <footer>
     <div className="row">
-      <div className="col-25">
+      <div className="col-md-3 col-sm-4 hidden-sm hidden-xs">
         <img src="static/img/website_logo.png" alt="JS Logo" />
       </div>
-      <div className="col-25">
+      <div className="col-md-3 col-sm-4">
         <span className="headline">
           Participate
         </span>
@@ -40,7 +40,7 @@ const Footer = () => (
 
         </div>
       </div>
-      <div className="col-25">
+      <div className="col-md-3 col-sm-4">
         <span className="headline">
           Prior Events
         </span>
@@ -48,7 +48,7 @@ const Footer = () => (
           <a href="http://2017.jsheroes.io">JSHeroes 2017</a>
         </div>
       </div>
-      <div className="col-25">
+      <div className="col-md-3 col-sm-4">
         <span className="headline">
           Connect with us
         </span>
@@ -68,24 +68,18 @@ const Footer = () => (
       </div>
     </div>
     <div className="row copyright">
-      <div className="col-left"><i className="fa fa-copyright" aria-hidden="true" /> 2017 JSHeroes. All rights reserved.</div>
-      <div className="col-right">Made with <i className="fa fa-heart" aria-hidden="true" /> by Cluj JavaScripters Community.</div>
+      <div className="col-sm-5"><i className="fa fa-copyright" aria-hidden="true" /> 2017 JSHeroes. All rights reserved.</div>
+      <div className="col-sm-7">Made with <i className="fa fa-heart" aria-hidden="true" /> by Cluj JavaScripters Community.</div>
     </div>
     <style jsx>{`
       footer {
         color: white;
         padding: 50px 15px 50px;
         background-color: ${styles.mainColor2};
-        text-align: center;
       }
 
-      footer a {
-        text-decoration: none;
-      }
-
-      .row::after {
-        clear: both;
-        content: " ";
+      .col-md-3 div {
+        padding: 4px 0;
       }
 
       @media (min-width: ${mediaQueries.S} ) {
@@ -104,56 +98,20 @@ const Footer = () => (
         .social i {
           font-size: 27px;
         }
-  
-        .row {
-          clear: both;
-          content: " ";
-        }
 
-       .col-25 img {
+        img {
           display: block
           width: 150px;
           padding-top: 65px;
           padding-left: 20px;
         }
-  
-        .col-25 {
-          text-align: left;
-          float: left;
-          width: 25%;
-          min-width: 200px;
-        }
 
-        .col-25 div {
-          padding: 7px 0;
-        }
-  
-        .col-25 div:first-of-type {
-          padding: 20px 0 10px 0;
-        }
-  
-        .col-left {
-          float: left;
-          padding-left: 20px;
-          margin-right: 20%;
-        }
-
-        .col-right {
-          float: left;
-        }
       }
     
-      .col-25 {
-        margin: 10px 0;
-      }
-
       @media (max-width: ${mediaQueries.S} ) {
-        .col-25  img {
-          display: none;
-        }
 
-        .col-25 div:first-of-type {
-          padding: 10px 0;
+        footer {
+          text-align: center;
         }
 
         .social {
@@ -170,48 +128,30 @@ const Footer = () => (
         .social i {
           font-size: 27px;
         }
-
-        .col-left {
-          width: 100%;
-          text-align: center;
-        }
-
-        .col-right {
-          width: 100%;
-          text-align: center;
-        }
       }
 
       .copyright {
         margin-top: 20px;
         background-color: black;
       }
+    
+      .copyright .col-sm-5 {
+        padding-left: 35px;
+      }
 
       .headline {
         text-transform: uppercase;
         padding-bottom: 5px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        margin-top: 10px;
         border-bottom: 2px solid white;
-      }
-  
-      .social::after {
-        clear: both;
-        content: " ";
+        display: inline-block;
       }
 
-      p {
-        margin: 0 0 10px;
-        color: ${styles.mainColor3};
-        font-size: 16px;
-        line-height: 32px;
-        font-weight: 300;
-        background-color: black;
-      }
-      
       a {
         color: ${styles.mainColor3};
         font-size: 16px;
-        text-decoration: underline;
+        text-decoration: none;
         text-transform: none;
         transition-duration: .5s;
       }
