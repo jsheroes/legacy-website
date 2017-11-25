@@ -68,13 +68,13 @@ const Footer = () => (
       </div>
     </div>
     <div className="row copyright">
-      <div className="col-sm-5"><i className="fa fa-copyright" aria-hidden="true" /> 2017 JSHeroes. All rights reserved.</div>
-      <div className="col-sm-7">Made with <i className="fa fa-heart" aria-hidden="true" /> by Cluj JavaScripters Community.</div>
+      <div className="col-sm-6"><i className="fa fa-copyright" aria-hidden="true" /> 2017 JSHeroes. All rights reserved.</div>
+      <div className="col-sm-6">Made with <i className="fa fa-heart" aria-hidden="true" /> by Cluj JavaScripters Community.</div>
     </div>
     <style jsx>{`
       footer {
         color: white;
-        padding: 50px 15px 50px;
+        padding: 50px 15px 0;
         background-color: ${styles.mainColor2};
       }
 
@@ -133,6 +133,7 @@ const Footer = () => (
       .copyright {
         margin-top: 20px;
         background-color: black;
+        padding: 20px;
       }
     
       .copyright .col-sm-5 {
