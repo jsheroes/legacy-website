@@ -45,7 +45,7 @@ const Footer = () => (
           Prior Events
         </span>
         <div>
-          <a href="http://2017.jsheroes.io">JSHeroes 2017</a>
+          <a href="http://2017.jsheroes.io" rel="noopener noreferrer" target="_blank">JSHeroes 2017</a>
         </div>
       </div>
       <div className="col-md-3 col-sm-4">
@@ -132,6 +132,8 @@ const Footer = () => (
 
       .copyright {
         margin-top: 20px;
+        padding: 5px 0;
+        font-size: 14px;
         background-color: black;
         padding: 20px;
       }
