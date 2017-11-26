@@ -11,7 +11,7 @@ const Updates = () => (
         <li><b>Speakers:</b> Call for Speakers for 2018 is now open! <b><Link href="https://docs.google.com/forms/d/e/1FAIpQLSdPSo4Zy_M78PHRVFz90v1_SV3IqRcyhvgK2oCDY6ju6NDWeA/viewform?usp=sf_link"><a target="_blank">Register your Talk ideas</a></Link></b> and we’ll get back to you soon!</li>
         <li><b>Sponsors:</b> Our Call for Sponsors is always open. Send us an email if you’re interested to join our mission in 2018 <b><Link href="maito:welcome@jsheroes.io"><a>welcome@jsheroes.io</a></Link></b>, and we’ll take it from there.</li>
         <li><b>Wanted:</b> Passionate community members: Join the JSHeroes organizing crew! Get in touch and let us know what you’d like to contribute with.</li>
-        <li><b>Tickets:</b> If PayPal is not your preffered payment method, you can also pay by invoice. Drop us a line at <b><Link href="maito:contact@jsheroes.io"><a>contact@jsheroes.io</a></Link></b> with your request, we’d be happy to help.</li>
+        <li><b>Tickets:</b> If PayPal is not your preferred payment method, you can also pay by invoice. Drop us a line at <b><Link href="maito:contact@jsheroes.io"><a>contact@jsheroes.io</a></Link></b> with your request, we’d be happy to help.</li>
       </ul>
     </div>
 
