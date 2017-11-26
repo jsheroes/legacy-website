@@ -9,7 +9,7 @@ const Venue = () => (
     <ScrollableAnchor id={'venue'}>
       <div>
         <h2>Venue: Grand Hotel Italia</h2>
-        <p>Trifoiului Street number 3, Cluj-Napoca, Romania</p>
+        <p>Trifoiului Street number 2, Cluj-Napoca, Romania</p>
 
         <GoogleMap />
 
