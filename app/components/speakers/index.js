@@ -47,7 +47,7 @@ class Speakers extends Component {
         <ScrollableAnchor id={'speakers'}>
           <div className="speakers-section">
             <div className="row section-header">
-              <h2>Our First Heroes</h2>
+              <h2>Our 2018 Heroes</h2>
               <p>
                 The speakers that joined our mission are experts recognized by
                 global communities. They are people who define our working
