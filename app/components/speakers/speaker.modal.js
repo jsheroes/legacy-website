@@ -61,16 +61,21 @@ const Style = () => (
       border-radius: 50%;
       display: inline-block;
       line-height: 40px;
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       margin: 0px 2px;
     }
     .social-links .fa {
       font-size: 16px;
-      line-height: 40px;
       position: relative;
       color: #333;
       padding: 0 3px
+    }
+    .social-links .fa-twitter {
+      left: 1px;
+    }
+    .social-links .fa-github {
+      top: -1px;
     }
     #modal_body .speaker-sec {
       max-width: 360px;
