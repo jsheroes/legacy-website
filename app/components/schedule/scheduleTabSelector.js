@@ -38,14 +38,40 @@ class ScheduleTabSelector extends Component {
 
   buildContent() {
     const { activePosition } = this.state;
-    return (
-      <div>{ activePosition }</div>
-    );
+    const data = schedule[activePosition].activities;
+    return data.map(activity => (
+      <div key={activity.title}className="activity-row clearfix">
+        <div className="activity-location">
+          <div className="room-and-time">
+            <div>{ activity.time }</div>
+            <div>{ activity.room }</div>
+          </div>
+          <div className="speaker-image">
+            <img
+              src={`static/img/speakers/${activity.speakerImage}`}
+              alt={activity.speakerName}
+            />
+          </div>
+        </div>
+        <div className="activity-details">
+          <div>
+            <span>{ activity.type }: </span>
+            <span>{ activity.title }</span>
+          </div>
+          <div>
+            <span className="speaker-name" >{activity.speakerName}</span>
+            <span>, { activity.speakerPosition }</span>
+            <span>, { activity.speakerCompany }</span>
+          </div>
+        </div>
+      </div>
+    ));
   }
 
   render() {
     const buttons = this.buildButtonSection();
     const content = this.buildContent();
+
     return (
       <div>
         <Style />
@@ -63,7 +89,7 @@ class ScheduleTabSelector extends Component {
 }
 
 const Style = () => (
-  <style jsx>{`
+  <style jsx="true">{`
         .clearfix:after {
             display: table;
             content: "";
@@ -72,7 +98,7 @@ const Style = () => (
 
         .tabselector-button {
             background-color: ${styles.mainColor3};
-            height: 80px;
+            height: 60px;
             width: 33.3333%;
             float: left;
             color: ${styles.mainColor6};
@@ -89,8 +115,6 @@ const Style = () => (
         }
 
         .content-section {
-            background-color: white;
-            height: 300px;
             margin-bottom: 20px;
             float: left;
             width: 100%;
@@ -130,6 +154,52 @@ const Style = () => (
             font-weight: bold;
             display: block;
             margin: 0 auto;
+        }
+
+        .tabselector-button:focus,
+        .buy-ticket-button:focus
+        {
+            outline: 0;
+        }
+
+        .content-section img {
+            width: 60px;
+            height: 60px;
+            border: 5px solid #CCC;
+            filter: grayscale( 100% );
+        }
+
+        .activity-row {
+            padding: 20px 0;
+            border-bottom: 1px solid ${styles.mainColor3};
+            width: 100%;
+            color: ${styles.mainColor3};
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .activity-location {
+            width: 35%;
+            float: left;
+        }
+
+        .activity-details {
+            width: 65%;
+            float: left;
+        }
+
+        .speaker-name {
+            color: ${styles.mainColor6};
+        }
+
+        .room-and-time {
+            width: 55%;
+            float: left;
+        }
+
+        .speaker-image {
+            width: 45%;
+            float: left;
         }
     `}</style>
 );
