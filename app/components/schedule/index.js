@@ -1,6 +1,7 @@
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
+import ScheduleTabSelector from './scheduleTabSelector';
 
 const Schedule = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor4 } }}>
@@ -8,8 +9,8 @@ const Schedule = () => (
       <div id="schedule_section" className="section-padding">
         <Style />
         <div className="row section-header">
-          <h2>Conference Schedule</h2>
-          <p>Coming soon</p>
+          <h2>Schedule</h2>
+          <ScheduleTabSelector />
         </div>
       </div>
     </ScrollableAnchor>
