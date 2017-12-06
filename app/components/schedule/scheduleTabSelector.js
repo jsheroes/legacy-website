@@ -82,7 +82,15 @@ class ScheduleTabSelector extends Component {
           <div className="break-schedule">11:00 - 11:30 COFFEE BREAK</div>
           <div className="break-schedule">13:00 - 14:00 LUNCH BREAK</div>
         </div>
-        <button className="buy-ticket-button">Buy Your Workshop Ticket</button>
+        <button className="buy-ticket-button">
+          <a
+            href="#schedule"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Buy Your Workshop Ticket
+          </a>
+        </button>
       </div>
     );
   }
@@ -105,6 +113,8 @@ const Style = () => (
             font-weight: bold;
             border: none;
             font-size: 18px;
+            border-radius: 0;
+            transition: background-color .5s, color .5s;
         }
 
         .tabselector-button:hover,
@@ -160,6 +170,15 @@ const Style = () => (
         .buy-ticket-button:focus
         {
             outline: 0;
+        }
+
+        .buy-ticket-button a {
+          color: ${styles.mainColor3};
+          height: 100%;
+          width: 100%;
+          display: block;
+          line-height: 60px;
+          text-decoration: none;
         }
 
         .content-section img {
