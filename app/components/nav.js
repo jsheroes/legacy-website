@@ -27,7 +27,7 @@ export default class Nav extends Component {
   }
 
   handleScroll() {
-    const { hideNav } = this.state
+    const { hideNav } = this.state;
     const scrollPosition =
       window.pageYOffset || document.documentElement.scrollTop;
     if (scrollPosition > 50 && !hideNav) {

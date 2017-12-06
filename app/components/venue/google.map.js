@@ -1,28 +1,28 @@
-import { Component } from 'react'
-import GoogleMapReact from 'google-map-react'
+import { Component } from 'react';
+import GoogleMapReact from 'google-map-react';
 
-import MapPin from './google.map.pin'
-import { ConferenceMapApiKey, mediaQueries } from '../../constants'
+import MapPin from './google.map.pin';
+import { ConferenceMapApiKey, mediaQueries } from '../../constants';
 
 export default class GoogleMap extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.createMapOptions = this.createMapOptions.bind(this)
+    this.createMapOptions = this.createMapOptions.bind(this);
   }
 
   createMapOptions(maps) {
     return {
       zoomControlOptions: {
         position: maps.ControlPosition.TOP_LEFT,
-        style: maps.ZoomControlStyle.SMALL
+        style: maps.ZoomControlStyle.SMALL,
       },
       mapTypeControlOptions: {
-        position: maps.ControlPosition.TOP_RIGHT
+        position: maps.ControlPosition.TOP_RIGHT,
       },
       mapTypeControl: true,
-      scrollwheel: false
-    }
+      scrollwheel: false,
+    };
   }
 
   static defaultProps = {
@@ -33,7 +33,7 @@ export default class GoogleMap extends Component {
     streetViewControl: false,
     mapTypeControl: true,
     overviewMapControl: false,
-    clickable: true
+    clickable: true,
   }
 
   render() {
@@ -75,6 +75,6 @@ export default class GoogleMap extends Component {
           }
         `}</style>
       </div>
-    )
+    );
   }
 }

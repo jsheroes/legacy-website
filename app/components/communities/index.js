@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Section from '../../components/common/section';
 import { styles, mediaQueries } from '../../constants';
 import communities from '../../data/communities';

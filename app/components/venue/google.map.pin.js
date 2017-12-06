@@ -1,21 +1,21 @@
-import { Component } from 'react'
-import { styles } from '../../constants'
+import { Component } from 'react';
+import { styles } from '../../constants';
 
 export default class MapPin extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      showPinLabel: false
-    }
+      showPinLabel: false,
+    };
 
-    this.toggleLabel = this.toggleLabel.bind(this)
+    this.toggleLabel = this.toggleLabel.bind(this);
   }
 
   toggleLabel() {
     this.setState({
-      showPinLabel: !this.state.showPinLabel
-    })
+      showPinLabel: !this.state.showPinLabel,
+    });
   }
 
   render() {
@@ -65,6 +65,6 @@ export default class MapPin extends Component {
           }
         `}</style>
       </div>
-    )
+    );
   }
 }
