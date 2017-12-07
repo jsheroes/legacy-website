@@ -100,8 +100,9 @@ class Header extends Component {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@jsheroes" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86169211-2" />
-          <script dangerouslySetInnerHTML={{__html: googleAnalyticsTag()}} />
-          <script dangerouslySetInnerHTML={{__html: facebookPixelTag()}} />
+          <script dangerouslySetInnerHTML={{ __html: googleAnalyticsTag() }} />
+          <script dangerouslySetInnerHTML={{ __html: facebookPixelTag() }} />
+          <script dangerouslySetInnerHTML={{ __html: hotjarTag() }} />
           <noscript>
             <img
               height="1" width="1" alt="fb"
@@ -300,4 +301,8 @@ function facebookPixelTag() {
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '1746399088999074'); 
   fbq('track', 'PageView');`;
+}
+
+function hotjarTag() {
+  return "(function(h,o,t,j,a,r){ h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)}; h._hjSettings={hjid:716394,hjsv:6}; a=o.getElementsByTagName('head')[0]; r=o.createElement('script');r.async=1; r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv; a.appendChild(r); })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');";
 }
