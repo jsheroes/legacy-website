@@ -31,6 +31,37 @@ class ScheduleTabSelector extends Component {
         >
           <div>{ item.section }</div>
           <div>{ item.date }</div>
+          <style jsx>{`
+            .clearfix:after {
+              display: table;
+              content: '';
+              clear: both;
+            }
+
+            .tabselector-button {
+                background-color: ${styles.mainColor3};
+                height: 60px;
+                width: 33.3333%;
+                float: left;
+                color: ${styles.mainColor6};
+                font-weight: bold;
+                border: none;
+                font-size: 18px;
+                border-radius: 0;
+                transition: background-color .5s, color .5s;
+            }
+
+            .tabselector-button:hover,
+            .tabselector-button.active
+            {
+                background-color: ${styles.mainColor6};
+                color: ${styles.mainColor3};
+            }
+
+            .tabselector-button:focus {
+                outline: 0;
+            }
+        `}</style>
         </button>
       );
     });
@@ -39,6 +70,12 @@ class ScheduleTabSelector extends Component {
   buildContent() {
     const { activePosition } = this.state;
     const data = schedule[activePosition].activities;
+    if (data.length === 0) {
+      return (
+        <p>Coming soon</p>
+      );
+    }
+
     return data.map(activity => (
       <div key={activity.title}className="activity-row clearfix">
         <div className="activity-location">
@@ -64,72 +101,68 @@ class ScheduleTabSelector extends Component {
             <span>, { activity.speakerCompany }</span>
           </div>
         </div>
+        <style jsx>{`
+          .activity-row {
+            padding: 20px 0;
+            border-bottom: 1px solid ${styles.mainColor3};
+            width: 100%;
+            color: ${styles.mainColor3};
+            font-size: 18px;
+            font-weight: 500;
+          }
+
+          .activity-location {
+              width: 35%;
+              float: left;
+          }
+
+          .activity-details {
+              width: 65%;
+              float: left;
+          }
+
+          .speaker-name {
+              color: ${styles.mainColor6};
+          }
+
+          .room-and-time {
+              width: 55%;
+              float: left;
+          }
+
+          .speaker-image {
+              width: 45%;
+              float: left;
+          }
+          
+          .speaker-image img {
+            width: 60px;
+            height: 60px;
+            border: 5px solid #CCC;
+            filter: grayscale( 100% );
+          }
+
+          .content-section {
+            margin-bottom: 20px;
+            float: left;
+            width: 100%;
+          }
+        `}</style>
       </div>
     ));
   }
 
   render() {
+    const { activePosition } = this.state;
     const buttons = this.buildButtonSection();
     const content = this.buildContent();
+    const firstBreak = activePosition === 2 ? '08:00 - 09:00 COFFEE' : '08:00 - 09:00 CHECK-IN & COFFEE';
+    const ticket = activePosition === 0 ? 'Buy Your Workshop Ticket' : 'Buy Your Conference Ticket';
+    const ticketLink = activePosition === 0 ? '' : 'https://ti.to/cluj-javascripters/jsheroes2018';
 
     return (
       <div>
-        <Style />
-        <div className="buttons-section clearfix">{ buttons }</div>
-        <div className="check-in">08:00 - 09:00 CHECK-IN & COFFEE</div>
-        <div className="content-section">{ content }</div>
-        <div className="breaks-section">
-          <div className="break-schedule">11:00 - 11:30 COFFEE BREAK</div>
-          <div className="break-schedule">13:00 - 14:00 LUNCH BREAK</div>
-        </div>
-        <button className="buy-ticket-button">
-          <a
-            href="#schedule"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Buy Your Workshop Ticket
-          </a>
-        </button>
-      </div>
-    );
-  }
-}
-
-const Style = () => (
-  <style jsx="true">{`
-        .clearfix:after {
-            display: table;
-            content: "";
-            clear: both;
-        }
-
-        .tabselector-button {
-            background-color: ${styles.mainColor3};
-            height: 60px;
-            width: 33.3333%;
-            float: left;
-            color: ${styles.mainColor6};
-            font-weight: bold;
-            border: none;
-            font-size: 18px;
-            border-radius: 0;
-            transition: background-color .5s, color .5s;
-        }
-
-        .tabselector-button:hover,
-        .tabselector-button.active
-        {
-            background-color: ${styles.mainColor6};
-            color: ${styles.mainColor3};
-        }
-
-        .content-section {
-            margin-bottom: 20px;
-            float: left;
-            width: 100%;
-        }
-
+        <style jsx>{`
         .check-in,
         .break-schedule
         {
@@ -166,9 +199,7 @@ const Style = () => (
             margin: 0 auto;
         }
 
-        .tabselector-button:focus,
-        .buy-ticket-button:focus
-        {
+        .buy-ticket-button:focus {
             outline: 0;
         }
 
@@ -180,47 +211,26 @@ const Style = () => (
           line-height: 60px;
           text-decoration: none;
         }
-
-        .content-section img {
-            width: 60px;
-            height: 60px;
-            border: 5px solid #CCC;
-            filter: grayscale( 100% );
-        }
-
-        .activity-row {
-            padding: 20px 0;
-            border-bottom: 1px solid ${styles.mainColor3};
-            width: 100%;
-            color: ${styles.mainColor3};
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .activity-location {
-            width: 35%;
-            float: left;
-        }
-
-        .activity-details {
-            width: 65%;
-            float: left;
-        }
-
-        .speaker-name {
-            color: ${styles.mainColor6};
-        }
-
-        .room-and-time {
-            width: 55%;
-            float: left;
-        }
-
-        .speaker-image {
-            width: 45%;
-            float: left;
-        }
     `}</style>
-);
+        <div className="buttons-section clearfix">{ buttons }</div>
+        <div className="check-in">{ firstBreak }</div>
+        <div className="content-section">{ content }</div>
+        <div className="breaks-section">
+          <div className="break-schedule">11:00 - 11:30 COFFEE BREAK</div>
+          <div className="break-schedule">13:00 - 14:00 LUNCH BREAK</div>
+        </div>
+        <button className="buy-ticket-button">
+          <a
+            href={ticketLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            { ticket }
+          </a>
+        </button>
+      </div>
+    );
+  }
+}
 
 export default ScheduleTabSelector;
