@@ -15,6 +15,16 @@ module.exports = [
     href: 'https://www.meetup.com/BucharestJS/',
   },
   {
+    title: 'ngBucharest',
+    img: 'logo_ngbucharest.png',
+    href: 'https://www.meetup.com/AngularJS-Bucharest/',
+  },
+  {
+    title: 'JS Girls',
+    img: 'logo_jsgirls.png',
+    href: 'http://jsgirls.ro/',
+  },
+  {
     title: 'OradeaJS',
     img: 'logo_oradea_js.png',
     href: 'https://www.meetup.com/Oradea-JavaScripters/',
