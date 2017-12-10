@@ -132,7 +132,7 @@ class Header extends Component {
                 <div className="row">
                   <div className="col-md-12 header-text">
                     <p>Open-Source Community Event</p>
-                    <p>18-20 April 2018, Cluj Napoca, Romania</p>
+                    <p>18-20 April 2018, Cluj-Napoca, Romania</p>
                   </div>
                 </div>
                 <div className="row">
