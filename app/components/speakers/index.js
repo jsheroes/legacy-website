@@ -57,10 +57,11 @@ class Speakers extends Component {
               </p>
             </div>
 
-            { speakers.map(speaker => (
-              <div key={speaker.name} className="speaker-box">
-                <Speaker data={speaker} />
-              </div>
+            { speakers
+                .map(speaker => (
+                  <div key={speaker.name} className="speaker-box">
+                    <Speaker data={speaker} />
+                  </div>
              )) }
 
           </div>
