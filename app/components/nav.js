@@ -21,7 +21,7 @@ export default class Nav extends Component {
 
   componentDidMount() {
     this.setState({
-      showNavItems: window.innerWidth > 992,
+      showNavItems: window.innerWidth > 768,
     });
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('hashchange', this.handleHashChange);
@@ -37,7 +37,7 @@ export default class Nav extends Component {
     const scrollPosition =
       window.pageYOffset || document.documentElement.scrollTop;
     if (scrollPosition > 50 && !hideNav) {
-      this.setState({ hideNav: true });
+      this.setState({ hideNav: true, showNavItems: false });
     } else if (scrollPosition < 50 && hideNav) {
       this.setState({ hideNav: false });
     }
@@ -70,7 +70,7 @@ export default class Nav extends Component {
         <nav className="clearfix">
           <img alt="website-logo" src="static/img/website_logo.png" />
           <button onClick={this.toggleNavItems}>
-            <i className='fa fa-bars' aria-hidden='true' />
+             <i className='fa fa-bars' aria-hidden='true' /> 
           </button>
           <ul
             className={`${ showNavItems ? '' : 'hideNavItems'}`}
@@ -105,11 +105,22 @@ export default class Nav extends Component {
             -webkit-transition: top .2s ease-in-out;
             -moz-transition: top .2s ease-in-out;
             transition: top .2s ease-in-out;
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
           }
 
+          img {
+            display: inline-block;
+            float: left;
+            padding-top: 21px;
+            padding-left: 23px;
+            transform: scale(0.7);
+          }
+          
           nav {
             height: auto;
             line-height: 75px;
+
           }
 
           ul {
@@ -128,15 +139,7 @@ export default class Nav extends Component {
             color: #fff;
             font-size: 18px;
             font-weight: 400;
-            text-decoration: none;
-          }
-
-          img {
-            display: inline-block;
-            float: left;
-            padding-top: 21px;
-            padding-left: 23px;
-            transform: scale(0.7);
+            text-decoration: none !important;
           }
 
           .hideNav {
@@ -154,7 +157,7 @@ export default class Nav extends Component {
           button {
             display: inline-block;
             float: right;
-            margin: 12px 20px 20px 0;
+            margin: 10px 20px 10px 0;
             line-height: 28px;
             font-size: 28px;
             color: ${styles.mainColor3};
@@ -163,10 +166,11 @@ export default class Nav extends Component {
             outline: none;
           }
 
-          @media (max-width: ${mediaQueries.L}) {/*992px*/
+          @media (max-width: ${mediaQueries.S}) {/*768px*/
             div {
-              background-color: transparent;
-              border-top-color: transparent;
+              height: 52px;
+              background-color: ${styles.mainColor1};
+              border-top: 2px solid ${styles.mainColor1};
             }
             img {
               display: none;
@@ -174,18 +178,23 @@ export default class Nav extends Component {
             ul {
               width: 100%;
               text-align: center;
-              background-color: #001627;
+              background-color: ${styles.mainColor1};
             }
             li {
               display: block;
-              margin: 0 25px;
+              margin: 0;
               line-height: 50px;
-              border-bottom: 1px solid ${styles.mainColor3};
+            }
+            li:first-child {
+               border-top: 1px solid rgba(250, 250, 250, .5);
             }
             a {
-              font-size: 16px;
-              padding: 0;
               display: block;
+              padding: 0;
+              font-size: 16px;
+            }
+            .hideNav {
+              top: -52px;
             }
           }
 
