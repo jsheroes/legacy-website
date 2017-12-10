@@ -4,10 +4,12 @@ import { mediaQueries } from '../../constants';
 const Community = props => (
   <li>
     <Link href={`${props.href}`}>
-      <a target="_blank">
+      <a
+        target="_blank"
+        title={`${props.title}`}
+      >
         <img
           src={`static/img/communities/${props.img}`}
-          title={`${props.title}`}
           alt={`${props.title}`}
         />
       </a>

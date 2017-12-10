@@ -1,6 +1,6 @@
 # jsheroes.io
 
-This repo contains the code for our JavaScript International Conference sitehosted here: http://jsheroes.io
+This repo contains the code for our JavaScript International Conference site hosted here: https://jsheroes.io
 The site is built on top of Next.js.
 
 [![Build Status](https://travis-ci.org/cluj-javascripters/jsheroes.io.svg?branch=master)](https://travis-ci.org/cluj-javascripters/jsheroes.io)
