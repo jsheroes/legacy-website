@@ -36,7 +36,7 @@ module.exports = [
   },
   {
     title: 'RequireLX',
-    img: 'logo_requirelx.jpg',
+    img: 'logo_requirelx.png',
     href: 'https://www.meetup.com/require-lx/',
-  }
+  },
 ];
