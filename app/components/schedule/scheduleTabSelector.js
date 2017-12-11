@@ -44,9 +44,7 @@ class ScheduleTabSelector extends Component {
                 width: 33.3333%;
                 float: left;
                 color: ${styles.mainColor6};
-                font-weight: bold;
                 border: none;
-                font-size: 18px;
                 border-radius: 0;
                 transition: background-color .5s, color .5s;
             }
@@ -91,8 +89,7 @@ class ScheduleTabSelector extends Component {
           </div>
         </div>
         <div className="activity-details">
-          <div>
-            <span>{ activity.type }: </span>
+          <div className="activity-title">
             <span>{ activity.title }</span>
           </div>
           <div>
@@ -104,11 +101,10 @@ class ScheduleTabSelector extends Component {
         <style jsx>{`
           .activity-row {
             padding: 20px 0;
-            border-bottom: 1px solid ${styles.mainColor3};
+            border-bottom: 1px solid rgba( 255, 255, 255, .5 );
             width: 100%;
             color: ${styles.mainColor3};
-            font-size: 18px;
-            font-weight: 500;
+            font-weight: 400;
           }
 
           .activity-location {
@@ -119,6 +115,10 @@ class ScheduleTabSelector extends Component {
           .activity-details {
               width: 65%;
               float: left;
+          }
+
+          .activity-title {
+            font-weight: 700;
           }
 
           .speaker-name {
@@ -167,7 +167,6 @@ class ScheduleTabSelector extends Component {
         .break-schedule
         {
             color: ${styles.mainColor3};
-            font-size: 18px;
             text-align: center;
             font-weight: bold;
             margin: 10px 0;
@@ -193,8 +192,6 @@ class ScheduleTabSelector extends Component {
             color: ${styles.mainColor3};
             border-radius: 8px;
             border: none;
-            font-size: 18px;
-            font-weight: bold;
             display: block;
             margin: 0 auto;
         }

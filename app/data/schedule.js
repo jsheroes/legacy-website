@@ -5,7 +5,6 @@ module.exports = [
     index: 0,
     activities: [
       {
-        type: 'WORKSHOP',
         title: 'Angular Masterclass',
         speakerName: 'Nir Kaufman',
         speakerPosition: 'Principal Frontend Consultant',
@@ -15,7 +14,6 @@ module.exports = [
         room: 'Room 4',
       },
       {
-        type: 'WORKSHOP',
         title: 'Deploying an App',
         speakerName: 'Brent Vatne',
         speakerPosition: 'Software Developer',
@@ -25,7 +23,6 @@ module.exports = [
         room: 'Room 5',
       },
       {
-        type: 'WORKSHOP',
         title: 'Advance Node/DevOps',
         speakerName: 'Gautam Aurora',
         speakerPosition: 'Engineering Director',
@@ -35,7 +32,6 @@ module.exports = [
         room: 'Room 6',
       },
       {
-        type: 'WORKSHOP',
         title: 'Security',
         speakerName: 'Liran Tal',
         speakerPosition: 'Engineering Manager',
@@ -45,7 +41,6 @@ module.exports = [
         room: 'Room 7',
       },
       {
-        type: 'FULL DAY WORKSHOP',
         title: 'Elm',
         speakerName: 'Jack Franklin',
         speakerPosition: 'Frontend Engineer',

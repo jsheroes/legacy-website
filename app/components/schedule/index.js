@@ -32,7 +32,7 @@ const Style = () => (
       font-size: 33px;
       color: ${styles.mainColor3};
       font-weight: 700;
-      margin: 0 auto 30px;
+      margin: 0 auto 50px;
     }
     #schedule_section .section-header p {
       width: 98%;
