@@ -14,10 +14,12 @@ class Header extends Component {
       top: 0,
       logoFixed: false,
       logoElementOffsetTop: 0,
+      showMedia: false,
     };
 
     this.handleScroll = this.handleScroll.bind(this);
     this.updateHeroSize = this.updateHeroSize.bind(this);
+    this.buildMedia = this.buildMedia.bind(this);
   }
 
   componentDidMount() {
@@ -28,6 +30,7 @@ class Header extends Component {
     this.setState({
       logoOffsetTop: logoElementOffsetTop,
       windowHeight: window.innerHeight,
+      showMedia: true,
     });
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.updateHeroSize);
@@ -55,6 +58,62 @@ class Header extends Component {
     });
   }
 
+  buildMedia() {
+    const { showMedia } = this.state;
+
+    if (!showMedia) {
+      return '';
+    }
+
+    const media = window.innerWidth > 1000 ?
+      (
+        <video preload="auto" autoPlay muted loop poster="/static/img/video-cover.png">
+          <source src="/static/video/js-hero-loop.mp4" type="video/mp4" />
+          <style jsx>{`
+            video {
+              width: 100%;
+              left: 50%;
+              top: 0;
+              position: absolute;
+              transform: translateX(-50%);
+            }
+
+            @media (max-width: ${mediaQueries.XL}) {
+              video {
+                width: auto;
+                height: 100%;
+              }
+            }
+          `}</style>
+        </video>
+      )
+      :
+      (
+        <div>
+          <img className="background-image" src="/static/img/mobile_photo_jsheroes2018.jpg" alt="background" />
+          <style jsx>{`
+            .background-image {
+              width: 100%;
+              height: auto;
+              left: 50%;
+              top: 0;
+              position: absolute;
+              transform: translateX(-50%);
+            }
+
+            @media (max-width: 480px) {
+              .background-image {
+              width: auto;
+              height: 100%;
+              }
+            }
+          `}</style>
+        </div>
+      );
+
+    return media;
+  }
+
   render() {
     const heroBcgImg = {
       position: 'relative',
@@ -72,6 +131,8 @@ class Header extends Component {
       left: '0',
       background: 'hsla(0,0%,0%,.6) none repeat scroll 0 0',
     };
+
+    const media = this.buildMedia();
 
     return (
       <div>
@@ -116,9 +177,7 @@ class Header extends Component {
         >
           <ScrollableAnchor id={'home'}>
             <div className="header">
-              <video preload="auto" autoPlay muted loop poster="/static/img/video-cover.png">
-                <source src="/static/video/js-hero-loop.mp4" type="video/mp4" />
-              </video>
+              { media }
               <div className="headOverlay" />
 
               <div className="container header-container">
@@ -225,13 +284,6 @@ class Header extends Component {
             height: 100%;
             top: 0;
           }
-          video {
-            width: 100%;
-            left: 50%;
-            top: 0;
-            position: absolute;
-            transform: translateX(-50%);
-          }
 
           .float-right {
             float: right;
@@ -260,12 +312,6 @@ class Header extends Component {
             }
           }
 
-          @media (max-width: ${mediaQueries.XL}) {
-            video {
-              width: auto;
-              height: 100%;
-            }
-          }
           @media (min-width: ${mediaQueries.L}) {
             .header-container {
               margin-top: 30%;
