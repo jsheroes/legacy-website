@@ -76,6 +76,16 @@ class ScheduleTabSelector extends Component {
 
     return data.map(activity => (
       <div key={activity.title}className="activity-row clearfix">
+        <div className="activity-details">
+          <div className="activity-title">
+            <span>{ activity.title }</span>
+          </div>
+          <div>
+            <span className="speaker-name" >{activity.speakerName}</span>
+            <span className="speaker-position">, { activity.speakerPosition }</span>
+            <span className="speaker-company">{ activity.speakerCompany }</span>
+          </div>
+        </div>
         <div className="activity-location">
           <div className="room-and-time">
             <div>{ activity.time }</div>
@@ -88,33 +98,14 @@ class ScheduleTabSelector extends Component {
             />
           </div>
         </div>
-        <div className="activity-details">
-          <div className="activity-title">
-            <span>{ activity.title }</span>
-          </div>
-          <div>
-            <span className="speaker-name" >{activity.speakerName}</span>
-            <span>, { activity.speakerPosition }</span>
-            <span>, { activity.speakerCompany }</span>
-          </div>
-        </div>
         <style jsx>{`
           .activity-row {
             padding: 20px 0;
-            border-bottom: 1px solid rgba( 255, 255, 255, .5 );
+            border-bottom: 1px solid rgba( 255, 255, 255, .7 );
             width: 100%;
             color: ${styles.mainColor3};
             font-weight: 400;
-          }
-
-          .activity-location {
-              width: 35%;
-              float: left;
-          }
-
-          .activity-details {
-              width: 65%;
-              float: left;
+            text-align: center;
           }
 
           .activity-title {
@@ -125,21 +116,20 @@ class ScheduleTabSelector extends Component {
               color: ${styles.mainColor6};
           }
 
-          .room-and-time {
-              width: 55%;
-              float: left;
+          .speaker-company {
+            display: block;
+          }
+
+          .speaker-company:before {
+            content: "";
+          }
+
+          .speaker-position {
+            display: none;
           }
 
           .speaker-image {
-              width: 45%;
-              float: left;
-          }
-          
-          .speaker-image img {
-            width: 60px;
-            height: 60px;
-            border: 5px solid #CCC;
-            filter: grayscale( 100% );
+              display: none;
           }
 
           .content-section {
@@ -147,9 +137,60 @@ class ScheduleTabSelector extends Component {
             float: left;
             width: 100%;
           }
+
+          .room-and-time {
+            margin-top: 20px;
+          }
+
+          @media screen and (min-width: 1000px) {
+            .activity-row {
+              text-align: left;
+            }
+
+            .activity-location {
+              width: 35%;
+              float: left;
+            }
+
+            .activity-details {
+              width: 65%;
+              float: right;
+            }
+
+            .speaker-position {
+              display: inline;
+            }
+
+            .speaker-company {
+              display: inline;
+            }
+
+            .speaker-company:before {
+              content: ", ";
+            }
+
+            .speaker-image {
+              display: block;
+              width: 45%;
+              float: left;
+            }
+
+            .speaker-image img {
+              width: 60px;
+              height: 60px;
+              border: 5px solid #CCC;
+              filter: grayscale( 100% );
+            }
+
+            .room-and-time {
+              width: 55%;
+              float: left;
+              margin: 0;
+            }
+          }
         `}</style>
       </div>
-    ));
+      ));
   }
 
   render() {
