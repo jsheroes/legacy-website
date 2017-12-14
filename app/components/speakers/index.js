@@ -1,73 +1,38 @@
-import { Component } from 'react';
-import ReactDOM from 'react-dom';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
 import speakers from '../../data/speakers';
 import Speaker from './speaker';
-import Speakermodal from './speaker.modal';
 
-function openModal(index) { // eslint-disable-line max-statements
-  const newModal = <Speakermodal data={speakers[index]} />;
-
-  const modalContainer = document.createElement('div');
-  document.body.appendChild(modalContainer);
-  ReactDOM.render(newModal, modalContainer);
-  const backdrop = document.getElementsByClassName('modal-backdrop')[0];
-  const closeBtn = document.getElementsByClassName('modal-close-button')[0];
-  document.body.style.overflow = 'hidden';
-  closeBtn.addEventListener('click', () => {
-    document.body.style.overflow = '';
-    modalContainer.remove();
-  });
-  backdrop.addEventListener('click', () => {
-    document.body.style.overflow = '';
-    modalContainer.remove();
-  });
-}
-
-function addClickEvents() {
-  const elements = document.querySelectorAll('.speaker-sec');
-  elements.forEach((element, index) => {
-    element.addEventListener('click', () => {
-      openModal(index);
-    });
-  });
-}
-
-class Speakers extends Component {
-  componentDidMount() {
-    addClickEvents();
-  }
-
-  render() {
-    return (
-      <Section>
-        <ScrollableAnchor id={'speakers'}>
-          <div className="speakers-section">
-            <div className="row section-header">
-              <h2>Our 2018 Heroes</h2>
-              <p>
+const Speakers = () => (
+  <Section>
+    <ScrollableAnchor id={'speakers'}>
+      <div className="speakers-section">
+        <div className="row section-header">
+          <h2>Our 2018 Heroes</h2>
+          <p>
                 The speakers that joined our mission are experts recognized by
                 global communities. They are people who define our working
                 environment every day. Most of them are for the first time in
                 Romania and they’re really looking forward to our community
                 event!
               </p>
-            </div>
+        </div>
 
-            { speakers
+        { speakers
                 .map(speaker => (
                   <div key={speaker.name} className="speaker-box">
-                    <Speaker data={speaker} />
+                    <a href={`/speakers/${speaker.url}`} >
+                      <Speaker data={speaker} />
+                    </a>
                   </div>
              )) }
 
-          </div>
-        </ScrollableAnchor>
+      </div>
+    </ScrollableAnchor>
 
-        <style jsx>{`
+    <style jsx>{`
           .speakers-section {
             margin: 30px 0;
           }
@@ -148,9 +113,7 @@ class Speakers extends Component {
             }
           }
         `}</style>
-      </Section>
+  </Section>
     );
-  }
-}
 
 module.exports = Speakers;

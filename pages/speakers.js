@@ -1,12 +1,16 @@
-// import Router from 'next/router';
+import Router from 'next/router';
 import Layout from '../app/components/layout';
 import SpeakerDetail from '../app/components/speakers/speakerDetail';
 
-const Speakers = (props) => {
-  console.log('Speakers', props);
+const Speakers = ({ url }) => {
+  const speakerUrl = url.query.url;
+  if (!speakerUrl) {
+    Router.push('/#speakers');
+  }
+
   return (
-    <Layout page="speakers-page">
-      <SpeakerDetail />
+    <Layout>
+      <SpeakerDetail speakerUrl={speakerUrl} />
     </Layout>
   );
 };

@@ -20,11 +20,14 @@ app
       app.render(req, res, actualPage, queryParams);
     });
 
-    // all routes
+    server.get('/speakers', (req, res) => {
+      res.redirect(301, '/');
+    });
 
-    server.get('/speakers-page/:name', (req, res) => {
-      const params = { name: req.params.name };
-      const route = '/speakers-page';
+    // all routes
+    server.get('/speakers/:url', (req, res) => {
+      const params = { url: req.params.url };
+      const route = '/speakers';
       return app.render(req, res, route, params);
     });
 

@@ -3,8 +3,12 @@ import Section from '../../components/common/section';
 import { styles, mediaQueries } from '../../constants';
 import speakers from '../../data/speakers';
 
-const SpeakerDetail = () => {
-  const [speaker] = speakers;
+const SpeakerDetail = ({ speakerUrl }) => {
+  const [speaker] = speakers.filter(item => item.url === speakerUrl);
+  if (!speaker) {
+    return null;
+  }
+  const talks = buildTalks(speaker.talks, speaker.full_name);
   return (
     <div>
       <Head>
@@ -15,16 +19,16 @@ const SpeakerDetail = () => {
         <meta name="description" content="an Open-Source, Community Event by Cluj JavaScripters" />
         <meta name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets" />
         <title>{ speaker.full_name } at JSHeroes</title>
-        <meta property="og:title" content="JSHeroes 2018 | Code of Conduct" />
+        <meta property="og:title" content="JSHeroes" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://www.jsheroes.io/code-of-conduct" />
-        <meta property="og:image" content="http://www.jsheroes.io/static/img/social_media/25931203.jpeg" />
+        <meta property="og:url" content={`http://www.jsheroes.io/speakers/${speaker.url}`} />
+        <meta property="og:image" content={`http://www.jsheroes.io/static/img/speakers/${speaker.img}`} />
         <meta property="og:image:type" content="image/jpg" />
         <meta property="og:description" content="an Open-Source, Community Event by Cluj JavaScripters" />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="JSHeroes 2018 | Code of Conduct" />
+        <meta property="og:site_name" content="JSHeroes" />
         <meta name="twitter:site" content="@jsheroes" />
-        <meta name="twitter:title" content="JSHeroes 2018 | Code of Conduct" />
+        <meta name="twitter:title" content="JSHeroes" />
         <meta name="twitter:description" content="an Open-Source, Community Event by Cluj JavaScripters" />
         <meta name="twitter:image" content="http://www.jsheroes.io/static/img/meta/clujsers_audience.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -32,8 +36,10 @@ const SpeakerDetail = () => {
       </Head>
 
       <Section>
+        <div id="logo">
+          <span className="logoJs">JS</span><span className="logoHeroes">Heroes</span>
+        </div>
         <div className="speakers-page">
-          <h2 className="text-center" id="logo">The <span className="logoJs">JS</span><span className="logoHeroes">Heroes</span> Code of Conduct</h2>
           <div className="row">
             <div className="col-md-3 side">
               <div className="speaker-info-box">
@@ -81,21 +87,12 @@ const SpeakerDetail = () => {
             </div>
             <div className="col-md-9 main">
               <div className="details">
-                <div className="name">Mark Dalgleish</div>
-                <div>DesignOps Lead</div>
-                <div>SEEK</div>
+                <div className="name">{ speaker.full_name }</div>
+                <div>{ speaker.position }</div>
+                <div>{ speaker.company }</div>
               </div>
-              <div className="description">
-                  Mark Dalgleish is the co-creator of CSS Modules, lead organiser of MelbJS, and DesignOps Lead at SEEK, Australia's leading job site. Having got his start with HTML and UI design at a young age, Mark has since developed a love of open source and software engineering but always as a means to creating elegant, usable experiences.
-              </div>
-              <div className="talks">
-                <h4>Talks by Mark Dalgleish</h4>
-                <span className="blue-circle" /><a href="http://youtube.com">Getting CSS Modules out in to the world</a>
-              </div>
-              <div className="talks">
-                <h4>Talks by Mark Dalgleish at previouse JSHeroes Conferences</h4>
-                <span className="blue-circle" /><a href="http://youtube.com">Getting CSS Modules out in to the world</a>
-              </div>
+              <div className="description" dangerouslySetInnerHTML={{ __html: speaker.description }} />
+              { talks }
               <div className="hidden-md hidden-lg">
                 <div className="join">
                   <div>Already curious to see <span>{ speaker.name }</span>`s talk?</div>
@@ -117,7 +114,7 @@ const SpeakerDetail = () => {
       </Section>
       <style jsx>{`
       .speakers-page {
-          padding-top: 70px;
+          padding-top: 110px;
           margin-bottom: 30px;
       }
 
@@ -125,6 +122,13 @@ const SpeakerDetail = () => {
         .details {
           text-align: center;
         }
+        .main .join {
+          margin: 0;
+        }
+      }
+      
+      h3 {
+        margin: 20px 20px 20px 0;
       }
 
       .buy-ticket {
@@ -161,12 +165,16 @@ const SpeakerDetail = () => {
         background-image: url( "/static/img/social_media/link-symbol.svg" );
       }
 
-      .speakers-page .side {
+      .side {
         padding: 0 30px;
       }
 
       .main {
-        padding: 0 40px;
+        padding: 0 5px;
+      }
+
+      @media (max-width: ${mediaQueries.L} ) {
+        padding: 10px;
       }
 
       .side, .join {
@@ -177,7 +185,7 @@ const SpeakerDetail = () => {
         margin: 50px 0;
       }
 
-      .side .join span {
+      .join span {
         text-transform: capitalize;
       }
 
@@ -206,37 +214,15 @@ const SpeakerDetail = () => {
         filter: grayscale(100%);
       }
 
-      .speakers-page .name {
+      .name {
         color: ${styles.mainColor6};
         font-weight: bold;
         margin-bottom: 5px;
       }
 
-      .speakers-page .description {
+      .description {
         margin-top: 25px;
         margin-bottom: 25px;
-      }
-
-      .speakers-page .talks {
-        margin: 40px 0;
-      }
-
-      .speakers-page .talks h4 {
-        font-size: 20px;
-      }
-
-      .speakers-page .talks a {
-        text-decoration: none;
-        color: #333;
-      }
-
-      .speakers-page .talks .blue-circle {
-        display: inline-block;
-        margin-right: 20px;
-        width: 10px;
-        height: 10px;
-        background: ${styles.mainColor6};
-        border-radius: 5px;
       }
       `}</style>
     </div>
@@ -245,3 +231,92 @@ const SpeakerDetail = () => {
 
 module.exports = SpeakerDetail;
 
+function buildTalks(talks, name) {
+  const jsheroesTalks = talks && talks.conference ?
+      talks.conference.map(talkRow) : 'no talks';
+
+  const generalTalks = talks && talks.conference ?
+      talks.general.map(talkRow) : 'no talks';
+  const currentTalk = talks && talks.current ?
+        buildCurrentTalk(talks.current) :
+        'no talk this year';
+
+  return (
+    <div>
+      <div key="current">
+        { currentTalk }
+      </div>
+      <div className="talks" key="general">
+        <h4>Talks by {name}</h4>
+        { generalTalks }
+      </div>
+      <div className="talks" key="jsheroes">
+        <h4>Talks by { name } at previous JSHeroes Conferences</h4>
+        { jsheroesTalks }
+      </div>
+      <style jsx>{`
+      .talks {
+        margin: 40px 0;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+
+      @media (max-width: ${mediaQueries.L} ) {
+        h4 {
+          font-size: 18px;
+        }
+      }
+      `}</style>
+    </div>
+  );
+}
+
+function talkRow({ url, name }) {
+  return (
+    <div key={url}>
+      <span className="blue-circle" />
+      <a href={url} target="_blank">{ name }</a>
+      <style jsx>{`
+        a {
+          text-decoration: none;
+          color: ${styles.mainColor6};
+        }
+
+        .blue-circle {
+          display: inline-block;
+          margin-right: 20px;
+          width: 10px;
+          height: 10px;
+          background: ${styles.mainColor6};
+          border-radius: 5px;
+        }
+      `}</style>
+    </div>
+  );
+}
+
+function buildCurrentTalk({ title, description, learningTeaser }) {
+  return (
+    <div>
+      <h3>{title}</h3>
+      <div dangerouslySetInnerHTML={{ __html: description }} />
+      <p className="teaser"><i>{learningTeaser}</i></p>
+      <style jsx>{`
+      h3 {
+        margin: 20px 20px 20px 0;
+      }
+      @media (max-width: ${mediaQueries.L} ) {
+        .h3{
+           margin: 20px 20px 20px 0;
+        }
+      }
+      .teaser {
+        margin: 20px;
+        text-align: center;
+      }`
+        }</style>
+    </div>
+  );
+}

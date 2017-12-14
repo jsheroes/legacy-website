@@ -2,6 +2,7 @@ module.exports = [
   {
     name: 'mark',
     full_name: 'Mark Dalgleish',
+    url: 'mark-dalgleish',
     position: 'DesignOps Lead',
     company: 'SEEK',
     crazy: 'Head of Spacer Gifs',
@@ -10,10 +11,32 @@ module.exports = [
     github: 'https://github.com/markdalgleish',
     website: '',
     description: "<p>Mark Dalgleish is the co-creator of CSS Modules, lead organiser of MelbJS, and DesignOps Lead at SEEK, Australia's leading job site. Having got his start with HTML and UI design at a young age, Mark has since developed a love of open source and software engineering but always as a means to creating elegant, usable experiences.</p>",
+    talks: {
+      general: [
+        {
+          name: 'First Class Styles',
+          url: 'https://www.youtube.com/watch?v=KmtgJ1d4zuY',
+        },
+      ],
+      conference: [
+        {
+          name: 'A Unified Styling Language',
+          url: 'https://www.youtube.com/watch?v=z-4cujO519Q',
+        },
+      ],
+      current: {
+        title: 'The Future of Design, as a Service',
+        description: `<p>Design systems are playing an ever-increasing role in allowing us to produce world-class design at scale. However, for these systems to truly deliver on their potential, they need to be properly integrated into the rest of the organisation, speaking the same language as those building and delivering products to our end users.</p>
+        <p>As a result, we're beginning to see the rise of Design Operations ("DesignOps" for short) within companies like Salesforce, Airbnb and SEEK, with dedicated engineering resources being embedded within teams that historically would have only contained designers. By focusing developers entirely on translating a company's design language into production-ready code and monitoring its real-world effectiveness, we can empower our design teams to deliver high quality design across large organisations at a pace that simply wasn't previously possible.</p>
+        <p>But what does DesignOps look like in practice? How do we ensure developers and designers are speaking the same language? What should your organisation expect from such a fundamental shift in perspective, and how do we measure success? Together, we'll examine the benefits, challenges and future potential of this approach through the real-life experiences of an engineer who's been living in a design team for the past year.</p>`,
+        learningTeaser: 'How to convince non-technical stakeholders that front-end architecture is important., how to scale quality front-end development and design practices across a larger organisation, and what to expect from your first foray into this area.',
+      },
+    },
   },
   {
     name: 'sarah',
     full_name: 'Sarah Drasner',
+    url: 'sarah-drashner',
     position: 'Senior Developer Advocate',
     company: 'Microsoft',
     crazy: 'Bacon Santa',
@@ -26,6 +49,7 @@ module.exports = [
   {
     name: 'monica',
     full_name: 'Monica Dinculescu',
+    url: 'monica-dinculescu',
     position: '✨Emojineer✨',
     company: 'Google',
     crazy: '✨Emojineer✨',
@@ -38,6 +62,7 @@ module.exports = [
   {
     name: 'gautam',
     full_name: 'Gautam Arora',
+    url: 'gautam-arora',
     position: 'Engineering Director',
     company: 'Condé Nast',
     img: 'gautam.jpg',
@@ -49,6 +74,7 @@ module.exports = [
   {
     name: 'brent',
     full_name: 'Brent Vatne',
+    url: 'brent-vatne',
     position: 'Software Developer',
     company: 'Expo',
     crazy: 'Canadian',
@@ -61,6 +87,7 @@ module.exports = [
   {
     name: 'sebastien',
     full_name: 'Sébastien Chopin',
+    url: 'sebastien-chopin',
     position: 'CTO',
     company: 'ORION',
     crazy: 'Projects Architect',
@@ -73,6 +100,7 @@ module.exports = [
   {
     name: 'liran',
     full_name: 'Liran Tal',
+    url: 'liran-tal',
     position: 'Engineering Manager',
     company: 'Nielsen Marketing Cloud',
     crazy: 'Open Sourcerer',
@@ -85,6 +113,7 @@ module.exports = [
   {
     name: 'mathias',
     full_name: 'Mathias Bynens',
+    url: 'mathias-bynens',
     position: 'V8 Engineer',
     company: 'Google',
     crazy: 'Bytecode Whisperer',
@@ -97,6 +126,7 @@ module.exports = [
   {
     name: 'ives',
     full_name: 'Ives van Hoorne',
+    url: 'ives-van-hoorne',
     position: 'Software Developer',
     company: 'Catawiki',
     crazy: 'Imitating Student',
@@ -109,6 +139,7 @@ module.exports = [
   {
     name: 'nir',
     full_name: 'Nir Kaufman',
+    url: 'nir-kaufman',
     position: 'Principal frontend consultant',
     company: '500Tech',
     crazy: 'Hair Developer',
@@ -121,6 +152,7 @@ module.exports = [
   {
     name: 'lara',
     full_name: 'Larissa Davidova',
+    url: 'larissa-davidova',
     position: 'Developer',
     company: 'Moqups',
     crazy: 'Crazy physicist',
@@ -132,6 +164,7 @@ module.exports = [
   {
     name: 'jack',
     full_name: 'Jack Franklin',
+    url: 'jack-franklin',
     position: 'Frontend Engineer',
     company: 'Thread',
     crazy: 'Elm Enthusiast!',
@@ -143,6 +176,7 @@ module.exports = [
   {
     name: 'sara',
     full_name: 'Sara Vieira',
+    url: 'sara-vieira',
     position: 'Full Stack Developer',
     company: 'YLD',
     crazy: 'Popcorn Popper , Useless Modules need making too, Ikea is life, The ikea of developers',
@@ -155,6 +189,7 @@ module.exports = [
   {
     name: 'xavier',
     full_name: 'Xavier Cazalot',
+    url: 'xavier-cazalot',
     position: 'Software Engineer',
     company: 'OK GROW!',
     img: 'xavier.jpg',

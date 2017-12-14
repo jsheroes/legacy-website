@@ -10,20 +10,17 @@ import Mission from '../app/components/mission';
 import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
 
-export default (props) => {
-  console.log(props);
-  return (
-    <Layout>
-      <Header />
-      <Updates />
-      <Speakers />
-      <Schedule />
-      <Mission />
-      <Sponsors />
-      <Partners />
-      <Communities />
-      <Venue />
-      <ScrollBtn />
-    </Layout>
+export default props => (
+  <Layout>
+    <Header />
+    <Updates />
+    <Speakers />
+    <Schedule />
+    <Mission />
+    <Sponsors />
+    <Partners />
+    <Communities />
+    <Venue />
+    <ScrollBtn />
+  </Layout>
   );
-};
