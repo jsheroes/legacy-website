@@ -116,7 +116,7 @@ class Header extends Component {
         >
           <ScrollableAnchor id={'home'}>
             <div className="header">
-              <video preload="auto"  muted loop poster="/static/img/video-cover.png">
+              <video preload="auto" autoPlay muted loop poster="/static/img/video-cover.png">
                 <source src="/static/video/js-hero-loop.mp4" type="video/mp4" />
               </video>
               <div className="headOverlay" />
@@ -132,7 +132,7 @@ class Header extends Component {
                 <div className="row">
                   <div className="col-md-12 header-text">
                     <p>Open-Source Community Event</p>
-                    <p>18-20 April 2018, Cluj Napoca, Romania</p>
+                    <p>18-20 April 2018, Cluj-Napoca, Romania</p>
                   </div>
                 </div>
                 <div className="row">

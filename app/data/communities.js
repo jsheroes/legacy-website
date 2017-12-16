@@ -34,4 +34,14 @@ module.exports = [
     img: 'logo_bcn_js.jpg',
     href: 'https://twitter.com/BcnJS',
   },
+  {
+    title: 'RequireLX',
+    img: 'logo_requirelx.png',
+    href: 'https://www.meetup.com/require-lx/',
+  },
+  {
+    title: 'JSBelgrade',
+    img: 'logo_jsbelgrade.png',
+    href: 'https://www.meetup.com/JS-Belgrade-Meetup/',
+  },
 ];
