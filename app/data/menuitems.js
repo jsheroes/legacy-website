@@ -1,7 +1,7 @@
 module.exports = [
   {
     id: 1,
-    url: '#home',
+    url: '#top-section',
     label: 'home',
   },
   {
@@ -16,8 +16,8 @@ module.exports = [
   },
   {
     id: 4,
-    url: '#venue',
-    label: 'venue',
+    url: '#mission',
+    label: 'mission',
   },
   {
     id: 5,
@@ -26,7 +26,7 @@ module.exports = [
   },
   {
     id: 6,
-    url: '#mission',
-    label: 'mission',
+    url: '#venue',
+    label: 'venue',
   },
 ];

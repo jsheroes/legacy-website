@@ -10,10 +10,12 @@ module.exports = {
   },
   mediaQueries: {
     XL: '1200px',
+    LAPTOP: '1024px',
     L: '992px',
     S: '768px',
+    XS: '425px'
   },
-  navHeight: 78,
   ConferenceStartTime: '2017-06-18 08:00',
   ConferenceMapApiKey: 'AIzaSyAswFS24FiMHSvmwbU1ctvMSuQ3vb6D8l8',
+  emptyFunc: () => {}
 };

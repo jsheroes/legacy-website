@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import menuItems from '../data/menuitems';
-import { styles, mediaQueries } from '../constants';
+import { styles, mediaQueries, emptyFunc } from '../constants';
+
+const sizeL = 992;
 
 export default class Nav extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      hideNav: false,
+      hideNavUp: false,
       currentHash: '',
-      showNavItems: false
+      showNavItems: false,
+      viewportWidth: 0
     };
 
     this.handleScroll = this.handleScroll.bind(this);
@@ -21,7 +24,8 @@ export default class Nav extends Component {
 
   componentDidMount() {
     this.setState({
-      showNavItems: window.innerWidth > 768,
+      viewportWidth: window.innerWidth,
+      showNavItems: window.innerWidth > sizeL,
     });
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('hashchange', this.handleHashChange);
@@ -33,13 +37,13 @@ export default class Nav extends Component {
   }
 
   handleScroll() {
-    const { hideNav } = this.state;
+    const { hideNavUp } = this.state;
     const scrollPosition =
       window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollPosition > 50 && !hideNav) {
-      this.setState({ hideNav: true });
-    } else if (scrollPosition < 50 && hideNav) {
-      this.setState({ hideNav: false });
+    if (scrollPosition > 50 && !hideNavUp) {
+      this.setState({ hideNavUp: true, showNavItems: false });
+    } else if (scrollPosition < 50 && hideNavUp) {
+      this.setState({ hideNavUp: false });
     }
   }
 
@@ -60,21 +64,25 @@ export default class Nav extends Component {
   }
 
   render() {
-    const { showNavItems } = this.state;
+    const { hideNavUp, showNavItems, viewportWidth } = this.state;
+    const navbarMaxLColors = showNavItems && (viewportWidth < sizeL)
+      ? 'navbar-max-L-colors' : '';
 
     return (
       <div
         style={this.props.style}
-        className={this.state.hideNav ? 'hideNav' : ''}
+        className={hideNavUp ? 'hideNavUp' : navbarMaxLColors}
       >
         <nav className="clearfix">
-          <img alt="website-logo" src="static/img/website_logo.png" />
+          <span>
+            <img alt="website-logo" src="static/img/website_logo.png" />
+          </span>
           <button onClick={this.toggleNavItems}>
-             <i className='fa fa-bars' aria-hidden='true' /> 
+             <i className='fa fa-bars' aria-hidden='true' />
           </button>
           <ul
-            className={`${ showNavItems ? '' : 'hideNavItems'}`}
-            onClick={this.hideNavItems}
+            className={`${ showNavItems ? 'showNavItems' : ''}`}
+            onClick={viewportWidth < sizeL ? this.hideNavItems : emptyFunc}
           >
             {
               menuItems.map((item) => {
@@ -101,7 +109,7 @@ export default class Nav extends Component {
             left: 0;
             z-index: 3;
             background-color: ${styles.mainColor2};
-            border-top: 3px solid ${styles.mainColor6};
+            border-top: 6px solid ${styles.mainColor6};
             -webkit-transition: top .2s ease-in-out;
             -moz-transition: top .2s ease-in-out;
             transition: top .2s ease-in-out;
@@ -109,18 +117,27 @@ export default class Nav extends Component {
             font-weight: 400;
           }
 
-          img {
+          .navbar-max-L-colors {
+            background-color: ${styles.mainColor1}
+            border-top-color: ${styles.mainColor1};
+          }
+
+          span {
             display: inline-block;
             float: left;
-            padding-top: 21px;
-            padding-left: 23px;
-            transform: scale(0.7);
+            width: 145px;
+            height: inherit;
+            margin-left: 15px;
           }
-          
+          img {
+            width: inherit;
+            height: auto;
+            padding-bottom: 3px;
+          }
+
           nav {
             height: auto;
-            line-height: 75px;
-
+            line-height: 72px;
           }
 
           ul {
@@ -142,12 +159,12 @@ export default class Nav extends Component {
             text-decoration: none !important;
           }
 
-          .hideNav {
+          .hideNavUp {
             top: -78px;
           }
 
-          .hideNavItems {
-            display: none;
+          .showNavItems {
+            display: block;
           }
 
           .active {
@@ -157,7 +174,7 @@ export default class Nav extends Component {
           button {
             display: inline-block;
             float: right;
-            margin: 10px 20px 10px 0;
+            margin: 10px 10px 10px 0;
             line-height: 28px;
             font-size: 28px;
             color: ${styles.mainColor3};
@@ -166,16 +183,17 @@ export default class Nav extends Component {
             outline: none;
           }
 
-          @media (max-width: ${mediaQueries.S}) {/*768px*/
+          @media (max-width: ${mediaQueries.L}) {/*992px*/
             div {
               height: 52px;
-              background-color: ${styles.mainColor1};
-              border-top: 2px solid ${styles.mainColor1};
+              background-color: transparent;
+              border-top: 2px solid transparent;
             }
             img {
               display: none;
             }
             ul {
+              display: none;
               width: 100%;
               text-align: center;
               background-color: ${styles.mainColor1};
@@ -186,45 +204,47 @@ export default class Nav extends Component {
               line-height: 50px;
             }
             li:first-child {
-               border-top: 1px solid rgba(250, 250, 250, .5);
+              border-top: 1px solid rgba(250, 250, 250, .5);
             }
             a {
               display: block;
               padding: 0;
               font-size: 16px;
             }
-            .hideNav {
+            .hideNavUp {
               top: -52px;
             }
           }
 
-          @media (max-width: ${mediaQueries.S}) {
-             /*li {*/
-              /*display: block;*/
-              /*margin: 0;*/
-              /*border-bottom: solid 1px white;*/
-            /*}*/
-          }
-
-          @media (min-width: ${mediaQueries.S}) {
-             {/* li {
-              margin: 0 17px;
-            }  */}
-          }
-
           @media (min-width: ${mediaQueries.L}) {
-             {/* li {
-              margin: 0 15px;
-            }  */}
+            div {
+             border-top: 4px solid ${styles.mainColor6};
+            }
+            span {
+              width: 125px;
+            }
+            li {
+              margin: 0 0 0 15px;
+            }
             button {
               display: none;
             }
           }
 
           @media (min-width: ${mediaQueries.XL}) {
-            {/* li {
-              margin: 0 25px;
-            } */}
+            div {
+             border-top: 6px solid ${styles.mainColor6};
+            }
+            span {
+              width: 145px;
+              margin-left: 45px;
+            }
+            li {
+              margin: 0 30px;
+            }
+            a {
+              font-size: 20px;
+            }
           }
 
         `}</style>
@@ -236,3 +256,4 @@ export default class Nav extends Component {
 Nav.propTypes = {
   style: PropTypes.any,
 };
+
