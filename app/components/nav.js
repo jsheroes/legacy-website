@@ -224,7 +224,7 @@ export default class Nav extends Component {
               width: 125px;
             }
             li {
-              margin: 0 0 0 15px;
+              margin: 0 0 0 40px;
             }
             button {
               display: none;

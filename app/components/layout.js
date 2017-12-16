@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Nav from '../components/nav';
 import Footer from '../components/footer';
 
-configureAnchors({ offset: -60, scrollDuration: 1000 });
+configureAnchors({ offset: 0, scrollDuration: 1000 });
 
 const Layout = props => (
   <div>
