@@ -78,7 +78,7 @@ class Header extends Component {
               transform: translateX(-50%);
             }
 
-            @media (max-width: ${mediaQueries.XL}) {
+            @media (max-width: 1600px) {
               video {
                 width: auto;
                 height: 100%;
@@ -101,7 +101,7 @@ class Header extends Component {
               transform: translateX(-50%);
             }
 
-            @media (max-width: 480px) {
+            @media (max-width: 705px) {
               .background-image {
               width: auto;
               height: 100%;
