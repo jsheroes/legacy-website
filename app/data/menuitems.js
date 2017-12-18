@@ -1,26 +1,32 @@
 module.exports = [
   {
-    url: 'https://www.facebook.com/jsheroes/',
-    label: 'fa fa-facebook',
+    id: 1,
+    url: '#top-section',
+    label: 'home',
   },
   {
-    url: 'https://twitter.com/jsheroes',
-    label: 'fa fa-twitter',
+    id: 2,
+    url: '#speakers',
+    label: 'speakers',
   },
   {
-    url: 'https://www.youtube.com/channel/UCeJEpnvZhG-VwGpzrzYLidQ',
-    label: 'fa fa-youtube',
+    id: 3,
+    url: '#schedule',
+    label: 'schedule',
   },
   {
-    url: 'https://github.com/cluj-javascripters/',
-    label: 'fa fa-github',
+    id: 4,
+    url: '#mission',
+    label: 'mission',
   },
   {
-    url: 'https://medium.com/cluj-javascripters',
-    label: 'fa fa-medium',
+    id: 5,
+    url: '#sponsors',
+    label: 'sponsors',
   },
   {
-    url: 'https://www.meetup.com/Cluj-Javascripters/',
-    label: 'fa fa-meetup',
+    id: 6,
+    url: '#venue',
+    label: 'venue',
   },
 ];

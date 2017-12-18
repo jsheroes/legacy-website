@@ -163,4 +163,15 @@ module.exports = [
     website: 'https://codepen.io/xavcz',
     description: '<p>Frenchie at your service, I run GraphQL & React training at OK GROW! I`m a former mechanical engineer, I was used to craft skateboards; and now, well, I craft user interfaces and share my love about web technologies.</p>',
   },
+  // {
+  //   name: 'paul',
+  //   full_name: 'Paul Brie',
+  //   position: 'Head of R&D',
+  //   company: 'Evozon',
+  //   img: 'paul.jpg',
+  //   twitter: 'https://twitter.com/aelythe',
+  //   github: 'https://github.com/paulbrie',
+  //   website: 'https://medium.com/@paulbrie',
+  //   description: '<p>Paul Brie is the CEO of Teleport and Head of JavaScript @Evozon. He is focusing his activities on R&D, startups, and leads Spherik`s accelerator Deep Tech Program. Paul is also one of the proud co-founders of the Cluj JavaScripters community and JSHeroes International Conference.</p>',
+  // },
 ];
