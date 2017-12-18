@@ -44,4 +44,9 @@ module.exports = [
     img: 'logo_jsbelgrade.png',
     href: 'https://www.meetup.com/JS-Belgrade-Meetup/',
   },
+  {
+    title: 'ngPartyCZ',
+    img: 'logo_ngparty.jpg',
+    href: 'https://www.meetup.com/ngParty/',
+  },
 ];
