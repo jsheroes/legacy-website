@@ -49,4 +49,9 @@ module.exports = [
     img: 'logo_ngparty.jpg',
     href: 'https://www.meetup.com/ngParty/',
   },
+  {
+    title: 'Frontend Meetup Budapest',
+    img: 'logo_frontendMeetupBudapest.svg',
+    href: 'https://www.meetup.com/Frontend-Meetup-Budapest/',
+  },
 ];
