@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { styles, mediaQueries } from '../constants';
-import menuItems from '../data/menuitems';
+import socialmedia from '../data/socialmedia';
 
 
 const Footer = () => (
   <footer>
     <div className="row">
       <div className="col-md-3 col-sm-4 hidden-sm hidden-xs">
-        <img src="static/img/website_logo.png" alt="JS Logo" />
+        <img src="/static/img/website_logo.png" alt="JS Logo" />
       </div>
       <div className="col-md-3 col-sm-4">
         <span className="headline">
@@ -54,7 +54,7 @@ const Footer = () => (
         </span>
         <div className="social">
           {
-          menuItems.map(item => (
+          socialmedia.map(item => (
             <span key={item.url}>
               <Link href={`${item.url}`}>
                 <a target="_blank">
