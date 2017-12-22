@@ -1,10 +1,5 @@
 module.exports = [
   {
-    id: 1,
-    url: '#top-section',
-    label: 'home',
-  },
-  {
     id: 2,
     url: '#speakers',
     label: 'speakers',
