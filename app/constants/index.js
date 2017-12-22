@@ -1,3 +1,5 @@
+import Icons from './Icons'
+
 module.exports = {
   styles: {
     mainColor1: '#000', // full-black
@@ -17,5 +19,7 @@ module.exports = {
   },
   ConferenceStartTime: '2017-06-18 08:00',
   ConferenceMapApiKey: 'AIzaSyAswFS24FiMHSvmwbU1ctvMSuQ3vb6D8l8',
-  emptyFunc: () => {}
+  emptyFunc: () => {},
+
+  icons: Icons
 };

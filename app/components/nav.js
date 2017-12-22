@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import menuItems from '../data/menuitems';
-import { styles, mediaQueries, emptyFunc } from '../constants';
+import { styles, mediaQueries, icons, emptyFunc } from '../constants';
 
 const sizeL = 992;
 
@@ -78,7 +78,7 @@ export default class Nav extends Component {
             <img alt="website-logo" src="static/img/website_logo.png" />
           </span>
           <button onClick={this.toggleNavItems}>
-             <i className='fa fa-bars' aria-hidden='true' />
+            { icons.hamburgerMenu }
           </button>
           <ul
             className={`${ showNavItems ? 'showNavItems' : ''}`}
@@ -175,9 +175,7 @@ export default class Nav extends Component {
             display: inline-block;
             float: right;
             margin: 10px 10px 10px 0;
-            line-height: 28px;
-            font-size: 28px;
-            color: ${styles.mainColor3};
+            line-height: 0;
             background-color: transparent;
             border: none;
             outline: none;
@@ -220,6 +218,9 @@ export default class Nav extends Component {
             div {
              border-top: 4px solid ${styles.mainColor6};
             }
+            nav {
+              line-height: 74px;
+            }
             span {
               width: 125px;
             }
@@ -234,6 +235,9 @@ export default class Nav extends Component {
           @media (min-width: ${mediaQueries.XL}) {
             div {
              border-top: 6px solid ${styles.mainColor6};
+            }
+            nav {
+              line-height: 71px;
             }
             span {
               width: 145px;
