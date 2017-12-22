@@ -14,6 +14,11 @@ module.exports = [
     img: 'logo_catalysts.jpg',
     href: 'https://www.catalysts.cc/',
   },
+  {
+    title: 'Telenav',
+    img: 'logo_telenav.png',
+    href: 'https://www.telenav.com/home',
+  },
   // {
   //   title: 'Informal School of IT',
   //   img: 'logo_scoala_informala.jpg',
