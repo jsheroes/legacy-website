@@ -1,4 +1,19 @@
 module.exports = [
+  {
+    title: 'Egghead',
+    img: 'logo_egghead.png',
+    href: 'https://egghead.io/',
+  },
+  {
+    title: 'CodeCamp',
+    img: 'logo_code_camp_ro.jpg',
+    href: 'https://codecamp.ro/',
+  },
+  {
+    title: 'Google',
+    img: 'logo_google.svg',
+    href: 'https://google.com',
+  },
   // {
   //   title: 'Pony Car Sharing',
   //   img: 'logo_get_pony.png',
@@ -19,16 +34,6 @@ module.exports = [
   //   img: 'logo_techfest.png',
   //   href: 'http://techfest.ro/',
   // },
-  {
-    title: 'Egghead',
-    img: 'logo_egghead.png',
-    href: 'https://egghead.io/',
-  },
-  {
-    title: 'CodeCamp',
-    img: 'logo_code_camp_ro.jpg',
-    href: 'https://codecamp.ro/',
-  },
   // {
   //   title: 'DevTalks',
   //   img: 'logo_dev_talks.jpg',

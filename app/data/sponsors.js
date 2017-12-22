@@ -9,6 +9,11 @@ module.exports = [
     img: 'logo_fortech.png',
     href: 'http://www.fortech.ro/',
   },
+  {
+    title: 'Catalysts',
+    img: 'logo_catalysts.jpg',
+    href: 'https://www.catalysts.cc/',
+  },
   // {
   //   title: 'Informal School of IT',
   //   img: 'logo_scoala_informala.jpg',
@@ -28,11 +33,6 @@ module.exports = [
   //   title: 'Moqups',
   //   img: 'logo_moqups.jpg',
   //   href: 'https://moqups.com/',
-  // },
-  // {
-  //   title: 'Catalysts',
-  //   img: 'logo_catalysts.jpg',
-  //   href: 'https://www.catalysts.cc/',
   // },
   // {
   //   title: 'LogMeIn',

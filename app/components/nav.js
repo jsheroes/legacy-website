@@ -1,32 +1,32 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
-
 import menuItems from '../data/menuitems';
-import { styles, mediaQueries } from '../constants';
+import { styles, mediaQueries, icons, emptyFunc } from '../constants';
+
+const sizeL = 992;
 
 export default class Nav extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      height: 100,
-      smallNav: false,
+      hideNavUp: false,
       currentHash: '',
-      logoFixed: false,
+      showNavItems: false,
+      viewportWidth: 0
     };
+
     this.handleScroll = this.handleScroll.bind(this);
     this.handleHashChange = this.handleHashChange.bind(this);
+    this.toggleNavItems = this.toggleNavItems.bind(this);
+    this.hideNavItems = this.hideNavItems.bind(this);
   }
 
   componentDidMount() {
-    const rect = document.getElementById('logo').getBoundingClientRect();
-    const docEl = document.documentElement;
-    const logoElementOffsetTop = rect.top + (window.pageYOffset || docEl.scrollTop || 0);
-
     this.setState({
-      logoOffsetTop: logoElementOffsetTop,
+      viewportWidth: window.innerWidth,
+      showNavItems: window.innerWidth > sizeL,
     });
-
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('hashchange', this.handleHashChange);
   }
@@ -36,231 +36,218 @@ export default class Nav extends Component {
     window.removeEventListener('hashchange', this.handleHashChange);
   }
 
+  handleScroll() {
+    const { hideNavUp } = this.state;
+    const scrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollPosition > 50 && !hideNavUp) {
+      this.setState({ hideNavUp: true, showNavItems: false });
+    } else if (scrollPosition < 50 && hideNavUp) {
+      this.setState({ hideNavUp: false });
+    }
+  }
+
   handleHashChange(ev) {
     this.setState({ currentHash: ev.newURL.split('#')[1] });
   }
 
-  handleScroll() {
-    const scrollPosition =
-      window.pageYOffset || document.documentElement.scrollTop;
+  toggleNavItems () {
+    this.setState({
+      showNavItems: !this.state.showNavItems
+    })
+  }
 
-    if (scrollPosition > this.state.logoOffsetTop) {
-      this.setState({ logoFixed: true });
-    } else {
-      this.setState({ logoFixed: false });
-    }
+  hideNavItems () {
+    this.setState({
+      showNavItems: false
+    })
   }
 
   render() {
-    return (
-      <div>
-        <div className="nav-wrapper">
-          <div className={this.state.logoFixed ? 'fixed-logo-wrapper show' : 'fixed-logo-wrapper'}>
-            <Link href="/">
-              <a target="_blank" className="logo-anchor">
-                <img src="static/img/website_logo.png" alt="logo" className={this.state.logoFixed ? 'logo-fixed show' : 'logo-fixed'} />
-              </a>
-            </Link>
-          </div>
-          <div
-            style={this.props.style}
-            className={this.state.logoFixed ? 'smallNav' : 'bigNav'}
-          >
-            <nav>
-              <ul>
-                {menuItems.map((item) => {
-                  const active = `#${this.state.currentHash}` === item.url
-                    ? 'active'
-                    : '';
-                  return (
-                    <li key={item.url}>
-                      <Link href={`${item.url}`}>
-                        <a className={active} target="_blank">
-                          <i className={item.label} aria-hidden="true" />
-                        </a>
-                      </Link>
-                    </li>
-                  );
-                })}
-                <p className="nav-links">
-                  <Link href="https://2017.jsheroes.io"><a target="_blank">JSHeroes 2017</a></Link>
-                  <Link href="/code-of-conduct"><a target="_blank">Code of Conduct</a></Link>
-                </p>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <style jsx >{`
-          .nav-wrapper .fixed-logo-wrapper {
-            height: 45px;
-            width: 150px;
+    const { hideNavUp, showNavItems, viewportWidth } = this.state;
+    const navbarMaxLColors = showNavItems && (viewportWidth < sizeL)
+      ? 'navbar-max-L-colors' : '';
 
-            position: fixed;
-            top: 10px;
-            left: 50%;
-          }
-          .nav-wrapper .fixed-logo-wrapper.show {
-            z-index: 101;
-          }
-          .nav-wrapper .fixed-logo-wrapper .logo-fixed {
-            opacity: 0;
+    return (
+      <div
+        style={this.props.style}
+        className={hideNavUp ? 'hideNavUp' : navbarMaxLColors}
+      >
+        <nav className="clearfix">
+          <span>
+            <img alt="website-logo" src="static/img/website_logo.png" />
+          </span>
+          <button onClick={this.toggleNavItems}>
+            { icons.hamburgerMenu }
+          </button>
+          <ul
+            className={`${ showNavItems ? 'showNavItems' : ''}`}
+            onClick={viewportWidth < sizeL ? this.hideNavItems : emptyFunc}
+          >
+            {
+              menuItems.map((item) => {
+                const active = `#${this.state.currentHash}` === item.url
+                  ? 'active'
+                  : '';
+                return (
+                  <li key={item.id}>
+                    <a href={`/${item.url}`} className={active}>{item.label}</a>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </nav>
+
+        { /*language=CSS*/ }
+        <style jsx>{`
+          div {
             width: 100%;
-            transform:translate(-75px);
-            transition: opacity .2s linear;
-          }
-          .nav-wrapper .fixed-logo-wrapper .logo-fixed.show {
-            opacity: 1;
-            transition: opacity .2s linear;
-          }
-          .nav-wrapper .smallNav {
-            background-color: rgba(0,0,0,0.3);
-            -webkit-transition: all .3s linear;
-            line-height: 60px!important;
-            transition: all .3s linear;
-            z-index: 100;
-          }
-          .nav-wrapper .bigNav {
-            background-color: transparent;
-            -webkit-transition: all .3s linear;
-            transition: all .3s linear;
-          }
-          .nav-wrapper .smallNav ul {
-            opacity: 0;
-            overflow: hidden;
-            height: 0;
-            transition: opacity .5s linear;
-          }
-          .nav-links {
-            float: right;
-          }
-          .nav-links a:hover {
-            color: #0098ff;
-            transition: color 0.5s;
-          }
-          .nav-links a {
-            font-size: 16px;
-            margin-right: 20px;
-            text-decoration: none;
-          }
-          .nav-wrapper div {
-            width: 100%;
+            height: 78px;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 3;
-            line-height: 75px;
-            -webkit-transition: line-height .3s ease-out;
-            -moz-transition: line-height .3s ease-out;
-            transition: line-height .3s ease-out;
+            background-color: ${styles.mainColor2};
+            border-top: 6px solid ${styles.mainColor6};
+            -webkit-transition: top .2s ease-in-out;
+            -moz-transition: top .2s ease-in-out;
+            transition: top .2s ease-in-out;
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
+          }
+
+          .navbar-max-L-colors {
+            background-color: ${styles.mainColor1}
+            border-top-color: ${styles.mainColor1};
+          }
+
+          span {
+            display: inline-block;
+            float: left;
+            width: 145px;
+            height: inherit;
+            margin-left: 15px;
+          }
+          img {
+            width: inherit;
+            height: auto;
+            padding-bottom: 3px;
           }
 
           nav {
-            min-height: 55px;
-            padding: 0 15px;
-            margin: 0 auto;
+            height: auto;
+            line-height: 72px;
           }
 
-          .nav-wrapper ul {
+          ul {
+            display: inline-block;
             float: right;
+          }
+
+          li {
+            margin: 0 35px;
             display: inline-block;
           }
 
-          .nav-wrapper ul li {
-            padding: 0 5px;
-            display: inline-block;
-          }
-
-          .nav-wrapper ul p a {
-            font-size: 20px;
-          }
-
-          .nav-wrapper ul li:hover {
-            transform: scale(2);
-            transition: all 0.5s;
-          }
-
-          .nav-wrapper a {
+          a {
+            padding: 5px 15px;
+            text-transform: capitalize;
             color: #fff;
-            font-size: 23px;
-            font-weight: 300;
+            font-size: 18px;
+            font-weight: 400;
+            text-decoration: none !important;
           }
 
-          .nav-wrapper img {
-            display: inline-block;
-            vertical-align: middle;
-            padding-bottom: 12px;
-            transform: scale(0.8);
-            transition: transform .3s linear;
+          .hideNavUp {
+            top: -78px;
           }
 
-          .nav-wrapper .active {
+          .showNavItems {
+            display: block;
+          }
+
+          .active {
             color: ${styles.mainColor6}
           }
 
-          @media (max-width: ${mediaQueries.L}) {
-            .nav-wrapper a {
-              font-size: 16px;
+          button {
+            display: inline-block;
+            float: right;
+            margin: 10px 10px 10px 0;
+            line-height: 0;
+            background-color: transparent;
+            border: none;
+            outline: none;
+          }
+
+          @media (max-width: ${mediaQueries.L}) {/*992px*/
+            div {
+              height: 52px;
+              background-color: transparent;
+              border-top: 2px solid transparent;
             }
-
-            .nav-wrapper li {
-              margin-right: 20px;
-              line-height: 50px;
+            img {
+              display: none;
             }
-
-            .nav-wrapper ul {
-
+            ul {
+              display: none;
               width: 100%;
               text-align: center;
+              background-color: ${styles.mainColor1};
             }
-          }
-
-          @media (max-width: ${mediaQueries.S}) {
-            .nav-wrapper ul {
-              text-align: right;
-            }
-            .nav-wrapper ul .nav-links a:nth-child(2) {
-              margin: 0;
-            }
-            .nav-wrapper li {
+            li {
               display: block;
               margin: 0;
+              line-height: 50px;
             }
-            .nav-links {
-              float: none;
-              line-height: 1px;
+            li:first-child {
+              border-top: 1px solid rgba(250, 250, 250, .5);
             }
-            .bigNav .fa, .smallNav .fa {
-              font-size: 22px;
+            a {
+              display: block;
+              padding: 0;
+              font-size: 16px;
             }
-          }
-
-          @media (min-width: ${mediaQueries.S}) {
-            nav {
-              width: 720px;
-            }
-
-            .nav-wrapper li {
-              margin: 0 15px;
+            .hideNavUp {
+              top: -52px;
             }
           }
 
           @media (min-width: ${mediaQueries.L}) {
-            nav {
-              width: 960px;
+            div {
+             border-top: 4px solid ${styles.mainColor6};
             }
-
-            .nav-wrapper li {
-              padding: 0 15px;
+            nav {
+              line-height: 74px;
+            }
+            span {
+              width: 125px;
+            }
+            li {
+              margin: 0 0 0 40px;
+            }
+            button {
+              display: none;
             }
           }
 
           @media (min-width: ${mediaQueries.XL}) {
-            nav {
-              width: 1140px;
+            div {
+             border-top: 6px solid ${styles.mainColor6};
             }
-
-            .nav-wrapper li {
-              padding: 0 25px;
+            nav {
+              line-height: 71px;
+            }
+            span {
+              width: 145px;
+              margin-left: 45px;
+            }
+            li {
+              margin: 0 30px;
+            }
+            a {
+              font-size: 20px;
             }
           }
 
@@ -273,3 +260,4 @@ export default class Nav extends Component {
 Nav.propTypes = {
   style: PropTypes.any,
 };
+
