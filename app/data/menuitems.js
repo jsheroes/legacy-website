@@ -1,26 +1,26 @@
 module.exports = [
   {
-    id: 2,
+    id: 1,
     url: '#speakers',
     label: 'speakers',
   },
   {
-    id: 3,
+    id: 2,
     url: '#schedule',
     label: 'schedule',
   },
   {
-    id: 4,
+    id: 3,
     url: '#mission',
     label: 'mission',
   },
   {
-    id: 5,
+    id: 4,
     url: '#sponsors',
     label: 'sponsors',
   },
   {
-    id: 6,
+    id: 5,
     url: '#venue',
     label: 'venue',
   },

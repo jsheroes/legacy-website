@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import Link from 'next/link'
 import PropTypes from 'prop-types';
 import menuItems from '../data/menuitems';
-import { styles, mediaQueries, icons, emptyFunc } from '../constants';
+import { styles, mediaQueries, emptyFunc } from '../constants';
 
 const sizeL = 992;
 
@@ -65,20 +66,22 @@ export default class Nav extends Component {
 
   render() {
     const { hideNavUp, showNavItems, viewportWidth } = this.state;
-    const navbarMaxLColors = showNavItems && (viewportWidth < sizeL)
-      ? 'navbar-max-L-colors' : '';
+    const navbarChangesMaxL = showNavItems && (viewportWidth < sizeL)
+      ? 'navbar-bcg-max-L' : '';
 
     return (
       <div
         style={this.props.style}
-        className={hideNavUp ? 'hideNavUp' : navbarMaxLColors}
+        className={hideNavUp ? 'hideNavUp' : navbarChangesMaxL}
       >
         <nav className="clearfix">
-          <span>
-            <img alt="website-logo" src="static/img/website_logo.png" />
-          </span>
+          <Link href='/'>
+            <a className={`${navbarChangesMaxL} home-link`}>
+              <img alt="website-logo" src="static/img/website_logo.png" />
+            </a>
+          </Link>
           <button onClick={this.toggleNavItems}>
-            { icons.hamburgerMenu }
+            <img alt="navbar-icon-bars" src="static/img/navbar-icon.svg" />
           </button>
           <ul
             className={`${ showNavItems ? 'showNavItems' : ''}`}
@@ -117,22 +120,23 @@ export default class Nav extends Component {
             font-weight: 400;
           }
 
-          .navbar-max-L-colors {
+          .navbar-bcg-max-L {
             background-color: ${styles.mainColor1}
-            border-top-color: ${styles.mainColor1};
           }
 
-          span {
+          .home-link {
             display: inline-block;
             float: left;
             width: 145px;
             height: inherit;
-            margin-left: 15px;
+            padding: 0;
+            margin: 16px 15px;
+            line-height: 0;
           }
-          img {
+
+          .home-link img {
             width: inherit;
             height: auto;
-            padding-bottom: 3px;
           }
 
           nav {
@@ -183,12 +187,19 @@ export default class Nav extends Component {
 
           @media (max-width: ${mediaQueries.L}) {/*992px*/
             div {
-              height: 52px;
+              height: 50px;
               background-color: transparent;
-              border-top: 2px solid transparent;
+              border-top: 0;
             }
-            img {
+            nav {
+              line-height: 52px;
+            }
+            .home-link {
               display: none;
+              width: 100px;
+            }
+            .navbar-bcg-max-L .home-link {
+              display: inline-block;
             }
             ul {
               display: none;
@@ -221,8 +232,9 @@ export default class Nav extends Component {
             nav {
               line-height: 74px;
             }
-            span {
+            .home-link {
               width: 125px;
+              margin: 25px 15px;
             }
             li {
               margin: 0 0 0 40px;
@@ -239,9 +251,9 @@ export default class Nav extends Component {
             nav {
               line-height: 71px;
             }
-            span {
+            .home-link {
               width: 145px;
-              margin-left: 45px;
+              margin: 23px 15px 23px 45px;
             }
             li {
               margin: 0 30px;
