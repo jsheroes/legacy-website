@@ -17,7 +17,7 @@ module.exports = [
   {
     title: 'Telenav',
     img: 'logo_telenav.png',
-    href: 'https://www.telenav.com/home',
+    href: 'https://www.telenav.com/',
   },
   // {
   //   title: 'Informal School of IT',
