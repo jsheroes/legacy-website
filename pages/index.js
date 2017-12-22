@@ -10,7 +10,7 @@ import Mission from '../app/components/mission';
 import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
 
-export default () => (
+export default props => (
   <Layout>
     <Header />
     <Updates />
@@ -23,4 +23,4 @@ export default () => (
     <Venue />
     <ScrollBtn />
   </Layout>
-);
+  );
