@@ -5,7 +5,7 @@ module.exports = [
     index: 0,
     activities: [
       {
-        title: 'Elm',
+        title: 'An introduction to Elm',
         speakerName: 'Jack Franklin',
         speakerPosition: 'Frontend Engineer',
         speakerCompany: 'Thread',
@@ -23,7 +23,7 @@ module.exports = [
         room: 'Room: TBA',
       },
       {
-        title: 'Deploying an App',
+        title: 'Gestures and Animations with React Native',
         speakerName: 'Brent Vatne',
         speakerPosition: 'Software Developer',
         speakerCompany: 'Expo',

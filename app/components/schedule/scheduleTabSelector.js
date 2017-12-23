@@ -65,21 +65,25 @@ class ScheduleTabSelector extends Component {
     });
   }
 
-  buildContent() {
+  buildContent(firstTalk) {
     const { activePosition } = this.state;
-    const data = schedule[activePosition].activities;
+    const isWorkshopTab = activePosition === 0;
+    const data = schedule[activePosition].activities.slice(firstTalk, firstTalk + 3);
 
     return data.map((activity) => {
-      if (!activity.title) {
+      if (!activity) {
+        return '';
+      }
+      if (!isWorkshopTab && !activity.title) {
         return (
           <div key={activity.time} className="activity-row clearfix">
+            <div className="activity-details">
+              <span>TBA</span>
+            </div>
             <div className="activity-location">
               <div className="room-and-time">
                 <div>{ activity.time }</div>
               </div>
-            </div>
-            <div className="activity-details">
-              <span>TBA</span>
             </div>
             <style jsx>{`
               .activity-row {
@@ -90,22 +94,33 @@ class ScheduleTabSelector extends Component {
                 color: ${styles.mainColor3};
                 font-weight: 400;
                 float: left;
-              }
-
-              .room-and-time {
-                margin-top: 20px;
-              }
-
-              .activity-location {
-                text-align: left;
-                width: 35%;
-                float: left;
-              }
-
-              .activity-details {
-                width: 65%;
-                float: right;
                 text-align: center;
+              }
+
+              @media screen and (min-width: 1000px) {
+                .activity-row {
+                  text-align: none;
+                }
+                .activity-details {
+                  width: 85%;
+                  height: 100%;
+                  float: right;
+                }
+
+                .activity-location {
+                  text-align: left;
+                  width: 15%;
+                  height: 100%;
+                }
+
+                .room-and-time {
+                  margin-top: 20px;
+                }
+  
+                .activity-details span {
+                  margin-top: 20px;
+                  display: block;
+                }
               }
             `}</style>
           </div>
@@ -236,85 +251,107 @@ class ScheduleTabSelector extends Component {
   render() {
     const { activePosition } = this.state;
     const buttons = this.buildButtonSection();
-    const content = this.buildContent();
+    const morningTalks = this.buildContent(0);
+    const beforeLunchTalks = this.buildContent(3);
+    const afterLunchTalks = this.buildContent(6);
+    const lastTalks = this.buildContent(9);
     const firstBreak = activePosition === 2 ? '08:00 - 09:00 COFFEE' : '08:00 - 09:00 CHECK-IN & COFFEE';
     const isWorkshopTab = activePosition === 0;
-    const ticket = isWorkshopTab ? 'Buy Your Workshop Ticket' : 'Buy Your Conference Ticket';
-    const ticketLink = activePosition === 0 ? '' : 'https://ti.to/cluj-javascripters/jsheroes2018';
 
     return (
       <div>
-        <style jsx>{`
-        .check-in,
-        .break-schedule
-        {
-            color: ${styles.mainColor3};
-            text-align: center;
-            font-weight: bold;
-            margin: 10px 0;
-            float: left;
-            width: 100%;
-            margin: 50px 0;
-        }
-
-        .check-in {
-            margin-top: 0px;
-        }
-
-        .buy-ticket-section {
-          float: left;
-          width: 100%;
-        }
-
-        .buy-ticket-button {
-            height: 60px;
-            width: 270px;
-            text-align:center;
-            background-color: ${styles.mainColor6};
-            color: ${styles.mainColor3};
-            border-radius: 8px;
-            border: none;
-            display: block;
-            margin: 50px auto;
-        }
-
-        .buy-ticket-button:focus {
-            outline: 0;
-        }
-
-        .buy-ticket-button a {
-          color: ${styles.mainColor3};
-          height: 100%;
-          width: 100%;
-          display: block;
-          line-height: 60px;
-          text-decoration: none;
-        }
-
-        .buttons-section {
-          margin-bottom: 50px;
-        }
-    `}</style>
         <div className="buttons-section clearfix">{ buttons }</div>
         { !isWorkshopTab && <div className="check-in">{ firstBreak }</div> }
-        <div className="content-section">{ content }</div>
+        <div className="content-section clearfix">{ morningTalks }</div>
         { !isWorkshopTab && <div className="break-schedule">10:30 - 11:00 COFFEE BREAK</div> }
-        <div className="content-section">{ content }</div>
+        <div className="content-section clearfix">{ beforeLunchTalks }</div>
         { !isWorkshopTab && <div className="break-schedule">12:30 - 14:00 LUNCH BREAK</div> }
-        <div className="content-section">{ content }</div>
+        <div className="content-section clearfix">{ afterLunchTalks }</div>
         { !isWorkshopTab && <div className="break-schedule">15:30 - 16:00 COFFEE BREAK</div> }
-        <div className="content-section">{ content }</div>
+        <div className="content-section clearfix">{ lastTalks }</div>
         <div className="buy-ticket-section">
-          <button className="buy-ticket-button">
-            <a
-              href={ticketLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              { ticket }
-            </a>
-          </button>
+          {
+          isWorkshopTab ?
+            (<span>Tickets Coming Soon</span>)
+            :
+            (
+              <button className="buy-ticket-button">
+                <a
+                  href="https://ti.to/cluj-javascripters/jsheroes2018"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                Buy Your Conference Ticket
+                </a>
+              </button>
+            )
+        }
         </div>
+        <style jsx>
+          {`
+            .check-in,
+            .break-schedule
+            {
+                color: ${styles.mainColor3};
+                text-align: center;
+                font-weight: bold;
+                margin: 10px 0;
+                float: left;
+                width: 100%;
+                margin: 50px 0;
+            }
+
+            .check-in {
+                margin-top: 0px;
+            }
+
+            .buy-ticket-section {
+              float: left;
+              width: 100%;
+              color: ${styles.mainColor3};
+              text-align:center;
+            }
+
+            .buy-ticket-section span {
+              display: block;
+              margin: 50px auto;
+            }
+
+            .buy-ticket-button {
+                height: 60px;
+                width: 270px;
+                text-align:center;
+                background-color: ${styles.mainColor6};
+                color: ${styles.mainColor3};
+                border-radius: 8px;
+                border: none;
+                display: block;
+                margin: 50px auto;
+            }
+
+            .buy-ticket-button:focus {
+                outline: 0;
+            }
+
+            .buy-ticket-button a {
+              color: ${styles.mainColor3};
+              height: 100%;
+              width: 100%;
+              display: block;
+              line-height: 60px;
+              text-decoration: none;
+            }
+
+            .buttons-section {
+              margin-bottom: 50px;
+            }
+
+            .content-section {
+              float: left;
+              width: 100%;
+            }
+          `}
+        </style>
       </div>
     );
   }
