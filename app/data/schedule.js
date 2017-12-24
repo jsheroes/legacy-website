@@ -31,6 +31,15 @@ module.exports = [
         time: '09:00 - 13:00',
         room: 'Room: TBA',
       },
+      {
+        title: 'Testing React-Redux Apps',
+        speakerName: 'Marianna Etelson',
+        speakerPosition: 'Senior Front-End Engineer',
+        speakerCompany: 'Nielsen Marketing Cloud',
+        speakerImage: 'marianna.jpg',
+        time: '14:00 - 18:00',
+        room: 'Room: TBA',
+      },
     ],
   },
   {
