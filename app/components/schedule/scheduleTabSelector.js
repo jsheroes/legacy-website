@@ -1,8 +1,7 @@
 import { Component } from 'react';
-import Link from 'next/link';
 import schedule from '../../data/schedule';
-import speakers from '../../data/speakers';
 import { styles } from '../../constants';
+import ScheduleRow from './scheduleRow';
 
 
 class ScheduleTabSelector extends Component {
@@ -69,190 +68,14 @@ class ScheduleTabSelector extends Component {
 
   buildContent(firstTalk) {
     const { activePosition } = this.state;
-    const isWorkshopTab = activePosition === 0;
-    const data = schedule[activePosition].activities.slice(firstTalk, firstTalk + 3);
+    const agenda = schedule[activePosition].activities.slice(firstTalk, firstTalk + 3);
 
-    return data.map((activity) => {
-      if (!activity) {
-        return '';
-      }
-      if (!isWorkshopTab && !activity.title) {
-        return (
-          <div key={activity.time} className="activity-row clearfix">
-            <div className="activity-details">
-              <span>TBA</span>
-            </div>
-            <div className="activity-location">
-              <div className="room-and-time">
-                <div>{ activity.time }</div>
-              </div>
-            </div>
-            <style jsx>{`
-              .activity-row {
-                padding: 20px 0;
-                border-bottom: 1px solid rgba( 255, 255, 255, .7 );
-                width: 100%;
-                height: 100px;
-                color: ${styles.mainColor3};
-                font-weight: 400;
-                float: left;
-                text-align: center;
-              }
-
-              @media screen and (min-width: 1000px) {
-                .activity-row {
-                  text-align: none;
-                }
-                .activity-details {
-                  width: 85%;
-                  height: 100%;
-                  float: right;
-                }
-
-                .activity-location {
-                  text-align: left;
-                  width: 15%;
-                  height: 100%;
-                }
-
-                .room-and-time {
-                  margin-top: 20px;
-                }
-  
-                .activity-details span {
-                  margin-top: 20px;
-                  display: block;
-                }
-              }
-            `}</style>
-          </div>
-        );
-      }
-
-      const speaker = speakers.find(s => s.permalink === activity.speakerRef);
-
-      return (
-        <div key={activity.title}className="activity-row clearfix">
-          <div className="activity-details">
-            <div className="activity-title">
-              <span>{ activity.title }</span>
-            </div>
-            <div>
-              <span className="speaker-name" >{speaker.fullName}</span>
-              <span className="speaker-position">, { speaker.position }</span>
-              <span className="speaker-company">{ speaker.company }</span>
-            </div>
-            <Link href={`/workshops/${activity.permalink}`}>
-              <button className="button">See more details</button>
-            </Link>
-          </div>
-          <div className="activity-location">
-            <div className="room-and-time">
-              <div>{ activity.time }</div>
-              <div>{ activity.room && activity.room }</div>
-            </div>
-            <div className="speaker-image">
-              <img
-                src={`static/img/speakers/${speaker.img}`}
-                alt={speaker.fullName}
-              />
-            </div>
-          </div>
-          <style jsx>{`
-          .activity-row {
-            padding: 20px 0;
-            border-bottom: 1px solid rgba( 255, 255, 255, .7 );
-            width: 100%;
-            color: ${styles.mainColor3};
-            font-weight: 400;
-            text-align: center;
-          }
-
-          .activity-title {
-            font-weight: 700;
-          }
-
-          .speaker-name {
-              color: ${styles.mainColor6};
-          }
-
-          .speaker-company {
-            display: block;
-          }
-
-          .speaker-company:before {
-            content: "";
-          }
-
-          .speaker-position {
-            display: none;
-          }
-
-          .speaker-image {
-              display: none;
-          }
-
-          .content-section {
-            margin-bottom: 20px;
-            float: left;
-            width: 100%;
-          }
-
-          .room-and-time {
-            margin-top: 20px;
-          }
-
-          @media screen and (min-width: 1000px) {
-            .activity-row {
-              text-align: left;
-            }
-
-            .activity-location {
-              width: 35%;
-              float: left;
-            }
-
-            .activity-details {
-              width: 65%;
-              float: right;
-            }
-
-            .speaker-position {
-              display: inline;
-            }
-
-            .speaker-company {
-              display: inline;
-            }
-
-            .speaker-company:before {
-              content: ", ";
-            }
-
-            .speaker-image {
-              display: block;
-              width: 45%;
-              float: left;
-            }
-
-            .speaker-image img {
-              width: 60px;
-              height: 60px;
-              border: 5px solid #CCC;
-              filter: grayscale( 100% );
-            }
-
-            .room-and-time {
-              width: 55%;
-              float: left;
-              margin: 0;
-            }
-          }
-        `}</style>
-        </div>
-      );
-    },
-    );
+    return agenda.map((item, index) =>
+      (<ScheduleRow
+        activeTab={activePosition}
+        agendaItem={item}
+        key={item.speakerRef || index}
+      />));
   }
 
   render() {

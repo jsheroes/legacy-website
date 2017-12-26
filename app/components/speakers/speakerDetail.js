@@ -8,7 +8,7 @@ const SpeakerDetail = ({ speakerUrl }) => {
   if (!speaker) {
     return null;
   }
-  const talks = buildTalks(speaker.talks, speaker.fullName);
+  const talks = buildTalks(speaker);
   return (
     <div>
       <Head>
@@ -71,7 +71,7 @@ const SpeakerDetail = ({ speakerUrl }) => {
               </div>
               <div className="visible-md visible-lg">
                 <div className="join">
-                  <div>Already curious to see <span>{ speaker.name }</span>`s talk?</div>
+                  <div>Already curious to see <strong>{ speaker.firstName }</strong>`s talk?</div>
                   <div>Join { speaker.reference } at JSHeroes!</div>
                 </div>
 
@@ -185,10 +185,6 @@ const SpeakerDetail = ({ speakerUrl }) => {
         margin: 50px 0;
       }
 
-      .join span {
-        text-transform: capitalize;
-      }
-
       .speaker-info-box {
         max-width: 245px;
         position: relative;
@@ -229,31 +225,34 @@ const SpeakerDetail = ({ speakerUrl }) => {
   );
 };
 
-module.exports = SpeakerDetail;
+export default SpeakerDetail;
 
-function buildTalks(talks, name) {
-  const jsheroesTalks = talks && talks.conference ?
-      talks.conference.map(talkRow) : 'no talks';
-
-  const generalTalks = talks && talks.conference ?
-      talks.general.map(talkRow) : 'no talks';
-  const currentTalk = talks && talks.current ?
-        buildCurrentTalk(talks.current) :
-        'no talk this year';
+function buildTalks(speaker) {
+  const { talk, previousTalks, otherTalks } = speaker;
+  const jsheroesTalks = previousTalks.map(talkRow);
+  const generalTalks = otherTalks.map(talkRow);
 
   return (
     <div>
-      <div key="current">
-        { currentTalk }
-      </div>
-      <div className="talks" key="general">
-        <h4>Talks by {name}</h4>
-        { generalTalks }
-      </div>
-      <div className="talks" key="jsheroes">
-        <h4>Talks by { name } at previous JSHeroes Conferences</h4>
-        { jsheroesTalks }
-      </div>
+      {
+        talk && buildCurrentTalk(talk)
+      }
+      {
+        jsheroesTalks.length > 0 && (
+          <div className="talks" key="jsheroes">
+            <h4>See { speaker.firstName } at previous JSHeroes events</h4>
+            { jsheroesTalks }
+          </div>
+        )
+      }
+      {
+        generalTalks.length > 0 && (
+          <div className="talks" key="general">
+            <h4>See { speaker.firstName } at other conferences</h4>
+            { generalTalks }
+          </div>
+        )
+      }
       <style jsx>{`
       .talks {
         margin: 40px 0;
@@ -297,12 +296,12 @@ function talkRow({ url, name }) {
   );
 }
 
-function buildCurrentTalk({ title, description, learningTeaser }) {
+function buildCurrentTalk({ title, description, message }) {
   return (
     <div>
       <h3>{title}</h3>
       <div dangerouslySetInnerHTML={{ __html: description }} />
-      <p className="teaser"><i>{learningTeaser}</i></p>
+      <p className="teaser"><i>{message}</i></p>
       <style jsx>{`
       h3 {
         margin: 20px 20px 20px 0;

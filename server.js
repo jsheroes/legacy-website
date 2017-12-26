@@ -13,20 +13,12 @@ app
   .then(() => {
     const server = express();
 
-    // routes
-    server.get('/p/:id', (req, res) => {
-      const actualPage = '/post';
-      const queryParams = { id: req.params.id };
-      app.render(req, res, actualPage, queryParams);
-    });
-
     server.get('/speakers', (req, res) => {
       res.redirect(301, '/');
     });
 
-    // all routes
-    server.get('/speakers/:url', (req, res) => {
-      const params = { url: req.params.url };
+    server.get('/speakers/:name', (req, res) => {
+      const params = { name: req.params.name };
       const route = '/speakers';
       return app.render(req, res, route, params);
     });
