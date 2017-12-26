@@ -13,7 +13,7 @@ const ScheduleRow = ({ agendaItem, activeTab }) => {
     return (
       <div key={agendaItem.time} className="activity-row clearfix">
         <div className="activity-details">
-          <span>TBA</span>
+          <span>{agendaItem.overrideTitle || 'TBA'}</span>
         </div>
         <div className="activity-location">
           <div className="room-and-time">
@@ -28,7 +28,6 @@ const ScheduleRow = ({ agendaItem, activeTab }) => {
               height: 100px;
               color: ${styles.mainColor3};
               font-weight: 400;
-              float: left;
               text-align: center;
             }
 
@@ -76,9 +75,11 @@ const ScheduleRow = ({ agendaItem, activeTab }) => {
           <span className="speaker-position">, { speaker.position }</span>
           <span className="speaker-company">{ speaker.company }</span>
         </div>
-        <Link href={`/workshops?name=${activity.permalink}`} as={`/workshops/${activity.permalink}`}>
-          <button className="button">See more details</button>
-        </Link>
+        { isWorkshopTab && (
+          <Link href={`/workshops?name=${activity.permalink}`} as={`/workshops/${activity.permalink}`}>
+            <button className="button">See more details</button>
+          </Link>
+        ) }
       </div>
       <div className="activity-location">
         <div className="room-and-time">
@@ -107,7 +108,7 @@ const ScheduleRow = ({ agendaItem, activeTab }) => {
         }
 
         .speaker-name {
-            color: ${styles.mainColor6};
+          color: ${styles.mainColor6};
         }
 
         .speaker-company {
@@ -123,7 +124,7 @@ const ScheduleRow = ({ agendaItem, activeTab }) => {
         }
 
         .speaker-image {
-            display: none;
+          display: none;
         }
 
         .content-section {
