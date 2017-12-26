@@ -19,7 +19,7 @@ const Speaker = props => (
         </div>
       </div>
       <div className="speaker-info">
-        <h5 className="text-blue">{props.data.full_name}</h5>
+        <h5 className="text-blue">{props.data.fullName}</h5>
         <h6>{props.data.position}<br />{props.data.company}</h6>
       </div>
     </div>

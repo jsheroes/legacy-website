@@ -31,6 +31,16 @@ app
       return app.render(req, res, route, params);
     });
 
+    server.get('/workshops', (req, res) => {
+      res.redirect(301, '/');
+    });
+
+    server.get('/workshops/:name', (req, res) => {
+      const query = { name: req.params.name };
+      const route = '/workshops';
+      return app.render(req, res, route, query);
+    });
+
     server.get('*', (req, res) => handle(req, res));
 
     // start

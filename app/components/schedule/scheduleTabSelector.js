@@ -1,5 +1,7 @@
 import { Component } from 'react';
+import Link from 'next/link';
 import schedule from '../../data/schedule';
+import speakers from '../../data/speakers';
 import { styles } from '../../constants';
 
 
@@ -127,6 +129,8 @@ class ScheduleTabSelector extends Component {
         );
       }
 
+      const speaker = speakers.find(s => s.permalink === activity.speakerRef);
+
       return (
         <div key={activity.title}className="activity-row clearfix">
           <div className="activity-details">
@@ -134,10 +138,13 @@ class ScheduleTabSelector extends Component {
               <span>{ activity.title }</span>
             </div>
             <div>
-              <span className="speaker-name" >{activity.speakerName}</span>
-              <span className="speaker-position">, { activity.speakerPosition }</span>
-              <span className="speaker-company">{ activity.speakerCompany }</span>
+              <span className="speaker-name" >{speaker.fullName}</span>
+              <span className="speaker-position">, { speaker.position }</span>
+              <span className="speaker-company">{ speaker.company }</span>
             </div>
+            <Link href={`/workshops/${activity.permalink}`}>
+              <button className="button">See more details</button>
+            </Link>
           </div>
           <div className="activity-location">
             <div className="room-and-time">
@@ -146,8 +153,8 @@ class ScheduleTabSelector extends Component {
             </div>
             <div className="speaker-image">
               <img
-                src={`static/img/speakers/${activity.speakerImage}`}
-                alt={activity.speakerName}
+                src={`static/img/speakers/${speaker.img}`}
+                alt={speaker.fullName}
               />
             </div>
           </div>
@@ -275,7 +282,7 @@ class ScheduleTabSelector extends Component {
             (<span>Tickets Coming Soon</span>)
             :
             (
-              <button className="buy-ticket-button">
+              <button className="button buy-ticket-button">
                 <a
                   href="https://ti.to/cluj-javascripters/jsheroes2018"
                   target="_blank"
@@ -320,26 +327,7 @@ class ScheduleTabSelector extends Component {
             .buy-ticket-button {
                 height: 60px;
                 width: 270px;
-                text-align:center;
-                background-color: ${styles.mainColor6};
-                color: ${styles.mainColor3};
-                border-radius: 8px;
-                border: none;
-                display: block;
                 margin: 50px auto;
-            }
-
-            .buy-ticket-button:focus {
-                outline: 0;
-            }
-
-            .buy-ticket-button a {
-              color: ${styles.mainColor3};
-              height: 100%;
-              width: 100%;
-              display: block;
-              line-height: 60px;
-              text-decoration: none;
             }
 
             .buttons-section {

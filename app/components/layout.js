@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Nav from '../components/nav';
 import Footer from '../components/footer';
+import { styles } from '../constants';
 
 configureAnchors({ offset: 0, scrollDuration: 1000 });
 
@@ -24,7 +25,6 @@ const Layout = props => (
       html, body, ul, h1, h2, h3 {
         border: 0;
         margin: 0;
-        padding: 0;
       }
 
       body {
@@ -38,6 +38,29 @@ const Layout = props => (
       }
 
       a {
+        text-decoration: none;
+      }
+
+      .button {
+        text-align:center;
+        background-color: ${styles.mainColor6};
+        color: ${styles.mainColor3};
+        border-radius: 8px;
+        border: none;
+        display: block;
+        text-decoration: none;
+      }
+
+      .button:focus {
+        outline: 0;
+      }
+
+      .button a {
+        color: ${styles.mainColor3};
+        height: 100%;
+        width: 100%;
+        display: block;
+        line-height: 60px;
         text-decoration: none;
       }
 

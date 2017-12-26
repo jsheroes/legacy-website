@@ -4,11 +4,11 @@ import { styles, mediaQueries } from '../../constants';
 import speakers from '../../data/speakers';
 
 const SpeakerDetail = ({ speakerUrl }) => {
-  const [speaker] = speakers.filter(item => item.url === speakerUrl);
+  const speaker = speakers.find(s => s.permalink === speakerUrl);
   if (!speaker) {
     return null;
   }
-  const talks = buildTalks(speaker.talks, speaker.full_name);
+  const talks = buildTalks(speaker.talks, speaker.fullName);
   return (
     <div>
       <Head>
@@ -18,7 +18,7 @@ const SpeakerDetail = ({ speakerUrl }) => {
         <meta name="keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets" />
         <meta name="description" content="an Open-Source, Community Event by Cluj JavaScripters" />
         <meta name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets" />
-        <title>{ speaker.full_name } at JSHeroes</title>
+        <title>{ speaker.fullName } at JSHeroes</title>
         <meta property="og:title" content="JSHeroes" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`http://www.jsheroes.io/speakers/${speaker.url}`} />
@@ -46,7 +46,7 @@ const SpeakerDetail = ({ speakerUrl }) => {
                 <div className="speaker-img">
                   <img
                     src={`/static/img/speakers/${speaker.img}`}
-                    alt={speaker.full_name}
+                    alt={speaker.fullName}
                   />
                 </div>
               </div>
@@ -72,7 +72,7 @@ const SpeakerDetail = ({ speakerUrl }) => {
               <div className="visible-md visible-lg">
                 <div className="join">
                   <div>Already curious to see <span>{ speaker.name }</span>`s talk?</div>
-                  <div>Join him at JSHeroes!</div>
+                  <div>Join { speaker.reference } at JSHeroes!</div>
                 </div>
 
                 <a
@@ -87,7 +87,7 @@ const SpeakerDetail = ({ speakerUrl }) => {
             </div>
             <div className="col-md-9 main">
               <div className="details">
-                <div className="name">{ speaker.full_name }</div>
+                <h1 className="name">{ speaker.fullName }</h1>
                 <div>{ speaker.position }</div>
                 <div>{ speaker.company }</div>
               </div>
