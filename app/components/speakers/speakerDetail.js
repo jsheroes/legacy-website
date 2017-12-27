@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import Section from '../../components/common/section';
+import Section from '../common/section';
+import RawHtml from '../common/rawHtml';
 import { styles, mediaQueries } from '../../constants';
 import speakers from '../../data/speakers';
 
@@ -91,7 +92,7 @@ const SpeakerDetail = ({ speakerUrl }) => {
                 <div>{ speaker.position }</div>
                 <div>{ speaker.company }</div>
               </div>
-              <div className="description" dangerouslySetInnerHTML={{ __html: speaker.description }} />
+              <RawHtml className="description" content={speaker.description} />
               { talks }
               <div className="hidden-md hidden-lg">
                 <div className="join">
@@ -300,7 +301,7 @@ function buildCurrentTalk({ title, description, message }) {
   return (
     <div>
       <h3>{title}</h3>
-      <div dangerouslySetInnerHTML={{ __html: description }} />
+      <RawHtml content={description} />
       <p className="teaser"><i>{message}</i></p>
       <style jsx>{`
       h3 {

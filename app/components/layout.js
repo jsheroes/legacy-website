@@ -25,6 +25,7 @@ const Layout = props => (
       html, body, ul, h1, h2, h3 {
         border: 0;
         margin: 0;
+        padding: 0;
       }
 
       body {

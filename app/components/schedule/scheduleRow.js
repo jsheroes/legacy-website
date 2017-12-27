@@ -75,11 +75,11 @@ const ScheduleRow = ({ agendaItem, activeTab }) => {
           <span className="speaker-position">, { speaker.position }</span>
           <span className="speaker-company">{ speaker.company }</span>
         </div>
-        { isWorkshopTab && (
+        {/* { isWorkshopTab && (
           <Link href={`/workshops?name=${activity.permalink}`} as={`/workshops/${activity.permalink}`}>
             <button className="button">See more details</button>
           </Link>
-        ) }
+        ) } */}
       </div>
       <div className="activity-location">
         <div className="room-and-time">

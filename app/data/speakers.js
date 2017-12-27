@@ -131,6 +131,7 @@ module.exports = [
     },
     workshop: {
       title: 'Gestures and Animations with React Native',
+      type: 'Half-Day Workshop',
       permalink: 'react-native',
       logo: 'react-native.png',
       description: `
@@ -257,7 +258,18 @@ module.exports = [
       description: '',
       message: '',
     },
-    workshop: null,
+    workshop: {
+      title: 'Advanced Angular Master Class',
+      type: 'Half-Day Workshop',
+      permalink: 'angular',
+      logo: 'angular.png',
+      description: `
+        <p>If you already know the basics of Angular and wants to take your skills to the next level, this workshop is for you! We will dive into Angular core API, advanced patterns, and real-world techniques. You will gain a deep understanding of how Angular works and practical skills that you can apply to your projects.</p>
+      `,
+      prerequisites: `
+        <p>Attendees should have some experience building apps with Angular</p>
+      `,
+    },
     previousTalks: [],
     otherTalks: [],
   },
@@ -303,6 +315,7 @@ module.exports = [
     },
     workshop: {
       title: 'An introduction to Elm',
+      type: 'Full-Day Workshop',
       permalink: 'elm',
       logo: 'elm.png',
       description: `
@@ -355,6 +368,7 @@ module.exports = [
     talk: null,
     workshop: {
       title: 'GraphQL Fundamentals',
+      type: 'Full-Day Workshop',
       permalink: 'graphql',
       logo: 'graphql.png',
       description: `
@@ -416,6 +430,7 @@ module.exports = [
     talk: null,
     workshop: {
       title: 'Testing React-Redux Apps',
+      type: 'Half-Day Workshop',
       permalink: 'testing-react',
       logo: 'react.svg',
       description: `

@@ -24,6 +24,11 @@ export default [
         time: '14:00 - 18:00',
         room: 'Room: TBA',
       },
+      {
+        speakerRef: 'nir-kaufman',
+        time: '09:00 - 13:00',
+        room: 'Room: TBA',
+      },
     ],
   },
   {

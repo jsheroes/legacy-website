@@ -5,6 +5,7 @@ import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
 import speakers from '../app/data/speakers';
 import { styles } from '../app/constants';
+import RawHtml from '../app/components/common/rawHtml';
 
 const Workshop = ({ url }) => {
   const workshopName = url.query.name;
@@ -21,46 +22,45 @@ const Workshop = ({ url }) => {
         <title>{ workshop.title } by { speaker.fullName }</title>
       </Head>
       <Section>
-        <div className="row workshop-details">
-          <div className="col-md-3 side">
-            <img
-              className="tech-image"
-              src={`/static/img/technologies/${workshop.logo}`}
-              alt={workshop.title}
-            />
-            <div className="visible-md visible-lg">
-              <div className="join">
-                <div>Are you interested in <strong>{ speaker.firstName }</strong>`s workshop?</div>
-                <div>Join { speaker.reference } at JSHeroes!</div>
-              </div>
-
-              <a
-                href="https://ti.to/cluj-javascripters/jsheroes2018"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button"
-              >
-                Buy your Ticket
-              </a>
-            </div>
+        <div className="workshop-details">
+          <img
+            className="tech-image"
+            src={`/static/img/technologies/${workshop.logo}`}
+            alt={workshop.title}
+          />
+          <div className="workshop-title">
+            <h1>{ workshop.title }</h1>
+            <span>by: <strong>
+              <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>{ speaker.fullName }</Link>
+            </strong></span>
+            <p className="workshop-type">{ workshop.type }, April 18th</p>
           </div>
-          <div className="col-md-9">
-            <h1>{ workshop.title } with { speaker.fullName }</h1>
-            <strong>Curricula</strong>
-            <div dangerouslySetInnerHTML={{ __html: workshop.description }} />
-            <strong>Prerequisites</strong>
-            <div dangerouslySetInnerHTML={{ __html: workshop.prerequisites }} />
-            <strong>About the trainer</strong>
-            <div dangerouslySetInnerHTML={{ __html: speaker.description }} />
-            <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
-              <button className="button">See More</button>
-            </Link>
+        </div>
+        <div className="clearfix">
+          <p className="workshop-section"><strong>Curricula</strong></p>
+          <RawHtml content={workshop.description} />
+          <p className="workshop-section"><strong>Prerequisites</strong></p>
+          <RawHtml content={workshop.prerequisites} />
+          <p className="workshop-section"><strong>About the trainer</strong></p>
+          <RawHtml content={speaker.description} />
+          <div className="workshop-section">
+            <div>Are you interested in <strong>{ speaker.firstName }</strong>`s workshop?</div>
+            <div>Join { speaker.reference } at JSHeroes!</div>
+          </div>
+          <div className="workshop-ticket">
+            <a
+              href="https://ti.to/cluj-javascripters/jsheroes2018"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button"
+            >
+              Buy your Ticket
+            </a>
           </div>
         </div>
         <style jsx>{`
           h1 {
             color: ${styles.mainColor6};
-            margin-bottom: 20px;
           }
 
           h1, h2 {
@@ -71,27 +71,42 @@ const Workshop = ({ url }) => {
             font-size: 18px !important;
           }
 
+          .clearfix {
+            clear: both;
+          }
+
           .workshop-details {
             margin-top: 120px;
-            margin-bottom: 50px;
           }
 
           .tech-image {
-            max-width: 200px;
-            display: block;
-            margin: auto;
+            max-height: 100px;
+            float: left;
           }
 
-          .join {
-            text-align: center;
-            margin: 20px 0;
+          .workshop-title {
+            float: left;
+            margin-left: 20px;
           }
 
-          .side .button {
+          .workshop-type {
+            margin-top: 27px;
+          }
+
+          .workshop-section {
+            margin-top: 35px;
+            margin-bottom: 0;
+          }
+
+          .workshop-ticket {
+            margin-top: 35px;
+            margin-bottom: 35px;
+          }
+
+          .button {
+            margin: 10px 0;
             padding: 10px;
             max-width: 200px;
-            margin: auto;
-            letter-spacing: 2px;
             text-decoration: none;
           }
         `}</style>
