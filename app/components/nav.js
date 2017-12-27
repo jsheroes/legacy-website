@@ -77,7 +77,7 @@ export default class Nav extends Component {
         <nav className="clearfix">
           <Link href='/'>
             <a className={`${navbarChangesMaxL} home-link`}>
-              <img alt="website-logo" src="static/img/website_logo.png" />
+              <img alt="JSHeroes Logo" src="static/img/website-logo.svg" />
             </a>
           </Link>
           <button onClick={this.toggleNavItems}>
@@ -130,7 +130,7 @@ export default class Nav extends Component {
             width: 145px;
             height: inherit;
             padding: 0;
-            margin: 16px 15px;
+            margin: 17px 15px 15px;
             line-height: 0;
           }
 
@@ -196,7 +196,7 @@ export default class Nav extends Component {
             }
             .home-link {
               display: none;
-              width: 100px;
+              width: 105px;
             }
             .navbar-bcg-max-L .home-link {
               display: inline-block;
@@ -204,6 +204,7 @@ export default class Nav extends Component {
             ul {
               display: none;
               width: 100%;
+              padding-left: 0;
               text-align: center;
               background-color: ${styles.mainColor1};
             }
@@ -234,7 +235,7 @@ export default class Nav extends Component {
             }
             .home-link {
               width: 125px;
-              margin: 25px 15px;
+              margin: 26px 15px 27px;
             }
             li {
               margin: 0 0 0 40px;
@@ -253,7 +254,7 @@ export default class Nav extends Component {
             }
             .home-link {
               width: 145px;
-              margin: 23px 15px 23px 45px;
+              margin: 24px 15px 24px 45px;
             }
             li {
               margin: 0 30px;

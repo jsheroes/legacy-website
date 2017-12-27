@@ -116,7 +116,7 @@ class Header extends Component {
         >
           <ScrollableAnchor id={'home'}>
             <div className="header">
-              <video preload="auto" autoPlay muted loop poster="/static/img/video-cover.png">
+              <video preload="auto"  muted loop poster="/static/img/video-cover.png">
                 <source src="/static/video/js-hero-loop.mp4" type="video/mp4" />
               </video>
               <div className="headOverlay" />
