@@ -1,54 +1,32 @@
-import { mediaQueries } from '../../constants';
+import Link from 'next/link';
+import { styles, mediaQueries } from '../../constants';
 
-const Speaker = props => (
-  <div style={{ marginLeft: 'auto', marginRight: 'auto' }}>
-    <div className="speaker-sec">
+const Speaker = ({ speaker }) => (
+  <div>
+    <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
       <div className="speaker-info-box">
-        <div className="speaker-img">
-          {' '}
-          <img
-            src={`static/img/speakers/${props.data.img}`}
-            alt={props.data.name}
-          />
-          {' '}
-        </div>
-        <div className="speaker-hover">
-          <div className="speaker-more-cta text-center">
-            <span>find out more</span>
-          </div>
+        <img
+          src={`static/img/speakers/${speaker.img}`}
+          alt={speaker.name}
+        />
+        <div className="speaker-hover" />
+        <div className="speaker-details">
+          <h5>{speaker.fullName}</h5>
+          <h6>{speaker.position}</h6>
+          <h6>{speaker.company}</h6>
         </div>
       </div>
-      <div className="speaker-info">
-        <h5 className="text-blue">{props.data.fullName}</h5>
-        <h6>{props.data.position}<br />{props.data.company}</h6>
-      </div>
-    </div>
+    </Link>
 
     <style jsx>{`
-      .speaker-sec {
-        text-align: center;
-      }
       .speaker-info-box {
-        max-width: 245px;
-        height: 245px;
+        width: auto;
         position: relative;
-        text-align: center;
-        margin: 0 auto;
-        border: 12px solid #ccc;
         overflow: hidden;
-        box-sizing: border-box;
       }
-      .speaker-img {
-        cursor: pointer;
-      }
-      .speaker-img img {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        vertical-align: middle;
-        border: 0;
-        max-width: 100%;
-        height: auto;
+      img {
+        width: 100%;
+        height: 100%;
         filter: grayscale(100%);
       }
       .speaker-hover {
@@ -58,55 +36,46 @@ const Speaker = props => (
         position: absolute;
         right: 0;
         top: 0;
-        transition: .5s linear 0s;
-        vertical-align: middle;
+        transition: .5s ease-out;
         width: 100%;
         background: rgba(0,152,255,.8) none repeat scroll 0 0!important;
+        cursor: pointer;
+        z-index: 1;
       }
-      .speaker-hover:hover {
+      .speaker-info-box.active .speaker-hover {
         opacity: 1;
       }
-      .speaker-more-cta {
-        line-height: 221px;
-        font-size: 18px;
-        color: #fff;
-        cursor: pointer;
+      .speaker-info-box.active .speaker-details {
+        transform: translateY(-50%);
+        opacity: 1;
       }
-      .speaker-info {
-        margin-bottom: 5px;
-        padding: 15px 0;
-      }
-      .speaker-info h5 {
-        margin: 0 auto 30px;
-        cursor: pointer;
-        margin-bottom: 10px;
+      .speaker-details h5 {
         font-size: 24px;
-        font-weight: 500;
-        line-height: 32px;
+        color: ${styles.mainColor3}
       }
-      .speaker-info h6 {
-        margin: 0 auto 30px;
-        height: 64px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
+      .speaker-details h6 {
         font-size: 16px;
-        font-weight: 300;
-        line-height: 32px;
-        color: #555;
+        color: ${styles.mainColor3}
       }
-      .text-blue {
-        color: #0098FF!important;
+      .speaker-details {
+        position: absolute;
+        top: 50%;
+        transform: translateY(100px);
+        transition: .2s ease-out;
+        opacity: 0;
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+        cursor: pointer;
       }
-      @media (min-width: ${mediaQueries.S}) {
-        .speaker-info h5 {
-          font-size: 26px;
+
+      @media (min-width: ${mediaQueries.XS}) {
+        .speaker-info-box:hover .speaker-hover {
+          opacity: 1;
         }
-      }
-      @media (min-width: ${mediaQueries.L}) {
-        .speaker-info h5 {
-          font-size: 28px;
+        .speaker-info-box:hover .speaker-details {
+          transform: translateY(-50%);
+          opacity: 1;
         }
       }
     `}</style>

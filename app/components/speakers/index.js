@@ -36,9 +36,33 @@ function addClickEvents() {
   });
 }
 
+function addObserver() {
+  const observer = new IntersectionObserver(handler, {
+    threshold: 1,
+    rootMargin: '0px',
+  });
+
+  const boxes = document.querySelectorAll('.speaker-info-box');
+  boxes.forEach(box => observer.observe(box));
+
+  function handler(entries) {
+    for (const element of entries) {
+      if (element.isIntersecting && element.intersectionRatio === 1) {
+        if (element.target.className.indexOf('active') === -1 && window.innerWidth <= 425) {
+          element.target.className += ' active';
+        }
+      } else if (element.target.className.indexOf('active') > -1) {
+        element.target.className = element.target.className.replace(' active', '');
+      }
+    }
+  }
+}
+
 class Speakers extends Component {
   componentDidMount() {
+    require('intersection-observer'); // eslint-disable-line global-require
     addClickEvents();
+    addObserver();
   }
 
   render() {
@@ -57,12 +81,14 @@ class Speakers extends Component {
               </p>
             </div>
 
-            { speakers
-                .map(speaker => (
-                  <div key={speaker.name} className="speaker-box">
-                    <Speaker data={speaker} />
-                  </div>
-             )) }
+            <div className="speaker-boxes">
+              { speakers
+                  .map(speaker => (
+                    <div key={speaker.name} className="speaker-box">
+                      <Speaker speaker={speaker} />
+                    </div>
+              )) }
+            </div>
 
           </div>
         </ScrollableAnchor>
@@ -129,20 +155,30 @@ class Speakers extends Component {
               line-height: 32px;
               margin-bottom: 40px;
             }
-          }          
+          }  
+          
+          .speaker-boxes {
+            display: flex;
+            flex-wrap: wrap;
+          }
           
           .speaker-box {
             width: 100%;
-            display: inline-flex;
           }
-          
-          @media (min-width: ${mediaQueries.S}) {
+
+          @media (min-width: ${mediaQueries.XS}) {
             .speaker-box {
               width: 50%
             }
           }
+
+          @media (min-width: ${mediaQueries.S}) {
+            .speaker-box {
+              width: 33.33%
+            }
+          }
           
-          @media (min-width: ${mediaQueries.XL}) {
+          @media (min-width: ${mediaQueries.L}) {
             .speaker-box {
               width: 25%
             }
@@ -153,4 +189,4 @@ class Speakers extends Component {
   }
 }
 
-module.exports = Speakers;
+export default Speakers;
