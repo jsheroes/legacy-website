@@ -1,22 +1,21 @@
-import Link from 'next/link';
 import { styles, mediaQueries } from '../../constants';
 
 const Speaker = ({ speaker }) => (
   <div>
-    <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
-      <div className="speaker-info-box">
-        <img
-          src={`static/img/speakers/${speaker.img}`}
-          alt={speaker.name}
-        />
-        <div className="speaker-hover" />
-        <div className="speaker-details">
-          <h5>{speaker.fullName}</h5>
-          <h6>{speaker.position}</h6>
-          <h6>{speaker.company}</h6>
-        </div>
+    {/* <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}> */}
+    <div className="speaker-info-box">
+      <img
+        src={`static/img/speakers/${speaker.img}`}
+        alt={speaker.name}
+      />
+      <div className="speaker-hover" />
+      <div className="speaker-details">
+        <h5>{speaker.fullName}</h5>
+        <h6>{speaker.position}</h6>
+        <h6>{speaker.company}</h6>
       </div>
-    </Link>
+    </div>
+    {/* </Link> */}
 
     <style jsx>{`
       .speaker-info-box {
