@@ -1,14 +1,15 @@
 import Head from 'next/head';
-import Section from '../../components/common/section';
+import Section from '../common/section';
+import RawHtml from '../common/rawHtml';
 import { styles, mediaQueries } from '../../constants';
 import speakers from '../../data/speakers';
 
 const SpeakerDetail = ({ speakerUrl }) => {
-  const [speaker] = speakers.filter(item => item.url === speakerUrl);
+  const speaker = speakers.find(s => s.permalink === speakerUrl);
   if (!speaker) {
     return null;
   }
-  const talks = buildTalks(speaker.talks, speaker.full_name);
+  const talks = buildTalks(speaker);
   return (
     <div>
       <Head>
@@ -18,7 +19,7 @@ const SpeakerDetail = ({ speakerUrl }) => {
         <meta name="keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets" />
         <meta name="description" content="an Open-Source, Community Event by Cluj JavaScripters" />
         <meta name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets" />
-        <title>{ speaker.full_name } at JSHeroes</title>
+        <title>{ speaker.fullName } at JSHeroes</title>
         <meta property="og:title" content="JSHeroes" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`http://www.jsheroes.io/speakers/${speaker.url}`} />
@@ -46,7 +47,7 @@ const SpeakerDetail = ({ speakerUrl }) => {
                 <div className="speaker-img">
                   <img
                     src={`/static/img/speakers/${speaker.img}`}
-                    alt={speaker.full_name}
+                    alt={speaker.fullName}
                   />
                 </div>
               </div>
@@ -71,8 +72,8 @@ const SpeakerDetail = ({ speakerUrl }) => {
               </div>
               <div className="visible-md visible-lg">
                 <div className="join">
-                  <div>Already curious to see <span>{ speaker.name }</span>`s talk?</div>
-                  <div>Join him at JSHeroes!</div>
+                  <div>Already curious to see <strong>{ speaker.firstName }</strong>`s talk?</div>
+                  <div>Join { speaker.reference } at JSHeroes!</div>
                 </div>
 
                 <a
@@ -87,11 +88,11 @@ const SpeakerDetail = ({ speakerUrl }) => {
             </div>
             <div className="col-md-9 main">
               <div className="details">
-                <div className="name">{ speaker.full_name }</div>
+                <h1 className="name">{ speaker.fullName }</h1>
                 <div>{ speaker.position }</div>
                 <div>{ speaker.company }</div>
               </div>
-              <div className="description" dangerouslySetInnerHTML={{ __html: speaker.description }} />
+              <RawHtml className="description" content={speaker.description} />
               { talks }
               <div className="hidden-md hidden-lg">
                 <div className="join">
@@ -185,10 +186,6 @@ const SpeakerDetail = ({ speakerUrl }) => {
         margin: 50px 0;
       }
 
-      .join span {
-        text-transform: capitalize;
-      }
-
       .speaker-info-box {
         max-width: 245px;
         position: relative;
@@ -229,31 +226,34 @@ const SpeakerDetail = ({ speakerUrl }) => {
   );
 };
 
-module.exports = SpeakerDetail;
+export default SpeakerDetail;
 
-function buildTalks(talks, name) {
-  const jsheroesTalks = talks && talks.conference ?
-      talks.conference.map(talkRow) : 'no talks';
-
-  const generalTalks = talks && talks.conference ?
-      talks.general.map(talkRow) : 'no talks';
-  const currentTalk = talks && talks.current ?
-        buildCurrentTalk(talks.current) :
-        'no talk this year';
+function buildTalks(speaker) {
+  const { talk, previousTalks, otherTalks } = speaker;
+  const jsheroesTalks = previousTalks.map(talkRow);
+  const generalTalks = otherTalks.map(talkRow);
 
   return (
     <div>
-      <div key="current">
-        { currentTalk }
-      </div>
-      <div className="talks" key="general">
-        <h4>Talks by {name}</h4>
-        { generalTalks }
-      </div>
-      <div className="talks" key="jsheroes">
-        <h4>Talks by { name } at previous JSHeroes Conferences</h4>
-        { jsheroesTalks }
-      </div>
+      {
+        talk && buildCurrentTalk(talk)
+      }
+      {
+        jsheroesTalks.length > 0 && (
+          <div className="talks" key="jsheroes">
+            <h4>See { speaker.firstName } at previous JSHeroes events</h4>
+            { jsheroesTalks }
+          </div>
+        )
+      }
+      {
+        generalTalks.length > 0 && (
+          <div className="talks" key="general">
+            <h4>See { speaker.firstName } at other conferences</h4>
+            { generalTalks }
+          </div>
+        )
+      }
       <style jsx>{`
       .talks {
         margin: 40px 0;
@@ -297,12 +297,12 @@ function talkRow({ url, name }) {
   );
 }
 
-function buildCurrentTalk({ title, description, learningTeaser }) {
+function buildCurrentTalk({ title, description, message }) {
   return (
     <div>
       <h3>{title}</h3>
-      <div dangerouslySetInnerHTML={{ __html: description }} />
-      <p className="teaser"><i>{learningTeaser}</i></p>
+      <RawHtml content={description} />
+      <p className="teaser"><i>{message}</i></p>
       <style jsx>{`
       h3 {
         margin: 20px 20px 20px 0;

@@ -27,7 +27,7 @@ export default class MapPin extends Component {
           <p>Trifoiului Street number 3, Cluj-Napoca, Romania</p>
           <p><strong>Grand Hotel Italia</strong></p>
         </div>
-        <img src="static/img/js_heroes_pin.png" alt="The Map Pin" />
+        <img src="/static/img/js_heroes_pin.png" alt="The Map Pin" />
 
         <style jsx>{`
           .map-pin-loc {

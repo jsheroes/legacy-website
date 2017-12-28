@@ -3,7 +3,7 @@ import Layout from '../app/components/layout';
 import SpeakerDetail from '../app/components/speakers/speakerDetail';
 
 const Speakers = ({ url }) => {
-  const speakerUrl = url.query.url;
+  const speakerUrl = url.query.name;
   if (!speakerUrl) {
     Router.push('/#speakers');
   }

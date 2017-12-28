@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import menuItems from '../data/menuitems';
 import { styles, mediaQueries, emptyFunc } from '../constants';
@@ -14,7 +14,7 @@ export default class Nav extends Component {
       hideNavUp: false,
       currentHash: '',
       showNavItems: false,
-      viewportWidth: 0
+      viewportWidth: 0,
     };
 
     this.handleScroll = this.handleScroll.bind(this);
@@ -52,16 +52,16 @@ export default class Nav extends Component {
     this.setState({ currentHash: ev.newURL.split('#')[1] });
   }
 
-  toggleNavItems () {
+  toggleNavItems() {
     this.setState({
-      showNavItems: !this.state.showNavItems
-    })
+      showNavItems: !this.state.showNavItems,
+    });
   }
 
-  hideNavItems () {
+  hideNavItems() {
     this.setState({
-      showNavItems: false
-    })
+      showNavItems: false,
+    });
   }
 
   render() {
@@ -75,16 +75,16 @@ export default class Nav extends Component {
         className={hideNavUp ? 'hideNavUp' : navbarChangesMaxL}
       >
         <nav className="clearfix">
-          <Link href='/'>
+          <Link href="/">
             <a className={`${navbarChangesMaxL} home-link`}>
-              <img alt="JSHeroes Logo" src="static/img/website-logo.svg" />
+              <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
             </a>
           </Link>
           <button onClick={this.toggleNavItems}>
-            <img alt="navbar-icon-bars" src="static/img/navbar-icon.svg" />
+            <img alt="navbar-icon-bars" src="/static/img/navbar-icon.svg" />
           </button>
           <ul
-            className={`${ showNavItems ? 'showNavItems' : ''}`}
+            className={`${showNavItems ? 'showNavItems' : ''}`}
             onClick={viewportWidth < sizeL ? this.hideNavItems : emptyFunc}
           >
             {
@@ -102,7 +102,7 @@ export default class Nav extends Component {
           </ul>
         </nav>
 
-        { /*language=CSS*/ }
+        { /* language=CSS */ }
         <style jsx>{`
           div {
             width: 100%;
