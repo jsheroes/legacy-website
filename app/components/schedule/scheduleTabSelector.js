@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import schedule from '../../data/schedule';
 import { styles } from '../../constants';
+import ScheduleRow from './scheduleRow';
 
 
 class ScheduleTabSelector extends Component {
@@ -67,185 +68,14 @@ class ScheduleTabSelector extends Component {
 
   buildContent(firstTalk) {
     const { activePosition } = this.state;
-    const isWorkshopTab = activePosition === 0;
-    const data = schedule[activePosition].activities.slice(firstTalk, firstTalk + 3);
+    const agenda = schedule[activePosition].activities.slice(firstTalk, firstTalk + 3);
 
-    return data.map((activity) => {
-      if (!activity) {
-        return '';
-      }
-      if (!isWorkshopTab && !activity.title) {
-        return (
-          <div key={activity.time} className="activity-row clearfix">
-            <div className="activity-details">
-              <span>TBA</span>
-            </div>
-            <div className="activity-location">
-              <div className="room-and-time">
-                <div>{ activity.time }</div>
-              </div>
-            </div>
-            <style jsx>{`
-              .activity-row {
-                padding: 20px 0;
-                border-bottom: 1px solid rgba( 255, 255, 255, .7 );
-                width: 100%;
-                height: 100px;
-                color: ${styles.mainColor3};
-                font-weight: 400;
-                float: left;
-                text-align: center;
-              }
-
-              @media screen and (min-width: 1000px) {
-                .activity-row {
-                  text-align: none;
-                }
-                .activity-details {
-                  width: 85%;
-                  height: 100%;
-                  float: right;
-                }
-
-                .activity-location {
-                  text-align: left;
-                  width: 15%;
-                  height: 100%;
-                }
-
-                .room-and-time {
-                  margin-top: 20px;
-                }
-  
-                .activity-details span {
-                  margin-top: 20px;
-                  display: block;
-                }
-              }
-            `}</style>
-          </div>
-        );
-      }
-
-      return (
-        <div key={activity.title}className="activity-row clearfix">
-          <div className="activity-details">
-            <div className="activity-title">
-              <span>{ activity.title }</span>
-            </div>
-            <div>
-              <span className="speaker-name" >{activity.speakerName}</span>
-              <span className="speaker-position">, { activity.speakerPosition }</span>
-              <span className="speaker-company">{ activity.speakerCompany }</span>
-            </div>
-          </div>
-          <div className="activity-location">
-            <div className="room-and-time">
-              <div>{ activity.time }</div>
-              <div>{ activity.room && activity.room }</div>
-            </div>
-            <div className="speaker-image">
-              <img
-                src={`static/img/speakers/${activity.speakerImage}`}
-                alt={activity.speakerName}
-              />
-            </div>
-          </div>
-          <style jsx>{`
-          .activity-row {
-            padding: 20px 0;
-            border-bottom: 1px solid rgba( 255, 255, 255, .7 );
-            width: 100%;
-            color: ${styles.mainColor3};
-            font-weight: 400;
-            text-align: center;
-          }
-
-          .activity-title {
-            font-weight: 700;
-          }
-
-          .speaker-name {
-              color: ${styles.mainColor6};
-          }
-
-          .speaker-company {
-            display: block;
-          }
-
-          .speaker-company:before {
-            content: "";
-          }
-
-          .speaker-position {
-            display: none;
-          }
-
-          .speaker-image {
-              display: none;
-          }
-
-          .content-section {
-            margin-bottom: 20px;
-            float: left;
-            width: 100%;
-          }
-
-          .room-and-time {
-            margin-top: 20px;
-          }
-
-          @media screen and (min-width: 1000px) {
-            .activity-row {
-              text-align: left;
-            }
-
-            .activity-location {
-              width: 35%;
-              float: left;
-            }
-
-            .activity-details {
-              width: 65%;
-              float: right;
-            }
-
-            .speaker-position {
-              display: inline;
-            }
-
-            .speaker-company {
-              display: inline;
-            }
-
-            .speaker-company:before {
-              content: ", ";
-            }
-
-            .speaker-image {
-              display: block;
-              width: 45%;
-              float: left;
-            }
-
-            .speaker-image img {
-              width: 60px;
-              height: 60px;
-              border: 5px solid #CCC;
-              filter: grayscale( 100% );
-            }
-
-            .room-and-time {
-              width: 55%;
-              float: left;
-              margin: 0;
-            }
-          }
-        `}</style>
-        </div>
-      );
-    },
-    );
+    return agenda.map((item, index) =>
+      (<ScheduleRow
+        activeTab={activePosition}
+        agendaItem={item}
+        key={item.speakerRef || index}
+      />));
   }
 
   render() {
@@ -275,7 +105,7 @@ class ScheduleTabSelector extends Component {
             (<span>Tickets Coming Soon</span>)
             :
             (
-              <button className="buy-ticket-button">
+              <button className="button buy-ticket-button">
                 <a
                   href="https://ti.to/cluj-javascripters/jsheroes2018"
                   target="_blank"
@@ -320,26 +150,7 @@ class ScheduleTabSelector extends Component {
             .buy-ticket-button {
                 height: 60px;
                 width: 270px;
-                text-align:center;
-                background-color: ${styles.mainColor6};
-                color: ${styles.mainColor3};
-                border-radius: 8px;
-                border: none;
-                display: block;
                 margin: 50px auto;
-            }
-
-            .buy-ticket-button:focus {
-                outline: 0;
-            }
-
-            .buy-ticket-button a {
-              color: ${styles.mainColor3};
-              height: 100%;
-              width: 100%;
-              display: block;
-              line-height: 60px;
-              text-decoration: none;
             }
 
             .buttons-section {
