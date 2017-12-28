@@ -9,7 +9,7 @@ const Footer = () => (
       <div className="col-md-3 col-sm-4 hidden-sm hidden-xs">
         <Link href='/'>
           <a className="home-link">
-            <img alt="JSHeroes Logo" src="static/img/website-logo.svg" />
+            <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
           </a>
         </Link>
       </div>
