@@ -46,7 +46,7 @@ function addObserver() {
   boxes.forEach(box => observer.observe(box));
 
   function handler(entries) {
-    for (const element of entries) {
+    entries.forEach((element) => {
       if (element.isIntersecting && element.intersectionRatio === 1) {
         if (element.target.className.indexOf('active') === -1 && window.innerWidth <= 425) {
           element.target.className += ' active';
@@ -54,7 +54,7 @@ function addObserver() {
       } else if (element.target.className.indexOf('active') > -1) {
         element.target.className = element.target.className.replace(' active', '');
       }
-    }
+    });
   }
 }
 

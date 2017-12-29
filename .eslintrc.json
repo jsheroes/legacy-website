@@ -19,8 +19,9 @@
         "react/display-name": 1,
         "react/no-did-mount-set-state": 1,
         "react/jsx-filename-extension": 0,
+        "jsx-a11y/no-static-element-interactions": 1,
         "complexity": [2, 5],
-        "max-statements": [2, 7],
+        "max-statements": [1, 7],
         "max-statements-per-line": [2, {
             "max": 1
         }],
@@ -28,7 +29,7 @@
         "max-depth": [2, {
             "max": 2
         }],
-        "no-param-reassign": 2,
+        "no-param-reassign": 1,
         "no-var": 2,
         "prefer-const": 2,
         "no-use-before-define": 1

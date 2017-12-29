@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import Section from '../../components/common/section';
 
 const Updates = () => (

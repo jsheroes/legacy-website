@@ -5,26 +5,6 @@ import MapPin from './google.map.pin';
 import { ConferenceMapApiKey, mediaQueries } from '../../constants';
 
 export default class GoogleMap extends Component {
-  constructor(props) {
-    super(props);
-
-    this.createMapOptions = this.createMapOptions.bind(this);
-  }
-
-  createMapOptions(maps) {
-    return {
-      zoomControlOptions: {
-        position: maps.ControlPosition.TOP_LEFT,
-        style: maps.ZoomControlStyle.SMALL,
-      },
-      mapTypeControlOptions: {
-        position: maps.ControlPosition.TOP_RIGHT,
-      },
-      mapTypeControl: true,
-      scrollwheel: false,
-    };
-  }
-
   static defaultProps = {
     center: { lat: 46.752870, lng: 23.605845 },
     zoom: 16,
@@ -43,7 +23,7 @@ export default class GoogleMap extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           bootstrapURLKeys={{ key: ConferenceMapApiKey }}
-          options={this.createMapOptions}
+          options={createMapOptions}
         >
           <MapPin lat={46.752870} lng={23.605845} />
         </GoogleMapReact>
@@ -77,4 +57,18 @@ export default class GoogleMap extends Component {
       </div>
     );
   }
+}
+
+function createMapOptions(maps) {
+  return {
+    zoomControlOptions: {
+      position: maps.ControlPosition.TOP_LEFT,
+      style: maps.ZoomControlStyle.SMALL,
+    },
+    mapTypeControlOptions: {
+      position: maps.ControlPosition.TOP_RIGHT,
+    },
+    mapTypeControl: true,
+    scrollwheel: false,
+  };
 }
