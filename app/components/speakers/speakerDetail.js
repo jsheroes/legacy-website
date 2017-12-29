@@ -2,13 +2,8 @@ import Head from 'next/head';
 import Section from '../common/section';
 import RawHtml from '../common/rawHtml';
 import { styles, mediaQueries } from '../../constants';
-import speakers from '../../data/speakers';
 
-const SpeakerDetail = ({ speakerUrl }) => {
-  const speaker = speakers.find(s => s.permalink === speakerUrl);
-  if (!speaker) {
-    return null;
-  }
+const SpeakerDetail = ({ speaker }) => {
   const talks = buildTalks(speaker);
   return (
     <div>

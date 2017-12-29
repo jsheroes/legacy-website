@@ -7,7 +7,7 @@ const Footer = () => (
   <footer>
     <div className="row">
       <div className="col-md-3 col-sm-4 hidden-sm hidden-xs">
-        <Link href='/'>
+        <Link href="/">
           <a className="home-link">
             <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
           </a>
