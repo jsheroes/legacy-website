@@ -32,9 +32,6 @@ const SpeakerDetail = ({ speaker }) => {
       </Head>
 
       <Section>
-        <div id="logo">
-          <span className="logoJs">JS</span><span className="logoHeroes">Heroes</span>
-        </div>
         <div className="speakers-page">
           <div className="row">
             <div className="col-md-3 side">

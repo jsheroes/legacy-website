@@ -8,68 +8,52 @@ import { styles } from '../app/constants';
 import RawHtml from '../app/components/common/rawHtml';
 import Helpers from '../app/helpers';
 
-class Workshop extends Component {
-  static async getInitialProps({ res, query }) {
-    const workshopName = query.name;
-    if (!workshopName) {
-      Helpers.redirectTo(res, '/');
-    }
+const Workshop = ({ speaker }) => {
+  const { workshop } = speaker;
 
-    const speaker = speakers.find(s => s.workshop && s.workshop.permalink === workshopName);
-    if (!speaker) {
-      Helpers.redirectTo(res, '/');
-    }
-
-    return { speaker };
-  }
-
-  render() {
-    const { speaker } = this.props;
-    const { workshop } = speaker;
-
-    return (
-      <Layout>
-        <Head>
-          <title>{ workshop.title } by { speaker.fullName }</title>
-        </Head>
-        <Section>
-          <div className="workshop-details">
-            <img
-              className="tech-image"
-              src={`/static/img/technologies/${workshop.logo}`}
-              alt={workshop.title}
-            />
-            <div className="workshop-title">
-              <h1>{ workshop.title }</h1>
-              <span>by: <strong>
-                <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>{ speaker.fullName }</Link>
-              </strong></span>
-              <p className="workshop-type">{ workshop.type }, April 18th</p>
-            </div>
+  return (
+    <Layout>
+      <Head>
+        <title>{ workshop.title } by { speaker.fullName }</title>
+      </Head>
+      <Section>
+        <div className="workshop-details">
+          <img
+            className="tech-image"
+            src={`/static/img/technologies/${workshop.logo}`}
+            alt={workshop.title}
+          />
+          <div className="workshop-title">
+            <h1>{ workshop.title }</h1>
+            <span>by: <strong>
+              <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>{ speaker.fullName }</Link>
+            </strong></span>
+            <p className="workshop-type">{ workshop.type }, April 18th</p>
           </div>
-          <div className="clearfix">
-            <p className="workshop-section"><strong>Curricula</strong></p>
-            <RawHtml content={workshop.description} />
-            <p className="workshop-section"><strong>Prerequisites</strong></p>
-            <RawHtml content={workshop.prerequisites} />
-            <p className="workshop-section"><strong>About the trainer</strong></p>
-            <RawHtml content={speaker.description} />
-            <div className="workshop-section">
-              <div>Are you interested in <strong>{ speaker.firstName }</strong>`s workshop?</div>
-              <div>Join { speaker.reference } at JSHeroes!</div>
-            </div>
-            <div className="workshop-ticket">
-              <a
-                href="https://ti.to/cluj-javascripters/jsheroes2018"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button"
-              >
+        </div>
+        <div className="clearfix">
+          <p className="workshop-section"><strong>Curricula</strong></p>
+          <RawHtml content={workshop.description} />
+          <p className="workshop-section"><strong>Prerequisites</strong></p>
+          <RawHtml content={workshop.prerequisites} />
+          <p className="workshop-section"><strong>About the trainer</strong></p>
+          <RawHtml content={speaker.description} />
+          <div className="workshop-section">
+            <div>Are you interested in <strong>{ speaker.firstName }</strong>`s workshop?</div>
+            <div>Join { speaker.reference } at JSHeroes!</div>
+          </div>
+          <div className="workshop-ticket">
+            <a
+              href="https://ti.to/cluj-javascripters/jsheroes2018"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button"
+            >
               Buy your Ticket
             </a>
-            </div>
           </div>
-          <style jsx>{`
+        </div>
+        <style jsx>{`
           h1 {
             color: ${styles.mainColor6};
           }
@@ -87,7 +71,7 @@ class Workshop extends Component {
           }
 
           .workshop-details {
-            margin-top: 120px;
+            margin-top: 110px;
           }
 
           .tech-image {
@@ -121,10 +105,23 @@ class Workshop extends Component {
             text-decoration: none;
           }
         `}</style>
-        </Section>
-      </Layout>
-    );
+      </Section>
+    </Layout>
+  );
+};
+
+Workshop.getInitialProps = async ({ res, query }) => {
+  const workshopName = query.name;
+  if (!workshopName) {
+    Helpers.redirectTo(res, '/');
   }
-}
+
+  const speaker = speakers.find(s => s.workshop && s.workshop.permalink === workshopName);
+  if (!speaker) {
+    Helpers.redirectTo(res, '/');
+  }
+
+  return { speaker };
+};
 
 export default Workshop;
