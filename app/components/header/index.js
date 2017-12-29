@@ -159,7 +159,7 @@ class Header extends Component {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-6 col-xs-12">
+                  <div className="col-xs-12">
                     <a
                       href="https://ti.to/cluj-javascripters/jsheroes2018"
                       target="_blank"
@@ -167,17 +167,6 @@ class Header extends Component {
                       rel="noopener noreferrer"
                     >
                       Buy your Ticket
-                    </a>
-                  </div>
-
-                  <div className="col-md-6 col-xs-12">
-                    <a
-                      href="https://docs.google.com/forms/d/e/1FAIpQLSdPSo4Zy_M78PHRVFz90v1_SV3IqRcyhvgK2oCDY6ju6NDWeA/viewform?usp=sf_link"
-                      target="_blank"
-                      className="header-btn header-btn-right float-left"
-                      rel="noopener noreferrer"
-                    >
-                      Become a Speaker
                     </a>
                   </div>
                 </div>
