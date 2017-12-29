@@ -1,4 +1,3 @@
-import { Component } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../app/components/layout';
@@ -15,6 +14,9 @@ const Workshop = ({ speaker }) => {
     <Layout>
       <Head>
         <title>{ workshop.title } by { speaker.fullName }</title>
+        <meta property="og:url" content={`http://www.jsheroes.io/workshops/${workshop.permalink}`} />
+        <meta property="og:image" content={`http://www.jsheroes.io/static/img/technologies/${workshop.logo}`} />
+        <meta name="twitter:image" content={`http://www.jsheroes.io/static/img/technologies/${workshop.logo}`} />
       </Head>
       <Section>
         <div className="workshop-details">

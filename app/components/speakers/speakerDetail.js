@@ -8,27 +8,10 @@ const SpeakerDetail = ({ speaker }) => {
   return (
     <div>
       <Head>
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta name="keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets" />
-        <meta name="description" content="an Open-Source, Community Event by Cluj JavaScripters" />
-        <meta name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets" />
         <title>{ speaker.fullName } at JSHeroes</title>
-        <meta property="og:title" content="JSHeroes" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`http://www.jsheroes.io/speakers/${speaker.url}`} />
+        <meta property="og:url" content={`http://www.jsheroes.io/speakers/${speaker.permalink}`} />
         <meta property="og:image" content={`http://www.jsheroes.io/static/img/speakers/${speaker.img}`} />
-        <meta property="og:image:type" content="image/jpg" />
-        <meta property="og:description" content="an Open-Source, Community Event by Cluj JavaScripters" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="JSHeroes" />
-        <meta name="twitter:site" content="@jsheroes" />
-        <meta name="twitter:title" content="JSHeroes" />
-        <meta name="twitter:description" content="an Open-Source, Community Event by Cluj JavaScripters" />
-        <meta name="twitter:image" content="http://www.jsheroes.io/static/img/meta/clujsers_audience.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@jsheroes" />
+        <meta name="twitter:image" content={`http://www.jsheroes.io/static/img/speakers/${speaker.img}`} />
       </Head>
 
       <Section>
