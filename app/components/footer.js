@@ -7,7 +7,11 @@ const Footer = () => (
   <footer>
     <div className="row">
       <div className="col-md-3 col-sm-4 hidden-sm hidden-xs">
-        <img src="/static/img/website_logo.png" alt="JS Logo" />
+        <Link href='/'>
+          <a className="home-link">
+            <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
+          </a>
+        </Link>
       </div>
       <div className="col-md-3 col-sm-4">
         <span className="headline">
@@ -82,6 +86,18 @@ const Footer = () => (
         padding: 4px 0;
       }
 
+      .home-link {
+        display: inline-block;
+        width: 150px;
+        padding: 0;
+        margin: 65px 20px 65px;
+      }
+
+      .home-link img {
+        width: inherit;
+        height: auto;
+      }
+
       @media (min-width: ${mediaQueries.S} ) {
 
         .social {
@@ -99,15 +115,8 @@ const Footer = () => (
           font-size: 27px;
         }
 
-        img {
-          display: block
-          width: 150px;
-          padding-top: 65px;
-          padding-left: 20px;
-        }
-
       }
-    
+
       @media (max-width: ${mediaQueries.S} ) {
 
         footer {
@@ -124,7 +133,7 @@ const Footer = () => (
           padding-bottom: 20px;
           width: 55px;
         }
-  
+
         .social i {
           font-size: 27px;
         }
@@ -137,7 +146,7 @@ const Footer = () => (
         background-color: black;
         padding: 20px;
       }
-    
+
       .copyright .col-sm-5 {
         padding-left: 35px;
       }
@@ -158,7 +167,7 @@ const Footer = () => (
         text-transform: none;
         transition-duration: .5s;
       }
-      
+
       a:hover {
         color: ${styles.mainColor6};
         text-decoration: none;
