@@ -1,9 +1,9 @@
 const RawHtml = ({ content, className }) => (
   <div>
-    <div className={`content ${className}`} dangerouslySetInnerHTML={{ __html: content }} />
+    <div className={`content ${className || ''}`} dangerouslySetInnerHTML={{ __html: content }} />
     <style jsx global>{ `
         ul {
-            padding-left: 40px;
+            padding-left: 40px !important;
         }
     ` }
     </style>
