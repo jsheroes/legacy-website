@@ -14,9 +14,9 @@ const Workshop = ({ speaker }) => {
     <Layout>
       <Head>
         <title>{ workshop.title } by { speaker.fullName }</title>
-        <meta property="og:url" content={`http://www.jsheroes.io/workshops/${workshop.permalink}`} />
-        <meta property="og:image" content={`http://www.jsheroes.io/static/img/technologies/${workshop.logo}`} />
-        <meta name="twitter:image" content={`http://www.jsheroes.io/static/img/technologies/${workshop.logo}`} />
+        <meta property="og:url" content={`https://jsheroes.io/workshops/${workshop.permalink}`} />
+        <meta property="og:image" content={`https://jsheroes.io/static/img/technologies/${workshop.logo}`} />
+        <meta name="twitter:image" content={`https://jsheroes.io/static/img/technologies/${workshop.logo}`} />
       </Head>
       <Section>
         <div className="workshop-details">
