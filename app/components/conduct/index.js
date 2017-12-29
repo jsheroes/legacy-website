@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Section from '../../components/common/section';
 import { styles, mediaQueries } from '../../constants';
 

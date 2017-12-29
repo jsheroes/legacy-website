@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import ScrollableAnchor from 'react-scrollable-anchor';
 
 import Section from '../../components/common/section';
