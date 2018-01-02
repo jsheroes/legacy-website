@@ -72,7 +72,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="row copyright">
-      <div className="col-sm-6"><i className="fa fa-copyright" aria-hidden="true" /> 2017 JSHeroes. All rights reserved.</div>
+      <div className="col-sm-6"><i className="fa fa-copyright" aria-hidden="true" /> 2018 · JSHeroes. All rights reserved.</div>
       <div className="col-sm-6">Made with <i className="fa fa-heart" aria-hidden="true" /> by Cluj JavaScripters Community.</div>
     </div>
     <style jsx>{`
