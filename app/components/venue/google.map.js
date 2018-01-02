@@ -3,11 +3,11 @@ import GoogleMapReact from 'google-map-react';
 import MapPin from './google.map.pin';
 import { ConferenceMapApiKey, mediaQueries } from '../../constants';
 
-const GoogleMap = () => (
+const GoogleMap = ({ center, zoom }) => (
   <div>
     <GoogleMapReact
-      defaultCenter={this.props.center}
-      defaultZoom={this.props.zoom}
+      defaultCenter={center}
+      defaultZoom={zoom}
       bootstrapURLKeys={{ key: ConferenceMapApiKey }}
       options={createMapOptions}
     >
