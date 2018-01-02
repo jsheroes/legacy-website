@@ -31,9 +31,9 @@ const Layout = props => (
       <meta property="og:image:type" content="image/png" />
       <meta property="og:description" content="Check the latest updates and join us in April 2018 in Cluj Napoca, Romania!" />
       <meta property="og:locale" content="en_US" />
-      <meta property="og:site_name" content="Your JSHeroes 2017 Conference Info" />
+      <meta property="og:site_name" content="Your JSHeroes 2018 Conference Info" />
       <meta name="twitter:site" content="@jsheroes" />
-      <meta name="twitter:title" content="Your JSHeroes 2017 Conference Info" />
+      <meta name="twitter:title" content="Your JSHeroes 2018 Conference Info" />
       <meta name="twitter:description" content="Check the latest updates and join us in April 2018 in Cluj Napoca, Romania!" />
       <meta name="twitter:image" content="http://www.jsheroes.io/static/img/banners/video-cover.png" />
       <meta name="twitter:card" content="summary_large_image" />
