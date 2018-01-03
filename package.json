@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "prettier": "prettier --write --no-semi --single-quote '{*.js,{app,config}/**/*.js}'",
-    "linter": "eslint app pages --quiet --fix",
+    "linter": "eslint app pages --quiet",
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
