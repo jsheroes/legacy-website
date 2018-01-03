@@ -58,7 +58,7 @@ const SpeakerDetail = ({ speaker }) => {
                   rel="noopener noreferrer"
                 >
                   Buy your Ticket
-              </a>
+                </a>
               </div>
             </div>
             <div className="col-md-9 main">
@@ -82,7 +82,7 @@ const SpeakerDetail = ({ speaker }) => {
                   rel="noopener noreferrer"
                 >
                   Buy your Ticket
-              </a>
+                </a>
               </div>
             </div>
           </div>
