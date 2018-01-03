@@ -8,7 +8,7 @@ const NewsletterMain = () => (
       <div className="row">
         <div className="central-container text-center">
           <h5>Hello #JSHeroes, and welcome on board</h5>
-          <h5>@JSHeroes 2018 ✨🚀✨✨</h5>
+          <h5>@JSHeroes 2017 ✨🚀✨✨</h5>
         </div>
       </div>
 
