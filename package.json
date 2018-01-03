@@ -8,7 +8,8 @@
     "linter": "eslint app pages --quiet --fix",
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "precommit": "npm run linter"
   },
   "keywords": [],
   "author": "",
@@ -34,6 +35,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-react": "^7.3.0"
+    "eslint-plugin-react": "^7.3.0",
+    "husky": "^0.14.3"
   }
 }
