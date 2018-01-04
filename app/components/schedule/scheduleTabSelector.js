@@ -48,6 +48,7 @@ class ScheduleTabSelector extends Component {
                 border: none;
                 border-radius: 0;
                 transition: background-color .5s, color .5s;
+                font-size: 13px;
             }
 
             .tabselector-button:hover,
@@ -59,6 +60,18 @@ class ScheduleTabSelector extends Component {
 
             .tabselector-button:focus {
                 outline: 0;
+            }
+
+            @media screen and ( min-width: 420px ) {
+              .tabselector-button {
+                font-size: 16px;
+              }
+            }
+
+            @media screen and ( min-width: 480px ) {
+              .tabselector-button {
+                font-size: 18px;
+              }
             }
         `}</style>
         </button>

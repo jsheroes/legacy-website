@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
 import speakers from '../app/data/speakers';
-import { styles } from '../app/constants';
+import { styles, mediaQueries } from '../app/constants';
 import RawHtml from '../app/components/common/rawHtml';
 import Helpers from '../app/helpers';
 
@@ -33,7 +33,7 @@ const Workshop = ({ speaker }) => {
             <p className="workshop-type">{ workshop.type }, April 18th</p>
           </div>
         </div>
-        <div className="clearfix">
+        <div className="workshop-description clearfix">
           <p className="workshop-section"><strong>Curricula</strong></p>
           <RawHtml content={workshop.description} />
           <p className="workshop-section"><strong>Prerequisites</strong></p>
@@ -73,17 +73,16 @@ const Workshop = ({ speaker }) => {
           }
 
           .workshop-details {
-            margin-top: 110px;
+            margin-top: 65px;
+            text-align: center;
           }
 
           .tech-image {
             max-height: 100px;
-            float: left;
           }
 
           .workshop-title {
-            float: left;
-            margin-left: 20px;
+            margin-top: 20px;
           }
 
           .workshop-type {
@@ -100,11 +99,42 @@ const Workshop = ({ speaker }) => {
             margin-bottom: 35px;
           }
 
+          .workshop-description {
+            text-align: justify;
+          }
+
           .button {
             margin: 10px 0;
             padding: 10px;
-            max-width: 200px;
+            width: 100%;
             text-decoration: none;
+          }
+
+          @media (min-width: ${mediaQueries.XS} ){
+            .workshop-title {
+              float: left;
+              flex: 1;
+              margin: 0 0 0 20px;
+            }
+
+            .workshop-details {
+              display: flex;
+              text-align: left;
+            }
+
+            .button {
+              max-width: 200px;
+            }
+
+            .tech-image {
+              float: left;
+            }
+          }
+
+          @media (min-width: ${mediaQueries.L}){
+            .workshop-details {
+              margin-top: 110px;
+            }
           }
         `}</style>
       </Section>

@@ -23,9 +23,7 @@ const Style = () => (
       padding: 80px 0; 
     }
     #schedule_section .section-header {
-      margin-bottom: 45px;
-      padding-right: 15px;
-      padding-left: 15px;
+      margin: auto;
     }
     #schedule_section .section-header h2 {
       text-align: center;
