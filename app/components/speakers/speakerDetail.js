@@ -109,7 +109,7 @@ const SpeakerDetail = ({ speaker }) => {
         padding: 10px;
         display: inline-block;
         text-align: center;
-        width: 100%;
+        width: 200px;
         border-radius: 4px;
         text-decoration: none;
         letter-spacing: 2px;
@@ -146,7 +146,7 @@ const SpeakerDetail = ({ speaker }) => {
         text-align: justify;
       }
 
-      .join, .side .social-links {
+      .side .social-links {
         text-align: center;
       }
 
@@ -223,7 +223,6 @@ const SpeakerDetail = ({ speaker }) => {
       @media (max-width: ${mediaQueries.XS} ) {
         .side,
         .speaker-info-box
-
         {
           display: block;
         }
@@ -231,6 +230,14 @@ const SpeakerDetail = ({ speaker }) => {
         .details-container {
           flex: none;
           margin-top: 30px;
+        }
+
+        .buy-ticket {
+          width: 100%;
+        }
+
+        .join {
+          text-align: center;
         }
       }
 
