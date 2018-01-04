@@ -77,7 +77,7 @@ const SpeakerDetail = ({ speaker }) => {
               <div className="hidden-md hidden-lg">
                 <div className="join">
                   <div>Already curious to see <strong>{ speaker.firstName }</strong>`s talk?</div>
-                  <div>Join him at JSHeroes!</div>
+                  <div>Join { speaker.reference } at JSHeroes!</div>
                 </div>
 
                 <a
@@ -97,47 +97,6 @@ const SpeakerDetail = ({ speaker }) => {
       .speakers-page {
           padding-top: 110px;
           margin-bottom: 30px;
-      }
-
-      @media (max-width: ${mediaQueries.L} ) {
-        .details {
-          text-align: center;
-        }
-        .main .join {
-          margin: 0 0 20px 0;
-        }
-
-        .speakers-page {
-          padding-top: 65px;
-        }
-
-        .side {
-          display: flex;
-          margin-bottom: 30px;
-        }
-
-        .speaker-info-box {
-          display: inline-block;
-          margin: auto;
-        }
-
-        .details-container {
-          flex: 1;
-        }
-      }
-
-      @media (max-width: ${mediaQueries.XS} ) {
-        .side,
-        .speaker-info-box
-
-        {
-          display: block;
-        }
-
-        .details-container {
-          flex: none;
-          margin-top: 30px;
-        }
       }
       
       h3 {
@@ -184,6 +143,7 @@ const SpeakerDetail = ({ speaker }) => {
 
       .main {
         padding: 0 5px;
+        text-align: justify;
       }
 
       .join, .side .social-links {
@@ -224,6 +184,54 @@ const SpeakerDetail = ({ speaker }) => {
       .description {
         margin-top: 25px;
         margin-bottom: 25px;
+      }
+
+      @media (max-width: ${mediaQueries.L} ) {
+        .details {
+          text-align: center;
+        }
+        .main .join {
+          margin: 60px 0 20px 0;
+        }
+
+        .speakers-page {
+          padding-top: 65px;
+        }
+
+        .main {
+          padding: 0 20px;
+          
+        }
+
+        .side {
+          display: flex;
+          margin-bottom: 30px;
+          padding: 0 20px;
+        }
+
+        .speaker-info-box {
+          display: inline-block;
+          margin: auto;
+        }
+
+        .details-container {
+          flex: 1;
+          padding: 10px;
+        }
+      }
+
+      @media (max-width: ${mediaQueries.XS} ) {
+        .side,
+        .speaker-info-box
+
+        {
+          display: block;
+        }
+
+        .details-container {
+          flex: none;
+          margin-top: 30px;
+        }
       }
 
       `}</style>
