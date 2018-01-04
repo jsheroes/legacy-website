@@ -29,8 +29,8 @@ const SpeakerDetail = ({ speaker }) => {
               <div className="details-container">
                 <div className="details hidden-lg hidden-md">
                   <span className="name">{ speaker.fullName }</span>
-                  <div>{ speaker.position }</div>
-                  <div>{ speaker.company }</div>
+                  <div><strong>{ speaker.position }</strong></div>
+                  <div><strong>{ speaker.company }</strong></div>
                 </div>
                 <div className="social-links">
                   { speaker.twitter
@@ -69,8 +69,8 @@ const SpeakerDetail = ({ speaker }) => {
             <div className="col-md-9 main">
               <div className="details visible-md visible-lg">
                 <h1 className="name">{ speaker.fullName }</h1>
-                <div>{ speaker.position }</div>
-                <div>{ speaker.company }</div>
+                <div><strong>{ speaker.position }</strong></div>
+                <div><strong>{ speaker.company }</strong></div>
               </div>
               <RawHtml className="description" content={speaker.description} />
               { talks }

@@ -1,8 +1,8 @@
-// import Link from 'next/link';
+import Link from 'next/link';
 import { styles } from '../../constants';
 import speakers from '../../data/speakers';
 
-const ScheduleRow = ({ agendaItem, activeTab }) => {
+const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line complexity
   if (!agendaItem) {
     return '';
   }
@@ -63,23 +63,28 @@ const ScheduleRow = ({ agendaItem, activeTab }) => {
 
   const isWorkshopTab = activeTab === 0;
   const activity = isWorkshopTab ? speaker.workshop : speaker.talk;
+  const titleAs = isWorkshopTab ?
+    `/workshops/${speaker.workshop.permalink}` :
+    `/speakers/${speaker.permalink}`;
+  const titleLink = isWorkshopTab ?
+    `/workshops?name=${speaker.workshop.permalink}` :
+    `/speakers?name=${speaker.permalink}`;
 
   return (
     <div key={activity.title}className="activity-row clearfix">
       <div className="activity-details">
         <div className="activity-title">
-          <span>{ activity.title }</span>
+          <Link href={titleLink} as={titleAs}>
+            <a>{ activity.title }</a>
+          </Link>
         </div>
         <div>
-          <span className="speaker-name" >{speaker.fullName}</span>
-          <span className="speaker-position">, { speaker.position }</span>
-          <span className="speaker-company">{ speaker.company }</span>
-        </div>
-        {/* { isWorkshopTab && (
-          <Link href={`/workshops?name=${activity.permalink}`} as={`/workshops/${activity.permalink}`}>
-            <button className="button">See more details</button>
+          <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
+            <a className="speaker-name" >{speaker.fullName}</a>
           </Link>
-        ) } */}
+          <span className="speaker-position">, { speaker.position }</span>
+          { speaker.company && (<span className="speaker-company">{ speaker.company }</span>) }
+        </div>
       </div>
       <div className="activity-location">
         <div className="room-and-time">
@@ -105,6 +110,10 @@ const ScheduleRow = ({ agendaItem, activeTab }) => {
 
         .activity-title {
           font-weight: 700;
+        }
+
+        .activity-title a {
+          color: ${styles.mainColor3}
         }
 
         .speaker-name {
@@ -173,7 +182,7 @@ const ScheduleRow = ({ agendaItem, activeTab }) => {
           .speaker-image img {
             width: 60px;
             height: 60px;
-            border: 5px solid #CCC;
+            border: 1px solid #CCC;
             filter: grayscale( 100% );
           }
 

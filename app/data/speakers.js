@@ -140,6 +140,7 @@ module.exports = [
       prerequisites: `
         <p>You should have used React before and ideally also React Native, but you do not need a lot of experience to be able to learn from this workshop.</p>
       `,
+      seats: 30,
     },
     previousTalks: [],
     otherTalks: [],
@@ -269,6 +270,7 @@ module.exports = [
       prerequisites: `
         <p>Attendees should have some experience building apps with Angular</p>
       `,
+      seats: 40,
     },
     previousTalks: [],
     otherTalks: [],
@@ -325,6 +327,7 @@ module.exports = [
       prerequisites: `
         <p>Attendees should have a good understanding of JavaScript and be comfortable with some form of JavaScript workshop like React, Vue, Angular or so on.</p>
       `,
+      seats: 20,
     },
     previousTalks: [],
     otherTalks: [],
@@ -390,6 +393,7 @@ module.exports = [
       prerequisites: `
         <p>Basic Javascript, knowledge about Node & React is a plus</p>
       `,
+      seats: 25,
     },
     previousTalks: [],
     otherTalks: [],
@@ -439,6 +443,36 @@ module.exports = [
       prerequisites: `
         <p>Basic React/Redux knowledge</p>
       `,
+      seats: 30,
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'bogdan',
+    fullName: 'Bogdan Luca',
+    permalink: 'bogdan-luca',
+    firstName: 'Bogdan',
+    reference: 'him',
+    position: 'Freelancer',
+    img: 'bogdan.jpg',
+    github: 'https://github.com/lbogdan/',
+    twitter: 'https://twitter.com/lucabogdan',
+    description: '<p>Jumping between devops, backend and frontend development (sprinkled with unexpected gems like embedded development), with an innate curiosity for how things work behind the public API, after taking a sip of Vue.js about a year ago, I just couldn`t let it down. As I like to say, Vue.js is the framework that makes frontend development great again! So, along a few freelancing projects, I started helping people on the official Vue.js chat, learning a lot in the process - especially the hurdles someone starting with Vue.js goes through. Also, while looking for a way for people to quickly reproduce their issues, I accidentally stumbled upon CodeSandbox, and ended up contributing to it.</p>',
+    talk: null,
+    workshop: {
+      title: 'Introduction to Vue.js',
+      type: 'Half-Day Workshop',
+      permalink: 'vue',
+      logo: 'vue.png',
+      description: `
+        <p>In this workshop we'll take a journey through the basic concepts of Vue.js. In no particular order, we'll take a deep dive into its core and discover what a Vue instance is made of, we'll learn how to reuse interface elements by harvesting the power of components, we'll take a look at its innovative reactivity system, we'll learn how to setup a Vue project in seconds, we'll see how its SFCs (single file components) work together with webpack and HMR (hot module replacement) to bring us a seamless development (and deployment) experience, we'll touch on its companion libraries - vue-router for client-side routing and vuex for data manangement, we'll make parallels with other view libraries/frameworks where appropiate (React and Angular, I'm looking at you!), all while developing a web application to manage your finances!</p>
+      `,
+      prerequisites: `
+        <p>Attendees should have a good grasp of Javascript, knowledge of some ES6+ features (arrow functions, method definition shorthand, rest / spread, async / await).</p>
+        <p>Having a declarative (as opposed to imperative) mindset and experience with React or Angular is a plus, looking into the official Vue.js documentation before the workshop is recommended.</p>
+      `,
+      seats: 30,
     },
     previousTalks: [],
     otherTalks: [],

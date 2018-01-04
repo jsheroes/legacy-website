@@ -20,6 +20,11 @@ export default [
         room: 'Room: TBA',
       },
       {
+        speakerRef: 'bogdan-luca',
+        time: '14:00 - 18:00',
+        room: 'Room: TBA',
+      },
+      {
         speakerRef: 'marianna-etelson',
         time: '14:00 - 18:00',
         room: 'Room: TBA',
