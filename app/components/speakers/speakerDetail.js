@@ -26,7 +26,12 @@ const SpeakerDetail = ({ speaker }) => {
                   />
                 </div>
               </div>
-              <div>
+              <div className="details-container">
+                <div className="details hidden-lg hidden-md">
+                  <span className="name">{ speaker.fullName }</span>
+                  <div>{ speaker.position }</div>
+                  <div>{ speaker.company }</div>
+                </div>
                 <div className="social-links">
                   { speaker.twitter
                   ? <a href={speaker.twitter} target="_blank">
@@ -62,7 +67,7 @@ const SpeakerDetail = ({ speaker }) => {
               </div>
             </div>
             <div className="col-md-9 main">
-              <div className="details">
+              <div className="details visible-md visible-lg">
                 <h1 className="name">{ speaker.fullName }</h1>
                 <div>{ speaker.position }</div>
                 <div>{ speaker.company }</div>
@@ -71,7 +76,7 @@ const SpeakerDetail = ({ speaker }) => {
               { talks }
               <div className="hidden-md hidden-lg">
                 <div className="join">
-                  <div>Already curious to see <span>{ speaker.name }</span>`s talk?</div>
+                  <div>Already curious to see <strong>{ speaker.firstName }</strong>`s talk?</div>
                   <div>Join him at JSHeroes!</div>
                 </div>
 
@@ -99,7 +104,39 @@ const SpeakerDetail = ({ speaker }) => {
           text-align: center;
         }
         .main .join {
-          margin: 0;
+          margin: 0 0 20px 0;
+        }
+
+        .speakers-page {
+          padding-top: 65px;
+        }
+
+        .side {
+          display: flex;
+          margin-bottom: 30px;
+        }
+
+        .speaker-info-box {
+          display: inline-block;
+          margin: auto;
+        }
+
+        .details-container {
+          flex: 1;
+        }
+      }
+
+      @media (max-width: ${mediaQueries.XS} ) {
+        .side,
+        .speaker-info-box
+
+        {
+          display: block;
+        }
+
+        .details-container {
+          flex: none;
+          margin-top: 30px;
         }
       }
       
@@ -149,11 +186,7 @@ const SpeakerDetail = ({ speaker }) => {
         padding: 0 5px;
       }
 
-      @media (max-width: ${mediaQueries.L} ) {
-        padding: 10px;
-      }
-
-      .side, .join {
+      .join, .side .social-links {
         text-align: center;
       }
 
@@ -164,9 +197,6 @@ const SpeakerDetail = ({ speaker }) => {
       .speaker-info-box {
         max-width: 245px;
         position: relative;
-        text-align: center;
-        margin: 0 auto;
-        border: 12px solid #ccc;
         overflow: hidden;
         box-sizing: border-box;
       }
@@ -176,10 +206,8 @@ const SpeakerDetail = ({ speaker }) => {
       }
   
       .speaker-img img {
+        max-width: 245px;
         display: block;
-        margin-right: auto;
-        margin-left: auto;
-        vertical-align: middle;
         border: 0;
         max-width: 100%;
         height: auto;
@@ -190,12 +218,14 @@ const SpeakerDetail = ({ speaker }) => {
         color: ${styles.mainColor6};
         font-weight: bold;
         margin-bottom: 5px;
+        font-size: 36px;
       }
 
       .description {
         margin-top: 25px;
         margin-bottom: 25px;
       }
+
       `}</style>
     </div>
   );
@@ -231,7 +261,7 @@ function buildTalks(speaker) {
       }
       <style jsx>{`
       .talks {
-        margin: 40px 0;
+        margin: 20px 0;
       }
 
       h4 {
