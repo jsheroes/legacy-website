@@ -47,19 +47,19 @@ export default [
         time: '09:00 - 09:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'mark-dalgleish',
         time: '09:30 - 10:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'sara-vieira',
         time: '10:00 - 10:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'nir-kaufman',
         time: '11:00 - 11:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'ives-van-hoorne',
         time: '11:30 - 12:00',
       },
       {
@@ -67,11 +67,11 @@ export default [
         time: '12:00 - 12:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'paul-brie',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'brent-vatne',
         time: '14:30 - 15:00',
       },
       {
@@ -79,11 +79,11 @@ export default [
         time: '15:00 - 15:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'sebastien-chopin',
         time: '16:00 - 16:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'sarah-drasner',
         time: '16:30 - 17:00',
       },
       {
@@ -98,23 +98,23 @@ export default [
     index: 2,
     activities: [
       {
-        speakerRef: '',
+        speakerRef: 'jack-franklin',
         time: '09:00 - 09:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'liran-tal',
         time: '09:30 - 10:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'mathias-bynens',
         time: '10:00 - 10:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'monica-dinculescu',
         time: '11:00 - 11:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'larissa-davidova',
         time: '11:30 - 12:00',
       },
       {

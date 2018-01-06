@@ -141,6 +141,8 @@ module.exports = [
         <p>You should have used React before and ideally also React Native, but you do not need a lot of experience to be able to learn from this workshop.</p>
       `,
       seats: 30,
+      socialMedia: `Get ready to learn more about Gestures and Animations in React Native! Participate to a half-day workshop with Brent Vatne, and implement common mobile UI patterns starting from scratch.
+      `,
     },
     previousTalks: [],
     otherTalks: [],
@@ -271,6 +273,8 @@ module.exports = [
         <p>Attendees should have some experience building apps with Angular</p>
       `,
       seats: 40,
+      socialMedia: `Get ready to learn more about AngularJS! Participate to a half-day workshop with Nir Kaufman, gain a deeper understanding of how Angular works and real-world techniques.
+      `,
     },
     previousTalks: [],
     otherTalks: [],
@@ -328,6 +332,8 @@ module.exports = [
         <p>Attendees should have a good understanding of JavaScript and be comfortable with some form of JavaScript workshop like React, Vue, Angular or so on.</p>
       `,
       seats: 20,
+      socialMedia: `Get ready to learn more about Elm! Participate to a full-day Elm workshop with Jack Franklin, and change the way you write code for the better.
+      `,
     },
     previousTalks: [],
     otherTalks: [],
@@ -394,6 +400,8 @@ module.exports = [
         <p>Basic Javascript, knowledge about Node & React is a plus</p>
       `,
       seats: 25,
+      socialMedia: `Get ready to learn more about GraphQL! Participate to a full-day workshop with Xavier Cazalot, get one-on-one guidance through the process of building an app feature.
+      `,
     },
     previousTalks: [],
     otherTalks: [],
@@ -444,6 +452,7 @@ module.exports = [
         <p>Basic React/Redux knowledge</p>
       `,
       seats: 30,
+      socialMedia: 'Get ready to learn more on testing your React-Redux apps! Participate to a half-day workshop with Marianna Etelson, learn to write Unit and Integration tests and the tool-set for test coverage.',
     },
     previousTalks: [],
     otherTalks: [],
@@ -473,6 +482,7 @@ module.exports = [
         <p>Having a declarative (as opposed to imperative) mindset and experience with React or Angular is a plus, looking into the official Vue.js documentation before the workshop is recommended.</p>
       `,
       seats: 30,
+      socialMedia: 'Get ready to learn more about Vue.js! Participate to a half-day workshop with Bogdan Luca, explore basic concepts of Vue.js all while developing a web app to manage your finances.',
     },
     previousTalks: [],
     otherTalks: [],
