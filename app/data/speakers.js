@@ -54,7 +54,7 @@ module.exports = [
       description: `
         <p>Learn how to use Serverless functions to easily run small segments of code in the cloud with Azure. We'll learn how to integrate it with Vue and Nuxt to crop and store images on the fly, update geolocation data, and more - all without needing to maintain or scale a server.</p>
       `,
-      message: 'Learn how to write simple serverless functions to work with Vue applications!',
+      message: 'How to write simple serverless functions to work with Vue applications!',
     },
     workshop: null,
     previousTalks: [],
@@ -86,7 +86,12 @@ module.exports = [
     },
     workshop: null,
     previousTalks: [],
-    otherTalks: [],
+    otherTalks: [
+      {
+        name: 'Emoji, Web Components, and Art @ JSConf EU 2017',
+        url: 'https://www.youtube.com/watch?v=_H1s9wBOqp8',
+      },
+    ],
   },
   {
     name: 'gautam',
@@ -102,7 +107,7 @@ module.exports = [
     website: 'http://www.gautamarora.com/',
     description: '<p>Gautam is a Developer Evangelist at <a href="http://www.condenast.com/" target="_blank">Conde Nast</a>, an organizer of New York JavaScript where he runs NodeSchool NYC, and a self-published author at <a href="http://fullstackjs.com/" target="_blank">FullStack JavaScript</a>.</p>',
     talk: {
-      title: 'Talk Title - TBA',
+      title: 'TBA',
       description: '',
       message: '',
     },
@@ -125,7 +130,7 @@ module.exports = [
     website: 'https://blog.expo.io',
     description: '<p>Developer at Expo, core contributor to React Native. Spare time is spent traveling and playing with <a target="_blank" href="https://www.instagram.com/explore/tags/lucythetri">#lucythetri</a>.</p>',
     talk: {
-      title: 'Talk Title - TBA',
+      title: 'TBA',
       description: '',
       message: '',
     },
@@ -164,7 +169,7 @@ module.exports = [
     talk: {
       title: 'Meta Vue Framework',
       description: 'An overview of Nuxt.js, the Meta Vue Framework that let you create blazing fast Vue.js application quickly.',
-      message: 'Learn how to prototype an Universal Application, Production ready app in a minimum of time.',
+      message: 'How to prototype an Universal Application, Production ready app in a minimum of time.',
     },
     workshop: null,
     previousTalks: [],
@@ -190,10 +195,13 @@ module.exports = [
         <p>Whether it’s npm, webpack or yeoman generators, developers spend a great deal of their time on the CLI to run, debug and interact with programs. You already know React, and use it to render to the browser or to mobile apps. Now you can harness this knowledge of React and Node.js to build your next shiny terminal UI application.</p>
         <p>This is your chance to learn the great world of Node.js CLI applications and dive into hands-on coding of a fancy React console app. You will also discover some powerful and fun CLI tools and libraries that make up the ecosystem and can help you with your day to day developer activity.</p>
       `,
-      message: 'Learn how to use Node.js and React to build beautiful and powerful Terminal User Interface apps for the CLI.',
+      message: 'How to use Node.js and React to build beautiful and powerful Terminal User Interface apps for the CLI.',
     },
     workshop: null,
-    previousTalks: [],
+    previousTalks: [{
+      name: 'Node.js Security: Breaking The Loop',
+      url: 'https://www.youtube.com/watch?v=DX8FSC_7wRI',
+    }],
     otherTalks: [],
   },
   {
@@ -217,7 +225,12 @@ module.exports = [
     },
     workshop: null,
     previousTalks: [],
-    otherTalks: [],
+    otherTalks: [
+      {
+        name: 'Front-End Performance - The Dark Side @ ColdFront16',
+        url: 'https://www.youtube.com/watch?v=p2s4QqOlyVs',
+      },
+    ],
   },
   {
     name: 'ives',
@@ -236,7 +249,7 @@ module.exports = [
     talk: {
       title: 'CodeSandbox',
       description: 'CodeSandbox is an online editor built for web applications. During the talk I`ll explain how it works, and how we got where we are now.',
-      message: 'You`ll learn about the challenges of creating applications for the browser and what the advantages of online editors are.',
+      message: 'About the challenges of creating applications for the browser and what the advantages of online editors are.',
     },
     workshop: null,
     previousTalks: [],
@@ -257,7 +270,7 @@ module.exports = [
     website: 'https://ngnir.life',
     description: '<p>Google Developer Expert of web technologies and Angular, worldwide speaker, workshop mentor and tech community leader. Principal frontend consultant at 500Tech.</p>',
     talk: {
-      title: 'Talk Title - TBA',
+      title: 'TBA',
       description: '',
       message: '',
     },
@@ -315,7 +328,7 @@ module.exports = [
     github: 'https://github.com/jackfranklin',
     description: '<p>Jack is a Frontend Engineer at Thread in London working primarily with React. In his free time, he’s usually writing or recording videos for his blog, JavaScript Playground. Jack is also the author of “Beginning jQuery” (Apress, 2012) and a regular speaker on React, Elm, JavaScript, build tools and frameworks.</p>',
     talk: {
-      title: 'Talk Title - TBA',
+      title: 'TBA',
       description: '',
       message: '',
     },
@@ -336,7 +349,12 @@ module.exports = [
       `,
     },
     previousTalks: [],
-    otherTalks: [],
+    otherTalks: [
+      {
+        name: 'From Angular to React @ FrontendNE',
+        url: 'https://www.youtube.com/watch?v=INaAdDmhgwQ',
+      },
+    ],
   },
   {
     name: 'sara',
@@ -403,7 +421,12 @@ module.exports = [
       socialMedia: `Get ready to learn more about GraphQL! Participate to a full-day workshop with Xavier Cazalot, get one-on-one guidance through the process of building an app feature.
       `,
     },
-    previousTalks: [],
+    previousTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=McPeX5gsSX8',
+        name: 'How to get started and build something with GraphQL',
+      },
+    ],
     otherTalks: [],
   },
   {
@@ -443,10 +466,10 @@ module.exports = [
     workshop: {
       title: 'Testing React-Redux Apps',
       type: 'Half-Day Workshop',
-      permalink: 'testing-react',
+      permalink: 'react',
       logo: 'react.svg',
       description: `
-        <p>Tests are more than a quality trait of your code that you can’t forgo, it's all about confidence. You simply cannot afford going into production without be sure that your software doing what you think it does and will continue to do so as you enrich functionality. But sometimes, testing UI components, instead of providing a confidence makes us feel upset and even unproductive. Join Marianna Etelson for a half-day workshop on testing your React-Redux applications. You will learn how to write Unit and Integration tests, what are their scopes, and the tool-set required to properly bootstrap a project for test coverage. Amongst the tools we will use: jsdom, enzyme, proxiqure and tape.</p>
+        <p>Tests are more than a quality trait of your code that you can’t forgo, it's all about confidence. You simply cannot afford going into production without be sure that your software doing what you think it does and will continue to do so as you enrich functionality. But sometimes, testing UI components, instead of providing confidence makes us feel upset and even unproductive. Join Marianna Etelson for a half-day workshop on testing your React-Redux applications. You will learn how to write Unit and Integration tests, what are their scopes, and the tool-set required to properly bootstrap a project for test coverage. Amongst the tools we will use: jsdom, enzyme, proxiqure and tape.</p>
       `,
       prerequisites: `
         <p>Basic React/Redux knowledge</p>

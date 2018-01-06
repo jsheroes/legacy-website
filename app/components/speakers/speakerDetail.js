@@ -69,8 +69,12 @@ const SpeakerDetail = ({ speaker }) => {
             <div className="col-md-9 main">
               <div className="details visible-md visible-lg">
                 <h1 className="name">{ speaker.fullName }</h1>
-                <div><strong>{ speaker.position }</strong></div>
-                <div><strong>{ speaker.company }</strong></div>
+                <div>
+                  <strong>{ speaker.position }</strong>
+                  { speaker.company && (
+                    <span> @ <strong>{ speaker.company }</strong></span>
+                   ) }
+                </div>
               </div>
               <RawHtml className="description" content={speaker.description} />
               { talks }
@@ -178,7 +182,7 @@ const SpeakerDetail = ({ speaker }) => {
         color: ${styles.mainColor6};
         font-weight: bold;
         margin-bottom: 5px;
-        font-size: 36px;
+        font-size: 24px;
       }
 
       .description {
@@ -256,7 +260,7 @@ function buildTalks(speaker) {
   return (
     <div>
       {
-        talk && buildCurrentTalk(talk)
+        talk && buildCurrentTalk(talk, speaker)
       }
       {
         jsheroesTalks.length > 0 && (
@@ -280,13 +284,7 @@ function buildTalks(speaker) {
       }
 
       h4 {
-        font-size: 20px;
-      }
-
-      @media (max-width: ${mediaQueries.L} ) {
-        h4 {
-          font-size: 18px;
-        }
+        font-size: 18px;
       }
       `}</style>
     </div>
@@ -317,26 +315,35 @@ function talkRow({ url, name }) {
   );
 }
 
-function buildCurrentTalk({ title, description, message }) {
+function buildCurrentTalk({ title, description, message }, { firstName }) {
   return (
     <div>
-      <h3>{title}</h3>
+      <h3>{ firstName }`s talk: {title}</h3>
       <RawHtml content={description} />
-      <p className="teaser"><i>{message}</i></p>
+      { message && (
+        <p className="teaser">
+          <span>You will learn:</span>
+          <div><i>{message}</i></div>
+        </p>
+      ) }
       <style jsx>{`
-      h3 {
-        margin: 20px 20px 20px 0;
-      }
-      @media (max-width: ${mediaQueries.L} ) {
-        .h3{
-           margin: 20px 20px 20px 0;
+        h3 {
+          margin: 20px 20px 5px 0;
+          font-size: 18px;
         }
-      }
-      .teaser {
-        margin: 20px;
-        text-align: center;
-      }`
-        }</style>
+        @media (max-width: ${mediaQueries.L} ) {
+          .h3{
+            margin: 20px 20px 20px 0;
+          }
+        }
+        .teaser {
+          margin: 20px 0;
+        }
+        
+        .teaser span {
+          font-weight: 500;
+        }`
+      }</style>
     </div>
   );
 }
