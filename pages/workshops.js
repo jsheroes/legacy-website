@@ -14,9 +14,19 @@ const Workshop = ({ speaker }) => {
     <Layout>
       <Head>
         <title>{ workshop.title } by { speaker.fullName }</title>
+        <meta property="og:title" content={`${workshop.title} by ${speaker.fullName}`} />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://jsheroes.io/workshops/${workshop.permalink}`} />
         <meta property="og:image" content={`https://jsheroes.io/static/img/technologies/${workshop.logo}`} />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:description" content={workshop.socialMedia} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content={`${workshop.title} by ${speaker.fullName}`} />
+        <meta name="twitter:site" content="@jsheroes" />
+        <meta name="twitter:title" content={`${workshop.title} by ${speaker.fullName}`} />
+        <meta name="twitter:description" content={workshop.socialMedia} />
         <meta name="twitter:image" content={`https://jsheroes.io/static/img/technologies/${workshop.logo}`} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Section>
         <div className="workshop-details">
