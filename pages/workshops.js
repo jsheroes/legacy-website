@@ -11,7 +11,7 @@ const Workshop = ({ speaker }) => {
   const { workshop } = speaker;
 
   return (
-    <Layout>
+    <Layout page="workshop">
       <Head>
         <title>{ workshop.title } by { speaker.fullName }</title>
         <meta property="og:title" content={`${workshop.title} by ${speaker.fullName}`} />
@@ -38,7 +38,9 @@ const Workshop = ({ speaker }) => {
           <div className="workshop-title">
             <h1>{ workshop.title }</h1>
             <span>by: <strong>
-              <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>{ speaker.fullName }</Link>
+              <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
+                <a>{ speaker.fullName }</a>
+              </Link>
             </strong></span>
             <p className="workshop-type">{ workshop.type }, April 18th</p>
           </div>

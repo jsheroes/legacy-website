@@ -76,10 +76,17 @@ export default class Nav extends Component {
       >
         <nav className="clearfix">
           <Link href="/">
-            <a className={`${navbarChangesMaxL} home-link`}>
+            <a className={`${navbarChangesMaxL} home-link white`}>
               <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
             </a>
           </Link>
+          { isOnDetailsPage(this.props.page) && (
+            <Link href="/">
+              <a className={`${navbarChangesMaxL} home-link black`}>
+                <img alt="JSHeroes Logo" src="/static/img/website-logo-black.svg" />
+              </a>
+            </Link>
+          ) }
           <button onClick={this.toggleNavItems}>
             <img alt="navbar-icon-bars" src="/static/img/navbar-icon.svg" />
           </button>
@@ -130,13 +137,17 @@ export default class Nav extends Component {
             width: 145px;
             height: inherit;
             padding: 0;
-            margin: 17px 15px 15px;
+            margin: 13px 15px;
             line-height: 0;
           }
 
           .home-link img {
             width: inherit;
             height: auto;
+          }
+
+          .home-link.black {
+            display: none;
           }
 
           nav {
@@ -194,12 +205,17 @@ export default class Nav extends Component {
             nav {
               line-height: 52px;
             }
-            .home-link {
+            .home-link.white {
               display: none;
-              width: 105px;
             }
-            .navbar-bcg-max-L .home-link {
+            .home-link.black {
               display: inline-block;
+            }
+            .navbar-bcg-max-L .home-link.white {
+              display: inline-block;
+            }
+            .navbar-bcg-max-L .home-link.black {
+              display: none;
             }
             ul {
               display: none;
@@ -274,3 +290,6 @@ Nav.propTypes = {
   style: PropTypes.any,
 };
 
+function isOnDetailsPage(page = '') {
+  return page.indexOf('speaker') > -1 || page.indexOf('/workshop') > -1;
+}

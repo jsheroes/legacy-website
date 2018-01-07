@@ -4,7 +4,7 @@ import Helpers from '../app/helpers';
 import speakers from '../app/data/speakers';
 
 const Speakers = ({ speaker }) => (
-  <Layout>
+  <Layout page="speaker">
     <SpeakerDetail speaker={speaker} />
   </Layout>
   );
