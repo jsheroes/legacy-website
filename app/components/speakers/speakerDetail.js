@@ -9,9 +9,14 @@ const SpeakerDetail = ({ speaker }) => {
     <div>
       <Head>
         <title>{ speaker.fullName } at JSHeroes</title>
+        <meta property="og:title" content={`${speaker.fullName} at JSHeroes`} />
         <meta property="og:url" content={`https://jsheroes.io/speakers/${speaker.permalink}`} />
         <meta property="og:image" content={`https://jsheroes.io/static/img/speakers/${speaker.img}`} />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:description" content={speaker.description} />
         <meta name="twitter:image" content={`https://jsheroes.io/static/img/speakers/${speaker.img}`} />
+        <meta name="twitter:title" content={`${speaker.fullName} at JSHeroes`} />
+        <meta name="twitter:description" content={speaker.description} />
       </Head>
 
       <Section>

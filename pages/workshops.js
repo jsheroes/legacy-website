@@ -56,7 +56,7 @@ const Workshop = ({ speaker }) => {
           </div>
           <div className="workshop-ticket">
             <a
-              href="https://ti.to/cluj-javascripters/jsheroes2018"
+              href="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2018"
               target="_blank"
               rel="noopener noreferrer"
               className="button"
