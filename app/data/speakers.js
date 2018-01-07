@@ -12,7 +12,7 @@ module.exports = [
     twitter: 'https://twitter.com/markdalgleish',
     github: 'https://github.com/markdalgleish',
     website: '',
-    description: "<p>Mark Dalgleish is the co-creator of CSS Modules, lead organiser of MelbJS, and DesignOps Lead at SEEK, Australia's leading job site. Having got his start with HTML and UI design at a young age, Mark has since developed a love of open source and software engineering but always as a means to creating elegant, usable experiences.</p>",
+    description: "Mark Dalgleish is the co-creator of CSS Modules, lead organiser of MelbJS, and DesignOps Lead at SEEK, Australia's leading job site. Having got his start with HTML and UI design at a young age, Mark has since developed a love of open source and software engineering but always as a means to creating elegant, usable experiences.",
     talk: {
       title: 'The Future of Design, as a Service',
       description: `
@@ -48,7 +48,7 @@ module.exports = [
     twitter: 'https://twitter.com/sarah_edo',
     github: 'https://github.com/sdras',
     website: 'https://sarahdrasnerdesign.com/',
-    description: '<p>Sarah Drasner is an award-winning Speaker, Senior Developer Advocate at Microsoft, and Staff Writer at CSS-Tricks. Sarah is also the co-founder of Web Animation Workshops, with Val Head. She’s the author of SVG Animations from O’Reilly and has given Frontend Masters workshops on Vue.js and Advanced SVG Animations. Sarah is formerly Manager of UX Design & Engineering at Trulia (Zillow). </p>',
+    description: 'Sarah Drasner is an award-winning Speaker, Senior Developer Advocate at Microsoft, and Staff Writer at CSS-Tricks. Sarah is also the co-founder of Web Animation Workshops, with Val Head. She’s the author of SVG Animations from O’Reilly and has given Frontend Masters workshops on Vue.js and Advanced SVG Animations. Sarah is formerly Manager of UX Design & Engineering at Trulia (Zillow).',
     talk: {
       title: 'Vue.js and Serverless',
       description: `
@@ -78,7 +78,7 @@ module.exports = [
     twitter: 'https://twitter.com/notwaldorf',
     github: 'https://github.com/notwaldorf',
     website: 'https://meowni.ca/',
-    description: '<p>Monica works on Polymer, web components and Chrome, and has probably at least once broken the Internet for you. She is unreasonably excited about emoji, wary of web fonts, and will become your best friend if you bring her cheese. On second thought, she may be a mouse. </p>',
+    description: 'Monica works on Polymer, web components and Chrome, and has probably at least once broken the Internet for you. She is unreasonably excited about emoji, wary of web fonts, and will become your best friend if you bring her cheese. On second thought, she may be a mouse.',
     talk: {
       title: 'Fontastic web performance',
       description: 'Web fonts are awesome. They make your sans-serifs slabby, your headers special and your website look gorgeous. But fonts are a resource, and downloading resources always comes as a cost — if you don’t load web fonts efficiently, what you get instead are phantom underlines, blank pages, and user rage. Let’s talk about ways to avoid this, and what new platform features are here to help us deliver pretty (but also!) fast experiences to everyone.',
@@ -105,7 +105,7 @@ module.exports = [
     twitter: 'https://twitter.com/gautam',
     github: 'https://github.com/gautamarora',
     website: 'http://www.gautamarora.com/',
-    description: '<p>Gautam is a Developer Evangelist at <a href="http://www.condenast.com/" target="_blank">Conde Nast</a>, an organizer of New York JavaScript where he runs NodeSchool NYC, and a self-published author at <a href="http://fullstackjs.com/" target="_blank">FullStack JavaScript</a>.</p>',
+    description: 'Gautam is a Developer Evangelist at <a href="http://www.condenast.com/" target="_blank">Conde Nast</a>, an organizer of New York JavaScript where he runs NodeSchool NYC, and a self-published author at <a href="http://fullstackjs.com/" target="_blank">FullStack JavaScript</a>.',
     talk: {
       title: 'TBA',
       description: '',
@@ -128,7 +128,7 @@ module.exports = [
     twitter: 'https://twitter.com/notbrent',
     github: 'https://github.com/brentvatne',
     website: 'https://blog.expo.io',
-    description: '<p>Developer at Expo, core contributor to React Native. Spare time is spent traveling and playing with <a target="_blank" href="https://www.instagram.com/explore/tags/lucythetri">#lucythetri</a>.</p>',
+    description: 'Developer at Expo, core contributor to React Native. Spare time is spent traveling and playing with <a target="_blank" href="https://www.instagram.com/explore/tags/lucythetri">#lucythetri</a>.',
     talk: {
       title: 'TBA',
       description: '',
@@ -150,7 +150,12 @@ module.exports = [
       `,
     },
     previousTalks: [],
-    otherTalks: [],
+    otherTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=cI9bDvDEsYE',
+        name: 'Building li.st for Android with Exponent and React Native @ react-europe 2016',
+      },
+    ],
   },
   {
     name: 'sebastien',
@@ -165,7 +170,7 @@ module.exports = [
     twitter: 'https://twitter.com/Atinux',
     github: 'https://github.com/Atinux',
     website: 'https://medium.com/@atinux',
-    description: '<p>Sébastien is the co-creator of Nuxt.js, a JS framework to create blazing fast Vue apps quickly. He’s currently working at Orion.sh, building Open Source projects and Services.</p>',
+    description: 'Sébastien is the co-creator of Nuxt.js, a JS framework to create blazing fast Vue apps quickly. He’s currently working at Orion.sh, building Open Source projects and Services.',
     talk: {
       title: 'Meta Vue Framework',
       description: 'An overview of Nuxt.js, the Meta Vue Framework that let you create blazing fast Vue.js application quickly.',
@@ -188,7 +193,7 @@ module.exports = [
     twitter: 'https://twitter.com/liran_tal',
     github: 'https://github.com/lirantal',
     website: 'https://medium.com/@liran.tal',
-    description: '<p>Liran is leading the core team for the MEAN.js JavaScript framework and with recent activity in OWASP and application security projects he published the book Essential Node.js Security. Passionate about Open Source since an early age, he is continuously contributing to many projects on GitHub around Node.js, JavaScript, Docker, and Security, and enjoys sharing his experience regularly at local meet-ups and conferences.</p>',
+    description: 'Liran is leading the core team for the MEAN.js JavaScript framework and with recent activity in OWASP and application security projects he published the book Essential Node.js Security. Passionate about Open Source since an early age, he is continuously contributing to many projects on GitHub around Node.js, JavaScript, Docker, and Security, and enjoys sharing his experience regularly at local meet-ups and conferences.',
     talk: {
       title: 'Making The Terminal Great Again',
       description: `
@@ -217,7 +222,7 @@ module.exports = [
     twitter: 'https://twitter.com/mathias',
     github: 'https://github.com/mathiasbynens',
     website: 'https://mathiasbynens.be/',
-    description: '<p>Mathias is a web standards enthusiast working on V8 at Google. He likes HTML, CSS, JavaScript, Unicode, performance, and security.</p>',
+    description: 'Mathias is a web standards enthusiast working on V8 at Google. He likes HTML, CSS, JavaScript, Unicode, performance, and security.',
     talk: {
       title: 'V8 internals for JS developers',
       description: 'This presentation demonstrates how learning just a little bit about JavaScript engine internals can help you improve the run-time performance of your JavaScript code — not just in V8 specifically, but across all JavaScript engines!',
@@ -245,7 +250,7 @@ module.exports = [
     twitter: 'https://twitter.com/CompuIves',
     github: 'https://github.com/CompuIves',
     website: 'https://ives.cool',
-    description: '<p>Ives is software developer at Catawiki and student at the University of Twente when he finds the time. He created CodeSandbox, an online editor that focuses on lowering the learning curve of web application development.</p><p>When he is not behind a screen he likes to play volleyball, make music or travel to big cities.</p>',
+    description: 'Ives is software developer at Catawiki and student at the University of Twente when he finds the time. He created CodeSandbox, an online editor that focuses on lowering the learning curve of web application development.</p><p>When he is not behind a screen he likes to play volleyball, make music or travel to big cities.',
     talk: {
       title: 'CodeSandbox',
       description: 'CodeSandbox is an online editor built for web applications. During the talk I`ll explain how it works, and how we got where we are now.',
@@ -268,7 +273,7 @@ module.exports = [
     twitter: 'https://twitter.com/nirkaufman',
     github: 'https://github.com/nirkaufman',
     website: 'https://ngnir.life',
-    description: '<p>Google Developer Expert of web technologies and Angular, worldwide speaker, workshop mentor and tech community leader. Principal frontend consultant at 500Tech.</p>',
+    description: 'Google Developer Expert of web technologies and Angular, worldwide speaker, workshop mentor and tech community leader. Principal frontend consultant at 500Tech.',
     talk: {
       title: 'TBA',
       description: '',
@@ -289,8 +294,14 @@ module.exports = [
       socialMedia: `Get ready to learn more about AngularJS! Participate to a half-day workshop with Nir Kaufman, gain a deeper understanding of how Angular works and real-world techniques.
       `,
     },
-    previousTalks: [],
-    otherTalks: [],
+    previousTalks: [{
+      url: 'https://www.youtube.com/watch?v=9NXVQsQ8wns',
+      name: 'Unleash the power of Angular Reactive Forms',
+    }],
+    otherTalks: [{
+      url: 'https://www.youtube.com/watch?v=bVyw2njDoZw',
+      name: 'Demystified Angular Directives @ JSPoland 2017',
+    }],
   },
   {
     name: 'lara',
@@ -304,7 +315,7 @@ module.exports = [
     img: 'lara.jpg',
     twitter: 'https://twitter.com/larathedev',
     website: 'http://larathedev.com',
-    description: '<p>Larissa is a software developer and a startup enthusiast with background in theoretical physics. She works at a Cluj startup Moqups and focuses on math and geometry-heavy algorithms. She also owns and manages HalftonePro, a specialized graphic design tool. Previously, Larissa worked in game development in Moscow and released her own game Cyberflow.</p>',
+    description: 'Larissa is a software developer and a startup enthusiast with background in theoretical physics. She works at a Cluj startup Moqups and focuses on math and geometry-heavy algorithms. She also owns and manages HalftonePro, a specialized graphic design tool. Previously, Larissa worked in game development in Moscow and released her own game Cyberflow.',
     talk: {
       title: 'Getting the best out of web-based 2D graphics',
       description: 'HTML5 promised us powerful tools for creating and manipulating graphics in the browser, but it still has a long way to go until it can give us the level of control of the dedicated graphic engines. However, the ever expanding web app market is just too juicy to give up on for graphic programmers. There are numerous examples of successful web-based graphic tools already, so why not take it further and really push the limits of what you can do in the browser with just Canvas and SVG?',
@@ -326,7 +337,7 @@ module.exports = [
     img: 'jack.jpg',
     twitter: 'https://twitter.com/Jack_Franklin',
     github: 'https://github.com/jackfranklin',
-    description: '<p>Jack is a Frontend Engineer at Thread in London working primarily with React. In his free time, he’s usually writing or recording videos for his blog, JavaScript Playground. Jack is also the author of “Beginning jQuery” (Apress, 2012) and a regular speaker on React, Elm, JavaScript, build tools and frameworks.</p>',
+    description: 'Jack is a Frontend Engineer at Thread in London working primarily with React. In his free time, he’s usually writing or recording videos for his blog, JavaScript Playground. Jack is also the author of “Beginning jQuery” (Apress, 2012) and a regular speaker on React, Elm, JavaScript, build tools and frameworks.',
     talk: {
       title: 'TBA',
       description: '',
@@ -369,7 +380,7 @@ module.exports = [
     twitter: 'https://twitter.com/NikkitaFTW',
     github: 'https://github.com/SaraVieira',
     website: 'https://iamsaravieira.com',
-    description: '<p>Front-End Developer at @YLDio, open sorcerer, maker of useless modules, Blogger, Drummer and horror movie fan girl.</p>',
+    description: 'Front-End Developer at @YLDio, open sorcerer, maker of useless modules, Blogger, Drummer and horror movie fan girl.',
     talk: {
       title: 'The Dream of Styleguide Driven Development',
       description: 'You have heard of all types of driven development but react emerged a new type, styleguide driven development became a reality with components. This type of development focuses on Developer/Designer collaboration and on assertive components. With the use of React, CSS-in-JS, Flow and Snapshot testing we were able to almost remove style regressions. In this talk you get a glimpse of you can start styleguide driven development and how you can sell this dream to your project managers.',
@@ -377,7 +388,10 @@ module.exports = [
     },
     workshop: null,
     previousTalks: [],
-    otherTalks: [],
+    otherTalks: [{
+      url: 'https://www.youtube.com/watch?v=jqXRSvXWYf8',
+      name: 'We need to talk about Preact @ React Day Berlin 2017',
+    }],
   },
   {
     name: 'xavier',
@@ -391,7 +405,7 @@ module.exports = [
     twitter: 'https://twitter.com/xav_cz',
     github: 'https://github.com/xavcz',
     website: 'https://codepen.io/xavcz',
-    description: '<p>Frenchie at your service, I run GraphQL & React training at OK GROW! I`m a former mechanical engineer, I was used to craft skateboards; and now, well, I craft user interfaces and share my love about web technologies.</p>',
+    description: 'Frenchie at your service, Xavier runs GraphQL & React training at OK GROW! He`s a former mechanical engineer, who used to craft skateboards; and now, he crafts user interfaces and shares his love for web technologies.',
     talk: null,
     workshop: {
       title: 'GraphQL Fundamentals',
@@ -441,7 +455,7 @@ module.exports = [
     twitter: 'https://twitter.com/aelythe',
     github: 'https://github.com/paulbrie',
     website: 'https://medium.com/@paulbrie',
-    description: '<p>Paul Brie is the CEO of Teleport and Head of JavaScript @Evozon. He is focusing his activities on R&D, startups, and leads Spherik`s accelerator Deep Tech Program. Paul is also one of the proud co-founders of the Cluj JavaScripters community and JSHeroes International Conference.</p>',
+    description: 'Paul Brie is the CEO of Teleport and Head of JavaScript @Evozon. He is focusing his activities on R&D, startups, and leads Spherik`s accelerator Deep Tech Program. Paul is also one of the proud co-founders of the Cluj JavaScripters community and JSHeroes International Conference.',
     talk: {
       title: 'Teleport your application',
       description: 'The talk will present Teleport, a new platform allowing developers to collaborate  and to generate and maintain all their front-end codebase for React and React-Native.',
@@ -461,13 +475,13 @@ module.exports = [
     company: 'Nielsen Marketing Cloud',
     img: 'marianna.jpg',
     github: 'https://github.com/kiragona',
-    description: '<p>Huge fan of web technologies for more than a decade. The recent years working mostly with React-Redux. Passionate about usability experience leveraging modern development practices and standard to build highly interactive and cutting edge web applications.</p>',
+    description: 'Huge fan of web technologies for more than a decade. The recent years working mostly with React-Redux. Passionate about usability experience leveraging modern development practices and standard to build highly interactive and cutting edge web applications.',
     talk: null,
     workshop: {
       title: 'Testing React-Redux Apps',
       type: 'Half-Day Workshop',
       permalink: 'react',
-      logo: 'react.svg',
+      logo: 'react.png',
       description: `
         <p>Tests are more than a quality trait of your code that you can’t forgo, it's all about confidence. You simply cannot afford going into production without be sure that your software doing what you think it does and will continue to do so as you enrich functionality. But sometimes, testing UI components, instead of providing confidence makes us feel upset and even unproductive. Join Marianna Etelson for a half-day workshop on testing your React-Redux applications. You will learn how to write Unit and Integration tests, what are their scopes, and the tool-set required to properly bootstrap a project for test coverage. Amongst the tools we will use: jsdom, enzyme, proxiqure and tape.</p>
       `,
@@ -490,7 +504,7 @@ module.exports = [
     img: 'bogdan.jpg',
     github: 'https://github.com/lbogdan/',
     twitter: 'https://twitter.com/lucabogdan',
-    description: '<p>Jumping between devops, backend and frontend development (sprinkled with unexpected gems like embedded development), with an innate curiosity for how things work behind the public API, after taking a sip of Vue.js about a year ago, I just couldn`t let it down. As I like to say, Vue.js is the framework that makes frontend development great again! So, along a few freelancing projects, I started helping people on the official Vue.js chat, learning a lot in the process - especially the hurdles someone starting with Vue.js goes through. Also, while looking for a way for people to quickly reproduce their issues, I accidentally stumbled upon CodeSandbox, and ended up contributing to it.</p>',
+    description: 'Jumping between devops, backend and frontend development (sprinkled with unexpected gems like embedded development), with an innate curiosity for how things work behind the public API, after taking a sip of Vue.js about a year ago, I just couldn`t let it down. As I like to say, Vue.js is the framework that makes frontend development great again! So, along a few freelancing projects, I started helping people on the official Vue.js chat, learning a lot in the process - especially the hurdles someone starting with Vue.js goes through. Also, while looking for a way for people to quickly reproduce their issues, I accidentally stumbled upon CodeSandbox, and ended up contributing to it.',
     talk: null,
     workshop: {
       title: 'Introduction to Vue.js',

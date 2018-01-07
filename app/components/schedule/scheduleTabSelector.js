@@ -115,7 +115,17 @@ class ScheduleTabSelector extends Component {
         <div className="buy-ticket-section">
           {
           isWorkshopTab ?
-            (<span>Tickets Coming Soon</span>)
+            (
+              <button className="button buy-ticket-button">
+                <a
+                  href="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2018"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                Buy Your Workshop Ticket
+                </a>
+              </button>
+            )
             :
             (
               <button className="button buy-ticket-button">

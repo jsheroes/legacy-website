@@ -5,6 +5,7 @@ import { styles, mediaQueries } from '../../constants';
 
 const SpeakerDetail = ({ speaker }) => {
   const talks = buildTalks(speaker);
+  const imageExtension = speaker.img.split('.')[1];
   return (
     <div>
       <Head>
@@ -12,7 +13,7 @@ const SpeakerDetail = ({ speaker }) => {
         <meta property="og:title" content={`${speaker.fullName} at JSHeroes`} />
         <meta property="og:url" content={`https://jsheroes.io/speakers/${speaker.permalink}`} />
         <meta property="og:image" content={`https://jsheroes.io/static/img/speakers/${speaker.img}`} />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:type" content={`image/${imageExtension}`} />
         <meta property="og:description" content={speaker.description} />
         <meta name="twitter:image" content={`https://jsheroes.io/static/img/speakers/${speaker.img}`} />
         <meta name="twitter:title" content={`${speaker.fullName} at JSHeroes`} />
