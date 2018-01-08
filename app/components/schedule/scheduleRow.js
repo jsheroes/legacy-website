@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Router from 'next/router';
 import { styles } from '../../constants';
 import speakers from '../../data/speakers';
 
@@ -75,12 +76,17 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
       <div className="activity-details">
         <div className="activity-title">
           <Link href={titleLink} as={titleAs}>
-            <a>{ activity.title }</a>
+            <a onMouseEnter={() => { Router.prefetch(titleAs); }}>{ activity.title }</a>
           </Link>
         </div>
         <div>
           <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
-            <a className="speaker-name" >{speaker.fullName}</a>
+            <a
+              className="speaker-name"
+              onMouseEnter={() => { Router.prefetch(`/speakers/${speaker.permalink}`); }}
+            >
+              {speaker.fullName}
+            </a>
           </Link>
           <span className="speaker-position">, { speaker.position }</span>
           { speaker.company && (<span className="speaker-company">{ speaker.company }</span>) }

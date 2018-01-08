@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Router from 'next/router';
 import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
 import speakers from '../app/data/speakers';
@@ -39,7 +40,7 @@ const Workshop = ({ speaker }) => {
             <h1>{ workshop.title }</h1>
             <span>by: <strong>
               <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
-                <a>{ speaker.fullName }</a>
+                <a onMouseEnter={() => { Router.prefetch(`/speakers/${speaker.permalink}`); }}>{ speaker.fullName }</a>
               </Link>
             </strong></span>
             <p className="workshop-type">{ workshop.type }, April 18th</p>
