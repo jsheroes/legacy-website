@@ -19,6 +19,11 @@ module.exports = [
     img: 'logo_telenav.png',
     href: 'https://www.telenav.com/',
   },
+  {
+    title: 'Yonder',
+    img: 'logo_yonder.png',
+    href: 'https://tss-yonder.com/',
+  },
   // {
   //   title: 'Informal School of IT',
   //   img: 'logo_scoala_informala.jpg',
