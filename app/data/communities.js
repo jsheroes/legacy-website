@@ -54,4 +54,9 @@ module.exports = [
     img: 'logo_frontendMeetupBudapest.svg',
     href: 'https://www.meetup.com/Frontend-Meetup-Budapest/',
   },
+  {
+    title: 'AmsterdamJS',
+    img: 'logo_amsterdamjs.png',
+    href: 'https://amsterdamjs.com/',
+  },
 ];
