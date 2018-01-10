@@ -1,10 +1,14 @@
 import Link from 'next/link';
+import Router from 'next/router';
 import { styles, mediaQueries } from '../../constants';
 
 const Speaker = ({ speaker }) => (
   <div>
     <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
-      <div className="speaker-info-box">
+      <div
+        className="speaker-info-box"
+        onMouseEnter={() => { Router.prefetch(`/speakers/${speaker.permalink}`); }}
+      >
         <img
           src={`static/img/speakers/${speaker.img}`}
           alt={speaker.name}
