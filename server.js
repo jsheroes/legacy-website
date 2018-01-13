@@ -1,17 +1,27 @@
 const express = require('express');
-const next = require('next');
+const nextServer = require('next');
 
 const config = require('./config');
 
 const dev = process.env.NODE_ENV !== 'production';
 
-const app = next({ dev });
+const app = nextServer({ dev });
 const handle = app.getRequestHandler();
 
 app
   .prepare()
   .then(() => {
     const server = express();
+
+    server.use((req, res, next) => {
+      // redirect from www to non-www
+      const { host } = req.headers;
+      if (host.indexOf('www.jsheroes.io') > -1) {
+        res.redirect(301, `https://jsheroes.io${req.url}`);
+      } else {
+        next();
+      }
+    });
 
     server.get('/speakers', (req, res) => {
       res.redirect(301, '/');
