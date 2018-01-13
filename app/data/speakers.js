@@ -524,4 +524,28 @@ module.exports = [
     previousTalks: [],
     otherTalks: [],
   },
+  {
+    name: 'shagufta',
+    fullName: 'Shagufta Gurmukhdas',
+    permalink: 'shagufta-gurmukhdas',
+    firstName: 'Shagufta',
+    reference: 'her',
+    position: 'Software Engineer',
+    company: 'HSBC Technology India',
+    img: 'shagufta.jpeg',
+    github: 'https://github.com/ShaguftaMethwani/',
+    twitter: 'https://twitter.com/@shaguftamethwan',
+    description: 'I am a Tech-Speaker for Mozilla and have been volunteering for Mozilla for about 4 years, currently as a Community Coach for South-East Asia. I have been exploring "virtual reality" as a technology since the past one year and it has indeed been the first time technology has made me feel so excited ever since I came to know about the internet. Other than that, I am the initiator and organizer of Django Girls Pune and am working actively as a part of the Diversity and Inclusion group at Mozilla. I`m currently working in HSBC Technology India, as a software developer. I am also a decent artist, and love to play the piano in my free time!',
+    talk: {
+      title: 'Virtual reality for every developer!',
+      description: 'Since 2016 the VR technology has been a rising trend again, and many types of headsets are out in the market. Proprietary tools for creating VR apps have their requirements for ecosystems, controllers, installations etc. And the simplest of applications needs a lot of complex/boilerplate code to be written for setup. A-Frame is an open source web framework which enables creating VR experiences with simple HTML and little JS without much efforts. You\'ll learn how to use it to create fantastic VR applications which can even be multi-user/real-time and also get inspired from some usecases.',
+      message: 'to create VR applications entirely using web technologies, without having to write 1000s of lines of unnecessary boilerplate code.',
+    },
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [{
+      url: 'https://www.youtube.com/watch?v=fDfxy8Z7X3U',
+      name: 'Web Based Virtual Reality @ SeattleJS 2017',
+    }],
+  },
 ];
