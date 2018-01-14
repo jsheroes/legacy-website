@@ -28,12 +28,12 @@ export default class Nav extends Component {
       viewportWidth: window.innerWidth,
       showNavItems: window.innerWidth > sizeL,
     });
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll, { passive: true });
     window.addEventListener('hashchange', this.handleHashChange);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll, { passive: true });
     window.removeEventListener('hashchange', this.handleHashChange);
   }
 

@@ -31,12 +31,12 @@ class Header extends Component {
       windowHeight: window.innerHeight,
       showMedia: true,
     });
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll, { passive: true });
     window.addEventListener('resize', this.updateHeroSize);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll, { passive: true });
     window.removeEventListener('resize', this.updateHeroSize);
   }
 
