@@ -1,40 +1,10 @@
 import { Component } from 'react';
-import ReactDOM from 'react-dom';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
 import speakers from '../../data/speakers';
 import Speaker from './speaker';
-import Speakermodal from './speaker.modal';
-
-function openModal(index) { // eslint-disable-line max-statements
-  const newModal = <Speakermodal data={speakers[index]} />;
-
-  const modalContainer = document.createElement('div');
-  document.body.appendChild(modalContainer);
-  ReactDOM.render(newModal, modalContainer);
-  const backdrop = document.getElementsByClassName('modal-backdrop')[0];
-  const closeBtn = document.getElementsByClassName('modal-close-button')[0];
-  document.body.style.overflow = 'hidden';
-  closeBtn.addEventListener('click', () => {
-    document.body.style.overflow = '';
-    modalContainer.remove();
-  });
-  backdrop.addEventListener('click', () => {
-    document.body.style.overflow = '';
-    modalContainer.remove();
-  });
-}
-
-function addClickEvents() {
-  const elements = document.querySelectorAll('.speaker-sec');
-  elements.forEach((element, index) => {
-    element.addEventListener('click', () => {
-      openModal(index);
-    });
-  });
-}
 
 function addObserver() {
   const observer = new IntersectionObserver(handler, {
@@ -61,7 +31,6 @@ function addObserver() {
 class Speakers extends Component {
   componentDidMount() {
     require('intersection-observer'); // eslint-disable-line global-require
-    addClickEvents();
     addObserver();
   }
 
