@@ -40,7 +40,7 @@ const Workshop = ({ speaker }) => {
             <h1>{ workshop.title }</h1>
             <span>by: <strong>
               <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
-                <a onMouseEnter={() => { Router.prefetch(`/speakers/${speaker.permalink}`); }}>{ speaker.fullName }</a>
+                <a onMouseEnter={() => { Router.prefetch(`/speakers?name=${speaker.permalink}`); }}>{ speaker.fullName }</a>
               </Link>
             </strong></span>
             <p className="workshop-type">{ workshop.type }, April 18th</p>

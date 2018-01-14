@@ -539,7 +539,7 @@ module.exports = [
     talk: {
       title: 'Virtual reality for every developer!',
       description: 'Since 2016 the VR technology has been a rising trend again, and many types of headsets are out in the market. Proprietary tools for creating VR apps have their requirements for ecosystems, controllers, installations etc. And the simplest of applications needs a lot of complex/boilerplate code to be written for setup. A-Frame is an open source web framework which enables creating VR experiences with simple HTML and little JS without much efforts. You\'ll learn how to use it to create fantastic VR applications which can even be multi-user/real-time and also get inspired from some usecases.',
-      message: 'to create VR applications entirely using web technologies, without having to write 1000s of lines of unnecessary boilerplate code.',
+      message: 'How to create VR applications entirely using web technologies, without having to write 1000s of lines of unnecessary boilerplate code.',
     },
     workshop: null,
     previousTalks: [],

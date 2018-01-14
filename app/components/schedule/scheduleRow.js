@@ -76,14 +76,14 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
       <div className="activity-details">
         <div className="activity-title">
           <Link href={titleLink} as={titleAs}>
-            <a onMouseEnter={() => { Router.prefetch(titleAs); }}>{ activity.title }</a>
+            <a onMouseEnter={() => { Router.prefetch(titleLink); }}>{ activity.title }</a>
           </Link>
         </div>
         <div>
           <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
             <a
               className="speaker-name"
-              onMouseEnter={() => { Router.prefetch(`/speakers/${speaker.permalink}`); }}
+              onMouseEnter={() => { Router.prefetch(`/speakers?name=${speaker.permalink}`); }}
             >
               {speaker.fullName}
             </a>
