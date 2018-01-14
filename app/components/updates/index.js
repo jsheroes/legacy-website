@@ -16,9 +16,9 @@ const Updates = () => (
       <p>
         If you want to be &quot;adopted&quot; by one of our Cluj Javascripters during the JSHeroes conference, you can use our Adopt a Javascripter couch-surfing program.
         <br />
-        <a title="TBA" href="#">Subscribe as a Guest here</a>
+        <a title="TBA" href="/">Subscribe as a Guest here</a>
         &nbsp;&nbsp;&nbsp;
-        <a title="TBA" href="#">Subscribe as a Host  here</a>
+        <a title="TBA" href="/">Subscribe as a Host  here</a>
       </p>
     </div>
 
