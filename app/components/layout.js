@@ -1,3 +1,4 @@
+import React from 'react';
 import { configureAnchors } from 'react-scrollable-anchor';
 import PropTypes from 'prop-types';
 
@@ -9,7 +10,7 @@ import { styles } from '../constants';
 configureAnchors({ offset: 0, scrollDuration: 1000 });
 
 const Layout = props => (
-  <div>
+  <div className="big-wrapper">
     <Head>
       <link href="/static/img/favicon.png" rel="shortcut icon" />
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
@@ -49,12 +50,17 @@ const Layout = props => (
         />
       </noscript>
     </Head>
-    <Nav page={props.page} />
-    {props.children}
+
+    <div className="nav-and-content">
+      <Nav page={props.page} />
+
+      {props.children}
+    </div>
+
     <Footer />
 
+    {/* language=CSS */}
     <style jsx global>{`
-
       html, body, ul, h1, h2, h3 {
         border: 0;
         margin: 0;
@@ -65,6 +71,16 @@ const Layout = props => (
         font-size: 18px !important;
         font-family: Roboto, sans-serif !important;
         font-weight: 300 !important;
+      }
+
+      .big-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .nav-and-content {
+        flex: 1 0 auto;
       }
 
       ul {
