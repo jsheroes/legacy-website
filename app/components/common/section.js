@@ -10,19 +10,19 @@ const Section = props => (
           padding: 0 15px;
           margin: 0 auto;
         }
-        
+
         @media (min-width: ${mediaQueries.S}) {
           div {
             width: 720px;
           }
         }
-        
+
         @media (min-width: ${mediaQueries.L}) {
           div {
             width: 960px;
           }
         }
-        
+
         @media (min-width: ${mediaQueries.XL}) {
           div {
             width: 1140px;
