@@ -70,18 +70,14 @@ class Header extends Component {
           <source src="/static/video/js-hero-loop.mp4" type="video/mp4" />
           <style jsx>{`
             video {
-              width: 100%;
               left: 50%;
               top: 0;
+              min-width: 100%;
+              min-height: 100%;
+              width: auto;
+              height: auto;
               position: absolute;
               transform: translateX(-50%);
-            }
-
-            @media (max-width: 1600px) {
-              video {
-                width: auto;
-                height: 100%;
-              }
             }
           `}</style>
         </video>
