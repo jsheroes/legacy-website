@@ -88,7 +88,9 @@ class Header extends Component {
           <img className="background-image" src="/static/img/mobile_photo_jsheroes2018.jpg" alt="background" />
           <style jsx>{`
             .background-image {
-              width: 100%;
+              min-width: 100%;
+              min-height: 100%;
+              width: auto;
               height: auto;
               left: 50%;
               top: 0;
