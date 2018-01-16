@@ -14,6 +14,16 @@ module.exports = [
     img: 'logo_google.svg',
     href: 'https://google.com',
   },
+  {
+    title: 'Contentful',
+    img: 'logo_contentful.png',
+    href: 'http://www.contentful.com/',
+  },
+  {
+    title: 'yld',
+    img: 'logo_yld.png',
+    href: 'https://www.yld.io',
+  },
   // {
   //   title: 'Pony Car Sharing',
   //   img: 'logo_get_pony.png',

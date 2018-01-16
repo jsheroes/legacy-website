@@ -559,7 +559,7 @@ module.exports = [
     img: 'stefan.jpeg',
     github: 'https://github.com/stefanjudis/',
     twitter: 'https://twitter.com/stefanjudis/',
-    website: 'www.stefanjudis.com',
+    website: 'https://www.stefanjudis.com',
     description: 'Stefan started programming 6 years ago and quickly fell in love with web performance, new technologies, and accessibility. He worked for several startups in Berlin and recently joined Contentful to tell the world how an API-first CMS can make you a bit happier. He is also a curator of the web performance online resource Perf Tooling, organizer of the Web Performance Meetup Berlin, contributes to a variety of open source projects and enjoys sharing nerdy discoveries.',
     talk: {
       title: 'What the v...DOM?',
