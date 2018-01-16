@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { styles, mediaQueries } from '../constants';
 import socialmedia from '../data/socialmedia';
 
-
 const Footer = () => (
   <footer>
     <div className="row">
@@ -80,6 +79,7 @@ const Footer = () => (
         color: white;
         padding: 50px 15px 0;
         background-color: ${styles.mainColor2};
+        flex-shrink: 0;
       }
 
       .col-md-3 div {
