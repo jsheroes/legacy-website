@@ -52,7 +52,7 @@ const Communities = () => (
         margin: 35px auto 50px;
         text-align: center;
       }
-      
+
       .be-a-host,
       .be-a-guest,
       .be-a-host:hover,
@@ -60,7 +60,7 @@ const Communities = () => (
         color: ${styles.mainColor5};
         fill: ${styles.mainColor5};
       }
-      
+
       @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
         div {
           padding: 90px 0 90px;
@@ -75,7 +75,7 @@ const Communities = () => (
           line-height: 30px;
         }
       }
-      
+
       @media (max-width: ${mediaQueries.L}) and (min-width: ${mediaQueries.S}) {
         div {
           padding: 60px 0 80px;
@@ -110,7 +110,7 @@ const Communities = () => (
           margin-bottom: 20px;
         }
       }
-      
+
       .mail-to {
         text-transform: none;
         color: ${styles.mainColor1};
