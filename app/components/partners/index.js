@@ -43,7 +43,7 @@ const Partners = () => (
         margin-right: auto;
         text-align: center;
       }
-      
+
       @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
         div {
           padding: 90px 0 0;
@@ -58,7 +58,7 @@ const Partners = () => (
           line-height: 30px;
         }
       }
-      
+
       @media (max-width: ${mediaQueries.L}) and (min-width: ${mediaQueries.S}) {
         div {
           padding: 70px 0 0;
@@ -89,7 +89,7 @@ const Partners = () => (
           margin-bottom: 20px;
         }
       }
-      
+
       .mail-to {
         text-transform: none;
         color: ${styles.mainColor1};
