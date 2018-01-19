@@ -52,6 +52,17 @@ class Speakers extends Component {
 
             <div className="speaker-boxes">
               { speakers
+                  // .sort((a, b) => {
+                  //   if (a.name < b.name) {
+                  //     return -1;
+                  //   }
+                  //   if (a.name > b.name) {
+                  //     return 1;
+                  //   }
+
+                  //   // names must be equal
+                  //   return 0;
+                  // })
                   .map(speaker => (
                     <div key={speaker.name} className="speaker-box">
                       <Speaker speaker={speaker} />
