@@ -42,7 +42,6 @@ const Partners = () => (
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        border-bottom: 1px dotted gray;
       }
       
       @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
