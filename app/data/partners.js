@@ -39,4 +39,9 @@ module.exports = [
     img: 'logo_twilio.png',
     href: 'https://www.twilio.com/',
   },
+  {
+    title: 'npm',
+    img: 'logo_npm.png',
+    href: 'https://www.npmjs.com/',
+  },
 ];

@@ -75,19 +75,19 @@ export default [
         time: '14:30 - 15:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'dominik-kundel',
         time: '15:00 - 15:30',
       },
       {
-        speakerRef: 'sebastien-chopin',
+        speakerRef: 'kristijan-ristovski',
         time: '16:00 - 16:30',
       },
       {
-        speakerRef: 'sarah-drasner',
+        speakerRef: 'sebastien-chopin',
         time: '16:30 - 17:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'sarah-drasner',
         time: '17:00 - 17:30',
       },
     ],
@@ -122,11 +122,11 @@ export default [
         time: '12:00 - 12:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'stefan-judis',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'shagufta-gurmukhdas',
         time: '14:30 - 15:00',
       },
       {
@@ -134,16 +134,12 @@ export default [
         time: '15:00 - 15:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'stephanie-nemeth',
         time: '16:00 - 16:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'jeffrey-lembeck',
         time: '16:30 - 17:00',
-      },
-      {
-        speakerRef: '',
-        time: '17:00 - 17:30',
       },
     ],
   },

@@ -59,4 +59,9 @@ module.exports = [
     img: 'logo_amsterdamjs.png',
     href: 'https://amsterdamjs.com/',
   },
+  {
+    title: 'ReactiveConf',
+    img: 'logo_reactiveconf.png',
+    href: 'https://reactiveconf.com/',
+  },
 ];
