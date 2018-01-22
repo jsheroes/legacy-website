@@ -612,7 +612,7 @@ module.exports = [
     website: 'https://stephanie.lol',
     description: 'Stephanie is a developer living in Amsterdam. She works on frontend stuff at Werkspot and co-organizes the Stupid Hackathon Amsterdam. She enjoys experimenting with hardware and LEDs to make beautiful, useless things.',
     talk: {
-      title: 'How to make your LEDs better listeners: Leveraging MQTT protocol to communicate with hardware from the web.',
+      title: 'How to make your LEDs better listeners',
       description: `
         <p>Wooed by the possibility to put LEDs on ALL THE THINGS and control them with an app, I bought my first (and second and third...) arduino this year and haven’t looked back. But, as a IoT newbie, I defaulted to what I knew as a frontend developer. I applied the libraries I was familiar with from my daily work to solve my IoT problems with lackluster results. Things kind of worked, but the connections were flaky and it crashed a lot. It felt like there had to be something out there that was a better fit for communicating from the web to hardware. In my pursuit for a minimalist solution that could handle poor network connections and had implementations in C++ and JavaScript, I found the MQTT protocol.</p>
         <p>MQTT is a lightweight messaging architecture for sending data between hardware and other devices where a small code footprint and performance in poor network conditions are crucial. In this talk, we’ll look what exactly what MQTT is, how I use it in my own art/wearable project, and why you should check it out for your next hardware project.</p>
