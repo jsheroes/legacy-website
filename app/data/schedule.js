@@ -79,7 +79,7 @@ export default [
         time: '15:00 - 15:30',
       },
       {
-        speakerRef: 'kristijan-ristovski',
+        speakerRef: '',
         time: '16:00 - 16:30',
       },
       {
@@ -118,15 +118,15 @@ export default [
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'stefan-judis',
         time: '12:00 - 12:30',
       },
       {
-        speakerRef: 'stefan-judis',
+        speakerRef: 'shagufta-gurmukhdas',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: 'shagufta-gurmukhdas',
+        speakerRef: 'kristijan-ristovski',
         time: '14:30 - 15:00',
       },
       {
