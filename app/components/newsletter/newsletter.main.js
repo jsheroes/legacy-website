@@ -136,10 +136,7 @@ const NewsletterMain = () => (
             JavaScript ecosystem, so all the speakers’ proposals went through a
             complete analysis.
           </p>
-          <p>
-            All talks are in English. We have no live streaming of the talks.
-          </p>
-
+          <p>All talks are in English. We have no live streaming of the talks.</p>
           <br />
           <br />
           <h6>Catering 🍲</h6>
@@ -274,42 +271,42 @@ const NewsletterMain = () => (
       * {
         box-sizing: border-box;
       }
-      
+
       :after,
       :before {
         box-sizing: border-box;
       }
-      
+
       .row {
         display: table;
         width: 100%;
       }
-      
+
       .row:before,
       .row:after {
         content: " ";
         display: table;
       }
-      
+
       .row:after {
         clear: both;
       }
-      
+
       .newsletter-main {
         padding-top: 140px;
       }
-      
+
       .central-container {
         width: 100%;
         margin: 0 auto;
         position: relative;
         text-align: center;
       }
-      
+
       .text-center {
         text-align: center !important;
       }
-      
+
       h5 {
         font-size: 28px;
         font-weight: 500;
@@ -318,7 +315,7 @@ const NewsletterMain = () => (
         margin: 0 auto 30px;
         text-align: center;  
       }
-      
+
       h6 {
         font-size: 20px;
         color: ${styles.mainColor7};
@@ -326,7 +323,7 @@ const NewsletterMain = () => (
         margin: 0 auto 30px;
         line-height: 1.1;
       }
-      
+
       hr {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -334,7 +331,7 @@ const NewsletterMain = () => (
         border: 0;
         border-top: 1px solid #eee;
       }
-      
+
       p {
         font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
         font-weight: 400;
@@ -345,7 +342,7 @@ const NewsletterMain = () => (
         color: ${styles.mainColor7};
         margin: 0 0 10px;
       }
-      
+
       a {
         color: ${styles.mainColor5};
         fill: ${styles.mainColor5};
@@ -355,7 +352,7 @@ const NewsletterMain = () => (
         list-style-type: none;
         margin: 50px auto 20px;
       }
-      
+
       li {
         display: inline-block;
         margin: 0 25px 10px 0;
@@ -363,28 +360,28 @@ const NewsletterMain = () => (
         font-weight: 300;
         line-height: 30px;
       }
-      
+
       li a {
         font-size: 60px;
         text-decoration: none;
       }
-      
+
       li:nth-child(2) a {
         color: #3b5998;
       }
-      
+
       li:nth-child(3) a {
         color: #323131;
       }
-      
+
       li:nth-child(4) a {
         color: #e51937;
       }
-      
+
       .section-padding {
         padding: 140px 0;
       }
-      
+
       @media (max-width: 479px) { 
         p {
           font-size: 18px;
@@ -392,30 +389,28 @@ const NewsletterMain = () => (
           letter-spacing: -.004em;
         }
       }
-      
+
       @media (max-width: ${mediaQueries.S}) {
         h5 {
           font-size: 24px;
         }
-        
         .newsletter-main {
           padding-top: 62px;
         }
-        
         .section-padding {
           padding: 62px 0;
         }        
       }
-      
+
       @media (min-width: ${mediaQueries.S}) and (max-width: ${mediaQueries.L}) {
         h5 {
           font-size: 26px;
         }
-                
+
         .newsletter-main {
           padding-top: 70px;
         }
-        
+
         .section-padding {
           padding: 70px 0;
         }

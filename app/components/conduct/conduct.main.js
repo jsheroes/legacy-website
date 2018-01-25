@@ -61,7 +61,7 @@ const ConductMain = () => (
         margin: 0 auto;
         text-align: center;
       }
-      
+
       h3 {
         margin: 0 auto 30px;
         line-height: 1.1;
@@ -76,7 +76,7 @@ const ConductMain = () => (
         border: 0;
         border-top: 1px solid #eee;
       }
-      
+
       p {
         margin: 0 0 40px;
         font-size: 18px;
@@ -84,7 +84,7 @@ const ConductMain = () => (
         line-height: 32px;
         font-weight: 300;
       }
-      
+
       a {
         color: ${styles.mainColor5};
         fill: ${styles.mainColor5};
@@ -97,7 +97,7 @@ const ConductMain = () => (
           letter-spacing: -.004em;
         }
       }
-      
+
       @media (max-width: ${mediaQueries.S}) {
         h3 {
           font-size: 26px;
@@ -113,7 +113,7 @@ const ConductMain = () => (
           line-height: 28px;
         }
       }
-      
+
       @media (min-width: ${mediaQueries.S}) and (max-width: ${mediaQueries.L}) {
         h3 {
           font-size: 30px;
@@ -133,7 +133,7 @@ const ConductMain = () => (
           padding: 70px 0;
         }
       }
-      
+
       @media (min-width: ${mediaQueries.L}) and (max-width: ${mediaQueries.XL}) {
         h3 {
           font-size: 34px;
