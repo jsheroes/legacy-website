@@ -27,7 +27,7 @@ const Community = props => (
       }
       
       img {
-        width: 67px;
+        width: 95px;
         max-width: 100%;
         margin-bottom: 15px;
         border: 0;
@@ -44,11 +44,7 @@ const Community = props => (
         filter: grayscale(0%);
       }
 
-      @media (max-width: ${mediaQueries.L}) and (min-width: ${mediaQueries.S}) {
-        img {
-          width: 95px;
-        }
-        
+      @media (max-width: ${mediaQueries.L}) and (min-width: ${mediaQueries.S}) {        
         li {      
           margin-bottom: 25px;
           margin-left: 30px;
