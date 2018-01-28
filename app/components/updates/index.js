@@ -12,6 +12,15 @@ const Updates = () => (
       <p>Passionate community members: Join the JSHeroes organizing crew! Get in touch and let us know what you’d like to contribute with.</p>
       <strong>Tickets</strong>
       <p>If PayPal is not your preferred payment method, you can also pay by invoice. Drop us a line at <a href="maito:contact@jsheroes.io">contact@jsheroes.io</a> with your request, we’d be happy to help.</p>
+      <strong>Adopt a Javascripter</strong>
+      <p>
+        <div>If you want to be &quot;adopted&quot; by one of our Cluj Javascripters during the JSHeroes conference, you can use our Adopt a Javascripter couch-surfing program.</div>
+        <div>
+          <a title="Subscribe as Guest" target="_blank" rel="noopener noreferrer" href="http://bit.ly/2DUoa8A">Subscribe as a Guest here</a>
+          &nbsp;&nbsp;&nbsp;
+          <a title="Subscribe as Host" target="_blank" rel="noopener noreferrer" href="http://bit.ly/2FY7j5D">Subscribe as a Host here</a>
+        </div>
+      </p>
     </div>
 
     <style jsx>{`
