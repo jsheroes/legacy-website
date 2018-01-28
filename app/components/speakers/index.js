@@ -52,6 +52,17 @@ class Speakers extends Component {
 
             <div className="speaker-boxes">
               { speakers
+                  // .sort((a, b) => {
+                  //   if (a.name < b.name) {
+                  //     return -1;
+                  //   }
+                  //   if (a.name > b.name) {
+                  //     return 1;
+                  //   }
+
+                  //   // names must be equal
+                  //   return 0;
+                  // })
                   .map(speaker => (
                     <div key={speaker.name} className="speaker-box">
                       <Speaker speaker={speaker} />
@@ -72,7 +83,7 @@ class Speakers extends Component {
             padding-right: 15px;
             padding-left: 15px;
           }
-          
+
           .speakers-section .section-header h2 {
             text-align: center;
             font-size: 33px;
@@ -80,7 +91,7 @@ class Speakers extends Component {
             font-weight: 700;
             margin: 0 auto 30px;
           }
-          
+
           .speakers-section .section-header p {
             width: 98%;
             margin-bottom: 20px;
@@ -92,7 +103,7 @@ class Speakers extends Component {
             margin-left: auto;
             margin-right: auto;
           }
-          
+
           @media (min-width: ${mediaQueries.S}) {
             .speakers-section .section-header h2 {
               font-size: 33px;
@@ -103,7 +114,7 @@ class Speakers extends Component {
               margin-bottom: 20px;
             }
           }
-          
+
           @media (min-width: ${mediaQueries.L}) {
             .speakers-section .section-header h2 {
               font-size: 46px;
@@ -114,7 +125,7 @@ class Speakers extends Component {
               margin-bottom: 30px;
             }
           }
-          
+
           @media (min-width: ${mediaQueries.XL}) {
             .speakers-section .section-header h2 {
               font-size: 52px;
@@ -125,12 +136,12 @@ class Speakers extends Component {
               margin-bottom: 40px;
             }
           }  
-          
+
           .speaker-boxes {
             display: flex;
             flex-wrap: wrap;
           }
-          
+
           .speaker-box {
             width: 100%;
           }
@@ -146,7 +157,7 @@ class Speakers extends Component {
               width: 33.33%
             }
           }
-          
+
           @media (min-width: ${mediaQueries.L}) {
             .speaker-box {
               width: 25%

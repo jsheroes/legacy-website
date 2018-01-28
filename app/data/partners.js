@@ -14,44 +14,34 @@ module.exports = [
     img: 'logo_google.svg',
     href: 'https://google.com',
   },
-  // {
-  //   title: 'Pony Car Sharing',
-  //   img: 'logo_get_pony.png',
-  //   href: 'https://www.getpony.ro/',
-  // },
-  // {
-  //   title: 'Spherik',
-  //   img: 'logo_spherik.png',
-  //   href: 'https://spherikaccelerator.com/',
-  // },
-  // {
-  //   title: 'Cluj Hub',
-  //   img: 'logo_cluj_hub.png',
-  //   href: 'http://clujhub.ro/',
-  // },
-  // {
-  //   title: 'Tech Fest',
-  //   img: 'logo_techfest.png',
-  //   href: 'http://techfest.ro/',
-  // },
-  // {
-  //   title: 'DevTalks',
-  //   img: 'logo_dev_talks.jpg',
-  //   href: 'https://www.logmeininc.com/',
-  // },
-  // {
-  //   title: 'Onyx Beacon',
-  //   img: 'logo_onyx_beacon.png',
-  //   href: 'http://www.onyxbeacon.com/',
-  // },
-  // {
-  //   title: 'IT days',
-  //   img: 'logo_it_days.png',
-  //   href: 'http://itdays.ro/',
-  // },
-  // {
-  //   title: 'Today Software Magazine',
-  //   img: 'logo_tsm.jpg',
-  //   href: 'https://www.todaysoftmag.com/',
-  // },
+  {
+    title: 'Contentful',
+    img: 'logo_contentful.png',
+    href: 'http://www.contentful.com/',
+  },
+  {
+    title: 'yld',
+    img: 'logo_yld.png',
+    href: 'https://www.yld.io',
+  },
+  {
+    title: 'microsoft',
+    img: 'logo_microsoft.png',
+    href: 'https://www.microsoft.com',
+  },
+  {
+    title: 'okgrow!',
+    img: 'logo_okgrow.svg',
+    href: 'https://www.okgrow.com/',
+  },
+  {
+    title: 'twilio',
+    img: 'logo_twilio.png',
+    href: 'https://www.twilio.com/',
+  },
+  {
+    title: 'npm',
+    img: 'logo_npm.png',
+    href: 'https://www.npmjs.com/',
+  },
 ];

@@ -51,7 +51,6 @@ const ConductHero = () => (
         content: "";
         background: hsla(0,0%,0%,.6) none repeat scroll 0 0;
       }
-      
       h2 {
         margin: 45px auto 30px;
         line-height: 1.1;
@@ -60,19 +59,18 @@ const ConductHero = () => (
         font-weight: 700;
         text-align: center;
       }
-      
       @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
         h2 {
           font-size: 46px;
         }
       }
-      
+
       @media (max-width: ${mediaQueries.L}) and (min-width: ${mediaQueries.S}) {
         h2 {
           font-size: 43px;
         }
       }
-      
+
       @media (max-width: ${mediaQueries.S}) {
         h2 {
           font-size: 24px;

@@ -25,7 +25,7 @@ const Partner = props => (
       }
       
       img {
-        max-width: 188px;
+        width: 188px;
         vertical-align: middle;
         border: 0;
         -webkit-filter: grayscale(100%);

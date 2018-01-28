@@ -21,7 +21,7 @@ const GoogleMap = ({ center, zoom }) => (
         height: 666px;
         overflow: hidden;
       }
-      
+
       @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
         div {
           height: 596px;
