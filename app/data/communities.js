@@ -69,4 +69,14 @@ module.exports = [
     img: 'logo_clujytech.jpg',
     href: 'https://cluj-ytech.github.io/',
   },
+  {
+    title: 'ReactJSGirls',
+    img: 'logo_reactgirls.jpg',
+    href: 'https://www.meetup.com/ReactJS-Girls-London/',
+  },
+  {
+    title: 'LondonNode',
+    img: 'logo_londonnode.png',
+    href: 'https://www.meetup.com/LNM-London-Node-JS-Meetup/',
+  },
 ];
