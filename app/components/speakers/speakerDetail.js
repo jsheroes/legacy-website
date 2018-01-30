@@ -327,10 +327,10 @@ function buildCurrentTalk({ title, description, message }, { firstName }) {
       <h3>{ firstName }`s talk: {title}</h3>
       <RawHtml content={description} />
       { message && (
-        <p className="teaser">
+        <div className="teaser">
           <span>You will learn:</span>
-          <div><i>{message}</i></div>
-        </p>
+          <p><i>{message}</i></p>
+        </div>
       ) }
       <style jsx>{`
         h3 {
