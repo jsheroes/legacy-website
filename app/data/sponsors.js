@@ -34,9 +34,4 @@ module.exports = [
     img: 'logo_imprezzio1.png',
     href: 'http://imprezzioglobal.com/',
   },
-  // {
-  //   title: 'Nielsen Marketing Cloud',
-  //   img: 'logo_nielsen_mc.png',
-  //   href: 'http://www.nielsen.com/eu/en/solutions/capabilities/nielsen-marketing-cloud.html',
-  // },
 ];

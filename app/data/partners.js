@@ -44,9 +44,9 @@ module.exports = [
     img: 'logo_npm.png',
     href: 'https://www.npmjs.com/',
   },
-  // {
-  //   title: 'Nielsen',
-  //   img: 'logo_nielsen.png',
-  //   href: 'http://nielsen.com/',
-  // },
+  {
+    title: 'Nielsen Marketing Cloud',
+    img: 'logo_nielsen.png',
+    href: 'http://www.nielsen.com/eu/en/solutions/capabilities/nielsen-marketing-cloud.html',
+  },
 ];
