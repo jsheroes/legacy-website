@@ -44,4 +44,9 @@ module.exports = [
     img: 'logo_npm.png',
     href: 'https://www.npmjs.com/',
   },
+  // {
+  //   title: 'Nielsen',
+  //   img: 'logo_nielsen.png',
+  //   href: 'http://nielsen.com/',
+  // },
 ];

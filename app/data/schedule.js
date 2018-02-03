@@ -16,12 +16,12 @@ export default [
       },
       {
         speakerRef: 'brent-vatne',
-        time: '09:00 - 13:00',
+        time: '14:00 - 18:00',
         room: 'Room: TBA',
       },
       {
         speakerRef: 'bogdan-luca',
-        time: '14:00 - 18:00',
+        time: '09:00 - 13:00',
         room: 'Room: TBA',
       },
       {
@@ -59,11 +59,11 @@ export default [
         time: '11:00 - 11:30',
       },
       {
-        speakerRef: 'ives-van-hoorne',
+        speakerRef: 'mashhood-rastgar',
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'ives-van-hoorne',
         time: '12:00 - 12:30',
       },
       {
@@ -79,7 +79,7 @@ export default [
         time: '15:00 - 15:30',
       },
       {
-        speakerRef: 'kristijan-ristovski',
+        speakerRef: 'anjana-vakil',
         time: '16:00 - 16:30',
       },
       {
@@ -118,15 +118,15 @@ export default [
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'stefan-judis',
         time: '12:00 - 12:30',
       },
       {
-        speakerRef: 'stefan-judis',
+        speakerRef: 'shagufta-gurmukhdas',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: 'shagufta-gurmukhdas',
+        speakerRef: 'kristijan-ristovski',
         time: '14:30 - 15:00',
       },
       {
