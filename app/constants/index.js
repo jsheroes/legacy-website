@@ -18,6 +18,6 @@ module.exports = {
   ConferenceStartTime: '2017-06-18 08:00',
   ConferenceMapApiKey: 'AIzaSyAswFS24FiMHSvmwbU1ctvMSuQ3vb6D8l8',
   emptyFunc: () => {},
-  toBeAHost: 'https://docs.google.com/forms/d/e/1FAIpQLSca6Pf5M5w6BG09qu9iAooLkT9IV57Xrjr_CNnhFi0GKlu2FA/viewform',
-  toBeAGuest: 'https://docs.google.com/forms/d/e/1FAIpQLSdfCJJ2cPRuyLbCnTJxZ3BvZWsFr6rXnr225KJ7qm1stlCaQg/viewform',
+  beAHostLink: 'http://bit.ly/2FY7j5D',
+  beAGuestLink: 'http://bit.ly/2DUoa8A',
 };

@@ -1,7 +1,7 @@
-import ScrollableAnchor from 'react-scrollable-anchor';
-import { mediaQueries, styles } from '../constants';
-
+import React from 'react';
 import Section from '../components/common/section';
+
+import { mediaQueries, styles } from '../constants';
 
 const heroBcgImg = {
   position: 'relative',
@@ -14,16 +14,10 @@ const heroBcgImg = {
 };
 
 const AdoptAJSerHero = () => (
-  <div>
-    <Section
-      section={{ style: heroBcgImg }}
-    >
-      <ScrollableAnchor id={'adopt-a-jser'}>
-        <div className="hero-text">
-          <h1>Adopt a JavaScripter</h1>
-        </div>
-      </ScrollableAnchor>
-    </Section>
+  <Section section={{ style: heroBcgImg }}>
+    <div className="hero-text">
+      <h1>Adopt a JavaScripter</h1>
+    </div>
 
     {/* language=CSS */}
     <style jsx>{`
@@ -52,7 +46,7 @@ const AdoptAJSerHero = () => (
         }
       }
     `}</style>
-  </div>
+  </Section>
 );
 
 module.exports = AdoptAJSerHero;

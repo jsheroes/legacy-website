@@ -5,7 +5,7 @@ import Section from '../app/components/common/section';
 import AdoptAJSerHero from '../app/components/adopt-a-jser-hero';
 import RawHtml from '../app/components/common/rawHtml';
 
-import { styles, mediaQueries, toBeAHost, toBeAGuest } from '../app/constants';
+import { styles, mediaQueries, beAHostLink, beAGuestLink } from '../app/constants';
 import { couchSurfing } from '../app/data/adopt-a-jser';
 
 const AdoptAJSer = () => (
@@ -21,7 +21,7 @@ const AdoptAJSer = () => (
         <RawHtml content={couchSurfing} />
 
         <div className="main-box-wrapper">
-          <a href={toBeAGuest} target="_blank">
+          <a title="Be a Guest" target="_blank" rel="noopener noreferrer" href={beAGuestLink}>
             <div className="main-box">
               <h4>Be a Guest</h4>
               <span />
@@ -29,7 +29,7 @@ const AdoptAJSer = () => (
             </div>
           </a>
 
-          <a href={toBeAHost} target="_blank">
+          <a title="Become a Host" target="_blank" rel="noopener noreferrer" href={beAHostLink}>
             <div className="main-box host">
               <h4>Become a Host</h4>
               <span />
