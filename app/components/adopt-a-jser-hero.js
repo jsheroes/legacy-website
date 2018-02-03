@@ -1,5 +1,5 @@
 import ScrollableAnchor from 'react-scrollable-anchor';
-import { styles } from '../constants';
+import { mediaQueries, styles } from '../constants';
 
 import Section from '../components/common/section';
 
@@ -38,6 +38,18 @@ const AdoptAJSerHero = () => (
         color: ${styles.mainColor3};
         font-family: Roboto, sans-serif;
         font-weight: 700;
+      }
+
+      @media (max-width: ${mediaQueries.L}) {
+        .hero-text h1 {
+          padding-top: 0;
+        }
+      }
+
+      @media (max-width: ${mediaQueries.XS}) {
+        .hero-text h1 {
+          font-size: 26px;
+        }
       }
     `}</style>
   </div>

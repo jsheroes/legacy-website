@@ -1,119 +1,124 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
-import { styles, mediaQueries } from '../app/constants';
-import { couchSurfing } from '../app/data/adopt-a-jser'
+import AdoptAJSerHero from '../app/components/adopt-a-jser-hero';
 import RawHtml from '../app/components/common/rawHtml';
-import AdoptAJSerHero from '../app/components/adopt-a-jser-hero'
 
-const AdoptAJSer = () => {
+import { styles, mediaQueries, toBeAHost, toBeAGuest } from '../app/constants';
+import { couchSurfing } from '../app/data/adopt-a-jser';
 
-  return (
-    <Layout page="adopt-a-jser">
-      <Head>
-        <title>Adopt a JSer</title>
-      </Head>
-      <AdoptAJSerHero />
-      <Section>
-        <div className="couch-surf-details">
-          <div className="couch-surf-description clearfix">
-            <RawHtml content={couchSurfing} />
+const AdoptAJSer = () => (
+  <Layout page="adopt-a-jser">
+    <Head>
+      <title>Adopt a JSer</title>
+    </Head>
 
-            <div className="workshop-section">
-              <div>Are you interested in <strong>first name</strong>'s workshop?</div>
-              <div>Join first name at JSHeroes!</div>
+    <AdoptAJSerHero />
+
+    <Section>
+      <div className="couch-surf-description">
+        <RawHtml content={couchSurfing} />
+
+        <div className="main-box-wrapper">
+          <a href={toBeAGuest} target="_blank">
+            <div className="main-box">
+              <h4>Be a Guest</h4>
+              <span />
+              <p>Connect with a Host from Cluj-Napoca.</p>
             </div>
-          </div>
+          </a>
+
+          <a href={toBeAHost} target="_blank">
+            <div className="main-box host">
+              <h4>Become a Host</h4>
+              <span />
+              <p>Share your home with a JavaScripter.</p>
+            </div>
+          </a>
         </div>
+      </div>
 
-        <style jsx>{`
-          h1 {
-            color: ${styles.mainColor6};
-          }
+      {/* language=CSS */}
+      <style jsx>{`
+        .couch-surf-description {
+           margin-top: 65px;
+           margin-bottom: 65px;
+           text-align: center;
+           padding: 0 100px;
+        }
+        .main-box-wrapper {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-evenly;
+          margin-top: 30px;
+        }
 
-          h1, h2 {
-            font-size: 24px !important;
-          }
+        a {
+          text-decoration: none;
+          margin: 0 30px;
+        }
 
-          h3, h4 {
-            font-size: 18px !important;
-          }
+        .main-box {
+          display: flex;
+          flex-direction: column;
+          width: 220px;
+          padding: 40px 40px 30px;
+          border: 2px solid ${styles.mainColor6};
+          border-radius: 4px;
+          background-color: ${styles.mainColor6};
+          color: ${styles.mainColor3};
+        }
 
-          .clearfix {
-            clear: both;
-          }
+        .main-box h4 {
+          margin: 0;
+          font-size: 16px;
+          opacity: .9;
+        }
 
-          .couch-surf-details {
-            margin-top: 65px;
-            margin-bottom: 65px;
-            text-align: center;
-          }
+        .main-box span {
+          width: 35px;
+          border-top: 1px solid ${styles.mainColor3};
+          margin: 20px 0;
+          align-self: center;
+          opacity: .6;
+        }
 
-          .tech-image {
-            max-height: 100px;
-          }
+        .main-box p {
+          margin-bottom: 0;
+          font-size: 14px;
+          font-weight: 400;
+          opacity: .9;
+        }
 
-          .workshop-title {
-            margin-top: 20px;
-          }
+        .main-box.host {
+          background: transparent;
+          color: ${styles.mainColor6};
+        }
 
-          .workshop-type {
-            margin-top: 27px;
-          }
+        .main-box.host span {
+          border-top-color: ${styles.mainColor6};
+        }
 
-          .workshop-section {
-            margin-top: 35px;
-            margin-bottom: 0;
-          }
-
-          .workshop-ticket {
+        @media (max-width: ${mediaQueries.L} ){
+          .couch-surf-description {
             margin-top: 35px;
             margin-bottom: 35px;
+            padding: 0;
           }
-
-          .couch-surf-description {
-            text-align: justify;
+          .main-box-wrapper {
+            margin-top: 25px;
           }
+        }
 
-          .button {
-            margin: 10px 0;
-            padding: 10px;
-            width: 100%;
-            text-decoration: none;
+        @media (max-width: ${mediaQueries.S}) {
+          .main-box-wrapper a:first-child {
+            margin-bottom: 30px;
           }
-
-          @media (min-width: ${mediaQueries.XS} ){
-            .workshop-title {
-              float: left;
-              flex: 1;
-              margin: 0 0 0 20px;
-            }
-
-            .couch-surf-details {
-              display: flex;
-              text-align: left;
-            }
-
-            .button {
-              max-width: 200px;
-            }
-
-            .tech-image {
-              float: left;
-            }
-          }
-
-          @media (min-width: ${mediaQueries.L}){
-            .couch-surf-details {
-              margin-top: 110px;
-            }
-          }
-        `}</style>
-      </Section>
-    </Layout>
-  );
-};
+        }
+      `}</style>
+    </Section>
+  </Layout>
+);
 
 export default AdoptAJSer;
