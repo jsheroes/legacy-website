@@ -24,14 +24,14 @@ module.exports = [
     img: 'logo_yonder.png',
     href: 'https://tss-yonder.com/',
   },
-  {
-    title: 'Moqups',
-    img: 'logo_moqups.jpg',
-    href: 'https://moqups.com/',
-  },
-  {
-    title: 'Imprezzio',
-    img: 'logo_imprezzio1.png',
-    href: 'http://imprezzioglobal.com/',
-  },
+  // {
+  //   title: 'Moqups',
+  //   img: 'logo_moqups.jpg',
+  //   href: 'https://moqups.com/',
+  // },
+  // {
+  //   title: 'Imprezzio',
+  //   img: 'logo_imprezzio1.png',
+  //   href: 'http://imprezzioglobal.com/',
+  // },
 ];
