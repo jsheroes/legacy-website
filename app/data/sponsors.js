@@ -24,19 +24,14 @@ module.exports = [
     img: 'logo_yonder.png',
     href: 'https://tss-yonder.com/',
   },
-  {
-    title: 'Moqups',
-    img: 'logo_moqups.jpg',
-    href: 'https://moqups.com/',
-  },
+  // {
+  //   title: 'Moqups',
+  //   img: 'logo_moqups.jpg',
+  //   href: 'https://moqups.com/',
+  // },
   {
     title: 'Imprezzio',
-    img: 'logo_imprezzio1.png',
+    img: 'logo_imprezzio2.png',
     href: 'http://imprezzioglobal.com/',
   },
-  // {
-  //   title: 'Nielsen Marketing Cloud',
-  //   img: 'logo_nielsen_mc.png',
-  //   href: 'http://www.nielsen.com/eu/en/solutions/capabilities/nielsen-marketing-cloud.html',
-  // },
 ];

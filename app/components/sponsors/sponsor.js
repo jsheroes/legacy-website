@@ -17,7 +17,7 @@ const Sponsor = props => (
       {`
       li {
         display: inline-block;
-        margin: 0 15px 10px;
+        margin: 10px 15px;
         list-style: outside none none;
         font-size: 16px;
         font-weight: 300;

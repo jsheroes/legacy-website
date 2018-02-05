@@ -180,7 +180,12 @@ class Header extends Component {
             color: #e1ebef;
           }
           .header-container {
-            margin-top: 20%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            margin-top: 0;
           }
           .header-logo {
             height: 45px;
@@ -245,7 +250,7 @@ class Header extends Component {
 
           .header-container .col-xs-12 {
             text-align: center;
-            margin-top: 15%;
+            margin-top: 80px;
           }
           .header-container .col-xs-12 .header-btn {
             float: none;
@@ -258,19 +263,8 @@ class Header extends Component {
             .header-text {
               margin-bottom: 30px;
             }
-            .header-container {
-              margin-top: 50%;
-            }
-          }
-
-          @media (min-width: ${mediaQueries.L}) {
-            .header-container {
-              margin-top: 30%;
-            }
-          }
-          @media (min-width: ${mediaQueries.XL}) {
-            .header-container {
-              margin-top: 20%;
+            .header-container .col-xs-12 {
+              margin-top: 60px;
             }
           }
           `}</style>

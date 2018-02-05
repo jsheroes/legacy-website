@@ -14,13 +14,12 @@ const Updates = () => (
       <strong>Tickets</strong>
       <p>If PayPal is not your preferred payment method, you can also pay by invoice. Drop us a line at <a href="maito:contact@jsheroes.io">contact@jsheroes.io</a> with your request, we’d be happy to help.</p>
       <strong>Adopt a Javascripter</strong>
-      <p>
-        <div>If you want to be &quot;adopted&quot; by one of our Cluj Javascripters during the JSHeroes conference, you can use our
-          <br />
+      <p>If you want to be &quot;adopted&quot; by one of our Cluj Javascripters during the JSHeroes conference, you can use our
+        <div>
           <Link href="/adopt-a-jser">
             <a title="Adopt a Javascripter couch-surfing program">
-              Adopt a Javascripter couch-surfing program
-            </a>
+                Adopt a Javascripter couch-surfing program
+              </a>
           </Link>.
         </div>
       </p>
