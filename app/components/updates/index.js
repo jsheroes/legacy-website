@@ -18,8 +18,8 @@ const Updates = () => (
         <div>
           <Link href="/adopt-a-jser">
             <a title="Adopt a Javascripter couch-surfing program">
-                Adopt a Javascripter couch-surfing program
-              </a>
+              Adopt a Javascripter couch-surfing program
+            </a>
           </Link>.
         </div>
       </p>
