@@ -34,4 +34,9 @@ module.exports = [
     img: 'logo_imprezzio2.png',
     href: 'http://imprezzioglobal.com/',
   },
+  {
+    title: 'BuilderX',
+    img: 'logo_builderx.png',
+    href: 'https://builderx.io/',
+  },
 ];
