@@ -40,13 +40,13 @@ module.exports = [
     href: 'https://www.twilio.com/',
   },
   {
-    title: 'npm',
-    img: 'logo_npm.png',
-    href: 'https://www.npmjs.com/',
-  },
-  {
     title: 'Nielsen Marketing Cloud',
     img: 'logo_nielsen.png',
     href: 'http://www.nielsen.com/eu/en/solutions/capabilities/nielsen-marketing-cloud.html',
+  },
+  {
+    title: 'npm',
+    img: 'logo_npm.png',
+    href: 'https://www.npmjs.com/',
   },
 ];

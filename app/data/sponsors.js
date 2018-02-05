@@ -29,9 +29,9 @@ module.exports = [
   //   img: 'logo_moqups.jpg',
   //   href: 'https://moqups.com/',
   // },
-  // {
-  //   title: 'Imprezzio',
-  //   img: 'logo_imprezzio1.png',
-  //   href: 'http://imprezzioglobal.com/',
-  // },
+  {
+    title: 'Imprezzio',
+    img: 'logo_imprezzio2.png',
+    href: 'http://imprezzioglobal.com/',
+  },
 ];
