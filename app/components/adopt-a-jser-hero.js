@@ -42,7 +42,7 @@ const AdoptAJSerHero = () => (
 
       @media (max-width: ${mediaQueries.XS}) {
         .hero-text h1 {
-          font-size: 26px;
+          font-size: 28px;
         }
       }
     `}</style>

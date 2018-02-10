@@ -8,20 +8,20 @@ const Updates = () => (
       <strong>Date and Venue</strong>
       <p>Join us on 18-20 April 2018 in Cluj Napoca, Romania at Grand Hotel Italia for 1 day of workshops and 2 days of conference. Feel free to send us your suggestions over <a href="https://twitter.com/jsheroes" target="_blank" rel="noreferrer noopener">Twitter</a>, we’d be happy to hear from you.</p>
       <strong>Sponsors</strong>
-      <p>Our Call for Sponsors is always open. Send us an email if you’re interested to join our mission in 2018 at <a href="maito:welcome@jsheroes.io">welcome@jsheroes.io</a> and we’ll take it from there.</p>
+      <p>Our Call for Sponsors is always open. Send us an email if you’re interested to join our mission in 2018 at <a href="mailto:welcome@jsheroes.io">welcome@jsheroes.io</a> and we’ll take it from there.</p>
       <strong>Volunteers</strong>
       <p>Passionate community members: Join the JSHeroes organizing crew! Get in touch and let us know what you’d like to contribute with.</p>
       <strong>Tickets</strong>
-      <p>If PayPal is not your preferred payment method, you can also pay by invoice. Drop us a line at <a href="maito:contact@jsheroes.io">contact@jsheroes.io</a> with your request, we’d be happy to help.</p>
+      <p>If PayPal is not your preferred payment method, you can also pay by invoice. Drop us a line at <a href="mailto:contact@jsheroes.io">contact@jsheroes.io</a> with your request, we’d be happy to help.</p>
       <strong>Adopt a Javascripter</strong>
+
       <p>If you want to be &quot;adopted&quot; by one of our Cluj Javascripters during the JSHeroes conference, you can use our
-        <div>
-          <Link href="/adopt-a-jser">
-            <a title="Adopt a Javascripter couch-surfing program">
-              Adopt a Javascripter couch-surfing program
-            </a>
-          </Link>.
-        </div>
+        <br />
+        <Link href="/adopt-a-jser">
+          <a title="Adopt a Javascripter couch-surfing program">
+            Adopt a Javascripter couch-surfing program
+          </a>
+        </Link>.
       </p>
     </div>
 
