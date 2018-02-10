@@ -51,7 +51,7 @@ export default [
         time: '09:30 - 10:00',
       },
       {
-        speakerRef: 'sara-vieira',
+        speakerRef: 'kristijan-ristovski',
         time: '10:00 - 10:30',
       },
       {
@@ -63,7 +63,7 @@ export default [
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: 'ives-van-hoorne',
+        speakerRef: 'dominik-kundel',
         time: '12:00 - 12:30',
       },
       {
@@ -75,11 +75,11 @@ export default [
         time: '14:30 - 15:00',
       },
       {
-        speakerRef: 'dominik-kundel',
+        speakerRef: 'stefan-judis',
         time: '15:00 - 15:30',
       },
       {
-        speakerRef: 'anjana-vakil',
+        speakerRef: 'monica-dinculescu',
         time: '16:00 - 16:30',
       },
       {
@@ -98,11 +98,11 @@ export default [
     index: 2,
     activities: [
       {
-        speakerRef: 'jack-franklin',
+        speakerRef: 'anjana-vakil',
         time: '09:00 - 09:30',
       },
       {
-        speakerRef: 'liran-tal',
+        speakerRef: 'jack-franklin',
         time: '09:30 - 10:00',
       },
       {
@@ -110,32 +110,36 @@ export default [
         time: '10:00 - 10:30',
       },
       {
-        speakerRef: 'monica-dinculescu',
+        speakerRef: 'even-stensberg',
         time: '11:00 - 11:30',
       },
       {
-        speakerRef: 'larissa-davidova',
+        speakerRef: 'shagufta-gurmukhdas',
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: 'stefan-judis',
+        speakerRef: 'ives-van-hoorne',
         time: '12:00 - 12:30',
       },
       {
-        speakerRef: 'shagufta-gurmukhdas',
+        speakerRef: 'larissa-davidova',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: 'kristijan-ristovski',
+        speakerRef: 'sara-vieira',
         time: '14:30 - 15:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'liran-tal',
         time: '15:00 - 15:30',
       },
       {
-        speakerRef: 'stephanie-nemeth',
+        speakerRef: 'phil-hawksworth',
         time: '16:00 - 16:30',
+      },
+      {
+        speakerRef: 'stephanie-nemeth',
+        time: '16:30 - 17:00',
       },
       {
         speakerRef: 'jeffrey-lembeck',
