@@ -25,15 +25,15 @@ const Footer = () => (
             Buy Your Ticket
           </a>
         </div>
-        {/*<div>*/}
-          {/*<a*/}
-            {/*href="https://docs.google.com/forms/d/e/1FAIpQLSdPSo4Zy_M78PHRVFz90v1_SV3IqRcyhvgK2oCDY6ju6NDWeA/viewform?usp=sf_link"*/}
-            {/*target="_blank"*/}
-            {/*rel="noopener noreferrer"*/}
-          {/*>*/}
-            {/*Become a Speaker*/}
-          {/*</a>*/}
-        {/*</div>*/}
+        {/* <div>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdPSo4Zy_M78PHRVFz90v1_SV3IqRcyhvgK2oCDY6ju6NDWeA/viewform?usp=sf_link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Become a Speaker
+          </a>
+        </div> */}
         <div>
           <Link href="/code-of-conduct">
             <a>Code of Conduct</a>
