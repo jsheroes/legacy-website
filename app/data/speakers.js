@@ -730,4 +730,54 @@ module.exports = [
       name: 'Dynamic Angular 2 Forms @ NGEurope 2016',
     }],
   },
+  {
+    name: 'even',
+    fullName: 'Even Stensberg',
+    permalink: 'even-stensberg',
+    firstName: 'Even',
+    reference: 'him',
+    position: 'Informatics Student',
+    company: '',
+    img: 'even.jpg',
+    github: 'https://github.com/ev1stensberg',
+    twitter: 'https://twitter.com/ev1stensberg',
+    description: 'Even is an informatics student above the Artic Circle and a maintainer of webpack-cli. He also likes rockets 🚀.',
+    talk: {
+      title: 'Full-Config-Jacket',
+      description: 'Being a developer shouldn`t be hard. You should create a file and start developing. But if you`d want to develop like a hipster, it would mean tooling, a lot of tooling. The talk will focus on how maintainers should reduce the entry requirements to build modern applications with as little configuration as possible.',
+      message: 'How tools can make productivity and developer experience better. It will focus on how good defaults by tools can make developing less like a full-config-jacket and more like a full-metall-applet',
+    },
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'phil',
+    fullName: 'Phil Hawksworth',
+    permalink: 'phil-hawksworth',
+    firstName: 'Phil',
+    reference: 'him',
+    position: 'Developer Relations',
+    company: 'Netlify',
+    img: 'phil.jpg',
+    github: 'https://www.github.com/philhawksworth',
+    twitter: 'https://www.twitter.com/philhawksworth',
+    website: 'https://www.hawksworx.com',
+    description: 'With a long history in web development, and a passion for browser technologies, Phil loves seeking out ingenuity and simplicity, especially in places where over-engineering is common. You can usually find him banging on about that, and his attempts at standup comedy on Twitter.',
+    talk: {
+      title: 'Serving for the win - Deployments and hosting for the rest of us',
+      description: `
+        <p>You’ve chosen your frameworks and libraries. You’ve learned how to write code which satisfies the buzzword and performance gods. Now you need to serve it to a global audience, and make things easy to preview, to test, to sign-off, and to evolve.</p>
+        <p>This talk looks at some case studies of projects making common mistakes, and some which benefit from a better approach.</p>
+        <p>We’ll explore tools and techniques which ease the path to production. Things anyone can do to boost confidence in every release. And ways to optimise our hosting for performance, hassle free localisation and genuine A/B testing.</p>
+      `,
+      message: 'How can you make sure that release day is boring? (Or at least, only satisfying, rather than nerve-racking). How can you avoid falling at the final hurdle after doing so much great development work? As a modern web developer, what processes should you demand?',
+    },
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [{
+      url: 'https://youtu.be/_cuZcnJIjls',
+      name: 'Static Sites go all Hollywood @ FrontTrends 2016',
+    }],
+  },
 ];
