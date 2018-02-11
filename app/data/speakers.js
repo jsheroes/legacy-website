@@ -737,7 +737,7 @@ module.exports = [
     firstName: 'Even',
     reference: 'him',
     position: 'Informatics Student',
-    company: 'Artic University of Norway',
+    company: 'Arctic University of Norway',
     img: 'even.jpg',
     github: 'https://github.com/ev1stensberg',
     twitter: 'https://twitter.com/ev1stensberg',
