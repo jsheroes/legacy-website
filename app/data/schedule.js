@@ -15,23 +15,23 @@ export default [
         room: 'Room: TBA',
       },
       {
-        speakerRef: 'brent-vatne',
-        time: '14:00 - 18:00',
-        room: 'Room: TBA',
-      },
-      {
         speakerRef: 'bogdan-luca',
         time: '09:00 - 13:00',
         room: 'Room: TBA',
       },
       {
-        speakerRef: 'marianna-etelson',
+        speakerRef: 'brent-vatne',
         time: '14:00 - 18:00',
         room: 'Room: TBA',
       },
       {
         speakerRef: 'nir-kaufman',
-        time: '09:00 - 13:00',
+        time: '14:00 - 18:00',
+        room: 'Room: TBA',
+      },
+      {
+        speakerRef: 'marianna-etelson',
+        time: '14:00 - 18:00',
         room: 'Room: TBA',
       },
     ],
