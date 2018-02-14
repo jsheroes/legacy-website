@@ -20,6 +20,11 @@ export default [
         room: 'Room: TBA',
       },
       {
+        speakerRef: ['luke-walczak', 'raul-gomez-acuna'],
+        time: '09:00 - 13:00',
+        room: 'Room: TBA',
+      },
+      {
         speakerRef: 'brent-vatne',
         time: '14:00 - 18:00',
         room: 'Room: TBA',
