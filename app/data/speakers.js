@@ -780,4 +780,70 @@ module.exports = [
       name: 'Static Sites go all Hollywood @ FrontTrends 2016',
     }],
   },
+  {
+    name: 'raul',
+    fullName: 'Raúl Gómez Acuña',
+    permalink: 'raul-gomez-acuna',
+    firstName: 'Raúl',
+    reference: 'him',
+    position: 'Front-end Engineer',
+    company: 'Callstack',
+    img: 'raul.jpg',
+    github: 'https://www.github.com/rauliyohmc',
+    twitter: 'https://www.twitter.com/@rgommezz',
+    website: 'https://blog.callstack.io/@rauliyohmc',
+    description: 'Raúl is a software engineer at Callstack. OSS contributor, speaker, mentor. Building React Native apps at 60 FPS.',
+    talk: null,
+    workshop: {
+      title: 'Introduction to React Native',
+      type: 'Half-Day Workshop',
+      permalink: 'react-native-introduction',
+      logo: 'react-native.png',
+      description: `
+        <p>React Native is an emerging platform and a lot of companies like Facebook, Airbnb, Callstack, Wix, etc are putting their bets on it. React Native allows you to write mobile applications with ease in JavaScript that can be run on both Android and iOS.</p>
+        <p>For the first part we are going to talk about the building blocks of the platform (touchables, text input, lists, animation, etc), layout/styling, navigation, debugging, native libraries and testing. For the second part, we are going to build an app together with all the concepts we previously learnt.</p>
+        <p>By the end of this workshop you should be able to understand the basics of the platform and feel comfortable on writing your own applications.</p>
+      `,
+      prerequisites: `
+        <p>Attendees should have basic JavaScript knowledge as well as a bit of React knowledge, be able to write components and use state and props.</p>
+      `,
+      seats: 25,
+      socialMedia: 'Get your basic introduction to React-Native!',
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'luke',
+    fullName: 'Luke Walczak',
+    permalink: 'luke-walczak',
+    firstName: 'Luke',
+    reference: 'him',
+    position: 'Front-end Engineer',
+    company: 'Callstack',
+    img: 'luke.jpeg',
+    github: 'https://www.github.com/lukewalczak',
+    twitter: 'https://www.twitter.com/@happiryu',
+    website: 'https://blog.callstack.io/@_happiryu',
+    description: 'Luke is a software developer working at Callstack and OSS contributor in free time. Focused on methodical approach to the problem and universal solutions. Fan of React Native Animation.',
+    talk: null,
+    workshop: {
+      title: 'Introduction to React Native',
+      type: 'Half-Day Workshop',
+      permalink: 'react-native-introduction',
+      logo: 'react-native.png',
+      description: `
+        <p>React Native is an emerging platform and a lot of companies like Facebook, Airbnb, Callstack, Wix, etc are putting their bets on it. React Native allows you to write mobile applications with ease in JavaScript that can be run on both Android and iOS.</p>
+        <p>For the first part we are going to talk about the building blocks of the platform (touchables, text input, lists, animation, etc), layout/styling, navigation, debugging, native libraries and testing. For the second part, we are going to build an app together with all the concepts we previously learnt.</p>
+        <p>By the end of this workshop you should be able to understand the basics of the platform and feel comfortable on writing your own applications.</p>
+      `,
+      prerequisites: `
+        <p>Attendees should have basic JavaScript knowledge as well as a bit of React knowledge, be able to write components and use state and props.</p>
+      `,
+      seats: 25,
+      socialMedia: 'Get your basic introduction to React-Native!',
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
 ];

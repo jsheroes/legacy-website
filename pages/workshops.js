@@ -3,28 +3,34 @@ import Link from 'next/link';
 import Router from 'next/router';
 import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
-import speakers from '../app/data/speakers';
+import speakersData from '../app/data/speakers';
 import { styles, mediaQueries } from '../app/constants';
 import RawHtml from '../app/components/common/rawHtml';
 import Helpers from '../app/helpers';
 
-const Workshop = ({ speaker }) => {
-  const { workshop } = speaker;
+const Workshop = ({ speakers }) => {
+  const firstSpeaker = speakers[0];
+  const secondSpeaker = speakers.length > 1 ? speakers[1] : null;
+
+  const { workshop } = firstSpeaker;
+
+  const secondSpeakerAddition = secondSpeaker ? ` and ${secondSpeaker.fullName}` : '';
+  const seoTitle = `${workshop.title} by ${firstSpeaker.fullName}${secondSpeakerAddition}`;
 
   return (
     <Layout page="workshop">
       <Head>
-        <title>{ workshop.title } by { speaker.fullName }</title>
-        <meta property="og:title" content={`${workshop.title} by ${speaker.fullName}`} />
+        <title />
+        <meta property="og:title" content={seoTitle} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://jsheroes.io/workshops/${workshop.permalink}`} />
         <meta property="og:image" content={`https://jsheroes.io/static/img/technologies/${workshop.logo}`} />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:description" content={workshop.socialMedia} />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content={`${workshop.title} by ${speaker.fullName}`} />
+        <meta property="og:site_name" content={seoTitle} />
         <meta name="twitter:site" content="@jsheroes" />
-        <meta name="twitter:title" content={`${workshop.title} by ${speaker.fullName}`} />
+        <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={workshop.socialMedia} />
         <meta name="twitter:image" content={`https://jsheroes.io/static/img/technologies/${workshop.logo}`} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -39,9 +45,17 @@ const Workshop = ({ speaker }) => {
           <div className="workshop-title">
             <h1>{ workshop.title }</h1>
             <span>by: <strong>
-              <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
-                <a onMouseEnter={() => { Router.prefetch(`/speakers?name=${speaker.permalink}`); }}>{ speaker.fullName }</a>
+              <Link href={`/speakers?name=${firstSpeaker.permalink}`} as={`/speakers/${firstSpeaker.permalink}`}>
+                <a onMouseEnter={() => { Router.prefetch(`/speakers?name=${firstSpeaker.permalink}`); }}>{ firstSpeaker.fullName }</a>
               </Link>
+              { secondSpeaker && (
+                <span>
+                  { ' & ' }
+                  <Link href={`/speakers?name=${secondSpeaker.permalink}`} as={`/speakers/${secondSpeaker.permalink}`}>
+                    <a onMouseEnter={() => { Router.prefetch(`/speakers?name=${secondSpeaker.permalink}`); }}>{ secondSpeaker.fullName }</a>
+                  </Link>
+                </span>
+              ) }
             </strong></span>
             <p className="workshop-type">{ workshop.type }, April 18th</p>
           </div>
@@ -52,10 +66,11 @@ const Workshop = ({ speaker }) => {
           <p className="workshop-section"><strong>Prerequisites</strong></p>
           <RawHtml content={workshop.prerequisites} />
           <p className="workshop-section"><strong>About the trainer</strong></p>
-          <RawHtml content={speaker.description} />
+          <RawHtml content={firstSpeaker.description} />
+          <RawHtml content={secondSpeaker.description} />
           <div className="workshop-section">
-            <div>Are you interested in <strong>{ speaker.firstName }</strong>`s workshop?</div>
-            <div>Join { speaker.reference } at JSHeroes!</div>
+            <div>Are you interested in <strong>{ firstSpeaker.firstName }</strong>`s workshop?</div>
+            <div>Join { firstSpeaker.reference } at JSHeroes!</div>
           </div>
           <div className="workshop-ticket">
             <a
@@ -161,12 +176,14 @@ Workshop.getInitialProps = async ({ res, query }) => {
     Helpers.redirectTo(res, '/');
   }
 
-  const speaker = speakers.find(s => s.workshop && s.workshop.permalink === workshopName);
-  if (!speaker) {
+  const speakers = speakersData.filter(
+    s => s.workshop && s.workshop.permalink === workshopName,
+  );
+  if (speakers.length <= 0) {
     Helpers.redirectTo(res, '/');
   }
 
-  return { speaker };
+  return { speakers };
 };
 
 export default Workshop;
