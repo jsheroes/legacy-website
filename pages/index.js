@@ -7,6 +7,7 @@ import Sponsors from '../app/components/sponsors';
 import Partners from '../app/components/partners';
 import Communities from '../app/components/communities';
 import Mission from '../app/components/mission';
+import Organizers from '../app/components/organizers/organizers';
 import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
 
@@ -20,6 +21,7 @@ export default () => (
     <Sponsors />
     <Partners />
     <Communities />
+    <Organizers />
     <Venue />
     <ScrollBtn />
   </Layout>
