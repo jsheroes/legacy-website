@@ -67,7 +67,7 @@ const Workshop = ({ speakers }) => {
           <RawHtml content={workshop.prerequisites} />
           <p className="workshop-section"><strong>About the trainer</strong></p>
           <RawHtml content={firstSpeaker.description} />
-          <RawHtml content={secondSpeaker.description} />
+          { secondSpeaker && <RawHtml content={secondSpeaker.description} /> }
           <div className="workshop-section">
             <div>Are you interested in <strong>{ firstSpeaker.firstName }</strong>`s workshop?</div>
             <div>Join { firstSpeaker.reference } at JSHeroes!</div>
