@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'Alexandra Retegan',
       img: 'alexandra-retegan.jpg',
-      role: 'Master of Coins',
+      role: 'Master of Coin',
       twitter: 'aleretegan',
     },
     {
@@ -34,7 +34,7 @@ module.exports = {
       name: 'Alex Pausan',
       img: 'alex-pausan.jpg',
       role: 'Diversity Manager',
-      twitter: 'alexnpausan',
+      twitter: 'alexpausan',
     },
     {
       name: 'Claudia Ticle',
@@ -89,31 +89,31 @@ module.exports = {
     {
       name: 'Vlad Nicula',
       img: 'vlad-nicula.jpg',
-      role: 'Old Hero',
+      role: 'Retired Hero',
       twitter: 'agilius',
     },
     {
       name: 'Vlad Zelinschi',
       img: 'vlad-zelinschi.jpg',
-      role: 'Old Hero',
+      role: 'Retired Hero',
       twitter: 'r31gN',
     },
     {
       name: 'Ancuta Indrei',
       img: 'ancuta-indrei.jpg',
-      role: 'Old Hero',
+      role: 'Retired Hero',
       twitter: 'ancutaindrei',
     },
     {
       name: 'Tudor Gergely',
       img: 'tudor-gergely.jpg',
-      role: 'Old Hero',
+      role: 'Retired Hero',
       twitter: 'tudorgegely',
     },
     {
       name: 'Romeo Fati',
       img: 'romeo-fati.jpg',
-      role: 'Old Hero',
+      role: 'Retired Hero',
       twitter: '',
     },
   ],
