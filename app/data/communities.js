@@ -79,4 +79,14 @@ module.exports = [
     img: 'logo_londonnode.png',
     href: 'https://www.meetup.com/LNM-London-Node-JS-Meetup/',
   },
+  {
+    title: 'CopenhagenJS',
+    img: 'logo_copenhagen_js.png',
+    href: 'http://copenhagenjs.dk/',
+  },
+  {
+    title: 'Hackages',
+    img: 'logo_hackages.jpg',
+    href: 'https://hackages.io/',
+  },
 ];
