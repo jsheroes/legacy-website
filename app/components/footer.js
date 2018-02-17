@@ -26,21 +26,14 @@ const Footer = () => (
           </a>
         </div>
         <div>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdPSo4Zy_M78PHRVFz90v1_SV3IqRcyhvgK2oCDY6ju6NDWeA/viewform?usp=sf_link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Become a Speaker
-          </a>
+          <Link href="/code-of-conduct">
+            <a>Code of Conduct</a>
+          </Link>
         </div>
         <div>
-          <a
-            href="/code-of-conduct"
-          >
-            Code of Conduct
-          </a>
-
+          <Link href="/adopt-a-jser">
+            <a>Adopt a JSer</a>
+          </Link>
         </div>
       </div>
       <div className="col-md-3 col-sm-4">
@@ -72,8 +65,10 @@ const Footer = () => (
     </div>
     <div className="row copyright">
       <div className="col-sm-6"><i className="fa fa-copyright" aria-hidden="true" /> 2018 · JSHeroes. All rights reserved.</div>
-      <div className="col-sm-6">Made with <i className="fa fa-heart" aria-hidden="true" /> by Cluj JavaScripters Community.</div>
+      <div className="col-sm-6">Made with <i className="fa fa-heart" aria-hidden="true" /> by <span className="sticky-words">Cluj JavaScripters Community.</span></div>
     </div>
+
+    {/* language=CSS */}
     <style jsx>{`
       footer {
         color: white;
@@ -118,7 +113,6 @@ const Footer = () => (
       }
 
       @media (max-width: ${mediaQueries.S} ) {
-
         footer {
           text-align: center;
         }
@@ -136,6 +130,9 @@ const Footer = () => (
 
         .social i {
           font-size: 27px;
+        }
+        .col-md-3 div {
+          margin: 15px 0;
         }
       }
 
