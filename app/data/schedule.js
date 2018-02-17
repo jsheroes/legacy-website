@@ -56,19 +56,19 @@ export default [
         time: '09:30 - 10:00',
       },
       {
-        speakerRef: 'kristijan-ristovski',
+        speakerRef: 'dominik-kundel',
         time: '10:00 - 10:30',
       },
       {
-        speakerRef: 'nir-kaufman',
+        speakerRef: 'mashhood-rastgar',
         time: '11:00 - 11:30',
       },
       {
-        speakerRef: 'mashhood-rastgar',
+        speakerRef: 'nir-kaufman',
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: 'dominik-kundel',
+        speakerRef: 'kristijan-ristovski',
         time: '12:00 - 12:30',
       },
       {
