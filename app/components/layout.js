@@ -36,7 +36,7 @@ const Layout = props => (
       <meta name="twitter:site" content="@jsheroes" />
       <meta name="twitter:title" content="Your JSHeroes 2018 Conference Info" />
       <meta name="twitter:description" content="Check the latest updates and join us in April 2018 in Cluj Napoca, Romania!" />
-      <meta name="twitter:image" content="http://www.jsheroes.io/static/img/banners/video-cover.png" />
+      <meta name="twitter:image" content="http://www.jsheroes.io/static/img/video-cover.png" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@jsheroes" />
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86169211-2" />
