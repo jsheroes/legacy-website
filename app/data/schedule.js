@@ -15,23 +15,28 @@ export default [
         room: 'Room: TBA',
       },
       {
-        speakerRef: 'brent-vatne',
-        time: '14:00 - 18:00',
-        room: 'Room: TBA',
-      },
-      {
         speakerRef: 'bogdan-luca',
         time: '09:00 - 13:00',
         room: 'Room: TBA',
       },
       {
-        speakerRef: 'marianna-etelson',
+        speakerRef: ['luke-walczak', 'raul-gomez-acuna'],
+        time: '09:00 - 13:00',
+        room: 'Room: TBA',
+      },
+      {
+        speakerRef: 'brent-vatne',
         time: '14:00 - 18:00',
         room: 'Room: TBA',
       },
       {
         speakerRef: 'nir-kaufman',
-        time: '09:00 - 13:00',
+        time: '14:00 - 18:00',
+        room: 'Room: TBA',
+      },
+      {
+        speakerRef: 'marianna-etelson',
+        time: '14:00 - 18:00',
         room: 'Room: TBA',
       },
     ],
@@ -51,19 +56,19 @@ export default [
         time: '09:30 - 10:00',
       },
       {
-        speakerRef: 'kristijan-ristovski',
+        speakerRef: 'dominik-kundel',
         time: '10:00 - 10:30',
       },
       {
-        speakerRef: 'nir-kaufman',
+        speakerRef: 'mashhood-rastgar',
         time: '11:00 - 11:30',
       },
       {
-        speakerRef: 'mashhood-rastgar',
+        speakerRef: 'nir-kaufman',
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: 'dominik-kundel',
+        speakerRef: 'kristijan-ristovski',
         time: '12:00 - 12:30',
       },
       {

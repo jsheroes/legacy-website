@@ -39,4 +39,9 @@ module.exports = [
     img: 'logo_builderx.png',
     href: 'https://builderx.io/',
   },
+  {
+    title: 'Mozilla',
+    img: 'logo_mozilla.png',
+    href: 'https://www.mozilla.org/en-US/',
+  },
 ];

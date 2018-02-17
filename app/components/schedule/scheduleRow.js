@@ -8,9 +8,17 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
     return '';
   }
 
-  const speaker = speakers.find(s => s.permalink === agendaItem.speakerRef);
+  const singleSpeaker = typeof agendaItem.speakerRef === 'string';
 
-  if (!speaker) { // TBA in agenda
+  const firstSpeaker = singleSpeaker ?
+    speakers.find(s => s.permalink === agendaItem.speakerRef) :
+    speakers.find(s => s.permalink === agendaItem.speakerRef[0]);
+
+  const secondSpeaker = singleSpeaker ?
+    null :
+    speakers.find(s => s.permalink === agendaItem.speakerRef[1]);
+
+  if (!firstSpeaker) { // TBA in agenda
     return (
       <div key={agendaItem.time} className="activity-row clearfix">
         <div className="activity-details">
@@ -63,13 +71,13 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
   }
 
   const isWorkshopTab = activeTab === 0;
-  const activity = isWorkshopTab ? speaker.workshop : speaker.talk;
+  const activity = isWorkshopTab ? firstSpeaker.workshop : firstSpeaker.talk;
   const titleAs = isWorkshopTab ?
-    `/workshops/${speaker.workshop.permalink}` :
-    `/speakers/${speaker.permalink}`;
+    `/workshops/${firstSpeaker.workshop.permalink}` :
+    `/speakers/${firstSpeaker.permalink}`;
   const titleLink = isWorkshopTab ?
-    `/workshops?name=${speaker.workshop.permalink}` :
-    `/speakers?name=${speaker.permalink}`;
+    `/workshops?name=${firstSpeaker.workshop.permalink}` :
+    `/speakers?name=${firstSpeaker.permalink}`;
 
   return (
     <div key={activity.title}className="activity-row clearfix">
@@ -80,17 +88,32 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
           </Link>
         </div>
         <div>
-          <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
+          <Link href={`/speakers?name=${firstSpeaker.permalink}`} as={`/speakers/${firstSpeaker.permalink}`}>
             <a
               className="speaker-name"
-              onMouseEnter={() => { Router.prefetch(`/speakers?name=${speaker.permalink}`); }}
+              onMouseEnter={() => { Router.prefetch(`/speakers?name=${firstSpeaker.permalink}`); }}
             >
-              {speaker.fullName}
+              {firstSpeaker.fullName}
             </a>
           </Link>
-          <span className="speaker-position">, { speaker.position }</span>
-          { speaker.company && (<span className="speaker-company">{ speaker.company }</span>) }
+          <span className="speaker-position">, { firstSpeaker.position }</span>
+          { firstSpeaker.company && (<span className="speaker-company">{ firstSpeaker.company }</span>) }
         </div>
+        { secondSpeaker && (
+          <div>
+            <Link href={`/speakers?name=${secondSpeaker.permalink}`} as={`/speakers/${secondSpeaker.permalink}`}>
+              <a
+                className="speaker-name"
+                onMouseEnter={() => { Router.prefetch(`/speakers?name=${secondSpeaker.permalink}`); }}
+              >
+                {secondSpeaker.fullName}
+              </a>
+            </Link>
+            <span className="speaker-position">, { secondSpeaker.position }</span>
+            { secondSpeaker.company && (<span className="speaker-company">{ secondSpeaker.company }</span>) }
+          </div>
+        ) }
+
       </div>
       <div className="activity-location">
         <div className="room-and-time">
@@ -99,9 +122,16 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
         </div>
         <div className="speaker-image">
           <img
-            src={`static/img/speakers/${speaker.img}`}
-            alt={speaker.fullName}
+            src={`static/img/speakers/${firstSpeaker.img}`}
+            alt={firstSpeaker.fullName}
           />
+          { secondSpeaker && (
+            <img
+              className="second-image"
+              src={`static/img/speakers/${secondSpeaker.img}`}
+              alt={secondSpeaker.fullName}
+            />
+          ) }
         </div>
       </div>
       <style jsx>{`
@@ -120,6 +150,10 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
 
         .activity-title a {
           color: ${styles.mainColor3}
+        }
+
+        .second-image {
+          margin-left: 10px;
         }
 
         .speaker-name {
