@@ -47,7 +47,7 @@ const AdoptAJSer = () => (
           <div className="img-wrapper">
             <img src="/static/img/adopt_a_jser.jpg" alt="Adopt a JavaScripter" />
           </div>
-          <RawHtml className1="w-max-width w-mt-30" className="p-mb-30" content={contest} />
+          <RawHtml wrapperClassName="w-max-width w-mt-30" className="p-mb-30" content={contest} />
         </div>
       </div> */}
 
@@ -66,7 +66,7 @@ const AdoptAJSer = () => (
           margin-top: 30px;
         }
 
-        a {
+        .main-box-wrapper a {
           text-decoration: none;
           margin: 0 30px;
         }

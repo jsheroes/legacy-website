@@ -1,9 +1,9 @@
 module.exports = {
   couchSurfing:
-    `<p>If you want to be &quot;adopted&quot; by one of our Cluj Javascripters during the <strong>JSHeroes conference</strong>, you can use our<br />&quot;Adopt a Javascripter&quot; couch-surfing program.</p>
-    <p>We will pair you up with a <strong>Host</strong> or a <strong>Guest</strong> that we think is ok for you, according to the info you filled in the application forms.<br />Apply below if you want to be a Guest, or if you are from Cluj-Napoca apply to be a Host.</p>`,
+    `<p>If you want to be &quot;adopted&quot; by one of our <span class="sticky-words">Cluj Javascripters</span> during the <span class="sticky-words"><strong>JSHeroes conference</strong></span>, you can use our <span class="sticky-words">&quot;Adopt a Javascripter&quot;</span> <span class="sticky-words">couch-surfing program.</span></p>
+    <p>We will pair you up with a <strong>Host</strong> or a <strong>Guest</strong> that we think is ok for you, according to the info you filled in the application forms.<br />Apply below if you want to be a Guest, or if you are from <span class="sticky-words">Cluj-Napoca</span> apply to be a Host.</p>`,
   contest:
-    `<p>Are you participating in the &quot;Adopt a Javascripter&quot; couch-surfing program?<br />Then enter the JSHeroes photo contest for a chance to win <strong>2 free tickets</strong> to the 2019 JSHeroes conference.</p>
+    `<p>Are you participating in the <span class="sticky-words">&quot;Adopt a Javascripter&quot;</span> <span class="sticky-words">couch-surfing program?</span><br />Then enter the <span class="sticky-words">JSHeroes photo contest</span> for a chance to win <span class="sticky-words"><strong>2 free tickets</strong></span> to the <span class="sticky-words">2019 JSHeroes conference.</span></p>
     <p>How does the contest work?</p>
     <p>Take a photo with you and your Host or Guest when you meet him/her.<br />
       Then post it on Twitter with the hashtag <strong>#adoptajavascripter.</strong><br />

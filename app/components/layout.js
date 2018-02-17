@@ -113,7 +113,9 @@ const Layout = props => (
         line-height: 60px;
         text-decoration: none;
       }
-
+      .sticky-words {
+        white-space: nowrap;
+      }
     `}</style>
   </div>
 );

@@ -15,16 +15,16 @@ const Updates = () => (
       <p>If PayPal is not your preferred payment method, you can also pay by invoice. Drop us a line at <a href="mailto:contact@jsheroes.io">contact@jsheroes.io</a> with your request, we’d be happy to help.</p>
       <strong>Adopt a Javascripter</strong>
 
-      <p>If you want to be &quot;adopted&quot; by one of our Cluj Javascripters during the JSHeroes conference, you can use our
-        <br />
+      <p>If you want to be &quot;adopted&quot; by one of our <span className="sticky-words">Cluj Javascripters</span> during the <span className="sticky-words">JSHeroes conference</span>, you can use our&nbsp;
         <Link href="/adopt-a-jser">
           <a title="Adopt a Javascripter couch-surfing program">
-            Adopt a Javascripter couch-surfing program
+            <span className="sticky-words">Adopt a Javascripter</span> <span className="sticky-words">couch-surfing program</span>
           </a>
         </Link>.
       </p>
     </div>
 
+    {/* language=CSS */}
     <style jsx>{`
         ul li {
           list-style-type: none;

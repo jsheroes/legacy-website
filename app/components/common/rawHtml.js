@@ -1,5 +1,5 @@
-const RawHtml = ({ content, className, className1 }) => (
-  <div className={className1}>
+const RawHtml = ({ content, className, wrapperClassName }) => (
+  <div className={wrapperClassName}>
     <div className={`content ${className || ''}`} dangerouslySetInnerHTML={{ __html: content }} />
 
     {/* language=CSS */}

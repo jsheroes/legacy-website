@@ -25,15 +25,6 @@ const Footer = () => (
             Buy Your Ticket
           </a>
         </div>
-        {/* <div>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdPSo4Zy_M78PHRVFz90v1_SV3IqRcyhvgK2oCDY6ju6NDWeA/viewform?usp=sf_link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Become a Speaker
-          </a>
-        </div> */}
         <div>
           <Link href="/code-of-conduct">
             <a>Code of Conduct</a>
@@ -74,7 +65,7 @@ const Footer = () => (
     </div>
     <div className="row copyright">
       <div className="col-sm-6"><i className="fa fa-copyright" aria-hidden="true" /> 2018 · JSHeroes. All rights reserved.</div>
-      <div className="col-sm-6">Made with <i className="fa fa-heart" aria-hidden="true" /> by Cluj JavaScripters Community.</div>
+      <div className="col-sm-6">Made with <i className="fa fa-heart" aria-hidden="true" /> by <span className="sticky-words">Cluj JavaScripters Community.</span></div>
     </div>
 
     {/* language=CSS */}
