@@ -130,8 +130,8 @@ module.exports = [
     website: 'https://blog.expo.io',
     description: 'Developer at Expo, core contributor to React Native. Spare time is spent traveling and playing with <a target="_blank" href="https://www.instagram.com/explore/tags/lucythetri">#lucythetri</a>.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'Reasons to give React Native a(nother) try',
+      description: 'When a highly hyped new tool is released, many users end up disappointed that it doesn’t handle their use case easily or that it isn’t as polished as they expected. Others don’t bother because the documentation isn’t good enough and there aren’t enough learning resources. If the project survives, then over time developers will chip away at these problems, but it’s often hard to convince people to shake their initial impression. React Native is no different from other tools in this regard, so I want to present a few reasons why you might want to give React Native a(nother) try now, nearly three years since its initial release.',
       message: '',
     },
     workshop: {
