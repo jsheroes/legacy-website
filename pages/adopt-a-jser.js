@@ -6,7 +6,7 @@ import AdoptAJSerHero from '../app/components/adopt-a-jser-hero';
 import RawHtml from '../app/components/common/rawHtml';
 
 import { styles, mediaQueries, beAHostLink, beAGuestLink } from '../app/constants';
-import { couchSurfing , contest } from '../app/data/adopt-a-jser';
+import { couchSurfing, contest } from '../app/data/adopt-a-jser';
 
 const AdoptAJSer = () => (
   <Layout page="adopt-a-jser">
