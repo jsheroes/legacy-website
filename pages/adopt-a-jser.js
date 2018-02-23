@@ -6,7 +6,7 @@ import AdoptAJSerHero from '../app/components/adopt-a-jser-hero';
 import RawHtml from '../app/components/common/rawHtml';
 
 import { styles, mediaQueries, beAHostLink, beAGuestLink } from '../app/constants';
-import { couchSurfing /* , contest */ } from '../app/data/adopt-a-jser';
+import { couchSurfing, contest } from '../app/data/adopt-a-jser';
 
 const AdoptAJSer = () => (
   <Layout page="adopt-a-jser">
@@ -39,7 +39,7 @@ const AdoptAJSer = () => (
         </div>
       </div>
 
-      {/* <div className="contest-description">
+      <div className="contest-description">
         <h3>JSHeroes</h3>
         <h3>PHOTO <span>CONTEST</span></h3>
 
@@ -49,7 +49,7 @@ const AdoptAJSer = () => (
           </div>
           <RawHtml wrapperClassName="w-max-width w-mt-30" className="p-mb-30" content={contest} />
         </div>
-      </div> */}
+      </div>
 
       {/* language=CSS */}
       <style jsx>{`
