@@ -49,4 +49,10 @@ module.exports = [
     img: 'logo_npm.png',
     href: 'https://www.npmjs.com/',
   },
+
+  {
+    title: 'Mercedes RMB',
+    img: 'logo_rmb.jpg',
+    href: 'https://www.rmbinterauto.mercedes-benz.ro/ro/desktop/home.html',
+  },
 ];
