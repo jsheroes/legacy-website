@@ -6,8 +6,7 @@ module.exports = {
     `<p>Are you a Guest participating in the <span class="sticky-words">&quot;Adopt a Javascripter&quot;</span> <span class="sticky-words">couch-surfing program?</span><br />Enter the <span class="sticky-words">JSHeroes photo contest</span> for a chance to win <span class="sticky-words"><strong>2 free tickets</strong></span> to the <span class="sticky-words">2019 JSHeroes conference.</span></p>
     <p>How does the contest work?</p>
     <p>Take a photo with you and your Host.<br />
-      Post it on Twitter with the hashtag <strong>#adoptajavascripter</strong><br />
-      until April 20, 2018.<br />
-      The winner will be selected randomly using random.org.</p>
+      Post it on Twitter with the hashtag <strong>#adoptajavascripter</strong> until April 20, 2018.<br />
+      The winner will be selected randomly, so you and your Host have a chance to receive the 2 tickets to next years’ JSHeroes Conference.</p>
     <p>Pretty simple!</p>`,
 };
