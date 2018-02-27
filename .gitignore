@@ -6,3 +6,6 @@ npm-debug.log
 node_modules
 app/data/speakers.hidden.js
 static/img/speakers.hidden/
+static/.DS_Store
+static/img/.DS_Store
+static/img/technologies/.DS_Store
