@@ -846,4 +846,35 @@ module.exports = [
     previousTalks: [],
     otherTalks: [],
   },
+  {
+    name: 'cornel',
+    fullName: 'Cornel Cozar',
+    permalink: 'cornel-cozar',
+    firstName: 'Cornel',
+    reference: 'him',
+    position: 'Co-founder',
+    company: 'Moqups!',
+    img: 'cornel.jpg',
+    twitter: null,
+    github: null,
+    website: 'https://moqups.com',
+    description: '38, I love servers, financials, and being a dad :)',
+    talk: null,
+    workshop: {
+      title: 'Setting up a Nodejs Application for Production',
+      type: 'Half-Day Workshop',
+      permalink: 'nodejs',
+      logo: 'nodejs.png',
+      description: `
+      <p>Node.js applications can be run at the command line, but we'll focus on running them as a service, so that they will automatically restart on reboot or failure, and can safely be used in a production environment. We will cover setting up a secure production-ready Node.js environment with failover on multi Ubuntu 16.04 server.</p><p>The servers will run a Node.js application that will provide users with secure access to the application through a Nginx reverse proxy. The Nginx server will offer HTTPS, using a free certificate provided by Let's Encrypt.</p>  
+      `,
+      prerequisites: `
+        <p>Basic Linux knowledge</p>
+      `,
+      seats: 25,
+      socialMedia: 'Wanna know how to set up a Nodejs app for production? Join this workshop!',
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
 ];
