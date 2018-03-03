@@ -41,7 +41,7 @@ class Updates extends Component {
     const news = newsData.map((item, index) => {
       const activeCss = index === this.state.activeNews ? 'active-news' : 'news-item';
       return (
-        <li className={activeCss} onClick={() => this.setState({ activeNews: index })}>
+        <li className={activeCss} onClick={() => this.setState({ activeNews: index })} key={item.title}>
           <strong>{ item.title }</strong>
         </li>
       );
@@ -93,7 +93,7 @@ class Updates extends Component {
             height: 0; 
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
-            border-top: 10px solid grey;
+            border-top: 10px solid lightgray;
             bottom: -20px;
             left: 40%;
             position: absolute;
@@ -135,7 +135,7 @@ class Updates extends Component {
             color: black;
             display: inline-block;
             text-decoration: none;
-            border-bottom: 1px solid lightgrey;
+            border-bottom: 1px solid lightgray;
           }
 
           .active-news::before {
@@ -143,7 +143,7 @@ class Updates extends Component {
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
-            border-top: 10px solid grey;
+            border-top: 10px solid lightgray;
             bottom: -10px;
             left: 40%;
             position: absolute;
