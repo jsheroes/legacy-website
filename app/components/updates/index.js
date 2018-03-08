@@ -42,6 +42,14 @@ class Updates extends Component {
           font-weight: bold;
         }
 
+        .wrapper li {
+          cursor: pointer;
+        }
+
+        .wrapper li:hover {
+          color: black;
+        }
+
         .wrapper h1 {
           margin: 50px 0;
           color: #0098ff;
