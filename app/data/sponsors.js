@@ -44,4 +44,9 @@ module.exports = [
     img: 'logo_mozilla.png',
     href: 'https://www.mozilla.org/en-US/',
   },
+  {
+    title: 'Bloq',
+    img: 'logo_bloq.png',
+    href: 'http://bloqspace.io/',
+  },
 ];
