@@ -521,6 +521,7 @@ module.exports = [
         <p>Having a declarative (as opposed to imperative) mindset and experience with React or Angular is a plus, looking into the official Vue.js documentation before the workshop is recommended.</p>
       `,
       seats: 30,
+      soldOut: true,
       socialMedia: 'Get ready to learn more about Vue.js! Participate to a half-day workshop with Bogdan Luca, explore basic concepts of Vue.js all while developing a web app to manage your finances.',
     },
     previousTalks: [],
