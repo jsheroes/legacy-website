@@ -432,6 +432,7 @@ module.exports = [
         <p>Basic Javascript, knowledge about Node & React is a plus</p>
       `,
       seats: 25,
+      soldOut: true,
       socialMedia: `Get ready to learn more about GraphQL! Participate to a full-day workshop with Xavier Cazalot, get one-on-one guidance through the process of building an app feature.
       `,
     },

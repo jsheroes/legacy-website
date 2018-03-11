@@ -72,6 +72,7 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
 
   const isWorkshopTab = activeTab === 0;
   const activity = isWorkshopTab ? firstSpeaker.workshop : firstSpeaker.talk;
+  const activityTitle = activity.soldOut ? `${activity.title} ( SOLD OUT )` : activity.title;
   const titleAs = isWorkshopTab ?
     `/workshops/${firstSpeaker.workshop.permalink}` :
     `/speakers/${firstSpeaker.permalink}`;
@@ -84,7 +85,7 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
       <div className="activity-details">
         <div className="activity-title">
           <Link href={titleLink} as={titleAs}>
-            <a onMouseEnter={() => { Router.prefetch(titleLink); }}>{ activity.title }</a>
+            <a onMouseEnter={() => { Router.prefetch(titleLink); }}>{ activityTitle }</a>
           </Link>
         </div>
         <div>
@@ -150,6 +151,10 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
 
         .activity-title a {
           color: ${styles.mainColor3}
+        }
+
+        .red {
+          color: tomato;
         }
 
         .second-image {
