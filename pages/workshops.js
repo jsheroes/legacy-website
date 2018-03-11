@@ -14,6 +14,8 @@ const Workshop = ({ speakers }) => {
 
   const { workshop } = firstSpeaker;
 
+  const workshopTitle = workshop.soldOut ? `${workshop.title} ( SOLD OUT )` : workshop.title;
+
   const secondSpeakerAddition = secondSpeaker ? ` and ${secondSpeaker.fullName}` : '';
   const seoTitle = `${workshop.title} by ${firstSpeaker.fullName}${secondSpeakerAddition}`;
 
@@ -43,7 +45,7 @@ const Workshop = ({ speakers }) => {
             alt={workshop.title}
           />
           <div className="workshop-title">
-            <h1>{ workshop.title }</h1>
+            <h1>{ workshopTitle }</h1>
             <span>by: <strong>
               <Link href={`/speakers?name=${firstSpeaker.permalink}`} as={`/speakers/${firstSpeaker.permalink}`}>
                 <a onMouseEnter={() => { Router.prefetch(`/speakers?name=${firstSpeaker.permalink}`); }}>{ firstSpeaker.fullName }</a>
