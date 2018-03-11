@@ -153,7 +153,7 @@ export default [
       },
       {
         speakerRef: 'jeffrey-lembeck',
-        time: '16:30 - 17:00',
+        time: '17:00 - 17:30',
       },
     ],
   },
