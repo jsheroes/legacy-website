@@ -18,9 +18,9 @@ module.exports = [
   },
   {
     title: 'Adopt a Javascripter',
-    content: `If you want to be &quot;adopted&quot; by one of our <span className="sticky-words">Cluj Javascripters</span> during the <span className="sticky-words">JSHeroes conference</span>, you can use our&nbsp;
+    content: `If you want to be &quot;adopted&quot; by one of our <span class="sticky-words">Cluj Javascripters</span> during the <span class="sticky-words">JSHeroes conference</span>, you can use our&nbsp;
         <a title="Adopt a Javascripter couch-surfing program" href="/adopt-a-jser">
-          <span className="sticky-words">Adopt a Javascripter</span> <span className="sticky-words">couch-surfing program</span>
+          <span class="sticky-words">Adopt a Javascripter</span> <span class="sticky-words">couch-surfing program</span>
         </a>`,
   },
 ];

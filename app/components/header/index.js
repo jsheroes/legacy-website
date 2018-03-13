@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
-
 import Section from '../../components/common/section';
 import { mediaQueries } from '../../constants';
 
@@ -137,8 +136,8 @@ class Header extends Component {
           section={{ style: heroBcgImg }}
           mainContainer={{ style: heroDarkOverlay }}
         >
-          <ScrollableAnchor id={'home'}>
-            <div className="header">
+          <ScrollableAnchor id={'hero'}>
+            <div className="header-wrapper">
               { media }
               <div className="headOverlay" />
 
@@ -178,6 +177,10 @@ class Header extends Component {
           }
           .logoHeroes {
             color: #e1ebef;
+          }
+          .header-wrapper {
+            width: inherit;
+            height: inherit;
           }
           .header-container {
             position: absolute;

@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { goToAnchor } from 'react-scrollable-anchor';
 import { styles } from '../constants';
 
 class ScrollBtn extends Component {
@@ -33,10 +34,11 @@ class ScrollBtn extends Component {
   render() {
     return (
       <div className={`back-top ${this.state.show ? 'show' : ''}`}>
-        <a href="#top-section">
+        <div className="go-to-anchor" onClick={() => goToAnchor('hero')}>
           <i className="fa fa-angle-up" />
-        </a>
+        </div>
 
+        {/* language=CSS */}
         <style jsx>{`
           .back-top {
             display: block;
@@ -47,30 +49,30 @@ class ScrollBtn extends Component {
             height: 52px;
             z-index: 3;
           }
-          
-          a {
+
+          .go-to-anchor {
             display: block;
-            width: 52px;
-            height: 52px;
+            width: inherit;
+            height: inherit;
             line-height: 52px;
             font-size: 31px;
             background: #000;
             color: ${styles.mainColor3};
             text-align: center;
-            text-decoration: none;
+            border: 1px solid transparent;
+            border-radius: 2px;
             visibility: hidden;
             opacity: 0;
             transition: all .4s;
           }
-          
-          .back-top a:hover {
-            opacity: .57;
+
+          .back-top .go-to-anchor:hover {
+            cursor: pointer;
+            background: ${styles.mainColor4};
             color: ${styles.mainColor5};
             fill: ${styles.mainColor5};
-            text-decoration: none;
-            outline: 0;
           }
-          
+
            i {
             display: inline-block;
             font: normal normal normal 14px/1 FontAwesome;
@@ -78,8 +80,8 @@ class ScrollBtn extends Component {
             text-rendering: auto;
             -webkit-font-smoothing: antialiased;
           }
-          
-          .show a {
+
+          .show .go-to-anchor {
             visibility: visible;
             opacity: 1;
           }

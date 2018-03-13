@@ -7,7 +7,7 @@ import Nav from '../components/nav';
 import Footer from '../components/footer';
 import { styles } from '../constants';
 
-configureAnchors({ offset: 0, scrollDuration: 1000 });
+configureAnchors({ offset: 0, scrollDuration: 1000});
 
 const Layout = props => (
   <div className="big-wrapper">
