@@ -766,7 +766,9 @@ module.exports = [
     github: 'https://www.github.com/philhawksworth',
     twitter: 'https://www.twitter.com/philhawksworth',
     website: 'https://www.hawksworx.com',
-    description: 'With a long history in web development, and a passion for browser technologies, Phil loves seeking out ingenuity and simplicity, especially in places where over-engineering is common. You can usually find him banging on about that, and his attempts at standup comedy on Twitter.',
+    description: `<p>Phil works in Developer Relations at Netlify, the fastest growing automation and hosting platform for modern websites.</p>
+    <p>With a passion for browser technologies, and the empowering properties of the Web, he loves seeking out ingenuity and simplicity, especially in places where over-engineering is common.</p>
+    <p>Phil’s career in web development spans almost 20 years and includes time as a Software Engineer at Verisign, an Open Source Evangelist at British Telecom, and Technology Director at R/GA where he worked with clients around the world such as Nike, Google, Hyundai and Samsung to bring engaging and effective experiences to the widest audience possible.</p>`,
     talk: {
       title: 'Serving for the win - Deployments and hosting for the rest of us',
       description: `
