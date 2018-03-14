@@ -59,4 +59,9 @@ module.exports = [
     img: 'logo_netlify.svg',
     href: 'https://www.netlify.com',
   },
+  {
+    title: 'Urby App',
+    img: 'logo_urby.png',
+    href: 'https://urbyapp.com',
+  },
 ];
