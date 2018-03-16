@@ -10,7 +10,8 @@ module.exports = [
   },
   {
     title: 'Volunteers',
-    content: 'Passionate community members: Join the JSHeroes organizing crew! Get in touch and let us know what you’d like to contribute with.',
+    content: `Passionate community members: 
+        <a title="Join the JSHeroes organizing crew!" href="http://bit.ly/call-for-volunteers" target="_blank" rel="noreferrer noopener"><span class="sticky-words">Join the JSHeroes organizing crew!</span></a> Get in touch and let us know what you’d like to contribute with.`,
   },
   {
     title: 'Tickets',
