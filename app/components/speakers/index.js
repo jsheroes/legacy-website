@@ -75,7 +75,9 @@ class Speakers extends Component {
 
         <style jsx>{`
           .speakers-section {
-            margin: 30px 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            // margin: 30px 0;
           }
 
           .speakers-section .section-header {
@@ -135,7 +137,7 @@ class Speakers extends Component {
               line-height: 32px;
               margin-bottom: 40px;
             }
-          }  
+          }
 
           .speaker-boxes {
             display: flex;

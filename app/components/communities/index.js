@@ -1,3 +1,4 @@
+import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../../components/common/section';
 import { styles, mediaQueries } from '../../constants';
 import communities from '../../data/communities';
@@ -5,30 +6,32 @@ import Community from './community';
 
 const Communities = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
-    <div>
-      <h2>
-        We
-        <span> <i className="fa fa-heart fa-1x" aria-hidden="true" /> </span>
-        Communities
-      </h2>
-      <p>
-        These JavaScript communities support us by offering their advice,
-        promoting the event, participating in the Call for Speakers,
-        fundraising and by having a natural collaborative approach.
-      </p>
-      <ul>
-        { communities.map(community => (
-          <Community {...community} key={community.title} />
-        )) }
-      </ul>
-      <p>
-        <strong>#humansofjavascript</strong>
-      </p>
-    </div>
+    <ScrollableAnchor id={'communities'}>
+      <div>
+        <h2>
+          We
+          <span> <i className="fa fa-heart fa-1x" aria-hidden="true" /> </span>
+          Communities
+        </h2>
+        <p>
+          These JavaScript communities support us by offering their advice,
+          promoting the event, participating in the Call for Speakers,
+          fundraising and by having a natural collaborative approach.
+        </p>
+        <ul>
+          { communities.map(community => (
+            <Community {...community} key={community.title} />
+          )) }
+        </ul>
+        <p>
+          <strong>#humansofjavascript</strong>
+        </p>
+      </div>
+    </ScrollableAnchor>
 
     <style jsx>{`
       div {
-        padding: 60px 0 140px;
+        padding: 140px 0 140px;
       }
 
       h2 {
@@ -65,11 +68,11 @@ const Communities = () => (
         div {
           padding: 90px 0 90px;
         }
-        
+
         h2 {
           font-size: 46px;
         }
-        
+
         p {
           font-size: 17px;
           line-height: 30px;
@@ -80,16 +83,16 @@ const Communities = () => (
         div {
           padding: 60px 0 80px;
         }
-        
+
         h2 {
           font-size: 43px;
         }
-        
+
         p {
           font-size: 18px;
           line-height: 32px;
         }
-        
+
         ul {
           margin-top: 30px;
         }
@@ -99,11 +102,11 @@ const Communities = () => (
         div {
           padding: 55px 0 80px;
         }
-        
+
         h2 {
           font-size: 33px;
         }
-        
+
         p {
           font-size: 16px;
           line-height: 28px;

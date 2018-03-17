@@ -1,3 +1,4 @@
+import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../../components/common/section';
 import { styles, mediaQueries } from '../../constants';
 import partners from '../../data/partners';
@@ -5,15 +6,17 @@ import Partner from './partner';
 
 const Partners = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
-    <div>
-      <h2>and Partners</h2>
-      <p>
-        Who give us a helping hand for our mission to go smoothly:
-      </p>
-      <ul>
-        { partners.map(partner => <Partner {...partner} key={partner.title} />) }
-      </ul>
-    </div>
+    <ScrollableAnchor id={'partners'}>
+      <div>
+        <h2>and Partners</h2>
+        <p>
+          Who give us a helping hand for our mission to go smoothly:
+        </p>
+        <ul>
+          { partners.map(partner => <Partner {...partner} key={partner.title} />) }
+        </ul>
+      </div>
+    </ScrollableAnchor>
 
     <style jsx>{`
       div {
@@ -48,11 +51,11 @@ const Partners = () => (
         div {
           padding: 90px 0 0;
         }
-        
+
         h2 {
           font-size: 46px;
         }
-        
+
         p {
           font-size: 17px;
           line-height: 30px;
@@ -63,11 +66,11 @@ const Partners = () => (
         div {
           padding: 70px 0 0;
         }
-        
+
         h2 {
           font-size: 43px;
         }
-        
+
         p {
           font-size: 18px;
           line-height: 32px;
@@ -78,11 +81,11 @@ const Partners = () => (
         div {
           padding: 80px 0 0;
         }
-        
+
         h2 {
           font-size: 33px;
         }
-        
+
         p {
           font-size: 16px;
           line-height: 28px;
