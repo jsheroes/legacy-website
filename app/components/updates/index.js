@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../../components/common/section';
 import news from '../../data/news';
 
@@ -14,7 +15,11 @@ class Updates extends Component {
     const newsData = news.map((item, index) => {
       const activeCss = index === this.state.activeNews ? 'active-news' : 'news-item';
       return (
-        <li className={activeCss} onClick={() => this.setState({ activeNews: index })} key={item.title}>
+        <li
+          className={activeCss}
+          onClick={() => this.setState({ activeNews: index })}
+          key={item.title}
+        >
           <strong>{ item.title }</strong>
         </li>
       );
@@ -22,16 +27,21 @@ class Updates extends Component {
     const content = news[this.state.activeNews].content;
     return (
       <Section>
-        <div className="wrapper">
-          <h1>News</h1>
-          <ul>
-            { newsData }
-          </ul>
-          <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
-        </div>
+        <ScrollableAnchor id={'news'}>
+          <div className="wrapper">
+            <h1>News</h1>
+            <ul>
+              { newsData }
+            </ul>
+            <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
+          </div>
+        </ScrollableAnchor>
+
+        {/* language=CSS */}
         <style jsx global >{`
         .wrapper {
-          margin: 100px auto;
+          padding-top: 140px;
+          padding-bottom: 100px;
           text-align: center;
           max-width: 1100px;
         }
@@ -51,8 +61,12 @@ class Updates extends Component {
         }
 
         .wrapper h1 {
-          margin: 50px 0;
+          margin: 0 0 50px;
           color: #0098ff;
+        }
+
+        .wrapper a {
+          text-decoration: none;
         }
 
         @media( min-width: 601px ) {
@@ -70,8 +84,8 @@ class Updates extends Component {
             text-decoration: none;
           }
           .active-news::before {
-            width: 0; 
-            height: 0; 
+            width: 0;
+            height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-top: 10px solid lightgray;
@@ -82,8 +96,8 @@ class Updates extends Component {
             content:''
           }
           .active-news::after {
-            width: 0; 
-            height: 0; 
+            width: 0;
+            height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-top: 10px solid white;
@@ -101,15 +115,19 @@ class Updates extends Component {
         }
 
         @media(max-width: 600px ) {
-         
+          .wrapper {
+            padding-top: 80px;
+            padding-bottom: 80px;
+          }
+
           .wrapper ul {
             display: inline-block;
           }
-          
+
           .wrapper .content {
             margin-top: 20px;
           }
-      
+
           .active-news {
             padding: 10px 10px;
             position: relative;
@@ -120,7 +138,7 @@ class Updates extends Component {
           }
 
           .active-news::before {
-            width: 0; 
+            width: 0;
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
@@ -132,8 +150,8 @@ class Updates extends Component {
             content:''
           }
           .active-news::after {
-            width: 0; 
-            height: 0; 
+            width: 0;
+            height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-top: 10px solid white;

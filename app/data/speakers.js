@@ -590,9 +590,8 @@ module.exports = [
     website: 'https://reactacademy.io',
     description: 'He had the chance to work and experiment with a variety of languages and frameworks. Teaching React and Javascript at React Academy. Cares about open source, made and maintains sizzy.co, custom-react-scripts, and mobx-router.',
     talk: {
-      title: 'The RAP stack (React, Apollo, Prisma) rocks',
-      description: 'The shift to GraphQL might look scary until you start working with the RAP stack. Prisma is the easiest way to write a fully functional and scalable GraphQL server, and Apollo and React make working with the data on the client a breeze.',
-      message: 'The easiest and most practical way to start with GraphQL both on the server side and on the client side.',
+      title: 'The exciting future of React',
+      description: 'Aside from the fact that the core of React was completely rewritten, version 16 also comes with some powerful new features. We`ll see interesting and practical use-cases for error boundaries, portals, and fragments. Additionally, we`re gonna explore some experimental features like react-call-return and we`re going to see what does the future hold for React.',
     },
     workshop: null,
     previousTalks: [],

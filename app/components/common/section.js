@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import { style, mediaQueries } from '../../constants';
 
 const Section = props => (
-  <section id="top-section" style={props.section.style}>
+  <section style={props.section.style}>
     <div style={props.mainContainer.style}>
       <style jsx>{`
-      
+
         div {
           padding: 0 15px;
           margin: 0 auto;
@@ -28,7 +28,7 @@ const Section = props => (
             width: 1140px;
           }
         }
-        
+
       `}</style>
       {props.children}
     </div>
