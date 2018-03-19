@@ -89,4 +89,9 @@ module.exports = [
     img: 'logo_hackages.jpg',
     href: 'https://hackages.io/',
   },
+  {
+    title: 'IasiJS',
+    img: 'logo_iasijs.svg',
+    href: 'http://www.iasijs.com',
+  },
 ];
