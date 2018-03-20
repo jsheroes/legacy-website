@@ -64,4 +64,15 @@ module.exports = [
     img: 'logo_urby.png',
     href: 'https://urbyapp.com',
   },
+  {
+    title: 'Aqua Carpatica',
+    img: 'logo_aqua_carpatica.png',
+    href: 'https://aquacarpatica.com/',
+    className: 'smaller-logo',
+  },
+  {
+    title: 'Dev Talks',
+    img: 'logo_dev_talks.png',
+    href: 'https://aquacarpatica.com/',
+  },
 ];
