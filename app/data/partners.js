@@ -73,6 +73,6 @@ module.exports = [
   {
     title: 'Dev Talks',
     img: 'logo_dev_talks.png',
-    href: 'https://aquacarpatica.com/',
+    href: 'http://www.devtalks.ro/',
   },
 ];
