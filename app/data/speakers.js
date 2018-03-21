@@ -339,8 +339,13 @@ module.exports = [
     github: 'https://github.com/jackfranklin',
     description: 'Jack is a Frontend Engineer at Thread in London working primarily with React. In his free time, he’s usually writing or recording videos for his blog, JavaScript Playground. Jack is also the author of “Beginning jQuery” (Apress, 2012) and a regular speaker on React, Elm, JavaScript, build tools and frameworks.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'A red LEGO brick is always red: components on the web',
+      description: `
+        <p>This talk will explore the changes that have occurred in the front end space in the past few years and how we’ve aligned on the concepts of components being the key building block for frontend applications.</p>
+        <p>We’ll discuss how thinking of a web application as a tree of components, rather than discrete pages, leads to a more testable, maintainable and reliable codebase. We’ll look at how we can build predictable components, encapsulating perfectly the triumvirate of HTML, CSS and JS that can be combined to build reusable components.</p>
+        <p>Using React as our component library of choice, we’ll look at patterns that lead you down the path of reusability almost by default and how to walk the fine line between reusability and death by configuration.</p>
+        <p>Then we’ll explore the final piece of the puzzle: CSS. CSS goes against everything the componentised world stands for but its global, cascading nature can be tamed. I’ll show different approaches to combining your CSS with your components in order to fully encapsulate a component into a lovely, reusable lego brick.</p>
+      `,
       message: '',
     },
     workshop: {
@@ -694,7 +699,7 @@ module.exports = [
     website: 'vakila.github.io',
     description: 'Anjana suffers from a debilitating case of curiosity, which led her from philosophy to English teaching to computational linguistics to software development. As Engineering Learning & Development Lead at Mapbox, she can usually be found in San Francisco; that is, when she\'s not speaking at events around the world, trying to share the joy of coding and advocate for a more diverse & accessible tech industry. Ask her about the Recurse Center, Outreachy, and Mozilla!',
     talk: {
-      title: 'TBA',
+      title: 'Recursion, Iteration, and JavaScript: A Love Story',
       description: '',
       message: '',
     },
