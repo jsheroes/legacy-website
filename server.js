@@ -23,6 +23,10 @@ app
       }
     });
 
+    server.get('/code-of-conduct.html', (req, res) => {
+      res.redirect(301, '/code-of-conduct');
+    });
+
     server.get('/speakers', (req, res) => {
       res.redirect(301, '/');
     });
