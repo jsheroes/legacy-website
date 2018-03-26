@@ -65,31 +65,31 @@ export default [
         time: '10:00 - 10:30',
       },
       {
-        speakerRef: 'mashhood-rastgar',
+        speakerRef: 'monica-dinculescu',
         time: '11:00 - 11:30',
       },
       {
-        speakerRef: 'nir-kaufman',
+        speakerRef: 'mashhood-rastgar',
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: 'kristijan-ristovski',
+        speakerRef: 'stefan-judis',
         time: '12:00 - 12:30',
       },
       {
-        speakerRef: 'paul-brie',
+        speakerRef: 'kristijan-ristovski',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: 'brent-vatne',
+        speakerRef: 'paul-brie',
         time: '14:30 - 15:00',
       },
       {
-        speakerRef: 'stefan-judis',
+        speakerRef: 'brent-vatne',
         time: '15:00 - 15:30',
       },
       {
-        speakerRef: 'monica-dinculescu',
+        speakerRef: 'nir-kaufman',
         time: '16:00 - 16:30',
       },
       {
@@ -108,39 +108,39 @@ export default [
     index: 2,
     activities: [
       {
-        speakerRef: 'anjana-vakil',
+        speakerRef: 'jack-franklin',
         time: '09:00 - 09:30',
       },
       {
-        speakerRef: 'jack-franklin',
+        speakerRef: 'sara-vieira',
         time: '09:30 - 10:00',
       },
       {
-        speakerRef: 'mathias-bynens',
+        speakerRef: 'larissa-davidova',
         time: '10:00 - 10:30',
       },
       {
-        speakerRef: 'even-stensberg',
+        speakerRef: 'anjana-vakil',
         time: '11:00 - 11:30',
       },
       {
-        speakerRef: 'shagufta-gurmukhdas',
+        speakerRef: 'mathias-bynens',
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: 'ives-van-hoorne',
+        speakerRef: 'stephanie-nemeth',
         time: '12:00 - 12:30',
       },
       {
-        speakerRef: 'larissa-davidova',
+        speakerRef: 'liran-tal',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: 'sara-vieira',
+        speakerRef: 'even-stensberg',
         time: '14:30 - 15:00',
       },
       {
-        speakerRef: 'liran-tal',
+        speakerRef: 'ives-van-hoorne',
         time: '15:00 - 15:30',
       },
       {
@@ -148,7 +148,7 @@ export default [
         time: '16:00 - 16:30',
       },
       {
-        speakerRef: 'stephanie-nemeth',
+        speakerRef: 'shagufta-gurmukhdas',
         time: '16:30 - 17:00',
       },
       {
