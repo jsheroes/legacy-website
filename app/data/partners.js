@@ -75,4 +75,9 @@ module.exports = [
     img: 'logo_dev_talks.png',
     href: 'http://www.devtalks.ro/',
   },
+  {
+    title: 'MobilaDalin',
+    img: 'logo_mobila_dalin.jpg',
+    href: 'http://www.mobiladalin.ro',
+  },
 ];

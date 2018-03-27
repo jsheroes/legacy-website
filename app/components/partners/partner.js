@@ -67,6 +67,10 @@ const Partner = props => (
           margin-left: 12px;
           margin-right: 12px;
         }
+
+        a.smaller-logo {
+          width: 188px;
+        }
       }
     `}
     </style>
