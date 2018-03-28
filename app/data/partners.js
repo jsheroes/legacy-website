@@ -80,4 +80,9 @@ module.exports = [
     img: 'logo_mobila_dalin.jpg',
     href: 'http://www.mobiladalin.ro',
   },
+  {
+    title: 'mapbox',
+    img: 'logo_mapbox.png',
+    href: 'https://www.mapbox.com/',
+  },
 ];
