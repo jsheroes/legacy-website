@@ -14,11 +14,9 @@ module.exports = [
     website: '',
     description: "Mark Dalgleish is the co-creator of CSS Modules, lead organiser of MelbJS, and DesignOps Lead at SEEK, Australia's leading job site. Having got his start with HTML and UI design at a young age, Mark has since developed a love of open source and software engineering but always as a means to creating elegant, usable experiences.",
     talk: {
-      title: 'The Future of Design, as a Service',
+      title: 'Sketching in the Browser',
       description: `
-        <p>Design systems are playing an ever-increasing role in allowing us to produce world-class design at scale. However, for these systems to truly deliver on their potential, they need to be properly integrated into the rest of the organisation, speaking the same language as those building and delivering products to our end users.</p>
-        <p>As a result, we're beginning to see the rise of Design Operations ("DesignOps" for short) within companies like Salesforce, Airbnb and SEEK, with dedicated engineering resources being embedded within teams that historically would have only contained designers. By focusing developers entirely on translating a company's design language into production-ready code and monitoring its real-world effectiveness, we can empower our design teams to deliver high quality design across large organisations at a pace that simply wasn't previously possible.</p>
-        <p>But what does DesignOps look like in practice? How do we ensure developers and designers are speaking the same language? What should your organisation expect from such a fundamental shift in perspective, and how do we measure success? Together, we'll examine the benefits, challenges and future potential of this approach through the real-life experiences of an engineer who's been living in a design team for the past year.</p>`,
+        <p>Keeping developers and designers in sync is an ongoing challenge for our industry, with both disciplines working in completely different mediums. Lately, we've seen the emergence of tools like react-sketchapp and html-sketchapp that allow us to generate Sketch libraries from our application code. In this talk, we'll run through a real-world example of this technique, have a closer look at how it all works, and show you how you can start experimenting with this yourself. Most importantly, we'll talk about what this means for the future of design.</p>`,
       message: 'How to convince non-technical stakeholders that front-end architecture is important., how to scale quality front-end development and design practices across a larger organisation, and what to expect from your first foray into this area.',
     },
     workshop: null,
