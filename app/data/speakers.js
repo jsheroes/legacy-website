@@ -698,8 +698,8 @@ module.exports = [
     description: 'Anjana suffers from a debilitating case of curiosity, which led her from philosophy to English teaching to computational linguistics to software development. As Engineering Learning & Development Lead at Mapbox, she can usually be found in San Francisco; that is, when she\'s not speaking at events around the world, trying to share the joy of coding and advocate for a more diverse & accessible tech industry. Ask her about the Recurse Center, Outreachy, and Mozilla!',
     talk: {
       title: 'Recursion, Iteration, and JavaScript: A Love Story',
-      description: '',
-      message: '',
+      description: 'Recursion and iteration are two alternative paradigms for solving problems by breaking them down into smaller chunks; this talk is a deep dive into how these paradigms work, and how JS supports them both. There’s a fundamental tradeoff between the two: the stateful repetition of iteration is often more performant as it’s closer to the way our machines “think”, whereas many programmers find the self-referential abstraction of recursion easier to read & write. In JS prior to ES6, neither paradigm was especially easy to work with: iterative loops were laborious to read and write (not human-efficient), and recursion was limited by the fact that subsequent recursive calls to a function require additional frames added to the stack, potentially leading to stack overflow (not machine-efficient). Eventually, however, all three - recursion, iteration, and JS - were finally brought closer together. In this talk we’ll dive into the nature of the two paradigms, examine what an Iterable and a tail-recursive function are, and learn how Tail Call Optimization unites the two paradigms, allowing us to write code recursively and run it iteratively.',
+      message: 'What proper tail calls and tail call optimization are, and how they can improve performance of recursive code; How the iterator and iterable protocols work, and make iteration easier in JS.',
     },
     workshop: null,
     previousTalks: [],
