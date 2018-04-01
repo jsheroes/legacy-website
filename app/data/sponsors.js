@@ -1,7 +1,7 @@
 module.exports = [
   {
     title: 'Evozon',
-    img: 'logo_evozon.png',
+    img: 'logo_new_evozon.png',
     href: 'https://www.evozon.com/',
   },
   {
