@@ -94,4 +94,9 @@ module.exports = [
     img: 'logo_iasijs.svg',
     href: 'http://www.iasijs.com',
   },
+  {
+    title: 'Front End World',
+    img: 'logo_frontend_world.jpg',
+    href: 'https://t.me/front_end_first',
+  },
 ];
