@@ -45,11 +45,6 @@ module.exports = [
     href: 'https://www.mozilla.org/en-US/',
   },
   {
-    title: 'Bloq',
-    img: 'logo_bloq.png',
-    href: 'http://bloqspace.io/',
-  },
-  {
     title: 'UMT Software',
     img: 'logo_umt.png',
     href: 'http://www.umtsoftware.com/',
