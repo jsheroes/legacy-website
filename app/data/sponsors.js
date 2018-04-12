@@ -49,4 +49,9 @@ module.exports = [
     img: 'logo_umt.png',
     href: 'http://www.umtsoftware.com/',
   },
+  {
+    title: 'Moqups',
+    img: 'logo_moqups.png',
+    href: 'https://moqups.com/',
+  },
 ];
