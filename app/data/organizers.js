@@ -84,6 +84,12 @@ module.exports = {
       role: 'Adoption Facilitator',
       twitter: '',
     },
+    {
+      name: 'Daniel Porumb',
+      img: 'daniel-porumb.jpg',
+      role: 'Volunteer',
+      twitter: '',
+    },
   ],
   oldHeroes: [
     {
