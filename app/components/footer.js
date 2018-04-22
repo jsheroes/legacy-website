@@ -18,7 +18,7 @@ const Footer = () => (
         </span>
         <div>
           <a
-            href="https://ti.to/cluj-javascripters/jsheroes2018"
+            href="https://ti.to/cluj-javascripters/jsheroes-2019"
             target="_blank"
             rel="noopener noreferrer"
           >
