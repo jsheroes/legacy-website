@@ -63,7 +63,7 @@ const SpeakerDetail = ({ speaker }) => {
                 </div>
 
                 <a
-                  href="https://ti.to/cluj-javascripters/jsheroes2018"
+                  href="https://ti.to/cluj-javascripters/jsheroes-2019"
                   target="_blank"
                   className="buy-ticket"
                   rel="noopener noreferrer"
@@ -91,7 +91,7 @@ const SpeakerDetail = ({ speaker }) => {
                 </div>
 
                 <a
-                  href="https://ti.to/cluj-javascripters/jsheroes2018"
+                  href="https://ti.to/cluj-javascripters/jsheroes-2019"
                   target="_blank"
                   className="buy-ticket"
                   rel="noopener noreferrer"
