@@ -63,33 +63,12 @@ class Header extends Component {
       return '';
     }
 
-    const media = window.innerWidth > 1000 ?
-      (
-        <video preload="auto" autoPlay muted loop poster="/static/img/video-cover.png">
-          <source src="/static/video/js-hero-loop.mp4" type="video/mp4" />
-          <style jsx>{`
-            video {
-              left: 50%;
-              top: 0;
-              min-width: 100%;
-              min-height: 100%;
-              width: auto;
-              height: auto;
-              position: absolute;
-              transform: translateX(-50%);
-            }
-          `}</style>
-        </video>
-      )
-      :
-      (
-        <div>
-          <img className="background-image" src="/static/img/mobile_photo_jsheroes2018.jpg" alt="background" />
-          <style jsx>{`
+    const media = (
+      <div>
+        <img className="background-image" src="/static/img/speakers_and_organizers.jpg" alt="background" />
+        <style jsx>{`
             .background-image {
-              min-width: 100%;
-              min-height: 100%;
-              width: auto;
+              width: 100%;
               height: auto;
               left: 50%;
               top: 0;
@@ -97,15 +76,15 @@ class Header extends Component {
               transform: translateX(-50%);
             }
 
-            @media (max-width: 705px) {
+            @media (max-width: 1230px) {
               .background-image {
-              width: auto;
-              height: 100%;
+                width: auto;
+                height: 100%;
               }
             }
           `}</style>
-        </div>
-      );
+      </div>
+    );
 
     return media;
   }
@@ -152,7 +131,7 @@ class Header extends Component {
                 <div className="row">
                   <div className="col-md-12 header-text">
                     <p>Open-Source Community Event</p>
-                    <p>2019, Cluj-Napoca, Romania</p>
+                    <p>See you in 2019 in Cluj-Napoca, Romania</p>
                   </div>
                 </div>
                 <div className="row">
