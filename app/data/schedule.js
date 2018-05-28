@@ -1,7 +1,7 @@
 export default [
   {
     section: 'WORKSHOPS',
-    date: 'April 18',
+    date: 'April 10',
     index: 0,
     activities: [
       {
@@ -48,7 +48,7 @@ export default [
   },
   {
     section: 'Day 1',
-    date: 'April 19',
+    date: 'April 11',
     index: 1,
     activities: [
       {
@@ -104,7 +104,7 @@ export default [
   },
   {
     section: 'Day 2',
-    date: 'April 20',
+    date: 'April 12',
     index: 2,
     activities: [
       {
