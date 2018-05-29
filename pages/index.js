@@ -2,7 +2,7 @@ import Layout from '../app/components/layout';
 import Header from '../app/components/header';
 import Updates from '../app/components/updates';
 import Speakers from '../app/components/speakers';
-import Schedule from '../app/components/schedule';
+// import Schedule from '../app/components/schedule';
 import Sponsors from '../app/components/sponsors';
 import Partners from '../app/components/partners';
 import Communities from '../app/components/communities';
@@ -16,7 +16,7 @@ export default () => (
     <Header />
     <Updates />
     <Speakers />
-    <Schedule />
+    {/* <Schedule /> */}
     <Mission />
     <Sponsors />
     <Partners />
