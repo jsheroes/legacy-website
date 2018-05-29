@@ -1,8 +1,7 @@
 module.exports = [
-// left as sample
-//   {
-//     title: 'timJS',
-//     img: 'logo_timisoara_js.png',
-//     href: 'http://www.timjs.ro/',
-//   },
+  {
+    title: 'ReactJS Day',
+    img: 'reactjsday_verona.png',
+    href: 'https://2018.reactjsday.it',
+  },
 ];
