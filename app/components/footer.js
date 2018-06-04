@@ -31,8 +31,8 @@ const Footer = () => (
           </Link>
         </div>
         <div>
-          <Link href="/adopt-a-jser">
-            <a>Adopt a JSer</a>
+          <Link href="/privacy">
+            <a>Privacy Stament</a>
           </Link>
         </div>
       </div>
