@@ -1,6 +1,7 @@
 import Layout from '../app/components/layout';
 import Header from '../app/components/header';
 import Updates from '../app/components/updates';
+import AfterMovie from '../app/components/afterMovie';
 import Speakers from '../app/components/speakers';
 // import Schedule from '../app/components/schedule';
 import Sponsors from '../app/components/sponsors';
@@ -15,6 +16,7 @@ export default () => (
   <Layout>
     <Header />
     <Updates />
+    <AfterMovie />
     <Speakers />
     {/* <Schedule /> */}
     <Mission />
