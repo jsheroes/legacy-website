@@ -7,7 +7,7 @@ import RawHtml from '../app/components/common/rawHtml';
 
 import { styles, mediaQueries, beAHostLink, beAGuestLink } from '../app/constants';
 import { couchSurfing, contest } from '../app/data/adopt-a-jser';
-
+// todo remove code if not used in 2019
 const AdoptAJSer = () => (
   <Layout page="adopt-a-jser">
     <Head>
