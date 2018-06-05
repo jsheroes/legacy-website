@@ -1,8 +1,7 @@
 module.exports = [
-  // left as sample
-  // {
-  //   title: 'Egghead',
-  //   img: 'logo_egghead.png',
-  //   href: 'https://egghead.io/',
-  // }
+  {
+    title: 'CodeCamp',
+    img: 'logo_code_camp_ro.jpg',
+    href: 'https://codecamp.ro/',
+  },
 ];
