@@ -1,8 +1,7 @@
 import { Component } from 'react';
-import schedule from '../../data/schedule';
+import schedule from '../../data/2018/schedule';
 import { styles } from '../../constants';
 import ScheduleRow from './scheduleRow';
-
 
 class ScheduleTabSelector extends Component {
   constructor() {
@@ -21,7 +20,6 @@ class ScheduleTabSelector extends Component {
 
   buildButtonSection() {
     const { activePosition } = this.state;
-
     return schedule.map((item) => {
       const active = item.index === activePosition ? 'active' : '';
       return (
@@ -112,34 +110,6 @@ class ScheduleTabSelector extends Component {
         <div className="content-section clearfix">{ afterLunchTalks }</div>
         { !isWorkshopTab && <div className="break-schedule">15:30 - 16:00 COFFEE BREAK</div> }
         <div className="content-section clearfix">{ lastTalks }</div>
-        <div className="buy-ticket-section">
-          {
-          isWorkshopTab ?
-            (
-              <button className="button buy-ticket-button">
-                <a
-                  href="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2018"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                Buy Your Workshop Ticket
-                </a>
-              </button>
-            )
-            :
-            (
-              <button className="button buy-ticket-button">
-                <a
-                  href="https://ti.to/cluj-javascripters/jsheroes-2019"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                Buy Your Conference Ticket
-                </a>
-              </button>
-            )
-        }
-        </div>
         <style jsx>
           {`
             .check-in,

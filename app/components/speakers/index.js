@@ -3,7 +3,8 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
-import speakers from '../../data/speakers';
+import speakersData from '../../data/speakers';
+import speakers2018 from '../../data/2018/speakers';
 import Speaker from './speaker';
 
 function addObserver() {
@@ -35,21 +36,27 @@ class Speakers extends Component {
   }
 
   render() {
+    const { year } = this.props;
+    const title = year === '2018' ? 'Our 2018 Heroes' : 'Our 2019 Heroes';
+    const speakers = year === '2018' ? speakers2018 : speakersData;
     return (
       <Section>
         <ScrollableAnchor id={'speakers'}>
           <div className="speakers-section">
-            <div className="row section-header">
-              <h2>Our 2019 Heroes</h2>
-              <p>
-                The speakers that joined our mission are experts recognized by
-                global communities. They are people who define our working
-                environment every day. Most of them are for the first time in
-                Romania and they’re really looking forward to our community
-                event!
-              </p>
+            <div className={ `row section-header ${ year && 'year' }`}>
+              <h2>{ title }</h2>
+              { !year && <div>
+                <p>
+                  The speakers that joined our mission are experts recognized by
+                  global communities. They are people who define our working
+                  environment every day. Most of them are for the first time in
+                  Romania and they’re really looking forward to our community
+                  event!
+                </p>
+              </div>
+              }
+            { year && <h3>You can find all the recorded talks on our youtube channel <a href="https://www.youtube.com/watch?v=Zx2moTy-yAg&list=PLB9NqTp0uKrRn_C80xQK8QEeO-vaBmN_9" target="_blank" rel="noopener noreferrer">2018 playlist</a></h3>}
             </div>
-
             <div className="speaker-boxes">
               { speakers
                   // .sort((a, b) => {
@@ -65,11 +72,10 @@ class Speakers extends Component {
                   // })
                   .map(speaker => (
                     <div key={speaker.name} className="speaker-box">
-                      <Speaker speaker={speaker} />
+                      <Speaker speaker={speaker} year={year} />
                     </div>
               )) }
             </div>
-
           </div>
         </ScrollableAnchor>
 
@@ -80,10 +86,19 @@ class Speakers extends Component {
             // margin: 30px 0;
           }
 
+          h3 {
+            text-align: center;
+          }
           .speakers-section .section-header {
             margin-bottom: 45px;
             padding-right: 15px;
             padding-left: 15px;
+          }
+          .speakers-section .section-header.year{
+            margin-bottom: 45px;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 70px;
           }
 
           .speakers-section .section-header h2 {

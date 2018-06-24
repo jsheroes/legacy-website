@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Router from 'next/router';
 import { styles } from '../../constants';
-import speakers from '../../data/speakers';
+import speakers from '../../data/2018/speakers';
 
 const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line complexity
   if (!agendaItem) {
@@ -73,43 +73,35 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
   const isWorkshopTab = activeTab === 0;
   const activity = isWorkshopTab ? firstSpeaker.workshop : firstSpeaker.talk;
   const activityTitle = activity.soldOut ? `${activity.title} ( SOLD OUT )` : activity.title;
-  const titleAs = isWorkshopTab ?
-    `/workshops/${firstSpeaker.workshop.permalink}` :
-    `/speakers/${firstSpeaker.permalink}`;
-  const titleLink = isWorkshopTab ?
-    `/workshops?name=${firstSpeaker.workshop.permalink}` :
-    `/speakers?name=${firstSpeaker.permalink}`;
+  // const titleAs = isWorkshopTab ?
+  //   `/workshops/${firstSpeaker.workshop.permalink}` :
+  //   `/speakers/${firstSpeaker.permalink}`;
+  // const titleLink = isWorkshopTab ?
+  //   `/workshops?name=${firstSpeaker.workshop.permalink}` :
+  //   `/speakers?name=${firstSpeaker.permalink}`;
 
   return (
     <div key={activity.title}className="activity-row clearfix">
       <div className="activity-details">
         <div className="activity-title">
-          <Link href={titleLink} as={titleAs}>
-            <a onMouseEnter={() => { Router.prefetch(titleLink); }}>{ activityTitle }</a>
-          </Link>
+          { activityTitle }
         </div>
         <div>
-          <Link href={`/speakers?name=${firstSpeaker.permalink}`} as={`/speakers/${firstSpeaker.permalink}`}>
-            <a
-              className="speaker-name"
-              onMouseEnter={() => { Router.prefetch(`/speakers?name=${firstSpeaker.permalink}`); }}
-            >
-              {firstSpeaker.fullName}
-            </a>
-          </Link>
+          <a
+            className="speaker-name"
+          >
+            {firstSpeaker.fullName}
+          </a>
           <span className="speaker-position">, { firstSpeaker.position }</span>
           { firstSpeaker.company && (<span className="speaker-company">{ firstSpeaker.company }</span>) }
         </div>
         { secondSpeaker && (
           <div>
-            <Link href={`/speakers?name=${secondSpeaker.permalink}`} as={`/speakers/${secondSpeaker.permalink}`}>
-              <a
-                className="speaker-name"
-                onMouseEnter={() => { Router.prefetch(`/speakers?name=${secondSpeaker.permalink}`); }}
-              >
-                {secondSpeaker.fullName}
-              </a>
-            </Link>
+            <a
+              className="speaker-name"
+            >
+              {secondSpeaker.fullName}
+            </a>
             <span className="speaker-position">, { secondSpeaker.position }</span>
             { secondSpeaker.company && (<span className="speaker-company">{ secondSpeaker.company }</span>) }
           </div>
@@ -123,13 +115,13 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
         </div>
         <div className="speaker-image">
           <img
-            src={`static/img/speakers/${firstSpeaker.img}`}
+            src={`static/img/speakers/2018/${firstSpeaker.img}`}
             alt={firstSpeaker.fullName}
           />
           { secondSpeaker && (
             <img
               className="second-image"
-              src={`static/img/speakers/${secondSpeaker.img}`}
+              src={`static/img/speakers/2018/${secondSpeaker.img}`}
               alt={secondSpeaker.fullName}
             />
           ) }

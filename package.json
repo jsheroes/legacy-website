@@ -8,8 +8,8 @@
     "linter": "eslint app pages --quiet",
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "precommit": "npm run linter"
+    "start": "NODE_ENV=production node server.js"
+    // "precommit": "npm run linter"
   },
   "keywords": [],
   "author": "",
