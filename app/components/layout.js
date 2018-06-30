@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Nav from '../components/nav';
 import Footer from '../components/footer';
+import CookiePrivacy from '../components/privacy/cookiePrivacy';
 import { styles } from '../constants';
 
 configureAnchors({ offset: 0, scrollDuration: 1000 });
@@ -13,16 +14,26 @@ const Layout = props => (
   <div className="big-wrapper">
     <Head>
       <link href="/static/img/favicon.png" rel="shortcut icon" />
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
+        rel="stylesheet"
+      />
       <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
       <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
-      <meta name="keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter" />
-      <meta name="description" content="read our first Newsletter for participants. See you soon ;)" />
       <meta
-        name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
+        name="keywords"
+        content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
+      />
+      <meta
+        name="description"
+        content="read our first Newsletter for participants. See you soon ;)"
+      />
+      <meta
+        name="News_Keywords"
+        content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
       />
       <title>JSHeroes 2019 | International Javascript Conference</title>
       <meta property="og:title" content="JSHeroes 2019 | International Javascript Conference" />
@@ -30,12 +41,18 @@ const Layout = props => (
       <meta property="og:url" content="http://www.jsheroes.io/" />
       <meta property="og:image" content="http://www.jsheroes.io/static/img/video-cover.png" />
       <meta property="og:image:type" content="image/png" />
-      <meta property="og:description" content="Check the latest updates and join us in 2019 in Cluj Napoca, Romania!" />
+      <meta
+        property="og:description"
+        content="Check the latest updates and join us in 2019 in Cluj Napoca, Romania!"
+      />
       <meta property="og:locale" content="en_US" />
       <meta property="og:site_name" content="Your JSHeroes 2019 Conference Info" />
       <meta name="twitter:site" content="@jsheroes" />
       <meta name="twitter:title" content="Your JSHeroes 2019 Conference Info" />
-      <meta name="twitter:description" content="Check the latest updates and join us in 2019 in Cluj Napoca, Romania!" />
+      <meta
+        name="twitter:description"
+        content="Check the latest updates and join us in 2019 in Cluj Napoca, Romania!"
+      />
       <meta name="twitter:image" content="http://www.jsheroes.io/static/img/video-cover.png" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@jsheroes" />
@@ -45,7 +62,9 @@ const Layout = props => (
       <script dangerouslySetInnerHTML={{ __html: hotjarTag() }} />
       <noscript>
         <img
-          height="1" width="1" alt="fb"
+          height="1"
+          width="1"
+          alt="fb"
           src="https://www.facebook.com/tr?id=1746399088999074&ev=PageView&noscript=1"
         />
       </noscript>
@@ -58,10 +77,16 @@ const Layout = props => (
     </div>
 
     <Footer />
+    <CookiePrivacy />
 
     {/* language=CSS */}
     <style jsx global>{`
-      html, body, ul, h1, h2, h3 {
+      html,
+      body,
+      ul,
+      h1,
+      h2,
+      h3 {
         border: 0;
         margin: 0;
         padding: 0;
@@ -92,7 +117,7 @@ const Layout = props => (
       }
 
       .button {
-        text-align:center;
+        text-align: center;
         background-color: ${styles.mainColor6};
         color: ${styles.mainColor3};
         border-radius: 8px;
