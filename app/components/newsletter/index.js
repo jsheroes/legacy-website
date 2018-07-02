@@ -1,6 +1,6 @@
 import ScrollableAnchor from 'react-scrollable-anchor';
 
-import Section from '../../components/common/section';
+import Section from '../common/section';
 
 const heroBcgImg = {
   position: 'relative',
@@ -29,7 +29,7 @@ const NewsletterHero = () => (
       section={{ style: heroBcgImg }}
       mainContainer={{ style: heroDarkOverlay }}
     >
-      <ScrollableAnchor id={'home'}>
+      <ScrollableAnchor id="home">
         <div />
       </ScrollableAnchor>
     </Section>

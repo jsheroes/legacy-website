@@ -1,41 +1,42 @@
 {
-  "name": "jsheroes.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "prettier": "prettier --write --no-semi --single-quote '{*.js,{app,config}/**/*.js}'",
-    "linter": "eslint app pages --quiet",
-    "dev": "node server.js",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "precommit": "npm run linter"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "aphrodite": "^1.2.1",
-    "caniuse-api": "^2.0.0",
-    "express": "^4.15.2",
-    "google-map-react": "^0.24.0",
-    "intersection-observer": "^0.5.0",
-    "isomorphic-unfetch": "^1.0.0",
-    "next": "^4.2.3",
-    "prop-types": "^15.5.8",
-    "react": "^16.1.1",
-    "react-bootstrap": "^0.31.0",
-    "react-dom": "^16.1.1",
-    "react-scrollable-anchor": "^0.5.0"
-  },
-  "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-react": "^7.3.0",
-    "husky": "^0.14.3"
-  }
+	"name": "jsheroes.io",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"prettier": "prettier --write --no-semi --single-quote '{*.js,{app,config}/**/*.js}'",
+		"linter": "eslint app pages --quiet",
+		"dev": "node server.js",
+		"build": "next build",
+		"start": "NODE_ENV=production node server.js",
+		"precommit": "npm run linter",
+		"fix": "eslint pages/adopt-a-jser.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"aphrodite": "^1.2.1",
+		"caniuse-api": "^2.0.0",
+		"express": "^4.15.2",
+		"google-map-react": "^0.24.0",
+		"intersection-observer": "^0.5.0",
+		"isomorphic-unfetch": "^1.0.0",
+		"next": "^4.2.3",
+		"prop-types": "^15.5.8",
+		"react": "^16.1.1",
+		"react-bootstrap": "^0.31.0",
+		"react-dom": "^16.1.1",
+		"react-scrollable-anchor": "^0.5.0"
+	},
+	"devDependencies": {
+		"babel-eslint": "^7.2.3",
+		"eslint": "^4.19.1",
+		"eslint-config-airbnb": "^17.0.0",
+		"eslint-plugin-import": "^2.13.0",
+		"eslint-plugin-jsx-a11y": "^6.0.3",
+		"eslint-plugin-node": "^5.1.1",
+		"eslint-plugin-react": "^7.10.0",
+		"husky": "^0.14.3"
+	}
 }

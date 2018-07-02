@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import Section from '../../components/common/section';
+import Section from '../common/section';
 import { mediaQueries } from '../../constants';
 
 class Header extends Component {
@@ -9,9 +9,7 @@ class Header extends Component {
 
     this.state = {
       windowHeight: 800,
-      top: 0,
       logoFixed: false,
-      logoElementOffsetTop: 0,
       showMedia: false,
     };
 
@@ -40,8 +38,7 @@ class Header extends Component {
   }
 
   handleScroll() {
-    const scrollPosition =
-      window.pageYOffset || document.documentElement.scrollTop;
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollPosition > this.state.logoOffsetTop) {
       this.setState({ logoFixed: true });
@@ -66,7 +63,8 @@ class Header extends Component {
     const media = (
       <div>
         <img className="background-image" src="/static/img/speakers_and_organizers.jpg" alt="background" />
-        <style jsx>{`
+        <style jsx>
+          {`
             .background-image {
               width: 100%;
               height: auto;
@@ -82,7 +80,8 @@ class Header extends Component {
                 height: 100%;
               }
             }
-          `}</style>
+          `}
+        </style>
       </div>
     );
 
@@ -115,7 +114,7 @@ class Header extends Component {
           section={{ style: heroBcgImg }}
           mainContainer={{ style: heroDarkOverlay }}
         >
-          <ScrollableAnchor id={'hero'}>
+          <ScrollableAnchor id="hero">
             <div className="header-wrapper">
               { media }
               <div className="headOverlay" />
@@ -124,14 +123,24 @@ class Header extends Component {
                 <div className="row">
                   <div className="col-md-12 header-logo">
                     <div className={this.state.logoFixed ? 'hide' : ''} id="logo">
-                      <span className="logoJs">JS</span><span className="logoHeroes">Heroes</span>
+                      <span className="logoJs">
+JS
+                      </span>
+                      <span className="logoHeroes">
+Heroes
+                      </span>
                     </div>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-md-12 header-text">
-                    <p>Open-Source Community Event</p>
-                    <p> April 11-12th, 2019 in Cluj-Napoca, Romania</p>
+                    <p>
+Open-Source Community Event
+                    </p>
+                    <p>
+                      {' '}
+April 11-12th, 2019 in Cluj-Napoca, Romania
+                    </p>
                   </div>
                 </div>
                 <div className="row">
@@ -150,7 +159,8 @@ class Header extends Component {
             </div>
           </ScrollableAnchor>
 
-          <style jsx>{`
+          <style jsx>
+            {`
           .logoJs {
             color: #0098ff;
           }
@@ -249,7 +259,8 @@ class Header extends Component {
               margin-top: 60px;
             }
           }
-          `}</style>
+          `}
+          </style>
         </Section>
       </div>
     );

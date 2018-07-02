@@ -1,4 +1,4 @@
-import Section from '../../components/common/section';
+import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
 const heroBcgImg = {
@@ -29,10 +29,21 @@ const ConductHero = () => (
       mainContainer={{ style: heroDarkOverlay }}
     >
       <div className="dark-banner-overlay">
-        <h2 className="text-center" id="logo">The <span className="logoJs">JS</span><span className="logoHeroes">Heroes</span> Code of Conduct</h2>
+        <h2 className="text-center" id="logo">
+The
+          <span className="logoJs">
+JS
+          </span>
+          <span className="logoHeroes">
+Heroes
+          </span>
+          {' '}
+Code of Conduct
+        </h2>
       </div>
     </Section>
-    <style jsx>{`
+    <style jsx>
+      {`
       .logoJs {
         color: #0098ff;
       }
@@ -76,7 +87,8 @@ const ConductHero = () => (
           font-size: 24px;
         }
       }
-    `}</style>
+    `}
+    </style>
   </div>
 );
 

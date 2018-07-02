@@ -37,10 +37,12 @@ class Speakers extends Component {
   render() {
     return (
       <Section>
-        <ScrollableAnchor id={'speakers'}>
+        <ScrollableAnchor id="speakers">
           <div className="speakers-section">
             <div className="row section-header">
-              <h2>Our 2019 Heroes</h2>
+              <h2>
+Our 2019 Heroes
+              </h2>
               <p>
                 The speakers that joined our mission are experts recognized by
                 global communities. They are people who define our working
@@ -52,28 +54,29 @@ class Speakers extends Component {
 
             <div className="speaker-boxes">
               { speakers
-                  // .sort((a, b) => {
-                  //   if (a.name < b.name) {
-                  //     return -1;
-                  //   }
-                  //   if (a.name > b.name) {
-                  //     return 1;
-                  //   }
+              // .sort((a, b) => {
+              //   if (a.name < b.name) {
+              //     return -1;
+              //   }
+              //   if (a.name > b.name) {
+              //     return 1;
+              //   }
 
-                  //   // names must be equal
-                  //   return 0;
-                  // })
-                  .map(speaker => (
-                    <div key={speaker.name} className="speaker-box">
-                      <Speaker speaker={speaker} />
-                    </div>
-              )) }
+              //   // names must be equal
+              //   return 0;
+              // })
+                .map(speaker => (
+                  <div key={speaker.name} className="speaker-box">
+                    <Speaker speaker={speaker} />
+                  </div>
+                )) }
             </div>
 
           </div>
         </ScrollableAnchor>
 
-        <style jsx>{`
+        <style jsx>
+          {`
           .speakers-section {
             padding-top: 30px;
             padding-bottom: 30px;
@@ -165,7 +168,8 @@ class Speakers extends Component {
               width: 25%
             }
           }
-        `}</style>
+        `}
+        </style>
       </Section>
     );
   }

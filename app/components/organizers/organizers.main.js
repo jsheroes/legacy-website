@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Section from '../../components/common/section';
+import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import organizers from '../../data/organizers';
 import Organizer from './organizer';
@@ -36,9 +36,28 @@ class OrganizersMain extends Component {
     return (
       <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
         <div className="row container organizers-container">
-          <h2>Organizers</h2>
+          <h2>
+Organizers
+          </h2>
           <p>
-            The <strong>JSHeroes</strong> conference is organized by the Cluj JavaScripters <strong>community</strong> and <strong>volunteers</strong>.
+            The
+            {' '}
+            <strong>
+JSHeroes
+            </strong>
+            {' '}
+conference is organized by the Cluj JavaScripters
+            {' '}
+            <strong>
+community
+            </strong>
+            {' '}
+and
+            {' '}
+            <strong>
+volunteers
+            </strong>
+.
           </p>
           <p>
             Our thanks go to all the organizers and volunteers that help us each year in creating this remarkable event.
@@ -46,7 +65,9 @@ class OrganizersMain extends Component {
           <p>
             If you`d like to contribute, please do not hesitate to contact us.
           </p>
-          <h3>Core Team</h3>
+          <h3>
+Core Team
+          </h3>
 
           <div className="organizer-boxes">
             {
@@ -58,12 +79,13 @@ class OrganizersMain extends Component {
                     role={organizer.role}
                     twitter={organizer.twitter}
                   />
-                </div>),
-              )
+                </div>))
             }
           </div>
 
-          <h3>Old Heroes( 2017 Edition )</h3>
+          <h3>
+Old Heroes( 2017 Edition )
+          </h3>
 
           <div className="organizer-boxes">
             {
@@ -79,7 +101,9 @@ class OrganizersMain extends Component {
             }
           </div>
 
-          <h3>Special Thanks</h3>
+          <h3>
+Special Thanks
+          </h3>
 
           <div className="organizer-boxes center">
             {
@@ -95,7 +119,8 @@ class OrganizersMain extends Component {
             }
           </div>
         </div>
-        <style jsx>{`
+        <style jsx>
+          {`
         p {
           text-align: center;
         }
@@ -187,7 +212,8 @@ class OrganizersMain extends Component {
             justify-content: center;
           }
         }
-      `}</style>
+      `}
+        </style>
       </Section>);
   }
 }

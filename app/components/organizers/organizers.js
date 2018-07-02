@@ -1,17 +1,31 @@
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Link from 'next/link';
 import Router from 'next/router';
-import Section from '../../components/common/section';
+import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
 const Organizers = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor1 } }}>
-    <ScrollableAnchor id={'organizers'}>
+    <ScrollableAnchor id="organizers">
       <div>
-        <h2>Organizers</h2>
+        <h2>
+Organizers
+        </h2>
 
         <p>
-        The <strong>JSHeroes</strong> Conference relies on <strong>volunteers</strong> and the Cluj JavaScripters community to organize and drive the event.
+        The
+          {' '}
+          <strong>
+JSHeroes
+          </strong>
+          {' '}
+Conference relies on
+          {' '}
+          <strong>
+volunteers
+          </strong>
+          {' '}
+and the Cluj JavaScripters community to organize and drive the event.
         </p>
         <p>
         They contribute hours of their time each year and we value this immensely.
@@ -19,19 +33,23 @@ const Organizers = () => (
         <p>
         Thanks to all
 
-          <Link href={'/organizers'}>
+          <Link href="/organizers">
             <a
               className="link"
               onMouseEnter={() => { Router.prefetch('/organizers'); }}
             >
-              <strong> who supported us!</strong>
+              <strong>
+                {' '}
+who supported us!
+              </strong>
             </a>
           </Link>
 
         </p>
       </div>
     </ScrollableAnchor>
-    <style jsx>{`
+    <style jsx>
+      {`
       div {
         padding: 140px 0;
       }
@@ -88,7 +106,8 @@ const Organizers = () => (
           margin-bottom: 20px;
         }
       }
-    `}</style>
+    `}
+    </style>
   </Section>
 );
 

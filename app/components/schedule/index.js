@@ -5,11 +5,13 @@ import ScheduleTabSelector from './scheduleTabSelector';
 
 const Schedule = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor4 } }}>
-    <ScrollableAnchor id={'schedule'}>
+    <ScrollableAnchor id="schedule">
       <div id="schedule_section" className="section-padding">
         <Style />
         <div className="row section-header">
-          <h2>Schedule</h2>
+          <h2>
+Schedule
+          </h2>
           <ScheduleTabSelector />
         </div>
       </div>
@@ -18,7 +20,8 @@ const Schedule = () => (
 );
 
 const Style = () => (
-  <style jsx="true">{`
+  <style jsx="true">
+    {`
     #schedule_section.section-padding {
       padding: 80px 0; 
     }
@@ -112,7 +115,8 @@ const Style = () => (
         visibility: hidden;
       }
     }
-  `}</style>
+  `}
+  </style>
 );
 
 module.exports = Schedule;

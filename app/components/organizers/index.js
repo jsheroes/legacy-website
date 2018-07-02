@@ -1,4 +1,4 @@
-import Section from '../../components/common/section';
+import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
 const heroBcgImg = {
@@ -16,7 +16,8 @@ const OrganizersHeader = () => (
     <Section
       section={{ style: heroBcgImg }}
     />
-    <style jsx>{`
+    <style jsx>
+      {`
       .logoJs {
         color: #0098ff;
       }
@@ -60,7 +61,8 @@ const OrganizersHeader = () => (
           font-size: 24px;
         }
       }
-    `}</style>
+    `}
+    </style>
   </div>
 );
 

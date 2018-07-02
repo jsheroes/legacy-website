@@ -15,14 +15,21 @@ const Speaker = ({ speaker }) => (
         />
         <div className="speaker-hover" />
         <div className="speaker-details">
-          <h5>{speaker.fullName}</h5>
-          <h6>{speaker.position}</h6>
-          <h6>{speaker.company}</h6>
+          <h5>
+            {speaker.fullName}
+          </h5>
+          <h6>
+            {speaker.position}
+          </h6>
+          <h6>
+            {speaker.company}
+          </h6>
         </div>
       </div>
     </Link>
 
-    <style jsx>{`
+    <style jsx>
+      {`
       .speaker-info-box {
         width: auto;
         position: relative;
@@ -82,7 +89,8 @@ const Speaker = ({ speaker }) => (
           opacity: 1;
         }
       }
-    `}</style>
+    `}
+    </style>
   </div>
 );
 

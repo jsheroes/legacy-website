@@ -9,13 +9,23 @@ const SpeakerDetail = ({ speaker }) => {
   return (
     <div>
       <Head>
-        <title>{ speaker.fullName } at JSHeroes</title>
+        <title>
+          {speaker.fullName}
+          {' '}
+at JSHeroes
+        </title>
         <meta property="og:title" content={`${speaker.fullName} at JSHeroes`} />
         <meta property="og:url" content={`https://jsheroes.io/speakers/${speaker.permalink}`} />
-        <meta property="og:image" content={`https://jsheroes.io/static/img/speakers/${speaker.img}`} />
+        <meta
+          property="og:image"
+          content={`https://jsheroes.io/static/img/speakers/${speaker.img}`}
+        />
         <meta property="og:image:type" content={`image/${imageExtension}`} />
         <meta property="og:description" content={speaker.description} />
-        <meta name="twitter:image" content={`https://jsheroes.io/static/img/speakers/${speaker.img}`} />
+        <meta
+          name="twitter:image"
+          content={`https://jsheroes.io/static/img/speakers/${speaker.img}`}
+        />
         <meta name="twitter:title" content={`${speaker.fullName} at JSHeroes`} />
         <meta name="twitter:description" content={speaker.description} />
       </Head>
@@ -26,40 +36,64 @@ const SpeakerDetail = ({ speaker }) => {
             <div className="col-md-3 side">
               <div className="speaker-info-box">
                 <div className="speaker-img">
-                  <img
-                    src={`/static/img/speakers/${speaker.img}`}
-                    alt={speaker.fullName}
-                  />
+                  <img src={`/static/img/speakers/${speaker.img}`} alt={speaker.fullName} />
                 </div>
               </div>
               <div className="details-container">
                 <div className="details hidden-lg hidden-md">
-                  <span className="name">{ speaker.fullName }</span>
-                  <div><strong>{ speaker.position }</strong></div>
-                  <div><strong>{ speaker.company }</strong></div>
+                  <span className="name">
+                    {speaker.fullName}
+                  </span>
+                  <div>
+                    <strong>
+                      {speaker.position}
+                    </strong>
+                  </div>
+                  <div>
+                    <strong>
+                      {speaker.company}
+                    </strong>
+                  </div>
                 </div>
                 <div className="social-links">
-                  { speaker.twitter
-                  ? <a href={speaker.twitter} target="_blank">
-                    <span className="twitter" />
-                  </a>
-                : ''}
-                  { speaker.github
-                ? <a href={speaker.github} target="_blank">
-                  <span className="github" />
-                </a>
-                : ''}
-                  { speaker.website
-                  ? <a href={speaker.website} target="_blank">
-                    <span className="website" />
-                  </a>
-                  : ''}
+                  {speaker.twitter ? (
+                    <a href={speaker.twitter} target="_blank" rel="noopener noreferrer">
+                      <span className="twitter" />
+                    </a>
+                  ) : (
+                    ''
+                  )}
+                  {speaker.github ? (
+                    <a href={speaker.github} target="_blank" rel="noopener noreferrer">
+                      <span className="github" />
+                    </a>
+                  ) : (
+                    ''
+                  )}
+                  {speaker.website ? (
+                    <a href={speaker.website} target="_blank" rel="noopener noreferrer">
+                      <span className="website" />
+                    </a>
+                  ) : (
+                    ''
+                  )}
                 </div>
               </div>
               <div className="visible-md visible-lg">
                 <div className="join">
-                  <div>Already curious to see <strong>{ speaker.firstName }</strong>`s talk?</div>
-                  <div>Join { speaker.reference } at JSHeroes!</div>
+                  <div>
+                    Already curious to see
+                    <strong>
+                      {speaker.firstName}
+                    </strong>
+                    `s talk?
+                  </div>
+                  <div>
+                    Join
+                    {speaker.reference}
+                    {' '}
+at JSHeroes!
+                  </div>
                 </div>
 
                 <a
@@ -74,20 +108,41 @@ const SpeakerDetail = ({ speaker }) => {
             </div>
             <div className="col-md-9 main">
               <div className="details visible-md visible-lg">
-                <h1 className="name">{ speaker.fullName }</h1>
+                <h1 className="name">
+                  {speaker.fullName}
+                </h1>
                 <div>
-                  <strong>{ speaker.position }</strong>
-                  { speaker.company && (
-                    <span> @ <strong>{ speaker.company }</strong></span>
-                   ) }
+                  <strong>
+                    {speaker.position}
+                  </strong>
+                  {speaker.company && (
+                    <span>
+                      {' '}
+                      @
+                      <strong>
+                        {speaker.company}
+                      </strong>
+                    </span>
+                  )}
                 </div>
               </div>
               <RawHtml className="description" content={speaker.description} />
-              { talks }
+              {talks}
               <div className="hidden-md hidden-lg">
                 <div className="join">
-                  <div>Already curious to see <strong>{ speaker.firstName }</strong>`s talk?</div>
-                  <div>Join { speaker.reference } at JSHeroes!</div>
+                  <div>
+                    Already curious to see
+                    <strong>
+                      {speaker.firstName}
+                    </strong>
+                    `s talk?
+                  </div>
+                  <div>
+                    Join
+                    {speaker.reference}
+                    {' '}
+at JSHeroes!
+                  </div>
                 </div>
 
                 <a
@@ -103,155 +158,156 @@ const SpeakerDetail = ({ speaker }) => {
           </div>
         </div>
       </Section>
-      <style jsx>{`
-      .speakers-page {
-          padding-top: 110px;
-          margin-bottom: 30px;
-      }
-      
-      h3 {
-        margin: 20px 20px 20px 0;
-      }
+      <style jsx>
+        {`
+          .speakers-page {
+            padding-top: 110px;
+            margin-bottom: 30px;
+          }
 
-      .buy-ticket {
-        background: ${styles.mainColor6};
-        color: white;
-        padding: 10px;
-        display: inline-block;
-        text-align: center;
-        width: 200px;
-        border-radius: 4px;
-        text-decoration: none;
-        letter-spacing: 2px;
-        margin-bottom: 20px;
-      }
+          h3 {
+            margin: 20px 20px 20px 0;
+          }
 
-      .github, .website, .twitter {
-        width: 25px;
-        height: 25px;
-        display: inline-block;
-        vertical-align: middle;
-        background-size: 100%;
-        margin: 10px;
-      }
+          .buy-ticket {
+            background: ${styles.mainColor6};
+            color: white;
+            padding: 10px;
+            display: inline-block;
+            text-align: center;
+            width: 200px;
+            border-radius: 4px;
+            text-decoration: none;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+          }
 
-      .github {
-        background-image: url( "/static/img/social_media/github-logo.svg" );
-      }
+          .github,
+          .website,
+          .twitter {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            vertical-align: middle;
+            background-size: 100%;
+            margin: 10px;
+          }
 
-      .twitter {
-        background-image: url( "/static/img/social_media/twitter-logo.svg" );
-      }
+          .github {
+            background-image: url('/static/img/social_media/github-logo.svg');
+          }
 
-      .website {
-        background-image: url( "/static/img/social_media/link-symbol.svg" );
-      }
+          .twitter {
+            background-image: url('/static/img/social_media/twitter-logo.svg');
+          }
 
-      .side {
-        padding: 0 30px;
-      }
+          .website {
+            background-image: url('/static/img/social_media/link-symbol.svg');
+          }
 
-      .main {
-        padding: 0 5px;
-        text-align: justify;
-      }
+          .side {
+            padding: 0 30px;
+          }
 
-      .side .social-links {
-        text-align: center;
-      }
+          .main {
+            padding: 0 5px;
+            text-align: justify;
+          }
 
-      .join {
-        margin: 50px 0;
-      }
+          .side .social-links {
+            text-align: center;
+          }
 
-      .speaker-info-box {
-        max-width: 245px;
-        position: relative;
-        overflow: hidden;
-        box-sizing: border-box;
-      }
+          .join {
+            margin: 50px 0;
+          }
 
-      .speaker-img {
-        cursor: pointer;
-      }
-  
-      .speaker-img img {
-        max-width: 245px;
-        display: block;
-        border: 0;
-        max-width: 100%;
-        height: auto;
-        filter: grayscale(100%);
-      }
+          .speaker-info-box {
+            max-width: 245px;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+          }
 
-      .name {
-        color: ${styles.mainColor6};
-        font-weight: bold;
-        margin-bottom: 5px;
-        font-size: 24px;
-      }
+          .speaker-img {
+            cursor: pointer;
+          }
 
-      .description {
-        margin-top: 25px;
-        margin-bottom: 25px;
-      }
+          .speaker-img img {
+            max-width: 245px;
+            display: block;
+            border: 0;
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(100%);
+          }
 
-      @media (max-width: ${mediaQueries.L} ) {
-        .details {
-          text-align: center;
-        }
-        .main .join {
-          margin: 60px 0 20px 0;
-        }
+          .name {
+            color: ${styles.mainColor6};
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 24px;
+          }
 
-        .speakers-page {
-          padding-top: 65px;
-        }
+          .description {
+            margin-top: 25px;
+            margin-bottom: 25px;
+          }
 
-        .main {
-          padding: 0 20px;
-          
-        }
+          @media (max-width: ${mediaQueries.L}) {
+            .details {
+              text-align: center;
+            }
+            .main .join {
+              margin: 60px 0 20px 0;
+            }
 
-        .side {
-          display: flex;
-          margin-bottom: 30px;
-          padding: 0 20px;
-        }
+            .speakers-page {
+              padding-top: 65px;
+            }
 
-        .speaker-info-box {
-          display: inline-block;
-          margin: auto;
-        }
+            .main {
+              padding: 0 20px;
+            }
 
-        .details-container {
-          flex: 1;
-          padding: 10px;
-        }
-      }
+            .side {
+              display: flex;
+              margin-bottom: 30px;
+              padding: 0 20px;
+            }
 
-      @media (max-width: ${mediaQueries.XS} ) {
-        .side,
-        .speaker-info-box
-        {
-          display: block;
-        }
+            .speaker-info-box {
+              display: inline-block;
+              margin: auto;
+            }
 
-        .details-container {
-          flex: none;
-          margin-top: 30px;
-        }
+            .details-container {
+              flex: 1;
+              padding: 10px;
+            }
+          }
 
-        .buy-ticket {
-          width: 100%;
-        }
+          @media (max-width: ${mediaQueries.XS}) {
+            .side,
+            .speaker-info-box {
+              display: block;
+            }
 
-        .join {
-          text-align: center;
-        }
-      }
+            .details-container {
+              flex: none;
+              margin-top: 30px;
+            }
 
-      `}</style>
+            .buy-ticket {
+              width: 100%;
+            }
+
+            .join {
+              text-align: center;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };
@@ -265,34 +321,40 @@ function buildTalks(speaker) {
 
   return (
     <div>
-      {
-        talk && buildCurrentTalk(talk, speaker)
-      }
-      {
-        jsheroesTalks.length > 0 && (
-          <div className="talks" key="jsheroes">
-            <h4>See { speaker.firstName } at previous JSHeroes events</h4>
-            { jsheroesTalks }
-          </div>
-        )
-      }
-      {
-        generalTalks.length > 0 && (
-          <div className="talks" key="general">
-            <h4>See { speaker.firstName } at other conferences</h4>
-            { generalTalks }
-          </div>
-        )
-      }
-      <style jsx>{`
-      .talks {
-        margin: 20px 0;
-      }
+      {talk && buildCurrentTalk(talk, speaker)}
+      {jsheroesTalks.length > 0 && (
+        <div className="talks" key="jsheroes">
+          <h4>
+            See
+            {speaker.firstName}
+            {' '}
+at previous JSHeroes events
+          </h4>
+          {jsheroesTalks}
+        </div>
+      )}
+      {generalTalks.length > 0 && (
+        <div className="talks" key="general">
+          <h4>
+            See
+            {speaker.firstName}
+            {' '}
+at other conferences
+          </h4>
+          {generalTalks}
+        </div>
+      )}
+      <style jsx>
+        {`
+          .talks {
+            margin: 20px 0;
+          }
 
-      h4 {
-        font-size: 18px;
-      }
-      `}</style>
+          h4 {
+            font-size: 18px;
+          }
+        `}
+      </style>
     </div>
   );
 }
@@ -301,22 +363,26 @@ function talkRow({ url, name }) {
   return (
     <div key={url}>
       <span className="blue-circle" />
-      <a href={url} target="_blank">{ name }</a>
-      <style jsx>{`
-        a {
-          text-decoration: none;
-          color: ${styles.mainColor6};
-        }
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        {name}
+      </a>
+      <style jsx>
+        {`
+          a {
+            text-decoration: none;
+            color: ${styles.mainColor6};
+          }
 
-        .blue-circle {
-          display: inline-block;
-          margin-right: 20px;
-          width: 10px;
-          height: 10px;
-          background: ${styles.mainColor6};
-          border-radius: 5px;
-        }
-      `}</style>
+          .blue-circle {
+            display: inline-block;
+            margin-right: 20px;
+            width: 10px;
+            height: 10px;
+            background: ${styles.mainColor6};
+            border-radius: 5px;
+          }
+        `}
+      </style>
     </div>
   );
 }
@@ -324,32 +390,45 @@ function talkRow({ url, name }) {
 function buildCurrentTalk({ title, description, message }, { firstName }) {
   return (
     <div>
-      <h3>{ firstName }`s talk: {title}</h3>
+      <h3>
+        {firstName}
+        `s talk:
+        {' '}
+        {title}
+      </h3>
       <RawHtml content={description} />
-      { message && (
+      {message && (
         <div className="teaser">
-          <span>You will learn:</span>
-          <p><i>{message}</i></p>
+          <span>
+You will learn:
+          </span>
+          <p>
+            <i>
+              {message}
+            </i>
+          </p>
         </div>
-      ) }
-      <style jsx>{`
-        h3 {
-          margin: 20px 20px 5px 0;
-          font-size: 18px;
-        }
-        @media (max-width: ${mediaQueries.L} ) {
-          .h3{
-            margin: 20px 20px 20px 0;
+      )}
+      <style jsx>
+        {`
+          h3 {
+            margin: 20px 20px 5px 0;
+            font-size: 18px;
           }
-        }
-        .teaser {
-          margin: 20px 0;
-        }
-        
-        .teaser span {
-          font-weight: 500;
-        }`
-      }</style>
+          @media (max-width: ${mediaQueries.L}) {
+            .h3 {
+              margin: 20px 20px 20px 0;
+            }
+          }
+          .teaser {
+            margin: 20px 0;
+          }
+
+          .teaser span {
+            font-weight: 500;
+          }
+        `}
+      </style>
     </div>
   );
 }

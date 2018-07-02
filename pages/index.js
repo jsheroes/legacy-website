@@ -27,4 +27,4 @@ export default () => (
     <Venue />
     <ScrollBtn />
   </Layout>
-  );
+);

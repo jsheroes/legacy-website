@@ -1,14 +1,16 @@
 import ScrollableAnchor from 'react-scrollable-anchor';
-import Section from '../../components/common/section';
+import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import partners from '../../data/partners';
 import Partner from './partner';
 
 const Partners = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
-    <ScrollableAnchor id={'partners'}>
+    <ScrollableAnchor id="partners">
       <div>
-        <h2>and Partners</h2>
+        <h2>
+and Partners
+        </h2>
         <p>
           Who give us a helping hand for our mission to go smoothly:
         </p>
@@ -18,7 +20,8 @@ const Partners = () => (
       </div>
     </ScrollableAnchor>
 
-    <style jsx>{`
+    <style jsx>
+      {`
       div {
         padding: 100px 0 0;
       }
@@ -98,7 +101,8 @@ const Partners = () => (
         color: ${styles.mainColor1};
         font-weight: 800;
       }
-    `}</style>
+    `}
+    </style>
   </Section>
 );
 

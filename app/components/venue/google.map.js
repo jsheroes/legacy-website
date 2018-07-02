@@ -14,7 +14,8 @@ const GoogleMap = ({ center, zoom }) => (
       <MapPin lat={46.752870} lng={23.605845} />
     </GoogleMapReact>
 
-    <style jsx>{`
+    <style jsx>
+      {`
       div {
         position: relative;
         width: 100%;
@@ -39,7 +40,8 @@ const GoogleMap = ({ center, zoom }) => (
           height: 310px;
         }
       }
-    `}</style>
+    `}
+    </style>
   </div>
 );
 

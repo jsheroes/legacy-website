@@ -1,16 +1,20 @@
 import ScrollableAnchor from 'react-scrollable-anchor';
-import Section from '../../components/common/section';
+import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import communities from '../../data/communities';
 import Community from './community';
 
 const Communities = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
-    <ScrollableAnchor id={'communities'}>
+    <ScrollableAnchor id="communities">
       <div>
         <h2>
           We
-          <span> <i className="fa fa-heart fa-1x" aria-hidden="true" /> </span>
+          <span>
+            {' '}
+            <i className="fa fa-heart fa-1x" aria-hidden="true" />
+            {' '}
+          </span>
           Communities
         </h2>
         <p>
@@ -24,12 +28,15 @@ const Communities = () => (
           )) }
         </ul>
         <p>
-          <strong>#humansofjavascript</strong>
+          <strong>
+#humansofjavascript
+          </strong>
         </p>
       </div>
     </ScrollableAnchor>
 
-    <style jsx>{`
+    <style jsx>
+      {`
       div {
         padding: 140px 0 140px;
       }
@@ -119,7 +126,8 @@ const Communities = () => (
         color: ${styles.mainColor1};
         font-weight: 800;
       }
-    `}</style>
+    `}
+    </style>
   </Section>
 );
 

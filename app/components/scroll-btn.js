@@ -22,8 +22,7 @@ class ScrollBtn extends Component {
   }
 
   handleScroll() {
-    const scrollPosition =
-      window.pageYOffset || document.documentElement.scrollTop;
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollPosition < 900) {
       this.setState({ show: false });
     } else if (scrollPosition >= 900) {
@@ -39,7 +38,8 @@ class ScrollBtn extends Component {
         </div>
 
         {/* language=CSS */}
-        <style jsx>{`
+        <style jsx>
+          {`
           .back-top {
             display: block;
             position: fixed;
@@ -85,7 +85,8 @@ class ScrollBtn extends Component {
             visibility: visible;
             opacity: 1;
           }
-      `}</style>
+      `}
+        </style>
       </div>
     );
   }

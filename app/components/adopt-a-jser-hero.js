@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from '../components/common/section';
+import Section from './common/section';
 
 import { mediaQueries, styles } from '../constants';
 
@@ -16,11 +16,14 @@ const heroBcgImg = {
 const AdoptAJSerHero = () => (
   <Section section={{ style: heroBcgImg }}>
     <div className="hero-text">
-      <h1>Adopt a JavaScripter</h1>
+      <h1>
+Adopt a JavaScripter
+      </h1>
     </div>
 
     {/* language=CSS */}
-    <style jsx>{`
+    <style jsx>
+      {`
       .hero-text {
         display: flex;
         height: ${heroBcgImg.height};
@@ -45,7 +48,8 @@ const AdoptAJSerHero = () => (
           font-size: 28px;
         }
       }
-    `}</style>
+    `}
+    </style>
   </Section>
 );
 

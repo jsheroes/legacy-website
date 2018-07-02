@@ -1,36 +1,36 @@
 import PropTypes from 'prop-types';
 import { style, mediaQueries } from '../../constants';
 
-const Section = props => (
-  <section style={props.section.style}>
-    <div style={props.mainContainer.style}>
-      <style jsx>{`
-
-        div {
-          padding: 0 15px;
-          margin: 0 auto;
-        }
-
-        @media (min-width: ${mediaQueries.S}) {
+const Section = ({ section, mainContainer, children }) => (
+  <section style={section.style}>
+    <div style={mainContainer.style}>
+      <style jsx>
+        {`
           div {
-            width: 720px;
+            padding: 0 15px;
+            margin: 0 auto;
           }
-        }
 
-        @media (min-width: ${mediaQueries.L}) {
-          div {
-            width: 960px;
+          @media (min-width: ${mediaQueries.S}) {
+            div {
+              width: 720px;
+            }
           }
-        }
 
-        @media (min-width: ${mediaQueries.XL}) {
-          div {
-            width: 1140px;
+          @media (min-width: ${mediaQueries.L}) {
+            div {
+              width: 960px;
+            }
           }
-        }
 
-      `}</style>
-      {props.children}
+          @media (min-width: ${mediaQueries.XL}) {
+            div {
+              width: 1140px;
+            }
+          }
+        `}
+      </style>
+      {children}
     </div>
   </section>
 );

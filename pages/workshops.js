@@ -45,34 +45,69 @@ const Workshop = ({ speakers }) => {
             alt={workshop.title}
           />
           <div className="workshop-title">
-            <h1>{ workshopTitle }</h1>
-            <span>by: <strong>
-              <Link href={`/speakers?name=${firstSpeaker.permalink}`} as={`/speakers/${firstSpeaker.permalink}`}>
-                <a onMouseEnter={() => { Router.prefetch(`/speakers?name=${firstSpeaker.permalink}`); }}>{ firstSpeaker.fullName }</a>
-              </Link>
-              { secondSpeaker && (
+            <h1>
+              { workshopTitle }
+            </h1>
+            <span>
+by:
+              <strong>
+                <Link href={`/speakers?name=${firstSpeaker.permalink}`} as={`/speakers/${firstSpeaker.permalink}`}>
+                  <a onMouseEnter={() => { Router.prefetch(`/speakers?name=${firstSpeaker.permalink}`); }}>
+                    { firstSpeaker.fullName }
+                  </a>
+                </Link>
+                { secondSpeaker && (
                 <span>
                   { ' & ' }
                   <Link href={`/speakers?name=${secondSpeaker.permalink}`} as={`/speakers/${secondSpeaker.permalink}`}>
-                    <a onMouseEnter={() => { Router.prefetch(`/speakers?name=${secondSpeaker.permalink}`); }}>{ secondSpeaker.fullName }</a>
+                    <a onMouseEnter={() => { Router.prefetch(`/speakers?name=${secondSpeaker.permalink}`); }}>
+                      { secondSpeaker.fullName }
+                    </a>
                   </Link>
                 </span>
-              ) }
-            </strong></span>
-            <p className="workshop-type">{ workshop.type }, April 18th</p>
+                ) }
+              </strong>
+            </span>
+            <p className="workshop-type">
+              { workshop.type }
+, April 18th
+            </p>
           </div>
         </div>
         <div className="workshop-description clearfix">
-          <p className="workshop-section"><strong>Curricula</strong></p>
+          <p className="workshop-section">
+            <strong>
+Curricula
+            </strong>
+          </p>
           <RawHtml content={workshop.description} />
-          <p className="workshop-section"><strong>Prerequisites</strong></p>
+          <p className="workshop-section">
+            <strong>
+Prerequisites
+            </strong>
+          </p>
           <RawHtml content={workshop.prerequisites} />
-          <p className="workshop-section"><strong>About the trainer</strong></p>
+          <p className="workshop-section">
+            <strong>
+About the trainer
+            </strong>
+          </p>
           <RawHtml content={firstSpeaker.description} />
           { secondSpeaker && <RawHtml content={secondSpeaker.description} /> }
           <div className="workshop-section">
-            <div>Are you interested in <strong>{ firstSpeaker.firstName }</strong>`s workshop?</div>
-            <div>Join { firstSpeaker.reference } at JSHeroes!</div>
+            <div>
+              Are you interested in
+              <strong>
+                { firstSpeaker.firstName }
+              </strong>
+              `s workshop?
+            </div>
+            <div>
+Join
+              { firstSpeaker.reference }
+              {' '}
+at JSHeroes!
+            </div>
           </div>
           <div className="workshop-ticket">
             <a
@@ -85,7 +120,8 @@ const Workshop = ({ speakers }) => {
             </a>
           </div>
         </div>
-        <style jsx>{`
+        <style jsx>
+          {`
           h1 {
             color: ${styles.mainColor6};
           }
@@ -166,7 +202,8 @@ const Workshop = ({ speakers }) => {
               margin-top: 110px;
             }
           }
-        `}</style>
+        `}
+        </style>
       </Section>
     </Layout>
   );
