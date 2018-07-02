@@ -9,8 +9,7 @@
 		"dev": "node server.js",
 		"build": "next build",
 		"start": "NODE_ENV=production node server.js",
-		"precommit": "npm run linter",
-		"fix": "eslint pages/adopt-a-jser.js"
+		"precommit": "npm run linter"
 	},
 	"keywords": [],
 	"author": "",
