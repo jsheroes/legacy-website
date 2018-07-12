@@ -1,29 +1,70 @@
 import ScrollableAnchor from 'react-scrollable-anchor';
-import Section from '../components/common/section';
+import Section from './common/section';
 import { styles, mediaQueries } from '../constants';
 
 const Mission = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor6 } }}>
-    <ScrollableAnchor id={'mission'}>
+    <ScrollableAnchor id="mission">
       <div>
-        <h2>Our Mission</h2>
+        <h2>
+Our Mission
+        </h2>
         <p>
-          We believe that the <strong>community model</strong> is the best
+          We believe that the
+          {' '}
+          <strong>
+community model
+          </strong>
+          {' '}
+is the best
           environment for learning, so part of our mission is to inspire and help
-          other communities. We’ll <strong>publish all data</strong> about this
+          other communities. We’ll
+          {' '}
+          <strong>
+publish all data
+          </strong>
+          {' '}
+about this
           conference, in full transparency. This way, whenever the next
-          javascripters want to <strong>take over</strong> this event, they
-          can <strong>build on</strong> our knowledge and the event’s brand.
+          javascripters want to
+          {' '}
+          <strong>
+take over
+          </strong>
+          {' '}
+this event, they
+          can
+          {' '}
+          <strong>
+build on
+          </strong>
+          {' '}
+our knowledge and the event’s brand.
         </p>
         <p>
-          Our vision is for a <strong>connected global community</strong>, and
-          for this we’ve designed the event to be JSHeroes, <strong>
+          Our vision is for a
+          {' '}
+          <strong>
+connected global community
+          </strong>
+, and
+          for this we’ve designed the event to be JSHeroes,
+          {' '}
+          <strong>
             a series
-          </strong> of Open-Source Community Events by <strong>JavaScript Communities worldwide</strong>.
+          </strong>
+          {' '}
+of Open-Source Community Events by
+          {' '}
+          <strong>
+JavaScript Communities worldwide
+          </strong>
+.
         </p>
       </div>
     </ScrollableAnchor>
-    <style jsx>{`
+    <style jsx>
+      {`
       div {
         padding: 140px 0;
       }
@@ -76,7 +117,8 @@ const Mission = () => (
           margin-bottom: 20px;
         }
       }
-    `}</style>
+    `}
+    </style>
   </Section>
 );
 

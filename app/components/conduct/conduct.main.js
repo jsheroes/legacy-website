@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Section from '../../components/common/section';
+import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
 const ConductMain = () => (
@@ -10,11 +10,16 @@ const ConductMain = () => (
         the full length document
         {' '}
         <Link href="https://drive.google.com/file/d/0B9mBUlTNHZJNRnhGWE5LRERud00/edit">
-          <a target="_blank">here</a>
-        </Link>.
+          <a target="_blank">
+here
+          </a>
+        </Link>
+.
       </p>
       <br />
-      <h3>The short version</h3>
+      <h3>
+The short version
+      </h3>
       <hr />
       <br />
       <p>
@@ -22,13 +27,19 @@ const ConductMain = () => (
           All attendees, speakers, sponsors and volunteers at our
           conference are required to agree with the following code of
           conduct.
-        </strong> As organisers of JSHeroes, the Cluj
+        </strong>
+        {' '}
+As organisers of JSHeroes, the Cluj
         JavaScripters Community will enforce this code throughout the
         event. We expect cooperation from all participants to help ensure
         a safe environment for everybody.
       </p>
       <p>
-        <strong>The Cluj JavaScripters community commits</strong> to
+        <strong>
+The Cluj JavaScripters community commits
+        </strong>
+        {' '}
+to
         providing a safe and friendly facility for all JSHeroes events,
         respecting each and every individual in the community and
         responding promptly to all reports of misconduct with our
@@ -36,13 +47,20 @@ const ConductMain = () => (
       </p>
 
       <p>
-        <strong>What we expect from each of you</strong> is to treat
+        <strong>
+What we expect from each of you
+        </strong>
+        {' '}
+is to treat
         everyone with respect, refrain from using offensive language and
         imagery and to report any derogatory or offensive behaviour to a
         member of the Cluj JavaScripters community or JSHeroes staff
-        directly, or through email{' '}
+        directly, or through email
+        {' '}
         <Link href="mailto: welcome@jsheroes.io">
-          <a target="_top">welcome@jsheroes.io</a>
+          <a target="_top">
+welcome@jsheroes.io
+          </a>
         </Link>
       </p>
 
@@ -53,7 +71,8 @@ const ConductMain = () => (
       </p>
     </div>
 
-    <style jsx>{`
+    <style jsx>
+      {`
       .central-container {
         position: relative;
         width: 100%;
@@ -161,7 +180,8 @@ const ConductMain = () => (
           text-align: left;
         }
       }
-    `}</style>
+    `}
+    </style>
   </Section>
 );
 

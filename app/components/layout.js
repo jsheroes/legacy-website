@@ -3,8 +3,8 @@ import { configureAnchors } from 'react-scrollable-anchor';
 import PropTypes from 'prop-types';
 
 import Head from 'next/head';
-import Nav from '../components/nav';
-import Footer from '../components/footer';
+import Nav from './nav';
+import Footer from './footer';
 import { styles } from '../constants';
 
 configureAnchors({ offset: 0, scrollDuration: 1000 });
@@ -22,9 +22,12 @@ const Layout = props => (
       <meta name="keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter" />
       <meta name="description" content="read our first Newsletter for participants. See you soon ;)" />
       <meta
-        name="News_Keywords" content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
+        name="News_Keywords"
+        content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
       />
-      <title>JSHeroes 2019 | International Javascript Conference</title>
+      <title>
+JSHeroes 2019 | International Javascript Conference
+      </title>
       <meta property="og:title" content="JSHeroes 2019 | International Javascript Conference" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="http://www.jsheroes.io/" />
@@ -45,7 +48,9 @@ const Layout = props => (
       <script dangerouslySetInnerHTML={{ __html: hotjarTag() }} />
       <noscript>
         <img
-          height="1" width="1" alt="fb"
+          height="1"
+          width="1"
+          alt="fb"
           src="https://www.facebook.com/tr?id=1746399088999074&ev=PageView&noscript=1"
         />
       </noscript>
@@ -60,7 +65,8 @@ const Layout = props => (
     <Footer />
 
     {/* language=CSS */}
-    <style jsx global>{`
+    <style jsx global>
+      {`
       html, body, ul, h1, h2, h3 {
         border: 0;
         margin: 0;
@@ -116,7 +122,8 @@ const Layout = props => (
       .sticky-words {
         white-space: nowrap;
       }
-    `}</style>
+    `}
+    </style>
   </div>
 );
 

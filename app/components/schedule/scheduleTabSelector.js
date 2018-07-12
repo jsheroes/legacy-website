@@ -30,9 +30,14 @@ class ScheduleTabSelector extends Component {
           className={`tabselector-button ${active}`}
           onClick={this.handleClick(item.index)}
         >
-          <div>{ item.section }</div>
-          <div>{ item.date }</div>
-          <style jsx>{`
+          <div>
+            { item.section }
+          </div>
+          <div>
+            { item.date }
+          </div>
+          <style jsx>
+            {`
             .clearfix:after {
               display: table;
               content: '';
@@ -73,7 +78,8 @@ class ScheduleTabSelector extends Component {
                 font-size: 18px;
               }
             }
-        `}</style>
+        `}
+          </style>
         </button>
       );
     });
@@ -83,12 +89,13 @@ class ScheduleTabSelector extends Component {
     const { activePosition } = this.state;
     const agenda = schedule[activePosition].activities.slice(firstTalk, firstTalk + 3);
 
-    return agenda.map((item, index) =>
-      (<ScheduleRow
+    return agenda.map((item, index) => (
+      <ScheduleRow
         activeTab={activePosition}
         agendaItem={item}
         key={item.speakerRef || index}
-      />));
+      />
+    ));
   }
 
   render() {
@@ -103,19 +110,45 @@ class ScheduleTabSelector extends Component {
 
     return (
       <div>
-        <div className="buttons-section clearfix">{ buttons }</div>
-        { !isWorkshopTab && <div className="check-in">{ firstBreak }</div> }
-        <div className="content-section clearfix">{ morningTalks }</div>
-        { !isWorkshopTab && <div className="break-schedule">10:30 - 11:00 COFFEE BREAK</div> }
-        <div className="content-section clearfix">{ beforeLunchTalks }</div>
-        { !isWorkshopTab && <div className="break-schedule">12:30 - 14:00 LUNCH BREAK</div> }
-        <div className="content-section clearfix">{ afterLunchTalks }</div>
-        { !isWorkshopTab && <div className="break-schedule">15:30 - 16:00 COFFEE BREAK</div> }
-        <div className="content-section clearfix">{ lastTalks }</div>
+        <div className="buttons-section clearfix">
+          { buttons }
+        </div>
+        { !isWorkshopTab && (
+        <div className="check-in">
+          { firstBreak }
+        </div>
+        ) }
+        <div className="content-section clearfix">
+          { morningTalks }
+        </div>
+        { !isWorkshopTab && (
+        <div className="break-schedule">
+10:30 - 11:00 COFFEE BREAK
+        </div>
+        ) }
+        <div className="content-section clearfix">
+          { beforeLunchTalks }
+        </div>
+        { !isWorkshopTab && (
+        <div className="break-schedule">
+12:30 - 14:00 LUNCH BREAK
+        </div>
+        ) }
+        <div className="content-section clearfix">
+          { afterLunchTalks }
+        </div>
+        { !isWorkshopTab && (
+        <div className="break-schedule">
+15:30 - 16:00 COFFEE BREAK
+        </div>
+        ) }
+        <div className="content-section clearfix">
+          { lastTalks }
+        </div>
         <div className="buy-ticket-section">
           {
-          isWorkshopTab ?
-            (
+          isWorkshopTab
+            ? (
               <button className="button buy-ticket-button">
                 <a
                   href="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2018"
@@ -126,8 +159,7 @@ class ScheduleTabSelector extends Component {
                 </a>
               </button>
             )
-            :
-            (
+            : (
               <button className="button buy-ticket-button">
                 <a
                   href="https://ti.to/cluj-javascripters/jsheroes-2019"

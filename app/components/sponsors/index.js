@@ -1,24 +1,30 @@
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Link from 'next/link';
-import Section from '../../components/common/section';
+import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import sponsors from '../../data/sponsors';
 import Sponsor from './sponsor';
 
 const Sponsors = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
-    <ScrollableAnchor id={'sponsors'}>
+    <ScrollableAnchor id="sponsors">
       <div>
-        <h2>Our Sponsors</h2>
+        <h2>
+Our Sponsors
+        </h2>
         <p>
           If you wish to participate as a sponsor to our event contact us&nbsp;
           <Link href="mailto: contact@jsheroes.io">
             <a className="mail-to" target="_top">
-              <strong>welcome@jsheroes.io</strong>
+              <strong>
+welcome@jsheroes.io
+              </strong>
             </a>
           </Link>
         </p>
-        <p>These are the companies that joined our mission:</p>
+        <p>
+These are the companies that joined our mission:
+        </p>
 
         <ul>
           { sponsors.map(sponsor => <Sponsor {...sponsor} key={sponsor.title} />) }
@@ -26,7 +32,8 @@ const Sponsors = () => (
       </div>
     </ScrollableAnchor>
 
-    <style jsx>{`
+    <style jsx>
+      {`
       div {
         padding: 140px 0 0;
       }
@@ -106,7 +113,8 @@ const Sponsors = () => (
         color: ${styles.mainColor1};
         font-weight: 800;
       }
-    `}</style>
+    `}
+    </style>
   </Section>
 );
 

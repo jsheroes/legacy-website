@@ -20,7 +20,8 @@ const Modal = props => (
 );
 
 const Style = () => (
-  <style jsx>{`
+  <style jsx>
+    {`
     .modal-backdrop {
       opacity: .5;
       position: fixed;
@@ -93,7 +94,8 @@ const Style = () => (
         opacity: 0;
       }
     }
-  `}</style>
+  `}
+  </style>
 );
 
 export default Modal;

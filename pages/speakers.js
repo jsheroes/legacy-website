@@ -7,7 +7,7 @@ const Speakers = ({ speaker }) => (
   <Layout page="speaker">
     <SpeakerDetail speaker={speaker} />
   </Layout>
-  );
+);
 
 Speakers.getInitialProps = async ({ res, query }) => {
   const speaker = speakers.find(s => s.permalink === query.name);

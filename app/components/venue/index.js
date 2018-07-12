@@ -1,22 +1,27 @@
 import ScrollableAnchor from 'react-scrollable-anchor';
 import GoogleMap from './google.map';
 
-import Section from '../../components/common/section';
+import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
 const Venue = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor6 } }}>
-    <ScrollableAnchor id={'venue'}>
+    <ScrollableAnchor id="venue">
       <div>
-        <h2>Venue: Grand Hotel Italia</h2>
-        <p>Trifoiului Street number 2, Cluj-Napoca, Romania</p>
+        <h2>
+Venue: Grand Hotel Italia
+        </h2>
+        <p>
+Trifoiului Street number 2, Cluj-Napoca, Romania
+        </p>
 
         <GoogleMap />
 
       </div>
     </ScrollableAnchor>
 
-    <style jsx>{`
+    <style jsx>
+      {`
       div {
         padding: 140px 0;
       }
@@ -69,7 +74,8 @@ const Venue = () => (
           margin-bottom: 20px;
         }
       }
-    `}</style>
+    `}
+    </style>
   </Section>
 );
 

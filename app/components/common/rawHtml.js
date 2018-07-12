@@ -3,7 +3,8 @@ const RawHtml = ({ content, className, wrapperClassName }) => (
     <div className={`content ${className || ''}`} dangerouslySetInnerHTML={{ __html: content }} />
 
     {/* language=CSS */}
-    <style jsx global>{ `
+    <style jsx global>
+      { `
         .w-max-width {
           width: auto;
           max-width: 700px;

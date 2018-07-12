@@ -10,26 +10,31 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
 
   const singleSpeaker = typeof agendaItem.speakerRef === 'string';
 
-  const firstSpeaker = singleSpeaker ?
-    speakers.find(s => s.permalink === agendaItem.speakerRef) :
-    speakers.find(s => s.permalink === agendaItem.speakerRef[0]);
+  const firstSpeaker = singleSpeaker
+    ? speakers.find(s => s.permalink === agendaItem.speakerRef)
+    : speakers.find(s => s.permalink === agendaItem.speakerRef[0]);
 
-  const secondSpeaker = singleSpeaker ?
-    null :
-    speakers.find(s => s.permalink === agendaItem.speakerRef[1]);
+  const secondSpeaker = singleSpeaker
+    ? null
+    : speakers.find(s => s.permalink === agendaItem.speakerRef[1]);
 
   if (!firstSpeaker) { // TBA in agenda
     return (
       <div key={agendaItem.time} className="activity-row clearfix">
         <div className="activity-details">
-          <span>{agendaItem.overrideTitle || 'TBA'}</span>
+          <span>
+            {agendaItem.overrideTitle || 'TBA'}
+          </span>
         </div>
         <div className="activity-location">
           <div className="room-and-time">
-            <div>{ agendaItem.time }</div>
+            <div>
+              { agendaItem.time }
+            </div>
           </div>
         </div>
-        <style jsx>{`
+        <style jsx>
+          {`
             .activity-row {
               padding: 20px 0;
               border-bottom: 1px solid rgba( 255, 255, 255, .7 );
@@ -65,7 +70,8 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
                 display: block;
               }
             }
-          `}</style>
+          `}
+        </style>
       </div>
     );
   }
@@ -73,19 +79,21 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
   const isWorkshopTab = activeTab === 0;
   const activity = isWorkshopTab ? firstSpeaker.workshop : firstSpeaker.talk;
   const activityTitle = activity.soldOut ? `${activity.title} ( SOLD OUT )` : activity.title;
-  const titleAs = isWorkshopTab ?
-    `/workshops/${firstSpeaker.workshop.permalink}` :
-    `/speakers/${firstSpeaker.permalink}`;
-  const titleLink = isWorkshopTab ?
-    `/workshops?name=${firstSpeaker.workshop.permalink}` :
-    `/speakers?name=${firstSpeaker.permalink}`;
+  const titleAs = isWorkshopTab
+    ? `/workshops/${firstSpeaker.workshop.permalink}`
+    : `/speakers/${firstSpeaker.permalink}`;
+  const titleLink = isWorkshopTab
+    ? `/workshops?name=${firstSpeaker.workshop.permalink}`
+    : `/speakers?name=${firstSpeaker.permalink}`;
 
   return (
-    <div key={activity.title}className="activity-row clearfix">
+    <div key={activity.title} className="activity-row clearfix">
       <div className="activity-details">
         <div className="activity-title">
           <Link href={titleLink} as={titleAs}>
-            <a onMouseEnter={() => { Router.prefetch(titleLink); }}>{ activityTitle }</a>
+            <a onMouseEnter={() => { Router.prefetch(titleLink); }}>
+              { activityTitle }
+            </a>
           </Link>
         </div>
         <div>
@@ -97,8 +105,15 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
               {firstSpeaker.fullName}
             </a>
           </Link>
-          <span className="speaker-position">, { firstSpeaker.position }</span>
-          { firstSpeaker.company && (<span className="speaker-company">{ firstSpeaker.company }</span>) }
+          <span className="speaker-position">
+,
+            { firstSpeaker.position }
+          </span>
+          { firstSpeaker.company && (
+          <span className="speaker-company">
+            { firstSpeaker.company }
+          </span>
+          ) }
         </div>
         { secondSpeaker && (
           <div>
@@ -110,16 +125,27 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
                 {secondSpeaker.fullName}
               </a>
             </Link>
-            <span className="speaker-position">, { secondSpeaker.position }</span>
-            { secondSpeaker.company && (<span className="speaker-company">{ secondSpeaker.company }</span>) }
+            <span className="speaker-position">
+,
+              { secondSpeaker.position }
+            </span>
+            { secondSpeaker.company && (
+            <span className="speaker-company">
+              { secondSpeaker.company }
+            </span>
+            ) }
           </div>
         ) }
 
       </div>
       <div className="activity-location">
         <div className="room-and-time">
-          <div>{ agendaItem.time }</div>
-          <div>{ agendaItem.room && agendaItem.room }</div>
+          <div>
+            { agendaItem.time }
+          </div>
+          <div>
+            { agendaItem.room && agendaItem.room }
+          </div>
         </div>
         <div className="speaker-image">
           <img
@@ -135,7 +161,8 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
           ) }
         </div>
       </div>
-      <style jsx>{`
+      <style jsx>
+        {`
         .activity-row {
           padding: 20px 0;
           border-bottom: 1px solid rgba( 255, 255, 255, .7 );
@@ -237,7 +264,8 @@ const ScheduleRow = ({ agendaItem, activeTab }) => { // eslint-disable-line comp
             margin: 0;
           }
         }
-      `}</style>
+      `}
+      </style>
     </div>
   );
 };
