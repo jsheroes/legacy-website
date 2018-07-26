@@ -14,7 +14,7 @@ const Footer = () => (
       </div>
       <div className="col-md-3 col-sm-4">
         <span className="headline">
-          Participate
+Participate
         </span>
         <div>
           <a
@@ -42,21 +42,25 @@ Privacy Stament
       </div>
       <div className="col-md-3 col-sm-4">
         <span className="headline">
-          Prior Events
+Prior Events
         </span>
         <div>
           <a href="http://2017.jsheroes.io" rel="noopener noreferrer" target="_blank">
-JSHeroes 2017
+            JSHeroes 2017
+          </a>
+        </div>
+        <div>
+          <a href="/2018">
+JSHeroes 2018
           </a>
         </div>
       </div>
       <div className="col-md-3 col-sm-4">
         <span className="headline">
-          Connect with us
+Connect with us
         </span>
         <div className="social">
-          {
-          socialmedia.map(item => (
+          {socialmedia.map(item => (
             <span key={item.url}>
               <Link href={`${item.url}`}>
                 <a target="_blank">
@@ -64,8 +68,7 @@ JSHeroes 2017
                 </a>
               </Link>
             </span>
-          ))
-        }
+          ))}
         </div>
       </div>
     </div>
@@ -76,7 +79,7 @@ JSHeroes 2017
 2018 · JSHeroes. All rights reserved.
       </div>
       <div className="col-sm-6">
-Made with
+        Made with
         <i className="fa fa-heart" aria-hidden="true" />
         {' '}
 by
@@ -89,107 +92,104 @@ JSHeroes Community.
     {/* language=CSS */}
     <style jsx>
       {`
-      footer {
-        color: white;
-        padding: 50px 15px 0;
-        background-color: ${styles.mainColor2};
-        flex-shrink: 0;
-      }
-
-      .col-md-3 div {
-        padding: 4px 0;
-      }
-
-      .home-link {
-        display: inline-block;
-        width: 150px;
-        padding: 0;
-        margin: 65px 20px 65px;
-      }
-
-      .home-link img {
-        width: inherit;
-        height: auto;
-      }
-
-      @media (min-width: ${mediaQueries.S} ) {
-
-        .social {
-          width: 170px;
-        }
-
-        .social span {
-          padding-left: 10px;
-          padding-bottom: 10px;
-          width: 55px;
-          float: left;
-        }
-
-        .social i {
-          font-size: 27px;
-        }
-
-      }
-
-      @media (max-width: ${mediaQueries.S} ) {
         footer {
-          text-align: center;
+          color: white;
+          padding: 50px 15px 0;
+          background-color: ${styles.mainColor2};
+          flex-shrink: 0;
         }
 
-        .social {
-          padding-top: 20px;
-          width: 100%;
-        }
-
-        .social span {
-          padding-left: 20px;
-          padding-bottom: 20px;
-          width: 55px;
-        }
-
-        .social i {
-          font-size: 27px;
-        }
         .col-md-3 div {
-          margin: 15px 0;
+          padding: 4px 0;
         }
-      }
 
-      .copyright {
-        margin-top: 20px;
-        padding: 5px 0;
-        font-size: 14px;
-        background-color: black;
-        padding: 20px;
-      }
+        .home-link {
+          display: inline-block;
+          width: 150px;
+          padding: 0;
+          margin: 65px 20px 65px;
+        }
 
-      .copyright .col-sm-5 {
-        padding-left: 35px;
-      }
+        .home-link img {
+          width: inherit;
+          height: auto;
+        }
 
-      .headline {
-        text-transform: uppercase;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        border-bottom: 2px solid white;
-        display: inline-block;
-      }
+        @media (min-width: ${mediaQueries.S}) {
+          .social {
+            width: 170px;
+          }
 
-      a {
-        color: ${styles.mainColor3};
-        font-size: 16px;
-        text-decoration: none;
-        text-transform: none;
-        transition-duration: .5s;
-      }
+          .social span {
+            padding-left: 10px;
+            padding-bottom: 10px;
+            width: 55px;
+            float: left;
+          }
 
-      a:hover {
-        color: ${styles.mainColor6};
-        text-decoration: none;
-      }
+          .social i {
+            font-size: 27px;
+          }
+        }
 
-    `}
+        @media (max-width: ${mediaQueries.S}) {
+          footer {
+            text-align: center;
+          }
+
+          .social {
+            padding-top: 20px;
+            width: 100%;
+          }
+
+          .social span {
+            padding-left: 20px;
+            padding-bottom: 20px;
+            width: 55px;
+          }
+
+          .social i {
+            font-size: 27px;
+          }
+          .col-md-3 div {
+            margin: 15px 0;
+          }
+        }
+
+        .copyright {
+          margin-top: 20px;
+          padding: 5px 0;
+          font-size: 14px;
+          background-color: black;
+          padding: 20px;
+        }
+
+        .copyright .col-sm-5 {
+          padding-left: 35px;
+        }
+
+        .headline {
+          text-transform: uppercase;
+          padding-bottom: 5px;
+          margin-bottom: 10px;
+          margin-top: 10px;
+          border-bottom: 2px solid white;
+          display: inline-block;
+        }
+
+        a {
+          color: ${styles.mainColor3};
+          font-size: 16px;
+          text-decoration: none;
+          text-transform: none;
+          transition-duration: 0.5s;
+        }
+
+        a:hover {
+          color: ${styles.mainColor6};
+          text-decoration: none;
+        }
+      `}
     </style>
   </footer>
 );

@@ -2,8 +2,9 @@ import Link from 'next/link';
 import Router from 'next/router';
 import { styles, mediaQueries } from '../../constants';
 
-const Speaker = ({ speaker }) => (
+const Speaker = ({ speaker, year }) => (
   <div>
+    { !year && (
     <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
       <div
         className="speaker-info-box"
@@ -27,7 +28,32 @@ const Speaker = ({ speaker }) => (
         </div>
       </div>
     </Link>
-
+    )
+    }
+    {
+      year && (
+      <div
+        className="speaker-info-box"
+      >
+        <img
+          src={`static/img/speakers/2018/${speaker.img}`}
+          alt={speaker.name}
+        />
+        <div className="speaker-hover" />
+        <div className="speaker-details">
+          <h5>
+            {speaker.fullName}
+          </h5>
+          <h6>
+            {speaker.position}
+          </h6>
+          <h6>
+            {speaker.company}
+          </h6>
+        </div>
+      </div>
+      )
+    }
     <style jsx>
       {`
       .speaker-info-box {

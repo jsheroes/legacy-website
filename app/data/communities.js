@@ -49,4 +49,9 @@ module.exports = [
     img: 'logo_frontendMeetupBudapest.svg',
     href: 'https://www.meetup.com/Frontend-Meetup-Budapest/',
   },
+  {
+    title: 'OdessaJS',
+    img: 'logo_odessa_js.png',
+    href: 'http://odessajs.org/',
+  },
 ];
