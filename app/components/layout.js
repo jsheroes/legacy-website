@@ -26,7 +26,7 @@ const Layout = props => (
         content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
       />
       <title>
-JSHeroes 2019 | International Javascript Conference
+        JSHeroes 2019 | International Javascript Conference
       </title>
       <meta property="og:title" content="JSHeroes 2019 | International Javascript Conference" />
       <meta property="og:type" content="website" />
