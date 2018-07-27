@@ -11,18 +11,19 @@ import Mission from '../app/components/mission';
 import Organizers from '../app/components/organizers/organizers';
 import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
+import store from '../app/data/index';
 
 export default () => (
   <Layout>
     <Header />
     <Updates />
     <AfterMovie />
-    <Speakers />
+    <Speakers year="2019" speakers={store.data2019.speakers} />
     {/* <Schedule /> */}
     <Mission />
-    <Sponsors />
-    <Partners />
-    <Communities />
+    <Sponsors year="2019" sponsors={store.data2019.sponsors} />
+    <Partners year="2019" partners={store.data2019.partners} />
+    <Communities year="2019" communities={store.data2019.communities} />
     <Organizers />
     <Venue />
     <ScrollBtn />

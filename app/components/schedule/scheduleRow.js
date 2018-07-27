@@ -1,7 +1,7 @@
 import { styles } from '../../constants';
 import speakers from '../../data/2018/speakers';
 
-const ScheduleRow = ({ agendaItem, activeTab }) => {
+const ScheduleRow = ({ agendaItem, activeTab, year }) => {
   // eslint-disable-line complexity
   if (!agendaItem) {
     return '';
@@ -127,11 +127,11 @@ const ScheduleRow = ({ agendaItem, activeTab }) => {
           </div>
         </div>
         <div className="speaker-image">
-          <img src={`static/img/speakers/2018/${firstSpeaker.img}`} alt={firstSpeaker.fullName} />
+          <img src={`static/img/speakers/${year}/${firstSpeaker.img}`} alt={firstSpeaker.fullName} />
           {secondSpeaker && (
             <img
               className="second-image"
-              src={`static/img/speakers/2018/${secondSpeaker.img}`}
+              src={`static/img/speakers/${year}/${secondSpeaker.img}`}
               alt={secondSpeaker.fullName}
             />
           )}

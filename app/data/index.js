@@ -6,8 +6,9 @@ import socialmedia from './socialmedia';
 import adoptAJser from './adopt-a-jser';
 
 export default {
-  2018: data2018,
-  2019: data2019,
+  currentYear: '2019',
+  data2018,
+  data2019,
   menuItems,
   news,
   socialmedia,

@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { mediaQueries } from '../../constants';
 
 const Partner = ({
-  href, className, img, title,
+  href, className, img, title, year,
 }) => (
   <li>
     <Link href={`${href}`}>
       <a className={className} target="_blank">
-        <img src={`static/img/partners/${img}`} title={`${title}`} alt={`${title}`} />
+        <img src={`static/img/partners/${year}/${img}`} title={`${title}`} alt={`${title}`} />
       </a>
     </Link>
 
