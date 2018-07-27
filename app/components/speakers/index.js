@@ -34,7 +34,7 @@ class Speakers extends Component {
   }
 
   render() {
-    const { year, speakers } = this.props;
+    const { year, speakers, baseUrl } = this.props;
     const title = `Our ${year} Heroes`;
     const isCurrentYear = year === data.currentYear;
     return (
@@ -72,7 +72,7 @@ class Speakers extends Component {
             <div className="speaker-boxes">
               {speakers.map(speaker => (
                 <div key={speaker.name} className="speaker-box">
-                  <Speaker speaker={speaker} year={year} currentYear={isCurrentYear} />
+                  <Speaker speaker={speaker} baseUrl={baseUrl} currentYear={isCurrentYear} />
                 </div>
               ))}
             </div>

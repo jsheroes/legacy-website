@@ -3,7 +3,7 @@ import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import ScheduleTabSelector from './scheduleTabSelector';
 
-const Schedule = ({ year, schedule }) => (
+const Schedule = ({ year, schedule, baseUrl }) => (
   <Section section={{ style: { backgroundColor: styles.mainColor4 } }}>
     <ScrollableAnchor id="schedule">
       <div id="schedule_section" className="section-padding">
@@ -12,7 +12,7 @@ const Schedule = ({ year, schedule }) => (
           <h2>
 Schedule
           </h2>
-          <ScheduleTabSelector schedule={schedule} year={year} />
+          <ScheduleTabSelector schedule={schedule} year={year} baseUrl={baseUrl} />
         </div>
       </div>
     </ScrollableAnchor>

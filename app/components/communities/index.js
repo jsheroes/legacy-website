@@ -3,7 +3,7 @@ import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import Community from './community';
 
-const Communities = ({ year, communities }) => (
+const Communities = ({ communities, baseUrl }) => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
     <ScrollableAnchor id="communities">
       <div>
@@ -23,7 +23,7 @@ const Communities = ({ year, communities }) => (
         </p>
         <ul>
           {communities.map(community => (
-            <Community {...community} key={community.title} year={year} />
+            <Community {...community} key={community.title} baseUrl={baseUrl} />
           ))}
         </ul>
         <p>

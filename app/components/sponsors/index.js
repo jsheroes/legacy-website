@@ -4,7 +4,7 @@ import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import Sponsor from './sponsor';
 
-const Sponsors = ({ year, sponsors }) => (
+const Sponsors = ({ baseUrl, sponsors }) => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
     <ScrollableAnchor id="sponsors">
       <div>
@@ -25,7 +25,7 @@ welcome@jsheroes.io
 These are the companies that joined our mission:
         </p>
         <ul>
-          {sponsors.map(sponsor => <Sponsor {...sponsor} key={sponsor.title} year={year} />)}
+          {sponsors.map(sponsor => <Sponsor {...sponsor} key={sponsor.title} baseUrl={baseUrl} />)}
         </ul>
       </div>
     </ScrollableAnchor>

@@ -5,11 +5,14 @@ import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
 import store from '../app/data';
 
-export default () => (
-  <Layout>
-    <Speakers year="2018" speakers={store.data2018.speakers} />
-    <Schedule year="2018" schedule={store.data2018.schedule} />
-    <Venue />
-    <ScrollBtn />
-  </Layout>
-);
+export default () => {
+  const baseUrl = 'static/img/2018';
+  return (
+    <Layout>
+      <Speakers baseUrl={baseUrl} speakers={store.data2018.speakers} />
+      <Schedule baseUrl={baseUrl} year="2018" schedule={store.data2018.schedule} />
+      <Venue />
+      <ScrollBtn />
+    </Layout>
+  );
+};

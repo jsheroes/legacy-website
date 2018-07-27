@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Router from 'next/router';
 import { styles, mediaQueries } from '../../constants';
 
-const Speaker = ({ speaker, year, currentYear }) => (
+const Speaker = ({ speaker, baseUrl, currentYear }) => (
   <div>
     {currentYear && (
       <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
@@ -12,7 +12,7 @@ const Speaker = ({ speaker, year, currentYear }) => (
             Router.prefetch(`/speakers?name=${speaker.permalink}`);
           }}
         >
-          <img src={`static/img/speakers/${year}/${speaker.img}`} alt={speaker.name} />
+          <img src={`${baseUrl}/speakers/${speaker.img}`} alt={speaker.name} />
           <div className="speaker-hover" />
           <div className="speaker-details">
             <h5>
@@ -30,7 +30,7 @@ const Speaker = ({ speaker, year, currentYear }) => (
     )}
     {!currentYear && (
       <div className="speaker-info-box">
-        <img src={`static/img/speakers/${year}/${speaker.img}`} alt={speaker.name} />
+        <img src={`${baseUrl}/speakers/${speaker.img}`} alt={speaker.name} />
         <div className="speaker-hover" />
         <div className="speaker-details">
           <h5>

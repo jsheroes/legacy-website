@@ -85,7 +85,7 @@ class ScheduleTabSelector extends Component {
 
   buildContent(firstTalk) {
     const { activePosition } = this.state;
-    const { schedule, year } = this.props;
+    const { schedule, baseUrl } = this.props;
     const agenda = schedule[activePosition].activities.slice(firstTalk, firstTalk + 3);
 
     return agenda.map((item, index) => (
@@ -93,7 +93,7 @@ class ScheduleTabSelector extends Component {
         activeTab={activePosition}
         agendaItem={item}
         key={item.speakerRef || index}
-        year={year}
+        baseUrl={baseUrl}
       />
     ));
   }

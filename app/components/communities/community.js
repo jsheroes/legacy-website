@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { mediaQueries } from '../../constants';
 
 const Community = ({
-  href, title, img, year,
+  href, title, img, baseUrl,
 }) => (
   <li>
     <Link href={`${href}`}>
       <a target="_blank" title={`${title}`}>
-        <img src={`static/img/communities/${year}/${img}`} alt={`${title}`} />
+        <img src={`${baseUrl}/communities/${img}`} alt={`${title}`} />
       </a>
     </Link>
 
