@@ -68,10 +68,12 @@ const Speaker = ({ speaker, baseUrl, currentYear }) => (
         .speaker-details h5 {
           font-size: 24px;
           color: ${styles.mainColor3};
+          margin: 10px 0;
         }
         .speaker-details h6 {
           font-size: 16px;
           color: ${styles.mainColor3};
+          margin: 10px 0;
         }
         .speaker-details {
           position: absolute;
