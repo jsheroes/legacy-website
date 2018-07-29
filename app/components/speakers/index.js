@@ -18,9 +18,11 @@ function addObserver() {
     entries.forEach(element => {
       if (element.isIntersecting && element.intersectionRatio === 1) {
         if (element.target.className.indexOf('active') === -1 && window.innerWidth <= 425) {
+          // eslint-disable-next-line no-param-reassign
           element.target.className += ' active';
         }
       } else if (element.target.className.indexOf('active') > -1) {
+        // eslint-disable-next-line no-param-reassign
         element.target.className = element.target.className.replace(' active', '');
       }
     });
