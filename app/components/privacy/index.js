@@ -236,7 +236,7 @@ const PrivacyMain = () => (
       <p>
         We welcome your views about our website and our privacy policy. In case you want more
         information about how we collect and manage data, or you wish to correct or delete that data
-        we might have about you, please contact us at:
+        we might have about you, please contact us at:{' '}
         <a href="mailto:welcome@jsheroes.io">welcome@jsheroes.io</a>
       </p>
       <p>Last updated: 4 June, 2018.</p>
@@ -333,4 +333,4 @@ const PrivacyMain = () => (
   </Section>
 );
 
-export default   PrivacyMain;
+export default PrivacyMain;

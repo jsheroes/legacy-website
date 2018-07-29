@@ -173,6 +173,7 @@ class Header extends Component {
                 left: 0;
                 transform: translateY(-50%);
                 width: 100%;
+                max-width: 100%;
                 margin-top: 0;
               }
               .header-logo {
@@ -241,6 +242,7 @@ class Header extends Component {
               .header-container .col-xs-12 {
                 text-align: center;
                 margin-top: 80px;
+                width: 100%;
               }
               .header-container .col-xs-12 .header-btn {
                 float: none;

@@ -1,4 +1,4 @@
-export default   [
+export default [
   // left as sample
   // {
   //   name: 'brent',
@@ -47,7 +47,7 @@ export default   [
     fullName: 'Simona Cotin',
     permalink: 'simona-cotin',
     firstName: 'Simona',
-    reference: 'him',
+    reference: 'her',
     position: 'Senior Developer Advocate ',
     company: 'Microsoft',
     img: 'simona-cotin.jpg',

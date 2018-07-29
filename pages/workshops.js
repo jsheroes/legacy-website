@@ -109,10 +109,7 @@ const Workshop = ({ speakers }) => {
               <strong>{firstSpeaker.firstName}</strong>
               `s workshop?
             </div>
-            <div>
-              Join
-              {firstSpeaker.reference} at JSHeroes!
-            </div>
+            <div>Join {firstSpeaker.reference} at JSHeroes!</div>
           </div>
           <div className="workshop-ticket">
             <a

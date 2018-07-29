@@ -17,7 +17,7 @@ const Layout = props => (
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
         rel="stylesheet"
       />
-      <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="/static/css/bootstrap-grid.min.css" />
       <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -84,10 +84,19 @@ const Layout = props => (
           padding: 0;
         }
 
+        * {
+          box-sizing: border-box;
+        }
+
         body {
-          font-size: 18px !important;
-          font-family: Roboto, sans-serif !important;
-          font-weight: 300 !important;
+          font-size: 18px;
+          font-family: Roboto, sans-serif;
+          font-weight: 300;
+          line-height: 1.5;
+        }
+
+        a {
+          color: #337ab7;
         }
 
         .big-wrapper {

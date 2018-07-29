@@ -76,14 +76,10 @@ const SpeakerDetail = ({ speaker }) => {
               <div className="visible-md visible-lg">
                 <div className="join">
                   <div>
-                    Already curious to see
-                    <strong>{speaker.firstName}</strong>
+                    Already curious to see <strong>{speaker.firstName}</strong>
                     `s talk?
                   </div>
-                  <div>
-                    Join
-                    {speaker.reference} at JSHeroes!
-                  </div>
+                  <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
 
                 <a
@@ -114,14 +110,10 @@ const SpeakerDetail = ({ speaker }) => {
               <div className="hidden-md hidden-lg">
                 <div className="join">
                   <div>
-                    Already curious to see
-                    <strong>{speaker.firstName}</strong>
+                    Already curious to see <strong>{speaker.firstName}</strong>
                     `s talk?
                   </div>
-                  <div>
-                    Join
-                    {speaker.reference} at JSHeroes!
-                  </div>
+                  <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
 
                 <a

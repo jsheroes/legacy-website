@@ -65,8 +65,7 @@ const Footer = () => (
         <i className="fa fa-copyright" aria-hidden="true" /> 2018 · JSHeroes. All rights reserved.
       </div>
       <div className="col-sm-6">
-        Made with
-        <i className="fa fa-heart" aria-hidden="true" /> by
+        Made with <i className="fa fa-heart" aria-hidden="true" /> by
         <span className="sticky-words">JSHeroes Community.</span>
       </div>
     </div>
@@ -176,4 +175,4 @@ const Footer = () => (
   </footer>
 );
 
-export default   Footer;
+export default Footer;
