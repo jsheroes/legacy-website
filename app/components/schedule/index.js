@@ -117,4 +117,4 @@ const Style = () => (
   </style>
 );
 
-export default   Schedule;
+export default Schedule;

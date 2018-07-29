@@ -1,4 +1,4 @@
-export default   {
+export default {
   coreTeam: [
     {
       name: 'Alexandra Retegan',

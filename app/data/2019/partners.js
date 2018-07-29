@@ -1,4 +1,4 @@
-export default   [
+export default [
   {
     title: 'CodeCamp',
     img: 'logo_code_camp_ro.jpg',

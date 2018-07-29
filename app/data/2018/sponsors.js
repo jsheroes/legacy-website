@@ -1,4 +1,4 @@
-export default   [
+export default [
   {
     title: 'Evozon',
     img: 'logo_new_evozon.png',

@@ -518,4 +518,4 @@ const NewsletterMain = () => (
   </Section>
 );
 
-export default   NewsletterMain;
+export default NewsletterMain;

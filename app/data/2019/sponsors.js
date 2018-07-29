@@ -1,4 +1,4 @@
-export default   [
+export default [
   // left as sample
   // {
   //   title: 'Evozon',

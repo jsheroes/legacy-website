@@ -74,4 +74,4 @@ const Venue = () => (
   </Section>
 );
 
-export default   Venue;
+export default Venue;

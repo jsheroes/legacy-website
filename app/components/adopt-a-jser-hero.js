@@ -51,4 +51,4 @@ const AdoptAJSerHero = () => (
   </Section>
 );
 
-export default   AdoptAJSerHero;
+export default AdoptAJSerHero;

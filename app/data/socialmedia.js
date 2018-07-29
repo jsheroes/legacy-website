@@ -1,4 +1,4 @@
-export default   [
+export default [
   {
     url: 'https://www.facebook.com/jsheroes/',
     label: 'fa fa-facebook',

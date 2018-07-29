@@ -1,4 +1,4 @@
-export default   [
+export default [
   {
     title: 'timJS',
     img: 'logo_timisoara_js.png',

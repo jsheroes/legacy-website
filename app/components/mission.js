@@ -80,4 +80,4 @@ const Mission = () => (
   </Section>
 );
 
-export default   Mission;
+export default Mission;
