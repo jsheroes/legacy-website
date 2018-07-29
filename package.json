@@ -4,11 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "linter": "eslint app pages --quiet",
+    "linter": "eslint -c config/.eslintrc.json app pages --quiet",
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "format": "prettier --write '**/*.{js,css,md}'",
+    "format": "prettier --config ./config/.prettierrc --ignore-path ./config/.prettierignore --write '**/*.{js,css,md}'",
     "precommit": "lint-staged"
   },
   "keywords": [],
@@ -38,8 +38,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier --write",
-      "eslint --fix",
+      "prettier --config ./config/.prettierrc --ignore-path ./config/.prettierignore --write",
+      "eslint -c config/.eslintrc.json --fix",
       "git add"
     ]
   }
