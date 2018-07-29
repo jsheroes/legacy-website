@@ -1,6 +1,4 @@
-import { style } from '../../constants';
-
-const Modal = props => (
+const Modal = ({ children }) => (
   <div>
     <Style />
 
@@ -11,7 +9,7 @@ const Modal = props => (
           <i className="fa fa-window-close-o" />
         </div>
 
-        <div className="modal-content">{props.children}</div>
+        <div className="modal-content">{children}</div>
       </div>
     </div>
   </div>

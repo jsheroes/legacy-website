@@ -16,9 +16,21 @@ class Header extends Component {
     this.handleScroll = this.handleScroll.bind(this);
     this.updateHeroSize = this.updateHeroSize.bind(this);
     this.buildMedia = this.buildMedia.bind(this);
+    this.setSize = this.setSize.bind(this);
   }
 
   componentDidMount() {
+    this.setSize();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll, {
+      passive: true,
+    });
+    window.removeEventListener('resize', this.updateHeroSize);
+  }
+
+  setSize() {
     const rect = document.getElementById('logo').getBoundingClientRect();
     const docEl = document.documentElement;
     const logoElementOffsetTop = rect.top + (window.pageYOffset || docEl.scrollTop || 0);
@@ -34,17 +46,11 @@ class Header extends Component {
     window.addEventListener('resize', this.updateHeroSize);
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll, {
-      passive: true,
-    });
-    window.removeEventListener('resize', this.updateHeroSize);
-  }
-
   handleScroll() {
+    const { logoOffsetTop } = this.state;
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollPosition > this.state.logoOffsetTop) {
+    if (scrollPosition > logoOffsetTop) {
       this.setState({ logoFixed: true });
     } else {
       this.setState({ logoFixed: false });
@@ -97,10 +103,11 @@ class Header extends Component {
   }
 
   render() {
+    const { windowHeight, logoFixed } = this.state;
     const heroBcgImg = {
       position: 'relative',
       overflow: 'hidden',
-      height: this.state.windowHeight,
+      height: windowHeight,
     };
 
     const heroDarkOverlay = {
@@ -127,7 +134,7 @@ class Header extends Component {
               <div className="container header-container">
                 <div className="row">
                   <div className="col-md-12 header-logo">
-                    <div className={this.state.logoFixed ? 'hide' : ''} id="logo">
+                    <div className={logoFixed ? 'hide' : ''} id="logo">
                       <span className="logoJs">JS</span>
                       <span className="logoHeroes">Heroes</span>
                     </div>

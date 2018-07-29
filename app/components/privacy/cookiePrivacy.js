@@ -7,9 +7,20 @@ class CookiePrivacy extends Component {
     this.state = {
       visible: 'false',
     };
+
+    this.createBanner = this.createBanner.bind(this);
   }
 
   componentDidMount() {
+    this.createBanner();
+  }
+
+  handleAccept() {
+    localStorage.setItem('policy', 'true');
+    this.setState({ visible: 'false' });
+  }
+
+  createBanner() {
     const policy = localStorage.getItem('policy');
     if (policy === 'true') {
       this.setState({ visible: 'false' });
@@ -19,13 +30,9 @@ class CookiePrivacy extends Component {
     }
   }
 
-  handleAccept() {
-    localStorage.setItem('policy', 'true');
-    this.setState({ visible: 'false' });
-  }
-
   render() {
-    if (this.state.visible === 'false') {
+    const { visible } = this.state;
+    if (visible === 'false') {
       return null;
     }
     return (
@@ -77,4 +84,4 @@ class CookiePrivacy extends Component {
   }
 }
 
-export default   CookiePrivacy;
+export default CookiePrivacy;

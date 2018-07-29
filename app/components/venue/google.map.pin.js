@@ -13,15 +13,16 @@ export default class MapPin extends Component {
   }
 
   toggleLabel() {
-    this.setState({
-      showPinLabel: !this.state.showPinLabel,
-    });
+    this.setState(({ showPinLabel }) => ({
+      showPinLabel: !showPinLabel,
+    }));
   }
 
   render() {
+    const { showPinLabel } = this.state;
     return (
-      <div onClick={this.toggleLabel}>
-        <div className={`map-pin-loc ${this.state.showPinLabel ? 'mpl-show' : ''}`}>
+      <div onClick={this.toggleLabel} role="presentation">
+        <div className={`map-pin-loc ${showPinLabel ? 'mpl-show' : ''}`}>
           <p>Trifoiului Street number 3, Cluj-Napoca, Romania</p>
           <p>
             <strong>Grand Hotel Italia</strong>

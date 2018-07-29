@@ -1,6 +1,6 @@
 const next = require('./next.config');
 
-export default   {
+module.exports = {
   next,
   port: 4000,
   baseUrl: '',

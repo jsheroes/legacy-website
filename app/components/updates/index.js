@@ -12,8 +12,9 @@ class Updates extends Component {
   }
 
   render() {
+    const { activeNews } = this.state;
     const newsData = news.map((item, index) => {
-      const activeCss = index === this.state.activeNews ? 'active-news' : 'news-item';
+      const activeCss = index === activeNews ? 'active-news' : 'news-item';
       return (
         <li //eslint-disable-line
           className={activeCss}
@@ -24,7 +25,7 @@ class Updates extends Component {
         </li>
       );
     });
-    const { content } = news[this.state.activeNews];
+    const { content } = news[activeNews];
     return (
       <Section>
         <ScrollableAnchor id="news">

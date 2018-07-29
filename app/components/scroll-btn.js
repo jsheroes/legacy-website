@@ -35,9 +35,10 @@ class ScrollBtn extends Component {
   }
 
   render() {
+    const { show } = this.state;
     return (
-      <div className={`back-top ${this.state.show ? 'show' : ''}`}>
-        <div className="go-to-anchor" onClick={() => goToAnchor('hero')}>
+      <div className={`back-top ${show ? 'show' : ''}`}>
+        <div className="go-to-anchor" onClick={() => goToAnchor('hero')} role="presentation">
           <i className="fa fa-angle-up" />
         </div>
 
@@ -96,4 +97,4 @@ class ScrollBtn extends Component {
   }
 }
 
-export default   ScrollBtn;
+export default ScrollBtn;

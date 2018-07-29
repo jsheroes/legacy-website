@@ -9,7 +9,7 @@ import { styles } from '../constants';
 
 configureAnchors({ offset: 0, scrollDuration: 1000 });
 
-const Layout = props => (
+const Layout = ({ page, children }) => (
   <div className="big-wrapper">
     <Head>
       <link href="/static/img/favicon.png" rel="shortcut icon" />
@@ -62,9 +62,9 @@ const Layout = props => (
     </Head>
 
     <div className="nav-and-content">
-      <Nav page={props.page} />
+      <Nav page={page} />
 
-      {props.children}
+      {children}
     </div>
 
     <Footer />
