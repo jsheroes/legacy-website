@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Section from '../common/section';
 import RawHtml from '../common/rawHtml';
 import { styles, mediaQueries } from '../../constants';
+import store from '../../data';
 
 const SpeakerDetail = ({ speaker }) => {
   const talks = buildTalks(speaker);
@@ -18,7 +19,7 @@ at JSHeroes
         <meta property="og:url" content={`https://jsheroes.io/speakers/${speaker.permalink}`} />
         <meta
           property="og:image"
-          content={`https://jsheroes.io/static/img/speakers/${speaker.img}`}
+          content={`https://jsheroes.io//static/img/${store.currentYear}/speakers/${speaker.img}`}
         />
         <meta property="og:image:type" content={`image/${imageExtension}`} />
         <meta property="og:description" content={speaker.description} />
@@ -36,7 +37,7 @@ at JSHeroes
             <div className="col-md-3 side">
               <div className="speaker-info-box">
                 <div className="speaker-img">
-                  <img src={`/static/img/speakers/${speaker.img}`} alt={speaker.fullName} />
+                  <img src={`/static/img/${store.currentYear}/speakers/${speaker.img}`} alt={speaker.fullName} />
                 </div>
               </div>
               <div className="details-container">

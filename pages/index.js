@@ -11,20 +11,24 @@ import Mission from '../app/components/mission';
 import Organizers from '../app/components/organizers/organizers';
 import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
+import store from '../app/data/index';
 
-export default () => (
-  <Layout>
-    <Header />
-    <Updates />
-    <AfterMovie />
-    <Speakers />
-    {/* <Schedule /> */}
-    <Mission />
-    <Sponsors />
-    <Partners />
-    <Communities />
-    <Organizers />
-    <Venue />
-    <ScrollBtn />
-  </Layout>
-);
+export default () => {
+  const baseUrl = `static/img/${store.currentYear}`;
+  return (
+    <Layout>
+      <Header />
+      <Updates />
+      <AfterMovie />
+      <Speakers year="2019" baseUrl={baseUrl} speakers={store.data2019.speakers} />
+      {/* <Schedule /> */}
+      <Mission />
+      <Sponsors baseUrl={baseUrl} sponsors={store.data2019.sponsors} />
+      <Partners baseUrl={baseUrl} partners={store.data2019.partners} />
+      <Communities baseUrl={baseUrl} communities={store.data2019.communities} />
+      <Organizers />
+      <Venue />
+      <ScrollBtn />
+    </Layout>
+  );
+};

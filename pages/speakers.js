@@ -1,7 +1,7 @@
 import Layout from '../app/components/layout';
 import SpeakerDetail from '../app/components/speakers/speakerDetail';
 import Helpers from '../app/helpers';
-import speakers from '../app/data/speakers';
+import store from '../app/data';
 
 const Speakers = ({ speaker }) => (
   <Layout page="speaker">
@@ -10,7 +10,7 @@ const Speakers = ({ speaker }) => (
 );
 
 Speakers.getInitialProps = async ({ res, query }) => {
-  const speaker = speakers.find(s => s.permalink === query.name);
+  const speaker = store[`data${store.currentYear}`].speakers.find(s => s.permalink === query.name);
   if (!speaker) {
     Helpers.redirectTo(res, '/');
   }

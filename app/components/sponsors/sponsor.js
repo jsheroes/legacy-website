@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import { mediaQueries } from '../../constants';
 
-const Sponsor = ({ href, title, img }) => (
+const Sponsor = ({
+  href, title, img, baseUrl,
+}) => (
   <li>
     <Link href={`${href}`}>
       <a target="_blank">
-        <img src={`static/img/sponsors/${img}`} title={`${title}`} alt={`${title}`} />
+        <img src={`${baseUrl}/sponsors/${img}`} title={`${title}`} alt={`${title}`} />
       </a>
     </Link>
 
