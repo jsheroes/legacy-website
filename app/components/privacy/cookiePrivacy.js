@@ -77,4 +77,4 @@ class CookiePrivacy extends Component {
   }
 }
 
-module.exports = CookiePrivacy;
+export default   CookiePrivacy;

@@ -127,4 +127,4 @@ const Communities = ({ communities, baseUrl }) => (
   </Section>
 );
 
-module.exports = Communities;
+export default   Communities;

@@ -1,4 +1,4 @@
-module.exports = [
+export default   [
   {
     url: 'https://www.facebook.com/jsheroes/',
     label: 'fa fa-facebook',

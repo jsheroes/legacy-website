@@ -64,4 +64,4 @@ const OrganizersHeader = () => (
   </div>
 );
 
-module.exports = OrganizersHeader;
+export default   OrganizersHeader;

@@ -1,5 +1,5 @@
 // see source file server/config.js
-module.exports = {
+export default   {
   webpack: null,
   poweredByHeader: false,
   // distDir: '.build',

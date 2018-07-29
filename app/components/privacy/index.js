@@ -333,4 +333,4 @@ const PrivacyMain = () => (
   </Section>
 );
 
-module.exports = PrivacyMain;
+export default   PrivacyMain;

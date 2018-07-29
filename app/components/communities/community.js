@@ -62,4 +62,4 @@ const Community = ({ href, title, img, baseUrl }) => (
   </li>
 );
 
-module.exports = Community;
+export default   Community;

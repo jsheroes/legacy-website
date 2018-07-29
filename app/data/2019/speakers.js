@@ -1,4 +1,4 @@
-module.exports = [
+export default   [
   // left as sample
   // {
   //   name: 'brent',

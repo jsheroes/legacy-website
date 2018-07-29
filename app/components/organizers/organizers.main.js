@@ -191,4 +191,4 @@ class OrganizersMain extends Component {
   }
 }
 
-module.exports = OrganizersMain;
+export default   OrganizersMain;

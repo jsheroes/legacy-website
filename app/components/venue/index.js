@@ -74,4 +74,4 @@ const Venue = () => (
   </Section>
 );
 
-module.exports = Venue;
+export default   Venue;

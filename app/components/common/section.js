@@ -1,6 +1,6 @@
-import { style, mediaQueries } from '../../constants';
+import { mediaQueries } from '../../constants';
 
-const Section = ({ section, mainContainer, children }) => (
+const Section = ({ section = {}, mainContainer = {}, children }) => (
   <section style={section.style}>
     <div style={mainContainer.style}>
       <style jsx>

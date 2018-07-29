@@ -73,4 +73,4 @@ const Partner = ({ href, className, img, title, baseUrl }) => (
   </li>
 );
 
-module.exports = Partner;
+export default   Partner;

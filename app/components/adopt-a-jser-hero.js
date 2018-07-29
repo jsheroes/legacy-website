@@ -51,4 +51,4 @@ const AdoptAJSerHero = () => (
   </Section>
 );
 
-module.exports = AdoptAJSerHero;
+export default   AdoptAJSerHero;

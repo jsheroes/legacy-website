@@ -80,4 +80,4 @@ const Mission = () => (
   </Section>
 );
 
-module.exports = Mission;
+export default   Mission;

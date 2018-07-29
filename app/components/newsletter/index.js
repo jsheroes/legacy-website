@@ -33,4 +33,4 @@ const NewsletterHero = () => (
   </div>
 );
 
-module.exports = NewsletterHero;
+export default   NewsletterHero;

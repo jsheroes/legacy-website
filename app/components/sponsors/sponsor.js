@@ -56,4 +56,4 @@ const Sponsor = ({ href, title, img, baseUrl }) => (
   </li>
 );
 
-module.exports = Sponsor;
+export default   Sponsor;

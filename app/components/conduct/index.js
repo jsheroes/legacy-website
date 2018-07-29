@@ -83,4 +83,4 @@ const ConductHero = () => (
   </div>
 );
 
-module.exports = ConductHero;
+export default   ConductHero;

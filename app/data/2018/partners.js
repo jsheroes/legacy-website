@@ -1,4 +1,4 @@
-module.exports = [
+export default   [
   {
     title: 'Egghead',
     img: 'logo_egghead.png',

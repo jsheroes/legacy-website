@@ -1,4 +1,4 @@
-module.exports = [
+export default   [
   {
     name: 'mark',
     fullName: 'Mark Dalgleish',
@@ -961,7 +961,7 @@ module.exports = [
       permalink: 'nodejs',
       logo: 'nodejs.png',
       description: `
-      <p>Node.js applications can be run at the command line, but we'll focus on running them as a service, so that they will automatically restart on reboot or failure, and can safely be used in a production environment. We will cover setting up a secure production-ready Node.js environment with failover on multi Ubuntu 16.04 server.</p><p>The servers will run a Node.js application that will provide users with secure access to the application through a Nginx reverse proxy. The Nginx server will offer HTTPS, using a free certificate provided by Let's Encrypt.</p>  
+      <p>Node.js applications can be run at the command line, but we'll focus on running them as a service, so that they will automatically restart on reboot or failure, and can safely be used in a production environment. We will cover setting up a secure production-ready Node.js environment with failover on multi Ubuntu 16.04 server.</p><p>The servers will run a Node.js application that will provide users with secure access to the application through a Nginx reverse proxy. The Nginx server will offer HTTPS, using a free certificate provided by Let's Encrypt.</p>
       `,
       prerequisites: `
         <p>Basic Linux knowledge</p>

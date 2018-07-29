@@ -1,4 +1,4 @@
-module.exports = {
+export default   {
   coreTeam: [
     {
       name: 'Alexandra Retegan',

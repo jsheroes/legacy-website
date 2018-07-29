@@ -103,4 +103,4 @@ const Partners = ({ baseUrl, partners }) => (
   </Section>
 );
 
-module.exports = Partners;
+export default   Partners;

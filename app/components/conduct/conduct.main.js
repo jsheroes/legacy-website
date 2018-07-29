@@ -162,4 +162,4 @@ const ConductMain = () => (
   </Section>
 );
 
-module.exports = ConductMain;
+export default   ConductMain;

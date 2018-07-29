@@ -93,4 +93,4 @@ const Organizers = () => (
   </Section>
 );
 
-module.exports = Organizers;
+export default   Organizers;

@@ -110,4 +110,4 @@ const Sponsors = ({ baseUrl, sponsors }) => (
     </style>
   </Section>
 );
-module.exports = Sponsors;
+export default   Sponsors;

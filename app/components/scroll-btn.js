@@ -96,4 +96,4 @@ class ScrollBtn extends Component {
   }
 }
 
-module.exports = ScrollBtn;
+export default   ScrollBtn;
