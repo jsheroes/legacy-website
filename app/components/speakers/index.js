@@ -103,6 +103,7 @@ class Speakers extends Component {
             }
 
             .speakers-section .section-header h2 {
+              padding-top: 60px;
               text-align: center;
               font-size: 33px;
               color: ${styles.mainColor4};

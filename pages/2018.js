@@ -9,7 +9,7 @@ export default () => {
   const baseUrl = 'static/img/2018';
   return (
     <Layout>
-      <Speakers baseUrl={baseUrl} speakers={store.data2018.speakers} />
+      <Speakers baseUrl={baseUrl} year="2018" speakers={store.data2018.speakers} />
       <Schedule baseUrl={baseUrl} year="2018" schedule={store.data2018.schedule} />
       <Venue />
       <ScrollBtn />
