@@ -8,9 +8,8 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "precommit": "npm run linter",
     "format": "prettier --write '**/*.{js,css,md}'",
-    "posttest": "npm run format"
+    "precommit": "lint-staged"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +32,15 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-react": "^7.10.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
     "prettier": "^1.14.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run format",
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
