@@ -1,7 +1,7 @@
 const express = require('express');
 const nextServer = require('next');
 
-const config = require('./config');
+const config = require('./config/config');
 
 const dev = process.env.NODE_ENV !== 'production';
 
