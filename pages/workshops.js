@@ -51,9 +51,7 @@ const Workshop = ({ speakers }) => {
             alt={workshop.title}
           />
           <div className="workshop-title">
-            <h1>
-              {workshopTitle}
-            </h1>
+            <h1>{workshopTitle}</h1>
             <span>
               by:
               <strong>
@@ -88,45 +86,32 @@ const Workshop = ({ speakers }) => {
                 )}
               </strong>
             </span>
-            <p className="workshop-type">
-              {workshop.type}
-              , April 18th
-            </p>
+            <p className="workshop-type">{workshop.type}, April 18th</p>
           </div>
         </div>
         <div className="workshop-description clearfix">
           <p className="workshop-section">
-            <strong>
-Curricula
-            </strong>
+            <strong>Curricula</strong>
           </p>
           <RawHtml content={workshop.description} />
           <p className="workshop-section">
-            <strong>
-Prerequisites
-            </strong>
+            <strong>Prerequisites</strong>
           </p>
           <RawHtml content={workshop.prerequisites} />
           <p className="workshop-section">
-            <strong>
-About the trainer
-            </strong>
+            <strong>About the trainer</strong>
           </p>
           <RawHtml content={firstSpeaker.description} />
           {secondSpeaker && <RawHtml content={secondSpeaker.description} />}
           <div className="workshop-section">
             <div>
               Are you interested in
-              <strong>
-                {firstSpeaker.firstName}
-              </strong>
+              <strong>{firstSpeaker.firstName}</strong>
               `s workshop?
             </div>
             <div>
               Join
-              {firstSpeaker.reference}
-              {' '}
-at JSHeroes!
+              {firstSpeaker.reference} at JSHeroes!
             </div>
           </div>
           <div className="workshop-ticket">

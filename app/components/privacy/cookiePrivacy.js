@@ -36,25 +36,16 @@ class CookiePrivacy extends Component {
             on our website, to analyze our traffic, to provide social media functionalities.
           </p>
           <p>
-            To find out more or to opt-out, please read our
-            {' '}
+            To find out more or to opt-out, please read our{' '}
             <a href="/privacy" target="_blank">
               Privacy Statement.
             </a>
           </p>
           <p>
-            By choosing
-            {' '}
-            <strong>
-I Accept
-            </strong>
-            {' '}
-you consent to our use of cookies and other
+            By choosing <strong>I Accept</strong> you consent to our use of cookies and other
             tracking technologies.
           </p>
-          <button onClick={() => this.handleAccept()}>
-I Accept
-          </button>
+          <button onClick={() => this.handleAccept()}>I Accept</button>
         </div>
         <style jsx>
           {`

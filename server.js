@@ -50,7 +50,7 @@ app
     server.get('*', (req, res) => handle(req, res));
 
     // start
-    server.listen(config.port, (err) => {
+    server.listen(config.port, err => {
       if (err) throw err;
       console.log(`app is:
       - running on port ${config.port}
@@ -58,7 +58,7 @@ app
       `);
     });
   })
-  .catch((ex) => {
+  .catch(ex => {
     console.error(ex.stack);
     process.exit(1);
   });

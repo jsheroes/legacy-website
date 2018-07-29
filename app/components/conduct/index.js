@@ -24,70 +24,61 @@ const heroDarkOverlay = {
 
 const ConductHero = () => (
   <div>
-    <Section
-      section={{ style: heroBcgImg }}
-      mainContainer={{ style: heroDarkOverlay }}
-    >
+    <Section section={{ style: heroBcgImg }} mainContainer={{ style: heroDarkOverlay }}>
       <div className="dark-banner-overlay">
         <h2 className="text-center" id="logo">
-The
-          <span className="logoJs">
-JS
-          </span>
-          <span className="logoHeroes">
-Heroes
-          </span>
-          {' '}
-Code of Conduct
+          The
+          <span className="logoJs">JS</span>
+          <span className="logoHeroes">Heroes</span> Code of Conduct
         </h2>
       </div>
     </Section>
     <style jsx>
       {`
-      .logoJs {
-        color: #0098ff;
-      }
-      .logoHeroes {
-        color: #e1ebef;
-      }
-      .header-logo {
-        padding: 10px;
-      }
-      .dark-banner-overlay {
-        width: 100%;
-        height: 30%;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        content: "";
-        background: hsla(0,0%,0%,.6) none repeat scroll 0 0;
-      }
-      h2 {
-        margin: 45px auto 30px;
-        line-height: 1.1;
-        color: ${styles.mainColor3};
-        font-size: 54px;
-        font-weight: 700;
-        text-align: center;
-      }
-      @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
-        h2 {
-          font-size: 46px;
+        .logoJs {
+          color: #0098ff;
         }
-      }
+        .logoHeroes {
+          color: #e1ebef;
+        }
+        .header-logo {
+          padding: 10px;
+        }
+        .dark-banner-overlay {
+          width: 100%;
+          height: 30%;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          content: '';
+          background: hsla(0, 0%, 0%, 0.6) none repeat scroll 0 0;
+        }
+        h2 {
+          margin: 45px auto 30px;
+          line-height: 1.1;
+          color: ${styles.mainColor3};
+          font-size: 54px;
+          font-weight: 700;
+          text-align: center;
+        }
+        @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
+          h2 {
+            font-size: 46px;
+          }
+        }
 
-      @media (max-width: ${mediaQueries.L}) and (min-width: ${mediaQueries.S}) {
-        h2 {
-          font-size: 43px;
+        @media (max-width: ${mediaQueries.L}) and (min-width: ${mediaQueries.S}) {
+          h2 {
+            font-size: 43px;
+          }
         }
-      }
 
-      @media (max-width: ${mediaQueries.S}) {
-        h2 {
-          font-size: 24px;
+        @media (max-width: ${mediaQueries.S}) {
+          h2 {
+            font-size: 24px;
+          }
         }
-      }
-    `}
+      `}
     </style>
   </div>
 );

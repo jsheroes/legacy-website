@@ -11,8 +11,7 @@ const Communities = ({ communities, baseUrl }) => (
           We
           <span>
             {' '}
-            <i className="fa fa-heart fa-1x" aria-hidden="true" />
-            {' '}
+            <i className="fa fa-heart fa-1x" aria-hidden="true" />{' '}
           </span>
           Communities
         </h2>
@@ -27,9 +26,7 @@ const Communities = ({ communities, baseUrl }) => (
           ))}
         </ul>
         <p>
-          <strong>
-#humansofjavascript
-          </strong>
+          <strong>#humansofjavascript</strong>
         </p>
       </div>
     </ScrollableAnchor>

@@ -13,9 +13,7 @@ const Footer = () => (
         </Link>
       </div>
       <div className="col-md-3 col-sm-4">
-        <span className="headline">
-Participate
-        </span>
+        <span className="headline">Participate</span>
         <div>
           <a
             href="https://ti.to/cluj-javascripters/jsheroes-2019"
@@ -27,38 +25,28 @@ Participate
         </div>
         <div>
           <Link href="/code-of-conduct">
-            <a>
-Code of Conduct
-            </a>
+            <a>Code of Conduct</a>
           </Link>
         </div>
         <div>
           <Link href="/privacy">
-            <a>
-Privacy Stament
-            </a>
+            <a>Privacy Stament</a>
           </Link>
         </div>
       </div>
       <div className="col-md-3 col-sm-4">
-        <span className="headline">
-Prior Events
-        </span>
+        <span className="headline">Prior Events</span>
         <div>
           <a href="http://2017.jsheroes.io" rel="noopener noreferrer" target="_blank">
             JSHeroes 2017
           </a>
         </div>
         <div>
-          <a href="/2018">
-JSHeroes 2018
-          </a>
+          <a href="/2018">JSHeroes 2018</a>
         </div>
       </div>
       <div className="col-md-3 col-sm-4">
-        <span className="headline">
-Connect with us
-        </span>
+        <span className="headline">Connect with us</span>
         <div className="social">
           {socialmedia.map(item => (
             <span key={item.url}>
@@ -74,18 +62,12 @@ Connect with us
     </div>
     <div className="row copyright">
       <div className="col-sm-6">
-        <i className="fa fa-copyright" aria-hidden="true" />
-        {' '}
-2018 · JSHeroes. All rights reserved.
+        <i className="fa fa-copyright" aria-hidden="true" /> 2018 · JSHeroes. All rights reserved.
       </div>
       <div className="col-sm-6">
         Made with
-        <i className="fa fa-heart" aria-hidden="true" />
-        {' '}
-by
-        <span className="sticky-words">
-JSHeroes Community.
-        </span>
+        <i className="fa fa-heart" aria-hidden="true" /> by
+        <span className="sticky-words">JSHeroes Community.</span>
       </div>
     </div>
 

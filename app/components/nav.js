@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 import menuItems from '../data/menuitems';
 import { styles, mediaQueries, emptyFunc } from '../constants';
 
 const sizeL = 992;
+
+function isOnDetailsPage(page = '') {
+  return page.indexOf('speaker') > -1 || page.indexOf('/workshop') > -1;
+}
 
 export default class Nav extends Component {
   constructor(props) {
@@ -14,27 +17,36 @@ export default class Nav extends Component {
       hideNavUp: false,
       currentHash: '',
       showNavItems: false,
-      viewportWidth: 0,
+      viewportWidth: 0
     };
 
     this.handleScroll = this.handleScroll.bind(this);
     this.handleHashChange = this.handleHashChange.bind(this);
     this.toggleNavItems = this.toggleNavItems.bind(this);
     this.hideNavItems = this.hideNavItems.bind(this);
+    this.setViewport = this.setViewport.bind(this);
   }
 
   componentDidMount() {
-    this.setState({
-      viewportWidth: window.innerWidth,
-      showNavItems: window.innerWidth > sizeL,
-    });
-    window.addEventListener('scroll', this.handleScroll, { passive: true });
-    window.addEventListener('hashchange', this.handleHashChange);
+    this.setViewport();
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll, { passive: true });
+    window.removeEventListener('scroll', this.handleScroll, {
+      passive: true
+    });
     window.removeEventListener('hashchange', this.handleHashChange);
+  }
+
+  setViewport() {
+    this.setState({
+      viewportWidth: window.innerWidth,
+      showNavItems: window.innerWidth > sizeL
+    });
+    window.addEventListener('scroll', this.handleScroll, {
+      passive: true
+    });
+    window.addEventListener('hashchange', this.handleHashChange);
   }
 
   handleScroll() {
@@ -52,14 +64,14 @@ export default class Nav extends Component {
   }
 
   toggleNavItems() {
-    this.setState({
-      showNavItems: !this.state.showNavItems,
-    });
+    this.setState(({ showNavItems }) => ({
+      showNavItems: !showNavItems
+    }));
   }
 
   hideNavItems() {
     this.setState({
-      showNavItems: false,
+      showNavItems: false
     });
   }
 
@@ -89,7 +101,7 @@ export default class Nav extends Component {
             className={`${showNavItems ? 'showNavItems' : ''}`}
             onClick={viewportWidth < sizeL ? this.hideNavItems : emptyFunc}
           >
-            {menuItems.map((item) => {
+            {menuItems.map(item => {
               const active = `#${this.state.currentHash}` === item.url ? 'active' : '';
               return (
                 <li key={item.id}>
@@ -279,12 +291,4 @@ export default class Nav extends Component {
       </div>
     );
   }
-}
-
-Nav.propTypes = {
-  style: PropTypes.any,
-};
-
-function isOnDetailsPage(page = '') {
-  return page.indexOf('speaker') > -1 || page.indexOf('/workshop') > -1;
 }

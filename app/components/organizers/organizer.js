@@ -1,24 +1,17 @@
 import { styles, mediaQueries } from '../../constants';
 
-const Organizer = ({
-  role, image, name, twitter,
-}) => (
+const Organizer = ({ role, image, name, twitter }) => (
   <div>
     <div className="organizer-info-box">
       <img src={`static/img/organizers/${image}`} alt={name} />
       <div className="organizer-hover" />
       <div className="organizer-details">
-        <h5>
-          {name}
-        </h5>
-        <h6>
-          {role}
-        </h6>
+        <h5>{name}</h5>
+        <h6>{role}</h6>
         {twitter && (
           <h6>
             <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer">
-              @
-              {twitter}
+              @{twitter}
             </a>
           </h6>
         )}

@@ -7,11 +7,21 @@ const NewsletterMain = () => (
     <div className="newsletter-main">
       <div className="row">
         <div className="central-container text-center">
+          <h5>Hello #JSHeroes, and welcome on board</h5>
           <h5>
-Hello #JSHeroes, and welcome on board
-          </h5>
-          <h5>
-@JSHeroes 2017 ✨🚀✨✨
+            @JSHeroes 2017{' '}
+            <span role="img" aria-label="star">
+              ✨
+            </span>
+            <span role="img" aria-label="rocket">
+              🚀
+            </span>
+            <span role="img" aria-label="star">
+              ✨
+            </span>
+            <span role="img" aria-label="star">
+              ✨
+            </span>
           </h5>
         </div>
       </div>
@@ -26,9 +36,7 @@ Hello #JSHeroes, and welcome on board
             taking place. It’s one of our dreams and the highpoint of our active community. We’re a
             bit crazy but at the end of the day, it’s all worth it :)
           </p>
-          <p>
-Here&apos;s some general information about the event:
-          </p>
+          <p>Here&apos;s some general information about the event:</p>
         </div>
       </div>
 
@@ -37,19 +45,21 @@ Here&apos;s some general information about the event:
           <br />
           <br />
           <h6>
-Date & Venue 🗓️🗺️
+            Date & Venue{' '}
+            <span role="img" aria-label="date">
+              🗓️
+            </span>
+            <span role="img" aria-label="venue">
+              🗺️
+            </span>
           </h6>
           <p>
-            JSHeroes 2017 will take place on June 8th and 9th (Thursday and Friday) at
-            {' '}
+            JSHeroes 2017 will take place on June 8th and 9th (Thursday and Friday) at{' '}
             <Link href="https://www.google.ro/maps/place/Grand+Hotel+Italia/@46.7524816,23.6058735,15z/data=!4m5!3m4!1s0x0:0xc5070934d476fab6!8m2!3d46.7524816!4d23.6058735">
               <a target="_blank">
-                <strong>
-Grand Hotel Italia
-                </strong>
+                <strong>Grand Hotel Italia</strong>
               </a>
-            </Link>
-            {' '}
+            </Link>{' '}
             in Cluj-Napoca. It is a one-track conference and we have rented the space from the
             hotel&apos;s ground floor, where there’s a spacious conference room and a large hallway
             and you can enjoy the technical booths and the conference registration.
@@ -58,7 +68,16 @@ Grand Hotel Italia
           <br />
           <br />
           <h6>
-Travel... ✈️🚆🚗
+            Travel...{' '}
+            <span role="img" aria-label="plane">
+              ✈️
+            </span>
+            <span role="img" aria-label="train">
+              🚆
+            </span>
+            <span role="img" aria-label="car">
+              🚗
+            </span>
           </h6>
           <p>
             If you&apos;re joining us from around Europe, your easiest option to get here fast is a
@@ -71,13 +90,10 @@ Travel... ✈️🚆🚗
             comfortable (but quite expensive) option, but you can also drive here.
           </p>
           <p>
-            For travelling inside Cluj-Napoca, we definitely recommend
-            {' '}
+            For travelling inside Cluj-Napoca, we definitely recommend{' '}
             <Link href="https://www.getpony.ro/">
               <a target="_blank">
-                <strong>
-Pony car sharing
-                </strong>
+                <strong>Pony car sharing</strong>
               </a>
             </Link>
             .
@@ -86,7 +102,10 @@ Pony car sharing
           <br />
           <br />
           <h6>
-...and Accomodation 🛏️
+            ...and Accomodation{' '}
+            <span role="img" aria-label="bed">
+              🛏️
+            </span>
           </h6>
           <p>
             If you want to be &apos;adopted&apos; by one of our Cluj JavaScripters during the
@@ -96,23 +115,16 @@ Pony car sharing
             is ok for you, according to the info you filled in the application forms.
           </p>
           <p>
-            Apply here if you want to
-            {' '}
+            Apply here if you want to{' '}
             <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdfCJJ2cPRuyLbCnTJxZ3BvZWsFr6rXnr225KJ7qm1stlCaQg/viewform?c=0&w=1">
               <a target="_blank">
-                <strong>
-be a guest
-                </strong>
+                <strong>be a guest</strong>
               </a>
-            </Link>
-            {' '}
-            or, if you&apos;re from Cluj-Napoca - apply here and
-            {' '}
+            </Link>{' '}
+            or, if you&apos;re from Cluj-Napoca - apply here and{' '}
             <Link href="https://docs.google.com/forms/d/e/1FAIpQLSca6Pf5M5w6BG09qu9iAooLkT9IV57Xrjr_CNnhFi0GKlu2FA/viewform?c=0&w=1">
               <a target="_blank">
-                <strong>
-be a host
-                </strong>
+                <strong>be a host</strong>
               </a>
             </Link>
             .
@@ -120,16 +132,12 @@ be a host
           <p>
             We also recommend finding an apartment through Airbnb or look for a hostel - but hurry,
             it&apos;s the Transilvania International Film Festival time and the accommodation can be
-            harder to find, than usual. And
-            {' '}
+            harder to find, than usual. And{' '}
             <Link href="http://www.hotelbiscuit.ro/">
               <a target="_blank">
-                <strong>
-this
-                </strong>
+                <strong>this</strong>
               </a>
-            </Link>
-            {' '}
+            </Link>{' '}
             really homey hotel (called Biscuit) is also ideally located - close both to the
             conference venue and to the city center - and they offer a 10% discount for JSHeroes
             participants.
@@ -138,33 +146,56 @@ this
           <br />
           <br />
           <h6>
-Speakers, Topics, Language 🎙️
+            Speakers, Topics, Language{' '}
+            <span role="img" aria-label="mic">
+              🎙️
+            </span>
           </h6>
           <p>
-            JSHeroes unites top international speakers from 🇩🇰 🇺🇸 🇷🇴 🇮🇱 🇮🇳 🇨🇭 🇭🇺 🇫🇷 🇳🇴 Throughout
-            the two days of conference, they will talk about the latest trends in the world of
-            JavaScript and Web Development. We have designed an agenda that is well balanced and
-            targets the entire audience, including the people with extensive knowledge and
-            experience.
+            JSHeroes unites top international speakers from{' '}
+            <span role="img" aria-label="denmark">
+              🇩🇰
+            </span>{' '}
+            <span role="img" aria-label="usa">
+              🇺🇸
+            </span>{' '}
+            <span role="img" aria-label="Romania">
+              🇷🇴
+            </span>{' '}
+            <span role="img" aria-label="Israel">
+              🇮🇱
+            </span>{' '}
+            <span role="img" aria-label="India">
+              🇮🇳
+            </span>{' '}
+            <span role="img" aria-label="Switzerland">
+              🇨🇭
+            </span>{' '}
+            <span role="img" aria-label="Hungary">
+              🇭🇺
+            </span>{' '}
+            <span role="img" aria-label="France">
+              🇫🇷
+            </span>{' '}
+            <span role="img" aria-label="Norway">
+              🇳🇴
+            </span>{' '}
+            Throughout the two days of conference, they will talk about the latest trends in the
+            world of JavaScript and Web Development. We have designed an agenda that is well
+            balanced and targets the entire audience, including the people with extensive knowledge
+            and experience.
           </p>
           <p>
-            See the
-            {' '}
+            See the{' '}
             <Link href="/#speakers">
               <a target="_blank">
-                <strong>
-full lineup
-                </strong>
+                <strong>full lineup</strong>
               </a>
-            </Link>
-            {' '}
-            and
-            {' '}
+            </Link>{' '}
+            and{' '}
             <Link href="/#schedule">
               <a target="_blank">
-                <strong>
-schedule
-                </strong>
+                <strong>schedule</strong>
               </a>
             </Link>
           </p>
@@ -172,13 +203,14 @@ schedule
             We are committed to tackle diverse topics and flavors from the JavaScript ecosystem, so
             all the speakers’ proposals went through a complete analysis.
           </p>
-          <p>
-All talks are in English. We have no live streaming of the talks.
-          </p>
+          <p>All talks are in English. We have no live streaming of the talks.</p>
           <br />
           <br />
           <h6>
-Catering 🍲
+            Catering{' '}
+            <span role="img" aria-label="food">
+              🍲
+            </span>
           </h6>
           <p>
             There is premium catering lunch on both days (vegan options available) and coffee
@@ -191,17 +223,17 @@ Catering 🍲
           <br />
           <br />
           <h6>
-Code of Conduct 🤝
+            Code of Conduct{' '}
+            <span role="img" aria-label="code of conduct">
+              🤝
+            </span>
           </h6>
           <p>
             All attendees, speakers, sponsors and volunteers at JSHeroes are required to agree with
-            our
-            {' '}
+            our{' '}
             <Link href="/code-of-conduct">
               <a target="_blank">
-                <strong>
-Code of Conduct
-                </strong>
+                <strong>Code of Conduct</strong>
               </a>
             </Link>
             . As organisers, Cluj JavaScripters will enforce this code throughout the event. We
@@ -211,7 +243,10 @@ Code of Conduct
           <br />
           <br />
           <h6>
-Tickets 🎟️
+            Tickets{' '}
+            <span role="img" aria-label="tickets">
+              🎟️
+            </span>
           </h6>
           <p>
             You should have received your ticket in your email inbox. Please make sure you have your
@@ -227,50 +262,45 @@ Tickets 🎟️
           <br />
           <br />
           <h6>
-Visit Cluj-Napoca in June 🍒 - it&apos;s the best time of the year!
+            Visit Cluj-Napoca in June{' '}
+            <span role="img" aria-label="cherry">
+              🍒
+            </span>{' '}
+            - it&apos;s the best time of the year!
           </h6>
           <p>
             Make sure you plan some time for movies, since you&apos;ll be visiting Cluj-Napoca
-            during the
-            {' '}
+            during the{' '}
             <Link href="http://tiff.ro/en">
               <a target="_blank">
-                <strong>
-Transilvania International Film Festival
-                </strong>
+                <strong>Transilvania International Film Festival</strong>
               </a>
-            </Link>
-            {' '}
+            </Link>{' '}
             (2-11 June). Check their movies and parties program and book your tickets in advance.
           </p>
           <p>
-            There&apos;s also other activities and places to visit in
-            {' '}
+            There&apos;s also other activities and places to visit in{' '}
             <Link href="http://www.visitclujnapoca.ro/en/">
               <a target="_blank">
-                <strong>
-Cluj-Napoca
-                </strong>
+                <strong>Cluj-Napoca</strong>
               </a>
-            </Link>
-            {' '}
-            and in
-            {' '}
+            </Link>{' '}
+            and in{' '}
             <Link href="https://www.lonelyplanet.com/romania/transylvania">
               <a target="_blank">
-                <strong>
-Transylvania
-                </strong>
+                <strong>Transylvania</strong>
               </a>
-            </Link>
-            {' '}
+            </Link>{' '}
             so we recommend that you definitely take a few days to look around.
           </p>
 
           <br />
           <br />
           <h6>
-Keep updated on our latest conference news 🔊
+            Keep updated on our latest conference news{' '}
+            <span role="img" aria-label="speaker">
+              🔊
+            </span>
           </h6>
           <p>
             We send two Newsletters to each participant: this one, plus another - right before the
@@ -279,67 +309,42 @@ Keep updated on our latest conference news 🔊
 
           <br />
           <br />
-          <h6>
-So, until, then, let&apos;s keep in touch:
-          </h6>
+          <h6>So, until, then, let&apos;s keep in touch:</h6>
           <p>
-            We post all the major updates on our
-            {' '}
+            We post all the major updates on our{' '}
             <Link href="https://www.facebook.com/jsheroes">
               <a target="_blank">
-                <strong>
-Facebook page
-                </strong>
+                <strong>Facebook page</strong>
               </a>
             </Link>
-            , but in all truthfulness, we love
-            {' '}
+            , but in all truthfulness, we love{' '}
             <Link href="https://twitter.com/jsheroes">
               <a target="_blank">
-                <strong>
-Twitter
-                </strong>
+                <strong>Twitter</strong>
               </a>
-            </Link>
-            {' '}
+            </Link>{' '}
             so much more. So maybe you can join us on both :p Use the hashtag #jsheroes to tweet
             about the conference, connect with other attendees and share your photos when the big
-            days arrive. You can also check the Facebook
-            {' '}
+            days arrive. You can also check the Facebook{' '}
             <Link href="https://www.facebook.com/events/259539194509196/">
               <a target="_blank">
-                <strong>
-event
-                </strong>
+                <strong>event</strong>
               </a>
-            </Link>
-            {' '}
-            and
-            {' '}
+            </Link>{' '}
+            and{' '}
             <Link href="https://www.meetup.com/Cluj-Javascripters/events/239301886/">
               <a target="_blank">
-                <strong>
-Meetup
-                </strong>
+                <strong>Meetup</strong>
               </a>
-            </Link>
-            {' '}
+            </Link>{' '}
             to mark your attendance and see who else is attending.
           </p>
 
           <br />
-          <p>
-OK, that&apos;s all, folks!
-          </p>
-          <p>
-See you pretty soon! ;)
-          </p>
-          <p>
-Cheers,
-          </p>
-          <p>
-Cluj JavaScripters
-          </p>
+          <p>OK, that&apos;s all, folks!</p>
+          <p>See you pretty soon! ;)</p>
+          <p>Cheers,</p>
+          <p>Cluj JavaScripters</p>
         </div>
       </div>
       <br />

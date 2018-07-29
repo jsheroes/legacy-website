@@ -13,7 +13,7 @@ import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
 import store from '../app/data/index';
 
-export default () => {
+const Home = () => {
   const baseUrl = `static/img/${store.currentYear}`;
   return (
     <Layout>
@@ -32,3 +32,5 @@ export default () => {
     </Layout>
   );
 };
+
+export default Home;

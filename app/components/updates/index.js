@@ -20,9 +20,7 @@ class Updates extends Component {
           onClick={() => this.setState({ activeNews: index })}
           key={item.title}
         >
-          <strong>
-            {item.title}
-          </strong>
+          <strong>{item.title}</strong>
         </li>
       );
     });
@@ -31,12 +29,8 @@ class Updates extends Component {
       <Section>
         <ScrollableAnchor id="news">
           <div className="wrapper">
-            <h1>
-News
-            </h1>
-            <ul>
-              {newsData}
-            </ul>
+            <h1>News</h1>
+            <ul>{newsData}</ul>
             <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
           </div>
         </ScrollableAnchor>

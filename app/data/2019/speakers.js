@@ -52,7 +52,8 @@ module.exports = [
     company: 'Microsoft',
     img: 'simona-cotin.jpg',
     twitter: 'https://twitter.com/simona_cotin',
-    description: 'Simona Cotin is a web developer with a passion for teaching. She spends most of her time tinkering with JavaScript in the cloud and sharing her experience with other developers at community events like meetups and conferences or online. As a Cloud Developer Advocate, Simona engages with the web community to help create a great developer experience with Azure. She loves shipping code to production and has built network data analytics platforms using Angular, Typescript, React, and Java.',
+    description:
+      'Simona Cotin is a web developer with a passion for teaching. She spends most of her time tinkering with JavaScript in the cloud and sharing her experience with other developers at community events like meetups and conferences or online. As a Cloud Developer Advocate, Simona engages with the web community to help create a great developer experience with Azure. She loves shipping code to production and has built network data analytics platforms using Angular, Typescript, React, and Java.',
     talk: {
       title: 'TBA',
       description: '',

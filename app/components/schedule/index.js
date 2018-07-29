@@ -9,9 +9,7 @@ const Schedule = ({ year, schedule, baseUrl }) => (
       <div id="schedule_section" className="section-padding">
         <Style />
         <div className="row section-header">
-          <h2>
-Schedule
-          </h2>
+          <h2>Schedule</h2>
           <ScheduleTabSelector schedule={schedule} year={year} baseUrl={baseUrl} />
         </div>
       </div>

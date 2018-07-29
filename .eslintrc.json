@@ -1,9 +1,10 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb", "plugin:react/recommended", "prettier"],
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module"
   },
+  "plugins": ["jsx-a11y"],
   "env": {
     "browser": true,
     "node": true
@@ -13,21 +14,17 @@
     "max-len": 1,
     "react/jsx-uses-vars": 2,
     "react/react-in-jsx-scope": 0,
-    "react/prop-types": 1,
-    "react/require-default-props": 1,
-    "react/forbid-prop-types": 1,
-    "react/display-name": 1,
+    "react/prop-types": 0,
+    "react/jsx-one-expression-per-line": 0,
     "react/no-did-mount-set-state": 1,
     "react/jsx-filename-extension": 0,
     "jsx-a11y/no-static-element-interactions": 1,
 
     "jsx-a11y/anchor-is-valid": 0,
-    "jsx-a11y/accessible-emoji": 0,
     "react/button-has-type": 0,
     "react/destructuring-assignment": 0,
     "react/no-access-state-in-setstate": 1,
     "jsx-a11y/click-events-have-key-events": 1,
-
     "complexity": [2, 14],
     "max-statements": [1, 7],
     "max-statements-per-line": [

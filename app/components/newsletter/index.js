@@ -25,10 +25,7 @@ const heroDarkOverlay = {
 
 const NewsletterHero = () => (
   <div>
-    <Section
-      section={{ style: heroBcgImg }}
-      mainContainer={{ style: heroDarkOverlay }}
-    >
+    <Section section={{ style: heroBcgImg }} mainContainer={{ style: heroDarkOverlay }}>
       <ScrollableAnchor id="home">
         <div />
       </ScrollableAnchor>

@@ -15,7 +15,7 @@ function addObserver() {
   boxes.forEach(box => observer.observe(box));
 
   function handler(entries) {
-    entries.forEach((element) => {
+    entries.forEach(element => {
       if (element.isIntersecting && element.intersectionRatio === 1) {
         if (element.target.className.indexOf('active') === -1 && window.innerWidth <= 425) {
           element.target.className += ' active';
@@ -42,9 +42,7 @@ class Speakers extends Component {
         <ScrollableAnchor id="speakers">
           <div className="speakers-section">
             <div className={`row section-header ${isCurrentYear && 'year'}`}>
-              <h2>
-                {title}
-              </h2>
+              <h2>{title}</h2>
               {isCurrentYear && (
                 <div>
                   <p>

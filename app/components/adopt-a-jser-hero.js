@@ -16,39 +16,37 @@ const heroBcgImg = {
 const AdoptAJSerHero = () => (
   <Section section={{ style: heroBcgImg }}>
     <div className="hero-text">
-      <h1>
-Adopt a JavaScripter
-      </h1>
+      <h1>Adopt a JavaScripter</h1>
     </div>
 
     {/* language=CSS */}
     <style jsx>
       {`
-      .hero-text {
-        display: flex;
-        height: ${heroBcgImg.height};
-        align-items: center;
-        justify-content: center;
-      }
-      h1 {
-        padding-top: 50px;
-        color: ${styles.mainColor3};
-        font-family: Roboto, sans-serif;
-        font-weight: 700;
-      }
-
-      @media (max-width: ${mediaQueries.L}) {
-        .hero-text h1 {
-          padding-top: 0;
+        .hero-text {
+          display: flex;
+          height: ${heroBcgImg.height};
+          align-items: center;
+          justify-content: center;
         }
-      }
-
-      @media (max-width: ${mediaQueries.XS}) {
-        .hero-text h1 {
-          font-size: 28px;
+        h1 {
+          padding-top: 50px;
+          color: ${styles.mainColor3};
+          font-family: Roboto, sans-serif;
+          font-weight: 700;
         }
-      }
-    `}
+
+        @media (max-width: ${mediaQueries.L}) {
+          .hero-text h1 {
+            padding-top: 0;
+          }
+        }
+
+        @media (max-width: ${mediaQueries.XS}) {
+          .hero-text h1 {
+            font-size: 28px;
+          }
+        }
+      `}
     </style>
   </Section>
 );

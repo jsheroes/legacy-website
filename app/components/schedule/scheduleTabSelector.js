@@ -13,15 +13,16 @@ class ScheduleTabSelector extends Component {
   }
 
   handleClick(position) {
-    return () => this.setState({
-      activePosition: position,
-    });
+    return () =>
+      this.setState({
+        activePosition: position,
+      });
   }
 
   buildButtonSection() {
     const { activePosition } = this.state;
     const { schedule } = this.props;
-    return schedule.map((item) => {
+    return schedule.map(item => {
       const active = item.index === activePosition ? 'active' : '';
       return (
         <button
@@ -29,12 +30,8 @@ class ScheduleTabSelector extends Component {
           className={`tabselector-button ${active}`}
           onClick={this.handleClick(item.index)}
         >
-          <div>
-            {item.section}
-          </div>
-          <div>
-            {item.date}
-          </div>
+          <div>{item.section}</div>
+          <div>{item.date}</div>
           <style jsx>
             {`
               .clearfix:after {
@@ -105,46 +102,21 @@ class ScheduleTabSelector extends Component {
     const beforeLunchTalks = this.buildContent(3);
     const afterLunchTalks = this.buildContent(6);
     const lastTalks = this.buildContent(9);
-    const firstBreak = activePosition === 2 ? '08:00 - 09:00 COFFEE' : '08:00 - 09:00 CHECK-IN & COFFEE';
+    const firstBreak =
+      activePosition === 2 ? '08:00 - 09:00 COFFEE' : '08:00 - 09:00 CHECK-IN & COFFEE';
     const isWorkshopTab = activePosition === 0;
 
     return (
       <div>
-        <div className="buttons-section clearfix">
-          {buttons}
-        </div>
-        {!isWorkshopTab && (
-        <div className="check-in">
-          {firstBreak}
-        </div>
-        )}
-        <div className="content-section clearfix">
-          {morningTalks}
-        </div>
-        {!isWorkshopTab && (
-        <div className="break-schedule">
-10:30 - 11:00 COFFEE BREAK
-        </div>
-        )}
-        <div className="content-section clearfix">
-          {beforeLunchTalks}
-        </div>
-        {!isWorkshopTab && (
-        <div className="break-schedule">
-12:30 - 14:00 LUNCH BREAK
-        </div>
-        )}
-        <div className="content-section clearfix">
-          {afterLunchTalks}
-        </div>
-        {!isWorkshopTab && (
-        <div className="break-schedule">
-15:30 - 16:00 COFFEE BREAK
-        </div>
-        )}
-        <div className="content-section clearfix">
-          {lastTalks}
-        </div>
+        <div className="buttons-section clearfix">{buttons}</div>
+        {!isWorkshopTab && <div className="check-in">{firstBreak}</div>}
+        <div className="content-section clearfix">{morningTalks}</div>
+        {!isWorkshopTab && <div className="break-schedule">10:30 - 11:00 COFFEE BREAK</div>}
+        <div className="content-section clearfix">{beforeLunchTalks}</div>
+        {!isWorkshopTab && <div className="break-schedule">12:30 - 14:00 LUNCH BREAK</div>}
+        <div className="content-section clearfix">{afterLunchTalks}</div>
+        {!isWorkshopTab && <div className="break-schedule">15:30 - 16:00 COFFEE BREAK</div>}
+        <div className="content-section clearfix">{lastTalks}</div>
         <style jsx>
           {`
             .check-in,

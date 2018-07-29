@@ -1,6 +1,5 @@
 import React from 'react';
 import { configureAnchors } from 'react-scrollable-anchor';
-import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Nav from './nav';
 import Footer from './footer';
@@ -27,9 +26,7 @@ const Layout = props => (
         name="News_Keywords"
         content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
       />
-      <title>
-JSHeroes 2019 | International Javascript Conference
-      </title>
+      <title>JSHeroes 2019 | International Javascript Conference</title>
       <meta property="og:title" content="JSHeroes 2019 | International Javascript Conference" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="http://www.jsheroes.io/" />
@@ -140,12 +137,6 @@ JSHeroes 2019 | International Javascript Conference
     </style>
   </div>
 );
-
-Layout.propTypes = {
-  children: PropTypes.any,
-  page: PropTypes.string,
-};
-
 export default Layout;
 
 function googleAnalyticsTag() {
