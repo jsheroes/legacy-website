@@ -8,7 +8,7 @@ module.exports = [
     label: 'fa fa-twitter',
   },
   {
-    url: 'https://www.youtube.com/channel/UCeJEpnvZhG-VwGpzrzYLidQ',
+    url: 'https://www.youtube.com/c/jsheroes',
     label: 'fa fa-youtube',
   },
   {
@@ -20,7 +20,7 @@ module.exports = [
     label: 'fa fa-medium',
   },
   {
-    url: 'https://www.meetup.com/Cluj-Javascripters/',
+    url: 'https://www.meetup.com/jsheroes',
     label: 'fa fa-meetup',
   },
 ];
