@@ -73,7 +73,7 @@ const SpeakerDetail = ({ speaker }) => {
                   )}
                 </div>
               </div>
-              <div className="visible-md visible-lg">
+              <div className="hidden-sm-down">
                 <div className="join">
                   <div>
                     Already curious to see <strong>{speaker.firstName}</strong>
@@ -93,7 +93,7 @@ const SpeakerDetail = ({ speaker }) => {
               </div>
             </div>
             <div className="col-md-9 main">
-              <div className="details visible-md visible-lg">
+              <div className="details hidden-sm-down">
                 <h1 className="name">{speaker.fullName}</h1>
                 <div>
                   <strong>{speaker.position}</strong>
