@@ -11,42 +11,42 @@ const GoogleMap = ({ center, zoom }) => (
       bootstrapURLKeys={{ key: ConferenceMapApiKey }}
       options={createMapOptions}
     >
-      <MapPin lat={46.752870} lng={23.605845} />
+      <MapPin lat={46.75287} lng={23.605845} />
     </GoogleMapReact>
 
     <style jsx>
       {`
-      div {
-        position: relative;
-        width: 100%;
-        height: 666px;
-        overflow: hidden;
-      }
-
-      @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
         div {
-          height: 596px;
+          position: relative;
+          width: 100%;
+          height: 666px;
+          overflow: hidden;
         }
-      }
 
-      @media (max-width: ${mediaQueries.L}) and (min-width: ${mediaQueries.S}) {
-        div {
-          height: 494px;
+        @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
+          div {
+            height: 596px;
+          }
         }
-      }
 
-      @media only screen and (max-width: ${mediaQueries.S}) {
-        div {
-          height: 310px;
+        @media (max-width: ${mediaQueries.L}) and (min-width: ${mediaQueries.S}) {
+          div {
+            height: 494px;
+          }
         }
-      }
-    `}
+
+        @media only screen and (max-width: ${mediaQueries.S}) {
+          div {
+            height: 310px;
+          }
+        }
+      `}
     </style>
   </div>
 );
 
 GoogleMap.defaultProps = {
-  center: { lat: 46.752870, lng: 23.605845 },
+  center: { lat: 46.75287, lng: 23.605845 },
   zoom: 16,
   zoomControl: true,
   panControl: false,

@@ -1,6 +1,5 @@
 import React from 'react';
 import { configureAnchors } from 'react-scrollable-anchor';
-import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Nav from './nav';
 import Footer from './footer';
@@ -10,7 +9,7 @@ import { styles } from '../constants';
 
 configureAnchors({ offset: 0, scrollDuration: 1000 });
 
-const Layout = props => (
+const Layout = ({ page, children }) => (
   <div className="big-wrapper">
     <Head>
       <link href="/static/img/favicon.png" rel="shortcut icon" />
@@ -18,7 +17,7 @@ const Layout = props => (
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
         rel="stylesheet"
       />
-      <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="/static/css/bootstrap-grid.min.css" />
       <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -27,9 +26,7 @@ const Layout = props => (
         name="News_Keywords"
         content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
       />
-      <title>
-JSHeroes 2019 | International Javascript Conference
-      </title>
+      <title>JSHeroes 2019 | International Javascript Conference</title>
       <meta property="og:title" content="JSHeroes 2019 | International Javascript Conference" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="http://www.jsheroes.io/" />
@@ -65,9 +62,9 @@ JSHeroes 2019 | International Javascript Conference
     </Head>
 
     <div className="nav-and-content">
-      <Nav page={props.page} />
+      <Nav page={page} />
 
-      {props.children}
+      {children}
     </div>
 
     <Footer />
@@ -87,10 +84,19 @@ JSHeroes 2019 | International Javascript Conference
           padding: 0;
         }
 
+        * {
+          box-sizing: border-box;
+        }
+
         body {
-          font-size: 18px !important;
-          font-family: Roboto, sans-serif !important;
-          font-weight: 300 !important;
+          font-size: 18px;
+          font-family: Roboto, sans-serif;
+          font-weight: 300;
+          line-height: 1.5;
+        }
+
+        a {
+          color: #337ab7;
         }
 
         .big-wrapper {
@@ -140,12 +146,6 @@ JSHeroes 2019 | International Javascript Conference
     </style>
   </div>
 );
-
-Layout.propTypes = {
-  children: PropTypes.any,
-  page: PropTypes.string,
-};
-
 export default Layout;
 
 function googleAnalyticsTag() {

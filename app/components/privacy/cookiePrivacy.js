@@ -7,9 +7,20 @@ class CookiePrivacy extends Component {
     this.state = {
       visible: 'false',
     };
+
+    this.createBanner = this.createBanner.bind(this);
   }
 
   componentDidMount() {
+    this.createBanner();
+  }
+
+  handleAccept() {
+    localStorage.setItem('policy', 'true');
+    this.setState({ visible: 'false' });
+  }
+
+  createBanner() {
     const policy = localStorage.getItem('policy');
     if (policy === 'true') {
       this.setState({ visible: 'false' });
@@ -19,13 +30,9 @@ class CookiePrivacy extends Component {
     }
   }
 
-  handleAccept() {
-    localStorage.setItem('policy', 'true');
-    this.setState({ visible: 'false' });
-  }
-
   render() {
-    if (this.state.visible === 'false') {
+    const { visible } = this.state;
+    if (visible === 'false') {
       return null;
     }
     return (
@@ -36,25 +43,16 @@ class CookiePrivacy extends Component {
             on our website, to analyze our traffic, to provide social media functionalities.
           </p>
           <p>
-            To find out more or to opt-out, please read our
-            {' '}
+            To find out more or to opt-out, please read our{' '}
             <a href="/privacy" target="_blank">
               Privacy Statement.
             </a>
           </p>
           <p>
-            By choosing
-            {' '}
-            <strong>
-I Accept
-            </strong>
-            {' '}
-you consent to our use of cookies and other
+            By choosing <strong>I Accept</strong> you consent to our use of cookies and other
             tracking technologies.
           </p>
-          <button onClick={() => this.handleAccept()}>
-I Accept
-          </button>
+          <button onClick={() => this.handleAccept()}>I Accept</button>
         </div>
         <style jsx>
           {`
@@ -86,4 +84,4 @@ I Accept
   }
 }
 
-module.exports = CookiePrivacy;
+export default CookiePrivacy;

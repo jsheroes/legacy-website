@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { mediaQueries } from '../../constants';
 
-const Partner = ({
-  href, className, img, title, baseUrl,
-}) => (
+const Partner = ({ href, className, img, title, baseUrl }) => (
   <li>
     <Link href={`${href}`}>
       <a className={className} target="_blank">
@@ -75,4 +73,4 @@ const Partner = ({
   </li>
 );
 
-module.exports = Partner;
+export default Partner;

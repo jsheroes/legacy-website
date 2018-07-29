@@ -4,7 +4,7 @@ const RawHtml = ({ content, className, wrapperClassName }) => (
 
     {/* language=CSS */}
     <style jsx global>
-      { `
+      {`
         .w-max-width {
           width: auto;
           max-width: 700px;
@@ -18,7 +18,7 @@ const RawHtml = ({ content, className, wrapperClassName }) => (
         .p-mb-30 p {
           margin-bottom: 30px;
         }
-    ` }
+      `}
     </style>
   </div>
 );

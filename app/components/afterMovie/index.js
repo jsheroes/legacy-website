@@ -4,9 +4,7 @@ import Section from '../common/section';
 const AfterMovie = () => (
   <Section>
     <div className="after-movie-wrapper">
-      <h2>
-        JSHeroes 2018 After Movie
-      </h2>
+      <h2>JSHeroes 2018 After Movie</h2>
       <div className="video-wrapper">
         <iframe
           title="JSHeroes After Movie"

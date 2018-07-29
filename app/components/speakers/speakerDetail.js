@@ -10,11 +10,7 @@ const SpeakerDetail = ({ speaker }) => {
   return (
     <div>
       <Head>
-        <title>
-          {speaker.fullName}
-          {' '}
-at JSHeroes
-        </title>
+        <title>{speaker.fullName} at JSHeroes</title>
         <meta property="og:title" content={`${speaker.fullName} at JSHeroes`} />
         <meta property="og:url" content={`https://jsheroes.io/speakers/${speaker.permalink}`} />
         <meta
@@ -37,23 +33,20 @@ at JSHeroes
             <div className="col-md-3 side">
               <div className="speaker-info-box">
                 <div className="speaker-img">
-                  <img src={`/static/img/${store.currentYear}/speakers/${speaker.img}`} alt={speaker.fullName} />
+                  <img
+                    src={`/static/img/${store.currentYear}/speakers/${speaker.img}`}
+                    alt={speaker.fullName}
+                  />
                 </div>
               </div>
               <div className="details-container">
                 <div className="details hidden-lg hidden-md">
-                  <span className="name">
-                    {speaker.fullName}
-                  </span>
+                  <span className="name">{speaker.fullName}</span>
                   <div>
-                    <strong>
-                      {speaker.position}
-                    </strong>
+                    <strong>{speaker.position}</strong>
                   </div>
                   <div>
-                    <strong>
-                      {speaker.company}
-                    </strong>
+                    <strong>{speaker.company}</strong>
                   </div>
                 </div>
                 <div className="social-links">
@@ -83,18 +76,10 @@ at JSHeroes
               <div className="visible-md visible-lg">
                 <div className="join">
                   <div>
-                    Already curious to see
-                    <strong>
-                      {speaker.firstName}
-                    </strong>
+                    Already curious to see <strong>{speaker.firstName}</strong>
                     `s talk?
                   </div>
-                  <div>
-                    Join
-                    {speaker.reference}
-                    {' '}
-at JSHeroes!
-                  </div>
+                  <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
 
                 <a
@@ -109,20 +94,13 @@ at JSHeroes!
             </div>
             <div className="col-md-9 main">
               <div className="details visible-md visible-lg">
-                <h1 className="name">
-                  {speaker.fullName}
-                </h1>
+                <h1 className="name">{speaker.fullName}</h1>
                 <div>
-                  <strong>
-                    {speaker.position}
-                  </strong>
+                  <strong>{speaker.position}</strong>
                   {speaker.company && (
                     <span>
                       {' '}
-                      @
-                      <strong>
-                        {speaker.company}
-                      </strong>
+                      @<strong>{speaker.company}</strong>
                     </span>
                   )}
                 </div>
@@ -132,18 +110,10 @@ at JSHeroes!
               <div className="hidden-md hidden-lg">
                 <div className="join">
                   <div>
-                    Already curious to see
-                    <strong>
-                      {speaker.firstName}
-                    </strong>
+                    Already curious to see <strong>{speaker.firstName}</strong>
                     `s talk?
                   </div>
-                  <div>
-                    Join
-                    {speaker.reference}
-                    {' '}
-at JSHeroes!
-                  </div>
+                  <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
 
                 <a
@@ -327,9 +297,7 @@ function buildTalks(speaker) {
         <div className="talks" key="jsheroes">
           <h4>
             See
-            {speaker.firstName}
-            {' '}
-at previous JSHeroes events
+            {speaker.firstName} at previous JSHeroes events
           </h4>
           {jsheroesTalks}
         </div>
@@ -338,9 +306,7 @@ at previous JSHeroes events
         <div className="talks" key="general">
           <h4>
             See
-            {speaker.firstName}
-            {' '}
-at other conferences
+            {speaker.firstName} at other conferences
           </h4>
           {generalTalks}
         </div>
@@ -393,20 +359,14 @@ function buildCurrentTalk({ title, description, message }, { firstName }) {
     <div>
       <h3>
         {firstName}
-        `s talk:
-        {' '}
-        {title}
+        `s talk: {title}
       </h3>
       <RawHtml content={description} />
       {message && (
         <div className="teaser">
-          <span>
-You will learn:
-          </span>
+          <span>You will learn:</span>
           <p>
-            <i>
-              {message}
-            </i>
+            <i>{message}</i>
           </p>
         </div>
       )}

@@ -12,6 +12,6 @@ function redirectTo(res = null, path) {
   }
 }
 
-export default{
+export default {
   redirectTo,
 };

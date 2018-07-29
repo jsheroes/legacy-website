@@ -16,9 +16,21 @@ class Header extends Component {
     this.handleScroll = this.handleScroll.bind(this);
     this.updateHeroSize = this.updateHeroSize.bind(this);
     this.buildMedia = this.buildMedia.bind(this);
+    this.setSize = this.setSize.bind(this);
   }
 
   componentDidMount() {
+    this.setSize();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll, {
+      passive: true,
+    });
+    window.removeEventListener('resize', this.updateHeroSize);
+  }
+
+  setSize() {
     const rect = document.getElementById('logo').getBoundingClientRect();
     const docEl = document.documentElement;
     const logoElementOffsetTop = rect.top + (window.pageYOffset || docEl.scrollTop || 0);
@@ -28,19 +40,17 @@ class Header extends Component {
       windowHeight: window.innerHeight,
       showMedia: true,
     });
-    window.addEventListener('scroll', this.handleScroll, { passive: true });
+    window.addEventListener('scroll', this.handleScroll, {
+      passive: true,
+    });
     window.addEventListener('resize', this.updateHeroSize);
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll, { passive: true });
-    window.removeEventListener('resize', this.updateHeroSize);
-  }
-
   handleScroll() {
+    const { logoOffsetTop } = this.state;
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollPosition > this.state.logoOffsetTop) {
+    if (scrollPosition > logoOffsetTop) {
       this.setState({ logoFixed: true });
     } else {
       this.setState({ logoFixed: false });
@@ -62,7 +72,11 @@ class Header extends Component {
 
     const media = (
       <div>
-        <img className="background-image" src="/static/img/speakers_and_organizers.jpg" alt="background" />
+        <img
+          className="background-image"
+          src="/static/img/speakers_and_organizers.jpg"
+          alt="background"
+        />
         <style jsx>
           {`
             .background-image {
@@ -89,10 +103,11 @@ class Header extends Component {
   }
 
   render() {
+    const { windowHeight, logoFixed } = this.state;
     const heroBcgImg = {
       position: 'relative',
       overflow: 'hidden',
-      height: this.state.windowHeight,
+      height: windowHeight,
     };
 
     const heroDarkOverlay = {
@@ -110,37 +125,25 @@ class Header extends Component {
 
     return (
       <div>
-        <Section
-          section={{ style: heroBcgImg }}
-          mainContainer={{ style: heroDarkOverlay }}
-        >
+        <Section section={{ style: heroBcgImg }} mainContainer={{ style: heroDarkOverlay }}>
           <ScrollableAnchor id="hero">
             <div className="header-wrapper">
-              { media }
+              {media}
               <div className="headOverlay" />
 
               <div className="container header-container">
                 <div className="row">
                   <div className="col-md-12 header-logo">
-                    <div className={this.state.logoFixed ? 'hide' : ''} id="logo">
-                      <span className="logoJs">
-JS
-                      </span>
-                      <span className="logoHeroes">
-Heroes
-                      </span>
+                    <div className={logoFixed ? 'hide' : ''} id="logo">
+                      <span className="logoJs">JS</span>
+                      <span className="logoHeroes">Heroes</span>
                     </div>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-md-12 header-text">
-                    <p>
-Open-Source Community Event
-                    </p>
-                    <p>
-                      {' '}
-April 11-12th, 2019 in Cluj-Napoca, Romania
-                    </p>
+                    <p>Open-Source Community Event</p>
+                    <p> April 11-12th, 2019 in Cluj-Napoca, Romania</p>
                   </div>
                 </div>
                 <div className="row">
@@ -161,105 +164,109 @@ April 11-12th, 2019 in Cluj-Napoca, Romania
 
           <style jsx>
             {`
-          .logoJs {
-            color: #0098ff;
-          }
-          .logoHeroes {
-            color: #e1ebef;
-          }
-          .header-wrapper {
-            width: inherit;
-            height: inherit;
-          }
-          .header-container {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 100%;
-            margin-top: 0;
-          }
-          .header-logo {
-            height: 45px;
-          }
-          .header-logo>div {
-            display: block;
-            margin: 0 auto;
-            width: 250px;
-            font-size: 54px;
-            font-weight: bold;
-            opacity: 1;
-            transition: opacity .1s linear;
-          }
-          .header-logo>div .logoJs {
-            letter-spacing: -3px;
-          }
-          .header-logo>div .logoHeroes {
-            letter-spacing: -1px;
-          }
+              .logoJs {
+                color: #0098ff;
+              }
+              .logoHeroes {
+                color: #e1ebef;
+              }
+              .header-wrapper {
+                width: inherit;
+                height: inherit;
+              }
+              .header-container {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 100%;
+                max-width: 100%;
+                margin-top: 0;
+              }
+              .header-logo {
+                height: 45px;
+              }
+              .header-logo > div {
+                display: block;
+                margin: 0 auto;
+                width: 250px;
+                font-size: 54px;
+                font-weight: bold;
+                opacity: 1;
+                transition: opacity 0.1s linear;
+              }
+              .header-logo > div .logoJs {
+                letter-spacing: -3px;
+              }
+              .header-logo > div .logoHeroes {
+                letter-spacing: -1px;
+              }
 
-          .header-text {
-            text-align: center;
-            margin-top: 15px;
-            color: #fff;
-          }
-          .header-text p {
-            font-size: 20px;
-          }
+              .header-text {
+                text-align: center;
+                margin-top: 15px;
+                color: #fff;
+              }
+              .header-text p {
+                font-size: 20px;
+              }
 
-          .header-btn-left, .header-btn-right{
-            background-color: rgba(0, 152, 255, 0.8);
-            padding: 10px 50px;
-            color: #fff;
-            border: 2px solid #0098ff;
-            transition: all 0.5s;
-            text-decoration: none;
-            cursor: pointer;
-            margin-top: 150px;
-            border-radius: 4px;
-            font-size: 20px;
-          }
-          .header-btn-left:hover, .header-btn-right:hover {
-            background-color: #0098ff;
-            border: 2px solid #fff;
-            transition: all 0.5s;
-          }
+              .header-btn-left,
+              .header-btn-right {
+                background-color: rgba(0, 152, 255, 0.8);
+                padding: 10px 50px;
+                color: #fff;
+                border: 2px solid #0098ff;
+                transition: all 0.5s;
+                text-decoration: none;
+                cursor: pointer;
+                margin-top: 150px;
+                border-radius: 4px;
+                font-size: 20px;
+              }
+              .header-btn-left:hover,
+              .header-btn-right:hover {
+                background-color: #0098ff;
+                border: 2px solid #fff;
+                transition: all 0.5s;
+              }
 
-          .headOverlay {
-            background-color: rgba(0, 50, 84, 0.2);
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-          }
+              .headOverlay {
+                background-color: rgba(0, 50, 84, 0.2);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+              }
 
-          .float-right {
-            float: right;
-          }
-          .float-left {
-            float: left;
-          }
+              .float-right {
+                float: right;
+              }
+              .float-left {
+                float: left;
+              }
 
-          .header-container .col-xs-12 {
-            text-align: center;
-            margin-top: 80px;
-          }
-          .header-container .col-xs-12 .header-btn {
-            float: none;
-          }
+              .header-container .col-xs-12 {
+                text-align: center;
+                margin-top: 80px;
+                width: 100%;
+              }
+              .header-container .col-xs-12 .header-btn {
+                float: none;
+              }
 
-          @media (max-width: ${mediaQueries.S}) {
-            .header-logo img {
-              width: 50%;
-            }
-            .header-text {
-              margin-bottom: 30px;
-            }
-            .header-container .col-xs-12 {
-              margin-top: 60px;
-            }
-          }
-          `}
+              @media (max-width: ${mediaQueries.S}) {
+                .header-logo img {
+                  width: 50%;
+                }
+                .header-text {
+                  margin-bottom: 30px;
+                }
+                .header-container .col-xs-12 {
+                  margin-top: 60px;
+                }
+              }
+            `}
           </style>
         </Section>
       </div>

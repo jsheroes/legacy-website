@@ -1,4 +1,4 @@
-// module.exports = {
+// export default   {
 //   couchSurfing:
 //     `<p>If you want to be &quot;adopted&quot; by one of our <span class="sticky-words">Cluj Javascripters</span> or if you want to host a participant during the <span class="sticky-words"><strong>JSHeroes conference</strong></span>, you can use our <span class="sticky-words">&quot;Adopt a Javascripter&quot;</span> <span class="sticky-words">couch-surfing program.</span></p>
 //     <p>We will pair you up with a <strong>Host</strong> or a <strong>Guest</strong> that we think is ok for you, according to the info you filled in the application forms.<br />Apply below if you want to be a Guest, or if you are from <span class="sticky-words">Cluj-Napoca</span> apply to be a Host.</p>`,

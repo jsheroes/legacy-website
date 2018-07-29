@@ -14,11 +14,15 @@ class ScrollBtn extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll, { passive: true });
+    window.addEventListener('scroll', this.handleScroll, {
+      passive: true,
+    });
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll, { passive: true });
+    window.removeEventListener('scroll', this.handleScroll, {
+      passive: true,
+    });
   }
 
   handleScroll() {
@@ -31,65 +35,66 @@ class ScrollBtn extends Component {
   }
 
   render() {
+    const { show } = this.state;
     return (
-      <div className={`back-top ${this.state.show ? 'show' : ''}`}>
-        <div className="go-to-anchor" onClick={() => goToAnchor('hero')}>
+      <div className={`back-top ${show ? 'show' : ''}`}>
+        <div className="go-to-anchor" onClick={() => goToAnchor('hero')} role="presentation">
           <i className="fa fa-angle-up" />
         </div>
 
         {/* language=CSS */}
         <style jsx>
           {`
-          .back-top {
-            display: block;
-            position: fixed;
-            right: 30px;
-            bottom: 20px;
-            width: 52px;
-            height: 52px;
-            z-index: 3;
-          }
+            .back-top {
+              display: block;
+              position: fixed;
+              right: 30px;
+              bottom: 20px;
+              width: 52px;
+              height: 52px;
+              z-index: 3;
+            }
 
-          .go-to-anchor {
-            display: block;
-            width: inherit;
-            height: inherit;
-            line-height: 52px;
-            font-size: 31px;
-            background: #000;
-            color: ${styles.mainColor3};
-            text-align: center;
-            border: 1px solid transparent;
-            border-radius: 2px;
-            visibility: hidden;
-            opacity: 0;
-            transition: all .4s;
-          }
+            .go-to-anchor {
+              display: block;
+              width: inherit;
+              height: inherit;
+              line-height: 52px;
+              font-size: 31px;
+              background: #000;
+              color: ${styles.mainColor3};
+              text-align: center;
+              border: 1px solid transparent;
+              border-radius: 2px;
+              visibility: hidden;
+              opacity: 0;
+              transition: all 0.4s;
+            }
 
-          .back-top .go-to-anchor:hover {
-            cursor: pointer;
-            background: ${styles.mainColor4};
-            color: ${styles.mainColor5};
-            fill: ${styles.mainColor5};
-          }
+            .back-top .go-to-anchor:hover {
+              cursor: pointer;
+              background: ${styles.mainColor4};
+              color: ${styles.mainColor5};
+              fill: ${styles.mainColor5};
+            }
 
-           i {
-            display: inline-block;
-            font: normal normal normal 14px/1 FontAwesome;
-            font-size: inherit;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-          }
+            i {
+              display: inline-block;
+              font: normal normal normal 14px/1 FontAwesome;
+              font-size: inherit;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+            }
 
-          .show .go-to-anchor {
-            visibility: visible;
-            opacity: 1;
-          }
-      `}
+            .show .go-to-anchor {
+              visibility: visible;
+              opacity: 1;
+            }
+          `}
         </style>
       </div>
     );
   }
 }
 
-module.exports = ScrollBtn;
+export default ScrollBtn;

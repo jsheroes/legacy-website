@@ -22,15 +22,11 @@ const ScheduleRow = ({ agendaItem, activeTab, baseUrl }) => {
     return (
       <div key={agendaItem.time} className="activity-row clearfix">
         <div className="activity-details">
-          <span>
-            {agendaItem.overrideTitle || 'TBA'}
-          </span>
+          <span>{agendaItem.overrideTitle || 'TBA'}</span>
         </div>
         <div className="activity-location">
           <div className="room-and-time">
-            <div>
-              {agendaItem.time}
-            </div>
+            <div>{agendaItem.time}</div>
           </div>
         </div>
         <style jsx>
@@ -83,48 +79,26 @@ const ScheduleRow = ({ agendaItem, activeTab, baseUrl }) => {
   return (
     <div key={activity.title} className="activity-row clearfix">
       <div className="activity-details">
-        <div className="activity-title">
-          {activityTitle}
-        </div>
+        <div className="activity-title">{activityTitle}</div>
         <div>
-          <a className="speaker-name">
-            {firstSpeaker.fullName}
-          </a>
-          <span className="speaker-position">
-            ,
-            {firstSpeaker.position}
-          </span>
-          {firstSpeaker.company && (
-          <span className="speaker-company">
-            {firstSpeaker.company}
-          </span>
-          )}
+          <a className="speaker-name">{firstSpeaker.fullName}</a>
+          <span className="speaker-position">,{firstSpeaker.position}</span>
+          {firstSpeaker.company && <span className="speaker-company">{firstSpeaker.company}</span>}
         </div>
         {secondSpeaker && (
           <div>
-            <a className="speaker-name">
-              {secondSpeaker.fullName}
-            </a>
-            <span className="speaker-position">
-              ,
-              {secondSpeaker.position}
-            </span>
+            <a className="speaker-name">{secondSpeaker.fullName}</a>
+            <span className="speaker-position">,{secondSpeaker.position}</span>
             {secondSpeaker.company && (
-              <span className="speaker-company">
-                {secondSpeaker.company}
-              </span>
+              <span className="speaker-company">{secondSpeaker.company}</span>
             )}
           </div>
         )}
       </div>
       <div className="activity-location">
         <div className="room-and-time">
-          <div>
-            {agendaItem.time}
-          </div>
-          <div>
-            {agendaItem.room && agendaItem.room}
-          </div>
+          <div>{agendaItem.time}</div>
+          <div>{agendaItem.room && agendaItem.room}</div>
         </div>
         <div className="speaker-image">
           <img src={`${baseUrl}/speakers/${firstSpeaker.img}`} alt={firstSpeaker.fullName} />

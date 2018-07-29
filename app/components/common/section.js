@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
-import { style, mediaQueries } from '../../constants';
+import { mediaQueries } from '../../constants';
 
-const Section = ({ section, mainContainer, children }) => (
+const Section = ({ section = {}, mainContainer = {}, children }) => (
   <section style={section.style}>
     <div style={mainContainer.style}>
       <style jsx>
@@ -35,23 +34,4 @@ const Section = ({ section, mainContainer, children }) => (
   </section>
 );
 
-Section.defaultProps = {
-  section: {
-    style: {},
-  },
-  mainContainer: {
-    style: {},
-  },
-};
-
-Section.propTypes = {
-  section: PropTypes.shape({
-    style: PropTypes.object,
-  }),
-  mainContainer: PropTypes.shape({
-    style: PropTypes.object,
-  }),
-  children: PropTypes.any,
-};
-
-module.exports = Section;
+export default Section;

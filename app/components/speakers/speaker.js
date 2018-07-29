@@ -15,15 +15,9 @@ const Speaker = ({ speaker, baseUrl, currentYear }) => (
           <img src={`${baseUrl}/speakers/${speaker.img}`} alt={speaker.name} />
           <div className="speaker-hover" />
           <div className="speaker-details">
-            <h5>
-              {speaker.fullName}
-            </h5>
-            <h6>
-              {speaker.position}
-            </h6>
-            <h6>
-              {speaker.company}
-            </h6>
+            <h5>{speaker.fullName}</h5>
+            <h6>{speaker.position}</h6>
+            <h6>{speaker.company}</h6>
           </div>
         </div>
       </Link>
@@ -33,15 +27,9 @@ const Speaker = ({ speaker, baseUrl, currentYear }) => (
         <img src={`${baseUrl}/speakers/${speaker.img}`} alt={speaker.name} />
         <div className="speaker-hover" />
         <div className="speaker-details">
-          <h5>
-            {speaker.fullName}
-          </h5>
-          <h6>
-            {speaker.position}
-          </h6>
-          <h6>
-            {speaker.company}
-          </h6>
+          <h5>{speaker.fullName}</h5>
+          <h6>{speaker.position}</h6>
+          <h6>{speaker.company}</h6>
         </div>
       </div>
     )}

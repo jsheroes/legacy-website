@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 import menuItems from '../data/menuitems';
 import { styles, mediaQueries, emptyFunc } from '../constants';
 
 const sizeL = 992;
+
+function isOnDetailsPage(page = '') {
+  return page.indexOf('speaker') > -1 || page.indexOf('/workshop') > -1;
+}
 
 export default class Nav extends Component {
   constructor(props) {
@@ -21,20 +24,29 @@ export default class Nav extends Component {
     this.handleHashChange = this.handleHashChange.bind(this);
     this.toggleNavItems = this.toggleNavItems.bind(this);
     this.hideNavItems = this.hideNavItems.bind(this);
+    this.setViewport = this.setViewport.bind(this);
   }
 
   componentDidMount() {
+    this.setViewport();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll, {
+      passive: true,
+    });
+    window.removeEventListener('hashchange', this.handleHashChange);
+  }
+
+  setViewport() {
     this.setState({
       viewportWidth: window.innerWidth,
       showNavItems: window.innerWidth > sizeL,
     });
-    window.addEventListener('scroll', this.handleScroll, { passive: true });
+    window.addEventListener('scroll', this.handleScroll, {
+      passive: true,
+    });
     window.addEventListener('hashchange', this.handleHashChange);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll, { passive: true });
-    window.removeEventListener('hashchange', this.handleHashChange);
   }
 
   handleScroll() {
@@ -52,9 +64,9 @@ export default class Nav extends Component {
   }
 
   toggleNavItems() {
-    this.setState({
-      showNavItems: !this.state.showNavItems,
-    });
+    this.setState(({ showNavItems }) => ({
+      showNavItems: !showNavItems,
+    }));
   }
 
   hideNavItems() {
@@ -64,18 +76,19 @@ export default class Nav extends Component {
   }
 
   render() {
-    const { hideNavUp, showNavItems, viewportWidth } = this.state;
+    const { hideNavUp, showNavItems, viewportWidth, currentHash } = this.state;
+    const { style, page } = this.props;
     const navbarChangesMaxL = showNavItems && viewportWidth < sizeL ? 'navbar-bcg-max-L' : '';
 
     return (
-      <div style={this.props.style} className={hideNavUp ? 'hideNavUp' : navbarChangesMaxL}>
+      <div style={style} className={hideNavUp ? 'hideNavUp' : navbarChangesMaxL}>
         <nav className="clearfix">
           <Link href="/">
             <a className={`${navbarChangesMaxL} home-link white`}>
               <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
             </a>
           </Link>
-          {isOnDetailsPage(this.props.page) && (
+          {isOnDetailsPage(page) && (
             <Link href="/">
               <a className={`${navbarChangesMaxL} home-link black`}>
                 <img alt="JSHeroes Logo" src="/static/img/website-logo-black.svg" />
@@ -89,8 +102,8 @@ export default class Nav extends Component {
             className={`${showNavItems ? 'showNavItems' : ''}`}
             onClick={viewportWidth < sizeL ? this.hideNavItems : emptyFunc}
           >
-            {menuItems.map((item) => {
-              const active = `#${this.state.currentHash}` === item.url ? 'active' : '';
+            {menuItems.map(item => {
+              const active = `#${currentHash}` === item.url ? 'active' : '';
               return (
                 <li key={item.id}>
                   <a href={`/${item.url}`} className={active}>
@@ -279,12 +292,4 @@ export default class Nav extends Component {
       </div>
     );
   }
-}
-
-Nav.propTypes = {
-  style: PropTypes.any,
-};
-
-function isOnDetailsPage(page = '') {
-  return page.indexOf('speaker') > -1 || page.indexOf('/workshop') > -1;
 }

@@ -12,31 +12,26 @@ class Updates extends Component {
   }
 
   render() {
+    const { activeNews } = this.state;
     const newsData = news.map((item, index) => {
-      const activeCss = index === this.state.activeNews ? 'active-news' : 'news-item';
+      const activeCss = index === activeNews ? 'active-news' : 'news-item';
       return (
         <li //eslint-disable-line
           className={activeCss}
           onClick={() => this.setState({ activeNews: index })}
           key={item.title}
         >
-          <strong>
-            {item.title}
-          </strong>
+          <strong>{item.title}</strong>
         </li>
       );
     });
-    const { content } = news[this.state.activeNews];
+    const { content } = news[activeNews];
     return (
       <Section>
         <ScrollableAnchor id="news">
           <div className="wrapper">
-            <h1>
-News
-            </h1>
-            <ul>
-              {newsData}
-            </ul>
+            <h1>News</h1>
+            <ul>{newsData}</ul>
             <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
           </div>
         </ScrollableAnchor>
