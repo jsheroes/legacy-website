@@ -104,7 +104,55 @@ const Layout = ({ page, children }) => (
           flex-direction: column;
           height: 100vh;
         }
-
+        .invisible {
+          visibility: hidden !important;
+        }
+        .hidden-xs {
+          display: none !important;
+        }
+        @media (max-width: 575px) {
+          .hidden-xs-down {
+            display: none !important;
+          }
+        }
+        @media (min-width: 576px) {
+          .hidden-sm {
+            display: none !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .hidden-sm-down {
+            display: none !important;
+          }
+        }
+        @media (min-width: 768px) {
+          .hidden-md {
+            display: none !important;
+          }
+        }
+        @media (max-width: 991px) {
+          .hidden-md-down {
+            display: none !important;
+          }
+        }
+        @media (min-width: 992px) {
+          .hidden-lg {
+            display: none !important;
+          }
+        }
+        @media (max-width: 1199px) {
+          .hidden-lg-down {
+            display: none !important;
+          }
+        }
+        @media (min-width: 1200px) {
+          .hidden-xl {
+            display: none !important;
+          }
+        }
+        .hidden-xl-down {
+          display: none !important;
+        }
         .nav-and-content {
           flex: 1 0 auto;
         }
