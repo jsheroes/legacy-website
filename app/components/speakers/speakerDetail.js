@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Section from '../common/section';
 import RawHtml from '../common/rawHtml';
 import { styles, mediaQueries } from '../../constants';
+import BuyTicket from '../common/buyTicket';
 import store from '../../data';
 
 const SpeakerDetail = ({ speaker }) => {
@@ -81,15 +82,7 @@ const SpeakerDetail = ({ speaker }) => {
                   </div>
                   <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
-
-                <a
-                  href="https://ti.to/cluj-javascripters/jsheroes-2019"
-                  target="_blank"
-                  className="buy-ticket"
-                  rel="noopener noreferrer"
-                >
-                  Buy your Ticket
-                </a>
+                <BuyTicket />
               </div>
             </div>
             <div className="col-md-9 main">
@@ -115,15 +108,7 @@ const SpeakerDetail = ({ speaker }) => {
                   </div>
                   <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
-
-                <a
-                  href="https://ti.to/cluj-javascripters/jsheroes-2019"
-                  target="_blank"
-                  className="buy-ticket"
-                  rel="noopener noreferrer"
-                >
-                  Buy your Ticket
-                </a>
+                <BuyTicket />
               </div>
             </div>
           </div>
