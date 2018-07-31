@@ -83,6 +83,7 @@ class Header extends Component {
               width: 100%;
               height: auto;
               left: 50%;
+              opacity: 0.5;
               top: 0;
               position: absolute;
               transform: translateX(-50%);
@@ -256,6 +257,9 @@ class Header extends Component {
               }
 
               @media (max-width: ${mediaQueries.S}) {
+                .header-logo {
+                  margin-top: 50px;
+                }
                 .header-logo img {
                   width: 50%;
                 }
