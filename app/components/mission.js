@@ -6,18 +6,26 @@ const Mission = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor6 } }}>
     <ScrollableAnchor id="mission">
       <div>
-        <h2>Our Mission</h2>
+        <h2>An open source community event</h2>
         <p>
-          We believe that the <strong>community model</strong> is the best environment for learning,
-          so part of our mission is to inspire and help other communities. We’ll{' '}
-          <strong>publish all data</strong> about this conference, in full transparency. This way,
-          whenever the next javascripters want to <strong>take over</strong> this event, they can{' '}
-          <strong>build on</strong> our knowledge and the event’s brand.
+          We believe that the <strong>community</strong> and the <strong>open-source</strong> models
+          are well suited for our core values: learning, teaching and knowledge sharing. Our mission
+          is to inspire other communities with the concept of <strong>open source events</strong>.
         </p>
         <p>
-          Our vision is for a <strong>connected global community</strong>, and for this we’ve
-          designed the event to be JSHeroes, <strong>a series</strong> of Open-Source Community
-          Events by <strong>JavaScript Communities worldwide</strong>.
+          We’re <strong>publishing all data</strong> about this conference, in{' '}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://medium.com/cluj-javascripters/jsheroes-2018-transparency-report-part-2-follow-up-eadce2a986bf"
+          >
+            full transparency
+          </a>
+          . We are also available at any time for inquires and we`re really looking forward to{' '}
+          <strong>sharing</strong> our knowledge about{' '}
+          <strong>organizing international events</strong>. This way, whenever a community wants to{' '}
+          <strong>start</strong> something similar, they can <strong>build</strong> on our
+          knowledge.
         </p>
       </div>
     </ScrollableAnchor>
@@ -42,6 +50,11 @@ const Mission = () => (
           line-height: 32px;
           font-weight: 300;
           text-align: center;
+        }
+
+        a {
+          color: ${styles.mainColor3};
+          text-decoration: underline;
         }
 
         @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
