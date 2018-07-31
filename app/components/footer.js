@@ -5,7 +5,7 @@ import socialmedia from '../data/socialmedia';
 const Footer = () => (
   <footer>
     <div className="row">
-      <div className="col-md-3 col-sm-4 hidden-sm hidden-xs">
+      <div className="col-md-3 col-sm-4">
         <Link href="/">
           <a className="home-link">
             <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
