@@ -1,290 +1,162 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 import menuItems from '../data/menuitems';
-import { styles, mediaQueries, emptyFunc } from '../constants';
-
-const sizeL = 992;
-
-function isOnDetailsPage(page = '') {
-  return page.indexOf('speaker') > -1 || page.indexOf('/workshop') > -1;
-}
+import { styles } from '../constants';
 
 export default class Nav extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      hideNavUp: false,
-      currentHash: '',
-      showNavItems: false,
-      viewportWidth: 0,
+      mobileNav: false,
     };
-
-    this.handleScroll = this.handleScroll.bind(this);
-    this.handleHashChange = this.handleHashChange.bind(this);
-    this.toggleNavItems = this.toggleNavItems.bind(this);
-    this.hideNavItems = this.hideNavItems.bind(this);
-    this.setViewport = this.setViewport.bind(this);
+    this.toggleMobileNav = this.toggleMobileNav.bind(this);
+    this.closeMobileNavigation = this.closeMobileNavigation.bind(this);
   }
 
-  componentDidMount() {
-    this.setViewport();
+  toggleMobileNav() {
+    const { mobileNav } = this.state;
+    this.setState({ mobileNav: !mobileNav });
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll, {
-      passive: true,
-    });
-    window.removeEventListener('hashchange', this.handleHashChange);
-  }
-
-  setViewport() {
-    this.setState({
-      viewportWidth: window.innerWidth,
-      showNavItems: window.innerWidth > sizeL,
-    });
-    window.addEventListener('scroll', this.handleScroll, {
-      passive: true,
-    });
-    window.addEventListener('hashchange', this.handleHashChange);
-  }
-
-  handleScroll() {
-    const { hideNavUp } = this.state;
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollPosition > 50 && !hideNavUp) {
-      this.setState({ hideNavUp: true, showNavItems: false });
-    } else if (scrollPosition < 50 && hideNavUp) {
-      this.setState({ hideNavUp: false });
-    }
-  }
-
-  handleHashChange(ev) {
-    this.setState({ currentHash: ev.newURL.split('#')[1] });
-  }
-
-  toggleNavItems() {
-    this.setState(({ showNavItems }) => ({
-      showNavItems: !showNavItems,
-    }));
-  }
-
-  hideNavItems() {
-    this.setState({
-      showNavItems: false,
-    });
+  closeMobileNavigation() {
+    this.setState({ mobileNav: false });
   }
 
   render() {
-    const { hideNavUp, showNavItems, viewportWidth, currentHash } = this.state;
-    const { style, page } = this.props;
-    const navbarChangesMaxL = showNavItems && viewportWidth < sizeL ? 'navbar-bcg-max-L' : '';
+    const { mobileNav } = this.state;
+    const mobileOpenClass = mobileNav ? 'open' : '';
 
     return (
-      <div style={style} className={hideNavUp ? 'hideNavUp' : navbarChangesMaxL}>
-        <nav className="clearfix">
-          <Link href="/">
-            <a className={`${navbarChangesMaxL} home-link white`}>
-              <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
-            </a>
-          </Link>
-          {isOnDetailsPage(page) && (
+      <div className={`navigation-wrapper ${mobileOpenClass}`}>
+        <nav>
+          <div className="logo-wrapper">
             <Link href="/">
-              <a className={`${navbarChangesMaxL} home-link black`}>
-                <img alt="JSHeroes Logo" src="/static/img/website-logo-black.svg" />
+              <a role="logo" className="logo" onClick={this.closeMobileNavigation}>
+                <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
               </a>
             </Link>
-          )}
-          <button onClick={this.toggleNavItems}>
-            <img alt="navbar-icon-bars" src="/static/img/navbar-icon.svg" />
-          </button>
-          <ul // eslint-disable-line
-            className={`${showNavItems ? 'showNavItems' : ''}`}
-            onClick={viewportWidth < sizeL ? this.hideNavItems : emptyFunc}
-          >
-            {menuItems.map(item => {
-              const active = `#${currentHash}` === item.url ? 'active' : '';
-              return (
-                <li key={item.id}>
-                  <a href={`/${item.url}`} className={active}>
-                    {item.label}
-                  </a>
-                </li>
-              );
-            })}
+          </div>
+          <div>
+            <div className="hamburger-btn" onClick={this.toggleMobileNav}>
+              <div />
+              <div />
+              <div />
+            </div>
+          </div>
+          <ul className="menu-items">
+            {menuItems.map(item => (
+              <li key={item.id} onClick={this.toggleMobileNav}>
+                <a href={`/${item.url}`}>{item.label}</a>
+              </li>
+            ))}
           </ul>
         </nav>
-
-        {/* language=CSS */}
         <style jsx>
           {`
-            div {
-              width: 100%;
-              height: 78px;
-              position: fixed;
-              top: 0;
-              left: 0;
-              z-index: 3;
-              background-color: ${styles.mainColor2};
-              border-top: 6px solid ${styles.mainColor6};
-              -webkit-transition: top 0.2s ease-in-out;
-              -moz-transition: top 0.2s ease-in-out;
-              transition: top 0.2s ease-in-out;
-              font-family: Roboto, sans-serif;
-              font-weight: 400;
-            }
-
-            .navbar-bcg-max-L {
-              background-color: ${styles.mainColor1};
-            }
-
-            .home-link {
-              display: inline-block;
-              float: left;
-              width: 145px;
-              height: inherit;
-              padding: 0;
-              margin: 13px 15px;
-              line-height: 0;
-            }
-
-            .home-link img {
-              width: inherit;
-              height: auto;
-            }
-
-            .home-link.black {
-              display: none;
+            .navigation-wrapper {
+              height: 75px;
+              border-top: 3px solid ${styles.mainColor6};
+              background: black;
             }
 
             nav {
-              height: auto;
-              line-height: 72px;
+              margin: 20px 20px 25px 40px;
+              display: flex;
+              flex: 1;
+              justify-content: space-between;
             }
 
-            ul {
+            .logo-wrapper {
+              boder: 1px solid green;
+            }
+
+            .logo img {
+              width: 150px;
+              flex: 1;
+            }
+
+            ul.menu-items {
+              text-decoration: none;
+              margin: 0;
+              padding: 0;
+            }
+
+            ul.menu-items li {
               display: inline-block;
-              float: right;
+              padding: 5px 20px;
             }
 
-            li {
-              margin: 0 35px;
+            ul.menu-items li:last-of-type {
               display: inline-block;
+              padding: 5px 0 0 5px;
             }
 
-            a {
-              padding: 5px 15px;
-              text-transform: capitalize;
-              color: #fff;
+            ul.menu-items li a {
+              color: white;
               font-size: 18px;
+              text-transform: capitalize;
               font-weight: 400;
-              text-decoration: none !important;
+            }
+            ul.menu-items li a:hover {
+              color: ${styles.mainColor5};
             }
 
-            .hideNavUp {
-              top: -78px;
-            }
-
-            .showNavItems {
-              display: block;
-            }
-
-            .active {
-              color: ${styles.mainColor6};
-            }
-
-            button {
-              display: inline-block;
-              float: right;
-              margin: 10px 10px 10px 0;
-              line-height: 0;
-              background-color: transparent;
-              border: none;
-              outline: none;
-            }
-
-            @media (max-width: ${mediaQueries.L}) {
-              /*992px*/
-              div {
-                height: 50px;
-                background-color: transparent;
-                border-top: 0;
-              }
-              nav {
-                line-height: 52px;
-              }
-              .home-link.white {
-                display: none;
-              }
-              .home-link.black {
-                display: inline-block;
-              }
-              .navbar-bcg-max-L .home-link.white {
-                display: inline-block;
-              }
-              .navbar-bcg-max-L .home-link.black {
-                display: none;
-              }
-              ul {
-                display: none;
+            @media (max-width: 768px) {
+              .navigation-wrapper {
+                position: fixed;
+                height: 70px;
+                top: 0;
+                z-index: 3;
                 width: 100%;
-                padding-left: 0;
+                border-bottom: 1px solid white;
+              }
+
+              .navigation-wrapper.open ul.menu-items {
+                display: block;
+                transform: translate(0%, 25%);
+                width: 100%;
+                transition: all 900ms ease-in;
+                opacity: 1;
+              }
+
+              .navigation-wrapper.open ul li {
+                display: block;
+                padding: 10px 20px;
                 text-align: center;
-                background-color: ${styles.mainColor1};
               }
-              li {
-                display: block;
-                margin: 0;
-                line-height: 50px;
-              }
-              li:first-child {
-                border-top: 1px solid rgba(250, 250, 250, 0.5);
-              }
-              a {
-                display: block;
-                padding: 0;
-                font-size: 16px;
-              }
-              .hideNavUp {
-                top: -52px;
-              }
-            }
 
-            @media (min-width: ${mediaQueries.L}) {
-              div {
-                border-top: 4px solid ${styles.mainColor6};
+              .hamburger-btn {
+                display: block;
+                width: 35px;
+                height: 34px;
+                float: right;
+                background-color: ${styles.mainColor2};
+                position: static;
               }
-              nav {
-                line-height: 74px;
+              .hamburger-btn div {
+                margin: 5px;
+                background: white;
+                width: 25px;
+                height: 3px;
+                position: static;
               }
-              .home-link {
-                width: 125px;
-                margin: 26px 15px 27px;
-              }
-              li {
-                margin: 0 0 0 40px;
-              }
-              button {
-                display: none;
-              }
-            }
 
-            @media (min-width: ${mediaQueries.XL}) {
-              div {
-                border-top: 6px solid ${styles.mainColor6};
+              ul.menu-items {
+                display: block;
+                position: fixed;
+                margin-left: -40px;
+                transform: translate(0%, -200%);
+                transition: all 900ms ease-out;
+                width: 100%;
+                opacity: 0;
+                background-color: black;
               }
-              nav {
-                line-height: 71px;
-              }
-              .home-link {
-                width: 145px;
-                margin: 24px 15px 24px 45px;
-              }
-              li {
-                margin: 0 30px;
-              }
-              a {
-                font-size: 20px;
+
+              .navigation-wrapper ul.menu-items li {
+                padding: 10px 20px;
+                text-align: center;
+                display: block;
               }
             }
           `}
