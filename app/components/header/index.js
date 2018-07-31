@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
+import BuyTicket from '../common/buyTicket';
 import { mediaQueries } from '../../constants';
 
 class Header extends Component {
@@ -147,16 +148,7 @@ class Header extends Component {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-xs-12">
-                    <a
-                      href="https://ti.to/cluj-javascripters/jsheroes-2019"
-                      target="_blank"
-                      className="header-btn header-btn-left float-right"
-                      rel="noopener noreferrer"
-                    >
-                      Buy your Ticket
-                    </a>
-                  </div>
+                  <BuyTicket />
                 </div>
               </div>
             </div>
@@ -210,27 +202,6 @@ class Header extends Component {
               .header-text p {
                 font-size: 20px;
               }
-
-              .header-btn-left,
-              .header-btn-right {
-                background-color: rgba(0, 152, 255, 0.8);
-                padding: 10px 50px;
-                color: #fff;
-                border: 2px solid #0098ff;
-                transition: all 0.5s;
-                text-decoration: none;
-                cursor: pointer;
-                margin-top: 150px;
-                border-radius: 4px;
-                font-size: 20px;
-              }
-              .header-btn-left:hover,
-              .header-btn-right:hover {
-                background-color: #0098ff;
-                border: 2px solid #fff;
-                transition: all 0.5s;
-              }
-
               .headOverlay {
                 background-color: rgba(0, 50, 84, 0.2);
                 position: absolute;
