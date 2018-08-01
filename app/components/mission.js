@@ -6,11 +6,11 @@ const Mission = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor6 } }}>
     <ScrollableAnchor id="mission">
       <div>
-        <h2>An open source community event</h2>
+        <h2>An Open-Source Community Event</h2>
         <p>
           We believe that the <strong>community</strong> and the <strong>open-source</strong> models
           are well suited for our core values: learning, teaching and knowledge sharing. Our mission
-          is to inspire other communities with the concept of <strong>open source events</strong>.
+          is to inspire other communities with the concept of <strong>open-source events</strong>.
         </p>
         <p>
           We’re <strong>publishing all data</strong> about this conference, in{' '}
