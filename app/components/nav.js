@@ -39,9 +39,9 @@ export default class Nav extends Component {
           </div>
           <div>
             <div className="hamburger-btn" onClick={this.toggleMobileNav}>
-              <div />
-              <div />
-              <div />
+              <div className="first" />
+              <div className="middle" />
+              <div className="last" />
             </div>
           </div>
           <ul className="menu-items">
@@ -117,7 +117,7 @@ export default class Nav extends Component {
                 transform: translate(0%, 25%);
                 width: 100%;
                 transition: all 900ms ease-in;
-                opacity: 1;
+                opacity: 0.85;
               }
 
               .navigation-wrapper.open ul li {
@@ -126,14 +126,30 @@ export default class Nav extends Component {
                 text-align: center;
               }
 
+              .navigation-wrapper.open .first {
+                display: none;
+              }
+              .navigation-wrapper.open .middle {
+                transform: rotate(45deg);
+                transform: translate(0, 8px) rotate(45deg);
+                background-color: ${styles.mainColor5};
+                transition: all 700ms ease-in;
+              }
+              .navigation-wrapper.open .last {
+                transform: rotate(-45deg);
+                background-color: ${styles.mainColor5};
+                transition: all 700ms ease-in;
+              }
+
               .hamburger-btn {
                 display: block;
                 width: 35px;
                 height: 34px;
                 float: right;
-                background-color: ${styles.mainColor2};
+                background-color: black;
                 position: static;
               }
+
               .hamburger-btn div {
                 margin: 5px;
                 background: white;
@@ -145,7 +161,7 @@ export default class Nav extends Component {
               ul.menu-items {
                 display: block;
                 position: fixed;
-                margin-left: -40px;
+                left: 0;
                 transform: translate(0%, -200%);
                 transition: all 900ms ease-out;
                 width: 100%;
