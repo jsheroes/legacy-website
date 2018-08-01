@@ -128,17 +128,19 @@ export default class Nav extends Component {
 
               .navigation-wrapper.open .first {
                 display: none;
+                opacity: 0;
+                position: absolute;
               }
               .navigation-wrapper.open .middle {
                 transform: rotate(45deg);
                 transform: translate(0, 8px) rotate(45deg);
                 background-color: ${styles.mainColor5};
-                transition: all 700ms ease-in;
+                transition: all 700ms ease-in-out;
               }
               .navigation-wrapper.open .last {
                 transform: rotate(-45deg);
                 background-color: ${styles.mainColor5};
-                transition: all 700ms ease-in;
+                transition: all 700ms ease-in-out;
               }
 
               .hamburger-btn {
@@ -151,11 +153,13 @@ export default class Nav extends Component {
               }
 
               .hamburger-btn div {
+                opacity: 1;
                 margin: 5px;
                 background: white;
                 width: 25px;
                 height: 3px;
                 position: static;
+                transition: all 700ms ease-in-out;
               }
 
               ul.menu-items {
