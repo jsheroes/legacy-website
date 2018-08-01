@@ -3,7 +3,6 @@ const BuyTicket = () => (
     <Style />
     <a
       href="https://ti.to/cluj-javascripters/jsheroes-2019"
-      target="_blank"
       className="header-btn header-btn-left float-right"
       rel="noopener noreferrer"
     >
