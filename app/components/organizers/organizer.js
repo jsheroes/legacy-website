@@ -24,6 +24,7 @@ const Organizer = ({ role, image, name, twitter }) => (
           width: auto;
           position: relative;
           overflow: hidden;
+          height: 210px;
         }
         a {
           color: ${styles.mainColor3};

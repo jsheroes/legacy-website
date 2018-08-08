@@ -49,4 +49,19 @@ export default [
     img: 'logo_frontendMeetupBudapest.svg',
     href: 'https://www.meetup.com/Frontend-Meetup-Budapest/',
   },
+  {
+    title: 'Design Systems London',
+    img: 'dsl.png',
+    href: 'https://www.designsystemslondon.com/',
+  },
+  {
+    title: 'ReactJSGirls',
+    img: 'logo_reactgirls.jpg',
+    href: 'https://www.meetup.com/ReactJS-Girls-London/',
+  },
+  {
+    title: 'LondonNode',
+    img: 'logo_londonnode.png',
+    href: 'https://www.meetup.com/LNM-London-Node-JS-Meetup/',
+  },
 ];
