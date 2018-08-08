@@ -4,7 +4,7 @@ import { styles, mediaQueries } from '../../constants';
 const PrivacyMain = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
     <div className="central-container">
-      <h4>Privacy Statement</h4>
+      <h3>Privacy Statement</h3>
       <p>
         When you are using the JSHeroes website you entrust us with your data. The purpose of this
         Privacy Statement is to explain what data we collect, why we collect it, how we use it, and
@@ -37,9 +37,9 @@ const PrivacyMain = () => (
           </li>
           <li>
             {' '}
-            Data on our users’ behavior and their devices (in particular device`s IP address
-            (captured and stored only in anonymized form), device screen size, device type (unique
-            device identifiers), browser information, geographic location (country only), preferred
+            Data on our users behavior and their devices (in particular devices IP address (captured
+            and stored only in anonymized form), device screen size, device type (unique device
+            identifiers), browser information, geographic location (country only), preferred
             language used to display our website). This is done through Hotjar tracking cookies and
             other technologies. Hotjar stores this information in a pseudonymized user profile.
           </li>
@@ -54,35 +54,55 @@ const PrivacyMain = () => (
           <li>To send email and marketing communications when we have your permission</li>
           <li>To personalize our services i.e. remember your previous session</li>
           <li>
+            To optimize Facebook ads based on collected anonymized data, and build targeted
+            audiences
+          </li>
+          <li>
             For statistical purposes, i.e. website traffic analysis, performance of marketing
             communications
           </li>
           <li>To better understand our users’ experience</li>
         </ul>
       </div>
-      <h4>Cookies policy</h4>
+      <h4>Cookies, Analytics and Traffic Data</h4>
       <div>
         <p>
           Cookies are pieces of information that a website places on your device when you visit a
           website. We do not use advertising cookies, and do not allow third party advertising
-          networks to collect information about the users of our Site. We use several types of
-          cookies:
+          networks to collect information about the users of our Site.
         </p>
+        <p>We use several types of cookies:</p>
         <ol>
           <li>
-            Strictly necessary cookies – there are essential for the normal functioning of the
-            website i.e. session cookies. These cookies do not track you and cannot be opted out of.
+            <strong>Strictly necessary cookies</strong> – there are essential for the normal
+            functioning of the website i.e. session cookies. These cookies do not track you and
+            cannot be opted out of.
           </li>
           <li>
-            erformance & Functionality cookies – these remember your preferred language, understand
-            your preferences, enable our Youtube videos and Social Media buttons to function
-            properly. Whithout these the website loses some functionality, but they are optional.
+            <strong>Performance & Analytics</strong> – we use 3rd party analytics tools, Google
+            Analytics and Hotjar, to help us analyze how our site is used, through compiled reports.
+            These data are exclusively used by us for website activity and performance analysis.
           </li>
           <li>
-            Analytics cookies – we use 3rd party analytics tools, Google Analytics and Hotjar, to
-            help us analyze how our site is used, through compiled reports. These data are
-            exclusively used by us for website activity and performance analysis. These can also be
-            opted out of.
+            <strong>Functionality cookies</strong> – hese remember your preferred language,
+            understand your preferences, enable our Youtube videos and Social Media buttons to
+            function properly. Whithout these the website loses some functionality, but they are
+            optional.
+          </li>
+          <li>
+            <strong>Tracking cookies</strong> – we use the Facebook Pixel to create Custom Audiences
+            for our Facebook event ads. The data collected in this way is anonymous to us, however,
+            this data is stored and processed by Facebook. Facebook may link this information to
+            your Facebook account and also use it for its own promotional purposes, in accordance
+            with Facebook’s Data Usage Policy{' '}
+            <a
+              href="https://www.facebook.com/about/privacy/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://www.facebook.com/about/privacy/
+            </a>
+            .
           </li>
         </ol>
       </div>
@@ -221,6 +241,17 @@ const PrivacyMain = () => (
             </a>{' '}
             Privacy Policy
           </li>
+          <li>
+            <a
+              href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>{' '}
+            is certified under the Privacy Shield Agreement and thus guarantees compliance with
+            European data protection legislation
+          </li>
         </ul>
         <p>
           We will not share or sell your personal data to any other 3rd party for their own
@@ -239,7 +270,7 @@ const PrivacyMain = () => (
         we might have about you, please contact us at:{' '}
         <a href="mailto:welcome@jsheroes.io">welcome@jsheroes.io</a>
       </p>
-      <p>Last updated: 4 June, 2018.</p>
+      <p>Last updated: 8 August, 2018.</p>
     </div>
 
     <style jsx>
