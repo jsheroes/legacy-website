@@ -21,7 +21,24 @@ export default [
   },
   {
     id: 5,
-    url: '#venue',
     label: 'venue',
+    url: '#venue',
+  },
+  {
+    id: 6,
+    label: 'Past Editions',
+    url: '#',
+    links: [
+      {
+        id: 6.1,
+        url: 'http://2017.jsheroes.io/',
+        label: 'JSHeroes 2017',
+      },
+      {
+        id: 6.2,
+        url: 'https://jsheroes.io/2018',
+        label: 'JSHeroes 2018',
+      },
+    ],
   },
 ];

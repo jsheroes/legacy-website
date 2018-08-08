@@ -46,8 +46,22 @@ export default class Nav extends Component {
           </div>
           <ul className="menu-items">
             {menuItems.map(item => (
-              <li key={item.id} onClick={this.toggleMobileNav}>
+              <li
+                className={item.links ? 'with-link' : null}
+                key={item.id}
+                onClick={this.toggleMobileNav}
+              >
                 <a href={`/${item.url}`}>{item.label}</a>
+
+                {item.links ? (
+                  <ul className="menu-items inside">
+                    {item.links.map(link => (
+                      <li key={link.id}>
+                        <a href={`/${link.url}`}>{link.label}</a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </li>
             ))}
           </ul>
@@ -82,14 +96,33 @@ export default class Nav extends Component {
               padding: 0;
             }
 
+            ul.menu-items.inside {
+              position: absolute;
+              z-index: 10;
+              list-style: none;
+              background: black;
+              padding: 10px 0;
+              left: 0;
+              display: none;
+            }
+
+            ul.menu-items li.with-link:hover ul {
+              display: block;
+            }
+
             ul.menu-items li {
               display: inline-block;
               padding: 5px 20px;
+              position: relative;
             }
 
             ul.menu-items li:last-of-type {
               display: inline-block;
               padding: 5px 0 0 5px;
+            }
+
+            ul.menu-items.inside li {
+              padding: 5px 20px;
             }
 
             ul.menu-items li a {
@@ -103,6 +136,10 @@ export default class Nav extends Component {
             }
 
             @media (max-width: 768px) {
+              nav {
+                margin-bottom: 0;
+              }
+
               .navigation-wrapper {
                 position: fixed;
                 height: 70px;
@@ -112,18 +149,23 @@ export default class Nav extends Component {
                 border-bottom: 1px solid white;
               }
 
-              .navigation-wrapper.open ul.menu-items {
+              .navigation-wrapper.open ul.menu-items:not(.inside) {
                 display: block;
                 transform: translate(0%, 25%);
                 width: 100%;
                 transition: all 900ms ease-in;
                 opacity: 0.85;
+                top: 20px;
               }
 
               .navigation-wrapper.open ul li {
                 display: block;
                 padding: 10px 20px;
                 text-align: center;
+              }
+
+              .navigation-wrapper.open ul li.with-link {
+                display: none;
               }
 
               .navigation-wrapper.open .first {
