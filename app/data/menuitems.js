@@ -36,7 +36,7 @@ export default [
       },
       {
         id: 6.2,
-        url: 'https://jsheroes.io/2018',
+        url: '/2018',
         label: 'JSHeroes 2018',
       },
     ],
