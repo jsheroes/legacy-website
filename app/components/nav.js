@@ -57,7 +57,7 @@ export default class Nav extends Component {
                   <ul className="menu-items inside">
                     {item.links.map(link => (
                       <li key={link.id}>
-                        <a href={`/${link.url}`}>{link.label}</a>
+                        <a href={`${link.url}`}>{link.label}</a>
                       </li>
                     ))}
                   </ul>
