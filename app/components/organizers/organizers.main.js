@@ -63,25 +63,10 @@ class OrganizersMain extends Component {
             ))}
           </div>
 
-          <h3>Old Heroes( 2017 Edition )</h3>
+          <h3>Still Friends</h3>
 
           <div className="organizer-boxes">
             {organizers.oldHeroes.map(organizer => (
-              <div key={organizer.name} className="organizer-box">
-                <Organizer
-                  image={organizer.img}
-                  name={organizer.name}
-                  role={organizer.role}
-                  twitter={organizer.twitter}
-                />
-              </div>
-            ))}
-          </div>
-
-          <h3>Special Thanks</h3>
-
-          <div className="organizer-boxes center">
-            {organizers.specialThanks.map(organizer => (
               <div key={organizer.name} className="organizer-box">
                 <Organizer
                   image={organizer.img}
@@ -97,6 +82,7 @@ class OrganizersMain extends Component {
           {`
             p {
               text-align: center;
+              width: 100%;
             }
 
             h3 {

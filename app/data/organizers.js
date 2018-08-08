@@ -43,12 +43,6 @@ export default {
       twitter: '',
     },
     {
-      name: 'Edmon Nagy-Beczkai',
-      img: 'edmond-nagy-beczkai.jpg',
-      role: 'Visual Master',
-      twitter: '',
-    },
-    {
       name: 'Anamaria Oros',
       img: 'anamaria-oros.jpg',
       role: 'Trip Advisor',
@@ -122,13 +116,11 @@ export default {
       role: 'Retired Hero',
       twitter: '',
     },
-  ],
-  specialThanks: [
     {
-      name: 'Carmen Popoviciu',
-      img: 'carmen-popoviciu.jpg',
-      role: 'Speakers Help',
-      twitter: 'CarmenPopoviciu',
+      name: 'Edmon Nagy-Beczkai',
+      img: 'edmond-nagy-beczkai.jpg',
+      role: 'Retired Hero',
+      twitter: '',
     },
   ],
 };
