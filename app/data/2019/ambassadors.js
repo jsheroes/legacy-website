@@ -24,7 +24,7 @@ export default [
     name: 'liran',
     fullName: 'Liran Tal',
     position: 'Ambassador',
-    company: 'JSHeroes',
+    company: 'Nielsen',
     img: 'liran.png',
   },
   {
