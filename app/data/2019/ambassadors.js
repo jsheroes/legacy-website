@@ -31,7 +31,7 @@ export default [
     name: 'sara',
     fullName: 'Sara Vieira',
     position: 'Ambassador',
-    company: 'JSHeroes',
+    company: 'YLD',
     img: 'sara.jpg',
   },
   {
