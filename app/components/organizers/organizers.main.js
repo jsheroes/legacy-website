@@ -102,6 +102,7 @@ class OrganizersMain extends Component {
             .organizers-container {
               padding: 100px 0 140px;
               text-align: center;
+              flex-direction: column;
             }
 
             a {
