@@ -84,6 +84,12 @@ export default {
       role: 'Volunteer',
       twitter: '',
     },
+    {
+      name: 'Oana Muntean',
+      img: 'oana-muntean.jpg',
+      role: 'Webmaster',
+      twitter: 'oanamun',
+    },
   ],
   oldHeroes: [
     {

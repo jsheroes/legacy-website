@@ -159,6 +159,7 @@ class Speakers extends Component {
             .speaker-boxes {
               display: flex;
               flex-wrap: wrap;
+              justify-content: center;
             }
 
             .speaker-box {
