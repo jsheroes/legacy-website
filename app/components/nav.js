@@ -57,7 +57,13 @@ export default class Nav extends Component {
                   <ul className="menu-items inside">
                     {item.links.map(link => (
                       <li key={link.id}>
-                        <a href={`${link.url}`}>{link.label}</a>
+                        {link.url.startsWith('http') ? (
+                          <a href={`${link.url}`}>{link.label}</a>
+                        ) : (
+                          <Link href={link.url}>
+                            <a>{link.label}</a>
+                          </Link>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -133,6 +139,7 @@ export default class Nav extends Component {
               text-transform: capitalize;
               font-weight: 400;
             }
+
             ul.menu-items li a:hover {
               color: ${styles.mainColor5};
             }
