@@ -123,6 +123,8 @@ export default class Nav extends Component {
 
             ul.menu-items.inside li {
               padding: 5px 20px;
+              width: 100%;
+              text-align: center;
             }
 
             ul.menu-items li a {
