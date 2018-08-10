@@ -39,6 +39,7 @@ const Speaker = ({ speaker, baseUrl, currentYear }) => (
           width: auto;
           position: relative;
           overflow: hidden;
+          height: 277px;
         }
         img {
           width: 100%;
