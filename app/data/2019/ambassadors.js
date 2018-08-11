@@ -17,7 +17,7 @@ export default [
     name: 'gautam',
     fullName: 'Gautam Arora',
     position: 'Director of Engineering',
-    company: 'Condé Nast Tech',
+    company: 'Condé Nast',
     img: 'gautam.jpg',
   },
   {
