@@ -1,7 +1,5 @@
 import selectors from './navigation.selectors';
 
-const BASE_URL = 'http://localhost:4001';
-
 describe('Website navigation', () => {
   before(() => {
     cy.visit('/');
