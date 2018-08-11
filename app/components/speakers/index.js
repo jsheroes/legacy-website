@@ -3,7 +3,8 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import data from '../../data/index';
-import Speaker from './speaker';
+import Person from '../personSpotlight';
+import ambassadors from '../../data/2019/ambassadors';
 
 function addObserver() {
   const observer = new IntersectionObserver(handler, {
@@ -39,6 +40,8 @@ class Speakers extends Component {
     const { year, speakers, baseUrl } = this.props;
     const title = `Our ${year} Heroes`;
     const isCurrentYear = year === data.currentYear;
+    const speakerUrl = `${baseUrl}/speakers/`;
+    const ambassadorUrl = `${baseUrl}/ambassadors/`;
     return (
       <Section>
         <ScrollableAnchor id="speakers">
@@ -72,10 +75,30 @@ class Speakers extends Component {
             <div className="speaker-boxes">
               {speakers.map(speaker => (
                 <div key={speaker.name} className="speaker-box">
-                  <Speaker speaker={speaker} baseUrl={baseUrl} currentYear={isCurrentYear} />
+                  <Person speaker={speaker} baseUrl={speakerUrl} activeLink />
                 </div>
               ))}
             </div>
+
+            {isCurrentYear && (
+              <div className="row section-header">
+                <h2>And our awesome ambassadors</h2>
+                <div>
+                  <p>
+                    These are the people you already know from the previous editions of JSHeroes. We
+                    want to thank them for all their amazing work and we are making them part of the
+                    community indefinitely!
+                  </p>
+                  <div className="speaker-boxes">
+                    {ambassadors.map(ambassador => (
+                      <div key={ambassador.name} className="speaker-box">
+                        <Person speaker={ambassador} baseUrl={ambassadorUrl} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </ScrollableAnchor>
 
