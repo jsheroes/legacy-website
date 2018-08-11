@@ -9,7 +9,9 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "format": "prettier --config ./config/.prettierrc --ignore-path ./config/.prettierignore --write '**/*.{js,css,md}'",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "test:e2e": "cypress run",
+    "test:e2e:debug": "cypress open"
   },
   "keywords": [],
   "author": "",
@@ -19,12 +21,14 @@
     "google-map-react": "^1.0.5",
     "intersection-observer": "^0.5.0",
     "next": "^6.1.1",
+    "now": "^11.3.9",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scrollable-anchor": "^0.6.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
+    "cypress": "^3.0.3",
     "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",
@@ -34,12 +38,13 @@
     "eslint-plugin-react": "^7.10.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.0",
-    "prettier": "^1.14.0"
+    "prettier": "^1.14.0",
+    "wait-on": "^2.1.0"
   },
   "lint-staged": {
     "*.js": [
       "prettier --config ./config/.prettierrc --ignore-path ./config/.prettierignore --write",
-      "eslint -c config/.eslintrc.json --fix",
+      "eslint -c config/.eslintrc.json --ignore-path config/.eslintignore --fix",
       "git add"
     ]
   }
