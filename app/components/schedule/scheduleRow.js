@@ -114,7 +114,8 @@ const ScheduleRow = ({ agendaItem, activeTab, baseUrl }) => {
       <style jsx>
         {`
           .activity-row {
-            padding: 20px 0;
+            padding: 0px 0px 90px 0px;
+            margin: 15px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.7);
             width: 100%;
             color: ${styles.mainColor3};

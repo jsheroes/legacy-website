@@ -32,12 +32,12 @@ export default [
       {
         id: 6.1,
         url: 'http://2017.jsheroes.io/',
-        label: 'JSHeroes 2017',
+        label: '2017',
       },
       {
         id: 6.2,
         url: '/2018',
-        label: 'JSHeroes 2018',
+        label: '2018',
       },
     ],
   },

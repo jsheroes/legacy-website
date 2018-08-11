@@ -24,7 +24,7 @@ const Organizer = ({ role, image, name, twitter }) => (
           width: auto;
           position: relative;
           overflow: hidden;
-          height: 210px;
+          height: auto;
         }
         a {
           color: ${styles.mainColor3};
@@ -33,6 +33,7 @@ const Organizer = ({ role, image, name, twitter }) => (
           width: 100%;
           height: 100%;
           filter: grayscale(100%);
+          display: block;
         }
         .organizer-hover {
           height: 100%;
