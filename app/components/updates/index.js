@@ -16,7 +16,9 @@ class Updates extends Component {
     const newsData = news.map((item, index) => {
       const activeCss = index === activeNews ? 'active-news' : 'news-item';
       return (
-        <li //eslint-disable-line
+        <li
+          tabIndex="0"
+          role="button" // eslint-disable-line
           className={activeCss}
           onClick={() => this.setState({ activeNews: index })}
           key={item.title}
