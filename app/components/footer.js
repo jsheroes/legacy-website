@@ -51,7 +51,7 @@ const Footer = () => (
           {socialmedia.map(item => (
             <span key={item.url}>
               <Link href={`${item.url}`}>
-                <a target="_blank">
+                <a aria-label={item.alt} target="_blank">
                   <i className={item.label} aria-hidden="true" />
                 </a>
               </Link>

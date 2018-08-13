@@ -32,7 +32,7 @@ export default class Nav extends Component {
         <nav>
           <div className="logo-wrapper">
             <Link href="/">
-              <a role="logo" className="logo" onClick={this.closeMobileNavigation}>
+              <a className="logo" onClick={this.closeMobileNavigation}>
                 <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
               </a>
             </Link>

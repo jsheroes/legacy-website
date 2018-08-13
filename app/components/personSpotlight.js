@@ -9,6 +9,7 @@ const style = (
         width: auto;
         position: relative;
         overflow: hidden;
+        display: block;
         height: auto;
       }
       .speaker-info-box img {
@@ -27,7 +28,6 @@ const style = (
         transition: 0.5s ease-out;
         width: 100%;
         background: rgba(0, 152, 255, 0.8) none repeat scroll 0 0 !important;
-        cursor: pointer;
         z-index: 1;
       }
       .speaker-info-box.active .speaker-hover {
@@ -56,14 +56,15 @@ const style = (
         width: 100%;
         z-index: 2;
         text-align: center;
-        cursor: pointer;
       }
 
       @media (min-width: ${mediaQueries.XS}) {
-        .speaker-info-box:hover .speaker-hover {
+        .speaker-info-box:hover .speaker-hover,
+        .speaker-info-box:focus .speaker-hover {
           opacity: 1;
         }
-        .speaker-info-box:hover .speaker-details {
+        .speaker-info-box:hover .speaker-details,
+        .speaker-info-box:focus .speaker-details {
           transform: translateY(-50%);
           opacity: 1;
         }
@@ -74,31 +75,34 @@ const style = (
 
 const PersonSpotlight = ({ speaker, baseUrl, activeLink = false }) => {
   const personInfo = (
-    <div className="speaker-info-box">
+    <a
+      className="speaker-info-box"
+      onMouseEnter={() => {
+        Router.prefetch(`/speakers?name=${speaker.permalink}`);
+      }}
+    >
       <img src={`${baseUrl}${speaker.img}`} alt={speaker.name} />
       <div className="speaker-hover" />
       <div className="speaker-details">
         <h5>{speaker.fullName}</h5>
-        <h6>{speaker.position}</h6>
-        <h6>{speaker.company}</h6>
+        {speaker.position ? <h6>{speaker.position}</h6> : null}
+        {speaker.company ? <h6>{speaker.company}</h6> : null}
       </div>
       {style}
-    </div>
+    </a>
   );
   return (
     <div>
       {activeLink && (
         <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
-          <div
-            onMouseEnter={() => {
-              Router.prefetch(`/speakers?name=${speaker.permalink}`);
-            }}
-          >
-            {personInfo}
-          </div>
+          {personInfo}
         </Link>
       )}
-      {!activeLink && personInfo}
+      {!activeLink && (
+        <div tabIndex="0" role="button" className="speaker-info-box">
+          {personInfo}
+        </div>
+      )}
     </div>
   );
 };

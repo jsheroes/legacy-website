@@ -7,6 +7,7 @@ const AfterMovie = () => (
       <h2>JSHeroes 2018 After Movie</h2>
       <div className="video-wrapper">
         <iframe
+          aria-label="JSHeroes After Movie"
           title="JSHeroes After Movie"
           width="560"
           height="315"
