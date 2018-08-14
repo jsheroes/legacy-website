@@ -10,3 +10,4 @@ static/img/speakers.hidden/
 static/.DS_Store
 static/img/.DS_Store
 static/img/technologies/.DS_Store
+cypress/videos/

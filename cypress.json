@@ -1,0 +1,8 @@
+{
+  "baseUrl": "http://localhost:4001",
+  "integrationFolder": "tests/e2e",
+  "fixturesFolder": "tests/fixtures",
+  "ignoreTestFiles": [
+    "**/*.selectors.js"
+  ]
+}
