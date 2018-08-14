@@ -17,18 +17,20 @@ const Home = () => {
   const baseUrl = `static/img/${store.currentYear}`;
   return (
     <Layout>
-      <Header />
-      <Updates />
-      <AfterMovie />
-      <Speakers year="2019" baseUrl={baseUrl} speakers={store.data2019.speakers} />
-      {/* <Schedule /> */}
-      <Mission />
-      <Sponsors baseUrl={baseUrl} sponsors={store.data2019.sponsors} />
-      <Partners baseUrl={baseUrl} partners={store.data2019.partners} />
-      <Communities baseUrl={baseUrl} communities={store.data2019.communities} />
-      <Organizers />
-      <Venue />
-      <ScrollBtn />
+      <main>
+        <Header />
+        <Updates />
+        <AfterMovie />
+        <Speakers year="2019" baseUrl={baseUrl} speakers={store.data2019.speakers} />
+        {/* <Schedule /> */}
+        <Mission />
+        <Sponsors baseUrl={baseUrl} sponsors={store.data2019.sponsors} />
+        <Partners baseUrl={baseUrl} partners={store.data2019.partners} />
+        <Communities baseUrl={baseUrl} communities={store.data2019.communities} />
+        <Organizers />
+        <Venue />
+        <ScrollBtn />
+      </main>
     </Layout>
   );
 };
