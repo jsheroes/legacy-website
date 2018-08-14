@@ -147,7 +147,7 @@ const PrivacyMain = () => (
         >
           Safari web
         </a>{' '}
-        and
+        and{' '}
         <a
           href="https://support.apple.com/en-us/HT201265"
           target="_blank"
@@ -157,13 +157,25 @@ const PrivacyMain = () => (
         </a>
       </div>
       <p>
-        To opt-out of Hotjar tracking cookies follow this opt-out
+        To opt-out of Hotjar tracking cookies follow this opt-out{' '}
         <a
           href="https://www.hotjar.com/legal/compliance/opt-out"
           target="_blank"
           rel="noopener noreferrer"
         >
           link
+        </a>
+        .
+      </p>
+      <p>
+        To object to the collection of your data by Facebook Pixel, or to the use of your data for
+        the purpose of displaying Facebook ads click here:{' '}
+        <a
+          href="https://www.facebook.com/settings?tab=ads"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://www.facebook.com/settings?tab=ads
         </a>
         .
       </p>
