@@ -6,7 +6,7 @@ cache:
     - ~/.npm
     - ~/.cache
 install:
-  - npm ci
+  - npm install
 script:
   - npm run linter
   - npm run build
