@@ -15,7 +15,7 @@ export default [
     alt: 'youtube',
   },
   {
-    url: 'https://github.com/cluj-javascripters/',
+    url: 'https://github.com/jsheroes',
     label: 'fa fa-github',
     alt: 'github',
   },
