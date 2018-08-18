@@ -4,12 +4,16 @@ import Section from '../common/section';
 import news from '../../data/news';
 
 class Updates extends Component {
-  constructor() {
-    super();
-    this.state = {
-      activeNews: 0,
-    };
-  }
+  state = {
+    activeNews: 0,
+  };
+
+  onKeyDown = newsIndex => evt => {
+    if (evt.keyCode === 13) {
+      // enter key
+      this.setState({ activeNews: newsIndex });
+    }
+  };
 
   render() {
     const { activeNews } = this.state;
@@ -20,7 +24,10 @@ class Updates extends Component {
           tabIndex="0"
           role="button" // eslint-disable-line
           className={activeCss}
+          onFocus={() => this.setState({ activeNews: index })}
           onClick={() => this.setState({ activeNews: index })}
+          onKeyDown={this.onKeyDown(index)}
+          onMouseOver={() => this.setState({ activeNews: index })}
           key={item.title}
         >
           <strong>{item.title}</strong>
@@ -43,9 +50,9 @@ class Updates extends Component {
           {`
             .wrapper {
               padding-top: 140px;
-              padding-bottom: 100px;
               text-align: center;
               max-width: 1100px;
+              height: 350px;
             }
             .wrapper p {
               margin-bottom: 20px;
@@ -59,12 +66,15 @@ class Updates extends Component {
             }
 
             .wrapper li:hover {
-              color: black;
+              color: #0098ff;
+            }
+
+            [data-whatintent='mouse'] .wrapper li:focus {
+              outline: none;
             }
 
             .wrapper h1 {
               margin: 0 0 50px;
-              color: #0098ff;
             }
 
             .wrapper a {
@@ -81,7 +91,7 @@ class Updates extends Component {
               }
               .active-news {
                 position: relative;
-                color: black;
+                color: #0098ff;
                 display: inline-block;
                 text-decoration: none;
               }
@@ -110,7 +120,6 @@ class Updates extends Component {
                 content: '';
               }
               .news-item {
-                color: #0098ff;
                 display: inline-block;
                 text-decoration: none;
               }
@@ -133,10 +142,10 @@ class Updates extends Component {
               .active-news {
                 padding: 10px 10px;
                 position: relative;
-                color: black;
                 display: inline-block;
                 text-decoration: none;
                 border-bottom: 1px solid lightgray;
+                color: #0098ff;
               }
 
               .active-news::before {
@@ -150,6 +159,7 @@ class Updates extends Component {
                 position: absolute;
                 display: block;
                 content: '';
+                outline: none;
               }
               .active-news::after {
                 width: 0;
@@ -162,10 +172,10 @@ class Updates extends Component {
                 position: absolute;
                 display: block;
                 content: '';
+                outline: none;
               }
               .news-item {
                 padding: 10px 10px;
-                color: #0098ff;
                 display: inline-block;
                 text-decoration: none;
                 border-bottom: 1px solid lightgrey;
