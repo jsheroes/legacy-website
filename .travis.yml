@@ -1,10 +1,11 @@
 language: node_js
 node_js:
-  - "8"
+  - '8'
 cache:
   directories:
     - ~/.npm
     - ~/.cache
+    - node_modules
 install:
   - npm install
 script:
@@ -12,3 +13,10 @@ script:
   - npm run build
   - npm run dev & wait-on http://localhost:4001
   - npm run test:e2e
+before_deploy: npm install now --no-save # Install Now CLI on Travis
+deploy:
+  - provider: script
+    script: now --token $NOW_TOKEN && now alias --token $NOW_TOKEN
+    skip_cleanup: true
+    on:
+      master: true
