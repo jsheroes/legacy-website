@@ -3,7 +3,7 @@ import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import data from '../../data/index';
-import Person from '../personSpotlight';
+import PersonSpotlight from '../personSpotlight';
 import ambassadors from '../../data/2019/ambassadors';
 
 function addObserver() {
@@ -75,7 +75,7 @@ class Speakers extends Component {
             <div className="speaker-boxes">
               {speakers.map(speaker => (
                 <div key={speaker.name} className="speaker-box">
-                  <Person speaker={speaker} baseUrl={speakerUrl} activeLink />
+                  <PersonSpotlight person={speaker} baseUrl={speakerUrl} activeLink />
                 </div>
               ))}
             </div>
@@ -92,7 +92,7 @@ class Speakers extends Component {
                   <div className="speaker-boxes">
                     {ambassadors.map(ambassador => (
                       <div key={ambassador.name} className="speaker-box">
-                        <Person speaker={ambassador} baseUrl={ambassadorUrl} />
+                        <PersonSpotlight person={ambassador} baseUrl={ambassadorUrl} />
                       </div>
                     ))}
                   </div>
