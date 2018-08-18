@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
 import { styles, mediaQueries } from '../constants';
@@ -73,29 +74,32 @@ const style = (
   </style>
 );
 
-const PersonSpotlight = ({ speaker, baseUrl, activeLink = false }) => {
+const PersonSpotlight = ({ person, baseUrl, activeLink = false }) => {
   const personInfo = (
-    <a
-      className="speaker-info-box"
-      onMouseEnter={() => {
-        Router.prefetch(`/speakers?name=${speaker.permalink}`);
-      }}
-    >
-      <img src={`${baseUrl}${speaker.img}`} alt={speaker.name} />
+    <Fragment>
+      <img src={`${baseUrl}${person.img}`} alt={person.fullName} />
       <div className="speaker-hover" />
       <div className="speaker-details">
-        <h5>{speaker.fullName}</h5>
-        {speaker.position ? <h6>{speaker.position}</h6> : null}
-        {speaker.company ? <h6>{speaker.company}</h6> : null}
+        <h5 aria-hidden="true">{person.fullName}</h5>
+        {person.position ? <h6>{person.position}</h6> : null}
+        {person.company ? <h6>{person.company}</h6> : null}
       </div>
       {style}
-    </a>
+    </Fragment>
   );
   return (
     <div>
       {activeLink && (
-        <Link href={`/speakers?name=${speaker.permalink}`} as={`/speakers/${speaker.permalink}`}>
-          {personInfo}
+        <Link href={`/speakers?name=${person.permalink}`} as={`/speakers/${person.permalink}`}>
+          <a
+            className="speaker-info-box"
+            title={`Visit the page of ${person.fullName}`}
+            onMouseEnter={() => {
+              Router.prefetch(`/speakers?name=${person.permalink}`);
+            }}
+          >
+            {personInfo}
+          </a>
         </Link>
       )}
       {!activeLink && (

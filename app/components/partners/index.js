@@ -7,8 +7,8 @@ const Partners = ({ baseUrl, partners }) => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
     <ScrollableAnchor id="partners">
       <div>
-        <h2>and Partners</h2>
-        <p>Who give us a helping hand for our mission to go smoothly:</p>
+        <h2>Partners</h2>
+        <p>Who give us a helping hand for our mission to go smoothly</p>
         <ul>
           {partners.map(partner => (
             <Partner {...partner} key={partner.title} baseUrl={baseUrl} />

@@ -17,7 +17,7 @@ const Sponsors = ({ baseUrl, sponsors }) => (
             </a>
           </Link>
         </p>
-        <p>These are the companies that joined our mission:</p>
+        <p>These are the companies that joined our mission</p>
         <ul>
           {sponsors.map(sponsor => (
             <Sponsor {...sponsor} key={sponsor.title} baseUrl={baseUrl} />
