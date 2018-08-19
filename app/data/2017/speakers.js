@@ -120,29 +120,6 @@ export default [
     workshop: null,
   },
   {
-    company: '',
-    crazy: '',
-    description:
-      '<p>Will is a high-school dropout turned recent college graduate. During college, he founded OpenSpace, a hackerspace collaborating with the local school district to give the region access to technology. He was also the chair of the college`s chapter of the Association of Computing Machinery, organized an undergraduate research symposium for Saint Louis Area, and helped organize HackSI, an all-ages hackathon in the Southern Illinois region. His professional shenanigans include working for Boeing and NodeSource. Currently, Will is an independent contractor specializing in Node.js software development and Docker based infrastructure.</p>',
-    fullName: 'William Blankenship',
-    github: 'https://github.com/retrohacker',
-    img: 'WillBlackenship.png',
-    name: 'william',
-    otherTalks: [],
-    permalink: 'william-blankenship',
-    position: 'Independent Contractor',
-    previousTalks: [],
-    reference: 'him',
-    talk: {
-      description: '',
-      message: '',
-      title: '',
-    },
-    twitter: 'https://twitter.com/retrohack3r',
-    website: 'http://will.blankenship.io/',
-    workshop: null,
-  },
-  {
     company: 'LogMeIn',
     crazy: '',
     description:
