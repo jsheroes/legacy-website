@@ -37,9 +37,7 @@ const Footer = () => (
       <div className="col-md-3 col-sm-4">
         <span className="headline">Prior Events</span>
         <div>
-          <a href="http://2017.jsheroes.io" rel="noopener noreferrer" target="_blank">
-            JSHeroes 2017
-          </a>
+          <a href="/2017">JSHeroes 2017</a>
         </div>
         <div>
           <a href="/2018">JSHeroes 2018</a>

@@ -1,7 +1,6 @@
 import Layout from '../app/components/layout';
 import Header from '../app/components/header';
 import Updates from '../app/components/updates';
-import AfterMovie from '../app/components/afterMovie';
 import Speakers from '../app/components/speakers';
 // import Schedule from '../app/components/schedule';
 import Sponsors from '../app/components/sponsors';
@@ -20,7 +19,6 @@ const Home = () => {
       <main>
         <Header />
         <Updates />
-        <AfterMovie />
         <Speakers year="2019" baseUrl={baseUrl} speakers={store.data2019.speakers} />
         {/* <Schedule /> */}
         <Mission />

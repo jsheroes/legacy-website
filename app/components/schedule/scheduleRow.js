@@ -1,7 +1,6 @@
 import { styles } from '../../constants';
-import speakers from '../../data/2018/speakers';
 
-const ScheduleRow = ({ agendaItem, activeTab, baseUrl }) => {
+const ScheduleRow = ({ agendaItem, baseUrl, type, speakers }) => {
   // eslint-disable-line complexity
   if (!agendaItem) {
     return '';
@@ -72,7 +71,7 @@ const ScheduleRow = ({ agendaItem, activeTab, baseUrl }) => {
     );
   }
 
-  const isWorkshopTab = activeTab === 0;
+  const isWorkshopTab = type === 'workshops';
   const activity = isWorkshopTab ? firstSpeaker.workshop : firstSpeaker.talk;
   const activityTitle = activity.soldOut ? `${activity.title} ( SOLD OUT )` : activity.title;
 
@@ -82,7 +81,7 @@ const ScheduleRow = ({ agendaItem, activeTab, baseUrl }) => {
         <div className="activity-title">{activityTitle}</div>
         <div>
           <a className="speaker-name">{firstSpeaker.fullName}</a>
-          <span className="speaker-position">,{firstSpeaker.position}</span>
+          <span className="speaker-position">, {firstSpeaker.position}</span>
           {firstSpeaker.company && <span className="speaker-company">{firstSpeaker.company}</span>}
         </div>
         {secondSpeaker && (

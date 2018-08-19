@@ -31,7 +31,7 @@ export default [
     links: [
       {
         id: 6.1,
-        url: 'http://2017.jsheroes.io/',
+        url: '/2017',
         label: '2017',
       },
       {

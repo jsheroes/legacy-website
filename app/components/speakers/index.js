@@ -46,7 +46,7 @@ class Speakers extends Component {
       <Section>
         <ScrollableAnchor id="speakers">
           <div className="speakers-section">
-            <div className={`row section-header ${isCurrentYear && 'year'}`}>
+            <div className={` section-header ${isCurrentYear && 'year'}`}>
               <h2>{title}</h2>
               {isCurrentYear && (
                 <div>
@@ -57,19 +57,6 @@ class Speakers extends Component {
                     our community event!
                   </p>
                 </div>
-              )}
-              {!isCurrentYear && (
-                <h3>
-                  You can find all the recorded talks on our youtube channel
-                  <a
-                    href="https://www.youtube.com/watch?v=Zx2moTy-yAg&list=PLB9NqTp0uKrRn_C80xQK8QEeO-vaBmN_9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {' '}
-                    2018 playlist
-                  </a>
-                </h3>
               )}
             </div>
             <div className="speaker-boxes">
@@ -108,6 +95,11 @@ class Speakers extends Component {
               padding-top: 30px;
               padding-bottom: 30px;
               // margin: 30px 0;
+            }
+
+            h2 {
+              padding-top: 30px;
+              text-align: center;
             }
 
             h3 {
@@ -149,6 +141,7 @@ class Speakers extends Component {
             @media (min-width: ${mediaQueries.S}) {
               .speakers-section .section-header h2 {
                 font-size: 33px;
+                text-align: center;
               }
               .speakers-section .section-header p {
                 font-size: 16px;
@@ -160,6 +153,7 @@ class Speakers extends Component {
             @media (min-width: ${mediaQueries.L}) {
               .speakers-section .section-header h2 {
                 font-size: 46px;
+                text-align: center;
               }
               .speakers-section .section-header p {
                 font-size: 17px;
@@ -171,6 +165,7 @@ class Speakers extends Component {
             @media (min-width: ${mediaQueries.XL}) {
               .speakers-section .section-header h2 {
                 font-size: 52px;
+                text-align: center;
               }
               .speakers-section .section-header p {
                 font-size: 18px;

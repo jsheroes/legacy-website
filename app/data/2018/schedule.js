@@ -3,6 +3,7 @@ export default [
     section: 'WORKSHOPS',
     date: 'April 10',
     index: 0,
+    type: 'workshops',
     activities: [
       {
         speakerRef: 'jack-franklin',
@@ -50,7 +51,13 @@ export default [
     section: 'Day 1',
     date: 'April 11',
     index: 1,
+    type: 'conference',
     activities: [
+      {
+        speakerRef: '',
+        overrideTitle: 'Check-in & Coffee',
+        time: '08:00 - 09:00',
+      },
       {
         speakerRef: '',
         overrideTitle: 'Welcome JSHeroes!',
@@ -65,6 +72,11 @@ export default [
         time: '10:00 - 10:30',
       },
       {
+        speakerRef: '',
+        overrideTitle: 'Coffee Break',
+        time: '10:30 - 11:00',
+      },
+      {
         speakerRef: 'monica-dinculescu',
         time: '11:00 - 11:30',
       },
@@ -77,6 +89,11 @@ export default [
         time: '12:00 - 12:30',
       },
       {
+        speakerRef: '',
+        overrideTitle: 'Lunch Break',
+        time: '12:30 - 14:00',
+      },
+      {
         speakerRef: 'kristijan-ristovski',
         time: '14:00 - 14:30',
       },
@@ -87,6 +104,11 @@ export default [
       {
         speakerRef: 'brent-vatne',
         time: '15:00 - 15:30',
+      },
+      {
+        speakerRef: '',
+        overrideTitle: 'Coffee Break',
+        time: '15:30 - 16:00',
       },
       {
         speakerRef: 'nir-kaufman',
@@ -106,7 +128,13 @@ export default [
     section: 'Day 2',
     date: 'April 12',
     index: 2,
+    type: 'conference',
     activities: [
+      {
+        speakerRef: '',
+        overrideTitle: 'Coffee',
+        time: '08:00 - 09:00',
+      },
       {
         speakerRef: 'jack-franklin',
         time: '09:00 - 09:30',
@@ -118,6 +146,11 @@ export default [
       {
         speakerRef: 'larissa-davidova',
         time: '10:00 - 10:30',
+      },
+      {
+        speakerRef: '',
+        overrideTitle: 'Coffee Break',
+        time: '10:30 - 11:00',
       },
       {
         speakerRef: 'anjana-vakil',
@@ -132,6 +165,11 @@ export default [
         time: '12:00 - 12:30',
       },
       {
+        speakerRef: '',
+        overrideTitle: 'Lunch Break',
+        time: '12:30 - 14:00',
+      },
+      {
         speakerRef: 'liran-tal',
         time: '14:00 - 14:30',
       },
@@ -142,6 +180,11 @@ export default [
       {
         speakerRef: 'ives-van-hoorne',
         time: '15:00 - 15:30',
+      },
+      {
+        speakerRef: '',
+        overrideTitle: 'Coffee Break',
+        time: '15:30 - 16:00',
       },
       {
         speakerRef: 'phil-hawksworth',

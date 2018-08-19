@@ -5,6 +5,7 @@ import news from './news';
 import schedule from './schedule';
 import speakers from './speakers';
 import sponsors from './sponsors';
+import videos from './videos';
 
 export default {
   communities,
@@ -14,4 +15,5 @@ export default {
   schedule,
   speakers,
   sponsors,
+  videos,
 };

@@ -297,7 +297,7 @@ export default [
     talk: {
       title: 'Advanced Redux - Design Patterns and Practices',
       description:
-        'Redux is as a modern popular state management library in frontend today. But if you dig a little deeper, you will find out the Redux build on top of patterns and concepts that was introduced 20 years ago. During this session, we talk about design patterns from the world of micro services and messaging systems and see how to use those ideas in the context of modern single page app. You will never use Redux the same way again.',
+        'CACACACa Redux is as a modern popular state management library in frontend today. But if you dig a little deeper, you will find out the Redux build on top of patterns and concepts that was introduced 20 years ago. During this session, we talk about design patterns from the world of micro services and messaging systems and see how to use those ideas in the context of modern single page app. You will never use Redux the same way again.',
       message:
         'How to implement a complexed flow using battle proofed design patterns & techniques',
     },
