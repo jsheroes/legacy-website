@@ -16,7 +16,7 @@ script:
 before_deploy: npm install now --no-save # Install Now CLI on Travis
 deploy:
   - provider: script
-    script: NODE_ENV=production now --token $NOW_TOKEN && now alias --token $NOW_TOKEN
+    script: now --token $NOW_TOKEN && now alias --token $NOW_TOKEN
     skip_cleanup: true
     on:
       master: true

@@ -1,4 +1,7 @@
 {
   "name": "jsheroes.io",
-  "alias": "jsheroes.io"
+  "alias": "jsheroes.io",
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
