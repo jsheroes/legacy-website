@@ -3,6 +3,7 @@ export default [
     section: 'WORKSHOPS',
     date: 'April 10',
     index: 0,
+    type: 'workshops',
     activities: [
       {
         speakerRef: 'jack-franklin',
@@ -50,6 +51,7 @@ export default [
     section: 'Day 1',
     date: 'April 11',
     index: 1,
+    type: 'conference',
     activities: [
       {
         speakerRef: '',
@@ -106,6 +108,7 @@ export default [
     section: 'Day 2',
     date: 'April 12',
     index: 2,
+    type: 'conference',
     activities: [
       {
         speakerRef: 'jack-franklin',
