@@ -31,13 +31,13 @@ export default [
     links: [
       {
         id: 6.1,
-        url: '/2017',
-        label: '2017',
+        url: '/2018',
+        label: '2018',
       },
       {
         id: 6.2,
-        url: '/2018',
-        label: '2018',
+        url: '/2017',
+        label: '2017',
       },
     ],
   },
