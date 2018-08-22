@@ -51,13 +51,13 @@ export default class Nav extends Component {
                 key={item.id}
                 onClick={this.toggleMobileNav}
               >
-                <a href={`/${item.url}`}>{item.label}</a>
+                <a href={item.url}>{item.label}</a>
 
                 {item.links ? (
                   <ul className="menu-items inside">
                     {item.links.map(link => (
                       <li key={link.id}>
-                        {link.url.startsWith('http') ? (
+                        {link.url.startsWith('http') || link.url.startsWith('mailto') ? (
                           <a href={`${link.url}`}>{link.label}</a>
                         ) : (
                           <Link href={link.url}>

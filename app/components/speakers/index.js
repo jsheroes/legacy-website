@@ -72,9 +72,10 @@ class Speakers extends Component {
                 <h2>And our awesome ambassadors</h2>
                 <div>
                   <p>
-                    These are the people you already know from the previous editions of JSHeroes. We
-                    want to thank them for all their amazing work and we are making them part of the
-                    community indefinitely!
+                    An amazing group of people who said yes to the challenge of working with us at
+                    making JSHeroes awesome! You may know some of them from the previous editions of
+                    JSHeroes. We want to thank them for all their amazing work and we are making
+                    them part of the community indefinitely!
                   </p>
                   <div className="speaker-boxes">
                     {ambassadors.map(ambassador => (

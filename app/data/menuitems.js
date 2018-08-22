@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    url: '#speakers',
+    url: '/#speakers',
     label: 'speakers',
   },
   // {
@@ -11,18 +11,18 @@ export default [
   // },
   {
     id: 3,
-    url: '#mission',
+    url: '/#mission',
     label: 'mission',
   },
   {
     id: 4,
-    url: '#sponsors',
+    url: '/#partners',
     label: 'sponsors',
   },
   {
     id: 5,
-    label: 'venue',
-    url: '#venue',
+    label: 'contact',
+    url: 'mailto:welcome@jsheroes.io',
   },
   {
     id: 6,

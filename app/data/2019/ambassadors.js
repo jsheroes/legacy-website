@@ -21,6 +21,20 @@ export default [
     img: 'gautam.jpg',
   },
   {
+    name: 'ives',
+    fullName: 'Ives van Hoorne',
+    position: 'Magician',
+    company: 'CodeSandbox',
+    img: 'ives.jpg',
+  },
+  {
+    name: 'jeremias',
+    fullName: 'Jeremias Menichelli',
+    position: 'Frontend Engineer in Design Systems',
+    company: 'TypeForm',
+    img: 'jeremias.jpg',
+  },
+  {
     name: 'liran',
     fullName: 'Liran Tal',
     position: 'Engineering Manager',
