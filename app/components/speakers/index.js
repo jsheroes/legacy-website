@@ -68,8 +68,8 @@ class Speakers extends Component {
             </div>
 
             {isCurrentYear && (
-              <div className="row section-header">
-                <h2>And our awesome ambassadors</h2>
+              <div className="row section-header" id="ambassadors">
+                <h2>And Our Awesome Ambassadors</h2>
                 <div>
                   <p>
                     An amazing group of people who said yes to the challenge of working with us at
