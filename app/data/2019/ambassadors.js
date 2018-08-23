@@ -9,7 +9,7 @@ export default [
   {
     name: 'carmen',
     fullName: 'Carmen Popoviciu',
-    position: '',
+    position: 'Emoji Hyperuser',
     company: '',
     img: 'carmen.jpg',
   },
