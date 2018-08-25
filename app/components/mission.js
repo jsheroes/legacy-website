@@ -1,34 +1,30 @@
-import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from './common/section';
 import { styles, mediaQueries } from '../constants';
 
 const Mission = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor6 } }}>
-    <ScrollableAnchor id="mission">
-      <div>
-        <h2>An Open-Source Community Event</h2>
-        <p>
-          We believe that the <strong>community</strong> and the <strong>open-source</strong> models
-          are well suited for our core values: learning, teaching and knowledge sharing. Our mission
-          is to inspire other communities with the concept of <strong>open-source events</strong>.
-        </p>
-        <p>
-          We’re <strong>publishing all data</strong> about this conference, in{' '}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://medium.com/cluj-javascripters/jsheroes-2018-transparency-report-part-2-follow-up-eadce2a986bf"
-          >
-            full transparency
-          </a>
-          . We are also available at any time for inquires and we`re really looking forward to{' '}
-          <strong>sharing</strong> our knowledge about{' '}
-          <strong>organizing international events</strong>. This way, whenever a community wants to{' '}
-          <strong>start</strong> something similar, they can <strong>build</strong> on our
-          knowledge.
-        </p>
-      </div>
-    </ScrollableAnchor>
+    <div id="mission">
+      <h2>An Open-Source Community Event</h2>
+      <p>
+        We believe that the <strong>community</strong> and the <strong>open-source</strong> models
+        are well suited for our core values: learning, teaching and knowledge sharing. Our mission
+        is to inspire other communities with the concept of <strong>open-source events</strong>.
+      </p>
+      <p>
+        We’re <strong>publishing all data</strong> about this conference, in{' '}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://medium.com/cluj-javascripters/jsheroes-2018-transparency-report-part-2-follow-up-eadce2a986bf"
+        >
+          full transparency
+        </a>
+        . We are also available at any time for inquires and we`re really looking forward to{' '}
+        <strong>sharing</strong> our knowledge about{' '}
+        <strong>organizing international events</strong>. This way, whenever a community wants to{' '}
+        <strong>start</strong> something similar, they can <strong>build</strong> on our knowledge.
+      </p>
+    </div>
     <style jsx>
       {`
         div {

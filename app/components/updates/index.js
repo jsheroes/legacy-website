@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
 import news from '../../data/news';
 
@@ -37,13 +36,11 @@ class Updates extends Component {
     const { content } = news[activeNews];
     return (
       <Section>
-        <ScrollableAnchor id="news">
-          <div className="wrapper">
-            <h1>News</h1>
-            <ul>{newsData}</ul>
-            <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
-          </div>
-        </ScrollableAnchor>
+        <div id="news" className="wrapper">
+          <h1>News</h1>
+          <ul>{newsData}</ul>
+          <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
+        </div>
 
         {/* language=CSS */}
         <style jsx global>

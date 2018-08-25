@@ -1,4 +1,3 @@
-import ScrollableAnchor from 'react-scrollable-anchor';
 import GoogleMap from './google.map';
 
 import Section from '../common/section';
@@ -6,14 +5,12 @@ import { styles, mediaQueries } from '../../constants';
 
 const Venue = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor6 } }}>
-    <ScrollableAnchor id="venue">
-      <div>
-        <h2>Venue: Grand Hotel Italia</h2>
-        <p>Trifoiului Street number 2, Cluj-Napoca, Romania</p>
+    <div id="venue">
+      <h2>Venue: Grand Hotel Italia</h2>
+      <p>Trifoiului Street number 2, Cluj-Napoca, Romania</p>
 
-        <GoogleMap />
-      </div>
-    </ScrollableAnchor>
+      <GoogleMap />
+    </div>
 
     <style jsx>
       {`

@@ -1,13 +1,10 @@
 import React from 'react';
-import { configureAnchors } from 'react-scrollable-anchor';
 import Head from 'next/head';
 import Nav from './nav';
 import Footer from './footer';
 import CookiePrivacy from './privacy/cookiePrivacy';
 
 import { styles } from '../constants';
-
-configureAnchors({ offset: 0, scrollDuration: 1000 });
 
 const Layout = ({ children }) => (
   <div className="big-wrapper">
