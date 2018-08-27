@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import data from '../../data/index';
@@ -44,51 +43,49 @@ class Speakers extends Component {
     const ambassadorUrl = `${baseUrl}/ambassadors/`;
     return (
       <Section>
-        <ScrollableAnchor id="speakers">
-          <div className="speakers-section">
-            <div className={` section-header ${isCurrentYear && 'year'}`}>
-              <h2>{title}</h2>
-              {isCurrentYear && (
-                <div>
-                  <p>
-                    The speakers that joined our mission are experts recognized by global
-                    communities. They are people who define our working environment every day. Most
-                    of them are for the first time in Romania and they’re really looking forward to
-                    our community event!
-                  </p>
-                </div>
-              )}
-            </div>
-            <div className="speaker-boxes">
-              {speakers.map(speaker => (
-                <div key={speaker.name} className="speaker-box">
-                  <PersonSpotlight person={speaker} baseUrl={speakerUrl} activeLink />
-                </div>
-              ))}
-            </div>
-
+        <div id="speakers" className="speakers-section">
+          <div className={` section-header ${isCurrentYear && 'year'}`}>
+            <h2>{title}</h2>
             {isCurrentYear && (
-              <div className="row section-header" id="ambassadors">
-                <h2>And Our Awesome Ambassadors</h2>
-                <div>
-                  <p>
-                    An amazing group of people who said yes to the challenge of working with us at
-                    making JSHeroes awesome! You may know some of them from the previous editions of
-                    JSHeroes. We want to thank them for all their amazing work and we are making
-                    them part of the community indefinitely!
-                  </p>
-                  <div className="speaker-boxes">
-                    {ambassadors.map(ambassador => (
-                      <div key={ambassador.name} className="speaker-box">
-                        <PersonSpotlight person={ambassador} baseUrl={ambassadorUrl} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              <div>
+                <p>
+                  The speakers that joined our mission are experts recognized by global communities.
+                  They are people who define our working environment every day. Most of them are for
+                  the first time in Romania and they’re really looking forward to our community
+                  event!
+                </p>
               </div>
             )}
           </div>
-        </ScrollableAnchor>
+          <div className="speaker-boxes">
+            {speakers.map(speaker => (
+              <div key={speaker.name} className="speaker-box">
+                <PersonSpotlight person={speaker} baseUrl={speakerUrl} activeLink />
+              </div>
+            ))}
+          </div>
+
+          {isCurrentYear && (
+            <div className="row section-header" id="ambassadors">
+              <h2>And Our Awesome Ambassadors</h2>
+              <div>
+                <p>
+                  An amazing group of people who said yes to the challenge of working with us at
+                  making JSHeroes awesome! You may know some of them from the previous editions of
+                  JSHeroes. We want to thank them for all their amazing work and we are making them
+                  part of the community indefinitely!
+                </p>
+                <div className="speaker-boxes">
+                  {ambassadors.map(ambassador => (
+                    <div key={ambassador.name} className="speaker-box">
+                      <PersonSpotlight person={ambassador} baseUrl={ambassadorUrl} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
 
         <style jsx>
           {`

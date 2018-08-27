@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
 import BuyTicket from '../common/buyTicket';
 import { mediaQueries } from '../../constants';
@@ -128,32 +127,30 @@ class Header extends Component {
     return (
       <div>
         <Section section={{ style: heroBcgImg }} mainContainer={{ style: heroDarkOverlay }}>
-          <ScrollableAnchor id="hero">
-            <div className="header-wrapper">
-              {media}
-              <div className="headOverlay" />
+          <div id="hero" className="header-wrapper">
+            {media}
+            <div className="headOverlay" />
 
-              <div className="container header-container">
-                <div className="row">
-                  <div className="col-md-12 header-logo">
-                    <div className={logoFixed ? 'hide' : ''} id="logo">
-                      <span className="logoJs">JS</span>
-                      <span className="logoHeroes">Heroes</span>
-                    </div>
+            <div className="container header-container">
+              <div className="row">
+                <div className="col-md-12 header-logo">
+                  <div className={logoFixed ? 'hide' : ''} id="logo">
+                    <span className="logoJs">JS</span>
+                    <span className="logoHeroes">Heroes</span>
                   </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-12 header-text">
-                    <p>Open-Source Community Event</p>
-                    <p> April 11-12th, 2019 in Cluj-Napoca, Romania</p>
-                  </div>
-                </div>
-                <div className="row">
-                  <BuyTicket />
                 </div>
               </div>
+              <div className="row">
+                <div className="col-md-12 header-text">
+                  <p>Open-Source Community Event</p>
+                  <p> April 11-12th, 2019 in Cluj-Napoca, Romania</p>
+                </div>
+              </div>
+              <div className="row">
+                <BuyTicket />
+              </div>
             </div>
-          </ScrollableAnchor>
+          </div>
 
           <style jsx>
             {`

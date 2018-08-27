@@ -1,35 +1,32 @@
-import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import Community from './community';
 
 const Communities = ({ communities, baseUrl }) => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
-    <ScrollableAnchor id="communities">
-      <div>
-        <h2>
-          We
-          <span>
-            {' '}
-            <i className="fa fa-heart fa-1x" aria-hidden="true" />{' '}
-          </span>
-          Communities
-        </h2>
-        <p>
-          These JavaScript communities support us by offering their advice, promoting the event,
-          participating in the Call for Speakers, fundraising and by having a natural collaborative
-          approach.
-        </p>
-        <ul>
-          {communities.map(community => (
-            <Community {...community} key={community.title} baseUrl={baseUrl} />
-          ))}
-        </ul>
-        <p>
-          <strong>#humansofjavascript</strong>
-        </p>
-      </div>
-    </ScrollableAnchor>
+    <div id="communities">
+      <h2>
+        We
+        <span>
+          {' '}
+          <i className="fa fa-heart fa-1x" aria-hidden="true" />{' '}
+        </span>
+        Communities
+      </h2>
+      <p>
+        These JavaScript communities support us by offering their advice, promoting the event,
+        participating in the Call for Speakers, fundraising and by having a natural collaborative
+        approach.
+      </p>
+      <ul>
+        {communities.map(community => (
+          <Community {...community} key={community.title} baseUrl={baseUrl} />
+        ))}
+      </ul>
+      <p>
+        <strong>#humansofjavascript</strong>
+      </p>
+    </div>
 
     <style jsx>
       {`

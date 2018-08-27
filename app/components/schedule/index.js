@@ -1,44 +1,41 @@
-import ScrollableAnchor from 'react-scrollable-anchor';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import ScheduleTabSelector from './scheduleTabSelector';
 
 const Schedule = ({ year, schedule, baseUrl, speakers }) => (
   <Section section={{ style: { backgroundColor: styles.mainColor4 } }}>
-    <ScrollableAnchor id="schedule">
-      <div id="schedule_section" className="section-padding">
-        <Style />
-        <div className="row section-header">
-          <h2>Schedule</h2>
-          <ScheduleTabSelector
-            schedule={schedule}
-            year={year}
-            baseUrl={baseUrl}
-            speakers={speakers}
-          />
-        </div>
+    <div id="schedule" className="section-padding">
+      <Style />
+      <div className="row section-header">
+        <h2>Schedule</h2>
+        <ScheduleTabSelector
+          schedule={schedule}
+          year={year}
+          baseUrl={baseUrl}
+          speakers={speakers}
+        />
       </div>
-    </ScrollableAnchor>
+    </div>
   </Section>
 );
 
 const Style = () => (
   <style jsx="true">
     {`
-      #schedule_section.section-padding {
+      #schedule.section-padding {
         padding: 80px 0;
       }
-      #schedule_section .section-header {
+      #schedule .section-header {
         margin: auto;
       }
-      #schedule_section .section-header h2 {
+      #schedule .section-header h2 {
         text-align: center;
         font-size: 33px;
         color: ${styles.mainColor3};
         font-weight: 700;
         margin: 0 auto 50px;
       }
-      #schedule_section .section-header p {
+      #schedule .section-header p {
         width: 98%;
         margin-bottom: 20px;
         font-size: 16px;
@@ -50,45 +47,45 @@ const Style = () => (
         margin-right: auto;
       }
 
-      #schedule_section .row {
+      #schedule .row {
         display: table;
         width: 100%;
       }
 
       @media (min-width: ${mediaQueries.S}) {
-        #schedule_section.section-padding {
+        #schedule.section-padding {
           padding: 80px 0;
         }
-        #schedule_section .section-header h2 {
+        #schedule .section-header h2 {
           font-size: 33px;
         }
-        #schedule_section .section-header p {
+        #schedule .section-header p {
           font-size: 16px;
           line-height: 28px;
           margin-bottom: 20px;
         }
       }
       @media (min-width: ${mediaQueries.L}) {
-        #schedule_section.section-padding {
+        #schedule.section-padding {
           padding: 90px 0;
         }
-        #schedule_section .section-header h2 {
+        #schedule .section-header h2 {
           font-size: 46px;
         }
-        #schedule_section .section-header p {
+        #schedule .section-header p {
           font-size: 17px;
           line-height: 30px;
           margin-bottom: 30px;
         }
       }
       @media (min-width: ${mediaQueries.XL}) {
-        #schedule_section.section-padding {
+        #schedule.section-padding {
           padding: 140px 0;
         }
-        #schedule_section .section-header h2 {
+        #schedule .section-header h2 {
           font-size: 52px;
         }
-        #schedule_section .section-header p {
+        #schedule .section-header p {
           font-size: 18px;
           line-height: 32px;
           margin-bottom: 40px;

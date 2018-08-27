@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import { goToAnchor } from 'react-scrollable-anchor';
 import { styles } from '../constants';
 
 class ScrollBtn extends Component {
@@ -38,9 +37,9 @@ class ScrollBtn extends Component {
     const { show } = this.state;
     return (
       <div className={`back-top ${show ? 'show' : ''}`}>
-        <div className="go-to-anchor" onClick={() => goToAnchor('hero')} role="presentation">
+        <a className="go-to-anchor" href="#hero">
           <i className="fa fa-angle-up" />
-        </div>
+        </a>
 
         {/* language=CSS */}
         <style jsx>

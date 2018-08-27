@@ -1,5 +1,3 @@
-import ScrollableAnchor from 'react-scrollable-anchor';
-
 import Section from '../common/section';
 
 const heroBcgImg = {
@@ -26,9 +24,7 @@ const heroDarkOverlay = {
 const NewsletterHero = () => (
   <div>
     <Section section={{ style: heroBcgImg }} mainContainer={{ style: heroDarkOverlay }}>
-      <ScrollableAnchor id="home">
-        <div />
-      </ScrollableAnchor>
+      <div id="home" />
     </Section>
   </div>
 );
