@@ -289,10 +289,7 @@ function buildTalks(speaker) {
       )}
       {generalTalks.length > 0 && (
         <div className="talks" key="general">
-          <h4>
-            See
-            {speaker.firstName} at other conferences
-          </h4>
+          <h4>See {speaker.firstName} at other conferences</h4>
           {generalTalks}
         </div>
       )}
