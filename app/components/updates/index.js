@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Section from '../common/section';
 import news from '../../data/news';
+import { mediaQueries } from '../../constants';
 
 class Updates extends Component {
   state = {
@@ -78,7 +79,7 @@ class Updates extends Component {
               text-decoration: none;
             }
 
-            @media (min-width: 601px) {
+            @media (min-width: ${mediaQueries.S}) {
               .wrapper ul {
                 display: flex;
                 justify-content: space-around;
@@ -122,7 +123,7 @@ class Updates extends Component {
               }
             }
 
-            @media (max-width: 600px) {
+            @media (max-width: ${mediaQueries.S}) {
               .wrapper {
                 padding-top: 80px;
                 padding-bottom: 80px;
@@ -141,41 +142,18 @@ class Updates extends Component {
                 position: relative;
                 display: inline-block;
                 text-decoration: none;
-                border-bottom: 1px solid lightgray;
                 color: #0098ff;
               }
 
-              .active-news::before {
-                width: 0;
-                height: 0;
-                border-left: 10px solid transparent;
-                border-right: 10px solid transparent;
-                border-top: 10px solid lightgray;
-                bottom: -10px;
-                left: 40%;
-                position: absolute;
-                display: block;
-                content: '';
-                outline: none;
-              }
+              .active-news::before,
               .active-news::after {
-                width: 0;
-                height: 0;
-                border-left: 10px solid transparent;
-                border-right: 10px solid transparent;
-                border-top: 10px solid white;
-                bottom: -9px;
-                left: 40%;
-                position: absolute;
-                display: block;
-                content: '';
-                outline: none;
+                display: none;
               }
               .news-item {
                 padding: 10px 10px;
                 display: inline-block;
                 text-decoration: none;
-                border-bottom: 1px solid lightgrey;
+                border: none;
               }
             }
           `}
