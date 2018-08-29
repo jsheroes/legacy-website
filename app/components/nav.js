@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Link from 'next/link';
 import menuItems from '../data/menuitems';
 import { styles } from '../constants';
@@ -51,23 +51,26 @@ export default class Nav extends Component {
                 key={item.id}
                 onClick={this.toggleMobileNav}
               >
-                <a href={item.url}>{item.label}</a>
-
                 {item.links ? (
-                  <ul className="menu-items inside">
-                    {item.links.map(link => (
-                      <li key={link.id}>
-                        {link.url.startsWith('http') || link.url.startsWith('mailto') ? (
-                          <a href={`${link.url}`}>{link.label}</a>
-                        ) : (
-                          <Link href={link.url}>
-                            <a>{link.label}</a>
-                          </Link>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
+                  <Fragment>
+                    <span>{item.label}</span>
+                    <ul className="menu-items inside">
+                      {item.links.map(link => (
+                        <li key={link.id}>
+                          {link.url.startsWith('http') || link.url.startsWith('mailto') ? (
+                            <a href={`${link.url}`}>{link.label}</a>
+                          ) : (
+                            <Link href={link.url}>
+                              <a>{link.label}</a>
+                            </Link>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </Fragment>
+                ) : (
+                  <a href={item.url}>{item.label}</a>
+                )}
               </li>
             ))}
           </ul>
@@ -133,7 +136,8 @@ export default class Nav extends Component {
               text-align: center;
             }
 
-            ul.menu-items li a {
+            ul.menu-items li a,
+            ul.menu-items li span {
               color: white;
               font-size: 18px;
               text-transform: capitalize;
@@ -160,21 +164,17 @@ export default class Nav extends Component {
 
               .navigation-wrapper.open ul.menu-items:not(.inside) {
                 display: block;
-                transform: translate(0%, 25%);
+                transform: translate(0%, 14%);
                 width: 100%;
                 transition: all 900ms ease-in;
                 opacity: 0.85;
                 top: 20px;
               }
 
-              .navigation-wrapper.open ul li {
+              ul.menu-items.inside li {
                 display: block;
                 padding: 10px 20px;
                 text-align: center;
-              }
-
-              .navigation-wrapper.open ul li.with-link {
-                display: none;
               }
 
               .navigation-wrapper.open .first {
@@ -192,6 +192,19 @@ export default class Nav extends Component {
                 transform: rotate(-45deg);
                 background-color: ${styles.mainColor5};
                 transition: all 700ms ease-in-out;
+              }
+
+              ul.menu-items li span {
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+              }
+
+              ul .menu-items.inside {
+                display: block;
+                opacity: 1;
+                position: static;
+                transform: none;
               }
 
               .hamburger-btn {
