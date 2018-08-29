@@ -85,7 +85,7 @@ const SpeakerDetail = ({ speaker }) => {
                 <BuyTicket />
               </div>
             </div>
-            <div className="col-md-9 main">
+            <div className="col-md-9">
               <div className="details hidden-sm-down">
                 <h1 className="name">{speaker.fullName}</h1>
                 <div>
@@ -165,15 +165,6 @@ const SpeakerDetail = ({ speaker }) => {
             padding: 0 30px;
           }
 
-          .main {
-            padding: 0 5px;
-            text-align: justify;
-          }
-
-          .side .social-links {
-            text-align: center;
-          }
-
           .join {
             margin: 50px 0;
           }
@@ -210,40 +201,7 @@ const SpeakerDetail = ({ speaker }) => {
             margin-bottom: 25px;
           }
 
-          @media (max-width: ${mediaQueries.L}) {
-            .details {
-              text-align: center;
-            }
-            .main .join {
-              margin: 60px 0 20px 0;
-            }
-
-            .speakers-page {
-              padding-top: 65px;
-            }
-
-            .main {
-              padding: 0 20px;
-            }
-
-            .side {
-              display: flex;
-              margin-bottom: 30px;
-              padding: 0 20px;
-            }
-
-            .speaker-info-box {
-              display: inline-block;
-              margin: auto;
-            }
-
-            .details-container {
-              flex: 1;
-              padding: 10px;
-            }
-          }
-
-          @media (max-width: ${mediaQueries.XS}) {
+          @media (max-width: ${mediaQueries.S}) {
             .side,
             .speaker-info-box {
               display: block;

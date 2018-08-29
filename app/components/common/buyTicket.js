@@ -21,7 +21,7 @@ const Style = () => (
       }
       .header-btn-left {
         background-color: rgba(0, 152, 255, 0.8);
-        padding: 10px 30px;
+        padding: 10px 20px;
         color: #fff;
         border: 2px solid #0098ff;
         transition: all 0.5s;
@@ -29,7 +29,7 @@ const Style = () => (
         cursor: pointer;
         margin-top: 80px;
         border-radius: 4px;
-        font-size: 20px;
+        font-size: 18px;
       }
       .header-btn-left:hover {
         background-color: #0098ff;
