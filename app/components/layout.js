@@ -20,28 +20,28 @@ const Layout = ({ children }) => (
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <meta
-        name="News_Keywords"
-        content="javascript, conference, international, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter"
+        name="keywords"
+        content="tech event, tech conference, js conference, js event, javascript, conference, international javascript conference, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter, sarah drasner, simona cotin, lin clark, harry roberts, heydon pickering, charlie Gerard, liran tal, sara vieira, xavier cazalot, benedek gagyi, gautam arora, ives vaan horne, jeremias menichelli, carmen popoviciu"
       />
-      <title>JSHeroes 2019 | International Javascript Conference</title>
-      <meta property="og:title" content="JSHeroes 2019 | International Javascript Conference" />
+      <title>JSHeroes 2019 | Open-Souce Community Event</title>
+      <meta property="og:title" content="JSHeroes 2019 | Open-Souce Community Event" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="http://www.jsheroes.io/" />
-      <meta property="og:image" content="http://www.jsheroes.io/static/img/video-cover.png" />
+      <meta property="og:url" content="https://www.jsheroes.io/" />
+      <meta property="og:image" content="https://jsheroes.io/static/img/meta.jpg" />
       <meta property="og:image:type" content="image/png" />
       <meta
         property="og:description"
-        content="Check the latest updates and join us in 2019 in Cluj Napoca, Romania!"
+        content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 11-12th 2019 in Cluj-Napoca, Romania!"
       />
       <meta property="og:locale" content="en_US" />
-      <meta property="og:site_name" content="Your JSHeroes 2019 Conference Info" />
+      <meta property="og:site_name" content="JSHeroes 2019 | Open-Souce Community Event" />
       <meta name="twitter:site" content="@jsheroes" />
-      <meta name="twitter:title" content="Your JSHeroes 2019 Conference Info" />
+      <meta name="twitter:title" content="JSHeroes 2019 | Open-Souce Community Event" />
       <meta
         name="twitter:description"
-        content="Check the latest updates and join us in 2019 in Cluj Napoca, Romania!"
+        content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 11-12th 2019 in Cluj-Napoca, Romania!"
       />
-      <meta name="twitter:image" content="http://www.jsheroes.io/static/img/video-cover.png" />
+      <meta name="twitter:image" content="https://jsheroes.io/static/img/meta.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@jsheroes" />
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86169211-2" />
