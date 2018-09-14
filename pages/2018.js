@@ -22,7 +22,7 @@ const currentYear = () => {
       />
       <Sponsors baseUrl={baseUrl} sponsors={store.data2018.sponsors} />
       <Partners baseUrl={baseUrl} partners={store.data2018.partners} />
-      <Communities baseUrl={baseUrl} communities={store.data2019.communities} />
+      <Communities baseUrl={baseUrl} communities={store.data2018.communities} />
       <ScrollBtn />
     </Layout>
   );
