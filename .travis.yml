@@ -5,7 +5,7 @@ cache:
   directories:
     - ~/.npm
     - ~/.cache
-    - node_modules
+    # - node_modules
 install:
   - npm install
 script:
