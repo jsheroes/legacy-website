@@ -2,25 +2,20 @@ import { Component } from 'react';
 import { styles } from '../../constants';
 
 class CookiePrivacy extends Component {
-  constructor() {
-    super();
-    this.state = {
-      visible: 'false',
-    };
-
-    this.createBanner = this.createBanner.bind(this);
-  }
+  state = {
+    visible: 'false',
+  };
 
   componentDidMount() {
     this.createBanner();
   }
 
-  handleAccept() {
+  handleAccept = () => {
     localStorage.setItem('policy', 'true');
     this.setState({ visible: 'false' });
-  }
+  };
 
-  createBanner() {
+  createBanner = () => {
     const policy = localStorage.getItem('policy');
     if (policy === 'true') {
       this.setState({ visible: 'false' });
@@ -28,7 +23,7 @@ class CookiePrivacy extends Component {
     if (policy === null) {
       this.setState({ visible: 'true ' });
     }
-  }
+  };
 
   render() {
     const { visible } = this.state;
@@ -52,7 +47,7 @@ class CookiePrivacy extends Component {
             By choosing <strong>I Accept</strong> you consent to our use of cookies and other
             tracking technologies.
           </p>
-          <button onClick={() => this.handleAccept()}>I Accept</button>
+          <button onClick={this.handleAccept}>I Accept</button>
         </div>
         <style jsx>
           {`
@@ -70,7 +65,9 @@ class CookiePrivacy extends Component {
               border: 1px solid white;
               border-radius: 2px;
               background: ${styles.mainColor6};
-              padding: 5px 30px 5px 30px;
+              color: white;
+              font-size: 16px;
+              padding: 10px 35px 10px 35px;
             }
 
             a {
