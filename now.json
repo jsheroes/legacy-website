@@ -1,6 +1,6 @@
 {
-  "name": "cfp.jsheroes.io",
-  "alias": "cfp.jsheroes.io",
+  "name": "jsheroes.io",
+  "alias": "jsheroes.io",
   "env": {
     "NODE_ENV": "production"
   }
