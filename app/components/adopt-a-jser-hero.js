@@ -6,7 +6,7 @@ import { mediaQueries, styles } from '../constants';
 const heroBcgImg = {
   position: 'relative',
   overflow: 'hidden',
-  backgroundImage: 'url(static/img/banners/adopt_a_jser_bcg.jpg)',
+  backgroundImage: 'url(static/img/adopt_a_jser_bcg.jpg)',
   backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
