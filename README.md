@@ -2,14 +2,14 @@
 
 This repo contains the code for our JavaScript International Conference site hosted here: [https://jsheroes.io](https://jsheroes.io) The site is built on top of Next.js.
 
-[![Build Status](https://travis-ci.org/cluj-javascripters/jsheroes-2018.svg?branch=master)](https://travis-ci.org/cluj-javascripters/jsheroes-2018)
+[![Build Status](https://travis-ci.org/jsheroes/jsheroes-2018.svg?branch=master)](https://travis-ci.org/jsheroes/jsheroes-2018)
 
 ## Installation
 
 Copy the repo in the current folder:
 
 ```bash
-git clone git@github.com:cluj-javascripters/jsheroes-2018.git .
+git clone git@github.com:jsheroes/jsheroes-2018.git .
 ```
 
 Install dependencies
