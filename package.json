@@ -4,35 +4,48 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "prettier": "prettier --write --no-semi --single-quote '{*.js,{app,config}/**/*.js}'",
-    "linter": "eslint app pages --quiet --fix",
+    "linter": "eslint -c config/.eslintrc.json app pages --quiet",
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js",
+    "format": "prettier --config ./config/.prettierrc --ignore-path ./config/.prettierignore --write '**/*.{js,css,md}'",
+    "precommit": "lint-staged",
+    "test:e2e": "cypress run",
+    "test:e2e:debug": "cypress open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aphrodite": "^1.2.1",
-    "caniuse-api": "^2.0.0",
-    "express": "^4.15.2",
-    "google-map-react": "^0.24.0",
-    "isomorphic-unfetch": "^1.0.0",
-    "next": "^4.1.4",
-    "prop-types": "^15.5.8",
-    "react": "^16.1.1",
-    "react-bootstrap": "^0.31.0",
-    "react-dom": "^16.1.1",
-    "react-scrollable-anchor": "^0.5.0"
+    "express": "^4.16.3",
+    "google-map-react": "^1.0.5",
+    "intersection-observer": "^0.5.0",
+    "next": "^6.1.1",
+    "now": "^11.3.9",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "what-input": "^5.1.1"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-react": "^7.3.0"
+    "babel-eslint": "^8.2.6",
+    "cypress": "^3.0.3",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-react": "^7.10.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.14.0",
+    "wait-on": "^2.1.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --config ./config/.prettierrc --ignore-path ./config/.prettierignore --write",
+      "eslint -c config/.eslintrc.json --ignore-path config/.eslintignore --fix",
+      "git add"
+    ]
   }
 }

@@ -1,259 +1,251 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component, Fragment } from 'react';
+import Link from 'next/link';
 import menuItems from '../data/menuitems';
-import { styles, mediaQueries, emptyFunc } from '../constants';
-
-const sizeL = 992;
+import { styles } from '../constants';
 
 export default class Nav extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      hideNavUp: false,
-      currentHash: '',
-      showNavItems: false,
-      viewportWidth: 0
+      mobileNav: false,
     };
-
-    this.handleScroll = this.handleScroll.bind(this);
-    this.handleHashChange = this.handleHashChange.bind(this);
-    this.toggleNavItems = this.toggleNavItems.bind(this);
-    this.hideNavItems = this.hideNavItems.bind(this);
+    this.toggleMobileNav = this.toggleMobileNav.bind(this);
+    this.closeMobileNavigation = this.closeMobileNavigation.bind(this);
   }
 
-  componentDidMount() {
-    this.setState({
-      viewportWidth: window.innerWidth,
-      showNavItems: window.innerWidth > sizeL,
-    });
-    window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener('hashchange', this.handleHashChange);
+  toggleMobileNav() {
+    const { mobileNav } = this.state;
+    this.setState({ mobileNav: !mobileNav });
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-    window.removeEventListener('hashchange', this.handleHashChange);
-  }
-
-  handleScroll() {
-    const { hideNavUp } = this.state;
-    const scrollPosition =
-      window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollPosition > 50 && !hideNavUp) {
-      this.setState({ hideNavUp: true, showNavItems: false });
-    } else if (scrollPosition < 50 && hideNavUp) {
-      this.setState({ hideNavUp: false });
-    }
-  }
-
-  handleHashChange(ev) {
-    this.setState({ currentHash: ev.newURL.split('#')[1] });
-  }
-
-  toggleNavItems () {
-    this.setState({
-      showNavItems: !this.state.showNavItems
-    })
-  }
-
-  hideNavItems () {
-    this.setState({
-      showNavItems: false
-    })
+  closeMobileNavigation() {
+    this.setState({ mobileNav: false });
   }
 
   render() {
-    const { hideNavUp, showNavItems, viewportWidth } = this.state;
-    const navbarMaxLColors = showNavItems && (viewportWidth < sizeL)
-      ? 'navbar-max-L-colors' : '';
+    const { mobileNav } = this.state;
+    const mobileOpenClass = mobileNav ? 'open' : '';
 
     return (
-      <div
-        style={this.props.style}
-        className={hideNavUp ? 'hideNavUp' : navbarMaxLColors}
-      >
-        <nav className="clearfix">
-          <span>
-            <img alt="website-logo" src="static/img/website_logo.png" />
-          </span>
-          <button onClick={this.toggleNavItems}>
-             <i className='fa fa-bars' aria-hidden='true' />
-          </button>
-          <ul
-            className={`${ showNavItems ? 'showNavItems' : ''}`}
-            onClick={viewportWidth < sizeL ? this.hideNavItems : emptyFunc}
-          >
-            {
-              menuItems.map((item) => {
-                const active = `#${this.state.currentHash}` === item.url
-                  ? 'active'
-                  : '';
-                return (
-                  <li key={item.id}>
-                    <a href={`/${item.url}`} className={active}>{item.label}</a>
-                  </li>
-                );
-              })
-            }
+      <div className={`navigation-wrapper ${mobileOpenClass}`}>
+        <nav>
+          <div className="logo-wrapper">
+            <Link href="/">
+              <a className="logo" onClick={this.closeMobileNavigation}>
+                <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
+              </a>
+            </Link>
+          </div>
+          <div>
+            <div className="hamburger-btn" onClick={this.toggleMobileNav}>
+              <div className="first" />
+              <div className="middle" />
+              <div className="last" />
+            </div>
+          </div>
+          <ul className="menu-items">
+            {menuItems.map(item => (
+              <li
+                className={item.links ? 'with-link' : null}
+                key={item.id}
+                onClick={this.toggleMobileNav}
+              >
+                {item.links ? (
+                  <Fragment>
+                    <span>{item.label}</span>
+                    <ul className="menu-items inside">
+                      {item.links.map(link => (
+                        <li key={link.id}>
+                          {link.url.startsWith('http') || link.url.startsWith('mailto') ? (
+                            <a href={`${link.url}`}>{link.label}</a>
+                          ) : (
+                            <Link href={link.url}>
+                              <a>{link.label}</a>
+                            </Link>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </Fragment>
+                ) : (
+                  <a href={item.url}>{item.label}</a>
+                )}
+              </li>
+            ))}
           </ul>
         </nav>
-
-        { /*language=CSS*/ }
-        <style jsx>{`
-          div {
-            width: 100%;
-            height: 78px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 3;
-            background-color: ${styles.mainColor2};
-            border-top: 6px solid ${styles.mainColor6};
-            -webkit-transition: top .2s ease-in-out;
-            -moz-transition: top .2s ease-in-out;
-            transition: top .2s ease-in-out;
-            font-family: Roboto, sans-serif;
-            font-weight: 400;
-          }
-
-          .navbar-max-L-colors {
-            background-color: ${styles.mainColor1}
-            border-top-color: ${styles.mainColor1};
-          }
-
-          span {
-            display: inline-block;
-            float: left;
-            width: 145px;
-            height: inherit;
-            margin-left: 15px;
-          }
-          img {
-            width: inherit;
-            height: auto;
-            padding-bottom: 3px;
-          }
-
-          nav {
-            height: auto;
-            line-height: 72px;
-          }
-
-          ul {
-            display: inline-block;
-            float: right;
-          }
-
-          li {
-            margin: 0 35px;
-            display: inline-block;
-          }
-
-          a {
-            padding: 5px 15px;
-            text-transform: capitalize;
-            color: #fff;
-            font-size: 18px;
-            font-weight: 400;
-            text-decoration: none !important;
-          }
-
-          .hideNavUp {
-            top: -78px;
-          }
-
-          .showNavItems {
-            display: block;
-          }
-
-          .active {
-            color: ${styles.mainColor6}
-          }
-
-          button {
-            display: inline-block;
-            float: right;
-            margin: 10px 10px 10px 0;
-            line-height: 28px;
-            font-size: 28px;
-            color: ${styles.mainColor3};
-            background-color: transparent;
-            border: none;
-            outline: none;
-          }
-
-          @media (max-width: ${mediaQueries.L}) {/*992px*/
-            div {
-              height: 52px;
-              background-color: transparent;
-              border-top: 2px solid transparent;
+        <style jsx>
+          {`
+            .navigation-wrapper {
+              height: 75px;
+              border-top: 3px solid ${styles.mainColor6};
+              background: black;
             }
-            img {
+
+            nav {
+              margin: 20px 20px 25px 40px;
+              display: flex;
+              flex: 1;
+              justify-content: space-between;
+            }
+
+            .logo-wrapper {
+              boder: 1px solid green;
+            }
+
+            .logo img {
+              width: 150px;
+              flex: 1;
+            }
+
+            ul.menu-items {
+              text-decoration: none;
+              margin: 0;
+              padding: 0;
+            }
+
+            ul.menu-items.inside {
+              position: absolute;
+              z-index: 10;
+              list-style: none;
+              background: black;
+              padding: 10px 0;
+              left: 0;
               display: none;
             }
-            ul {
-              display: none;
+
+            ul.menu-items li.with-link:hover ul {
+              display: block;
+            }
+
+            ul.menu-items li {
+              display: inline-block;
+              padding: 5px 20px;
+              position: relative;
+            }
+
+            ul.menu-items li:last-of-type {
+              display: inline-block;
+              padding: 5px 0 0 5px;
+            }
+
+            ul.menu-items.inside li {
+              padding: 5px 20px;
               width: 100%;
               text-align: center;
-              background-color: ${styles.mainColor1};
             }
-            li {
-              display: block;
-              margin: 0;
-              line-height: 50px;
-            }
-            li:first-child {
-              border-top: 1px solid rgba(250, 250, 250, .5);
-            }
-            a {
-              display: block;
-              padding: 0;
-              font-size: 16px;
-            }
-            .hideNavUp {
-              top: -52px;
-            }
-          }
 
-          @media (min-width: ${mediaQueries.L}) {
-            div {
-             border-top: 4px solid ${styles.mainColor6};
+            ul.menu-items li a,
+            ul.menu-items li span {
+              color: white;
+              font-size: 18px;
+              text-transform: capitalize;
+              font-weight: 400;
             }
-            span {
-              width: 125px;
-            }
-            li {
-              margin: 0 0 0 40px;
-            }
-            button {
-              display: none;
-            }
-          }
 
-          @media (min-width: ${mediaQueries.XL}) {
-            div {
-             border-top: 6px solid ${styles.mainColor6};
+            ul.menu-items li a:hover {
+              color: ${styles.mainColor5};
             }
-            span {
-              width: 145px;
-              margin-left: 45px;
-            }
-            li {
-              margin: 0 30px;
-            }
-            a {
-              font-size: 20px;
-            }
-          }
 
-        `}</style>
+            @media (max-width: 768px) {
+              nav {
+                margin-bottom: 0;
+              }
+
+              .navigation-wrapper {
+                position: fixed;
+                height: 70px;
+                top: 0;
+                z-index: 3;
+                width: 100%;
+                border-bottom: 1px solid white;
+              }
+
+              .navigation-wrapper.open ul.menu-items:not(.inside) {
+                display: block;
+                transform: translate(0%, 14%);
+                width: 100%;
+                transition: all 900ms ease-in;
+                opacity: 0.85;
+                top: 20px;
+              }
+
+              ul.menu-items.inside li {
+                display: block;
+                padding: 10px 20px;
+                text-align: center;
+              }
+
+              .navigation-wrapper.open .first {
+                display: none;
+                opacity: 0;
+                position: absolute;
+              }
+              .navigation-wrapper.open .middle {
+                transform: rotate(45deg);
+                transform: translate(0, 8px) rotate(45deg);
+                background-color: ${styles.mainColor5};
+                transition: all 700ms ease-in-out;
+              }
+              .navigation-wrapper.open .last {
+                transform: rotate(-45deg);
+                background-color: ${styles.mainColor5};
+                transition: all 700ms ease-in-out;
+              }
+
+              ul.menu-items li span {
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+              }
+
+              ul .menu-items.inside {
+                display: block;
+                opacity: 1;
+                position: static;
+                transform: none;
+              }
+
+              .hamburger-btn {
+                display: block;
+                width: 35px;
+                height: 34px;
+                float: right;
+                background-color: black;
+                position: static;
+              }
+
+              .hamburger-btn div {
+                opacity: 1;
+                margin: 5px;
+                background: white;
+                width: 25px;
+                height: 3px;
+                position: static;
+                transition: all 700ms ease-in-out;
+              }
+
+              ul.menu-items {
+                display: block;
+                position: fixed;
+                left: 0;
+                transform: translate(0%, -200%);
+                transition: all 900ms ease-out;
+                width: 100%;
+                opacity: 0;
+                background-color: black;
+              }
+
+              .navigation-wrapper ul.menu-items li {
+                padding: 10px 20px;
+                text-align: center;
+                display: block;
+              }
+            }
+          `}
+        </style>
       </div>
     );
   }
 }
-
-Nav.propTypes = {
-  style: PropTypes.any,
-};
-

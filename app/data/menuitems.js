@@ -1,32 +1,44 @@
-module.exports = [
+export default [
   {
     id: 1,
-    url: '#top-section',
-    label: 'home',
-  },
-  {
-    id: 2,
-    url: '#speakers',
+    url: '/#speakers',
     label: 'speakers',
   },
+  // {
+  //   id: 2,
+  //   url: '#schedule',
+  //   label: 'schedule',
+  // },
   {
     id: 3,
-    url: '#schedule',
-    label: 'schedule',
-  },
-  {
-    id: 4,
-    url: '#mission',
+    url: '/#mission',
     label: 'mission',
   },
   {
-    id: 5,
-    url: '#sponsors',
+    id: 4,
+    url: '/#partners',
     label: 'sponsors',
   },
   {
+    id: 5,
+    label: 'contact',
+    url: 'mailto:welcome@jsheroes.io',
+  },
+  {
     id: 6,
-    url: '#venue',
-    label: 'venue',
+    label: 'Past Editions',
+    url: '#',
+    links: [
+      {
+        id: 6.1,
+        url: '/2018',
+        label: '2018',
+      },
+      {
+        id: 6.2,
+        url: '/2017',
+        label: '2017',
+      },
+    ],
   },
 ];

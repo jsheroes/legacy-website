@@ -1,45 +1,166 @@
-import Link from 'next/link';
+import { Component } from 'react';
+import Section from '../common/section';
+import news from '../../data/news';
+import { mediaQueries } from '../../constants';
 
-import Section from '../../components/common/section';
+class Updates extends Component {
+  state = {
+    activeNews: 0,
+  };
 
-const Updates = () => (
-  <Section>
-    <div className="wrapper">
-      <h1>News</h1>
-      <strong>Date and Venue</strong>
-      <p>Join us on 18-20 April 2018 in Cluj Napoca, Romania at Grand Hotel Italia for 1 day of workshops and 2 days of conference. Feel free to send us your suggestions over <a href="https://twitter.com/jsheroes" target="_blank" rel="noreferrer noopener">Twitter</a>, we’d be happy to hear from you.</p>
-      <strong>Speakers</strong>
-      <p>Call for Papers is still open! <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPSo4Zy_M78PHRVFz90v1_SV3IqRcyhvgK2oCDY6ju6NDWeA/viewform?usp=sf_link" target="_blank" rel="noreferrer noopener">Submit your proposals</a> until the 30th of December!</p>
-      <strong>Sponsors</strong>
-      <p>Our Call for Sponsors is always open. Send us an email if you’re interested to join our mission in 2018 at <a href="maito:welcome@jsheroes.io">welcome@jsheroes.io</a> and we’ll take it from there.</p>
-      <strong>Wanted</strong>
-      <p>Passionate community members: Join the JSHeroes organizing crew! Get in touch and let us know what you’d like to contribute with.</p>
-      <strong>Tickets</strong>
-      <p>If PayPal is not your preferred payment method, you can also pay by invoice. Drop us a line at <a href="maito:contact@jsheroes.io">contact@jsheroes.io</a> with your request, we’d be happy to help.</p>
-    </div>
+  onKeyDown = newsIndex => evt => {
+    if (evt.keyCode === 13) {
+      // enter key
+      this.setState({ activeNews: newsIndex });
+    }
+  };
 
-    <style jsx>{`
-        ul li {
-          list-style-type: none;
-          margin: 15px 0;
-        }
-        .wrapper {
-          margin: 100px auto;
-          text-align: center;
-          max-width: 900px;
-        }
-        .wrapper p {
-          margin-bottom: 20px;
-        }
-        .wrapper a {
-          font-weight: bold;
-        }
-        h1 {
-          margin: 20px 0;
-          color: #0098ff;
-        }
-      `}</style>
-  </Section>
-);
+  render() {
+    const { activeNews } = this.state;
+    const newsData = news.map((item, index) => {
+      const activeCss = index === activeNews ? 'active-news' : 'news-item';
+      return (
+        <li
+          tabIndex="0"
+          role="button" // eslint-disable-line
+          className={activeCss}
+          onFocus={() => this.setState({ activeNews: index })}
+          onClick={() => this.setState({ activeNews: index })}
+          onKeyDown={this.onKeyDown(index)}
+          onMouseOver={() => this.setState({ activeNews: index })}
+          key={item.title}
+        >
+          <strong>{item.title}</strong>
+        </li>
+      );
+    });
+    const { content } = news[activeNews];
+    return (
+      <Section>
+        <div id="news" className="wrapper">
+          <h1>News</h1>
+          <ul>{newsData}</ul>
+          <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
+        </div>
+
+        {/* language=CSS */}
+        <style jsx global>
+          {`
+            .wrapper {
+              padding-top: 140px;
+              text-align: center;
+              max-width: 1100px;
+              height: 350px;
+            }
+            .wrapper p {
+              margin-bottom: 20px;
+            }
+            .wrapper a {
+              font-weight: bold;
+            }
+
+            .wrapper li {
+              cursor: pointer;
+            }
+
+            .wrapper li:hover {
+              color: #0098ff;
+            }
+
+            [data-whatintent='mouse'] .wrapper li:focus {
+              outline: none;
+            }
+
+            .wrapper h1 {
+              margin: 0 0 50px;
+            }
+
+            .wrapper a {
+              text-decoration: none;
+            }
+
+            @media (min-width: ${mediaQueries.S}) {
+              .wrapper ul {
+                display: flex;
+                justify-content: space-around;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid lightgrey;
+              }
+              .active-news {
+                position: relative;
+                color: #0098ff;
+                display: inline-block;
+                text-decoration: none;
+              }
+              .active-news::before {
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 10px solid lightgray;
+                bottom: -20px;
+                left: 40%;
+                position: absolute;
+                display: block;
+                content: '';
+              }
+              .active-news::after {
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 10px solid white;
+                bottom: -19px;
+                left: 40%;
+                position: absolute;
+                display: block;
+                content: '';
+              }
+              .news-item {
+                display: inline-block;
+                text-decoration: none;
+              }
+            }
+
+            @media (max-width: ${mediaQueries.S}) {
+              .wrapper {
+                padding-top: 80px;
+                padding-bottom: 80px;
+              }
+
+              .wrapper ul {
+                display: inline-block;
+              }
+
+              .wrapper .content {
+                margin-top: 20px;
+              }
+
+              .active-news {
+                padding: 10px 10px;
+                position: relative;
+                display: inline-block;
+                text-decoration: none;
+                color: #0098ff;
+              }
+
+              .active-news::before,
+              .active-news::after {
+                display: none;
+              }
+              .news-item {
+                padding: 10px 10px;
+                display: inline-block;
+                text-decoration: none;
+                border: none;
+              }
+            }
+          `}
+        </style>
+      </Section>
+    );
+  }
+}
 
 export default Updates;
