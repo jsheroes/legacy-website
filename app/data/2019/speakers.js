@@ -233,4 +233,32 @@ export default [
       },
     ],
   },
+  {
+    name: 'jing',
+    fullName: 'Chen Hui Jing',
+    permalink: 'chen-hui-jing',
+    firstName: 'Hui Jing',
+    reference: 'her',
+    position: 'Developer Advocate',
+    company: 'Nexmo',
+    img: 'chen-hui-jing.jpg',
+    twitter: 'https://twitter.com/hj_chen',
+    website: 'https://chenhuijing.com',
+    github: 'https://github.com/huijing',
+    description:
+      'Hui Jing is a self-taught designer and developer with an inordinate love for CSS. Reducing lines of code in her web projects makes her extremely happy. She used to play basketball full-time and launched her web career during downtime between training sessions.',
+    talk: {
+      title: 'TBA',
+      description: '',
+      message: '',
+    },
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [
+      {
+        name: 'The Web Is Not Just Left-to-Right @ JSConf EU 2018',
+        url: 'https://www.youtube.com/watch?v=YpqKrVcth34',
+      },
+    ],
+  },
 ];
