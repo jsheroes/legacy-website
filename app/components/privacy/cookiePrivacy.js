@@ -39,7 +39,7 @@ class CookiePrivacy extends Component {
           </p>
           <p>
             To find out more or to opt-out, please read our{' '}
-            <a href="/privacy" target="_blank">
+            <a href="/privacy" target="_blank" rel="noopener noreferrer">
               Privacy Statement.
             </a>
           </p>

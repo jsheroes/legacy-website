@@ -4,7 +4,7 @@ import { mediaQueries } from '../../constants';
 const Community = ({ href, title, img, baseUrl }) => (
   <li>
     <Link href={`${href}`}>
-      <a target="_blank" title={`${title}`}>
+      <a target="_blank" rel="noopener noreferrer" title={`${title}`}>
         <img src={`${baseUrl}/communities/${img}`} alt={`${title}`} />
       </a>
     </Link>

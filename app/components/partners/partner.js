@@ -4,7 +4,7 @@ import { mediaQueries } from '../../constants';
 const Partner = ({ href, className, img, title, baseUrl }) => (
   <li>
     <Link href={`${href}`}>
-      <a className={className} target="_blank">
+      <a className={className} target="_blank" rel="noopener noreferrer">
         <img src={`${baseUrl}/partners/${img}`} title={`${title}`} alt={`${title}`} />
       </a>
     </Link>

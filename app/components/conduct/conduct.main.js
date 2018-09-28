@@ -8,7 +8,9 @@ const ConductMain = () => (
       <p>
         Below is a short version of our Code of Conduct. You can download the full length document{' '}
         <Link href="https://drive.google.com/file/d/0B9mBUlTNHZJNRnhGWE5LRERud00/edit">
-          <a target="_blank">here</a>
+          <a target="_blank" rel="noopener noreferrer">
+            here
+          </a>
         </Link>
         .
       </p>
