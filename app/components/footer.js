@@ -24,6 +24,11 @@ const Footer = () => (
           </a>
         </div>
         <div>
+          <Link href="/become-a-sponsor">
+            <a>Become a Sponsor</a>
+          </Link>
+        </div>
+        <div>
           <Link href="/code-of-conduct">
             <a>Code of Conduct</a>
           </Link>
