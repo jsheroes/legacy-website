@@ -192,7 +192,7 @@ export default [
   },
   {
     name: 'jing',
-    fullName: 'Chen Hui Jing',
+    fullName: 'Hui Jing Chen',
     permalink: 'chen-hui-jing',
     firstName: 'Hui Jing',
     reference: 'her',
