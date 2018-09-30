@@ -23,6 +23,8 @@ const Layout = ({ children }) => (
         name="keywords"
         content="tech event, tech conference, js conference, js event, javascript, conference, international javascript conference, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter, sarah drasner, simona cotin, lin clark, harry roberts, heydon pickering, charlie Gerard, liran tal, sara vieira, xavier cazalot, benedek gagyi, gautam arora, ives vaan horne, jeremias menichelli, carmen popoviciu"
       />
+      <link rel="manifest" href="/static/manifest.json" />
+      <meta name="theme-color" content={styles.mainColor6} />
       <title>JSHeroes 2019 | Open-Souce Community Event</title>
       <meta property="og:title" content="JSHeroes 2019 | Open-Souce Community Event" />
       <meta property="og:type" content="website" />

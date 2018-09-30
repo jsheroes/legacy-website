@@ -11,7 +11,8 @@
     "format": "prettier --config ./config/.prettierrc --ignore-path ./config/.prettierignore --write '**/*.{js,css,md}'",
     "precommit": "lint-staged",
     "test:e2e": "cypress run",
-    "test:e2e:debug": "cypress open"
+    "test:e2e:debug": "cypress open",
+    "lh": "lighthouse-ci https://jsheroes.io"
   },
   "keywords": [],
   "author": "",
@@ -37,6 +38,7 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-react": "^7.10.0",
     "husky": "^0.14.3",
+    "lighthouse-ci": "git+https://github.com/ebidel/lighthouse-ci.git",
     "lint-staged": "^7.2.0",
     "prettier": "^1.14.0",
     "wait-on": "^2.1.0"

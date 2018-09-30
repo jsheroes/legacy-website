@@ -4,7 +4,7 @@ import { mediaQueries } from '../../constants';
 const Sponsor = ({ href, title, img, baseUrl }) => (
   <li>
     <Link href={`${href}`}>
-      <a target="_blank">
+      <a target="_blank" rel="noopener noreferrer">
         <img src={`${baseUrl}/sponsors/${img}`} title={`${title}`} alt={`${title}`} />
       </a>
     </Link>
