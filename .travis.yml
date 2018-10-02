@@ -5,13 +5,12 @@ cache:
   directories:
     - ~/.npm
     - ~/.cache
-    # - node_modules
-install:
-  - npm install
+
 script:
+  - cp config/config.example.js config/config.js
   - npm run linter
   - npm run build
-  - npm run dev & wait-on http://localhost:4001
+  - npm start & wait-on http://localhost:4001
   - npm run test:e2e
 after_success:
   - npm run lh
