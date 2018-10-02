@@ -9,7 +9,7 @@ const BecomeASponsorPage = () => (
       <div className="central-container">
         <h1>Become A Sponsor</h1>
         <p>
-          View the
+          View the&nbsp;
           <a href="/static/brochure.pdf" target="_blank" rel="noopener noreferrer">
             Sponsorship Brochure
           </a>

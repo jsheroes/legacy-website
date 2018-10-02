@@ -69,7 +69,7 @@ const Footer = () => (
       </div>
       <div className="col-sm-6">
         Made with <i className="fa fa-heart" aria-hidden="true" /> by
-        <span className="sticky-words">JSHeroes Community.</span>
+        <span className="sticky-words">&nbsp;JSHeroes Community.</span>
       </div>
     </div>
 
