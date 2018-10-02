@@ -25,7 +25,7 @@ const Layout = ({ children }) => (
       />
       <link rel="manifest" href="/static/manifest.json" />
       <meta name="theme-color" content={styles.mainColor6} />
-      <title>JSHeroes 2019 | Open-Souce Community Event</title>
+      <title>JSHeroes 2019 | Open-Source Community Event</title>
       <meta property="og:title" content="JSHeroes 2019 | Open-Source Community Event" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.jsheroes.io/" />
