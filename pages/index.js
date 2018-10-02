@@ -23,9 +23,7 @@ const Home = () => {
         <Speakers year="2019" baseUrl={baseUrl} speakers={store.data2019.speakers} />
         {/* <Schedule /> */}
         <Mission />
-        {store.data2019.sponsors.length > 0 && (
-          <Sponsors baseUrl={baseUrl} sponsors={store.data2019.sponsors} />
-        )}
+        <Sponsors baseUrl={baseUrl} sponsors={store.data2019.sponsors} />
         <Partners baseUrl={baseUrl} partners={store.data2019.partners} />
         <Communities baseUrl={baseUrl} communities={store.data2019.communities} />
         <Organizers />
