@@ -1,9 +1,11 @@
+import Link from 'next/link';
+
 const BecomeASponsorButton = () => (
   <div className="button-wrapper">
     <Style />
-    <a className="button" href="/become-a-sponsor">
+    <Link className="button" href="/become-a-sponsor">
       Become a Sponsor
-    </a>
+    </Link>
   </div>
 );
 
