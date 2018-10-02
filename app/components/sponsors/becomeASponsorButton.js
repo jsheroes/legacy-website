@@ -3,8 +3,8 @@ import Link from 'next/link';
 const BecomeASponsorButton = () => (
   <div className="button-wrapper">
     <Style />
-    <Link className="button" href="/become-a-sponsor">
-      Become a Sponsor
+    <Link href="/become-a-sponsor">
+      <button className="button">Become a Sponsor</button>
     </Link>
   </div>
 );
@@ -30,6 +30,7 @@ const Style = () => (
       }
       .button:hover,
       .button:focus {
+        cursor: pointer;
         color: #fff;
         background-color: #0098ff;
       }
