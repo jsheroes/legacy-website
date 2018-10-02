@@ -2,25 +2,31 @@ import Link from 'next/link';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import Sponsor from './sponsor';
+import BecomeASponsorButton from './becomeASponsorButton';
 
 const Sponsors = ({ baseUrl, sponsors }) => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
     <div id="sponsors">
       <h2>Our Sponsors</h2>
-      <p>
-        If you wish to participate as a sponsor to our event contact us&nbsp;
-        <Link href="mailto: contact@jsheroes.io">
-          <a className="mail-to" target="_top">
-            <strong>welcome@jsheroes.io</strong>
-          </a>
-        </Link>
-      </p>
-      <p>These are the companies that joined our mission</p>
-      <ul>
-        {sponsors.map(sponsor => (
-          <Sponsor {...sponsor} key={sponsor.title} baseUrl={baseUrl} />
-        ))}
-      </ul>
+      {sponsors.length > 0 && (
+        <div>
+          <p>
+            If you wish to participate as a sponsor to our event contact us&nbsp;
+            <Link href="mailto: contact@jsheroes.io">
+              <a className="mail-to" target="_top">
+                <strong>welcome@jsheroes.io</strong>
+              </a>
+            </Link>
+          </p>
+          <p>These are the companies that joined our mission</p>
+          <ul>
+            {sponsors.map(sponsor => (
+              <Sponsor {...sponsor} key={sponsor.title} baseUrl={baseUrl} />
+            ))}
+          </ul>
+        </div>
+      )}
+      <BecomeASponsorButton />
     </div>
     <style jsx>
       {`
