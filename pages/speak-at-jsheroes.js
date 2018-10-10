@@ -119,7 +119,7 @@ const SpeakAtJSHeroes = () => (
         </h3>
         <p>
           We are committed to fulfilling our <strong>mission</strong> as an open source event. We
-          are all community people and we want to be as close to you as possible. We will try to be
+          are all community people and we want to be as close to you as possible. We will try to be{' '}
           <strong>supportive and helpful</strong> and we will do our best to get back to you with
           valuable feedback from the CFP process. In case you wish to talk with someone from the
           team, do not hesitate to write an email at{' '}
