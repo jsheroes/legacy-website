@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Link from 'next/link';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import data from '../../data/index';
@@ -67,14 +68,9 @@ class Speakers extends Component {
 
           {isCurrentYear && (
             <div className="button-wrapper">
-              <a
-                className="button"
-                href="https://jsheroes-form.typeform.com/to/IHohur"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Give a Talk at JSHeroes
-              </a>
+              <Link href="/speak-at-jsheroes">
+                <a className="button">Give a Talk at JSHeroes</a>
+              </Link>
             </div>
           )}
 

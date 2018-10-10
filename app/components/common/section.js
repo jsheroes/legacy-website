@@ -1,13 +1,13 @@
 import { mediaQueries } from '../../constants';
 
-const Section = ({ section = {}, mainContainer = {}, children }) => (
-  <section style={section.style}>
+const Section = ({ section = {}, mainContainer = {}, className = '', children }) => (
+  <section className={className} style={section.style}>
     <div style={mainContainer.style}>
       <style jsx>
         {`
           div {
             padding: 0 15px;
-            margin: 0 auto;
+            margin: 0 auto 50px;
           }
 
           @media (min-width: ${mediaQueries.S}) {
