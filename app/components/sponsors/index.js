@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import Sponsor from './sponsor';
-import BecomeASponsorButton from './becomeASponsorButton';
+import CTAButton from '../common/ctaButton';
 
 const Sponsors = ({ baseUrl, sponsors }) => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
@@ -26,7 +26,7 @@ const Sponsors = ({ baseUrl, sponsors }) => (
           </ul>
         </div>
       )}
-      <BecomeASponsorButton />
+      <CTAButton url="/become-a-sponsor">Become a Sponsor</CTAButton>
     </div>
     <style jsx>
       {`

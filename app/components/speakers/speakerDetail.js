@@ -2,8 +2,8 @@ import Head from 'next/head';
 import Section from '../common/section';
 import RawHtml from '../common/rawHtml';
 import { styles, mediaQueries } from '../../constants';
-import BuyTicket from '../common/buyTicket';
 import store from '../../data';
+import CTAButton from '../common/ctaButton';
 
 const SpeakerDetail = ({ speaker }) => {
   const talks = buildTalks(speaker);
@@ -82,7 +82,9 @@ const SpeakerDetail = ({ speaker }) => {
                   </div>
                   <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
-                <BuyTicket />
+                <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2019">
+                  Buy Your Ticket
+                </CTAButton>
               </div>
             </div>
             <div className="col-md-9">
@@ -108,7 +110,9 @@ const SpeakerDetail = ({ speaker }) => {
                   </div>
                   <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
-                <BuyTicket />
+                <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2019">
+                  Buy Your Ticket
+                </CTAButton>
               </div>
             </div>
           </div>

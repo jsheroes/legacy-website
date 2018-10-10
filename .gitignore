@@ -8,4 +8,3 @@ app/data/speakers.hidden.js
 static/img/speakers.hidden/
 **/.DS_Store
 cypress/videos/
-config/config.js

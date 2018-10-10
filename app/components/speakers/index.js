@@ -4,6 +4,7 @@ import { styles, mediaQueries } from '../../constants';
 import data from '../../data/index';
 import PersonSpotlight from '../personSpotlight';
 import ambassadors from '../../data/2019/ambassadors';
+import CTAButton from '../common/ctaButton';
 
 function addObserver() {
   const observer = new IntersectionObserver(handler, {
@@ -65,18 +66,7 @@ class Speakers extends Component {
             ))}
           </div>
 
-          {isCurrentYear && (
-            <div className="button-wrapper">
-              <a
-                className="button"
-                href="https://jsheroes-form.typeform.com/to/IHohur"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Give a Talk at JSHeroes
-              </a>
-            </div>
-          )}
+          {isCurrentYear && <CTAButton url="/speak-at-jsheroes">Give a Talk at JSHeroes</CTAButton>}
 
           {isCurrentYear && (
             <div className="row section-header" id="ambassadors">
@@ -102,30 +92,6 @@ class Speakers extends Component {
 
         <style jsx>
           {`
-            .button-wrapper {
-              text-align: center;
-              margin-top: 80px;
-            }
-
-            .button {
-              width: 240px;
-              padding: 10px 20px;
-              background-color: #fff;
-              color: #0098ff;
-              border: 1px solid #0098ff;
-              transition: all 0.5s;
-              margin: auto;
-              border-radius: 4px;
-              font-size: 18px;
-              font-weight: 500;
-            }
-
-            .button:hover,
-            .button:focus {
-              color: #fff;
-              background-color: #0098ff;
-            }
-
             .speakers-section {
               padding-top: 30px;
               padding-bottom: 30px;
