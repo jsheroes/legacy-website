@@ -26,7 +26,7 @@ const SpeakAtJSHeroes = () => (
         <h3>
           <span role="img" aria-label="what">
             ✍
-          </span>
+          </span>{' '}
           What we are looking for
         </h3>
         <p>
@@ -52,17 +52,17 @@ const SpeakAtJSHeroes = () => (
           </li>
         </ul>
         <p>
-          We will do our best build an <strong>agenda</strong> that covers <strong>diverse</strong>{' '}
-          topics which can be of interest for the majority of attendees interested in the current
-          landscape of the JavaScript world. We do not wish to restrict your perspectives, but we
-          did propose a couple of <strong>broad topics</strong> in the CFP form, in which your
-          proposal may fall. However, do not consider them restrictive, but rather see them as a
-          guideline to classify and structure all the proposals we receive.
+          We will do our best to build an <strong>agenda</strong> that covers{' '}
+          <strong>diverse</strong> topics which can be of interest for the majority of attendees
+          interested in the current landscape of the JavaScript world. We do not wish to limit your
+          perspectives, but we did propose a couple of <strong>broad topics</strong> in the CFP
+          form, in which your proposal may fall. However, do not consider them restrictive, but
+          rather see them as a guideline to classify and structure all the proposals we receive.
         </p>
         <h3>
           <span role="img" aria-label="how">
             📈
-          </span>
+          </span>{' '}
           How the selection will happen
         </h3>
         <p>
@@ -76,7 +76,7 @@ const SpeakAtJSHeroes = () => (
             All the proposals are to be received until <strong>December 1st</strong>.
           </li>
           <li>
-            Each member of the commitee will to through the proposals and will create their own{' '}
+            Each member of the commitee will go through the proposals and will create their own{' '}
             <strong>shortlist</strong>.
           </li>
           <li>
@@ -84,18 +84,22 @@ const SpeakAtJSHeroes = () => (
             on the <strong>accepted</strong> list.
           </li>
           <li>
-            The <strong>debate</strong> process, which is not yet 100% set in stone will end around{' '}
-            <strong>mid January</strong>.
+            The <strong>debate</strong> and <strong>selection</strong> process for the remaining
+            proposals will end around <strong>mid January</strong>.
           </li>
           <li>
             All the speakers will get a <strong>response</strong>, positive or negative, until the{' '}
             <strong>end of January</strong>, at most until mid February.
           </li>
+          <li>
+            At the end of the process we will publish the exact <strong>criteria</strong> on which
+            we based our selection.
+          </li>
         </ul>
         <h3>
           <span role="img" aria-label="perks">
             🏆
-          </span>
+          </span>{' '}
           The perks we offer
         </h3>
         <p>
@@ -114,7 +118,7 @@ const SpeakAtJSHeroes = () => (
         <h3>
           <span role="img" aria-label="perks">
             ✋
-          </span>
+          </span>{' '}
           Help and support along the way
         </h3>
         <p>
