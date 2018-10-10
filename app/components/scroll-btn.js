@@ -47,7 +47,7 @@ class ScrollBtn extends Component {
             .back-top {
               display: block;
               position: fixed;
-              right: 30px;
+              right: 10px;
               bottom: 20px;
               width: 52px;
               height: 52px;
