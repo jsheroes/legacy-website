@@ -163,28 +163,6 @@ const Layout = ({ children }) => (
           text-decoration: none;
         }
 
-        .button {
-          text-align: center;
-          background-color: ${styles.mainColor6};
-          color: ${styles.mainColor3};
-          border-radius: 8px;
-          border: none;
-          display: block;
-          text-decoration: none;
-        }
-
-        .button:focus {
-          outline: 0;
-        }
-
-        .button a {
-          color: ${styles.mainColor3};
-          height: 100%;
-          width: 100%;
-          display: block;
-          line-height: 60px;
-          text-decoration: none;
-        }
         .sticky-words {
           white-space: nowrap;
         }

@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Section from '../common/section';
-import BuyTicket from '../common/buyTicket';
 import { mediaQueries } from '../../constants';
+import CTAButton from '../common/ctaButton';
 
 class Header extends Component {
   constructor(props) {
@@ -143,12 +143,12 @@ class Header extends Component {
               <div className="row">
                 <div className="col-md-12 header-text">
                   <p>Open-Source Community Event</p>
-                  <p> April 11-12th, 2019 in Cluj-Napoca, Romania</p>
+                  <p>April 11-12th, 2019 in Cluj-Napoca, Romania</p>
                 </div>
               </div>
-              <div className="row">
-                <BuyTicket />
-              </div>
+              <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2019">
+                Buy Your Ticket
+              </CTAButton>
             </div>
           </div>
 

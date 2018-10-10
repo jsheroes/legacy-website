@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
 import { styles } from '../app/constants';
+import CTAButton from '../app/components/common/ctaButton';
 
 const SpeakAtJSHeroes = () => (
   <Layout>
@@ -18,12 +19,9 @@ const SpeakAtJSHeroes = () => (
           JSHeroes.
         </p>
 
-        {/* component */}
-        <div className="button-wrapper">
-          <a className="button" href="https://jsheroes-form.typeform.com/to/IHohur">
-            Submit Your Proposal Now
-          </a>
-        </div>
+        <CTAButton url="https://jsheroes-form.typeform.com/to/IHohur">
+          Submit Your Proposal Now
+        </CTAButton>
 
         <h3>
           <span role="img" aria-label="what">
@@ -78,7 +76,7 @@ const SpeakAtJSHeroes = () => (
             All the proposals are to be received until <strong>December 1st</strong>.
           </li>
           <li>
-            Each member of the commitee will to through the proposals and will create their own
+            Each member of the commitee will to through the proposals and will create their own{' '}
             <strong>shortlist</strong>.
           </li>
           <li>
@@ -128,11 +126,9 @@ const SpeakAtJSHeroes = () => (
           <a href="mailto:welcome@jsheroes.io">welcome@jsheroes.io</a>. Good luck!
         </p>
 
-        <div className="button-wrapper">
-          <a className="button" href="https://jsheroes-form.typeform.com/to/IHohur">
-            Submit Your Proposal Now
-          </a>
-        </div>
+        <CTAButton url="https://jsheroes-form.typeform.com/to/IHohur">
+          Submit Your Proposal Now
+        </CTAButton>
       </Fragment>
     </Section>
 
@@ -164,30 +160,6 @@ const SpeakAtJSHeroes = () => (
         ul {
           text-align: left;
           margin: 10px 20px;
-        }
-
-        .button-wrapper {
-          text-align: center;
-          margin-top: 40px;
-        }
-
-        .button {
-          display: inline-block;
-          padding: 10px 20px;
-          background-color: #fff;
-          color: #0098ff;
-          border: 1px solid #0098ff;
-          transition: all 0.5s;
-          margin: auto;
-          border-radius: 4px;
-          font-size: 18px;
-          font-weight: 500;
-        }
-
-        .button:hover,
-        .button:focus {
-          color: #fff;
-          background-color: #0098ff;
         }
       `}
     </style>
