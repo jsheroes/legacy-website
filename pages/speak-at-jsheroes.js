@@ -139,7 +139,7 @@ const SpeakAtJSHeroes = () => (
     <style jsx>
       {`
         .cover {
-          background-image: url(static/img/conference-photo.png);
+          background-image: url(static/img/conference-photo.jpg);
           background-position: center center;
           background-repeat: no-repeat;
           background-size: cover;
