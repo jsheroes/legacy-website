@@ -41,22 +41,32 @@ const Footer = () => (
       <div className="col-md-3 col-sm-4">
         <span className="headline">Connect with us</span>
         <div>
-          <a href="/adopt-a-jser">Adopt a Javascripter</a>
+          <Link href="/adopt-a-jser">
+            <a>Adopt a Javascripter</a>
+          </Link>
         </div>
         <div>
-          <a href="/code-of-conduct">Code of Conduct</a>
+          <Link href="/code-of-conduct">
+            <a>Code of Conduct</a>
+          </Link>
         </div>
         <div>
-          <a href="/privacy">Privacy Statement</a>
+          <Link href="/privacy">
+            <a>Privacy Statement</a>
+          </Link>
         </div>
       </div>
       <div className="col-md-3 col-sm-4">
         <span className="headline">Past Editions</span>
         <div>
-          <a href="/2018">JSHeroes 2018</a>
+          <Link href="/2018">
+            <a>JSHeroes 2018</a>
+          </Link>
         </div>
         <div>
-          <a href="/2017">JSHeroes 2017</a>
+          <Link href="/2017">
+            <a>JSHeroes 2017</a>
+          </Link>
         </div>
       </div>
     </div>
