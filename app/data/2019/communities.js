@@ -64,4 +64,9 @@ export default [
     img: 'logo_londonnode.png',
     href: 'https://www.meetup.com/LNM-London-Node-JS-Meetup/',
   },
+  {
+    title: 'ReactiveConf',
+    img: 'logo_reactiveconf.png',
+    href: 'https://reactiveconf.com/',
+  },
 ];
