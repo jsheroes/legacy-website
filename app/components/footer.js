@@ -13,7 +13,7 @@ const Footer = () => (
         </Link>
       </div>
       <div className="col-md-3 col-sm-4">
-        <span className="headline">Participate</span>
+        <span className="headline">JSHeroes 2019</span>
         <div>
           <a
             href="https://ti.to/cluj-javascripters/jsheroes-2019"
@@ -29,6 +29,19 @@ const Footer = () => (
           </Link>
         </div>
         <div>
+          <Link href="/speak-at-jsheroes">
+            <a>Give a Talk at JSHeroes</a>
+          </Link>
+        </div>
+      </div>
+      <div className="col-md-3 col-sm-4">
+        <span className="headline">Connect with us</span>
+        <div>
+          <Link href="/adopt-a-jser">
+            <a>Adopt a Javascripter</a>
+          </Link>
+        </div>
+        <div>
           <Link href="/code-of-conduct">
             <a>Code of Conduct</a>
           </Link>
@@ -40,16 +53,28 @@ const Footer = () => (
         </div>
       </div>
       <div className="col-md-3 col-sm-4">
-        <span className="headline">Prior Events</span>
+        <span className="headline">Past Editions</span>
         <div>
-          <a href="/2017">JSHeroes 2017</a>
+          <Link href="/2018">
+            <a>JSHeroes 2018</a>
+          </Link>
         </div>
         <div>
-          <a href="/2018">JSHeroes 2018</a>
+          <Link href="/2017">
+            <a>JSHeroes 2017</a>
+          </Link>
         </div>
       </div>
-      <div className="col-md-3 col-sm-4">
-        <span className="headline">Connect with us</span>
+    </div>
+    <div className="row copyright">
+      <div className="col-sm-4 rights">
+        <i className="fa fa-copyright" aria-hidden="true" /> 2018 · JSHeroes. All rights reserved.
+      </div>
+      <div className="col-sm-4 community">
+        Made with <i className="fa fa-heart" aria-hidden="true" /> by
+        <span className="sticky-words">&nbsp;JSHeroes Community.</span>
+      </div>
+      <div className="col-sm-4 social-media">
         <div className="social">
           {socialmedia.map(item => (
             <span key={item.url}>
@@ -63,35 +88,26 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="row copyright">
-      <div className="col-sm-6">
-        <i className="fa fa-copyright" aria-hidden="true" /> 2018 · JSHeroes. All rights reserved.
-      </div>
-      <div className="col-sm-6">
-        Made with <i className="fa fa-heart" aria-hidden="true" /> by
-        <span className="sticky-words">&nbsp;JSHeroes Community.</span>
-      </div>
-    </div>
 
     {/* language=CSS */}
     <style jsx>
       {`
         footer {
           color: white;
-          padding: 50px 15px 0;
+          padding: 20px 15px 0;
           background-color: ${styles.mainColor2};
           flex-shrink: 0;
         }
 
         .col-md-3 div {
-          padding: 4px 0;
+          margin: 5px 0;
         }
 
         .home-link {
           display: inline-block;
           width: 150px;
           padding: 0;
-          margin: 65px 20px 65px;
+          margin: 60px 20px 35px;
         }
 
         .home-link img {
@@ -100,13 +116,8 @@ const Footer = () => (
         }
 
         @media (min-width: ${mediaQueries.S}) {
-          .social {
-            width: 170px;
-          }
-
           .social span {
             padding-left: 10px;
-            padding-bottom: 10px;
             width: 55px;
             float: left;
           }
@@ -136,7 +147,20 @@ const Footer = () => (
             font-size: 27px;
           }
           .col-md-3 div {
-            margin: 15px 0;
+            margin: 5px 0;
+          }
+
+          .col-sm-4.social-media {
+            order: 1;
+            margin-bottom: 10px;
+          }
+          .col-sm-4.community {
+            order: 2;
+            margin-bottom: 10px;
+          }
+          .col-sm-4.rights {
+            order: 3;
+            margin-bottom: 10px;
           }
         }
 
@@ -153,17 +177,19 @@ const Footer = () => (
         }
 
         .headline {
+          font-family: Roboto, sans-serif;
+          font-weight: 700;
+          font-size: 16px;
           text-transform: uppercase;
-          padding-bottom: 5px;
-          margin-bottom: 10px;
-          margin-top: 10px;
-          border-bottom: 2px solid white;
+          margin-top: 20px;
           display: inline-block;
         }
 
         a {
           color: ${styles.mainColor3};
-          font-size: 16px;
+          font-family: Roboto, sans-serif;
+          font-weight: 400;
+          font-size: 13px;
           text-decoration: none;
           text-transform: none;
           transition-duration: 0.5s;
