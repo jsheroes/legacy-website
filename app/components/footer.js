@@ -29,13 +29,9 @@ const Footer = () => (
           </Link>
         </div>
         <div>
-          <a
-            href="https://jsheroes-form.typeform.com/to/IHohur"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="/speak-at-jsheroes">
             <a>Give a Talk at JSHeroes</a>
-          </a>
+          </Link>
         </div>
       </div>
       <div className="col-md-3 col-sm-4">
