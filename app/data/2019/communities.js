@@ -69,4 +69,9 @@ export default [
     img: 'logo_reactiveconf.png',
     href: 'https://reactiveconf.com/',
   },
+  {
+    title: 'VoxxedDays',
+    img: 'logo_voxxedday.png',
+    href: 'https://romania.voxxeddays.com/cluj-napoca/',
+  },
 ];
