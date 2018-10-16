@@ -3,7 +3,7 @@ import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import data from '../../data/index';
 import PersonSpotlight from '../personSpotlight';
-import ambassadors from '../../data/2019/ambassadors';
+import ambassadors from '../../data/ambassadors';
 import CTAButton from '../common/ctaButton';
 
 function addObserver() {
@@ -41,7 +41,7 @@ class Speakers extends Component {
     const title = `Our ${year} Heroes`;
     const isCurrentYear = year === data.currentYear;
     const speakerUrl = `${baseUrl}/speakers/`;
-    const ambassadorUrl = `${baseUrl}/ambassadors/`;
+    const ambassadorUrl = `/static/img/ambassadors/`;
     return (
       <Section>
         <div id="speakers" className="speakers-section">
