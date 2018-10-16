@@ -35,7 +35,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="col-md-3 col-sm-4">
-        <span className="headline">Connect with us</span>
+        <span className="headline">More Info</span>
         <div>
           <Link href="/adopt-a-jser">
             <a>Adopt a Javascripter</a>
