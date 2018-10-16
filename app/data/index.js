@@ -4,7 +4,6 @@ import data2019 from './2019';
 import menuItems from './menuitems';
 import news from './news';
 import socialmedia from './socialmedia';
-import adoptAJser from './adopt-a-jser';
 
 export default {
   currentYear: '2019',
@@ -14,5 +13,4 @@ export default {
   menuItems,
   news,
   socialmedia,
-  adoptAJser,
 };

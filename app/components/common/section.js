@@ -7,7 +7,7 @@ const Section = ({ section = {}, mainContainer = {}, className = '', children })
         {`
           div {
             padding: 0 15px;
-            margin: 0 auto 50px;
+            margin: 0 auto;
           }
 
           @media (min-width: ${mediaQueries.S}) {
