@@ -2,13 +2,13 @@ import React, { Fragment } from 'react';
 import Link from 'next/link';
 import { styles } from '../../constants';
 
-const CTAButton = ({ url, primary = false, children }) => {
+const CTAButton = ({ url, primary = false, children, align = 'center' }) => {
   const relativeUrl = url && url[0] === '/';
   const backgroundColor = primary ? styles.mainColor6 : styles.mainColor3;
   const foregroundColor = primary ? styles.mainColor3 : styles.mainColor6;
   return (
     <Fragment>
-      <div className="button-wrapper">
+      <div className={`button-wrapper ${align}`}>
         {relativeUrl && (
           <Link href={url}>
             <a className="button">{children}</a>
@@ -23,9 +23,19 @@ const CTAButton = ({ url, primary = false, children }) => {
       <style jsx>
         {`
           .button-wrapper {
-            text-align: center;
             margin-top: 40px;
             margin-bottom: 40px;
+          }
+
+          .center {
+            text-align: center;
+          }
+          .left {
+            text-align: left;
+          }
+
+          .right {
+            text-align: right;
           }
 
           .button {

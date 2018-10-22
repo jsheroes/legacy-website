@@ -82,7 +82,7 @@ const SpeakerDetail = ({ speaker }) => {
                   </div>
                   <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
-                <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2019">
+                <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2019" align="left">
                   Buy Your Ticket
                 </CTAButton>
               </div>
@@ -174,14 +174,13 @@ const SpeakerDetail = ({ speaker }) => {
           }
 
           .speaker-info-box {
-            max-width: 245px;
-            position: relative;
-            overflow: hidden;
-            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
           }
 
           .speaker-img {
             cursor: pointer;
+            max-width: 245px;
           }
 
           .speaker-img img {
@@ -208,12 +207,13 @@ const SpeakerDetail = ({ speaker }) => {
           @media (max-width: ${mediaQueries.S}) {
             .side,
             .speaker-info-box {
-              display: block;
+              // display: block;
             }
 
             .details-container {
               flex: none;
               margin-top: 30px;
+              text-align: center;
             }
 
             .buy-ticket {
