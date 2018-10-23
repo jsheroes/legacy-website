@@ -12,7 +12,7 @@ const Section = ({ section = {}, mainContainer = {}, className = '', children })
 
           @media (min-width: ${mediaQueries.S}) {
             div {
-              width: 720px;
+              width: auto;
             }
           }
 
