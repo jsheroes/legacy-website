@@ -16,7 +16,7 @@ export default [
   },
   {
     id: 4,
-    url: '/#partners',
+    url: '/#sponsors',
     label: 'sponsors',
   },
   {
