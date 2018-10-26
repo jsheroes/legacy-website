@@ -23,30 +23,29 @@ const ConductMain = () => (
           All attendees, speakers, sponsors and volunteers at our conference are required to agree
           with the following code of conduct.
         </strong>{' '}
-        As organisers of JSHeroes, the Cluj JavaScripters Community will enforce this code
-        throughout the event. We expect cooperation from all participants to help ensure a safe
-        environment for everybody.
+        As organisers of JSHeroes, the JSHeroes community will enforce this code throughout the
+        event. We expect cooperation from all participants to help ensure a safe environment for
+        everybody.
       </p>
       <p>
-        <strong>The Cluj JavaScripters community commits</strong> to providing a safe and friendly
-        facility for all JSHeroes events, respecting each and every individual in the community and
+        <strong>The JSHeroes community commits</strong> to providing a safe and friendly facility
+        for all JSHeroes events, respecting each and every individual in the community and
         responding promptly to all reports of misconduct with our full attention.
       </p>
 
       <p>
         <strong>What we expect from each of you</strong> is to treat everyone with respect, refrain
-        from using offensive language and imagery and to report any derogatory or offensive
-        behaviour to a member of the Cluj JavaScripters community or JSHeroes staff directly, or
-        through email{' '}
+        from using offensive language and imagery, and to report any derogatory or offensive
+        behaviour to a member of the JSHeroes community or JSHeroes staff directly, or through email
+        at{' '}
         <Link href="mailto: welcome@jsheroes.io">
           <a target="_top">welcome@jsheroes.io</a>
         </Link>
       </p>
 
       <p>
-        We value your attendance and your participation in the Cluj JavaScripters community and
-        expect everyone to accord to the community Code of Conduct at all JSHeroes venues and
-        events.
+        We value your attendance and your participation in the JSHeroes community and expect
+        everyone to accord to the community Code of Conduct at all JSHeroes venues and events.
       </p>
     </div>
 
