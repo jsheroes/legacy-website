@@ -5,19 +5,11 @@ import { styles, mediaQueries } from '../../constants';
 const ConductMain = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
     <div className="central-container">
-      <p>
-        Below is a short version of our Code of Conduct. You can download the full length document{' '}
-        <Link href="https://drive.google.com/file/d/0B9mBUlTNHZJNRnhGWE5LRERud00/edit">
-          <a target="_blank" rel="noopener noreferrer">
-            here
-          </a>
-        </Link>
-        .
-      </p>
-      <br />
-      <h3>The short version</h3>
-      <hr />
-      <br />
+      <h2>
+        The <span className="logoJS">JS</span>
+        <span>Heroes</span> Code of Conduct
+      </h2>
+
       <p>
         <strong>
           All attendees, speakers, sponsors and volunteers at our conference are required to agree
@@ -44,6 +36,21 @@ const ConductMain = () => (
       </p>
 
       <p>
+        JSHeroes understands the importance of community and wants to ensure that we provide a
+        fantastic environment for everyone to learn and share skills regardless of gender, gender
+        identity and expression, age, sexual orientation, disability, physical appearance, body
+        size, race, ethnicity, religion (or lack thereof), or technology choices.
+      </p>
+
+      <p>
+        We do not tolerate harassment of conference participants in any form. Sexual language and
+        imagery is not appropriate for any conference venue, including talks, meetups, parties,
+        Twitter and other online media. Conference participants violating these rules may be
+        sanctioned or expelled from the conference without a refund at the discretion of the
+        conference organisers.
+      </p>
+
+      <p>
         We value your attendance and your participation in the JSHeroes community and expect
         everyone to accord to the community Code of Conduct at all JSHeroes venues and events.
       </p>
@@ -56,14 +63,15 @@ const ConductMain = () => (
           width: 100%;
           padding: 100px 0 140px;
           margin: 0 auto;
-          text-align: center;
+          text-align: left;
         }
 
-        h3 {
-          margin: 0 auto 30px;
-          line-height: 1.1;
-          font-size: 44px;
-          font-weight: 700;
+        .logoJS {
+          color: ${styles.mainColor6};
+        }
+
+        h2 {
+          text-align: center;
         }
 
         hr {
@@ -96,12 +104,12 @@ const ConductMain = () => (
         }
 
         @media (max-width: ${mediaQueries.S}) {
-          h3 {
-            font-size: 26px;
+          .central-container {
+            padding: 50px 16px 70px;
           }
 
-          .central-container {
-            padding: 50px 0 70px;
+          h2 {
+            margin-bottom: 50px;
           }
 
           p {
@@ -112,12 +120,12 @@ const ConductMain = () => (
         }
 
         @media (min-width: ${mediaQueries.S}) and (max-width: ${mediaQueries.L}) {
-          h3 {
-            font-size: 30px;
+          .central-container {
+            padding: 60px 32px 80px;
           }
 
-          .central-container {
-            padding: 60px 0 80px;
+          h2 {
+            margin-bottom: 60px;
           }
 
           p {
@@ -125,19 +133,15 @@ const ConductMain = () => (
             font-size: 16px;
             line-height: 30px;
           }
-
-          .section-padding {
-            padding: 70px 0;
-          }
         }
 
         @media (min-width: ${mediaQueries.L}) and (max-width: ${mediaQueries.XL}) {
-          h3 {
-            font-size: 34px;
-          }
-
           .central-container {
             padding: 80px 0 100px;
+          }
+
+          h2 {
+            margin-bottom: 80px;
           }
 
           p {
@@ -151,11 +155,9 @@ const ConductMain = () => (
           .central-container {
             width: 66.7%;
           }
-        }
 
-        @media (min-width: ${mediaQueries.XL}) {
-          .central-container {
-            text-align: left;
+          h2 {
+            margin-bottom: 80px;
           }
         }
       `}
