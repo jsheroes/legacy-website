@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Section from '../common/section';
 import news from '../../data/news';
-import { mediaQueries } from '../../constants';
+import { mediaQueries, styles } from '../../constants';
 
 class Updates extends Component {
   state = {
@@ -57,6 +57,10 @@ class Updates extends Component {
             }
             .wrapper a {
               font-weight: bold;
+              color: ${styles.mainColor5};
+            }
+            .wrapper a:hover {
+              color: ${styles.mainColor6};
             }
 
             .wrapper li {
@@ -73,10 +77,6 @@ class Updates extends Component {
 
             .wrapper h1 {
               margin: 0 0 50px;
-            }
-
-            .wrapper a {
-              text-decoration: none;
             }
 
             @media (min-width: ${mediaQueries.S}) {

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Section from '../common/section';
+import Link from '../common/link';
 
 const AfterMovie = ({ year, videos }) => (
   <Section>
@@ -19,10 +21,9 @@ const AfterMovie = ({ year, videos }) => (
       </div>
       <h3>
         You can find all the recorded talks on our youtube channel
-        <a href={videos.playList} target="_blank" rel="noopener noreferrer">
-          {' '}
-          {year} playlist
-        </a>
+        <Link href={videos.playList} theme={Link.THEME_DARK}>
+          <span className="link"> {year} playlist</span>
+        </Link>
       </h3>
     </div>
     <style jsx>
@@ -54,6 +55,10 @@ const AfterMovie = ({ year, videos }) => (
         }
         h3 {
           padding-top: 20px;
+        }
+
+        .link {
+          font-weight: 700;
         }
       `}
     </style>

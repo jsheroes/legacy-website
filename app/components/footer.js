@@ -1,63 +1,59 @@
-import Link from 'next/link';
 import { styles, mediaQueries } from '../constants';
 import socialmedia from '../data/socialmedia';
+import Link from './common/link';
 
 const Footer = () => (
   <footer>
     <div className="row">
       <div className="col-md-3 col-sm-4">
-        <Link href="/">
-          <a className="home-link">
+        <span className="home-link">
+          <Link href="/">
             <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
-          </a>
-        </Link>
+          </Link>
+        </span>
       </div>
       <div className="col-md-3 col-sm-4">
         <span className="headline">JSHeroes 2019</span>
         <div>
-          <a
-            href="https://ti.to/cluj-javascripters/jsheroes-2019"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Buy Your Ticket
-          </a>
+          <span className="link">
+            <Link href="https://ti.to/cluj-javascripters/jsheroes-2019">Buy Your Ticket</Link>
+          </span>
         </div>
         <div>
-          <Link href="/become-a-sponsor">
-            <a>Become a Sponsor</a>
-          </Link>
+          <span className="link">
+            <Link href="/become-a-sponsor">Become a Sponsor</Link>
+          </span>
         </div>
         <div>
-          <Link href="/speak-at-jsheroes">
-            <a>Give a Talk at JSHeroes</a>
-          </Link>
+          <span className="link">
+            <Link href="/speak-at-jsheroes">Give a Talk at JSHeroes</Link>
+          </span>
         </div>
       </div>
       <div className="col-md-3 col-sm-4">
         <span className="headline">More Info</span>
         <div>
-          <Link href="/code-of-conduct">
-            <a>Code of Conduct</a>
-          </Link>
+          <span className="link">
+            <Link href="/code-of-conduct">Code of Conduct</Link>
+          </span>
         </div>
         <div>
-          <Link href="/privacy">
-            <a>Privacy Statement</a>
-          </Link>
+          <span className="link">
+            <Link href="/privacy">Privacy Statement</Link>
+          </span>
         </div>
       </div>
       <div className="col-md-3 col-sm-4">
         <span className="headline">Past Editions</span>
         <div>
-          <Link href="/2018">
-            <a>JSHeroes 2018</a>
-          </Link>
+          <span className="link">
+            <Link href="/2018">JSHeroes 2018</Link>
+          </span>
         </div>
         <div>
-          <Link href="/2017">
-            <a>JSHeroes 2017</a>
-          </Link>
+          <span className="link">
+            <Link href="/2017">JSHeroes 2017</Link>
+          </span>
         </div>
       </div>
     </div>
@@ -73,10 +69,8 @@ const Footer = () => (
         <div className="social">
           {socialmedia.map(item => (
             <span key={item.url}>
-              <Link href={`${item.url}`}>
-                <a aria-label={item.alt} target="_blank" rel="noopener noreferrer">
-                  <i className={item.label} aria-hidden="true" />
-                </a>
+              <Link href={`${item.url}`} aria-label={item.alt}>
+                <i className={item.label} aria-hidden="true" />
               </Link>
             </span>
           ))}
@@ -108,6 +102,10 @@ const Footer = () => (
         .home-link img {
           width: inherit;
           height: auto;
+        }
+
+        .link {
+          font-size: 13px;
         }
 
         @media (min-width: ${mediaQueries.S}) {
@@ -172,27 +170,11 @@ const Footer = () => (
         }
 
         .headline {
-          font-family: Roboto, sans-serif;
           font-weight: 700;
           font-size: 16px;
           text-transform: uppercase;
           margin-top: 20px;
           display: inline-block;
-        }
-
-        a {
-          color: ${styles.mainColor3};
-          font-family: Roboto, sans-serif;
-          font-weight: 400;
-          font-size: 13px;
-          text-decoration: none;
-          text-transform: none;
-          transition-duration: 0.5s;
-        }
-
-        a:hover {
-          color: ${styles.mainColor6};
-          text-decoration: none;
         }
       `}
     </style>

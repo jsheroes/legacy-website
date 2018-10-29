@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '../common/link';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
@@ -7,10 +7,11 @@ const ConductMain = () => (
     <div className="central-container">
       <p>
         Below is a short version of our Code of Conduct. You can download the full length document{' '}
-        <Link href="https://drive.google.com/file/d/0B9mBUlTNHZJNRnhGWE5LRERud00/edit">
-          <a target="_blank" rel="noopener noreferrer">
-            here
-          </a>
+        <Link
+          href="https://drive.google.com/file/d/0B9mBUlTNHZJNRnhGWE5LRERud00/edit"
+          theme={Link.THEME_DARK}
+        >
+          here
         </Link>
         .
       </p>
@@ -38,8 +39,8 @@ const ConductMain = () => (
         from using offensive language and imagery and to report any derogatory or offensive
         behaviour to a member of the Cluj JavaScripters community or JSHeroes staff directly, or
         through email{' '}
-        <Link href="mailto: welcome@jsheroes.io">
-          <a target="_top">welcome@jsheroes.io</a>
+        <Link href="mailto: welcome@jsheroes.io" target="_top">
+          welcome@jsheroes.io
         </Link>
       </p>
 
@@ -81,11 +82,6 @@ const ConductMain = () => (
           color: ${styles.mainColor7};
           line-height: 32px;
           font-weight: 300;
-        }
-
-        a {
-          color: ${styles.mainColor5};
-          fill: ${styles.mainColor5};
         }
 
         @media (max-width: 479px) {

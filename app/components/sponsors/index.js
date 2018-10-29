@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '../common/link';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 import Sponsor from './sponsor';
@@ -12,10 +12,8 @@ const Sponsors = ({ baseUrl, sponsors }) => (
         <div>
           <p>
             If you wish to participate as a sponsor to our event contact us&nbsp;
-            <Link href="mailto: contact@jsheroes.io">
-              <a className="mail-to" target="_top">
-                <strong>welcome@jsheroes.io</strong>
-              </a>
+            <Link href="mailto: contact@jsheroes.io" target="_top" theme={Link.THEME_DARK}>
+              <strong>welcome@jsheroes.io</strong>
             </Link>
           </p>
           <p>These are the companies that joined our mission</p>
@@ -102,12 +100,6 @@ const Sponsors = ({ baseUrl, sponsors }) => (
             line-height: 28px;
             margin-bottom: 20px;
           }
-        }
-
-        .mail-to {
-          text-transform: none;
-          color: ${styles.mainColor1};
-          font-weight: 800;
         }
       `}
     </style>
