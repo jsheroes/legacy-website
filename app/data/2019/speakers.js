@@ -218,4 +218,33 @@ export default [
       },
     ],
   },
+  {
+    name: 'jason',
+    fullName: 'Jason Lengstorf',
+    permalink: 'jason-lengstorf',
+    firstName: 'Jason',
+    reference: 'him',
+    position: 'Developer Advocate',
+    company: 'Gatsby',
+    img: 'jason-lengstorf.jpg',
+    twitter: 'https://twitter.com/jlengstorf',
+    website: 'https://lengstorf.com',
+    github: 'https://github.com/jlengstorf ',
+    description:
+      'Jason Lengstorf is a developer advocate, senior engineer, and occasional designer at Gatsby. He’s an advocate for building highly productive teams through better communication, well designed systems and processes, and healthy work-life balance, and he blogs about that sometimes. He lives in Portland, Oregon.',
+    talk: {
+      title: 'TBA',
+      description: '',
+      message: '',
+    },
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [
+      {
+        name:
+          'GraphQL at Massive Scale as the Glue in IBM`s Microservice Architecture @ GraphQL Summit 2017',
+        url: 'https://www.youtube.com/watch?v=T3FbZsYXi50',
+      },
+    ],
+  },
 ];

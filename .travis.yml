@@ -12,8 +12,6 @@ script:
   - npm run build
   - npm start & wait-on http://localhost:4001
   - npm run test:e2e
-after_success:
-  - npm run lh
 # before_deploy: npm install now --no-save # Install Now CLI on Travis
 # deploy:
 #   - provider: script
