@@ -37,11 +37,6 @@ const Footer = () => (
       <div className="col-md-3 col-sm-4">
         <span className="headline">More Info</span>
         <div>
-          <Link href="/adopt-a-jser">
-            <a>Adopt a Javascripter</a>
-          </Link>
-        </div>
-        <div>
           <Link href="/code-of-conduct">
             <a>Code of Conduct</a>
           </Link>
