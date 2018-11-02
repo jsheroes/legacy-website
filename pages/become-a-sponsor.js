@@ -1,5 +1,8 @@
+import React from 'react';
+
 import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
+import Link from '../app/components/common/link';
 import { styles, mediaQueries } from '../app/constants';
 
 const BecomeASponsorPage = () => (
@@ -10,9 +13,9 @@ const BecomeASponsorPage = () => (
         <h1>Become A Sponsor</h1>
         <p>
           View the&nbsp;
-          <a href="/static/brochure.pdf" target="_blank" rel="noopener noreferrer">
+          <Link openInNewTab theme={Link.THEME_DARK} href="/static/brochure.pdf">
             Sponsorship Brochure
-          </a>
+          </Link>
         </p>
         <p>
           <strong>JSHeroes</strong> is an event by and for the JavaScript community, both local and
@@ -38,11 +41,14 @@ const BecomeASponsorPage = () => (
 
         <strong>Interested in sponsoring JSHeroes?</strong>
         <p>
-          Send us an email at <a href="mailto:contact@jsheroes.io">contact@jsheroes.io</a>. We will
-          follow-up and send you our current offer. Or you can download our{' '}
-          <a href="/static/brochure.pdf" target="_blank" rel="noopener noreferrer">
+          Send us an email at{' '}
+          <Link theme={Link.THEME_DARK} href="mailto:contact@jsheroes.io">
+            contact@jsheroes.io
+          </Link>
+          . We will follow-up and send you our current offer. Or you can download our{' '}
+          <Link openInNewTab theme={Link.THEME_DARK} href="/static/brochure.pdf">
             Sponsorship Brochure
-          </a>{' '}
+          </Link>{' '}
           for more info.
         </p>
         <strong>What you get?</strong>
@@ -91,11 +97,6 @@ const BecomeASponsorPage = () => (
             color: ${styles.mainColor7};
             line-height: 32px;
             font-weight: 300;
-          }
-
-          a {
-            color: ${styles.mainColor5};
-            fill: ${styles.mainColor5};
           }
 
           @media (max-width: 479px) {

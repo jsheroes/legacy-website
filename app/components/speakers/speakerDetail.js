@@ -4,6 +4,7 @@ import RawHtml from '../common/rawHtml';
 import { styles, mediaQueries } from '../../constants';
 import store from '../../data';
 import CTAButton from '../common/ctaButton';
+import Link from '../common/link';
 
 const SpeakerDetail = ({ speaker }) => {
   const talks = buildTalks(speaker);
@@ -52,23 +53,23 @@ const SpeakerDetail = ({ speaker }) => {
                 </div>
                 <div className="social-links">
                   {speaker.twitter ? (
-                    <a href={speaker.twitter} target="_blank" rel="noopener noreferrer">
+                    <Link href={speaker.twitter}>
                       <span className="twitter" />
-                    </a>
+                    </Link>
                   ) : (
                     ''
                   )}
                   {speaker.github ? (
-                    <a href={speaker.github} target="_blank" rel="noopener noreferrer">
+                    <Link href={speaker.github}>
                       <span className="github" />
-                    </a>
+                    </Link>
                   ) : (
                     ''
                   )}
                   {speaker.website ? (
-                    <a href={speaker.website} target="_blank" rel="noopener noreferrer">
+                    <Link href={speaker.website}>
                       <span className="website" />
-                    </a>
+                    </Link>
                   ) : (
                     ''
                   )}
@@ -274,22 +275,17 @@ function talkRow({ url, name }) {
   return (
     <div key={url}>
       <span className="blue-circle" />
-      <a href={url} target="_blank" rel="noopener noreferrer">
+      <Link href={url} theme={Link.THEME_DARK}>
         {name}
-      </a>
+      </Link>
       <style jsx>
         {`
-          a {
-            text-decoration: none;
-            color: ${styles.mainColor6};
-          }
-
           .blue-circle {
             display: inline-block;
             margin-right: 20px;
             width: 10px;
             height: 10px;
-            background: ${styles.mainColor6};
+            background: ${styles.mainColor5};
             border-radius: 5px;
           }
         `}

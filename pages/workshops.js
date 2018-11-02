@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Router from 'next/router';
 import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
+import Link from '../app/components/common/link';
 import store from '../app/data/index';
 import { styles, mediaQueries } from '../app/constants';
 import RawHtml from '../app/components/common/rawHtml';
@@ -53,19 +53,17 @@ const Workshop = ({ speakers }) => {
           <div className="workshop-title">
             <h1>{workshopTitle}</h1>
             <span>
-              by:
+              by:&nbsp;
               <strong>
                 <Link
                   href={`/speakers?name=${firstSpeaker.permalink}`}
                   as={`/speakers/${firstSpeaker.permalink}`}
+                  onMouseEnter={() => {
+                    Router.prefetch(`/speakers?name=${firstSpeaker.permalink}`);
+                  }}
+                  theme={Link.THEME_DARK}
                 >
-                  <a
-                    onMouseEnter={() => {
-                      Router.prefetch(`/speakers?name=${firstSpeaker.permalink}`);
-                    }}
-                  >
-                    {firstSpeaker.fullName}
-                  </a>
+                  {firstSpeaker.fullName}
                 </Link>
                 {secondSpeaker && (
                   <span>
@@ -73,14 +71,12 @@ const Workshop = ({ speakers }) => {
                     <Link
                       href={`/speakers?name=${secondSpeaker.permalink}`}
                       as={`/speakers/${secondSpeaker.permalink}`}
+                      onMouseEnter={() => {
+                        Router.prefetch(`/speakers?name=${secondSpeaker.permalink}`);
+                      }}
+                      theme={Link.THEME_DARK}
                     >
-                      <a
-                        onMouseEnter={() => {
-                          Router.prefetch(`/speakers?name=${secondSpeaker.permalink}`);
-                        }}
-                      >
-                        {secondSpeaker.fullName}
-                      </a>
+                      {secondSpeaker.fullName}
                     </Link>
                   </span>
                 )}
@@ -106,20 +102,21 @@ const Workshop = ({ speakers }) => {
           <div className="workshop-section">
             <div>
               Are you interested in
-              <strong>{firstSpeaker.firstName}</strong>
+              <strong>
+                &nbsp;
+                {firstSpeaker.firstName}
+              </strong>
               `s workshop?
             </div>
             <div>Join {firstSpeaker.reference} at JSHeroes!</div>
           </div>
           <div className="workshop-ticket">
-            <a
+            <Link
+              theme={Link.THEME_DARK}
               href="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2018"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button"
             >
-              Buy your Ticket
-            </a>
+              <span className="button">Buy your Ticket</span>
+            </Link>
           </div>
         </div>
         <style jsx>
@@ -177,7 +174,6 @@ const Workshop = ({ speakers }) => {
               margin: 10px 0;
               padding: 10px;
               width: 100%;
-              text-decoration: none;
             }
 
             @media (min-width: ${mediaQueries.XS}) {
@@ -222,6 +218,7 @@ Workshop.getInitialProps = async ({ res, query }) => {
   const speakers = store.data2019.speakers.filter(
     s => s.workshop && s.workshop.permalink === workshopName,
   );
+
   if (speakers.length <= 0) {
     Helpers.redirectTo(res, '/');
   }

@@ -80,13 +80,13 @@ const ScheduleRow = ({ agendaItem, baseUrl, type, speakers }) => {
       <div className="activity-details">
         <div className="activity-title">{activityTitle}</div>
         <div>
-          <a className="speaker-name">{firstSpeaker.fullName}</a>
+          <span className="speaker-name">{firstSpeaker.fullName}</span>
           <span className="speaker-position">, {firstSpeaker.position}</span>
           {firstSpeaker.company && <span className="speaker-company">{firstSpeaker.company}</span>}
         </div>
         {secondSpeaker && (
           <div>
-            <a className="speaker-name">{secondSpeaker.fullName}</a>
+            <span className="speaker-name">{secondSpeaker.fullName}</span>
             <span className="speaker-position">,{secondSpeaker.position}</span>
             {secondSpeaker.company && (
               <span className="speaker-company">{secondSpeaker.company}</span>
@@ -124,10 +124,6 @@ const ScheduleRow = ({ agendaItem, baseUrl, type, speakers }) => {
 
           .activity-title {
             font-weight: 700;
-          }
-
-          .activity-title a {
-            color: ${styles.mainColor3};
           }
 
           .red {

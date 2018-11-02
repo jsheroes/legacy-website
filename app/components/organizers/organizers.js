@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import Router from 'next/router';
+import Link from '../common/link';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
@@ -15,15 +15,14 @@ const Organizers = () => (
       <p>They contribute hours of their time each year and we value this immensely.</p>
       <p>
         Thanks to all
-        <Link href="/organizers">
-          <a
-            className="link"
-            onMouseEnter={() => {
-              Router.prefetch('/organizers');
-            }}
-          >
-            <strong> who supported us!</strong>
-          </a>
+        <Link
+          href="/organizers"
+          onMouseEnter={() => {
+            Router.prefetch('/organizers');
+          }}
+          theme={Link.THEME_DARK}
+        >
+          <strong> who supported us!</strong>
         </Link>
       </p>
     </div>
@@ -39,10 +38,6 @@ const Organizers = () => (
           color: ${styles.mainColor3};
           font-weight: 700;
           margin: 0 auto 30px;
-        }
-
-        .link {
-          color: ${styles.mainColor6};
         }
 
         p {
