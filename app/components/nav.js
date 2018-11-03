@@ -51,7 +51,9 @@ export default class Nav extends Component {
               >
                 {item.links ? (
                   <Fragment>
-                    <span className="nested-links-label">{item.label}</span>
+                    <span tabIndex="0" role="menu" className="nested-links-label">
+                      {item.label}
+                    </span>
                     <ul className="menu-items inside">
                       {item.links.map(link => (
                         <li key={link.id}>
@@ -107,7 +109,8 @@ export default class Nav extends Component {
               display: none;
             }
 
-            ul.menu-items li.with-link:hover ul {
+            ul.menu-items li.with-link:hover ul,
+            ul.menu-items li.with-link:focus-within ul {
               display: block;
             }
 
