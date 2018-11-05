@@ -12,8 +12,8 @@ const themes = {
   [THEME_LIGHT_CONTRAST]: THEME_LIGHT_CONTRAST,
 };
 
-const Link = ({ href, as, children, theme, openInNewTab, ...rest }) => {
-  const classNames = [themes[theme]].filter(a => a);
+const Link = ({ href, as, children, theme, openInNewTab, className, ...rest }) => {
+  const classNames = [className, themes[theme]].filter(a => a);
   const isRelativeUrl = href && href[0] === '/';
   const isMailTo = href && href.match(/^mailto/);
 
@@ -40,21 +40,21 @@ const Link = ({ href, as, children, theme, openInNewTab, ...rest }) => {
             a.${THEME_LIGHT} {
               color: ${styles.mainColor3};
             }
-            a.${THEME_LIGHT}:hover {
+            a.${THEME_LIGHT}:hover, a.${THEME_LIGHT}:focus {
               color: ${styles.mainColor6};
             }
 
             a.${THEME_LIGHT_CONTRAST} {
               color: ${styles.mainColor3};
             }
-            a.${THEME_LIGHT_CONTRAST}:hover {
+            a.${THEME_LIGHT_CONTRAST}:hover, a.${THEME_LIGHT_CONTRAST}:focus {
               color: ${styles.mainColor1};
             }
 
             a.${THEME_DARK} {
               color: ${styles.mainColor5};
             }
-            a.${THEME_DARK}:hover {
+            a.${THEME_DARK}:hover, a.${THEME_DARK}:focus {
               color: ${styles.mainColor6};
             }
           `}
