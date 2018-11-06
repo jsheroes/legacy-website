@@ -247,4 +247,31 @@ export default [
       },
     ],
   },
+  {
+    name: 'guillaume',
+    fullName: 'Guillaume Chau',
+    permalink: 'guillaume-chau',
+    firstName: 'Guillaume',
+    reference: 'him',
+    position: 'Core Team Member',
+    company: 'Vue.js',
+    img: 'guillaume-chau.jpg',
+    twitter: 'https://twitter.com/Akryum',
+    github: 'https://github.com/akryum',
+    description:
+      'Guillaume is a Vue.js Core Team member working on vue-cli, vue-devtools and vue-curated. He also created of the integrations with Apollo GraphQL (vue-apollo) and Meteor (vue-meteor) to help developer build highly interactive and realtime Vue-powered apps, and he contributes to the ecosystem with tools like vue-virtual-scroller and v-tooltip.',
+    talk: {
+      title: 'TBA',
+      description: '',
+      message: '',
+    },
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [
+      {
+        name: 'Introduction to Vue CLI 3 and its UI @ Vue.js Core Team Summit',
+        url: 'https://www.youtube.com/watch?v=Cpc9AZg2KOM',
+      },
+    ],
+  },
 ];
