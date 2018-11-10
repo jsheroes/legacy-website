@@ -1,20 +1,20 @@
 {
-    "name":"jsheroes",
-    "short_name":"jsheroes",
-    "start_url":"/",
-    "background_color":"#0098ff",
-    "theme_color":"#0098ff",
-    "display": "standalone",
-    "icons": [
-        {
-            "src": "/static/images/manifest-image-192.jpg",
-            "type": "image/jpeg",
-            "sizes": "192x192"
-        },
-        {
-            "src": "/static/images/manifest-image-512.jpg",
-            "type": "image/jpeg",
-            "sizes": "512x512"
-        }
-    ]
+  "name": "jsheroes",
+  "short_name": "jsheroes",
+  "start_url": "/",
+  "background_color": "#0098ff",
+  "theme_color": "#0098ff",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/static/img/manifest-image-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/static/img/manifest-image-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
 }
