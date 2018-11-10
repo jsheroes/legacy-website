@@ -1,6 +1,5 @@
 const express = require('express');
 const nextServer = require('next');
-
 const config = require('./config/config');
 
 const dev = process.env.NODE_ENV !== 'production';
@@ -38,6 +37,10 @@ const startServer = () => {
 
   server.get('/workshops', (req, res) => {
     res.redirect(301, '/');
+  });
+
+  server.get('/sw.js', (req, res) => {
+    res.sendFile(`${__dirname}/offline/serviceWorker.js`);
   });
 
   server.get('/workshops/:name', (req, res) => {
