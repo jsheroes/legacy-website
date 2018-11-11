@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import getConfig from 'next/config';
 import Layout from '../app/components/layout';
 import Header from '../app/components/header';
 import Updates from '../app/components/updates';
@@ -16,7 +17,8 @@ import 'what-input';
 
 class Home extends Component {
   componentDidMount() {
-    if ('serviceWorker' in navigator) {
+    const { publicRuntimeConfig } = getConfig();
+    if (publicRuntimeConfig && publicRuntimeConfig.isProduction && 'serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/sw.js')
         .catch(err => console.error('Service worker registration failed', err));

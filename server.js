@@ -4,7 +4,7 @@ const config = require('./config/config');
 
 const dev = process.env.NODE_ENV !== 'production';
 
-const app = nextServer({ dev });
+const app = nextServer({ dev, conf: config.next });
 const handle = app.getRequestHandler();
 
 // eslint-disable-next-line max-statements
