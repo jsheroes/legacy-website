@@ -1,3 +1,4 @@
+import Link from '../common/link';
 import { styles, mediaQueries } from '../../constants';
 
 const Organizer = ({ role, image, name, twitter }) => (
@@ -10,9 +11,9 @@ const Organizer = ({ role, image, name, twitter }) => (
         <h6>{role}</h6>
         {twitter && (
           <h6>
-            <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer">
+            <Link href={`https://twitter.com/${twitter}`} theme={Link.THEME_LIGHT_CONTRAST}>
               @{twitter}
-            </a>
+            </Link>
           </h6>
         )}
       </div>

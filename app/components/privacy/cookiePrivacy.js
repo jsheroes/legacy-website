@@ -1,4 +1,6 @@
 import { Component } from 'react';
+
+import Link from '../common/link';
 import { styles } from '../../constants';
 
 class CookiePrivacy extends Component {
@@ -39,9 +41,9 @@ class CookiePrivacy extends Component {
           </p>
           <p>
             To find out more or to opt-out, please read our{' '}
-            <a href="/privacy" target="_blank" rel="noopener noreferrer">
-              Privacy Statement.
-            </a>
+            <Link href="/privacy" openInNewTab>
+              <span className="link">Privacy Statement.</span>
+            </Link>
           </p>
           <p>
             By choosing <strong>I Accept</strong> you consent to our use of cookies and other
@@ -70,8 +72,7 @@ class CookiePrivacy extends Component {
               padding: 10px 35px 10px 35px;
             }
 
-            a {
-              color: white;
+            .link {
               font-weight: bold;
             }
           `}

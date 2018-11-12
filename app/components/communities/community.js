@@ -1,12 +1,10 @@
-import Link from 'next/link';
+import Link from '../common/link';
 import { mediaQueries } from '../../constants';
 
 const Community = ({ href, title, img, baseUrl }) => (
   <li>
-    <Link href={`${href}`}>
-      <a target="_blank" rel="noopener noreferrer" title={`${title}`}>
-        <img src={`${baseUrl}/communities/${img}`} alt={`${title}`} />
-      </a>
+    <Link href={`${href}`} title={`${title}`}>
+      <img src={`${baseUrl}/communities/${img}`} alt={`${title}`} />
     </Link>
 
     <style jsx>
@@ -26,15 +24,11 @@ const Community = ({ href, title, img, baseUrl }) => (
           margin-bottom: 15px;
           border: 0;
           vertical-align: middle;
-          -webkit-filter: grayscale(100%);
-          -moz-filter: grayscale(100%);
           filter: grayscale(100%);
           transition: all 0.5s ease;
         }
 
         img:hover {
-          -webkit-filter: grayscale(0%);
-          -moz-filter: grayscale(0%);
           filter: grayscale(0%);
         }
 

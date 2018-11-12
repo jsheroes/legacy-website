@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
+// import Link from '../app/components/common/link';
 import AdoptAJSerHero from '../app/components/adopt-a-jser-hero';
 
 // add removed code in 2019
@@ -27,7 +28,7 @@ export default AdoptAJSer;
 //         <RawHtml content={couchSurfing} className="p-mb-30" />
 
 //         <div className="main-box-wrapper">
-//           <a title="Be a Guest" target="_blank" rel="noopener noreferrer" href={beAGuestLink}>
+//           <Link title="Be a Guest" href={beAGuestLink} className="link">
 //             <div className="main-box">
 //               <h3>Be a Guest</h3>
 //               <span />
@@ -37,9 +38,9 @@ export default AdoptAJSer;
 //                 from Cluj-Napoca.
 //               </p>
 //             </div>
-//           </a>
+//           </Link>
 
-//           <a title="Become a Host" target="_blank" rel="noopener noreferrer" href={beAHostLink}>
+//           <Link title="Become a Host" href={beAHostLink} className="link">
 //             <div className="main-box host">
 //               <h3>Become a Host</h3>
 //               <span />
@@ -49,7 +50,7 @@ export default AdoptAJSer;
 //                 JavaScripter.
 //               </p>
 //             </div>
-//           </a>
+//           </Link>
 //         </div>
 //       </div>
 
@@ -84,8 +85,7 @@ export default AdoptAJSer;
 //             margin-top: 30px;
 //           }
 
-//           .main-box-wrapper a {
-//             text-decoration: none;
+//           .main-box-wrapper .link {
 //             margin: 0 30px;
 //           }
 
@@ -183,7 +183,7 @@ export default AdoptAJSer;
 //             }
 //           }
 //           @media (max-width: ${mediaQueries.XS}) {
-//             .main-box-wrapper a {
+//             .main-box-wrapper .link {
 //               margin-left: 0;
 //               margin-right: 0;
 //             }

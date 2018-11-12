@@ -1,4 +1,5 @@
 import Section from './common/section';
+import Link from './common/link';
 import { styles, mediaQueries } from '../constants';
 
 const Mission = () => (
@@ -12,13 +13,12 @@ const Mission = () => (
       </p>
       <p>
         We’re <strong>publishing all data</strong> about this conference, in{' '}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          theme={Link.THEME_LIGHT_CONTRAST}
           href="https://medium.com/cluj-javascripters/jsheroes-2018-transparency-report-part-2-follow-up-eadce2a986bf"
         >
-          full transparency
-        </a>
+          <span className="link">full transparency</span>
+        </Link>
         . We are also available at any time for inquires and we`re really looking forward to{' '}
         <strong>sharing</strong> our knowledge about{' '}
         <strong>organizing international events</strong>. This way, whenever a community wants to{' '}
@@ -48,8 +48,7 @@ const Mission = () => (
           text-align: center;
         }
 
-        a {
-          color: ${styles.mainColor3};
+        .link {
           text-decoration: underline;
         }
 

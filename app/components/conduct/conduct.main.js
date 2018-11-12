@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '../common/link';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
@@ -9,7 +9,6 @@ const ConductMain = () => (
         The <span className="logoJS">JS</span>
         <span>Heroes</span> Code of Conduct
       </h2>
-
       <p>
         <strong>
           All attendees, speakers, sponsors and volunteers at our conference are required to agree
@@ -88,11 +87,6 @@ const ConductMain = () => (
           color: ${styles.mainColor7};
           line-height: 32px;
           font-weight: 300;
-        }
-
-        a {
-          color: ${styles.mainColor5};
-          fill: ${styles.mainColor5};
         }
 
         @media (max-width: 479px) {

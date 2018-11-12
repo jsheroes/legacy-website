@@ -1,12 +1,12 @@
-import Link from 'next/link';
+import Link from '../common/link';
 import { mediaQueries } from '../../constants';
 
 const Partner = ({ href, className, img, title, baseUrl }) => (
   <li>
-    <Link href={`${href}`}>
-      <a className={className} target="_blank" rel="noopener noreferrer">
-        <img src={`${baseUrl}/partners/${img}`} title={`${title}`} alt={`${title}`} />
-      </a>
+    <Link href={href}>
+      <span className={className}>
+        <img src={`${baseUrl}/partners/${img}`} title={title} alt={title} />
+      </span>
     </Link>
 
     {/* language=CSS */}
@@ -21,12 +21,12 @@ const Partner = ({ href, className, img, title, baseUrl }) => (
           line-height: 30px;
         }
 
-        a {
+        span {
           width: 188px;
           height: auto;
         }
 
-        a.smaller-logo {
+        span.smaller-logo {
           width: 125px;
         }
 
@@ -37,15 +37,11 @@ const Partner = ({ href, className, img, title, baseUrl }) => (
           max-height: 100%;
           vertical-align: middle;
           border: 0;
-          -webkit-filter: grayscale(100%);
-          -moz-filter: grayscale(100%);
           filter: grayscale(100%);
           transition: all 0.5s ease;
         }
 
         img:hover {
-          -webkit-filter: grayscale(0%);
-          -moz-filter: grayscale(0%);
           filter: grayscale(0%);
         }
 
@@ -64,7 +60,7 @@ const Partner = ({ href, className, img, title, baseUrl }) => (
             margin-right: 12px;
           }
 
-          a.smaller-logo {
+          span.smaller-logo {
             width: 188px;
           }
         }

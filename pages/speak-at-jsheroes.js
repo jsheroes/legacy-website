@@ -3,6 +3,7 @@ import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
 import { styles } from '../app/constants';
 import CTAButton from '../app/components/common/ctaButton';
+import Link from '../app/components/common/link';
 
 const SpeakAtJSHeroes = () => (
   <Layout>
@@ -127,7 +128,10 @@ const SpeakAtJSHeroes = () => (
           <strong>supportive and helpful</strong> and we will do our best to get back to you with
           valuable feedback from the CFP process. In case you wish to talk with someone from the
           team, do not hesitate to write an email at{' '}
-          <a href="mailto:welcome@jsheroes.io">welcome@jsheroes.io</a>. Good luck!
+          <Link theme={Link.THEME_DARK} href="mailto:welcome@jsheroes.io">
+            welcome@jsheroes.io
+          </Link>
+          . Good luck!
         </p>
 
         <CTAButton url="https://jsheroes-form.typeform.com/to/IHohur">

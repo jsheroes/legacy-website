@@ -1,4 +1,5 @@
 import Section from '../common/section';
+import Link from '../common/link';
 import { styles, mediaQueries } from '../../constants';
 
 const PrivacyMain = () => (
@@ -95,13 +96,9 @@ const PrivacyMain = () => (
             this data is stored and processed by Facebook. Facebook may link this information to
             your Facebook account and also use it for its own promotional purposes, in accordance
             with Facebook’s Data Usage Policy{' '}
-            <a
-              href="https://www.facebook.com/about/privacy/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link theme={Link.THEME_DARK} href="https://www.facebook.com/about/privacy/">
               https://www.facebook.com/about/privacy/
-            </a>
+            </Link>
             .
           </li>
         </ol>
@@ -113,70 +110,54 @@ const PrivacyMain = () => (
         instructions:
       </p>
       <div>
-        <a
+        <Link
+          theme={Link.THEME_DARK}
           href="https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies"
-          rel="noopener noreferrer"
-          target="_blank"
         >
           Microsoft Internet Explorer
-        </a>
+        </Link>
       </div>
       <div>
-        <a
+        <Link
+          theme={Link.THEME_DARK}
           href="https://support.google.com/chrome/answer/95647?hl=en&p=cpn_cookies"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           Google Chrome
-        </a>
+        </Link>
       </div>
       <div>
-        <a
+        <Link
+          theme={Link.THEME_DARK}
           href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences?redirectlocale=en-US&redirectslug=Enabling+and+disabling+cookies"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           Mozilla Firefox
-        </a>
+        </Link>
       </div>
       <div>
-        <a
+        <Link
+          theme={Link.THEME_DARK}
           href="https://support.apple.com/kb/PH21411?viewlocale=en_US&locale=en_US"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           Safari web
-        </a>{' '}
+        </Link>{' '}
         and{' '}
-        <a
-          href="https://support.apple.com/en-us/HT201265"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link theme={Link.THEME_DARK} href="https://support.apple.com/en-us/HT201265">
           iOS
-        </a>
+        </Link>
       </div>
       <p>
         To opt-out of Hotjar tracking cookies follow this opt-out{' '}
-        <a
-          href="https://www.hotjar.com/legal/compliance/opt-out"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link theme={Link.THEME_DARK} href="https://www.hotjar.com/legal/compliance/opt-out">
           link
-        </a>
+        </Link>
         .
       </p>
       <p>
         To object to the collection of your data by Facebook Pixel, or to the use of your data for
         the purpose of displaying Facebook ads click here:{' '}
-        <a
-          href="https://www.facebook.com/settings?tab=ads"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link theme={Link.THEME_DARK} href="https://www.facebook.com/settings?tab=ads">
           https://www.facebook.com/settings?tab=ads
-        </a>
+        </Link>
         .
       </p>
 
@@ -208,59 +189,48 @@ const PrivacyMain = () => (
         </p>
         <ul>
           <li>
-            <a
-              href="https://mailchimp.com/legal/privacy/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link theme={Link.THEME_DARK} href="https://mailchimp.com/legal/privacy/">
               MailChimp
-            </a>{' '}
+            </Link>{' '}
             Privacy Policy
           </li>
           <li>
-            <a href="https://ti.to/privacy" target="_blank" rel="noopener noreferrer">
+            <Link theme={Link.THEME_DARK} href="https://ti.to/privacy">
               Ti.to
-            </a>{' '}
+            </Link>{' '}
             Privacy Policy
           </li>
           <li>
-            <a
-              href="https://www.hotjar.com/legal/policies/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link theme={Link.THEME_DARK} href="https://www.hotjar.com/legal/policies/privacy">
               Hotjar
-            </a>{' '}
+            </Link>{' '}
             Privacy Policy
           </li>
           <li>
-            <a
+            <Link
+              theme={Link.THEME_DARK}
               href="https://support.google.com/analytics/answer/6004245?hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Google Analytics
-            </a>{' '}
+            </Link>{' '}
             Data Privacy and Security
           </li>
           <li>
-            <a
+            <Link
+              theme={Link.THEME_DARK}
               href="https://www.paypal.com/en/webapps/mpp/ua/privacy-full"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               PayPal
-            </a>{' '}
+            </Link>{' '}
             Privacy Policy
           </li>
           <li>
-            <a
+            <Link
+              theme={Link.THEME_DARK}
               href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Facebook
-            </a>{' '}
+            </Link>{' '}
             is certified under the Privacy Shield Agreement and thus guarantees compliance with
             European data protection legislation
           </li>
@@ -280,7 +250,9 @@ const PrivacyMain = () => (
         We welcome your views about our website and our privacy policy. In case you want more
         information about how we collect and manage data, or you wish to correct or delete that data
         we might have about you, please contact us at:{' '}
-        <a href="mailto:welcome@jsheroes.io">welcome@jsheroes.io</a>
+        <Link theme={Link.THEME_DARK} href="mailto:welcome@jsheroes.io">
+          welcome@jsheroes.io
+        </Link>
       </p>
       <p>Last updated: 8 August, 2018.</p>
     </div>
@@ -307,11 +279,6 @@ const PrivacyMain = () => (
           color: ${styles.mainColor7};
           line-height: 32px;
           font-weight: 300;
-        }
-
-        a {
-          color: ${styles.mainColor5};
-          fill: ${styles.mainColor5};
         }
 
         @media (max-width: 479px) {

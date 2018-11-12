@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Link from 'next/link';
+import Link from './common/link';
 import menuItems from '../data/menuitems';
 import { styles } from '../constants';
 
@@ -30,11 +30,9 @@ export default class Nav extends Component {
     return (
       <div className={`navigation-wrapper ${mobileOpenClass}`}>
         <nav>
-          <div className="logo-wrapper">
-            <Link href="/">
-              <a className="logo" onClick={this.closeMobileNavigation}>
-                <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
-              </a>
+          <div className="logo">
+            <Link href="/" onClick={this.closeMobileNavigation}>
+              <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
             </Link>
           </div>
           <div>
@@ -53,23 +51,23 @@ export default class Nav extends Component {
               >
                 {item.links ? (
                   <Fragment>
-                    <span>{item.label}</span>
+                    <span tabIndex="0" role="menu" className="nested-links-label">
+                      {item.label}
+                    </span>
                     <ul className="menu-items inside">
                       {item.links.map(link => (
                         <li key={link.id}>
-                          {link.url.startsWith('http') || link.url.startsWith('mailto') ? (
-                            <a href={`${link.url}`}>{link.label}</a>
-                          ) : (
-                            <Link href={link.url}>
-                              <a>{link.label}</a>
-                            </Link>
-                          )}
+                          <Link href={link.url}>
+                            <span className="link-label">{link.label}</span>
+                          </Link>
                         </li>
                       ))}
                     </ul>
                   </Fragment>
                 ) : (
-                  <a href={item.url}>{item.label}</a>
+                  <Link href={item.url}>
+                    <span className="link-label">{item.label}</span>
+                  </Link>
                 )}
               </li>
             ))}
@@ -88,10 +86,6 @@ export default class Nav extends Component {
               display: flex;
               flex: 1;
               justify-content: space-between;
-            }
-
-            .logo-wrapper {
-              boder: 1px solid green;
             }
 
             .logo img {
@@ -115,7 +109,8 @@ export default class Nav extends Component {
               display: none;
             }
 
-            ul.menu-items li.with-link:hover ul {
+            ul.menu-items li.with-link:hover ul,
+            ul.menu-items li.with-link:focus-within ul {
               display: block;
             }
 
@@ -136,16 +131,12 @@ export default class Nav extends Component {
               text-align: center;
             }
 
-            ul.menu-items li a,
-            ul.menu-items li span {
-              color: white;
-              font-size: 18px;
-              text-transform: capitalize;
+            ul.menu-items li .nested-links-label {
+              color: ${styles.mainColor3};
               font-weight: 400;
             }
-
-            ul.menu-items li a:hover {
-              color: ${styles.mainColor5};
+            ul.menu-items li .link-label {
+              text-transform: capitalize;
             }
 
             @media (max-width: 768px) {
@@ -194,7 +185,7 @@ export default class Nav extends Component {
                 transition: all 700ms ease-in-out;
               }
 
-              ul.menu-items li span {
+              ul.menu-items li .nested-links-label {
                 font-size: 14px;
                 font-weight: bold;
                 text-transform: uppercase;
