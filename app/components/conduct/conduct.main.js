@@ -36,18 +36,18 @@ const ConductMain = () => (
       </p>
 
       <p>
-        JSHeroes understands the importance of community and wants to ensure that we provide a
-        fantastic environment for everyone to learn and share skills regardless of gender, gender
-        identity and expression, age, sexual orientation, disability, physical appearance, body
-        size, race, ethnicity, religion (or lack thereof), or technology choices.
+        <strong>JSHeroes understands the importance of community</strong> and wants to ensure that
+        we provide a fantastic environment for everyone to learn and share skills regardless of
+        gender, gender identity and expression, age, sexual orientation, disability, physical
+        appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices.
       </p>
 
       <p>
-        We do not tolerate harassment of conference participants in any form. Sexual language and
-        imagery is not appropriate for any conference venue, including talks, meetups, parties,
-        Twitter and other online media. Conference participants violating these rules may be
-        sanctioned or expelled from the conference without a refund at the discretion of the
-        conference organisers.
+        We do not tolerate harassment of conference participants in any form.{' '}
+        <strong>Sexual language and imagery is not appropriate for any conference venue</strong>,
+        including talks, meetups, parties, Twitter and other online media. Conference participants
+        violating these rules may be sanctioned or expelled from the conference{' '}
+        <em>without a refund</em> at the discretion of the conference organisers.
       </p>
 
       <p>
