@@ -1,5 +1,3 @@
-import { Component } from 'react';
-import getConfig from 'next/config';
 import Layout from '../app/components/layout';
 import Header from '../app/components/header';
 import Updates from '../app/components/updates';
@@ -15,36 +13,25 @@ import ScrollBtn from '../app/components/scroll-btn';
 import store from '../app/data/index';
 import 'what-input';
 
-class Home extends Component {
-  componentDidMount() {
-    const { publicRuntimeConfig } = getConfig();
-    if (publicRuntimeConfig && publicRuntimeConfig.isProduction && 'serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('/sw.js')
-        .catch(err => console.error('Service worker registration failed', err));
-    }
-  }
-
-  render() {
-    const baseUrl = `static/img/${store.currentYear}`;
-    return (
-      <Layout>
-        <main>
-          <Header />
-          <Updates />
-          <Speakers year="2019" baseUrl={baseUrl} speakers={store.data2019.speakers} />
-          {/* <Schedule /> */}
-          <Mission />
-          <Sponsors baseUrl={baseUrl} sponsors={store.data2019.sponsors} />
-          <Partners baseUrl={baseUrl} partners={store.data2019.partners} />
-          <Communities baseUrl={baseUrl} communities={store.data2019.communities} />
-          <Organizers />
-          <Venue />
-          <ScrollBtn />
-        </main>
-      </Layout>
-    );
-  }
-}
+const Home = () => {
+  const baseUrl = `static/img/${store.currentYear}`;
+  return (
+    <Layout>
+      <main>
+        <Header />
+        <Updates />
+        <Speakers year="2019" baseUrl={baseUrl} speakers={store.data2019.speakers} />
+        {/* <Schedule /> */}
+        <Mission />
+        <Sponsors baseUrl={baseUrl} sponsors={store.data2019.sponsors} />
+        <Partners baseUrl={baseUrl} partners={store.data2019.partners} />
+        <Communities baseUrl={baseUrl} communities={store.data2019.communities} />
+        <Organizers />
+        <Venue />
+        <ScrollBtn />
+      </main>
+    </Layout>
+  );
+};
 
 export default Home;

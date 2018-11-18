@@ -12,6 +12,10 @@ const urlsToCache = [
   '/static/img/website-logo.svg',
 ];
 
+/**
+ * First event to fire: INSTALL
+ * Cache basic stuff (Application Shell) needed for a functional version of the site.
+ */
 self.addEventListener('install', event => {
   const preLoaded = caches
     .open(VERSION)
@@ -20,6 +24,10 @@ self.addEventListener('install', event => {
   event.waitUntil(preLoaded);
 });
 
+/**
+ * Second event to fire: ACTIVATE
+ * We delete previous version caches.
+ */
 self.addEventListener('activate', event => {
   const filterObsoleteCaches = key => key !== VERSION;
   event.waitUntil(
@@ -29,13 +37,17 @@ self.addEventListener('activate', event => {
   );
 });
 
+/**
+ * After sw is installed, on subsequent page loads: FETCH
+ * Here we configure caching strategies according to the request type.
+ */
 self.addEventListener('fetch', event => {
   const { destination } = event.request;
   // DevTools opening will trigger these o-i-c requests, which SW can't handle - avoid error in console
   if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') {
     return;
   }
-  // Configure caching strategies according to request type
+
   switch (destination) {
     case 'style':
     case 'script':
@@ -44,6 +56,7 @@ self.addEventListener('fetch', event => {
     case 'image': {
       const requestURL = new URL(event.request.url);
       if (requestURL.origin === location.origin) {
+        // Site internal resources
         fetchFromCacheThenNetwork(event);
       } else {
         // External requests such as google maps, analytics, etc
@@ -62,23 +75,23 @@ function fetchFromNetworkOnly(event) {
   event.respondWith(fetch(event.request));
 }
 
+/**
+ * Caching strategy: Stale-while-revalidate
+ * If there's a cached version available, use it, but fetch an update for next time.
+ */
 function fetchFromCacheThenNetwork(event) {
-  const response = caches.open(VERSION).then(cache => {
-    const storeInCache = responseToCache => {
-      cache
-        .put(event.request, responseToCache.clone())
-        .catch(err => handleCacheError(err, event.request.url));
-      return responseToCache;
-    };
-
-    // Try the cache, otherwise fallback to network and cache the response
-    return cache
-      .match(event.request)
-      .then(
-        responseFromCache =>
-          responseFromCache || fetch(event.request).then(storeInCache, handleFetchError),
-      );
-  });
+  const response = caches.open(VERSION).then(cache =>
+    cache.match(event.request).then(cachedResponse => {
+      const serveAndStoreInCache = networkResponse => {
+        cache
+          .put(event.request, networkResponse.clone())
+          .catch(err => handleCacheError(err, event.request.url));
+        return networkResponse;
+      };
+      const fetchPromise = fetch(event.request).then(serveAndStoreInCache, handleFetchError);
+      return cachedResponse || fetchPromise;
+    }),
+  );
   event.respondWith(response);
 }
 
