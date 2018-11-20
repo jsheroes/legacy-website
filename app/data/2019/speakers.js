@@ -274,4 +274,41 @@ export default [
       },
     ],
   },
+  {
+    name: 'anjana',
+    fullName: 'Anjana Vakil',
+    permalink: 'anjana-vakil',
+    firstName: 'Anjana',
+    reference: 'her',
+    position: 'Engineering Learning & Development Lead',
+    company: 'Mapbox',
+    img: 'anjana.jpg',
+    github: 'https://github.com/vakila',
+    twitter: 'https://twitter.com/AnjanaVakil/',
+    website: 'vakila.github.io',
+    description:
+      "Anjana suffers from a debilitating case of curiosity, which led her from philosophy to English teaching to computational linguistics to software development. As Engineering Learning & Development Lead at Mapbox, she can usually be found in San Francisco; that is, when she's not speaking at events around the world, trying to share the joy of coding and advocate for a more diverse & accessible tech industry. Ask her about the Recurse Center, Outreachy, and Mozilla!",
+    talk: {
+      title: 'TBA',
+      description: '',
+      message: '',
+    },
+    workshop: null,
+    previousTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=FmiQr4nfoPQ',
+        name: 'Recursion, Iteration, and JavaScript: A Love Story',
+      },
+    ],
+    otherTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=Pg3UeB-5FdA',
+        name: 'Programming Across Paradigms @ GOTO 2017',
+      },
+      {
+        url: 'https://www.youtube.com/watch?v=Wo0qiGPSV-s',
+        name: 'Immutable data structures for functional JS @ JSConfEU 2017',
+      },
+    ],
+  },
 ];
