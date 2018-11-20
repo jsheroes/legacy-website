@@ -259,7 +259,7 @@ export default [
     twitter: 'https://twitter.com/Akryum',
     github: 'https://github.com/akryum',
     description:
-      'Guillaume is a Vue.js Core Team member working on vue-cli, vue-devtools and vue-curated. He also created of the integrations with Apollo GraphQL (vue-apollo) and Meteor (vue-meteor) to help developer build highly interactive and realtime Vue-powered apps, and he contributes to the ecosystem with tools like vue-virtual-scroller and v-tooltip.',
+      'Guillaume is a Vue.js Core Team member working on vue-cli, vue-devtools and vue-curated. He also created the integrations with Apollo GraphQL (vue-apollo) and Meteor (vue-meteor) to help developers build highly interactive and realtime Vue-powered apps, and he contributes to the ecosystem with tools like vue-virtual-scroller and v-tooltip.',
     talk: {
       title: 'TBA',
       description: '',
