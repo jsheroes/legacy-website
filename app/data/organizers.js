@@ -21,7 +21,7 @@ export default {
     {
       name: 'Ana Cojuhari',
       img: 'ana-cojuhari.jpg',
-      role: 'Volunteers Assembler',
+      role: 'Bannerman',
       twitter: '',
     },
     {
@@ -67,12 +67,6 @@ export default {
       twitter: 'aelythe',
     },
     {
-      name: 'Alin Pausan',
-      img: 'alin-pausan.jpg',
-      role: 'Bannerman',
-      twitter: '',
-    },
-    {
       name: 'Eliza Nitoi',
       img: 'eliza-nitoi.jpg',
       role: 'Adoption Facilitator',
@@ -89,6 +83,36 @@ export default {
       img: 'oana-muntean.jpg',
       role: 'Webmaster',
       twitter: 'oanamun',
+    },
+    {
+      name: 'Alexandra Minzat',
+      img: 'alexandra-minzat.jpg',
+      role: 'Operations Manager',
+      twitter: 'oanamun',
+    },
+    {
+      name: 'Ciprian Iacob',
+      img: 'ciprian-iacob.jpg',
+      role: 'Volunteer',
+      twitter: '',
+    },
+    {
+      name: 'Catalin Onutu',
+      img: 'catalin-onutu.jpg',
+      role: 'Volunteer',
+      twitter: '',
+    },
+    {
+      name: 'Emilia Muresan',
+      img: 'emilia-muresan.jpg',
+      role: 'Volunteer',
+      twitter: 'ecris87',
+    },
+    {
+      name: 'Catalin Andrei',
+      img: 'catalin-andrei.jpg',
+      role: 'Volunteer',
+      twitter: '',
     },
   ],
   oldHeroes: [
@@ -125,6 +149,12 @@ export default {
     {
       name: 'Edmon Nagy-Beczkai',
       img: 'edmond-nagy-beczkai.jpg',
+      role: 'Retired Hero',
+      twitter: '',
+    },
+    {
+      name: 'Alin Pausan',
+      img: 'alin-pausan.jpg',
       role: 'Retired Hero',
       twitter: '',
     },
