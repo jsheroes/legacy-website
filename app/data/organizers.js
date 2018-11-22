@@ -88,19 +88,19 @@ export default {
       name: 'Alexandra Minzat',
       img: 'alexandra-minzat.jpg',
       role: 'Operations Manager',
-      twitter: 'oanamun',
+      twitter: 'varga_florina',
     },
     {
       name: 'Ciprian Iacob',
       img: 'ciprian-iacob.jpg',
       role: 'Volunteer',
-      twitter: '',
+      twitter: 'cip_iacob',
     },
     {
       name: 'Catalin Onutu',
       img: 'catalin-onutu.jpg',
       role: 'Volunteer',
-      twitter: '',
+      twitter: 'CatalinCJ',
     },
     {
       name: 'Emilia Muresan',
@@ -112,7 +112,7 @@ export default {
       name: 'Catalin Andrei',
       img: 'catalin-andrei.jpg',
       role: 'Volunteer',
-      twitter: '',
+      twitter: 'jonattfin',
     },
   ],
   oldHeroes: [
