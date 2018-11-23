@@ -14,7 +14,7 @@ const themes = {
 
 const Link = ({ href, as, children, theme, openInNewTab, className, ...rest }) => {
   const classNames = [className, themes[theme]].filter(a => a);
-  const isRelativeUrl = href && href[0] === '/';
+  const isRelativeUrl = href && (href[0] === '/' || href[0] === '#');
   const isMailTo = href && href.match(/^mailto/);
 
   const extraProps = {};
