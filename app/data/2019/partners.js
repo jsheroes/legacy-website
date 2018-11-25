@@ -9,4 +9,9 @@ export default [
     img: 'logo_women_in_tech.svg',
     href: 'https://www.meetup.com/Women-in-Tech-Cluj/',
   },
+  {
+    title: 'Mozilla',
+    img: 'logo_mozilla.png',
+    href: 'https://www.mozilla.org/en-US/',
+  },
 ];
