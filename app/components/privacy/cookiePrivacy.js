@@ -60,6 +60,7 @@ class CookiePrivacy extends Component {
               padding: 20px 20px 20px 20px;
               color: white;
               text-align: center;
+              z-index: 2;
               background: rgba(0, 0, 0, 0.75);
             }
 
