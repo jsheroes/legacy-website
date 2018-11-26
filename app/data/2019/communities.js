@@ -74,4 +74,9 @@ export default [
     img: 'logo_voxxedday.png',
     href: 'https://romania.voxxeddays.com/cluj-napoca/',
   },
+  {
+    title: 'Frontend Developer Love',
+    img: 'logo_frontend_developer_love.png',
+    href: 'http://www.frontenddeveloperlove.com/',
+  },
 ];
