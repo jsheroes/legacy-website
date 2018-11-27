@@ -14,4 +14,9 @@ export default [
     img: 'logo_mozilla.png',
     href: 'https://www.mozilla.org/en-US/',
   },
+  {
+    title: 'microsoft',
+    img: 'logo_microsoft.png',
+    href: 'https://www.microsoft.com',
+  },
 ];

@@ -19,4 +19,14 @@ export default [
     img: 'logo_teleporthq.png',
     href: 'https://teleporthq.io/',
   },
+  {
+    title: 'Moqups',
+    img: 'logo_moqups.png',
+    href: 'https://moqups.com/',
+  },
+  {
+    title: 'Arobs',
+    img: 'logo_arobs.png',
+    href: 'http://www.arobs.com/',
+  },
 ];
