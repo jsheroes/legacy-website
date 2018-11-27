@@ -48,7 +48,7 @@ Supported types of menu items:
 export default [
   {
     id: 1,
-    url: '#speakers',
+    url: '/#speakers',
     label: 'speakers',
   },
   // {
@@ -63,7 +63,7 @@ export default [
   },
   {
     id: 4,
-    url: '#sponsors',
+    url: '/#sponsors',
     label: 'sponsors',
   },
   {
