@@ -33,6 +33,10 @@ class Layout extends Component {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <meta
+            name="description"
+            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 11-12th 2019 in Cluj-Napoca, Romania!"
+          />
+          <meta
             name="keywords"
             content="tech event, tech conference, js conference, js event, javascript, conference, international javascript conference, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter, sarah drasner, simona cotin, lin clark, harry roberts, heydon pickering, charlie Gerard, liran tal, sara vieira, xavier cazalot, benedek gagyi, gautam arora, ives vaan horne, jeremias menichelli, carmen popoviciu"
           />
