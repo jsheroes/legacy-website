@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
 import { styles } from '../app/constants';
-import CTAButton from '../app/components/common/ctaButton';
 import Link from '../app/components/common/link';
 
 const SpeakAtJSHeroes = () => (
@@ -11,47 +10,15 @@ const SpeakAtJSHeroes = () => (
 
     <Section className="content">
       <Fragment>
-        <h2>Call for Papers is OPEN!</h2>
+        <h2>Call for Papers is closed!</h2>
         <p>
-          Our <strong>Call for Papers</strong> process is open until <strong>December 1st!</strong>{' '}
-          We encourage people of all ages, races, genders and religions, to submit proposals and we
-          would like to ensure everyone that our process of selecting the talks will be{' '}
-          <strong>fair</strong> and <strong>transparent</strong>, as the entire concept behind
-          JSHeroes.
+          Our <strong>Call for Papers</strong> process is now closed.
+        </p>
+        <p>
+          If you submitted a talk will get back to you as soon as the JSHeroes team has gone through
+          all of them.
         </p>
 
-        <CTAButton url="https://jsheroes-form.typeform.com/to/IHohur">
-          Submit Your Proposal Now
-        </CTAButton>
-
-        <h3>
-          <span role="img" aria-label="what">
-            ✍
-          </span>{' '}
-          What we are looking for
-        </h3>
-        <p>
-          JSHeroes is a <strong>single track 2-day conference</strong> dedicated to the entire JS
-          ecosystem. We are looking for a multitude of topics and perspectives, but most of all we
-          value:
-        </p>
-        <ul>
-          <li>
-            <strong>Original</strong> topics, presented for the first time.
-          </li>
-          <li>
-            <strong>Practical</strong> ideas that attendees can apply at work the next day.
-          </li>
-          <li>
-            Trends and hot topics which are relevant in <strong>2019</strong> and beyond.
-          </li>
-          <li>
-            Fresh <strong>perspectives</strong> on the JS ecosystem.
-          </li>
-          <li>
-            The <strong>human</strong> side of software engineering.
-          </li>
-        </ul>
         <p>
           We will do our best to build an <strong>agenda</strong> that covers{' '}
           <strong>diverse</strong> topics which can be of interest for the majority of attendees
@@ -67,10 +34,10 @@ const SpeakAtJSHeroes = () => (
           How the selection will happen
         </h3>
         <p>
-          We are expecting to receive close to <strong>300 proposals</strong> for JSHeroes 2019.
-          With this in mind, we created a team of world wide subject matter experts that will go
-          through the proposals and will decide what to include in the conference agenda. This is a
-          rough estimation of our schedule and process:
+          We hace received more than <strong>300 proposals</strong> for JSHeroes 2019. We created a
+          team of world wide subject matter experts that will go through the proposals and will
+          decide what to include in the conference agenda. This is a rough estimation of our
+          schedule and process:
         </p>
         <ul>
           <li>
@@ -133,10 +100,6 @@ const SpeakAtJSHeroes = () => (
           </Link>
           . Good luck!
         </p>
-
-        <CTAButton url="https://jsheroes-form.typeform.com/to/IHohur">
-          Submit Your Proposal Now
-        </CTAButton>
       </Fragment>
     </Section>
 

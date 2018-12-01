@@ -5,9 +5,9 @@ export default [
       'Join us on the <strong>11th</strong> and <strong>12th</strong> of April 2019 for 2 days of <strong>conference</strong>, with a kick-off day full of <strong>workshops</strong> on the <strong>10th</strong>. Feel free to send us your suggestions over <a href="https://twitter.com/jsheroes" target="_blank" rel="noreferrer noopener">Twitter</a>, we’d be happy to hear from you.',
   },
   {
-    title: 'CFP Open',
+    title: 'CFP closed',
     content:
-      'Call for papers is officially open until <strong>December 1st</strong>! Submit your proposal via <a href="https://jsheroes-form.typeform.com/to/IHohur" target="_blank" rel="noreferrer noopener">this link</a>.',
+      'We got a lot of interesting proposal and the team is working on reviewing them right now.',
   },
   {
     title: 'Sponsors',

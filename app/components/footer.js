@@ -24,11 +24,6 @@ const Footer = () => (
             <Link href="/become-a-sponsor">Become a Sponsor</Link>
           </span>
         </div>
-        <div>
-          <span className="link">
-            <Link href="/speak-at-jsheroes">Give a Talk at JSHeroes</Link>
-          </span>
-        </div>
       </div>
       <div className="col-md-3 col-sm-4">
         <span className="headline">More Info</span>

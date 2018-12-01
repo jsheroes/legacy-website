@@ -4,7 +4,6 @@ import { styles, mediaQueries } from '../../constants';
 import data from '../../data/index';
 import PersonSpotlight from '../personSpotlight';
 import ambassadors from '../../data/ambassadors';
-import CTAButton from '../common/ctaButton';
 
 function addObserver() {
   const observer = new IntersectionObserver(handler, {
@@ -65,8 +64,6 @@ class Speakers extends Component {
               </div>
             ))}
           </div>
-
-          {isCurrentYear && <CTAButton url="/speak-at-jsheroes">Give a Talk at JSHeroes</CTAButton>}
 
           {isCurrentYear && (
             <div className="row section-header" id="ambassadors">
