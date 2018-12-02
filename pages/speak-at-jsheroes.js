@@ -4,6 +4,7 @@ import Section from '../app/components/common/section';
 import { styles } from '../app/constants';
 import CTAButton from '../app/components/common/ctaButton';
 import Link from '../app/components/common/link';
+import data from '../app/data';
 
 const SpeakAtJSHeroes = () => (
   <Layout>
@@ -11,18 +12,35 @@ const SpeakAtJSHeroes = () => (
 
     <Section className="content">
       <Fragment>
-        <h2>Call for Papers is OPEN!</h2>
-        <p>
-          Our <strong>Call for Papers</strong> process is open until <strong>December 1st!</strong>{' '}
-          We encourage people of all ages, races, genders and religions, to submit proposals and we
-          would like to ensure everyone that our process of selecting the talks will be{' '}
-          <strong>fair</strong> and <strong>transparent</strong>, as the entire concept behind
-          JSHeroes.
-        </p>
+        <h2>Call for Papers is {data.cfpOpen ? 'OPEN' : 'CLOSED'}!</h2>
+        {data.cfpOpen && (
+          <Fragment>
+            <p>
+              Our <strong>Call for Papers</strong> process is open until{' '}
+              <strong>December 1st!</strong> We encourage people of all ages, races, genders and
+              religions, to submit proposals and we would like to ensure everyone that our process
+              of selecting the talks will be <strong>fair</strong> and <strong>transparent</strong>,
+              as the entire concept behind JSHeroes.
+            </p>
 
-        <CTAButton url="https://jsheroes-form.typeform.com/to/IHohur">
-          Submit Your Proposal Now
-        </CTAButton>
+            <CTAButton url="https://jsheroes-form.typeform.com/to/IHohur">
+              Submit Your Proposal Now
+            </CTAButton>
+          </Fragment>
+        )}
+
+        {!data.cfpOpen && (
+          <p>
+            We are running our <strong>Call for Papers</strong> process for{' '}
+            <strong>3 months</strong> and we are usually closing it 4 months before the event. If
+            you are interested at <strong>speaking</strong> at one of our future events, follow us
+            on{' '}
+            <Link href="https://twitter.com/jsheroes" theme={Link.THEME_DARK}>
+              twitter
+            </Link>
+            , where we announce the opening of the CFP process each year.
+          </p>
+        )}
 
         <h3>
           <span role="img" aria-label="what">
@@ -134,9 +152,11 @@ const SpeakAtJSHeroes = () => (
           . Good luck!
         </p>
 
-        <CTAButton url="https://jsheroes-form.typeform.com/to/IHohur">
-          Submit Your Proposal Now
-        </CTAButton>
+        {data.cfpOpen && (
+          <CTAButton url="https://jsheroes-form.typeform.com/to/IHohur">
+            Submit Your Proposal Now
+          </CTAButton>
+        )}
       </Fragment>
     </Section>
 

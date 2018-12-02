@@ -40,6 +40,7 @@ class Speakers extends Component {
     const { year, speakers, baseUrl } = this.props;
     const title = `Our ${year} Heroes`;
     const isCurrentYear = year === data.currentYear;
+    const { cfpOpen } = data;
     const speakerUrl = `${baseUrl}/speakers/`;
     const ambassadorUrl = `/static/img/ambassadors/`;
     return (
@@ -66,7 +67,8 @@ class Speakers extends Component {
             ))}
           </div>
 
-          {isCurrentYear && <CTAButton url="/speak-at-jsheroes">Give a Talk at JSHeroes</CTAButton>}
+          {isCurrentYear &&
+            cfpOpen && <CTAButton url="/speak-at-jsheroes">Give a Talk at JSHeroes</CTAButton>}
 
           {isCurrentYear && (
             <div className="row section-header" id="ambassadors">
