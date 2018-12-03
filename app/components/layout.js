@@ -27,7 +27,6 @@ class Layout extends Component {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
             rel="stylesheet"
           />
-          <link rel="stylesheet" href="/static/css/bootstrap-grid.min.css" />
           <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

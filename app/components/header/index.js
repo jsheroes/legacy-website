@@ -131,17 +131,17 @@ class Header extends Component {
             {media}
             <div className="headOverlay" />
 
-            <div className="container header-container">
-              <div className="row">
-                <div className="col-md-12 header-logo">
+            <div className="header-container">
+              <div>
+                <div className="header-logo">
                   <div className={logoFixed ? 'hide' : ''} id="logo">
                     <span className="logoJs">JS</span>
                     <span className="logoHeroes">Heroes</span>
                   </div>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-md-12 header-text">
+              <div>
+                <div className="header-text">
                   <p>Open-Source Community Event</p>
                   <p>April 11-12th, 2019 in Cluj-Napoca, Romania</p>
                 </div>
@@ -175,6 +175,7 @@ class Header extends Component {
               }
               .header-logo {
                 height: 45px;
+                margin-bottom: 40px;
               }
               .header-logo > div {
                 display: block;
@@ -215,12 +216,12 @@ class Header extends Component {
                 float: left;
               }
 
-              .header-container .col-xs-12 {
+              .header-container {
                 text-align: center;
                 margin-top: 80px;
                 width: 100%;
               }
-              .header-container .col-xs-12 .header-btn {
+              .header-container .header-btn {
                 float: none;
               }
 
@@ -234,7 +235,7 @@ class Header extends Component {
                 .header-text {
                   margin-bottom: 30px;
                 }
-                .header-container .col-xs-12 {
+                .header-container {
                   margin-top: 60px;
                 }
               }
