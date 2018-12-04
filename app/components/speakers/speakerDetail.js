@@ -31,7 +31,7 @@ const SpeakerDetail = ({ speaker }) => {
 
       <Section>
         <div className="speakers-page">
-          <div>
+          <div className="leftColumn">
             <div className="side">
               <div className="speaker-info-box">
                 <div className="speaker-img">
@@ -88,33 +88,33 @@ const SpeakerDetail = ({ speaker }) => {
                 </CTAButton>
               </div>
             </div>
-            <div>
-              <div className="details hidden-sm-down">
-                <h1 className="name">{speaker.fullName}</h1>
+          </div>
+          <div className="rightColumn">
+            <div className="details hidden-sm-down">
+              <h1 className="name">{speaker.fullName}</h1>
+              <div>
+                <strong>{speaker.position}</strong>
+                {speaker.company && (
+                  <span>
+                    {' '}
+                    @<strong>{speaker.company}</strong>
+                  </span>
+                )}
+              </div>
+            </div>
+            <RawHtml className="description" content={speaker.description} />
+            {talks}
+            <div className="hidden-md hidden-lg">
+              <div className="join">
                 <div>
-                  <strong>{speaker.position}</strong>
-                  {speaker.company && (
-                    <span>
-                      {' '}
-                      @<strong>{speaker.company}</strong>
-                    </span>
-                  )}
+                  Already curious to see <strong>{speaker.firstName}</strong>
+                  `s talk?
                 </div>
+                <div>Join {speaker.reference} at JSHeroes!</div>
               </div>
-              <RawHtml className="description" content={speaker.description} />
-              {talks}
-              <div className="hidden-md hidden-lg">
-                <div className="join">
-                  <div>
-                    Already curious to see <strong>{speaker.firstName}</strong>
-                    `s talk?
-                  </div>
-                  <div>Join {speaker.reference} at JSHeroes!</div>
-                </div>
-                <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2019">
-                  Buy Your Ticket
-                </CTAButton>
-              </div>
+              <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2019">
+                Buy Your Ticket
+              </CTAButton>
             </div>
           </div>
         </div>
@@ -124,6 +124,8 @@ const SpeakerDetail = ({ speaker }) => {
           .speakers-page {
             padding-top: 110px;
             margin-bottom: 30px;
+            // background-color: yellow;
+            overflow: hidden;
           }
 
           h3 {
@@ -205,6 +207,17 @@ const SpeakerDetail = ({ speaker }) => {
             margin-bottom: 25px;
           }
 
+          .leftColumn {
+            float: left;
+            width: 25%;
+          }
+
+          .rightColumn {
+            float: right;
+            width: 75%;
+            padding-left: 20px;
+          }
+
           @media (max-width: ${mediaQueries.S}) {
             .side,
             .speaker-info-box {
@@ -223,6 +236,16 @@ const SpeakerDetail = ({ speaker }) => {
 
             .join {
               text-align: center;
+            }
+
+            .leftColumn {
+              float: none;
+              width: 100%;
+            }
+
+            .rightColumn {
+              float: none;
+              width: 100%;
             }
           }
         `}
