@@ -5,42 +5,47 @@ import { mediaQueries, styles } from '../../constants';
 
 class Updates extends Component {
   state = {
-    activeNews: 0,
+    activeNewsIndex: 0,
   };
 
   onKeyDown = newsIndex => evt => {
     if (evt.keyCode === 13) {
       // enter key
-      this.setState({ activeNews: newsIndex });
+      this.setState({ activeNewsIndex: newsIndex });
     }
   };
 
   render() {
-    const { activeNews } = this.state;
+    const { activeNewsIndex } = this.state;
     const newsData = news.map((item, index) => {
-      const activeCss = index === activeNews ? 'active-news' : 'news-item';
+      const isActive = index === activeNewsIndex;
+      const activeClassName = isActive ? 'active-news' : 'news-item';
       return (
         <li
           tabIndex="0"
-          role="button" // eslint-disable-line
-          className={activeCss}
-          onFocus={() => this.setState({ activeNews: index })}
-          onClick={() => this.setState({ activeNews: index })}
+          role="tab"
+          className={activeClassName}
+          onFocus={() => this.setState({ activeNewsIndex: index })}
+          onClick={() => this.setState({ activeNewsIndex: index })}
           onKeyDown={this.onKeyDown(index)}
-          onMouseOver={() => this.setState({ activeNews: index })}
+          onMouseOver={() => this.setState({ activeNewsIndex: index })}
           key={item.title}
         >
           <strong>{item.title}</strong>
         </li>
       );
     });
-    const { content } = news[activeNews];
+    const { content } = news[activeNewsIndex];
     return (
       <Section>
         <div id="news" className="wrapper">
           <h1>News</h1>
-          <ul>{newsData}</ul>
-          <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
+          <ul role="tablist">{newsData}</ul>
+          <section
+            role="tabpanel"
+            className="content"
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
         </div>
 
         {/* language=CSS */}
