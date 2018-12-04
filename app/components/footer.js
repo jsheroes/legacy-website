@@ -137,7 +137,6 @@ const Footer = () => (
 
           .social i {
             font-size: 27px;
-            font-size: 27px;
           }
         }
 
@@ -156,6 +155,10 @@ const Footer = () => (
 
           .social i {
             font-size: 27px;
+          }
+
+          .social span {
+            padding-left: 10px;
           }
 
           .social-media {

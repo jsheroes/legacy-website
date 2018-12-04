@@ -166,7 +166,7 @@ class Header extends Component {
               }
               .header-container {
                 position: absolute;
-                top: 50%;
+                top: 40%;
                 left: 0;
                 transform: translateY(-50%);
                 width: 100%;
