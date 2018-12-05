@@ -4,15 +4,15 @@ import Link from './common/link';
 
 const Footer = () => (
   <footer>
-    <div className="row">
-      <div className="col-md-3 col-sm-4">
+    <div className="footer-links">
+      <div>
         <span className="home-link">
           <Link href="/">
             <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
           </Link>
         </span>
       </div>
-      <div className="col-md-3 col-sm-4">
+      <div>
         <span className="headline">JSHeroes 2019</span>
         <div>
           <span className="link">
@@ -30,7 +30,7 @@ const Footer = () => (
           </span>
         </div>
       </div>
-      <div className="col-md-3 col-sm-4">
+      <div>
         <span className="headline">More Info</span>
         <div>
           <span className="link">
@@ -43,7 +43,7 @@ const Footer = () => (
           </span>
         </div>
       </div>
-      <div className="col-md-3 col-sm-4">
+      <div>
         <span className="headline">Past Editions</span>
         <div>
           <span className="link">
@@ -57,15 +57,15 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="row copyright">
-      <div className="col-sm-4 rights">
+    <div className="copyright">
+      <div className="rights">
         <i className="fa fa-copyright" aria-hidden="true" /> 2018 · JSHeroes. All rights reserved.
       </div>
-      <div className="col-sm-4 community">
+      <div className="community">
         Made with <i className="fa fa-heart" aria-hidden="true" /> by
         <span className="sticky-words">&nbsp;JSHeroes Community.</span>
       </div>
-      <div className="col-sm-4 social-media">
+      <div className="social-media">
         <div className="social">
           {socialmedia.map(item => (
             <span key={item.url}>
@@ -83,13 +83,14 @@ const Footer = () => (
       {`
         footer {
           color: white;
-          padding: 20px 15px 0;
+          padding: 20px 0px 0;
           background-color: ${styles.mainColor2};
-          flex-shrink: 0;
         }
 
-        .col-md-3 div {
-          margin: 5px 0;
+        .footer-links {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-around;
         }
 
         .home-link {
@@ -106,6 +107,25 @@ const Footer = () => (
 
         .link {
           font-size: 13px;
+        }
+
+        .copyright {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-around;
+
+          margin-top: 20px;
+          padding: 15px 0;
+          font-size: 14px;
+          background-color: black;
+        }
+
+        .headline {
+          font-weight: 700;
+          font-size: 16px;
+          text-transform: uppercase;
+          margin-top: 20px;
+          display: inline-block;
         }
 
         @media (min-width: ${mediaQueries.S}) {
@@ -125,56 +145,33 @@ const Footer = () => (
             text-align: center;
           }
 
-          .social {
-            padding-top: 20px;
-            width: 100%;
+          .footer-links {
+            flex-flow: column;
           }
 
-          .social span {
-            padding-left: 20px;
-            padding-bottom: 20px;
-            width: 55px;
+          .copyright {
+            flex-flow: column;
           }
 
           .social i {
             font-size: 27px;
           }
-          .col-md-3 div {
-            margin: 5px 0;
+
+          .social span {
+            padding-left: 10px;
           }
 
-          .col-sm-4.social-media {
+          .social-media {
             order: 1;
-            margin-bottom: 10px;
           }
-          .col-sm-4.community {
+
+          .community {
             order: 2;
-            margin-bottom: 10px;
           }
-          .col-sm-4.rights {
+
+          .rights {
             order: 3;
-            margin-bottom: 10px;
           }
-        }
-
-        .copyright {
-          margin-top: 20px;
-          padding: 5px 0;
-          font-size: 14px;
-          background-color: black;
-          padding: 20px;
-        }
-
-        .copyright .col-sm-5 {
-          padding-left: 35px;
-        }
-
-        .headline {
-          font-weight: 700;
-          font-size: 16px;
-          text-transform: uppercase;
-          margin-top: 20px;
-          display: inline-block;
         }
       `}
     </style>

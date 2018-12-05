@@ -37,7 +37,7 @@ class OrganizersMain extends Component {
   render() {
     return (
       <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
-        <div className="row container organizers-container">
+        <div className="organizers-container">
           <h2>Organizers</h2>
           <p>
             The <strong>JSHeroes</strong> conference is organized by the Cluj JavaScripters{' '}
