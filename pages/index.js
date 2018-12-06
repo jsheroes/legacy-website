@@ -2,6 +2,7 @@ import Layout from '../app/components/layout';
 import Header from '../app/components/header';
 import Updates from '../app/components/updates';
 import Speakers from '../app/components/speakers';
+import Statistics from '../app/components/statistics';
 // import Schedule from '../app/components/schedule';
 import Sponsors from '../app/components/sponsors';
 import Partners from '../app/components/partners';
@@ -26,6 +27,7 @@ const Home = () => {
         <Sponsors baseUrl={baseUrl} sponsors={store.data2019.sponsors} />
         <Partners baseUrl={baseUrl} partners={store.data2019.partners} />
         <Communities baseUrl={baseUrl} communities={store.data2019.communities} />
+        <Statistics />
         <Organizers />
         <Venue />
         <ScrollBtn />
