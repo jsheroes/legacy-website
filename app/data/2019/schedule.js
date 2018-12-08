@@ -6,44 +6,37 @@ export default [
     type: 'workshops',
     activities: [
       {
-        speakerRef: 'jack-franklin',
+        speakerRef: ['jason lengstorf', 'sia-karamalegos'],
+        overrideTitle: 'Advanced Performance Tuning for React Applications',
         time: '09:00 - 18:00',
-        room: 'Room: TBA',
       },
       {
-        speakerRef: 'xavier-cazalot',
+        speakerRef: ['carsten-meier', 'simon-abbt'],
+        overrideTitle: 'First Steps in WebAssembly & Rust',
         time: '09:00 - 18:00',
-        room: 'Room: TBA',
+      },
+      {
+        speakerRef: 'andrei-antal',
+        overrideTitle: '',
+        time: '09:00 - 13:00',
       },
       {
         speakerRef: 'bogdan-luca',
-        time: '09:00 - 13:00',
-        room: 'Room: TBA',
-      },
-      {
-        speakerRef: ['luke-walczak', 'raul-gomez-acuna'],
-        time: '09:00 - 13:00',
-        room: 'Room: TBA',
-      },
-      {
-        speakerRef: 'brent-vatne',
         time: '14:00 - 18:00',
-        room: 'Room: TBA',
       },
       {
         speakerRef: 'nir-kaufman',
         time: '14:00 - 18:00',
-        room: 'Room: TBA',
+        overrideTitle: 'Build JavaScript Desktop Application with Electron',
       },
       {
-        speakerRef: 'marianna-etelson',
-        time: '14:00 - 18:00',
-        room: 'Room: TBA',
-      },
-      {
-        speakerRef: 'cornel-cozar',
+        speakerRef: 'liran-tal',
+        overrideTitle: 'Integration Testing Heaven for Node.js Microservices',
         time: '09:00 - 13:00',
-        room: 'Room: TBA',
+      },
+      {
+        speakerRef: 'benedek-gagyi',
+        time: '14:00 - 18:00',
       },
     ],
   },
@@ -55,51 +48,60 @@ export default [
     activities: [
       {
         speakerRef: '',
+        overrideTitle: 'Check-in & Coffee',
+        time: '09:00 - 09:30',
+      },
+      {
+        speakerRef: '',
         overrideTitle: 'Welcome JSHeroes!',
         time: '09:00 - 09:30',
       },
       {
-        speakerRef: 'mark-dalgleish',
+        speakerRef: 'sarah-drasner',
         time: '09:30 - 10:00',
       },
       {
-        speakerRef: 'dominik-kundel',
+        speakerRef: 'jason-lengstorf',
         time: '10:00 - 10:30',
       },
       {
-        speakerRef: 'monica-dinculescu',
+        overrideTitle: 'Coffee Break',
+        time: '10:30 - 11:00',
+      },
+      {
+        speakerRef: 'anjana-vakil',
         time: '11:00 - 11:30',
       },
       {
-        speakerRef: 'mashhood-rastgar',
+        speakerRef: '',
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: 'stefan-judis',
+        speakerRef: '',
         time: '12:00 - 12:30',
       },
       {
-        speakerRef: 'kristijan-ristovski',
+        speakerRef: 'heydon-pickering',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: 'paul-brie',
+        speakerRef: '',
         time: '14:30 - 15:00',
       },
       {
-        speakerRef: 'brent-vatne',
+        speakerRef: '',
         time: '15:00 - 15:30',
       },
       {
-        speakerRef: 'nir-kaufman',
+        speakerRef: '',
         time: '16:00 - 16:30',
       },
       {
-        speakerRef: 'sebastien-chopin',
+        speakerRef: '',
         time: '16:30 - 17:00',
       },
       {
-        speakerRef: 'sarah-drasner',
+        speakerRef: '',
         time: '17:00 - 17:30',
       },
     ],
@@ -111,52 +113,48 @@ export default [
     type: 'conference',
     activities: [
       {
-        speakerRef: 'jack-franklin',
+        speakerRef: 'lin-clark',
         time: '09:00 - 09:30',
       },
       {
-        speakerRef: 'sara-vieira',
+        speakerRef: '',
         time: '09:30 - 10:00',
       },
       {
-        speakerRef: 'larissa-davidova',
+        speakerRef: '',
         time: '10:00 - 10:30',
       },
       {
-        speakerRef: 'anjana-vakil',
+        speakerRef: 'guillaume-chau',
         time: '11:00 - 11:30',
       },
       {
-        speakerRef: 'mathias-bynens',
+        speakerRef: '',
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: 'stephanie-nemeth',
+        speakerRef: '',
         time: '12:00 - 12:30',
       },
       {
-        speakerRef: 'liran-tal',
+        speakerRef: '',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: 'even-stensberg',
+        speakerRef: '',
         time: '14:30 - 15:00',
       },
       {
-        speakerRef: 'ives-van-hoorne',
+        speakerRef: '',
         time: '15:00 - 15:30',
       },
       {
-        speakerRef: 'phil-hawksworth',
-        time: '16:00 - 16:30',
+        overrideTitle: 'PANEL: Open Source Sustainability',
+        time: '16:00 - 16:45',
       },
       {
-        speakerRef: 'shagufta-gurmukhdas',
-        time: '16:30 - 17:00',
-      },
-      {
-        speakerRef: 'jeffrey-lembeck',
-        time: '17:00 - 17:30',
+        overrideTitle: 'PANEL: Staying relevant in 2020',
+        time: '16:45 - 17:30',
       },
     ],
   },
