@@ -6,7 +6,7 @@ const Schedule = ({ year, schedule, baseUrl, speakers }) => (
   <Section section={{ style: { backgroundColor: styles.mainColor4 } }}>
     <div id="schedule" className="section-padding">
       <Style />
-      <div className="row section-header">
+      <div className="section-header">
         <h2>Schedule</h2>
         <ScheduleTabSelector
           schedule={schedule}
@@ -47,7 +47,7 @@ const Style = () => (
         margin-right: auto;
       }
 
-      #schedule .row {
+      #schedule {
         display: table;
         width: 100%;
       }
