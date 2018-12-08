@@ -51,11 +51,11 @@ export default [
     url: '/#speakers',
     label: 'speakers',
   },
-  // {
-  //   id: 2,
-  //   url: '#schedule',
-  //   label: 'schedule',
-  // },
+  {
+    id: 2,
+    url: '#schedule',
+    label: 'schedule',
+  },
   {
     id: 3,
     url: '/#mission',

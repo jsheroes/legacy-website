@@ -71,8 +71,9 @@ export default [
     description:
       'Sarah Drasner is an award-winning Speaker, Senior Developer Advocate at Microsoft, and Staff Writer at CSS-Tricks. Sarah is also the co-founder of Web Animation Workshops, with Val Head. She’s the author of SVG Animations from O’Reilly and has given Frontend Masters workshops on Vue.js and Advanced SVG Animations. Sarah is formerly Manager of UX Design & Engineering at Trulia (Zillow).',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'The Future of Web Animation',
+      description:
+        "We talk a lot about how to animate on the web, and what's possible in browsers today, but where is animation heading? In this talk, we'll start with some bleeding edge techniques such as native-like page transitions with client side rendering, but then we'll push it further. The intersection of health and animation with biofeedback sensors, the future of 3d in the browser complete with interviews with people who are writing these specs... this talk will show that in terms of animation on the web, we're just getting started.",
       message: '',
     },
     workshop: null,
@@ -146,8 +147,9 @@ export default [
     description:
       'Heydon is a freelance design consultant working with organizations like The Paciello Group, Smashing Magazine, Bulb Energy, and The BBC. He specializes in creating accessible components and design systems, and works with Vue, React, and plain JavaScript. He has written three books on inclusive design for the web. The last is a compendium of articles from the popular inclusive-components.design blog.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'Plain Wrong?',
+      description:
+        'I love writing JavaScript. The trouble is, so does everyone else. When people aren`t writing JavaScript, they`re usually writing frameworks for writing JavaScript in JavaScript. In fact, most of the JavaScript that`s around these days seems to either be written for, or within, a JavaScript flavor like React, Vue, or Angular. Frameworks make writing your own code faster and more ergonomic, but they do not come without problems. Code written with Framework A depends on the environment Framework A provides in order to work — and this dependency often represents a lot of code to transmit, decompress, parse, and compile. What about "plain" JavaScript? Is it always naïve to think anything worthwhile can still be achieved just writing some straight-up code? It turns out this is a tricky question to answer, but there`s no doubt the little we do as JavaScripters is often done with much more than we need.',
       message: '',
     },
     workshop: null,
@@ -233,8 +235,8 @@ export default [
     description:
       'Jason Lengstorf is a developer advocate, senior engineer, and occasional designer at Gatsby. He’s an advocate for building highly productive teams through better communication, well designed systems and processes, and healthy work-life balance, and he blogs about that sometimes. He lives in Portland, Oregon.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'You Belong Here: How Gatsby Is Working to Make Open Source More Open',
+      description: 'TBA',
       message: '',
     },
     workshop: null,
@@ -261,8 +263,9 @@ export default [
     description:
       'Guillaume is a Vue.js Core Team member working on vue-cli, vue-devtools and vue-curated. He also created the integrations with Apollo GraphQL (vue-apollo) and Meteor (vue-meteor) to help developers build highly interactive and realtime Vue-powered apps, and he contributes to the ecosystem with tools like vue-virtual-scroller and v-tooltip.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'CLI x GUI',
+      description:
+        'While building Vue CLI 3, we wanted to make the developer experience better for everyone, with an accompanying graphical interface. Why and how?',
       message: '',
     },
     workshop: null,
@@ -289,8 +292,11 @@ export default [
     description:
       "Anjana suffers from a debilitating case of curiosity, which led her from philosophy to English teaching to computational linguistics to software development. As Engineering Learning & Development Lead at Mapbox, she can usually be found in San Francisco; that is, when she's not speaking at events around the world, trying to share the joy of coding and advocate for a more diverse & accessible tech industry. Ask her about the Recurse Center, Outreachy, and Mozilla!",
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'The universe in a single arrow: A live dive into the lambda calculus',
+      description: `
+        <p>You know that a tiny anonymous function, like a JS arrow function, can be useful when you’re feeling too lazy to think up a good name. But did you know that this humble little arrow can summon one of the most powerful & elegant abstractions in the history of computer science?</p>
+        <p>The lambda calculus lets us represent our programs - all their logic and data - with nothing but pure, anonymous functions. Booleans, numbers, operators, control flow, data structures… an arrow can do it all! In this session we'll live-code our way to a deeper understanding & admiration of the computational power of the lambda, an abstraction fundamental to functional programming.</p>
+      `,
       message: '',
     },
     workshop: null,

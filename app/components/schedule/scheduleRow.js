@@ -4,8 +4,8 @@ import ActivityLocation from './activityLocation';
 import ActivityImage from './activityImage';
 
 const getSpeakers = (agendaItem, speakers) => {
-  const agendaPermalinks =
-    typeof agendaItem.speakerRef === 'string' ? [agendaItem.speakerRef] : agendaItem.speakerRef;
+  const speakerRef = agendaItem.speakerRef || '';
+  const agendaPermalinks = typeof speakerRef === 'string' ? [speakerRef] : speakerRef;
   return agendaPermalinks
     .map(permalink => speakers.find(speaker => speaker.permalink === permalink))
     .filter(speaker => Boolean(speaker));
@@ -67,6 +67,7 @@ const ScheduleRow = ({ agendaItem, baseUrl, type, speakers }) => {
             .activity-row {
               text-align: left;
               flex-direction: row;
+              align-items: center;
             }
           }
         `}

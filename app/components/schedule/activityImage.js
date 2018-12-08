@@ -18,7 +18,7 @@ const ActivityImage = ({ baseUrl, speakers }) => (
 
         @media screen and (min-width: ${mediaQueries.L}) {
           .activity-image {
-            flex: 1;
+            flex: 0.5;
             display: block;
           }
 

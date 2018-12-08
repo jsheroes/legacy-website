@@ -10,7 +10,7 @@ const ActivityLocation = ({ time, room, hasNoSpeakers }) => (
     <style jsx>
       {`
         .activity-location {
-          flex: 1;
+          flex: 0.5;
         }
 
         .room-and-time {
