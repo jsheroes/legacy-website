@@ -113,6 +113,10 @@ export default [
     type: 'conference',
     activities: [
       {
+        overrideTitle: 'Coffee',
+        time: '08:30 - 09:00',
+      },
+      {
         speakerRef: 'lin-clark',
         time: '09:00 - 09:30',
       },
