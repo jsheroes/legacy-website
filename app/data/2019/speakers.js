@@ -317,4 +317,32 @@ export default [
       },
     ],
   },
+  {
+    name: 'henry',
+    fullName: 'Henry Zhu',
+    permalink: 'henry-zhu',
+    firstName: 'Henry',
+    reference: 'him',
+    position: 'Maintainer',
+    company: 'Babel',
+    img: 'henry-zhu.jpg',
+    twitter: 'https://twitter.com/left_pad',
+    github: 'https://github.com/hzoo',
+    website: 'https://www.henryzoo.com/',
+    description:
+      'Henry is a maintainer of Babel, working full time on open source sustainability, and was previously at Behance/Adobe. He just released a podcast series called Hope In Source.',
+    talk: {
+      title: 'TBA',
+      description: '',
+      message: '',
+    },
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [
+      {
+        name: `Maintainer's Virtue @ All Things Open 2018`,
+        url: 'https://www.youtube.com/watch?v=6qaupQ0KnkU',
+      },
+    ],
+  },
 ];
