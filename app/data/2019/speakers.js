@@ -235,8 +235,18 @@ export default [
     description:
       'Jason Lengstorf is a developer advocate, senior engineer, and occasional designer at Gatsby. He’s an advocate for building highly productive teams through better communication, well designed systems and processes, and healthy work-life balance, and he blogs about that sometimes. He lives in Portland, Oregon.',
     talk: {
-      title: 'You Belong Here: How Gatsby Is Working to Make Open Source More Open',
-      description: 'TBA',
+      title: 'You Belong Here: How to Make Open Source More Open',
+      description: `
+      <p>Done well, open source is one of the highest-value targets for businesses these days. Companies like Facebook and Airbnb leverage OSS as a source of brand equity and recruiting, among other advantages. However, OSS is still uncomfortable for many companies — and even if they _do_ open source their tools, these projects often fail to launch — because they're missing the most important (and best) part of OSS: the community.</p>
+      <p>Projects that survive in today's landscape have thriving communities that care deeply about the quality and advancement of open source _and_ the people using it. But open source can also be intimidating to newcomers, and occasionally unwelcoming. In this talk, learn how popular open source framework Gatsby has doubled down on community, including:</p>
+      <ul>
+      <li>Offering open pair programming hours</li>
+      <li>Trusting _all_ contributors with merge access</li>
+      <li>Sending free swag to contributors</li>
+      <li>And much more!</li>
+      </ul>
+      <p>Learn how you can borrow our strategies to create a healthy, welcoming community for your open source projects, starting today!</p>
+      `,
       message: '',
     },
     workshop: null,
