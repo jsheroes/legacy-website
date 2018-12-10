@@ -16,7 +16,12 @@ const Statistics = () => (
       </div>
       <div>
         <h3>
-          <Link href="https://www.youtube.com/c/jsheroes" theme="theme-light-contrast" openInNewTab>
+          <Link
+            href="https://www.youtube.com/c/jsheroes"
+            theme="theme-light-contrast"
+            openInNewTab
+            outsideClass="small"
+          >
             Youtube
           </Link>
         </h3>
@@ -28,7 +33,12 @@ const Statistics = () => (
       </div>
       <div>
         <h3>
-          <Link href="https://www.facebook.com/jsheroes" theme="theme-light-contrast" openInNewTab>
+          <Link
+            href="https://www.facebook.com/jsheroes"
+            theme="theme-light-contrast"
+            openInNewTab
+            outsideClass="small"
+          >
             Facebook
           </Link>
         </h3>
@@ -39,7 +49,12 @@ const Statistics = () => (
       </div>
       <div>
         <h3>
-          <Link href="https://twitter.com/jsheroes" theme="theme-light-contrast" openInNewTab>
+          <Link
+            href="https://twitter.com/jsheroes"
+            theme="theme-light-contrast"
+            openInNewTab
+            outsideClass="small"
+          >
             Twitter
           </Link>
         </h3>
@@ -50,7 +65,12 @@ const Statistics = () => (
       </div>
       <div>
         <h3>
-          <Link href="https://www.meetup.com/jsheroes" theme="theme-light-contrast" openInNewTab>
+          <Link
+            href="https://www.meetup.com/jsheroes"
+            theme="theme-light-contrast"
+            openInNewTab
+            outsideClass="small"
+          >
             Meetup.com
           </Link>
         </h3>

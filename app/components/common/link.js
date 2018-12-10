@@ -12,7 +12,7 @@ const themes = {
   [THEME_LIGHT_CONTRAST]: THEME_LIGHT_CONTRAST,
 };
 
-const Link = ({ href, as, children, theme, openInNewTab, className, ...rest }) => {
+const Link = ({ href, as, children, theme, openInNewTab, className, outsideClass, ...rest }) => {
   const classNames = [className, themes[theme]].filter(a => a);
   const isRelativeUrl = href && (href[0] === '/' || href[0] === '#');
   const isMailTo = href && href.match(/^mailto/);
@@ -28,7 +28,9 @@ const Link = ({ href, as, children, theme, openInNewTab, className, ...rest }) =
     <NextLink href={href} as={as}>
       <a {...rest} {...extraProps} className={classNames.join(' ')}>
         {children}
-
+        {outsideClass && (
+          <img className={outsideClass} src="/static/img/new-tab.png" alt="Link to outside page" />
+        )}
         <style jsx>
           {`
             a {
@@ -56,6 +58,13 @@ const Link = ({ href, as, children, theme, openInNewTab, className, ...rest }) =
             }
             a.${THEME_DARK}:hover, a.${THEME_DARK}:focus {
               color: ${styles.mainColor6};
+            }
+
+            img.small {
+              margin-top: 10px;
+              margin-left: 5px;
+              width: 13px;
+              height: 13px;
             }
           `}
         </style>
