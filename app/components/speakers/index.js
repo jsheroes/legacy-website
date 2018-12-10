@@ -71,7 +71,7 @@ class Speakers extends Component {
             cfpOpen && <CTAButton url="/speak-at-jsheroes">Give a Talk at JSHeroes</CTAButton>}
 
           {isCurrentYear && (
-            <div className="row section-header" id="ambassadors">
+            <div className="section-header" id="ambassadors">
               <h2>And Our Awesome Ambassadors</h2>
               <div>
                 <p>

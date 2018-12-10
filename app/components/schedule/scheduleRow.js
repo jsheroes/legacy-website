@@ -1,213 +1,73 @@
-import { styles } from '../../constants';
+import { styles, mediaQueries } from '../../constants';
+import ActivityDetails from './activityDetails';
+import ActivityLocation from './activityLocation';
+import ActivityImage from './activityImage';
+
+const getSpeakers = (agendaItem, speakers) => {
+  const speakerRef = agendaItem.speakerRef || '';
+  const agendaPermalinks = typeof speakerRef === 'string' ? [speakerRef] : speakerRef;
+  return agendaPermalinks
+    .map(permalink => speakers.find(speaker => speaker.permalink === permalink))
+    .filter(speaker => Boolean(speaker));
+};
+
+const getActivity = (agendaItem, agendaItemSpeakers, type) => {
+  const isWorkshopTab = type === 'workshops';
+  const hasSpeakers = agendaItemSpeakers.length >= 1;
+  let activity;
+  if (hasSpeakers) {
+    // activities with at least one speaker: workshops or talks
+    activity = isWorkshopTab ? agendaItemSpeakers[0].workshop : agendaItemSpeakers[0].talk;
+  } else {
+    // activities with no speakers, for example Check-in & Coffee
+    activity = {
+      title: agendaItem.overrideTitle || 'TBA',
+      soldOut: false,
+      hasNoSpeakers: true,
+    };
+  }
+  return activity;
+};
 
 const ScheduleRow = ({ agendaItem, baseUrl, type, speakers }) => {
-  // eslint-disable-line complexity
   if (!agendaItem) {
     return '';
   }
 
-  const singleSpeaker = typeof agendaItem.speakerRef === 'string';
-
-  const firstSpeaker = singleSpeaker
-    ? speakers.find(s => s.permalink === agendaItem.speakerRef)
-    : speakers.find(s => s.permalink === agendaItem.speakerRef[0]);
-
-  const secondSpeaker = singleSpeaker
-    ? null
-    : speakers.find(s => s.permalink === agendaItem.speakerRef[1]);
-
-  if (!firstSpeaker) {
-    // TBA in agenda
-    return (
-      <div key={agendaItem.time} className="activity-row clearfix">
-        <div className="activity-details">
-          <span>{agendaItem.overrideTitle || 'TBA'}</span>
-        </div>
-        <div className="activity-location">
-          <div className="room-and-time">
-            <div>{agendaItem.time}</div>
-          </div>
-        </div>
-        <style jsx>
-          {`
-            .activity-row {
-              padding: 20px 0;
-              border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-              width: 100%;
-              height: 100px;
-              color: ${styles.mainColor3};
-              font-weight: 400;
-              text-align: center;
-            }
-
-            @media screen and (min-width: 1000px) {
-              .activity-row {
-                text-align: none;
-              }
-              .activity-details {
-                width: 85%;
-                height: 100%;
-                float: right;
-              }
-
-              .activity-location {
-                text-align: left;
-                width: 15%;
-                height: 100%;
-              }
-
-              .room-and-time {
-                margin-top: 20px;
-              }
-
-              .activity-details span {
-                margin-top: 20px;
-                display: block;
-              }
-            }
-          `}
-        </style>
-      </div>
-    );
-  }
-
-  const isWorkshopTab = type === 'workshops';
-  const activity = isWorkshopTab ? firstSpeaker.workshop : firstSpeaker.talk;
-  const activityTitle = activity.soldOut ? `${activity.title} ( SOLD OUT )` : activity.title;
+  const agendaItemSpeakers = getSpeakers(agendaItem, speakers);
+  const activity = getActivity(agendaItem, agendaItemSpeakers, type);
 
   return (
-    <div key={activity.title} className="activity-row clearfix">
-      <div className="activity-details">
-        <div className="activity-title">{activityTitle}</div>
-        <div>
-          <span className="speaker-name">{firstSpeaker.fullName}</span>
-          <span className="speaker-position">, {firstSpeaker.position}</span>
-          {firstSpeaker.company && <span className="speaker-company">{firstSpeaker.company}</span>}
-        </div>
-        {secondSpeaker && (
-          <div>
-            <span className="speaker-name">{secondSpeaker.fullName}</span>
-            <span className="speaker-position">,{secondSpeaker.position}</span>
-            {secondSpeaker.company && (
-              <span className="speaker-company">{secondSpeaker.company}</span>
-            )}
-          </div>
-        )}
-      </div>
-      <div className="activity-location">
-        <div className="room-and-time">
-          <div>{agendaItem.time}</div>
-          <div>{agendaItem.room && agendaItem.room}</div>
-        </div>
-        <div className="speaker-image">
-          <img src={`${baseUrl}/speakers/${firstSpeaker.img}`} alt={firstSpeaker.fullName} />
-          {secondSpeaker && (
-            <img
-              className="second-image"
-              src={`${baseUrl}/speakers/${secondSpeaker.img}`}
-              alt={secondSpeaker.fullName}
-            />
-          )}
-        </div>
-      </div>
+    <div key={activity.title} className="activity-row">
+      <ActivityLocation
+        time={agendaItem.time}
+        room={agendaItem.room}
+        hasNoSpeakers={activity.hasNoSpeakers}
+      />
+      <ActivityImage baseUrl={baseUrl} speakers={agendaItemSpeakers} />
+      <ActivityDetails
+        title={activity.title}
+        speakers={agendaItemSpeakers}
+        isSoldOut={activity.soldOut}
+      />
       <style jsx>
         {`
           .activity-row {
-            padding: 0px 0px 90px 0px;
-            margin: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+            display: flex;
+            flex-direction: column-reverse;
             width: 100%;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
             color: ${styles.mainColor3};
             font-weight: 400;
             text-align: center;
           }
 
-          .activity-title {
-            font-weight: 700;
-          }
-
-          .red {
-            color: tomato;
-          }
-
-          .second-image {
-            margin-left: 10px;
-          }
-
-          .speaker-name {
-            color: ${styles.mainColor6};
-          }
-
-          .speaker-company {
-            display: block;
-          }
-
-          .speaker-company:before {
-            content: '';
-          }
-
-          .speaker-position {
-            display: none;
-          }
-
-          .speaker-image {
-            display: none;
-          }
-
-          .content-section {
-            margin-bottom: 20px;
-            float: left;
-            width: 100%;
-          }
-
-          .room-and-time {
-            margin-top: 20px;
-          }
-
-          @media screen and (min-width: 1000px) {
+          @media screen and (min-width: ${mediaQueries.L}) {
             .activity-row {
               text-align: left;
-            }
-
-            .activity-location {
-              width: 35%;
-              float: left;
-            }
-
-            .activity-details {
-              width: 65%;
-              float: right;
-            }
-
-            .speaker-position {
-              display: inline;
-            }
-
-            .speaker-company {
-              display: inline;
-            }
-
-            .speaker-company:before {
-              content: ', ';
-            }
-
-            .speaker-image {
-              display: block;
-              width: 45%;
-              float: left;
-            }
-
-            .speaker-image img {
-              width: 60px;
-              height: 60px;
-              border: 1px solid #ccc;
-              filter: grayscale(100%);
-            }
-
-            .room-and-time {
-              width: 55%;
-              float: left;
-              margin: 0;
+              flex-direction: row;
+              align-items: center;
             }
           }
         `}

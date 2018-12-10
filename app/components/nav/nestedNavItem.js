@@ -4,13 +4,13 @@ import { styles } from '../../constants';
 import NavItem from './navItem';
 
 const NestedNavItem = ({ label, links }) => (
-  <div className="nested-nav-item">
-    <span tabIndex="0" role="menu" className="nested-links-label">
+  <div role="menubar" className="nested-nav-item">
+    <span role="menuitem" tabIndex="0" className="nested-links-label">
       {label}
     </span>
-    <ul className="menu-items">
+    <ul role="menu" className="menu-items">
       {links.map(link => (
-        <li key={link.id}>
+        <li role="menuitem" key={link.id}>
           <NavItem url={link.url}>{link.label}</NavItem>
         </li>
       ))}

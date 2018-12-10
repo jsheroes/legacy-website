@@ -6,7 +6,7 @@ class ScheduleTabSelector extends Component {
   constructor() {
     super();
     this.state = {
-      activePosition: 0,
+      activePosition: 1,
     };
     this.buildButtonSection = this.buildButtonSection.bind(this);
   }

@@ -2,8 +2,8 @@ import Layout from '../app/components/layout';
 import Header from '../app/components/header';
 import Updates from '../app/components/updates';
 import Speakers from '../app/components/speakers';
+import Schedule from '../app/components/schedule';
 import Statistics from '../app/components/statistics';
-// import Schedule from '../app/components/schedule';
 import Sponsors from '../app/components/sponsors';
 import Partners from '../app/components/partners';
 import Communities from '../app/components/communities';
@@ -22,7 +22,12 @@ const Home = () => {
         <Header />
         <Updates />
         <Speakers year="2019" baseUrl={baseUrl} speakers={store.data2019.speakers} />
-        {/* <Schedule /> */}
+        <Schedule
+          baseUrl={baseUrl}
+          year="2019"
+          schedule={store.data2019.schedule}
+          speakers={store.data2019.speakers}
+        />
         <Mission />
         <Sponsors baseUrl={baseUrl} sponsors={store.data2019.sponsors} />
         <Partners baseUrl={baseUrl} partners={store.data2019.partners} />
