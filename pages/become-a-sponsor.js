@@ -2,6 +2,7 @@ import React from 'react';
 
 import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
+import Statistics from '../app/components/statistics';
 import Link from '../app/components/common/link';
 import { styles, mediaQueries } from '../app/constants';
 
@@ -62,11 +63,12 @@ const BecomeASponsorPage = () => (
           <li>The chance to increase your JavaScript developer team`s knowledge</li>
         </ul>
       </div>
+      <Statistics />
       <style jsx>
         {`
           .central-container {
             width: 100%;
-            padding: 250px 0 140px;
+            padding: 250px 0 30px;
             margin: 0 auto;
           }
 
