@@ -9,8 +9,8 @@ const Organizers = () => (
       <h2>Organizers</h2>
 
       <p>
-        The <strong>JSHeroes</strong> Conference relies on <strong>volunteers</strong> and the Cluj
-        JavaScripters community to organize and drive the event.
+        The <strong>JSHeroes</strong> Conference relies on <strong>volunteers</strong> and the 
+        JSHeroes community to organize and drive the event.
       </p>
       <p>They contribute hours of their time each year and we value this immensely.</p>
       <p>
