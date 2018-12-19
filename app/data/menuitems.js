@@ -50,11 +50,25 @@ export default [
     id: 1,
     url: '/#speakers',
     label: 'speakers',
+    blacklist: ['/2017', '/2018'],
+  },
+  {
+    id: 1.1,
+    url: '#speakers',
+    label: 'speakers',
+    whitelist: ['/2017', '/2018'],
   },
   {
     id: 2,
+    url: '/#schedule',
+    label: 'schedule',
+    blacklist: ['/2017', '/2018'],
+  },
+  {
+    id: 2.1,
     url: '#schedule',
     label: 'schedule',
+    whitelist: ['/2017', '/2018'],
   },
   {
     id: 3,
@@ -65,6 +79,13 @@ export default [
     id: 4,
     url: '/#sponsors',
     label: 'sponsors',
+    blacklist: ['/2017', '/2018'],
+  },
+  {
+    id: 4.1,
+    url: '#sponsors',
+    label: 'sponsors',
+    whitelist: ['/2017', '/2018'],
   },
   {
     id: 5,
