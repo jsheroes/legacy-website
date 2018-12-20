@@ -11,7 +11,7 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = nextServer({ dev, conf: config.next });
 const handle = app.getRequestHandler();
 
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // eslint-disable-next-line max-statements
 const startServer = () => {
