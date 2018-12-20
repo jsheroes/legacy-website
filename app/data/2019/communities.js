@@ -79,4 +79,9 @@ export default [
     img: 'logo_frontend_developer_love.png',
     href: 'http://www.frontenddeveloperlove.com/',
   },
+  {
+    title: 'JSDay',
+    img: 'logo_jsday.png',
+    href: 'https://2019.jsday.it',
+  },
 ];
