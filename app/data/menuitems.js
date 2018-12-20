@@ -89,8 +89,8 @@ export default [
   },
   {
     id: 5,
+    url: '/#contactForm',
     label: 'contact',
-    url: 'mailto:welcome@jsheroes.io',
   },
   {
     id: 6,
