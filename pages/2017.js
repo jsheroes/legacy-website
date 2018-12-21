@@ -6,26 +6,25 @@ import Sponsors from '../app/components/sponsors';
 import Partners from '../app/components/partners';
 import Communities from '../app/components/communities';
 import ScrollBtn from '../app/components/scroll-btn';
-import store from '../app/data';
+import store from '../app/data/2017';
 
-const currentYear = () => {
-  const baseUrl = 'static/img/2017';
-  return (
+const buildComponent = (currentStore, year = 2017) => {
+  const baseUrl = `static/img/${year}`;
+  const { videos, speakers, sponsors, partners, communities, schedule } = currentStore;
+
+  const Component = () => (
     <Layout>
-      <AfterMovie year="2017" videos={store.data2017.videos} />
-      <Speakers baseUrl={baseUrl} year="2017" speakers={store.data2017.speakers} />
-      <Schedule
-        baseUrl={baseUrl}
-        year="2017"
-        schedule={store.data2017.schedule}
-        speakers={store.data2017.speakers}
-      />
-      <Sponsors baseUrl={baseUrl} sponsors={store.data2017.sponsors} />
-      <Partners baseUrl={baseUrl} partners={store.data2017.partners} />
-      <Communities baseUrl={baseUrl} communities={store.data2017.communities} />
+      <AfterMovie {...{ year, videos }} />
+      <Speakers {...{ baseUrl, year, speakers }} />
+      <Schedule {...{ baseUrl, year, schedule, speakers }} />
+      <Sponsors {...{ baseUrl, sponsors }} />
+      <Partners {...{ baseUrl, partners }} />
+      <Communities {...{ baseUrl, communities }} />
       <ScrollBtn />
     </Layout>
   );
+
+  return Component;
 };
 
-export default currentYear;
+export default buildComponent(store);

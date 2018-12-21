@@ -28,6 +28,7 @@
     "now": "^11.3.9",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "uuid": "^3.3.2",
     "what-input": "^5.1.1"
   },
   "devDependencies": {
