@@ -60,7 +60,7 @@ const startServer = () => {
     return app.render(req, res, route, query);
   });
 
-  server.post('/contactForm', (req, res, next) => {
+  server.post('/contact-form', (req, res, next) => {
     const msg = {
       to: 'welcome@jsheroes.io',
       from: { email: req.body.email },
