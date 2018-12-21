@@ -31,8 +31,8 @@ const buildComponent = (currentStore, year = 2019) => {
         <Sponsors {...{ baseUrl, sponsors }} />
         <Partners {...{ baseUrl, partners }} />
         <Communities {...{ baseUrl, communities }} />
-        <PhotoGallery />
         <Statistics />
+        <PhotoGallery />
         <Organizers />
         <Venue />
         <ContactForm />

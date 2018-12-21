@@ -1,6 +1,6 @@
 import uuid from 'uuid';
+import React from 'react';
 
-import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
 function getPhotoItems() {
@@ -41,13 +41,13 @@ function getPhotoItems() {
 }
 
 const Component = ({ items = getPhotoItems() }) => (
-  <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
+  <React.Fragment>
     <div className="grid-container">
       {items.map(({ type, key, value }, index) => (
         <div key={key} className={`grid-item-${type}-${index + 1} upper`}>
           {type === 'text' && (
             <div className="text-wrapper">
-              <h4 className="title">
+              <h4>
                 <a href={value.url} target="_blank" rel="noopener noreferrer">
                   {value.title}
                 </a>
@@ -55,13 +55,23 @@ const Component = ({ items = getPhotoItems() }) => (
             </div>
           )}
           {type === 'photo' && (
-            <div>
-              <img
-                className="image-wrapper"
-                src={`static/img/2018/photos/small/${value.src}`}
+            <picture>
+              <source
+                media={`(max-width: ${mediaQueries.XS})`}
+                srcSet={`static/img/photo_gallery/small/${value.src}`}
                 alt=""
               />
-            </div>
+              <source
+                media={`(max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.S})`}
+                srcSet={`static/img/photo_gallery/medium/${value.src}`}
+                alt=""
+              />
+              <img
+                srcSet={`static/img/photo_gallery/large/${value.src}`}
+                alt=""
+                className="image-wrapper"
+              />
+            </picture>
           )}
         </div>
       ))}
@@ -71,13 +81,12 @@ const Component = ({ items = getPhotoItems() }) => (
       {`
         .grid-container {
           display: grid;
-          grid-template-columns: auto auto auto auto 160px;
+          grid-template-columns: auto auto auto auto 156px;
           justify-content: center;
         }
 
         .image-wrapper {
           display: flex;
-          height: 211px;
           justify-content: center;
           align-items: center;
           text-align: center;
@@ -85,7 +94,7 @@ const Component = ({ items = getPhotoItems() }) => (
 
         .text-wrapper {
           display: flex;
-          height: 211px;
+          height: 288px;
           justify-content: center;
           align-items: center;
           text-align: center;
@@ -175,7 +184,7 @@ const Component = ({ items = getPhotoItems() }) => (
         }
       `}
     </style>
-  </Section>
+  </React.Fragment>
 );
 
 export default Component;
