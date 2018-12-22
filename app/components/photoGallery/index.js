@@ -62,7 +62,7 @@ const Component = ({ items = getPhotoItems() }) => (
                 alt=""
               />
               <source
-                media={`(max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.S})`}
+                media={`(max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.XS})`}
                 srcSet={`static/img/photo_gallery/medium/${value.src}`}
                 alt=""
               />
