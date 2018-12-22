@@ -44,7 +44,7 @@ const ActivityDetails = ({ title, speakers, isSoldOut }) => {
             }
 
             .activity-title {
-              text-align: ${speakers.length === 0 ? 'center' : 'left'};
+              text-align: left;
             }
           }
         `}

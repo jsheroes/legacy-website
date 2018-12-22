@@ -38,8 +38,16 @@ export default [
     description:
       'Lin Clark makes code cartoons. She`s also part of Mozilla’s Emerging Technologies group, where she works with the WebAssembly and Rust teams, and on JavaScript standardization. In previous lives, she worked at npm, was a core contributor to open source projects like Firefox’s developer tools, and contributed to HTML data standards.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: `WebAssembly's Post-MVP Future`,
+      description: `
+      <p>If the web were a video game franchise, then WebAssembly would be its latest hero...</p>
+      <p>During the first part of our journey, our hero completed the first quest—making it possible to play PC games and build applications like AutoCAD on the web. But this journey is far from over! Many a quest awaits; whole worlds are left to explore! The browser, and our hero’s current skill set, is just the beginning.</p>
+      <p>In this talk, we’ll explore both charted and uncharted areas—from the JavaScript-rich lands of the browser, to the darkest reaches of the blockchain, to the airy heights of the cloud with CDNs, and more! And we’ll map out all of the features we need to unlock to take us to these new heights:</p>
+      <ul>
+        <li>Threading</li>
+        <li>Garbage collection</li>
+        <li>ES module integration and more!</li>
+      </ul>`,
       message: '',
     },
     workshop: null,
@@ -117,8 +125,11 @@ export default [
       Tweets at <a href="http://twitter.com/csswizardry">@csswizardry</a>.
     </p>`,
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'It’s My (Third) Party, and I’ll Cry if I Want To',
+      description: `
+      <p>Like it or not, a huge part of modern web development involves the use of third-party providers: fonts, analytics, ads, tracking, and more all have an impact of performance, and can leave us (or, more worryingly, our visitors) susceptible to performance degradation.</p>
+      <p>In this talk, we’ll take a look at unruly or uninvited (third-)party guests: how to detect them, how to audit them, and how to manage them. We’ll also look at the different tools available to help us stress-test and quantify the overhead these third parties bring, and what that means for users and businesses alike.</p>
+      `,
       message: '',
     },
     workshop: null,

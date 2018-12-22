@@ -17,11 +17,12 @@ export default [
       },
       {
         speakerRef: 'andrei-antal',
-        overrideTitle: '',
+        overrideTitle: 'Advanced Observable Patterns in Angular apps with RxJS',
         time: '09:00 - 13:00',
       },
       {
         speakerRef: 'bogdan-luca',
+        overrideTitle: 'Advanced Component Patterns in Vue.js',
         time: '14:00 - 18:00',
       },
       {
@@ -81,11 +82,15 @@ export default [
         time: '12:00 - 12:30',
       },
       {
+        overrideTitle: 'Lunch Break',
+        time: '12:30 - 14:00',
+      },
+      {
         speakerRef: 'heydon-pickering',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'chen-hui-jing',
         time: '14:30 - 15:00',
       },
       {
@@ -93,7 +98,11 @@ export default [
         time: '15:00 - 15:30',
       },
       {
-        speakerRef: '',
+        overrideTitle: 'Coffee Break',
+        time: '15:30 - 16:00',
+      },
+      {
+        speakerRef: 'simona-cotin',
         time: '16:00 - 16:30',
       },
       {
@@ -114,19 +123,19 @@ export default [
     activities: [
       {
         overrideTitle: 'Coffee',
-        time: '08:30 - 09:00',
+        time: '08:30 - 09:30',
       },
       {
         speakerRef: 'lin-clark',
-        time: '09:00 - 09:30',
-      },
-      {
-        speakerRef: '',
         time: '09:30 - 10:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'henry-zhu',
         time: '10:00 - 10:30',
+      },
+      {
+        overrideTitle: 'Coffee Break',
+        time: '10:30 - 11:00',
       },
       {
         speakerRef: 'guillaume-chau',
@@ -137,8 +146,12 @@ export default [
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'harry-roberts',
         time: '12:00 - 12:30',
+      },
+      {
+        overrideTitle: 'Lunch Break',
+        time: '12:30 - 14:00',
       },
       {
         speakerRef: '',
@@ -149,8 +162,12 @@ export default [
         time: '14:30 - 15:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'charlie-gerard',
         time: '15:00 - 15:30',
+      },
+      {
+        overrideTitle: 'Coffee Break',
+        time: '15:30 - 16:00',
       },
       {
         overrideTitle: 'PANEL: Open Source Sustainability',
