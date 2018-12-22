@@ -40,7 +40,7 @@ const startServer = () => {
   });
 
   server.get('/sw.js', (req, res) => {
-    res.sendFile(`${__dirname}/offline/serviceWorker.js`);
+    res.sendFile(`${__dirname}/offline/dist/serviceWorker.js`);
   });
 
   server.get('/workshops/:name', (req, res) => {
