@@ -82,7 +82,7 @@ const Workshop = ({ speakers }) => {
                 )}
               </strong>
             </span>
-            <p className="workshop-type">{workshop.type}, April 18th</p>
+            <p className="workshop-type">{workshop.type}, April 10th</p>
           </div>
         </div>
         <div className="workshop-description clearfix">
@@ -95,7 +95,7 @@ const Workshop = ({ speakers }) => {
           </p>
           <RawHtml content={workshop.prerequisites} />
           <p className="workshop-section">
-            <strong>About the trainer</strong>
+            <strong>About the trainer(s)</strong>
           </p>
           <RawHtml content={firstSpeaker.description} />
           {secondSpeaker && <RawHtml content={secondSpeaker.description} />}
@@ -113,7 +113,7 @@ const Workshop = ({ speakers }) => {
           <div className="workshop-ticket">
             <Link
               theme={Link.THEME_DARK}
-              href="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2018"
+              href="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019"
             >
               <span className="button">Buy your Ticket</span>
             </Link>

@@ -1,14 +1,41 @@
+import Router from 'next/router';
+import Link from '../common/link';
 import { styles, mediaQueries } from '../../constants';
 
-const ActivityDetails = ({ title, speakers, isSoldOut }) => {
+const ActivityDetails = ({ title, speakers = [], isSoldOut, activityType }) => {
   const activityTitle = isSoldOut ? `${title} ( SOLD OUT )` : title;
+  const titleContent =
+    speakers.length > 0 && activityType === 'workshops' ? (
+      <Link
+        href={`/workshops?name=${speakers[0].workshop.permalink}`}
+        as={`/workshops/${speakers[0].workshop.permalink}`}
+        onMouseEnter={() => {
+          Router.prefetch(`/workshops?name=${speakers[0].workshop.permalink}`);
+        }}
+      >
+        {activityTitle}
+      </Link>
+    ) : (
+      activityTitle
+    );
 
   return (
     <div className="activity-details">
-      <div className="activity-title">{activityTitle}</div>
+      <div className="activity-title">{titleContent}</div>
       {speakers.map(speaker => (
         <div className="speaker-details" key={speaker.permalink}>
-          <span className="speaker-name">{speaker.fullName}</span>
+          <span className="speaker-name">
+            <Link
+              href={`/speakers?name=${speaker.permalink}`}
+              as={`/speakers/${speaker.permalink}`}
+              onMouseEnter={() => {
+                Router.prefetch(`/speakers?name=${speaker.permalink}`);
+              }}
+              theme={Link.THEME_DARK}
+            >
+              {speaker.fullName}
+            </Link>
+          </span>
           <span className="speaker-position">, {speaker.position}</span>
           {speaker.company && <span className="speaker-company">, {speaker.company}</span>}
         </div>
@@ -44,7 +71,7 @@ const ActivityDetails = ({ title, speakers, isSoldOut }) => {
             }
 
             .activity-title {
-              text-align: ${speakers.length === 0 ? 'center' : 'left'};
+              text-align: left;
             }
           }
         `}
