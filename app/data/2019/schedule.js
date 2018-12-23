@@ -40,7 +40,7 @@ export default [
       {
         speakerRef: '',
         overrideTitle: 'Check-in & Coffee',
-        time: '09:00 - 09:30',
+        time: '08:00 - 09:00',
       },
       {
         speakerRef: '',
