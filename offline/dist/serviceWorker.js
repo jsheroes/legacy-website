@@ -1,6 +1,6 @@
 /* eslint no-restricted-globals: 0 */
 
-const VERSION = 'jsheroesio-cache-1545478225949'; // {{version}} will be replaced with a timestamp generated at build time
+const VERSION = 'jsheroesio-cache-1545557692979'; // will be replaced with a timestamp generated at build time by generateServiceWorker.js
 
 // Application Shell
 const urlsToCache = [
