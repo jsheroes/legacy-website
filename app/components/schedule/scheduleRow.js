@@ -49,6 +49,7 @@ const ScheduleRow = ({ agendaItem, baseUrl, type, speakers }) => {
         title={activity.title}
         speakers={agendaItemSpeakers}
         isSoldOut={activity.soldOut}
+        activityType={type}
       />
       <style jsx>
         {`

@@ -37,8 +37,8 @@ export default [
   {
     name: 'liran',
     fullName: 'Liran Tal',
-    position: 'Engineering Manager',
-    company: 'Nielsen',
+    position: 'Developer Advocate',
+    company: 'Snyk',
     img: 'liran.png',
   },
   {

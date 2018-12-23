@@ -6,37 +6,27 @@ export default [
     type: 'workshops',
     activities: [
       {
-        speakerRef: ['jason lengstorf', 'sia-karamalegos'],
-        overrideTitle: 'Advanced Performance Tuning for React Applications',
+        speakerRef: ['sia-karamalegos', 'jason-lengstorf'],
         time: '09:00 - 18:00',
       },
       {
         speakerRef: ['carsten-meier', 'simon-abbt'],
-        overrideTitle: 'First Steps in WebAssembly & Rust',
         time: '09:00 - 18:00',
       },
       {
         speakerRef: 'andrei-antal',
-        overrideTitle: 'Advanced Observable Patterns in Angular apps with RxJS',
         time: '09:00 - 13:00',
       },
       {
         speakerRef: 'bogdan-luca',
-        overrideTitle: 'Advanced Component Patterns in Vue.js',
         time: '14:00 - 18:00',
-      },
-      {
-        speakerRef: 'nir-kaufman',
-        time: '14:00 - 18:00',
-        overrideTitle: 'Build JavaScript Desktop Application with Electron',
       },
       {
         speakerRef: 'liran-tal',
-        overrideTitle: 'Integration Testing Heaven for Node.js Microservices',
         time: '09:00 - 13:00',
       },
       {
-        speakerRef: 'benedek-gagyi',
+        speakerRef: 'nir-kaufman',
         time: '14:00 - 18:00',
       },
     ],
