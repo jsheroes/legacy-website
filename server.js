@@ -1,5 +1,9 @@
 const express = require('express');
 const nextServer = require('next');
+const bodyParser = require('body-parser');
+const helmet = require('helmet');
+const sgMail = require('@sendgrid/mail');
+
 const config = require('./config/config');
 
 const dev = process.env.NODE_ENV !== 'production';
@@ -7,9 +11,16 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = nextServer({ dev, conf: config.next });
 const handle = app.getRequestHandler();
 
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
 // eslint-disable-next-line max-statements
 const startServer = () => {
   const server = express();
+
+  server.use(bodyParser.urlencoded({ extended: true }));
+  server.use(bodyParser.json());
+
+  server.use(helmet());
 
   server.use((req, res, next) => {
     // redirect from www to non-www
@@ -47,6 +58,24 @@ const startServer = () => {
     const query = { name: req.params.name };
     const route = '/workshops';
     return app.render(req, res, route, query);
+  });
+
+  server.post('/contact-form', (req, res, next) => {
+    const msg = {
+      to: 'welcome@jsheroes.io',
+      from: { email: req.body.email },
+      subject: 'JsHeroes ContactForm',
+      text: req.body.message,
+    };
+
+    sgMail
+      .send(msg)
+      .then(() => {
+        res.json({ success: true });
+      })
+      .catch(() => {
+        next(new Error('Email could not be sent.'));
+      });
   });
 
   server.get('*', (req, res) => handle(req, res));
