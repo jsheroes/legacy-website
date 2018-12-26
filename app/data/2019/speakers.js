@@ -218,8 +218,8 @@ export default [
     description:
       'Hui Jing is a self-taught designer and developer with an inordinate love for CSS. Reducing lines of code in her web projects makes her extremely happy. She used to play basketball full-time and launched her web career during downtime between training sessions.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'Web typography: a non-English perspective',
+      description: `Typography was defined by Gerrit Noordzij as writing with prefabricated letters. More than half of the content on the web is in English even though native English speakers make up less than 5% of the world's population. English only has 26 letters, but writing systems across the world use many more letters and characters, many of which are laid out in different directions as well. This talk covers the intricacies of ensuring web fonts display and are laid out correctly regardless of language, and how some of these layouts can translate across writing systems for creative art direction on the web.`,
       message: '',
     },
     workshop: null,
