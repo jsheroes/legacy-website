@@ -51,8 +51,8 @@ export default [
   {
     name: 'xavier',
     fullName: 'Xavier Cazalot',
-    position: 'Frontend Lead',
-    company: 'CityMeo',
+    position: 'Internet Explorer',
+    company: '',
     img: 'xavier.jpg',
   },
 ];
