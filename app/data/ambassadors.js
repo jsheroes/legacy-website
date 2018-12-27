@@ -37,8 +37,8 @@ export default [
   {
     name: 'liran',
     fullName: 'Liran Tal',
-    position: 'Engineering Manager',
-    company: 'Nielsen',
+    position: 'Developer Advocate',
+    company: 'Snyk',
     img: 'liran.png',
   },
   {
@@ -51,8 +51,8 @@ export default [
   {
     name: 'xavier',
     fullName: 'Xavier Cazalot',
-    position: 'Frontend Lead',
-    company: 'CityMeo',
+    position: 'Internet Explorer',
+    company: '',
     img: 'xavier.jpg',
   },
 ];

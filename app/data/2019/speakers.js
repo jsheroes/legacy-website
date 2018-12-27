@@ -38,8 +38,16 @@ export default [
     description:
       'Lin Clark makes code cartoons. She`s also part of Mozilla’s Emerging Technologies group, where she works with the WebAssembly and Rust teams, and on JavaScript standardization. In previous lives, she worked at npm, was a core contributor to open source projects like Firefox’s developer tools, and contributed to HTML data standards.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: `WebAssembly's Post-MVP Future`,
+      description: `
+      <p>If the web were a video game franchise, then WebAssembly would be its latest hero...</p>
+      <p>During the first part of our journey, our hero completed the first quest—making it possible to play PC games and build applications like AutoCAD on the web. But this journey is far from over! Many a quest awaits; whole worlds are left to explore! The browser, and our hero’s current skill set, is just the beginning.</p>
+      <p>In this talk, we’ll explore both charted and uncharted areas—from the JavaScript-rich lands of the browser, to the darkest reaches of the blockchain, to the airy heights of the cloud with CDNs, and more! And we’ll map out all of the features we need to unlock to take us to these new heights:</p>
+      <ul>
+        <li>Threading</li>
+        <li>Garbage collection</li>
+        <li>ES module integration and more!</li>
+      </ul>`,
       message: '',
     },
     workshop: null,
@@ -117,8 +125,11 @@ export default [
       Tweets at <a href="http://twitter.com/csswizardry">@csswizardry</a>.
     </p>`,
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'It’s My (Third) Party, and I’ll Cry if I Want To',
+      description: `
+      <p>Like it or not, a huge part of modern web development involves the use of third-party providers: fonts, analytics, ads, tracking, and more all have an impact of performance, and can leave us (or, more worryingly, our visitors) susceptible to performance degradation.</p>
+      <p>In this talk, we’ll take a look at unruly or uninvited (third-)party guests: how to detect them, how to audit them, and how to manage them. We’ll also look at the different tools available to help us stress-test and quantify the overhead these third parties bring, and what that means for users and businesses alike.</p>
+      `,
       message: '',
     },
     workshop: null,
@@ -207,8 +218,8 @@ export default [
     description:
       'Hui Jing is a self-taught designer and developer with an inordinate love for CSS. Reducing lines of code in her web projects makes her extremely happy. She used to play basketball full-time and launched her web career during downtime between training sessions.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'Web typography: a non-English perspective',
+      description: `Typography was defined by Gerrit Noordzij as writing with prefabricated letters. More than half of the content on the web is in English even though native English speakers make up less than 5% of the world's population. English only has 26 letters, but writing systems across the world use many more letters and characters, many of which are laid out in different directions as well. This talk covers the intricacies of ensuring web fonts display and are laid out correctly regardless of language, and how some of these layouts can translate across writing systems for creative art direction on the web.`,
       message: '',
     },
     workshop: null,
@@ -249,7 +260,41 @@ export default [
       `,
       message: '',
     },
-    workshop: null,
+    workshop: {
+      title: 'Advanced Performance Tuning for React Applications',
+      type: 'Full-Day Workshop',
+      permalink: 'react',
+      logo: 'react.png',
+      description: `
+      <p>Getting performance right is hard, even when we have the luxury of starting our apps from scratch. It’s even harder when the ideal crashes headlong into reality, and we need to improve the performance of existing apps, as is so often the case. In this workshop, Eli Fitch and Jason Lengstorf will lead you through the process of:</p>
+
+      <ul>
+      <li>Assessing an existing React app</li>
+      <li>Diagnosing performance problems</li>
+      <li>Prioritizing the fixes that will make the biggest impact</li>
+      <li>Implementing performance fixes</li>
+      </ul> 
+
+      <p>During this full-day workshop, you’ll learn advanced techniques for improving the performance of React apps, including:</p>
+      
+      <ul>
+      <li>Lazy loading resources & components (including React.lazy and Suspense)</li>
+      <li>Leveraging Service Workers for performance</li>
+      <li>Seamlessly preloading and prefetching assets</li>
+      <li>Automatically optimizing images and fonts</li>
+      <li>Mitigating the performance impact of third-party scripts</li>
+      <li>Code splitting and bundle optimization</li>
+      <li>Using psychology to make your app feel faster than it actually is</li>
+      </ul> 
+      
+      <p>By the end of the workshop, you’ll be able to diagnose performance problems and solve them with a combination of modern and time-tested performance techniques. You’ll also learn how to weigh the trade-offs of implementing fixes to ensure that both your apps and your teams perform well. The tools added to your toolbox will continue to serve you, your team, and your users for years to come.</p>
+      `,
+      prerequisites: `
+        <p>Intermediate React knowledge, Node/npm installed, Git installed, basic command line knowledge.</p>
+      `,
+      seats: 40,
+      socialMedia: ``,
+    },
     previousTalks: [],
     otherTalks: [
       {
@@ -353,5 +398,249 @@ export default [
         url: 'https://www.youtube.com/watch?v=6qaupQ0KnkU',
       },
     ],
+  },
+  {
+    name: 'sia',
+    fullName: 'Sia Karamalegos',
+    permalink: 'sia-karamalegos',
+    firstName: 'Sia',
+    reference: 'her',
+    position: 'Founder and Lead Developer',
+    company: 'Clio + Calliope',
+    img: 'sia-karamalegos.jpg',
+    twitter: 'https://twitter.com/thegreengreek',
+    github: 'https://github.com/siakaramalegos',
+    website: 'https://siakaramalegos.github.io/',
+    description: `Sia Karamalegos is a developer, international conference speaker, and writer. She co-organizes #FrontEndParty, gnocode, and NOLA Hack Night in the New Orleans area. She is the founder and lead developer for Clio + Calliope Web Development and was recognized in the Silicon Bayou 100, the 100 most influential and active people in tech and entrepreneurship in Louisiana. When she's not coding, speaking, or consulting, Sia likes to design crochet patterns and dabble in charcoal figure drawing. She's also an avid endurance athlete.`,
+    talk: null,
+    workshop: {
+      title: 'Advanced Performance Tuning for React Applications',
+      type: 'Full-Day Workshop',
+      permalink: 'react',
+      logo: 'react.png',
+      description: `
+      <p>Getting performance right is hard, even when we have the luxury of starting our apps from scratch. It’s even harder when the ideal crashes headlong into reality, and we need to improve the performance of existing apps, as is so often the case. In this workshop, Eli Fitch and Jason Lengstorf will lead you through the process of:</p>
+
+      <ul>
+      <li>Assessing an existing React app</li>
+      <li>Diagnosing performance problems</li>
+      <li>Prioritizing the fixes that will make the biggest impact</li>
+      <li>Implementing performance fixes</li>
+      </ul> 
+
+      <p>During this full-day workshop, you’ll learn advanced techniques for improving the performance of React apps, including:</p>
+      
+      <ul>
+      <li>Lazy loading resources & components (including React.lazy and Suspense)</li>
+      <li>Leveraging Service Workers for performance</li>
+      <li>Seamlessly preloading and prefetching assets</li>
+      <li>Automatically optimizing images and fonts</li>
+      <li>Mitigating the performance impact of third-party scripts</li>
+      <li>Code splitting and bundle optimization</li>
+      <li>Using psychology to make your app feel faster than it actually is</li>
+      </ul> 
+      
+      <p>By the end of the workshop, you’ll be able to diagnose performance problems and solve them with a combination of modern and time-tested performance techniques. You’ll also learn how to weigh the trade-offs of implementing fixes to ensure that both your apps and your teams perform well. The tools added to your toolbox will continue to serve you, your team, and your users for years to come.</p>
+      `,
+      prerequisites: `
+        <p>Intermediate React knowledge, Node/npm installed, Git installed, basic command line knowledge.</p>
+      `,
+      seats: 40,
+      socialMedia: ``,
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'nir',
+    fullName: 'Nir Kaufman',
+    permalink: 'nir-kaufman',
+    firstName: 'Nir',
+    reference: 'him',
+    position: 'Principal frontend developer',
+    company: '500Tech',
+    img: 'nir-kaufman.jpg',
+    twitter: 'https://twitter.com/nirkaufman',
+    github: 'https://github.com/nirkaufman',
+    description: `Google Developer Expert in web technologies, public speaker and trainer, tech community activist ( ReactNYC ). Author of books about Front-end development, and the founder of the ‘’Frontend Band” - The first open-source rock n’ roll band! Principal Frontend consultant at 500Tech, a front-end consultancy in NYC.`,
+    talk: null,
+    workshop: {
+      title: 'Build JavaScript Desktop Application with Electron',
+      type: 'Half-Day Workshop',
+      permalink: 'electron',
+      logo: 'electron.png',
+      description: `On this workshop we will dive into the world of Desktop application development with web technologies, using Electron - the open source framework by Github.
+You will learn everything you need to know for design, build, debug, package and distribute cross-platform desktop applications that runs on Windows, Mac OS and linux.
+By the end of this day, you will have the practical knowledge to build and ship your first Desktop application.`,
+      prerequisites: 'Experience with JavaScript and web technologies',
+      seats: 40,
+      socialMedia: ``,
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'liran',
+    fullName: 'Liran Tal',
+    permalink: 'liran-tal',
+    firstName: 'Liran',
+    reference: 'him',
+    position: 'Developer Advocate',
+    company: 'Snyk',
+    img: 'liran-tal.png',
+    twitter: 'https://twitter.com/nirkaufman',
+    github: 'https://github.com/nirkaufman',
+    description: `Google Developer Expert in web technologies, public speaker and trainer, tech community activist ( ReactNYC ). Author of books about Front-end development, and the founder of the ‘’Frontend Band” - The first open-source rock n’ roll band! Principal Frontend consultant at 500Tech, a front-end consultancy in NYC.`,
+    talk: null,
+    workshop: {
+      title: 'Integration Testing Heaven for Node.js Microservices',
+      type: 'Half-Day Workshop',
+      permalink: 'testing-microservices',
+      logo: 'nodejs.png',
+      description: `
+      <p>Are you building a rich Node.js microservices deployment? Are you integrating a frontend UI with an API backend but only find out in production that the API contract is wrong?</p>
+      <p>If you are integrating your Node.js microservices into the rest of your microservices deployment then you experienced by now that classical approaches to testing systems End-to-End do not scale well for microservices due to environment complexity, slowness, and expensive setup. The other approach of mocking your dependent services provide you with no confidence while deploying. </p>
+      <p>If you relate to these problems you will find it extremely beneficial to participate in this workshop and learn how to implement a Consumer-Driven Contracts pattern for a lean way of testing your microservices with the open source Pact framework to ensure APIs don’t break when different teams deploy.</p>
+      <p>We’ll review the required DevOps related flows and dive to a hands-on practical Consumer and Provider testing in Node.js to to build together a couple of API services that integrate together and ship to production in a confident manner and easy to reason about testing workflows.</p>
+      <p>You can expect to learn about collaborating with other team members in the workshop, build a Node.js API, test it, work in an open source GitHub project workflow where you set up Pull-Requests, and a CI pipeline all by yourself to test a system before it’s being deployed.</p>
+      `,
+      prerequisites:
+        'Basic JavaScript and a bit of Node.js although you can probably get by without Node.js too.',
+      seats: 40,
+      socialMedia: ``,
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'carsten',
+    fullName: 'Carsten Meier',
+    permalink: 'carsten-meier',
+    firstName: 'Carsten',
+    reference: 'him',
+    position: 'Web Developer',
+    company: 'Peerigon GmbH',
+    img: 'carsten-meier.jpg',
+    twitter: 'https://twitter.com/peerigon',
+    github: 'https://github.com/acidicX',
+    description: `We make robots dance with web tech at Peerigon. Always living on the cutting edge.`,
+    talk: null,
+    workshop: {
+      title: 'First Steps in WebAssembly & Rust',
+      type: 'Full-Day Workshop',
+      permalink: 'web-assembly',
+      logo: 'web-assembly.png',
+      description: `
+      <p>We want to guide you through the maze that is WebAssembly (WASM)! After a short introduction to WASM and Rust, we will start with a well-known use case inside a single-page application (SPA): The user will upload an image and directly edit it (crop, rotate, scale, etc.). This can already lead to performance issues for the SPA when using large images. WebAssembly, with it's claim of near-native performance, should remedy this.</p>
+      <p>Together and with the help of a provided boilerplate, we will hand over the typical image processing functions to a WebAssembly module written in Rust. Afterwards, we will continue to explore the modern web frontend toolchains and try to integrate WASM as well as possible into the build workflow.</p>
+      <p>To wrap things up, depending on time and fancy, we can have a look at other use cases for WASM: "Yew" for example, a React "substitute" written in Rust, which enables DOM manipulation directly from WASM code.</p>
+      `,
+      prerequisites: 'JavaScript knowledge, ES6/ES2015 should be known.',
+      seats: 20,
+      socialMedia: ``,
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'simon',
+    fullName: 'Simon Abbt',
+    permalink: 'simon-abbt',
+    firstName: 'Simon',
+    reference: 'him',
+    position: 'Web Developer',
+    company: 'Peerigon GmbH',
+    img: 'simon-abbt.jpg',
+    twitter: 'https://twitter.com/peerigon',
+    github: 'https://github.com/bytetyde',
+    description: `We make robots dance with web tech at Peerigon. Always living on the cutting edge.`,
+    talk: null,
+    workshop: {
+      title: 'First Steps in WebAssembly & Rust',
+      type: 'Full-Day Workshop',
+      permalink: 'web-assembly',
+      logo: 'web-assembly.png',
+      description: `
+      <p>We want to guide you through the maze that is WebAssembly (WASM)! After a short introduction to WASM and Rust, we will start with a well-known use case inside a single-page application (SPA): The user will upload an image and directly edit it (crop, rotate, scale, etc.). This can already lead to performance issues for the SPA when using large images. WebAssembly, with it's claim of near-native performance, should remedy this.</p>
+      <p>Together and with the help of a provided boilerplate, we will hand over the typical image processing functions to a WebAssembly module written in Rust. Afterwards, we will continue to explore the modern web frontend toolchains and try to integrate WASM as well as possible into the build workflow.</p>
+      <p>To wrap things up, depending on time and fancy, we can have a look at other use cases for WASM: "Yew" for example, a React "substitute" written in Rust, which enables DOM manipulation directly from WASM code.</p>
+      `,
+      prerequisites: 'JavaScript knowledge, ES6/ES2015 should be known.',
+      seats: 20,
+      socialMedia: ``,
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'andrei',
+    fullName: 'Andrei Antal',
+    permalink: 'andrei-antal',
+    firstName: 'Andrei',
+    reference: 'him',
+    position: 'Frontend and Angular Consultant',
+    img: 'andrei-antal.jpeg',
+    twitter: 'https://twitter.com/@andrei_antal',
+    github: 'https://github.com/andrei-antal',
+    description: ``,
+    talk: null,
+    workshop: {
+      title: 'Advanced Observable Patterns in Angular apps with RxJS',
+      type: 'Half-Day Workshop',
+      permalink: 'angular',
+      logo: 'angular.png',
+      description: `
+      <p>Reactive programming sounds scary and complicated, but in reality it’s just a very natural way of working with asynchronous data streams in your code. Observables are a representation of these streams that allow us to listen and react when new values are emitted. </p>
+      <p>In the first part of the workshop we’ll take a deep dive in the world of Observables, explore the principles under which they operate, create our own, check out some common use-cases and see how they match up to Promises (the native way of handling async code in JavaScript). We’ll also have a look at the extensive and very powerful RxJS library that simplifies and enhances observables offering ways to create, transform combine and filter them. And we’ll wrap up with testing observables techniques, using ascii marble diagrams.</p>
+      <p>RxJS and observables are also the backbone for the Angular framework and so for the second part of the workshop we’ll have a look at how Angular leverages the power of observables in it’s mechanisms to communicate data between components, routing, forms and http. Then we’ll look at some advanced patterns to manage complex async scenarios within an Angular application such as Observable Data Services, instant search, caching and others. For this second part of the workshop, some basic understanding of the main Angular concepts (modules, basics of creating and using components, communication, services, basic routing, basic http etc.) is needed in order to follow along with the examples.</p>
+      <p>At the end of this session you will gain more confidence in programming with observables and leveraging their power in order to create truly reactive Angular (and not only) applications.</p>
+      `,
+      prerequisites:
+        'Basic experience with Angular is required - modules, basics of creating and using components, services, basic routing, basic http etc. Also, since Angular is using TypeScript, understanding of basic TypeScript concepts will be required for the examples (types, classes, interfaces, generics, ES6 constructs) although explanation will be provided on request.',
+      seats: 25,
+      socialMedia: ``,
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'bogdan',
+    fullName: 'Bogdan Luca',
+    permalink: 'bogdan-luca',
+    firstName: 'Bogdan',
+    reference: 'him',
+    position: 'Dev&Ops',
+    company: 'CodeSandbox.io',
+    img: 'bogdan-luca.jpg',
+    github: 'https://github.com/lbogdan/',
+    twitter: 'https://twitter.com/lucabogdan',
+    description:
+      'Jumping between devops, backend and frontend development (sprinkled with unexpected gems like embedded development), with an innate curiosity for how things work behind the public API, after taking a sip of Vue.js about a year ago, I just couldn`t let it down. As I like to say, Vue.js is the framework that makes frontend development great again! So, along a few freelancing projects, I started helping people on the official Vue.js chat, learning a lot in the process - especially the hurdles someone starting with Vue.js goes through. Also, while looking for a way for people to quickly reproduce their issues, I accidentally stumbled upon CodeSandbox, and ended up contributing to it.',
+    talk: null,
+    workshop: {
+      title: 'Advanced Component Patterns in Vue.js',
+      type: 'Half-Day Workshop',
+      permalink: 'vue',
+      logo: 'vue.png',
+      description: `
+        <p>During this workshop we're gonna take a hands-on, test driven approach to implementing some best practice component patterns in Vue.js. We'll start with a few insights into how components are actually implemented in Vue.js, to get a better grasp of how they work and interact with each other. We'll continue with a short primer on how to test your components, as the hands-on part of the workshop will require you writing components that pass certain tests. We're then gonna directly tackle the patterns, which, depending on how fast we'll move and participants' interests, can be some or all of the following:</p>
+        <ul>
+        <li>parent <-> child communication using props and events</li>
+        <li>using mixins to share common functionality between components</li>
+        <li>using lazy-loading to load components only when they need to be displayed</li>
+        <li>using v-model with form input components, and even with entire forms</li>
+        <li>using functional components for improved rendering performance, and also to implement the popular React HOC (higher-order components) pattern</li>
+        <li>using slots to customize how generalist components look like and also to manage layouts in multi-page applications</li>
+        <li>using render functions instead of templates whenever we need more complex rendering logic</li>
+        </ul>
+        <p>At the end of the workshop participants will have a better understanding of how to leverage these patterns to create reusable components for more maintainable applications, and how to use tests to define the requirements and API of their components.</p>
+      `,
+      prerequisites: `Participants should be fairly familiar with Vue.js - having worked on a real-world application, or even played around with a simple one, like the always-present-in-all-tutorial Todos, is recommended. Having unsolved pain-points when dealing with components in Vue.js is a plus! :-)`,
+      seats: 20,
+      soldOut: false,
+      socialMedia: '',
+    },
+    previousTalks: [],
+    otherTalks: [],
   },
 ];

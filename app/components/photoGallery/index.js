@@ -44,9 +44,9 @@ const Component = ({ items = getPhotoItems() }) => (
   <React.Fragment>
     <div className="grid-container">
       {items.map(({ type, key, value }, index) => (
-        <div key={key} className={`grid-item-${type}-${index + 1} upper`}>
+        <div key={key} className={`grid-item-${type}-${index + 1}`}>
           {type === 'text' && (
-            <div className="text-wrapper">
+            <div className="text-wrapper upper">
               <h4>
                 <a href={value.url} target="_blank" rel="noopener noreferrer">
                   {value.title}
@@ -62,7 +62,16 @@ const Component = ({ items = getPhotoItems() }) => (
                 alt=""
               />
               <source
-                media={`(max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.XS})`}
+                media={`(max-width: ${mediaQueries.LAPTOP_WITH_HiDPI}) and (min-width: ${
+                  mediaQueries.LAPTOP_WITH_MDPI
+                })`}
+                srcSet={`static/img/photo_gallery/medium-large/${value.src}`}
+                alt=""
+              />
+              <source
+                media={`(max-width: ${mediaQueries.LAPTOP_WITH_MDPI}) and (min-width: ${
+                  mediaQueries.XS
+                })`}
                 srcSet={`static/img/photo_gallery/medium/${value.src}`}
                 alt=""
               />
@@ -123,10 +132,22 @@ const Component = ({ items = getPhotoItems() }) => (
           width: 75px;
         }
 
-        @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.S}) {
+        @media (max-width: ${mediaQueries.LAPTOP_WITH_HiDPI}) and (min-width: ${mediaQueries.LAPTOP_WITH_MDPI}) {
           .grid-container {
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto auto auto auto 172px;
+            justify-content: center;
+          }
+
+          .text-wrapper {
+            height: 211px;
+          }
+        }
+
+        @media (max-width: ${mediaQueries.LAPTOP_WITH_MDPI}) and (min-width: ${mediaQueries.S}) {
+          .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
           }
 
           .text-wrapper {
@@ -139,17 +160,17 @@ const Component = ({ items = getPhotoItems() }) => (
 
           .grid-item-text-5 {
             grid-row: 7;
-            grid-column: 1 / span 3;
+            grid-column: 1 / span 4;
           }
 
           .grid-item-text-10 {
             grid-row: 8;
-            grid-column: 1 / span 3;
+            grid-column: 1 / span 4;
           }
 
           .grid-item-text-15 {
             grid-row: 9;
-            grid-column: 1 / span 3;
+            grid-column: 1 / span 4;
           }
         }
 

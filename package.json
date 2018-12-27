@@ -6,7 +6,7 @@
   "scripts": {
     "linter": "eslint -c config/.eslintrc.json app pages --quiet",
     "dev": "node server.js",
-    "build": "next build",
+    "build": "next build && node scripts/generateServiceWorker.js",
     "start": "NODE_ENV=production node server.js",
     "format": "prettier --config ./config/.prettierrc --ignore-path ./config/.prettierignore --write '**/*.{js,css,md}'",
     "precommit": "lint-staged",
