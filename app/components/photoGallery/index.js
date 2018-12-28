@@ -102,7 +102,7 @@ const Component = ({ items = getPhotoItems() }) => (
         }
 
         .title {
-          width: 50px;
+          width: 75px;
         }
 
         a {
