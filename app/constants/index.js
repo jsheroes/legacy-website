@@ -8,8 +8,6 @@ export const styles = {
   mainColor7: '#555', // grey light
 };
 export const mediaQueries = {
-  LAPTOP_WITH_HiDPI: '1440px',
-  LAPTOP_WITH_MDPI: '1280px',
   XL: '1200px',
   LAPTOP: '1024px',
   L: '992px',

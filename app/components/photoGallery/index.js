@@ -47,7 +47,7 @@ const Component = ({ items = getPhotoItems() }) => (
         <div key={key} className={`grid-item-${type}-${index + 1}`}>
           {type === 'text' && (
             <div className="text-wrapper upper">
-              <h4>
+              <h4 className="title">
                 <a href={value.url} target="_blank" rel="noopener noreferrer">
                   {value.title}
                 </a>
@@ -62,16 +62,7 @@ const Component = ({ items = getPhotoItems() }) => (
                 alt=""
               />
               <source
-                media={`(max-width: ${mediaQueries.LAPTOP_WITH_HiDPI}) and (min-width: ${
-                  mediaQueries.LAPTOP_WITH_MDPI
-                })`}
-                srcSet={`static/img/photo_gallery/medium-large/${value.src}`}
-                alt=""
-              />
-              <source
-                media={`(max-width: ${mediaQueries.LAPTOP_WITH_MDPI}) and (min-width: ${
-                  mediaQueries.XS
-                })`}
+                media={`(max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.XS})`}
                 srcSet={`static/img/photo_gallery/medium/${value.src}`}
                 alt=""
               />
@@ -99,14 +90,19 @@ const Component = ({ items = getPhotoItems() }) => (
           justify-content: center;
           align-items: center;
           text-align: center;
+          width: 100%;
         }
 
         .text-wrapper {
           display: flex;
-          height: 288px;
+          height: 100%;
           justify-content: center;
           align-items: center;
           text-align: center;
+        }
+
+        .title {
+          width: 50px;
         }
 
         a {
@@ -128,23 +124,7 @@ const Component = ({ items = getPhotoItems() }) => (
           word-break: break-word;
         }
 
-        .title {
-          width: 75px;
-        }
-
-        @media (max-width: ${mediaQueries.LAPTOP_WITH_HiDPI}) and (min-width: ${mediaQueries.LAPTOP_WITH_MDPI}) {
-          .grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto auto 172px;
-            justify-content: center;
-          }
-
-          .text-wrapper {
-            height: 211px;
-          }
-        }
-
-        @media (max-width: ${mediaQueries.LAPTOP_WITH_MDPI}) and (min-width: ${mediaQueries.S}) {
+        @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.S}) {
           .grid-container {
             display: grid;
             grid-template-columns: auto auto auto auto;
