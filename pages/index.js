@@ -12,28 +12,27 @@ import Organizers from '../app/components/organizers/organizers';
 import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
 import ContactForm from '../app/components/contactForm';
-import store from '../app/data/index';
+import PhotoGallery from '../app/components/photoGallery';
+import store from '../app/data/2019';
 import 'what-input';
 
-const Home = () => {
-  const baseUrl = `static/img/${store.currentYear}`;
-  return (
+const buildComponent = (currentStore, year = 2019) => {
+  const baseUrl = `static/img/${year}`;
+  const { speakers, sponsors, partners, communities, schedule } = currentStore;
+
+  const Component = () => (
     <Layout>
       <main>
         <Header />
         <Updates />
-        <Speakers year="2019" baseUrl={baseUrl} speakers={store.data2019.speakers} />
-        <Schedule
-          baseUrl={baseUrl}
-          year="2019"
-          schedule={store.data2019.schedule}
-          speakers={store.data2019.speakers}
-        />
+        <Speakers {...{ baseUrl, year, speakers }} />
+        <Schedule {...{ baseUrl, year, schedule, speakers }} />
         <Mission />
-        <Sponsors baseUrl={baseUrl} sponsors={store.data2019.sponsors} />
-        <Partners baseUrl={baseUrl} partners={store.data2019.partners} />
-        <Communities baseUrl={baseUrl} communities={store.data2019.communities} />
+        <Sponsors {...{ baseUrl, sponsors }} />
+        <Partners {...{ baseUrl, partners }} />
+        <Communities {...{ baseUrl, communities }} />
         <Statistics />
+        <PhotoGallery />
         <Organizers />
         <Venue />
         <ContactForm />
@@ -41,6 +40,8 @@ const Home = () => {
       </main>
     </Layout>
   );
+
+  return Component;
 };
 
-export default Home;
+export default buildComponent(store);
