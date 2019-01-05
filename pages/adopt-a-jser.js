@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../app/components/layout';
 
-import { mediaQueries, styles } from '../app/constants';
+import Layout from '../app/components/layout';
+import { mediaQueries, styles, beAHostLink, beAGuestLink } from '../app/constants';
 
 function pixelsToEm(pixels) {
   return `${(pixels / 16).toFixed(2)}em`;
@@ -10,15 +10,28 @@ function pixelsToEm(pixels) {
 
 const TwoSideButton = () => (
   <React.Fragment>
-    <div className="main-box">
+    <div className="main-box main-colors">
       <div className="button">
-        <div className="button__title">Be a guest</div>
+        <div className="button__title">
+          <a href={beAGuestLink} className="main-colors" target="_blank" rel="noopener noreferrer">
+            Be a guest
+          </a>
+        </div>
         <div className="button__subtitle">Connect with a Host from Cluj-Napoca.</div>
       </div>
     </div>
-    <div className="main-box main_box__inverse">
+    <div className="main-box inverse-colors">
       <div className="button">
-        <div className="button__title">Be a host</div>
+        <div className="button__title">
+          <a
+            href={beAHostLink}
+            className="inverse-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Be a host
+          </a>
+        </div>
         <div className="button__subtitle">Share your home with a JavaScripter.</div>
       </div>
     </div>
@@ -30,11 +43,14 @@ const TwoSideButton = () => (
           align-items: center;
           width: 25vw;
           min-height: 262px;
+        }
+
+        .main-colors {
           background-color: ${styles.mainColor3};
           color: ${styles.mainColor6};
         }
 
-        .main_box__inverse {
+        .inverse-colors {
           background-color: ${styles.mainColor6};
           color: ${styles.mainColor3};
         }
@@ -45,13 +61,19 @@ const TwoSideButton = () => (
           font-stretch: normal;
           line-height: 1.42;
           width: 20vw;
-          letter-spacing: 0.3px;
+          letter-spacing: 0.2px;
           text-align: center;
         }
 
         .button__title {
           font-size: ${pixelsToEm(32)};
           font-weight: bold;
+          letter-spacing: 0.3px;
+        }
+
+        .button__title:hover {
+          text-decoration: underline;
+          cursor: pointer;
         }
 
         .button__subtitle {
@@ -67,37 +89,40 @@ const TwoSideButton = () => (
           .button {
             width: 40vw;
           }
+
+          .button__title {
+            font-size: ${pixelsToEm(30.5)};
+          }
+
+          .button__subtitle {
+            font-size: ${pixelsToEm(24)};
+          }
         }
       `}
     </style>
   </React.Fragment>
 );
 
-const AdoptAJSer = () => (
+const AdoptAJSer = ({
+  isPhotoContestLaunched = false /* The text for the PHOTO CONTEST part should be hidden for now, until we decide to launch contest. */,
+}) => (
   <Layout page="adopt-a-jser">
     <Head>
       <title>Adopt a JSer</title>
     </Head>
-
+    <picture>
+      <source
+        media={`(max-width: ${mediaQueries.XS})`}
+        srcSet="./static/img/adopt_a_jser_header_smallest.png"
+      />
+      <source
+        media={`(max-width: ${mediaQueries.S})`}
+        srcSet="./static/img/adopt_a_jser_header_smaller.png"
+      />
+      <img src="./static/img/adopt_a_jser_header.png" alt="Adopt a Javascripter header" />
+    </picture>
     <section>
       <div className="container">
-        <div className="container__item">
-          <picture>
-            <source
-              className="image-wrapper"
-              media={`(max-width: ${mediaQueries.XS})`}
-              srcSet="./static/img/adopt_a_jser_header_smallest.png"
-              alt=""
-            />
-            <source
-              className="image-wrapper"
-              media={`(max-width: ${mediaQueries.S})`}
-              srcSet="./static/img/adopt_a_jser_header_smaller.png"
-              alt=""
-            />
-            <img className="image-wrapper" src="./static/img/adopt_a_jser_header.png" alt="" />
-          </picture>
-        </div>
         <div className="container__item container__title">
           <div className="main-title">
             Learn About the <span className="main-title__azure">Adopt a JavaScripter</span>{' '}
@@ -110,7 +135,7 @@ const AdoptAJSer = () => (
           <TwoSideButton />
         </div>
         <div className="text-box">
-          <span className="text-wrapper">
+          <div className="text-wrapper">
             <div className="text-wrapper__title">Adopt a JavaScripter</div>
             <div>&nbsp;</div>
             <div>
@@ -122,37 +147,40 @@ const AdoptAJSer = () => (
               to the info you filled in the application forms. Apply if you want to be a Guest, or
               if you are from Cluj-Napoca apply to be a Host.
             </div>
-          </span>
+          </div>
         </div>
       </div>
       <div className="separation-line">&nbsp;</div>
       <div className="container__item container__photo-contest">
         <div className="text-box">
-          <span className="text-wrapper">
+          <div className="text-wrapper">
             <div className="text-wrapper__title">JSHeroes PHOTO CONTEST</div>
             <div>&nbsp;</div>
-            {/* The text for the PHOTO CONTEST part should be hidden for now, until we decide to launch contest. */}
-            <div className="hidden-until-launch">
-              You are participating in the “Adopt a JavaScripter” couch-surfing program? Then enter
-              the JSHeroes photo contest for a chance to win{' '}
-              <span className="text-box__bold">2 free tickets</span> to the JSHeroes conference.{' '}
-              <br />
-              How does the contest work? <br />
-              Take a photo with yourself and your Host or Guest. <br />
-              Then post it on Twitter with the hashtag{' '}
-              <span className="text-box__bold">#adoptajavascripter</span>. <br />
-              The winner will be selected randomly using random.org. <br />
-              Post your photos until April 9, 2019. <br />
-              Pretty simple!
-            </div>
-          </span>
+            {isPhotoContestLaunched ? (
+              <div>
+                You are participating in the “Adopt a JavaScripter” couch-surfing program? Then
+                enter the JSHeroes photo contest for a chance to win{' '}
+                <span className="text-box__bold">2 free tickets</span> to the JSHeroes conference.{' '}
+                <br />
+                How does the contest work? <br />
+                Take a photo with yourself and your Host or Guest. <br />
+                Then post it on Twitter with the hashtag{' '}
+                <span className="text-box__bold">#adoptajavascripter</span>. <br />
+                The winner will be selected randomly using random.org. <br />
+                Post your photos until April 9, 2019. <br />
+                Pretty simple!
+              </div>
+            ) : (
+              'Details coming soon...'
+            )}
+          </div>
         </div>
         <div className="image-box">
           <picture>
             <img
               src="./static/img/adopt_a_jser_photo-contest.png"
               className="image-wrapper"
-              alt=""
+              alt="Adopt a Javascripter contest"
             />
           </picture>
         </div>
@@ -254,10 +282,6 @@ const AdoptAJSer = () => (
         .extend-with-border {
           border: 2px solid #0098ff;
           border-radius: 5px;
-        }
-
-        .hidden-until-launch {
-          display: none;
         }
 
         @media (max-width: ${mediaQueries.L}) {
