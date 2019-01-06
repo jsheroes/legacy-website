@@ -26,8 +26,9 @@
     "intersection-observer": "^0.5.0",
     "next": "^7.0.2",
     "now": "^11.3.9",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "uuid": "^3.3.2",
     "what-input": "^5.1.1"
   },
