@@ -22,7 +22,7 @@ const AfterMovie = ({ year, videos }) => (
       <h3>
         You can find all the recorded talks on our youtube channel
         <Link href={videos.playList} theme={Link.THEME_DARK}>
-          <span className="link"> {year} playlist</span>
+          <span className="link"> {year} playlist </span>
         </Link>
       </h3>
     </div>
