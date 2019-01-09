@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { styles } from '../../constants';
 import ScheduleRow from './scheduleRow';
+import CTAButton from '../common/ctaButton';
 
 class ScheduleTabSelector extends Component {
   constructor() {
@@ -95,13 +96,29 @@ class ScheduleTabSelector extends Component {
     ));
   }
 
+  buildCTAButton() {
+    const { activePosition } = this.state;
+    return activePosition === 0 ? (
+      <CTAButton primary url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019">
+        Buy Your Workshop Ticket
+      </CTAButton>
+    ) : (
+      <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2019">
+        Buy Your Conference Ticket
+      </CTAButton>
+    );
+  }
+
   render() {
     const buttons = this.buildButtonSection();
     const talks = this.buildContent();
+    const button = this.buildCTAButton();
+
     return (
       <div>
         <div className="buttons-section clearfix">{buttons}</div>
         <div className="content-section clearfix">{talks}</div>
+        <div className="cta-button clearfix">{button}</div>
         <style jsx>
           {`
             .check-in,
@@ -145,6 +162,12 @@ class ScheduleTabSelector extends Component {
 
             .content-section {
               float: left;
+              width: 100%;
+            }
+
+            .cta-button {
+              float: left;
+              margin-top: 20px;
               width: 100%;
             }
           `}
