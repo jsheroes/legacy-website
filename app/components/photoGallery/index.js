@@ -59,16 +59,14 @@ const Component = ({ items = getPhotoItems() }) => (
               <source
                 media={`(max-width: ${mediaQueries.XS})`}
                 srcSet={`static/img/photo_gallery/small/${value.src}`}
-                alt=""
               />
               <source
                 media={`(max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.XS})`}
                 srcSet={`static/img/photo_gallery/medium/${value.src}`}
-                alt=""
               />
               <img
-                srcSet={`static/img/photo_gallery/large/${value.src}`}
-                alt=""
+                src={`static/img/photo_gallery/large/${value.src}`}
+                alt="gallery item"
                 className="image-wrapper"
               />
             </picture>

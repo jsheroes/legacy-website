@@ -3,6 +3,7 @@ import Router from 'next/router';
 import Layout from '../app/components/layout';
 import Section from '../app/components/common/section';
 import Link from '../app/components/common/link';
+import CTAButton from '../app/components/common/ctaButton';
 import store from '../app/data/index';
 import { styles, mediaQueries } from '../app/constants';
 import RawHtml from '../app/components/common/rawHtml';
@@ -86,6 +87,13 @@ const Workshop = ({ speakers }) => {
           </div>
         </div>
         <div className="workshop-description clearfix">
+          <CTAButton
+            primary
+            align="left"
+            url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019"
+          >
+            Buy Your Ticket
+          </CTAButton>
           <p className="workshop-section">
             <strong>Curricula</strong>
           </p>
@@ -111,12 +119,13 @@ const Workshop = ({ speakers }) => {
             <div>Join {firstSpeaker.reference} at JSHeroes!</div>
           </div>
           <div className="workshop-ticket">
-            <Link
-              theme={Link.THEME_DARK}
-              href="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019"
+            <CTAButton
+              primary
+              align="left"
+              url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019"
             >
-              <span className="button">Buy your Ticket</span>
-            </Link>
+              Buy Your Ticket
+            </CTAButton>
           </div>
         </div>
         <style jsx>
