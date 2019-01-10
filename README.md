@@ -4,6 +4,9 @@ This repo contains the code for our JavaScript International Conference site hos
 
 [![Build Status](https://travis-ci.org/jsheroes/jsheroes.io.svg?branch=master)](https://travis-ci.org/jsheroes/jsheroes.io)
 
+[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=jsheroes_jsheroes.io&metric=alert_status)](https://sonarcloud.io/dashboard?id=jsheroes_jsheroes.io)
+
+
 ## Installation
 
 Copy the repo in the current folder:
