@@ -29,4 +29,9 @@ export default [
     img: 'logo_arobs.png',
     href: 'http://www.arobs.com/',
   },
+  {
+    title: 'Telenav',
+    img: 'logo_telenav.png',
+    href: 'https://www.telenav.com/',
+  },
 ];
