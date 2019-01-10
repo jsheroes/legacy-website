@@ -488,9 +488,9 @@ By the end of this day, you will have the practical knowledge to build and ship 
     position: 'Developer Advocate',
     company: 'Snyk',
     img: 'liran-tal.png',
-    twitter: 'https://twitter.com/nirkaufman',
-    github: 'https://github.com/nirkaufman',
-    description: `Google Developer Expert in web technologies, public speaker and trainer, tech community activist ( ReactNYC ). Author of books about Front-end development, and the founder of the ‘’Frontend Band” - The first open-source rock n’ roll band! Principal Frontend consultant at 500Tech, a front-end consultancy in NYC.`,
+    twitter: 'https://twitter.com/liran_tal',
+    github: 'https://github.com/lirantal',
+    description: `Liran Tal is a Developer Advocate at Snyk and a member of the Node.js Security working group. He is a JSHeroes ambassador, passionate about building communities and the open source movement and greatly enjoys pizza, wine, web technologies, and CLIs. Liran is also the author of Essential Node.js Security, a core contributor to OWASP NodeGoat project and loves to dabble about code, testing, and software philosophy.`,
     talk: null,
     workshop: {
       title: 'Integration Testing Heaven for Node.js Microservices',
