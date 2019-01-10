@@ -4,7 +4,7 @@ import { styles, mediaQueries } from '../constants';
 
 const PersonInfo = ({ WrappingElement, person, baseUrl, ...props }) => (
   <WrappingElement {...props} className="speaker-info-box">
-    <img src={`${baseUrl}${person.img}`} alt={person.fullName} />
+    <img className="lazyload" data-src={`${baseUrl}${person.img}`} alt={person.fullName} />
     <div className="speaker-hover" />
     <div className="speaker-details">
       <h5 aria-hidden="true">{person.fullName}</h5>

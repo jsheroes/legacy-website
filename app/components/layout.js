@@ -63,6 +63,7 @@ class Layout extends Component {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@jsheroes" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86169211-2" />
+          <script src="/static/scripts/lazysizes.min.js" async="" />
           <script dangerouslySetInnerHTML={{ __html: googleAnalyticsTag() }} />
           <script dangerouslySetInnerHTML={{ __html: facebookPixelTag() }} />
           <script dangerouslySetInnerHTML={{ __html: hotjarTag() }} />

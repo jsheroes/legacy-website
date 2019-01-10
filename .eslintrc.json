@@ -11,7 +11,7 @@
   },
   "rules": {
     "semi": 2,
-    "no-use-before-define": 1,
+    "no-use-before-define": ["error", { "functions": false, "classes": true }],
     "react/jsx-uses-vars": 2,
     "react/react-in-jsx-scope": 0,
     "react/prop-types": 0,

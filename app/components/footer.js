@@ -8,7 +8,7 @@ const Footer = () => (
       <div>
         <span className="home-link">
           <Link href="/">
-            <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
+            <img className="lazyload" alt="JSHeroes Logo" data-src="/static/img/website-logo.svg" />
           </Link>
         </span>
       </div>

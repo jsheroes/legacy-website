@@ -75,7 +75,11 @@ class Nav extends Component {
         <nav>
           <div className="logo">
             <Link href="/" onClick={this.closeMobileNavigation}>
-              <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
+              <img
+                className="lazyload"
+                alt="JSHeroes Logo"
+                data-src="/static/img/website-logo.svg"
+              />
             </Link>
           </div>
           <div>

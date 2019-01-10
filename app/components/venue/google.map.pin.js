@@ -28,7 +28,7 @@ export default class MapPin extends Component {
             <strong>Grand Hotel Italia</strong>
           </p>
         </div>
-        <img src="/static/img/js_heroes_pin.png" alt="The Map Pin" />
+        <img className="lazyload" data-src="/static/img/js_heroes_pin.png" alt="The Map Pin" />
 
         <style jsx>
           {`

@@ -73,8 +73,8 @@ class Header extends Component {
     const media = (
       <div>
         <img
-          className="background-image"
-          src="/static/img/speakers_and_organizers.jpg"
+          className="background-image lazyload"
+          data-src="/static/img/speakers_and_organizers.jpg"
           alt="background"
         />
         <style jsx>

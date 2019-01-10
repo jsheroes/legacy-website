@@ -4,7 +4,7 @@ import { styles, mediaQueries } from '../../constants';
 const Organizer = ({ role, image, name, twitter }) => (
   <div>
     <div className="organizer-info-box">
-      <img src={`static/img/organizers/${image}`} alt={name} />
+      <img className="lazyload" data-src={`static/img/organizers/${image}`} alt={name} />
       <div className="organizer-hover" />
       <div className="organizer-details">
         <h5>{name}</h5>

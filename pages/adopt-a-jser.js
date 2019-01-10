@@ -119,7 +119,11 @@ const AdoptAJSer = ({
         media={`(max-width: ${mediaQueries.S})`}
         srcSet="./static/img/adopt_a_jser_header_smaller.png"
       />
-      <img src="./static/img/adopt_a_jser_header.png" alt="Adopt a Javascripter header" />
+      <img
+        className="lazyload"
+        data-src="./static/img/adopt_a_jser_header.png"
+        alt="Adopt a Javascripter header"
+      />
     </picture>
     <section>
       <div className="container">

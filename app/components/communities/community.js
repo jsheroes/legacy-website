@@ -4,7 +4,7 @@ import { mediaQueries } from '../../constants';
 const Community = ({ href, title, img, baseUrl }) => (
   <li>
     <Link href={`${href}`} title={`${title}`}>
-      <img src={`${baseUrl}/communities/${img}`} alt={`${title}`} />
+      <img className="lazyload" data-src={`${baseUrl}/communities/${img}`} alt={`${title}`} />
     </Link>
 
     <style jsx>

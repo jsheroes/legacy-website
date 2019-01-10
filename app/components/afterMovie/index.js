@@ -11,9 +11,10 @@ const AfterMovie = ({ year, videos }) => (
         <iframe
           aria-label="JSHeroes After Movie"
           title="JSHeroes After Movie"
+          className="lazyload"
           width="560"
           height="315"
-          src={videos.afterMovie}
+          data-src={videos.afterMovie}
           frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen

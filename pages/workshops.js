@@ -47,8 +47,8 @@ const Workshop = ({ speakers }) => {
       <Section>
         <div className="workshop-details">
           <img
-            className="tech-image"
-            src={`/static/img/technologies/${workshop.logo}`}
+            className="tech-image lazyload"
+            data-src={`/static/img/technologies/${workshop.logo}`}
             alt={workshop.title}
           />
           <div className="workshop-title">

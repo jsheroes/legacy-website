@@ -65,9 +65,9 @@ const Component = ({ items = getPhotoItems() }) => (
                 srcSet={`static/img/photo_gallery/medium/${value.src}`}
               />
               <img
-                src={`static/img/photo_gallery/large/${value.src}`}
+                data-src={`static/img/photo_gallery/large/${value.src}`}
                 alt="gallery item"
-                className="image-wrapper"
+                className="image-wrapper lazyload"
               />
             </picture>
           )}

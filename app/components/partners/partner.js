@@ -5,7 +5,12 @@ const Partner = ({ href, className, img, title, baseUrl }) => (
   <li>
     <Link href={href}>
       <span className={className}>
-        <img src={`${baseUrl}/partners/${img}`} title={title} alt={title} />
+        <img
+          className="lazyload"
+          data-src={`${baseUrl}/partners/${img}`}
+          title={title}
+          alt={title}
+        />
       </span>
     </Link>
 

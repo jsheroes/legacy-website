@@ -5,8 +5,8 @@ const ActivityImage = ({ baseUrl, speakers }) => (
     {speakers.map(speaker => (
       <img
         key={speaker.permalink}
-        className="activity-image-speaker"
-        src={`${baseUrl}/speakers/${speaker.img}`}
+        className="activity-image-speaker lazyload"
+        data-src={`${baseUrl}/speakers/${speaker.img}`}
         alt={speaker.fullName}
       />
     ))}

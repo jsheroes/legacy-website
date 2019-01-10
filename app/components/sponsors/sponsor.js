@@ -4,7 +4,12 @@ import { mediaQueries } from '../../constants';
 const Sponsor = ({ href, title, img, baseUrl }) => (
   <li>
     <Link href={href}>
-      <img src={`${baseUrl}/sponsors/${img}`} title={`${title}`} alt={`${title}`} />
+      <img
+        className="lazyload"
+        data-src={`${baseUrl}/sponsors/${img}`}
+        title={`${title}`}
+        alt={`${title}`}
+      />
     </Link>
 
     <style jsx>

@@ -36,7 +36,8 @@ const SpeakerDetail = ({ speaker }) => {
               <div className="speaker-info-box">
                 <div className="speaker-img">
                   <img
-                    src={`/static/img/${store.currentYear}/speakers/${speaker.img}`}
+                    className="lazyload"
+                    data-src={`/static/img/${store.currentYear}/speakers/${speaker.img}`}
                     alt={speaker.fullName}
                   />
                 </div>
