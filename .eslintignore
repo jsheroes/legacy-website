@@ -1,3 +1,3 @@
 ../tests/**
 ../cypress/**
-../static/scripts/**
+static/scripts/**
