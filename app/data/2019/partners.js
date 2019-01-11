@@ -19,4 +19,9 @@ export default [
     img: 'logo_microsoft.png',
     href: 'https://www.microsoft.com',
   },
+  {
+    title: 'United Business Center',
+    img: 'logo_united_business_center.png',
+    href: 'http://unitedbusinesscenter.ro/ubc-in-cluj/',
+  },
 ];
