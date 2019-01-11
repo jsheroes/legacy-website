@@ -40,9 +40,14 @@ self.addEventListener('activate', event => {
  * Here we configure caching strategies according to the request type.
  */
 self.addEventListener('fetch', event => {
-  const { destination } = event.request;
+  const { destination, url, cache, mode } = event.request;
   // DevTools opening will trigger these o-i-c requests, which SW can't handle - avoid error in console
-  if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') {
+  if (cache === 'only-if-cached' && mode !== 'same-origin') {
+    return;
+  }
+
+  // #296 Bypass service worker for PDFs due to Chrome bug (this code can be removed once Chrome v73 is released)
+  if (url.toLowerCase().endsWith('.pdf')) {
     return;
   }
 
