@@ -221,7 +221,7 @@ const Workshop = ({ speakers }) => {
 Workshop.getInitialProps = async ({ res, query }) => {
   const workshopName = query.name;
   if (!workshopName) {
-    Helpers.redirectTo(res, '/');
+    Helpers.redirectTo({ res, path: '/' });
   }
 
   const speakers = store.data2019.speakers.filter(
@@ -229,7 +229,7 @@ Workshop.getInitialProps = async ({ res, query }) => {
   );
 
   if (speakers.length <= 0) {
-    Helpers.redirectTo(res, '/');
+    Helpers.redirectTo({ res, path: '/' });
   }
 
   return { speakers };
