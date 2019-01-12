@@ -2,6 +2,9 @@ import { Component } from 'react';
 import { styles } from '../../constants';
 import ScheduleRow from './scheduleRow';
 import CTAButton from '../common/ctaButton';
+import StoreFactory from '../../storeFactory';
+
+const store = StoreFactory.getStore('activePosition');
 
 class ScheduleTabSelector extends Component {
   constructor() {
@@ -9,18 +12,28 @@ class ScheduleTabSelector extends Component {
     this.state = {
       activePosition: 1,
     };
+
     this.buildButtonSection = this.buildButtonSection.bind(this);
+    this.getActivePosition = this.getActivePosition.bind(this);
+  }
+
+  getActivePosition() {
+    const storePosition = store.getItem();
+    const { activePosition } = this.state;
+    return storePosition === undefined ? activePosition : storePosition;
   }
 
   handleClick(position) {
-    return () =>
+    return () => {
+      store.setItem(position);
       this.setState({
         activePosition: position,
       });
+    };
   }
 
   buildButtonSection() {
-    const { activePosition } = this.state;
+    const activePosition = this.getActivePosition();
     const { schedule } = this.props;
     return schedule.map(item => {
       const active = item.index === activePosition ? 'active' : '';
@@ -81,7 +94,7 @@ class ScheduleTabSelector extends Component {
   }
 
   buildContent() {
-    const { activePosition } = this.state;
+    const activePosition = this.getActivePosition();
     const { schedule, baseUrl, speakers } = this.props;
     const agenda = schedule[activePosition].activities;
     return agenda.map((item, index) => (
@@ -97,7 +110,7 @@ class ScheduleTabSelector extends Component {
   }
 
   buildCTAButton() {
-    const { activePosition } = this.state;
+    const activePosition = this.getActivePosition();
     return activePosition === 0 ? (
       <CTAButton primary url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019">
         Buy Your Workshop Ticket
