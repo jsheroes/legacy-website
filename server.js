@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const sgMail = require('@sendgrid/mail');
 
-const config = require('./config/config');
+const config = require('./config');
 
 const dev = process.env.NODE_ENV !== 'production';
 
