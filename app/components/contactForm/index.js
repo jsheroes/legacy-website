@@ -3,6 +3,11 @@ import { Component } from 'react';
 import Button from '../common/Button';
 import { mediaQueries } from '../../constants';
 
+const MESSAGE = {
+  title: 'Contact us',
+  subtitle: "We'll get back to you within 2 business days.",
+};
+
 class ContactForm extends Component {
   constructor(props) {
     super(props);
@@ -60,9 +65,9 @@ class ContactForm extends Component {
       <div id="contactForm">
         <form className="flex-container" onSubmit={this.onSubmit}>
           <div className="row">
-            <h2>Contact us</h2>
+            <h2>{MESSAGE.title}</h2>
           </div>
-          <div className="row">&nbsp;</div>
+          <div className="row">{MESSAGE.subtitle}</div>
           <div className="row">
             <textarea
               className="inputElement"
@@ -98,15 +103,20 @@ class ContactForm extends Component {
               align-items: center;
               flex-direction: column;
 
-              height: 400px;
+              height: 450px;
             }
 
             .inputElement {
               padding: 10px;
               width: 40vw;
+
               border: 1px solid #d7d7d7;
               border-radius: 5px;
+
               font-size: 16px;
+              font-family: Roboto, sans-serif;
+              font-weight: 300;
+              line-height: 1.5;
             }
 
             .error {
