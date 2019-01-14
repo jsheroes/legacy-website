@@ -10,6 +10,12 @@ export default [
       'We received <strong>over 300 proposals</strong> for JSHeroes 2019! We will <strong>announce</strong> all the speakers by the 1st of February!',
   },
   {
+    title: 'Sticker Contest',
+    content: `<div>Announcing: JSHeroes Sticker Contest</div>
+              <div>Enter the sticker design competition to win cool stuff or just to have fun!</div>
+              <div>Find all the <a href="/sticker-contest">details here.</Link></div>`,
+  },
+  {
     title: 'Sponsors',
     content:
       'Our Call for Sponsors is always open. Send us an email if you’re interested to join our mission in 2019 at <a href="mailto:welcome@jsheroes.io">welcome@jsheroes.io</a> and we’ll take it from there.',
