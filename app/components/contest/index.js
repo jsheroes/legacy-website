@@ -2,7 +2,7 @@ import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
 
 const ContestMain = () => (
-  <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
+  <Section>
     <div className="central-container">
       <h2>
         {' '}
@@ -17,7 +17,7 @@ const ContestMain = () => (
         </div>
         <div>
           We love everything related to communities, and
-          <strong> we love stickers</strong> - we collect them, trade them, and somethime even stick
+          <strong> we love stickers</strong> - we collect them, trade them, and sometimes even stick
           them on our laptops. Some of us like to use them on mugs and T-shirts, whatever the case,
           we love these things!
         </div>

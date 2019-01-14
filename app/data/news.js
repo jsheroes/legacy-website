@@ -13,7 +13,7 @@ export default [
     title: 'Sticker Contest',
     content: `<div>Announcing: JSHeroes Sticker Contest</div>
               <div>Enter the sticker design competition to win cool stuff or just to have fun!</div>
-              <div>Find all the <a href="/sticker-contest">details here.</Link></div>`,
+              <div>Find all the <a href="/sticker-contest">details here.</a></div>`,
   },
   {
     title: 'Sponsors',
