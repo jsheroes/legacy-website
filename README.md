@@ -21,7 +21,7 @@ Install dependencies
 npm i
 ```
 
-Copy `config/config.example.js` into `config/config.js` and put there your own settings and launch the server:
+Copy `config.example.js` into `config.js` and put there your own settings and launch the server:
 
 ```bash
 npm run dev
