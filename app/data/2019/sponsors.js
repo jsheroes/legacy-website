@@ -34,4 +34,9 @@ export default [
     img: 'logo_telenav.png',
     href: 'https://www.telenav.com/',
   },
+  {
+    title: 'Modus Create',
+    img: 'logo_modus.png',
+    href: 'https://moduscreate.com/',
+  },
 ];
