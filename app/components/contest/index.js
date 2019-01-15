@@ -1,5 +1,6 @@
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
+import Link from '../common/link';
 
 const ContestMain = () => (
   <Section>
@@ -80,7 +81,13 @@ const ContestMain = () => (
       <section>
         <strong>Submission rules</strong>
         <div>
-          Please submit your stickers as a compressed or zip file to: <u>welcome@jsheroes.io</u>
+          Please submit your stickers as a compressed or zip file to:
+          <Link
+            theme={Link.THEME_DARK}
+            href="mailto:welcome@jsheroes.io?subject=JSHeroes stickers competition"
+          >
+            {' welcome@jsheroes.io'}
+          </Link>
         </div>
         <div>
           Use email Subject: <strong> JSHeroes stickers competition</strong>
