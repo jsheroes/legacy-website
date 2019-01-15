@@ -11,7 +11,7 @@ addons:
     organization: "jsheroes" # the key of the organization
 
 script:
-  - cp config/config.example.js config/config.js
+  - cp config.example.js config.js
   - npm run linter
   - npm run build
   - npm start & wait-on http://localhost:4001
