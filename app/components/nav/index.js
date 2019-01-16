@@ -145,7 +145,7 @@ class Nav extends Component {
                 display: block;
                 transform: translate(0, 69px); // Nav's height - the bottom-border
                 width: 100%;
-                transition: all 900ms ease-in;
+                transition: all 400ms ease-in-out;
                 opacity: 0.85;
                 top: 0;
               }
@@ -155,7 +155,7 @@ class Nav extends Component {
                 position: fixed;
                 left: 0;
                 transform: translate(0%, -200%);
-                transition: all 900ms ease-out;
+                transition: all 400ms ease-in-out;
                 width: 100%;
                 opacity: 0;
                 background-color: black;

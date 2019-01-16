@@ -26,19 +26,19 @@ const HamburgerMenu = ({ isOpen, onClick }) => (
             width: 25px;
             height: 3px;
             position: static;
-            transition: all 900ms ease-in-out;
+            transition: all 400ms ease-in-out;
           }
 
           .open .first {
             transform: translate(0, 8px) rotate(45deg);
             background-color: ${styles.mainColor5};
-            transition: all 900ms ease-in-out;
+            transition: all 400ms ease-in-out;
           }
 
           .open .middle {
             transform: rotate(-45deg);
             background-color: ${styles.mainColor5};
-            transition: all 900ms ease-in-out;
+            transition: all 400ms ease-in-out;
           }
 
           .open .last {
