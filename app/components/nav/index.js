@@ -143,9 +143,9 @@ class Nav extends Component {
 
               .navigation-wrapper.open ul.menu-items {
                 display: block;
-                transform: translate(0, 69px); // Nav's height - the bottom-border
+                transform: translate(0, 70px); // Nav's height - the bottom-border
                 width: 100%;
-                transition: all 900ms ease-in;
+                transition: all 400ms ease-out;
                 opacity: 0.85;
                 top: 0;
               }
@@ -154,8 +154,8 @@ class Nav extends Component {
                 display: block;
                 position: fixed;
                 left: 0;
-                transform: translate(0%, -200%);
-                transition: all 900ms ease-out;
+                transform: translate(0%, -100%);
+                transition: all 400ms ease-out;
                 width: 100%;
                 opacity: 0;
                 background-color: black;
