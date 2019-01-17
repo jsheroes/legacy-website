@@ -39,4 +39,9 @@ export default [
     img: 'logo_modus.png',
     href: 'https://moduscreate.com/',
   },
+  {
+    title: 'Mozilla',
+    img: 'logo_mozilla.png',
+    href: 'https://www.mozilla.org/en-US/',
+  },
 ];
