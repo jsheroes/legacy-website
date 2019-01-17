@@ -29,6 +29,10 @@ export default [
         speakerRef: 'nir-kaufman',
         time: '14:00 - 18:00',
       },
+      {
+        speakerRef: 'benedek-gagyi',
+        time: '14:00 - 18:00',
+      },
     ],
   },
   {

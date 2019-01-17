@@ -513,6 +513,41 @@ By the end of this day, you will have the practical knowledge to build and ship 
     otherTalks: [],
   },
   {
+    name: 'ben',
+    fullName: 'Benedek Gagyi',
+    permalink: 'benedek-gagyi',
+    firstName: 'Ben',
+    reference: 'him',
+    position: 'Software Engineer',
+    company: 'LogMeIn',
+    img: 'benedek-gagyi.jpg',
+    twitter: 'https://twitter.com/BenedekGagyi',
+    description: '',
+    talk: null,
+    workshop: {
+      title: 'Web Security for Frontend Engineers',
+      type: 'Half-Day Workshop',
+      permalink: 'security',
+      logo: 'javascript.png',
+      description: `
+        <p>Web security may seem like a field that's scarily deep ... and it kind of is. The aim of this half day workshop is to clear up a few basic concepts and ideas that are necessary to get started in the field of security. The curriculum is tailored for frontend developers, with more accent on frontend specific attack vectors, but it can be useful for anyone.</p>
+        <p>What we will cover</p>
+        <ul>
+        <li>Why is security important? Is awareness enough?</li>
+        <li>OWASP top 10: the most important attack vectors.</li>
+        <li>Exercises from both the attackers and the defenders point of view.</li>
+        <li>The basics of cryptography and real world examples</li>
+        </ul>
+      `,
+      prerequisites: '',
+      seats: 20,
+      soldOut: false,
+      socialMedia: '',
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
     name: 'carsten',
     fullName: 'Carsten Meier',
     permalink: 'carsten-meier',
