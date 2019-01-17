@@ -16,7 +16,7 @@ import PhotoGallery from '../app/components/photoGallery';
 import store from '../app/data/2019';
 import 'what-input';
 
-const buildComponent = (currentStore, year = 2019) => {
+const buildComponent = (currentStore, year = '2019') => {
   const baseUrl = `static/img/${year}`;
   const { speakers, sponsors, partners, communities, schedule } = currentStore;
 
