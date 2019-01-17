@@ -10,11 +10,6 @@ export default [
     href: 'https://www.meetup.com/Women-in-Tech-Cluj/',
   },
   {
-    title: 'Mozilla',
-    img: 'logo_mozilla.png',
-    href: 'https://www.mozilla.org/en-US/',
-  },
-  {
     title: 'microsoft',
     img: 'logo_microsoft.png',
     href: 'https://www.microsoft.com',
