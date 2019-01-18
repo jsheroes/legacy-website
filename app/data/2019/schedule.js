@@ -64,15 +64,15 @@ export default [
         time: '10:30 - 11:00',
       },
       {
-        speakerRef: 'anjana-vakil',
+        speakerRef: 'alejandro-oviedo',
         time: '11:00 - 11:30',
       },
       {
-        speakerRef: '',
+        speakerRef: ['anna-backs', 'christina-zenzes'],
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'lin-clark',
         time: '12:00 - 12:30',
       },
       {
@@ -88,7 +88,7 @@ export default [
         time: '14:30 - 15:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'chris-demars',
         time: '15:00 - 15:30',
       },
       {
@@ -100,11 +100,11 @@ export default [
         time: '16:00 - 16:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'harry-roberts',
         time: '16:30 - 17:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'daisy-smith',
         time: '17:00 - 17:30',
       },
     ],
@@ -120,27 +120,31 @@ export default [
         time: '08:30 - 09:30',
       },
       {
-        speakerRef: 'lin-clark',
-        time: '09:30 - 10:00',
+        speakerRef: 'tomasz-lakomy',
+        time: '09:30 - 09:50',
       },
       {
-        speakerRef: 'henry-zhu',
-        time: '10:00 - 10:30',
+        speakerRef: 'bogdan-zaharia',
+        time: '09:50 - 10:10',
+      },
+      {
+        speakerRef: 'jeffrey-lembeck',
+        time: '10:10 - 10:30',
       },
       {
         overrideTitle: 'Coffee Break',
         time: '10:30 - 11:00',
       },
       {
-        speakerRef: 'guillaume-chau',
+        speakerRef: 'anjana-vakil',
         time: '11:00 - 11:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'shelley-vohr',
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: 'harry-roberts',
+        speakerRef: 'natalia-tepluhina',
         time: '12:00 - 12:30',
       },
       {
@@ -148,15 +152,15 @@ export default [
         time: '12:30 - 14:00',
       },
       {
-        speakerRef: '',
+        speakerRef: 'charlie-gerard',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'henry-zhu',
         time: '14:30 - 15:00',
       },
       {
-        speakerRef: 'charlie-gerard',
+        speakerRef: 'guillaume-chau',
         time: '15:00 - 15:30',
       },
       {
@@ -164,12 +168,12 @@ export default [
         time: '15:30 - 16:00',
       },
       {
-        overrideTitle: 'PANEL: Open Source Sustainability',
-        time: '16:00 - 16:45',
+        speakerRef: 'istvan-szmozsanszky',
+        time: '16:00 - 16:30',
       },
       {
-        overrideTitle: 'PANEL: Staying relevant in 2020',
-        time: '16:45 - 17:30',
+        overrideTitle: 'PANEL: TBA',
+        time: '16:30 - 17:15',
       },
     ],
   },

@@ -2,6 +2,7 @@ import Layout from '../app/components/layout';
 import Header from '../app/components/header';
 import Updates from '../app/components/updates';
 import Speakers from '../app/components/speakers';
+import Theme from '../app/components/theme';
 import Schedule from '../app/components/schedule';
 import Statistics from '../app/components/statistics';
 import Sponsors from '../app/components/sponsors';
@@ -26,6 +27,7 @@ const buildComponent = (currentStore, year = '2019') => {
         <Header />
         <Updates />
         <Speakers {...{ baseUrl, year, speakers }} />
+        <Theme />
         <Schedule {...{ baseUrl, year, schedule, speakers }} />
         <Mission />
         <Sponsors {...{ baseUrl, sponsors }} />
