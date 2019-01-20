@@ -386,8 +386,12 @@ export default [
     description:
       'Henry is a maintainer of Babel, working full time on open source sustainability, and was previously at Behance/Adobe. He just released a podcast series called Hope In Source.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'Maintainers Anonymous',
+      description: `
+        <p>Much of open source starts with scratching your own itch. It's possible that your project turns out to be useful for others. Soon you may find yourself responsible for a critical piece of the internet and are really excited.</p>
+        <p>Later you realize you have no idea who is using it, find it hard to communicate to your users, are burdened with the ever -increasing workload, and desperate to find help. You discover that it's hard to let go or trust anyone else. Should you just make more tools? How do we even begin to start solving this problem?</p>
+        <p>This talk will go into my experience of working on open source full time for the last year and the many issues faced: whether it's the burden of work, the issues of freedom, fundraising difficulties, and on top of that emotional well being. Let's talk about working to support maintainers personally, consistently, and in community.</p>
+      `,
       message: '',
     },
     workshop: null,
