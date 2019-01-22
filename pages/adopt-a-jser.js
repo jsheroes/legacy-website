@@ -110,19 +110,25 @@ const AdoptAJSer = ({
     <Head>
       <title>Adopt a JSer</title>
     </Head>
-    <picture>
-      <source
-        media={`(max-width: ${mediaQueries.XS})`}
-        srcSet="./static/img/adopt_a_jser_header_smallest.png"
-      />
-      <source
-        media={`(max-width: ${mediaQueries.S})`}
-        srcSet="./static/img/adopt_a_jser_header_smaller.png"
-      />
-      <img src="./static/img/adopt_a_jser_header.png" alt="Adopt a Javascripter header" />
-    </picture>
     <section>
       <div className="container">
+        <div className="container__item">
+          <picture>
+            <source
+              media={`(max-width: ${mediaQueries.XS})`}
+              srcSet="./static/img/adopt_a_jser_header_smallest.png"
+            />
+            <source
+              media={`(max-width: ${mediaQueries.S})`}
+              srcSet="./static/img/adopt_a_jser_header_smaller.png"
+            />
+            <img
+              className="header-image-wrapper"
+              src="./static/img/adopt_a_jser_header.png"
+              alt="Adopt a Javascripter header"
+            />
+          </picture>
+        </div>
         <div className="container__item container__title">
           <div className="main-title">
             Learn About the <span className="main-title__azure">Adopt a JavaScripter</span>{' '}
@@ -179,7 +185,7 @@ const AdoptAJSer = ({
           <picture>
             <img
               src="./static/img/adopt_a_jser_photo-contest.png"
-              className="image-wrapper"
+              className="contest-image-wrapper"
               alt="Adopt a Javascripter contest"
             />
           </picture>
@@ -268,8 +274,13 @@ const AdoptAJSer = ({
           color: #000000;
         }
 
-        .image-wrapper {
-          width: 100%;
+        .header-image-wrapper {
+          max-width: 100%;
+          height: 248px;
+        }
+
+        .contest-image-wrapper {
+          max-width: 100%;
         }
 
         .separation-line {
