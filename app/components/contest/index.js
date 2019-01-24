@@ -49,13 +49,13 @@ const ContestMain = () => (
       <section>
         <strong>Competition schedule</strong>
         <div>
-          Sticker submission: <strong>January 16 – 26</strong>, 2019
+          Sticker submission: <strong>January 16 – February 3</strong>, 2019
         </div>
         <div>
-          JSHeroes team voting: <strong>January 27-28</strong>, 2019
+          JSHeroes team voting: <strong>February 4-5</strong>, 2019
         </div>
         <div>
-          Winners announcement: <strong>January 31</strong>, 2019
+          Winners announcement: <strong>February 7</strong>, 2019
         </div>
       </section>
 
