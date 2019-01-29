@@ -33,6 +33,10 @@ export default [
         speakerRef: 'benedek-gagyi',
         time: '14:00 - 18:00',
       },
+      {
+        speakerRef: 'andrei-pfeiffer',
+        time: '14:00 - 18:00',
+      },
     ],
   },
   {

@@ -190,8 +190,10 @@ export default [
     description:
       'Charlie is a software developer at ThoughtWorks in Sydney. She is passionate about creative coding and building interactive prototypes mixing science, art and technology. She also spends time giving back to the community by mentoring new developers, contributing to open-source projects and speaking at events.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'Machine learning for front-end developers',
+      description: `<p>Machine learning can have some pretty complicated concepts to grasp if you’re not a data scientist. However, recent developments in tooling make it more and more accessible for developers and people with little or no experience.</p>
+      <p>One of these advancements is the ability to now train and run machine learning algorithms and models in the browser, opening this world to front-end developers to learn and experiment.</p>
+      <p>In this presentation, we will talk about the different applications, possibilities, tools and resources, as well as show a few examples and demos, so you can get started building your own experiments using machine learning in JavaScript.</p>`,
       message: '',
     },
     workshop: null,
@@ -890,6 +892,53 @@ By the end of this day, you will have the practical knowledge to build and ship 
       `,
       prerequisites:
         'Basic experience with Angular is required - modules, basics of creating and using components, services, basic routing, basic http etc. Also, since Angular is using TypeScript, understanding of basic TypeScript concepts will be required for the examples (types, classes, interfaces, generics, ES6 constructs) although explanation will be provided on request.',
+      seats: 25,
+      socialMedia: ``,
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'pfeiffer',
+    fullName: 'Andrei Pfeiffer',
+    permalink: 'andrei-pfeiffer',
+    firstName: 'Andrei',
+    reference: 'him',
+    position: 'Code Designer',
+    company: '[e-spres-oh]',
+    img: 'andrei-pfeiffer.jpeg',
+    twitter: 'https://twitter.com/@pfeiffer_andrei',
+    github: 'https://github.com/andreipfeiffer/',
+    website: 'https://medium.com/@andrei.pfeiffer',
+    description: ``,
+    talk: null,
+    workshop: {
+      title: 'Custom React Native Modules for iOS and Android',
+      type: 'Half-Day Workshop',
+      permalink: 'react-native',
+      logo: 'react-native.png',
+      description: `
+      <p>React Native already offers a wide range of native features, thanks to its built-in modules and a ton of open source libraries. But sometimes you might not find the exact solution you're looking for. The flexibility to build your own custom modules or extend existing libraries gives you a huge advantage in mobile apps development.</p>
+      <p>Diving into native code might feel very scary for web developers, and this advanced workshop is the proper cure for this problem.</p>
+      <p>In this advanced workshop we will:</p>
+      <ul>
+        <li>implement a simple native class (Swift for iOS & Java for Android</li>
+          <li>bridge it to React Native</li>
+          <li>get access to it from JavaScript</li>
+          <li>call native methods from JavaScript</li>
+          <li>call JavaScript methods from native code</li>
+      </ul>
+      <p>At the end of this workshop, native modules shouldn't feel so scary anymore. You will also understand better how React Native actually works under the hood and how JavaScript communicates with native code.</p>
+      `,
+      prerequisites: `<p>This is an advanced workshop and all participants should feel comfortable with both React and React Native. You should be able to run the "Hello World" application both on Android emulators from Android Studio and iOS simulators from Xcode (applies for Apple users).</p>
+          <ul>
+            <li>Node.js v10+</li>
+            <li>React Native Cli v2</li>
+            <li>Android Studio v3.1+ & an emulator with API 26+</li>
+            <li>Xcode 10.1 (for Apple users)</li>
+          </ul>
+          <p>NOTE: native mobile experience is not required, but basic knowledge is nice to have.</p>
+        `,
       seats: 25,
       socialMedia: ``,
     },
