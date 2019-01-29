@@ -190,8 +190,10 @@ export default [
     description:
       'Charlie is a software developer at ThoughtWorks in Sydney. She is passionate about creative coding and building interactive prototypes mixing science, art and technology. She also spends time giving back to the community by mentoring new developers, contributing to open-source projects and speaking at events.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'Machine learning for front-end developers',
+      description: `<p>Machine learning can have some pretty complicated concepts to grasp if you’re not a data scientist. However, recent developments in tooling make it more and more accessible for developers and people with little or no experience.</p>
+      <p>One of these advancements is the ability to now train and run machine learning algorithms and models in the browser, opening this world to front-end developers to learn and experiment.</p>
+      <p>In this presentation, we will talk about the different applications, possibilities, tools and resources, as well as show a few examples and demos, so you can get started building your own experiments using machine learning in JavaScript.</p>`,
       message: '',
     },
     workshop: null,
