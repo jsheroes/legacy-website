@@ -534,7 +534,7 @@ export default [
     github: 'https://github.com/chrizzzz',
     twitter: 'https://twitter.com/merelyChristina/',
     description:
-      'Anna Backs is a software developer and IT-consultant. She is part of small team building an interactive 3D-control panel for managing the IoT devices in her company&#x27;s office building. In her free time she walks her dog and drinks coffee.',
+      "Christina Zenzes is a consultant and software dev. She is part of a team that is developing an interactive control panel for managing all IoT devices in her company's office building. She likes to grow plants on her balcony, pet cats, cook, and eat.",
     talk: {
       title: `How to build a house in 3D – A short introduction to BabylonJS`,
       description: `Who has not dreamed of creating something in 3D, or even better: 3D running in a browser?! We also had this dream, and during a hackathon in early 2018 we finally fulfilled it by using BabylonJS. We started to build an interactive control panel for managing all IoT devices in our office building. Having had no prior experience whatsoever, we got to know the framework by working with it and having to fix our own mistakes. In this talk we, will share our experiences using BabylonJS and show you how to get started with building 3D web applications. We will cover all the basics needed to implement a small 3D web app with BabylonJS.`,
