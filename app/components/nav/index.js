@@ -127,7 +127,7 @@ class Nav extends Component {
               padding: 5px 0 0 5px;
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 874px) {
               nav {
                 margin-bottom: 0;
               }
