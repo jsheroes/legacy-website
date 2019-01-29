@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'next/router';
 
 import menuItems from '../../data/menuitems';
-import { styles } from '../../constants';
+import { mediaQueries, styles } from '../../constants';
 import Link from '../common/link';
 import HamburgerMenu from './hamburgerMenu';
 import NavItem from './navItem';
@@ -127,7 +127,7 @@ class Nav extends Component {
               padding: 5px 0 0 5px;
             }
 
-            @media (max-width: 874px) {
+            @media (max-width: ${mediaQueries.HAMBURGER_MENU}) {
               nav {
                 margin-bottom: 0;
               }

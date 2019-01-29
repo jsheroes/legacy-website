@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { styles } from '../../constants';
+import { mediaQueries, styles } from '../../constants';
 
 const HamburgerMenu = ({ isOpen, onClick }) => (
   <div className={`hamburger-btn ${isOpen ? 'open' : ''}`} onClick={onClick}>
@@ -9,7 +9,7 @@ const HamburgerMenu = ({ isOpen, onClick }) => (
     <div className="last" />
     <style jsx>
       {`
-        @media (max-width: 874px) {
+        @media (max-width: ${mediaQueries.HAMBURGER_MENU}) {
           .hamburger-btn {
             display: block;
             width: 35px;
