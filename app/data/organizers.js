@@ -106,7 +106,7 @@ export default {
       name: 'Emilia Muresan',
       img: 'emilia-muresan.jpg',
       role: 'Volunteer',
-      twitter: 'ecris87',
+      twitter: 'emi_codes',
     },
     {
       name: 'Catalin Andrei',
