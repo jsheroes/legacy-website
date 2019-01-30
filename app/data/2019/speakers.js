@@ -906,11 +906,11 @@ By the end of this day, you will have the practical knowledge to build and ship 
     reference: 'him',
     position: 'Code Designer',
     company: '[e-spres-oh]',
-    img: 'andrei-pfeiffer.jpeg',
+    img: 'andrei-pfeiffer.png',
     twitter: 'https://twitter.com/@pfeiffer_andrei',
     github: 'https://github.com/andreipfeiffer/',
     website: 'https://medium.com/@andrei.pfeiffer',
-    description: ``,
+    description: `Andrei Pfeiffer is a "designer / developer hybrid", specialized in UI development, both on web and mobile. He organizes tim.js, the local JavaScript meetup in Timisoara/RO & revo.js conference. He's also a public speaker, trainer, mentor and technical writer.`,
     talk: null,
     workshop: {
       title: 'Custom React Native Modules for iOS and Android',
@@ -922,7 +922,7 @@ By the end of this day, you will have the practical knowledge to build and ship 
       <p>Diving into native code might feel very scary for web developers, and this advanced workshop is the proper cure for this problem.</p>
       <p>In this advanced workshop we will:</p>
       <ul>
-        <li>implement a simple native class (Swift for iOS & Java for Android</li>
+          <li>implement a simple native class (Swift for iOS & Java for Android)</li>
           <li>bridge it to React Native</li>
           <li>get access to it from JavaScript</li>
           <li>call native methods from JavaScript</li>
@@ -937,7 +937,7 @@ By the end of this day, you will have the practical knowledge to build and ship 
             <li>Android Studio v3.1+ & an emulator with API 26+</li>
             <li>Xcode 10.1 (for Apple users)</li>
           </ul>
-          <p>NOTE: native mobile experience is not required, but basic knowledge is nice to have.</p>
+          <p>NOTE: native mobile experience is not required, but basic knowledge would definitely help.</p>
         `,
       seats: 25,
       socialMedia: ``,
