@@ -84,4 +84,14 @@ export default [
     img: 'logo_jsday.png',
     href: 'https://2019.jsday.it',
   },
+  {
+    title: 'React Amsterdam',
+    img: 'logo_react_amsterdam.png',
+    href: 'https://react.amsterdam/',
+  },
+  {
+    title: 'Frontend Hub',
+    img: 'logo_frontend_hub.png',
+    href: 'https://www.facebook.com/frontendhub/',
+  },
 ];
