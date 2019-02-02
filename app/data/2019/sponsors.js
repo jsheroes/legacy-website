@@ -44,4 +44,9 @@ export default [
     img: 'logo_mozilla.png',
     href: 'https://www.mozilla.org/en-US/',
   },
+  {
+    title: 'Metro Systems',
+    img: 'logo_metro_systems.jpg',
+    href: 'https://www.metrosystems.ro/',
+  },
 ];
