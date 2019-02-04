@@ -1,4 +1,6 @@
-export default [
+import { stickerContestInProgress } from '../constants';
+
+const news = [
   {
     title: 'Date and Agenda',
     content:
@@ -8,12 +10,6 @@ export default [
     title: 'CFP Closed',
     content:
       'We received <strong>over 300 proposals</strong> for JSHeroes 2019! We will <strong>announce</strong> all the speakers by the 1st of February!',
-  },
-  {
-    title: 'Sticker Contest',
-    content: `<div>Announcing: JSHeroes Sticker Contest</div>
-              <div>Enter the sticker design competition to win cool stuff or just to have fun!</div>
-              <div>Find all the <a href="/sticker-contest">details here.</a></div>`,
   },
   {
     title: 'Sponsors',
@@ -26,3 +22,14 @@ export default [
       'If PayPal is not your preferred payment method, you can also pay by invoice. Drop us a line at <a href="mailto:contact@jsheroes.io">contact@jsheroes.io</a> with your request, we’d be happy to help.',
   },
 ];
+
+if (stickerContestInProgress) {
+  news.splice(2, 0, {
+    title: 'Sticker Contest',
+    content: `<div>Announcing: JSHeroes Sticker Contest</div>
+              <div>Enter the sticker design competition to win cool stuff or just to have fun!</div>
+              <div>Find all the <a href="/sticker-contest">details here.</a></div>`,
+  });
+}
+
+export default news;
