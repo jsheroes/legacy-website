@@ -15,6 +15,9 @@ export const mediaQueries = {
   S: '768px',
   XS: '425px',
 };
+
 export const ConferenceMapApiKey = 'AIzaSyAswFS24FiMHSvmwbU1ctvMSuQ3vb6D8l8';
 export const beAHostLink = 'http://bit.ly/2FY7j5D';
 export const beAGuestLink = 'http://bit.ly/2DUoa8A';
+
+export const stickerContestInProgress = false;
