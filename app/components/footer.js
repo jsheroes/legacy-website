@@ -1,4 +1,4 @@
-import { styles, mediaQueries } from '../constants';
+import { styles, mediaQueries, stickerContestInProgress } from '../constants';
 import socialmedia from '../data/socialmedia';
 import Link from './common/link';
 
@@ -32,11 +32,13 @@ const Footer = () => (
       </div>
       <div>
         <span className="headline">More Info</span>
-        <div>
-          <span className="link">
-            <Link href="/sticker-contest">Sticker Contest</Link>
-          </span>
-        </div>
+        {stickerContestInProgress && (
+          <div>
+            <span className="link">
+              <Link href="/sticker-contest">Sticker Contest</Link>
+            </span>
+          </div>
+        )}
         <div>
           <span className="link">
             <Link href="/adopt-a-jser">Adopt a JavaScripter</Link>
