@@ -46,7 +46,7 @@ export default [
   },
   {
     title: 'Metro Systems',
-    img: 'logo_metro_systems.jpg',
+    img: 'logo_metro_systems.png',
     href: 'https://www.metrosystems.ro/',
   },
 ];
