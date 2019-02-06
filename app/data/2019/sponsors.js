@@ -49,4 +49,10 @@ export default [
     img: 'logo_metro_systems.png',
     href: 'https://www.metrosystems.ro/',
   },
+  {
+    title: 'Accenture',
+    img: 'logo_accenture.png',
+    href:
+      'https://www.accenture.com/ro-en/Careers/careersaiss?c=car_glb_rmbrandawarenes_10851973&n=otc_0119&src=glbFY19RM_Brand_AwarenessOther',
+  },
 ];
