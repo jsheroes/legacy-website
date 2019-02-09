@@ -2,6 +2,8 @@ import { styles, mediaQueries, stickerContestInProgress } from '../constants';
 import socialmedia from '../data/socialmedia';
 import Link from './common/link';
 
+const getCurrentYear = () => new Date().getFullYear();
+
 const Footer = () => (
   <footer>
     <div className="footer-links">
@@ -71,7 +73,8 @@ const Footer = () => (
     </div>
     <div className="copyright">
       <div className="rights">
-        <i className="fa fa-copyright" aria-hidden="true" /> 2018 · JSHeroes. All rights reserved.
+        <i className="fa fa-copyright" aria-hidden="true" /> {getCurrentYear()} · JSHeroes. All
+        rights reserved.
       </div>
       <div className="community">
         Made with <i className="fa fa-heart" aria-hidden="true" /> by
