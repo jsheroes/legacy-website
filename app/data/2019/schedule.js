@@ -35,7 +35,7 @@ export default [
       },
       {
         speakerRef: 'andrei-pfeiffer',
-        time: '14:00 - 18:00',
+        time: '09:00 - 13:00',
       },
     ],
   },
