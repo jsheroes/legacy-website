@@ -1,51 +1,84 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Section from '../common/section';
 import news from '../../data/news';
 import { mediaQueries, styles } from '../../constants';
 
 class Updates extends Component {
-  state = {
-    activeNewsIndex: 0,
+  tabRefs = news.map(() => React.createRef());
+
+  state = { activeNewsIndex: 0 };
+
+  // Enables keyboard tab activation/navigation.
+  // The LEFT arrow key activates the previous tab.
+  // The RIGHT arrow key activates the next tab.
+  onKeyDown = evt => {
+    const { activeNewsIndex } = this.state;
+    let targetIndex;
+
+    if (evt.keyCode === 37) {
+      // <LEFT> arrow key
+      targetIndex = Math.max(0, activeNewsIndex - 1);
+    } else if (evt.keyCode === 39) {
+      // <RIGHT> arrow key
+      targetIndex = Math.min(news.length - 1, activeNewsIndex + 1);
+    }
+
+    if (targetIndex != null && targetIndex !== activeNewsIndex) {
+      this.tabRefs[targetIndex].current.focus();
+    }
   };
 
-  onKeyDown = newsIndex => evt => {
-    if (evt.keyCode === 13) {
-      // enter key
-      this.setState({ activeNewsIndex: newsIndex });
-    }
+  activateTab = index => () => {
+    this.setState(({ activeNewsIndex }) => {
+      if (index !== activeNewsIndex) {
+        return { activeNewsIndex: index };
+      }
+
+      return null;
+    });
   };
 
   render() {
     const { activeNewsIndex } = this.state;
     const newsData = news.map((item, index) => {
       const isActive = index === activeNewsIndex;
-      const activeClassName = isActive ? 'active-news' : 'news-item';
+
       return (
-        <li
-          tabIndex="0"
-          role="tab"
-          className={activeClassName}
-          onFocus={() => this.setState({ activeNewsIndex: index })}
-          onClick={() => this.setState({ activeNewsIndex: index })}
-          onKeyDown={this.onKeyDown(index)}
-          onMouseOver={() => this.setState({ activeNewsIndex: index })}
-          key={item.title}
-        >
-          <strong>{item.title}</strong>
-        </li>
+        <div key={item.title} className={`news-item${isActive ? ' active' : ''}`}>
+          <span
+            id={`news-tab-${index}`}
+            ref={this.tabRefs[index]}
+            tabIndex={isActive ? 0 : -1}
+            role="tab"
+            onClick={this.activateTab(index)}
+            onMouseOver={this.activateTab(index)}
+            onFocus={this.activateTab(index)}
+            onKeyDown={this.onKeyDown}
+            aria-selected={isActive ? 'true' : 'false'}
+            aria-controls={`news-tab-content-${index}`}
+          >
+            <strong>{item.title}</strong>
+          </span>
+        </div>
       );
     });
-    const { content } = news[activeNewsIndex];
+
     return (
       <Section>
         <div id="news" className="wrapper">
           <h1>News</h1>
-          <ul role="tablist">{newsData}</ul>
-          <section
-            role="tabpanel"
-            className="content"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          <div role="tablist">{newsData}</div>
+          {news.map((item, index) => (
+            <React.Fragment key={item.title}>
+              <section
+                id={`news-tab-content-${index}`}
+                role="tabpanel"
+                className={`content${index === activeNewsIndex ? '' : ' hidden'}`}
+                dangerouslySetInnerHTML={{ __html: news[index].content }}
+                aria-labelledby={`news-tab-${index}`}
+              />
+            </React.Fragment>
+          ))}
         </div>
 
         {/* language=CSS */}
@@ -68,37 +101,37 @@ class Updates extends Component {
               color: ${styles.mainColor6};
             }
 
-            .wrapper li {
+            .wrapper .news-item {
               cursor: pointer;
             }
 
-            .wrapper li:hover {
+            .wrapper .news-item:hover {
               color: #0098ff;
-            }
-
-            [data-whatintent='mouse'] .wrapper li:focus {
-              outline: none;
             }
 
             .wrapper h1 {
               margin: 0 0 50px;
             }
 
+            .content.hidden {
+              display: none;
+            }
+
             @media (min-width: ${mediaQueries.S}) {
-              .wrapper ul {
+              .wrapper [role='tablist'] {
                 display: flex;
                 justify-content: space-around;
                 padding-bottom: 10px;
                 margin-bottom: 20px;
                 border-bottom: 1px solid lightgrey;
               }
-              .active-news {
+              .news-item.active {
                 position: relative;
                 color: #0098ff;
                 display: inline-block;
                 text-decoration: none;
               }
-              .active-news::before {
+              .news-item.active::before {
                 width: 0;
                 height: 0;
                 border-left: 10px solid transparent;
@@ -110,7 +143,7 @@ class Updates extends Component {
                 display: block;
                 content: '';
               }
-              .active-news::after {
+              .news-item.active::after {
                 width: 0;
                 height: 0;
                 border-left: 10px solid transparent;
@@ -134,7 +167,7 @@ class Updates extends Component {
                 padding-bottom: 80px;
               }
 
-              .wrapper ul {
+              .wrapper [role='tablist'] {
                 display: inline-block;
               }
 
@@ -142,7 +175,7 @@ class Updates extends Component {
                 margin-top: 20px;
               }
 
-              .active-news {
+              .news-item.active {
                 padding: 10px 10px;
                 position: relative;
                 display: inline-block;
@@ -150,8 +183,8 @@ class Updates extends Component {
                 color: #0098ff;
               }
 
-              .active-news::before,
-              .active-news::after {
+              .news-item.active::before,
+              .news-item.active::after {
                 display: none;
               }
               .news-item {
