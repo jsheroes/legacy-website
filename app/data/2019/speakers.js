@@ -12,8 +12,10 @@ export default [
     description:
       'Simona Cotin is a web developer with a passion for teaching. She spends most of her time tinkering with JavaScript in the cloud and sharing her experience with other developers at community events like meetups and conferences or online. As a Cloud Developer Advocate, Simona engages with the web community to help create a great developer experience with Azure. She loves shipping code to production and has built network data analytics platforms using Angular, Typescript, React, and Java.',
     talk: {
-      title: 'TBA',
-      description: '',
+      title: 'Serverless can do that?!',
+      description: `
+      <p>As a frontend developer you might think - why would I even care about servers? Or lack thereof! 🤔 </p>
+      <p>In this session we'll explore how empowering serverless is for the Javascript developer and how much we can already achieve by not reinventing the wheel. We'll also sprinkling a bit of serverless magic and learn how we can use it once we add it to our toolbox. </p>`,
       message: '',
     },
     workshop: null,
