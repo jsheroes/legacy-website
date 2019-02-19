@@ -23,6 +23,11 @@ const Footer = () => (
         </div>
         <div>
           <span className="link">
+            <Link href="/diversity-tickets">Diversity Tickets</Link>
+          </span>
+        </div>
+        <div>
+          <span className="link">
             <Link href="/become-a-sponsor">Become a Sponsor</Link>
           </span>
         </div>
