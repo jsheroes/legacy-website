@@ -1,4 +1,5 @@
 import Section from '../common/section';
+import Link from '../common/link';
 import CTAButton from '../common/ctaButton';
 import { styles, mediaQueries } from '../../constants';
 
@@ -19,8 +20,12 @@ const DiversityTickets = () => (
           breaks and admission to the parties organised for the conference attendees
         </strong>
         . All attendees, speakers, sponsors and staff at JSHeroes 2019 are required to agree with
-        the code of conduct of the event. Please make sure to read it before applying. Also note
-        that traveling and accommodation costs will need to be supported by you.
+        the{' '}
+        <Link href="/code-of-conduct" openInNewTab theme="theme-dark">
+          code of conduct
+        </Link>{' '}
+        of the event. Please make sure to read it before applying. Also note that traveling and
+        accommodation costs will need to be supported by you.
       </p>
       <p>
         There will be several tickets available, some offered by the conference organizers and some
@@ -30,9 +35,6 @@ const DiversityTickets = () => (
         impact attending JS Heroes will have on your future path.
       </p>
       <p>Please mind that only applications in English will be taken into account. Thank you!</p>
-      <CTAButton secondary url="/code-of-conduct">
-        Code of Conduct
-      </CTAButton>
       <CTAButton
         primary
         url="https://docs.google.com/forms/d/e/1FAIpQLScein5Y_hLum7UPkc4weDZcL3372HYm7K24x0DUqGvkgEbg2A/viewform"
