@@ -146,9 +146,18 @@ class Header extends Component {
                   <p>April 11-12th, 2019 in Cluj-Napoca, Romania</p>
                 </div>
               </div>
-              <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2019">
-                Buy Your Ticket
-              </CTAButton>
+              <div className="call-to-action-buttons">
+                <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2019">
+                  Buy Your Conference Ticket
+                </CTAButton>
+
+                <CTAButton
+                  secondary
+                  url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019"
+                >
+                  Buy Your Workshop Ticket
+                </CTAButton>
+              </div>
             </div>
           </div>
 
@@ -201,6 +210,15 @@ class Header extends Component {
               .header-text p {
                 font-size: 20px;
               }
+
+              .call-to-action-buttons {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                width: ${mediaQueries.S};
+                margin: 0 auto;
+              }
+
               .headOverlay {
                 background-color: rgba(0, 50, 84, 0.2);
                 position: absolute;
@@ -237,6 +255,17 @@ class Header extends Component {
                 }
                 .header-container {
                   margin-top: 60px;
+                }
+
+                .call-to-action-buttons {
+                  width: 90%;
+                  margin: 0 auto;
+                  display: block;
+                }
+
+                .call-to-action-buttons .button-wrapper {
+                  display: block;
+                  margin: 10px;
                 }
               }
             `}
