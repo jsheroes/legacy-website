@@ -10,7 +10,7 @@ export default [
     href: 'https://www.meetup.com/Women-in-Tech-Cluj/',
   },
   {
-    title: 'microsoft',
+    title: 'Microsoft',
     img: 'logo_microsoft.png',
     href: 'https://www.microsoft.com',
   },
@@ -18,5 +18,11 @@ export default [
     title: 'United Business Center',
     img: 'logo_united_business_center.png',
     href: 'http://unitedbusinesscenter.ro/ubc-in-cluj/',
+  },
+  {
+    title: 'StickerMule',
+    img: 'logo_sticker_mule.png',
+    href:
+      'https://www.stickermule.com/eu/uses?utm_source=sponsorship&utm_medium=referral&utm_campaign=JSHeroes19',
   },
 ];
