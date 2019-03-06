@@ -44,8 +44,8 @@ export default [
   {
     name: 'sara',
     fullName: 'Sara Vieira',
-    position: 'Developer Avocado 🥑',
-    company: 'YLD',
+    position: 'Developer',
+    company: 'CodeSandbox',
     img: 'sara.jpg',
   },
   {

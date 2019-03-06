@@ -6,8 +6,9 @@ export default [
     type: 'workshops',
     activities: [
       {
-        speakerRef: ['sia-karamalegos', 'jason-lengstorf'],
+        speakerRef: ['jason-lengstorf', 'sara-vieira'],
         time: '09:00 - 18:00',
+        soldout: true,
       },
       {
         speakerRef: ['carsten-meier', 'simon-abbt'],
@@ -24,10 +25,6 @@ export default [
       {
         speakerRef: 'liran-tal',
         time: '09:00 - 13:00',
-      },
-      {
-        speakerRef: 'nir-kaufman',
-        time: '14:00 - 18:00',
       },
       {
         speakerRef: 'benedek-gagyi',

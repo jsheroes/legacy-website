@@ -87,13 +87,15 @@ const Workshop = ({ speakers }) => {
           </div>
         </div>
         <div className="workshop-description clearfix">
-          <CTAButton
-            primary
-            align="left"
-            url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019"
-          >
-            Buy Your Ticket
-          </CTAButton>
+          {!workshop.soldOut && (
+            <CTAButton
+              primary
+              align="left"
+              url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019"
+            >
+              Buy Your Ticket
+            </CTAButton>
+          )}
           <p className="workshop-section">
             <strong>Curricula</strong>
           </p>
@@ -107,26 +109,30 @@ const Workshop = ({ speakers }) => {
           </p>
           <RawHtml content={firstSpeaker.description} />
           {secondSpeaker && <RawHtml content={secondSpeaker.description} />}
-          <div className="workshop-section">
-            <div>
-              Are you interested in
-              <strong>
-                &nbsp;
-                {firstSpeaker.firstName}
-              </strong>
-              `s workshop?
+          {!workshop.soldOut && (
+            <div className="workshop-section">
+              <div>
+                Are you interested in
+                <strong>
+                  &nbsp;
+                  {firstSpeaker.firstName}
+                </strong>
+                `s workshop?
+              </div>
+              <div>Join {firstSpeaker.reference} at JSHeroes!</div>
             </div>
-            <div>Join {firstSpeaker.reference} at JSHeroes!</div>
-          </div>
-          <div className="workshop-ticket">
-            <CTAButton
-              primary
-              align="left"
-              url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019"
-            >
-              Buy Your Ticket
-            </CTAButton>
-          </div>
+          )}
+          {!workshop.soldOut && (
+            <div className="workshop-ticket">
+              <CTAButton
+                primary
+                align="left"
+                url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019"
+              >
+                Buy Your Ticket
+              </CTAButton>
+            </div>
+          )}
         </div>
         <style jsx>
           {`
