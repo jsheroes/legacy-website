@@ -855,10 +855,11 @@ export default [
     firstName: 'Andrei',
     reference: 'him',
     position: 'Frontend and Angular Consultant',
+    company: 'This Dot Labs',
     img: 'andrei-antal.jpeg',
     twitter: 'https://twitter.com/@andrei_antal',
     github: 'https://github.com/andrei-antal',
-    description: ``,
+    description: `Andrei is an Angular consultant and a frontend developer for This Dot Labs. He's a javascript ecosystem enthusiast and community activist with a passion for building usable, accessible and highly performant web experiences. On the side he teaches javascript and Angular development in both enterprise and community workshops. In his free time he organizes the Bucharest Angular community - ngBucharest`,
     talk: null,
     workshop: {
       title: 'Advanced Observable Patterns in Angular apps with RxJS',
@@ -872,7 +873,7 @@ export default [
       <p>At the end of this session you will gain more confidence in programming with observables and leveraging their power in order to create truly reactive Angular (and not only) applications.</p>
       `,
       prerequisites:
-        'Basic experience with Angular is required - modules, basics of creating and using components, services, basic routing, basic http etc. Also, since Angular is using TypeScript, understanding of basic TypeScript concepts will be required for the examples (types, classes, interfaces, generics, ES6 constructs) although explanation will be provided on request.',
+        'Basic experience with Angular is required - modules, basics of creating and using components, services, basic routing, basic http etc. Also, since Angular is using TypeScript, understanding of basic TypeScript concepts will be required for the examples (types, classes, interfaces, generics, ES6 constructs) although explanations will be provided on request.',
       seats: 25,
       socialMedia: ``,
     },
