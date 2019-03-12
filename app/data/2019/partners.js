@@ -25,4 +25,9 @@ export default [
     href:
       'https://www.stickermule.com/eu/uses?utm_source=sponsorship&utm_medium=referral&utm_campaign=JSHeroes19',
   },
+  {
+    title: 'Manning Publications',
+    img: 'logo_manning.png',
+    href: 'https://www.manning.com',
+  },
 ];
