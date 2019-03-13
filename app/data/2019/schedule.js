@@ -29,6 +29,7 @@ export default [
       {
         speakerRef: 'benedek-gagyi',
         time: '14:00 - 18:00',
+        soldout: true,
       },
       {
         speakerRef: 'andrei-pfeiffer',
