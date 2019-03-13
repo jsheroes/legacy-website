@@ -724,7 +724,7 @@ export default [
       `,
       prerequisites: '',
       seats: 20,
-      soldOut: false,
+      soldOut: true,
       socialMedia: '',
     },
     previousTalks: [],
