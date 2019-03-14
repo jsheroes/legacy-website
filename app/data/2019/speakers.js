@@ -705,7 +705,8 @@ export default [
     company: 'LogMeIn',
     img: 'benedek-gagyi.jpg',
     twitter: 'https://twitter.com/BenedekGagyi',
-    description: '',
+    description:
+      'Ben is a software engineer, tinkering with javascript and css at LastPass. In general he enjoys: code, basketball and tea',
     talk: null,
     workshop: {
       title: 'Web Security for Frontend Engineers',

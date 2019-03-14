@@ -27,7 +27,7 @@ export default [
         time: '09:00 - 13:00',
       },
       {
-        speakerRef: 'benedek-gagyi',
+        speakerRef: ['benedek-gagyi', 'liran-tal'],
         time: '14:00 - 18:00',
         soldout: true,
       },
@@ -58,7 +58,7 @@ export default [
         time: '09:30 - 10:00',
       },
       {
-        speakerRef: 'jason-lengstorf',
+        speakerRef: 'charlie-gerard',
         time: '10:00 - 10:30',
       },
       {
@@ -66,7 +66,7 @@ export default [
         time: '10:30 - 11:00',
       },
       {
-        speakerRef: 'alejandro-oviedo',
+        speakerRef: 'simona-cotin',
         time: '11:00 - 11:30',
       },
       {
@@ -82,15 +82,15 @@ export default [
         time: '12:30 - 14:00',
       },
       {
-        speakerRef: 'heydon-pickering',
+        speakerRef: 'jason-lengstorf',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: 'chen-hui-jing',
+        speakerRef: 'henry-zhu',
         time: '14:30 - 15:00',
       },
       {
-        speakerRef: 'chris-demars',
+        speakerRef: 'daisy-smith',
         time: '15:00 - 15:30',
       },
       {
@@ -98,7 +98,7 @@ export default [
         time: '15:30 - 16:00',
       },
       {
-        speakerRef: 'simona-cotin',
+        speakerRef: 'alejandro-oviedo',
         time: '16:00 - 16:30',
       },
       {
@@ -106,7 +106,7 @@ export default [
         time: '16:30 - 17:00',
       },
       {
-        speakerRef: 'daisy-smith',
+        speakerRef: 'jeffrey-lembeck',
         time: '17:00 - 17:30',
       },
     ],
@@ -130,7 +130,7 @@ export default [
         time: '09:50 - 10:10',
       },
       {
-        speakerRef: 'jeffrey-lembeck',
+        speakerRef: 'guillaume-chau',
         time: '10:10 - 10:30',
       },
       {
@@ -154,15 +154,15 @@ export default [
         time: '12:30 - 14:00',
       },
       {
-        speakerRef: 'charlie-gerard',
+        speakerRef: 'heydon-pickering',
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: 'henry-zhu',
+        speakerRef: 'chen-hui-jing',
         time: '14:30 - 15:00',
       },
       {
-        speakerRef: 'guillaume-chau',
+        speakerRef: 'chris-demars',
         time: '15:00 - 15:30',
       },
       {
@@ -174,8 +174,12 @@ export default [
         time: '16:00 - 16:30',
       },
       {
-        overrideTitle: 'PANEL: TBA',
+        overrideTitle: 'PANEL: Where are we heading?',
         time: '16:30 - 17:15',
+      },
+      {
+        overrideTitle: 'Closing Ceremony',
+        time: '17:15 - 17:30',
       },
     ],
   },
