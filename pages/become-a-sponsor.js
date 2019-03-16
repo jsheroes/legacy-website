@@ -52,16 +52,6 @@ const BecomeASponsorPage = () => (
           </Link>{' '}
           for more info.
         </p>
-        <strong>What you get?</strong>
-        <ul>
-          <li>Direct access to 600+ developers</li>
-          <li>
-            Venue to advertise your company, product, service to a group of passionate and dedicated
-            developers
-          </li>
-          <li>Opportunity to touch base with the community about your products or new ideas</li>
-          <li>The chance to increase your JavaScript developer team`s knowledge</li>
-        </ul>
       </div>
       <Statistics />
       <style jsx>
