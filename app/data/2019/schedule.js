@@ -17,6 +17,7 @@ export default [
       {
         speakerRef: 'andrei-antal',
         time: '09:00 - 13:00',
+        soldout: true,
       },
       {
         speakerRef: 'bogdan-luca',

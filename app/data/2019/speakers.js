@@ -892,6 +892,7 @@ export default [
       prerequisites:
         'Basic experience with Angular is required - modules, basics of creating and using components, services, basic routing, basic http etc. Also, since Angular is using TypeScript, understanding of basic TypeScript concepts will be required for the examples (types, classes, interfaces, generics, ES6 constructs) although explanations will be provided on request.',
       seats: 25,
+      soldOut: true,
       socialMedia: ``,
     },
     previousTalks: [],
