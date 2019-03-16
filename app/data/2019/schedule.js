@@ -74,7 +74,7 @@ export default [
         time: '11:30 - 12:00',
       },
       {
-        speakerRef: 'lin-clark',
+        speakerRef: ['lin-clark', 'till-schneidereit'],
         time: '12:00 - 12:30',
       },
       {
