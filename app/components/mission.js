@@ -15,7 +15,7 @@ const Mission = () => (
         We’re <strong>publishing all data</strong> about this conference, in{' '}
         <Link
           theme={Link.THEME_LIGHT_CONTRAST}
-          href="https://medium.com/cluj-javascripters/jsheroes-2018-transparency-report-part-2-follow-up-eadce2a986bf"
+          href="https://medium.com/cluj-javascripters/jsheroes-2019-transparency-report-3731539de52f"
         >
           <span className="link">full transparency</span>
         </Link>
