@@ -124,15 +124,15 @@ export default [
       },
       {
         speakerRef: 'tomasz-lakomy',
-        time: '09:30 - 09:50',
+        time: '09:20 - 09:40',
       },
       {
         speakerRef: 'bogdan-zaharia',
-        time: '09:50 - 10:10',
+        time: '09:40 - 10:00',
       },
       {
         speakerRef: 'guillaume-chau',
-        time: '10:10 - 10:30',
+        time: '10:00 - 10:30',
       },
       {
         overrideTitle: 'Coffee Break',
