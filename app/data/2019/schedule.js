@@ -120,7 +120,7 @@ export default [
     activities: [
       {
         overrideTitle: 'Coffee',
-        time: '08:30 - 09:30',
+        time: '08:30 - 09:20',
       },
       {
         speakerRef: 'tomasz-lakomy',
