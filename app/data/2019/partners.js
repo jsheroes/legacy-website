@@ -30,4 +30,9 @@ export default [
     img: 'logo_manning.png',
     href: 'https://www.manning.com',
   },
+  {
+    title: 'Peerigon',
+    img: 'logo_peerigon-flat-whiskey.svg',
+    href: 'https://peerigon.com/',
+  },
 ];
