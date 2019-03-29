@@ -55,4 +55,9 @@ export default [
     href:
       'https://www.accenture.com/ro-en/Careers/careersaiss?c=car_glb_rmbrandawarenes_10851973&n=otc_0119&src=glbFY19RM_Brand_AwarenessOther',
   },
+  {
+    title: 'Mcro',
+    img: 'logo_mcro.svg',
+    href: 'https://mcro.tech/',
+  },
 ];
