@@ -270,7 +270,7 @@ export default [
       permalink: 'react',
       logo: 'react.png',
       description: `
-      <p>Getting performance right is hard, even when we have the luxury of starting our apps from scratch. It’s even harder when the ideal crashes headlong into reality, and we need to improve the performance of existing apps, as is so often the case. In this workshop, Eli Fitch and Jason Lengstorf will lead you through the process of:</p>
+      <p>Getting performance right is hard, even when we have the luxury of starting our apps from scratch. It’s even harder when the ideal crashes headlong into reality, and we need to improve the performance of existing apps, as is so often the case. In this workshop, Sara Vieira and Jason Lengstorf will lead you through the process of:</p>
 
       <ul>
       <li>Assessing an existing React app</li>
@@ -767,7 +767,7 @@ export default [
       permalink: 'react',
       logo: 'react.png',
       description: `
-      <p>Getting performance right is hard, even when we have the luxury of starting our apps from scratch. It’s even harder when the ideal crashes headlong into reality, and we need to improve the performance of existing apps, as is so often the case. In this workshop, Eli Fitch and Jason Lengstorf will lead you through the process of:</p>
+      <p>Getting performance right is hard, even when we have the luxury of starting our apps from scratch. It’s even harder when the ideal crashes headlong into reality, and we need to improve the performance of existing apps, as is so often the case. In this workshop, Sara Vieira and Jason Lengstorf will lead you through the process of:</p>
 
       <ul>
       <li>Assessing an existing React app</li>
