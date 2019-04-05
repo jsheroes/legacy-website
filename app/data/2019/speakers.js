@@ -71,7 +71,7 @@ export default [
     permalink: 'sarah-drasner',
     firstName: 'Sarah',
     reference: 'her',
-    position: 'Senior Developer Advocate',
+    position: 'Principal Developer Advocate',
     company: 'Microsoft',
     crazy: 'Bacon Santa',
     img: 'sarah-drasner.jpg',
