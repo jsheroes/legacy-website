@@ -492,8 +492,8 @@ export default [
     position: 'Senior Software Engineer',
     company: 'Beamery',
     img: 'alejandro-oviedo.jpg',
-    github: 'https://github.com/a0viedoa',
-    twitter: 'https://twitter.com/a0viedoh/',
+    github: 'https://github.com/a0viedo',
+    twitter: 'https://twitter.com/a0viedo/',
     description:
       'Alejandro is a developer who loves learning new things. He is passionate about education, electronics, Open Source, and community-driven events.',
     talk: {
