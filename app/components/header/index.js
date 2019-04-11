@@ -143,7 +143,7 @@ class Header extends Component {
               <div>
                 <div className="header-text">
                   <p>Open-Source Community Event</p>
-                  <p>April 11-12th, 2019 in Cluj-Napoca, Romania</p>
+                  <p>April 23-24th, 2020 in Cluj-Napoca, Romania</p>
                 </div>
               </div>
               <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2020">

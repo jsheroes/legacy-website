@@ -83,7 +83,7 @@ const SpeakerDetail = ({ speaker }) => {
                   </div>
                   <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
-                <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2019" align="left">
+                <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2020" align="left">
                   Buy Your Ticket
                 </CTAButton>
               </div>
@@ -112,7 +112,7 @@ const SpeakerDetail = ({ speaker }) => {
                 </div>
                 <div>Join {speaker.reference} at JSHeroes!</div>
               </div>
-              <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2019">
+              <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2020">
                 Buy Your Ticket
               </CTAButton>
             </div>

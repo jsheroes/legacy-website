@@ -18,7 +18,7 @@ const Footer = () => (
         <span className="headline">JSHeroes 2019</span>
         <div>
           <span className="link">
-            <Link href="https://ti.to/cluj-javascripters/jsheroes-2019">Buy Your Ticket</Link>
+            <Link href="https://ti.to/cluj-javascripters/jsheroes-2020">Buy Your Ticket</Link>
           </span>
         </div>
         <div>
