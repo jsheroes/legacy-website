@@ -112,11 +112,9 @@ class ScheduleTabSelector extends Component {
   buildCTAButton() {
     const activePosition = this.getActivePosition();
     return activePosition === 0 ? (
-      <CTAButton primary url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019">
-        Buy Your Workshop Ticket
-      </CTAButton>
+      ''
     ) : (
-      <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2019">
+      <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2020">
         Buy Your Conference Ticket
       </CTAButton>
     );
