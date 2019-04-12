@@ -9,17 +9,16 @@ const news = [
   {
     title: 'CFP Closed',
     content:
-      'We received <strong>over 300 proposals</strong> for JSHeroes 2019! We will <strong>announce</strong> all the speakers by the 1st of February!',
+      "We received <strong>over 300 proposals</strong>  for JSHeroes 2019, thank you! We will let you know when CFP for 2020's edition is open!",
   },
   {
     title: 'Sponsors',
     content:
-      'Our Call for Sponsors is always open. Send us an email if you’re interested to join our mission in 2019 at <a href="mailto:welcome@jsheroes.io">welcome@jsheroes.io</a> and we’ll take it from there.',
+      'Our Call for Sponsors is always open. Send us an email if you’re interested to join our mission in 2020 at <a href="mailto:welcome@jsheroes.io">welcome@jsheroes.io</a> and we’ll take it from there.',
   },
   {
     title: 'Tickets',
-    content: `If PayPal is not your preferred payment method, you can also pay by invoice. Drop us a line at <a href="mailto:contact@jsheroes.io">contact@jsheroes.io</a> with your request, we’d be happy to help.
-      Also check out our <a href="#schedule">pre-conference workshops</a> taught by a few of the smartest people we know.`,
+    content: `If PayPal is not your preferred payment method, you can also pay by invoice. Drop us a line at <a href="mailto:contact@jsheroes.io">contact@jsheroes.io</a> with your request, we’d be happy to help.`,
   },
 ];
 
