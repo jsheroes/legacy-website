@@ -21,13 +21,13 @@ export default {
     {
       name: 'Ana Cojuhari',
       img: 'ana-cojuhari.jpg',
-      role: 'Bannerman',
+      role: 'Communication Advisor',
       twitter: '',
     },
     {
       name: 'Alin Ilea',
       img: 'alin-ilea.jpg',
-      role: 'Webmaster',
+      role: 'After Conf Trip Organizer',
       twitter: 'alinilea',
     },
     {
@@ -73,12 +73,6 @@ export default {
       twitter: '',
     },
     {
-      name: 'Daniel Porumb',
-      img: 'daniel-porumb.jpg',
-      role: 'Volunteer',
-      twitter: '',
-    },
-    {
       name: 'Oana Muntean',
       img: 'oana-muntean.jpg',
       role: 'Webmaster',
@@ -89,6 +83,18 @@ export default {
       img: 'alexandra-minzat.jpg',
       role: 'Operations Manager',
       twitter: 'varga_florina',
+    },
+    {
+      name: 'Daniel Porumb',
+      img: 'daniel-porumb.jpg',
+      role: 'Volunteer',
+      twitter: '',
+    },
+    {
+      name: 'Vlad Ionescu',
+      img: 'vlad-ionescu.jpg',
+      role: 'Volunteer',
+      twitter: '',
     },
     {
       name: 'Ciprian Iacob',
