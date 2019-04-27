@@ -9,7 +9,7 @@ import Sponsors from '../app/components/sponsors';
 import Partners from '../app/components/partners';
 import Communities from '../app/components/communities';
 import Mission from '../app/components/mission';
-import Organizers from '../app/components/organizers/organizers';
+import Organizers from '../app/components/organizers/organizers.main';
 import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
 import ContactForm from '../app/components/contactForm';

@@ -77,8 +77,8 @@ export default [
   },
   {
     id: 4,
-    url: '/#sponsors',
-    label: 'sponsors',
+    url: '/#organizers',
+    label: 'organizers',
     blacklist: ['/2017', '/2018'],
   },
   {

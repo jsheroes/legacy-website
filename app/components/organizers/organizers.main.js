@@ -37,10 +37,10 @@ class OrganizersMain extends Component {
   render() {
     return (
       <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
-        <div className="organizers-container">
+        <div id="organizers" className="organizers-container">
           <h2>Organizers</h2>
           <p>
-            The <strong>JSHeroes</strong> conference is organized by the Cluj JavaScripters{' '}
+            The <strong>JSHeroes</strong> conference is organized by the JSHeroes{' '}
             <strong>community</strong> and <strong>volunteers</strong>.
           </p>
           <p>
