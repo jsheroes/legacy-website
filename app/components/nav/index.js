@@ -71,7 +71,7 @@ class Nav extends Component {
     const mobileOpenClass = mobileNav ? 'open' : '';
 
     return (
-      <div className={`navigation-wrapper ${mobileOpenClass}`}>
+      <div id="menu" className={`navigation-wrapper ${mobileOpenClass}`}>
         <nav>
           <div className="logo">
             <Link href="/" onClick={this.closeMobileNavigation}>
