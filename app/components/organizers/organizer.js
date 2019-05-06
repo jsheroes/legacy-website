@@ -7,14 +7,14 @@ const Organizer = ({ role, image, name, twitter }) => (
       <img src={`static/img/organizers/${image}`} alt={name} />
       <div className="organizer-hover" />
       <div className="organizer-details">
-        <h5>{name}</h5>
-        <h6>{role}</h6>
+        <div className="organizer-name">{name}</div>
+        <div className="organizer-role">{role}</div>
         {twitter && (
-          <h6>
+          <div className="organizer-link">
             <Link href={`https://twitter.com/${twitter}`} theme={Link.THEME_LIGHT_CONTRAST}>
               @{twitter}
             </Link>
-          </h6>
+          </div>
         )}
       </div>
     </div>
@@ -55,15 +55,18 @@ const Organizer = ({ role, image, name, twitter }) => (
           transform: translateY(-50%);
           opacity: 1;
         }
-        .organizer-details h5 {
+        .organizer-name {
           font-size: 24px;
           color: ${styles.mainColor3};
           margin: 10px 0;
+          font-weight: bold;
         }
-        .organizer-details h6 {
+        .organizer-role,
+        .organizer-link {
           font-size: 16px;
           color: ${styles.mainColor3};
           margin: 10px 0;
+          font-weight: bold;
         }
         .organizer-details {
           position: absolute;

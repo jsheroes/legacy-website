@@ -51,7 +51,7 @@ const Statistics = () => (
       <div className="statistics-box">
         <h3>
           <Link href="https://www.meetup.com/jsheroes" theme="theme-light-contrast" openInNewTab>
-            Meetup.com
+            Meetup
           </Link>
         </h3>
         <ul>

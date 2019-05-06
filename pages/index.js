@@ -23,23 +23,21 @@ const buildComponent = (currentStore, year = '2019') => {
 
   const Component = () => (
     <Layout>
-      <main>
-        <Header />
-        <Updates />
-        <Speakers {...{ baseUrl, year, speakers }} />
-        <Theme />
-        <Schedule {...{ baseUrl, year, schedule, speakers }} />
-        <Mission />
-        <Sponsors {...{ baseUrl, sponsors }} />
-        <Partners {...{ baseUrl, partners }} />
-        <Communities {...{ baseUrl, communities }} />
-        <Statistics />
-        <PhotoGallery />
-        <Organizers />
-        <Venue />
-        <ContactForm />
-        <ScrollBtn />
-      </main>
+      <Header />
+      <Updates />
+      <Speakers {...{ baseUrl, year, speakers }} />
+      <Theme />
+      <Schedule {...{ baseUrl, year, schedule, speakers }} />
+      <Mission />
+      <Sponsors {...{ baseUrl, sponsors }} />
+      <Partners {...{ baseUrl, partners }} />
+      <Communities {...{ baseUrl, communities }} />
+      <Statistics />
+      <PhotoGallery />
+      <Organizers />
+      <Venue />
+      <ContactForm />
+      <ScrollBtn />
     </Layout>
   );
 

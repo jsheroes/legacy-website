@@ -12,7 +12,7 @@ const SpeakAtJSHeroes = () => (
 
     <Section className="content">
       <Fragment>
-        <h2>Call for Papers is {data.cfpOpen ? 'OPEN' : 'CLOSED'}!</h2>
+        <h1>Call for Papers is {data.cfpOpen ? 'OPEN' : 'CLOSED'}!</h1>
         {data.cfpOpen && (
           <Fragment>
             <p>
@@ -42,12 +42,12 @@ const SpeakAtJSHeroes = () => (
           </p>
         )}
 
-        <h3>
-          <span role="img" aria-label="what">
+        <h2>
+          <span role="img" aria-label="pictogram of a hand, writing">
             ✍
           </span>{' '}
           What we are looking for
-        </h3>
+        </h2>
         <p>
           JSHeroes is a <strong>single track 2-day conference</strong> dedicated to the entire JS
           ecosystem. We are looking for a multitude of topics and perspectives, but most of all we
@@ -78,12 +78,12 @@ const SpeakAtJSHeroes = () => (
           form, in which your proposal may fall. However, do not consider them restrictive, but
           rather see them as a guideline to classify and structure all the proposals we receive.
         </p>
-        <h3>
-          <span role="img" aria-label="how">
+        <h2>
+          <span role="img" aria-label="pictogram of a chart, going up">
             📈
           </span>{' '}
           How the selection will happen
-        </h3>
+        </h2>
         <p>
           We are expecting to receive close to <strong>300 proposals</strong> for JSHeroes 2019.
           With this in mind, we created a team of world wide subject matter experts that will go
@@ -115,12 +115,12 @@ const SpeakAtJSHeroes = () => (
             we based our selection.
           </li>
         </ul>
-        <h3>
-          <span role="img" aria-label="perks">
+        <h2>
+          <span role="img" aria-label="pictogram of a trophy">
             🏆
           </span>{' '}
           The perks we offer
-        </h3>
+        </h2>
         <p>
           If your proposal gets selected and you accept to join <strong>JSHeroes 2019</strong> as a
           speaker, we will make sure you have the best possible <strong>experience</strong> for your
@@ -134,12 +134,12 @@ const SpeakAtJSHeroes = () => (
           <li>Hiking trip with the team on Saturday</li>
           <li>Speaker dinners and other activities around the event</li>
         </ul>
-        <h3>
-          <span role="img" aria-label="perks">
+        <h2>
+          <span role="img" aria-label="pictogram of a open hand">
             ✋
           </span>{' '}
           Help and support along the way
-        </h3>
+        </h2>
         <p>
           We are committed to fulfilling our <strong>mission</strong> as an open source event. We
           are all community people and we want to be as close to you as possible. We will try to be{' '}
@@ -175,13 +175,13 @@ const SpeakAtJSHeroes = () => (
           margin-bottom: 10px;
         }
 
-        h2 {
+        h1 {
           margin-top: 50px;
           text-align: center;
           color: ${styles.mainColor6};
         }
 
-        h3 {
+        h2 {
           margin-top: 40px;
         }
 

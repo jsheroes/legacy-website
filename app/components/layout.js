@@ -76,13 +76,14 @@ class Layout extends Component {
           </noscript>
         </Head>
 
+        <CookiePrivacy />
+
         <div className="nav-and-content">
           <Nav />
-          {children}
+          <main>{children}</main>
         </div>
 
         <Footer />
-        <CookiePrivacy />
 
         {/* language=CSS */}
         <style jsx global>

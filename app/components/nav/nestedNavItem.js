@@ -5,7 +5,7 @@ import NavItem from './navItem';
 
 const NestedNavItem = ({ label, links }) => (
   <div role="menubar" className="nested-nav-item">
-    <span role="menuitem" tabIndex="0" className="nested-links-label">
+    <span role="menuitem" className="nested-links-label">
       {label}
     </span>
     <ul role="menu" className="menu-items">
