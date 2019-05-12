@@ -1,5 +1,7 @@
 export default [
   {
+    id: 'day-0',
+    link: 'schedule-day-0',
     section: 'WORKSHOPS',
     date: 'April 10',
     index: 0,
@@ -39,6 +41,8 @@ export default [
     ],
   },
   {
+    id: 'day-1',
+    link: 'schedule-day-1',
     section: 'Day 1',
     date: 'April 11',
     index: 1,
@@ -113,6 +117,8 @@ export default [
     ],
   },
   {
+    id: 'day-2',
+    link: 'schedule-day-2',
     section: 'Day 2',
     date: 'April 12',
     index: 2,

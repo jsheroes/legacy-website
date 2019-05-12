@@ -1,108 +1,23 @@
 import { Component } from 'react';
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from '@reach/tabs';
 import { styles } from '../../constants';
 import ScheduleRow from './scheduleRow';
 import CTAButton from '../common/ctaButton';
-import StoreFactory from '../../storeFactory';
-
-const store = StoreFactory.getStore('activePosition');
 
 class ScheduleTabSelector extends Component {
-  constructor() {
-    super();
-    this.state = {
-      activePosition: 1,
-    };
+  state = {
+    selectedTab: 1,
+  };
 
-    this.buildButtonSection = this.buildButtonSection.bind(this);
-    this.getActivePosition = this.getActivePosition.bind(this);
-  }
-
-  getActivePosition() {
-    const storePosition = store.getItem();
-    const { activePosition } = this.state;
-    return storePosition === undefined ? activePosition : storePosition;
-  }
-
-  handleClick(position) {
-    return () => {
-      store.setItem(position);
-      this.setState({
-        activePosition: position,
-      });
-    };
-  }
-
-  buildButtonSection() {
-    const activePosition = this.getActivePosition();
-    const { schedule } = this.props;
-    return schedule.map(item => {
-      const active = item.index === activePosition ? 'active' : '';
-      return (
-        <button
-          key={item.section}
-          className={`tabselector-button ${active}`}
-          onClick={this.handleClick(item.index)}
-        >
-          <div>{item.section}</div>
-          <div>{item.date}</div>
-          <style jsx>
-            {`
-              .clearfix:after {
-                display: table;
-                content: '';
-                clear: both;
-              }
-
-              .tabselector-button {
-                background-color: ${styles.mainColor3};
-                height: 60px;
-                width: 33.3333%;
-                float: left;
-                color: ${styles.mainColor6};
-                border: none;
-                border-radius: 0;
-                transition: background-color 0.5s, color 0.5s;
-                font-size: 13px;
-              }
-
-              .tabselector-button:hover,
-              .tabselector-button.active {
-                background-color: ${styles.mainColor6};
-                color: ${styles.mainColor3};
-              }
-
-              .tabselector-button:focus {
-                outline: 0;
-              }
-
-              @media screen and (min-width: 420px) {
-                .tabselector-button {
-                  font-size: 16px;
-                }
-              }
-
-              @media screen and (min-width: 480px) {
-                .tabselector-button {
-                  font-size: 18px;
-                }
-              }
-            `}
-          </style>
-        </button>
-      );
-    });
-  }
-
-  buildContent() {
-    const activePosition = this.getActivePosition();
+  buildContent(day) {
     const { schedule, baseUrl, speakers } = this.props;
-    const agenda = schedule[activePosition].activities;
+    const agenda = schedule[day].activities;
     return agenda.map((item, index) => (
       <ScheduleRow
-        activeTab={activePosition}
+        activeTab={day}
         agendaItem={item}
         speakers={speakers}
-        type={schedule[activePosition].type}
+        type={schedule[day].type}
         key={item.speakerRef || index}
         baseUrl={baseUrl}
       />
@@ -110,8 +25,8 @@ class ScheduleTabSelector extends Component {
   }
 
   buildCTAButton() {
-    const activePosition = this.getActivePosition();
-    return activePosition === 0 ? (
+    const { selectedTab } = this.state;
+    return selectedTab === 0 ? (
       ''
     ) : (
       <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2020">
@@ -121,15 +36,64 @@ class ScheduleTabSelector extends Component {
   }
 
   render() {
-    const buttons = this.buildButtonSection();
-    const talks = this.buildContent();
+    const { schedule } = this.props;
     const button = this.buildCTAButton();
 
     return (
       <div>
-        <div className="buttons-section clearfix">{buttons}</div>
-        <div className="content-section clearfix">{talks}</div>
+        <Tabs defaultIndex={1} onChange={index => this.setState({ selectedTab: index })}>
+          <TabList className="tablist">
+            {schedule.map(item => (
+              <Tab key={item.id} className="tabselector-button">
+                <div>{item.section}</div>
+                <div>{item.date}</div>
+              </Tab>
+            ))}
+          </TabList>
+          <TabPanels>
+            {schedule.map((day, index) => (
+              <TabPanel key={day.id}>{this.buildContent(index)}</TabPanel>
+            ))}
+          </TabPanels>
+        </Tabs>
         <div className="cta-button clearfix">{button}</div>
+        <style jsx global>
+          {`
+            .tablist {
+              display: flex;
+            }
+
+            .tabselector-button {
+              color: ${styles.mainColor6};
+              background-color: ${styles.mainColor3};
+              height: 60px;
+              border: none;
+              flex: 1;
+              border-radius: 0;
+              transition: background-color 0.5s, color 0.5s;
+              font-size: 13px;
+              cursor: pointer;
+            }
+
+            .tabselector-button:hover,
+            .tabselector-button[data-selected] {
+              background-color: ${styles.mainColor6};
+              color: ${styles.mainColor3};
+            }
+
+            @media screen and (min-width: 420px) {
+              .tabselector-button {
+                font-size: 16px;
+              }
+            }
+
+            @media screen and (min-width: 480px) {
+              .tabselector-button {
+                font-size: 18px;
+              }
+            }
+          `}
+        </style>
         <style jsx>
           {`
             .check-in,
@@ -169,11 +133,7 @@ class ScheduleTabSelector extends Component {
               margin-bottom: 50px;
               display: flex;
               justify-content: center;
-            }
-
-            .content-section {
-              float: left;
-              width: 100%;
+              list-style: none;
             }
 
             .cta-button {

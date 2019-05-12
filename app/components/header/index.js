@@ -76,7 +76,7 @@ class Header extends Component {
           className="background-image"
           src="/static/img/speakers_and_organizers.jpg"
           alt="background"
-          aria-hidden
+          aria-hidden="true"
         />
         <style jsx>
           {`

@@ -6,7 +6,7 @@ import Link from '../common/link';
 const AfterMovie = ({ year, videos }) => (
   <Section>
     <div className="after-movie-wrapper">
-      <h2>JSHeroes {year} After Movie</h2>
+      <h1>JSHeroes {year} Highlights</h1>
       <div className="video-wrapper">
         <iframe
           aria-label="JSHeroes After Movie"
@@ -19,12 +19,12 @@ const AfterMovie = ({ year, videos }) => (
           allowFullScreen
         />
       </div>
-      <h3>
+      <p>
         You can find all the recorded talks on our youtube channel
         <Link href={videos.playList} theme={Link.THEME_DARK}>
           <span className="link"> {year} playlist </span>
         </Link>
-      </h3>
+      </p>
     </div>
     <style jsx>
       {`
@@ -47,13 +47,13 @@ const AfterMovie = ({ year, videos }) => (
           height: 100%;
         }
 
-        h2 {
+        h1 {
           color: #0098ff;
           margin-bottom: 30px;
           font-size: 36px;
           padding-top: 30px;
         }
-        h3 {
+        p {
           padding-top: 20px;
         }
 

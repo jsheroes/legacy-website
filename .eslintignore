@@ -1,2 +1,2 @@
-../tests/**
-../cypress/**
+../tests/**/**
+../cypress/**/**

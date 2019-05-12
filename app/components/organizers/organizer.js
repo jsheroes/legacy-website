@@ -3,11 +3,13 @@ import { styles, mediaQueries } from '../../constants';
 
 const Organizer = ({ role, image, name, twitter }) => (
   <div>
-    <div className="organizer-info-box">
+    <div className="organizer-info-box" tabIndex="0" role="button">
       <img src={`static/img/organizers/${image}`} alt={name} />
       <div className="organizer-hover" />
       <div className="organizer-details">
-        <div className="organizer-name">{name}</div>
+        <div className="organizer-name" aria-hidden="true">
+          {name}
+        </div>
         <div className="organizer-role">{role}</div>
         {twitter && (
           <div className="organizer-link">
@@ -55,6 +57,17 @@ const Organizer = ({ role, image, name, twitter }) => (
           transform: translateY(-50%);
           opacity: 1;
         }
+
+        @media (prefers-reduced-motion: reduce) {
+          .organizer-details {
+            transition: none;
+          }
+
+          .organizer-hover {
+            transition: none;
+          }
+        }
+
         .organizer-name {
           font-size: 24px;
           color: ${styles.mainColor3};
@@ -80,10 +93,12 @@ const Organizer = ({ role, image, name, twitter }) => (
           cursor: pointer;
         }
         @media (min-width: ${mediaQueries.XS}) {
-          .organizer-info-box:hover .organizer-hover {
+          .organizer-info-box:hover .organizer-hover,
+          .organizer-info-box:focus .organizer-hover {
             opacity: 1;
           }
-          .organizer-info-box:hover .organizer-details {
+          .organizer-info-box:hover .organizer-details,
+          .organizer-info-box:focus .organizer-details {
             transform: translateY(-50%);
             opacity: 1;
           }

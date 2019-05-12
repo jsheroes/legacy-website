@@ -77,7 +77,7 @@ const SpeakerDetail = ({ speaker }) => {
               </div>
               <aside className="hidden-sm-down">
                 <div className="join">
-                  <div role="text">
+                  <div>
                     Already curious to see <strong>{speaker.firstName}</strong>
                     `s talk?
                   </div>
