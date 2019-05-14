@@ -3,18 +3,20 @@ import { styles, mediaQueries } from '../../constants';
 
 const Organizer = ({ role, image, name, twitter }) => (
   <div>
-    <div className="organizer-info-box">
+    <div className="organizer-info-box" tabIndex="0" role="button">
       <img src={`static/img/organizers/${image}`} alt={name} />
       <div className="organizer-hover" />
       <div className="organizer-details">
-        <h5>{name}</h5>
-        <h6>{role}</h6>
+        <div className="organizer-name" aria-hidden="true">
+          {name}
+        </div>
+        <div className="organizer-role">{role}</div>
         {twitter && (
-          <h6>
+          <div className="organizer-link">
             <Link href={`https://twitter.com/${twitter}`} theme={Link.THEME_LIGHT_CONTRAST}>
               @{twitter}
             </Link>
-          </h6>
+          </div>
         )}
       </div>
     </div>
@@ -55,15 +57,29 @@ const Organizer = ({ role, image, name, twitter }) => (
           transform: translateY(-50%);
           opacity: 1;
         }
-        .organizer-details h5 {
+
+        @media (prefers-reduced-motion: reduce) {
+          .organizer-details {
+            transition: none;
+          }
+
+          .organizer-hover {
+            transition: none;
+          }
+        }
+
+        .organizer-name {
           font-size: 24px;
           color: ${styles.mainColor3};
           margin: 10px 0;
+          font-weight: bold;
         }
-        .organizer-details h6 {
+        .organizer-role,
+        .organizer-link {
           font-size: 16px;
           color: ${styles.mainColor3};
           margin: 10px 0;
+          font-weight: bold;
         }
         .organizer-details {
           position: absolute;
@@ -77,10 +93,12 @@ const Organizer = ({ role, image, name, twitter }) => (
           cursor: pointer;
         }
         @media (min-width: ${mediaQueries.XS}) {
-          .organizer-info-box:hover .organizer-hover {
+          .organizer-info-box:hover .organizer-hover,
+          .organizer-info-box:focus .organizer-hover {
             opacity: 1;
           }
-          .organizer-info-box:hover .organizer-details {
+          .organizer-info-box:hover .organizer-details,
+          .organizer-info-box:focus .organizer-details {
             transform: translateY(-50%);
             opacity: 1;
           }

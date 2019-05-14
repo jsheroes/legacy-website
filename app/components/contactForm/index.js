@@ -71,6 +71,7 @@ class ContactForm extends Component {
           <div className="row">
             <textarea
               className="inputElement"
+              aria-label="Your message"
               rows="5"
               name="message"
               placeholder="Message"
@@ -82,6 +83,7 @@ class ContactForm extends Component {
           <div className="row">
             <input
               className="inputElement"
+              aria-label="Your email"
               name="email"
               type="email"
               placeholder="E-mail"
@@ -91,7 +93,9 @@ class ContactForm extends Component {
             />
           </div>
           <div className="row">
-            <Button primary>Send</Button>
+            <Button aria-label="Send your message" primary>
+              Send
+            </Button>
           </div>
           <div className={error ? 'error' : 'success'}>{status}</div>
         </form>

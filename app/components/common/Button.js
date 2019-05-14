@@ -1,13 +1,15 @@
 import React, { Fragment } from 'react';
 import { styles } from '../../constants';
 
-const Button = ({ primary = false, children }) => {
+const Button = ({ primary = false, children, ...restProps }) => {
   const backgroundColor = primary ? styles.mainColor6 : styles.mainColor3;
   const foregroundColor = primary ? styles.mainColor3 : styles.mainColor6;
 
   return (
     <Fragment>
-      <button className="button">{children}</button>
+      <button className="button" {...restProps}>
+        {children}
+      </button>
 
       <style jsx>
         {`

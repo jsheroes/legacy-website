@@ -60,8 +60,8 @@ class Nav extends Component {
         // Filter top level items.
         .filter(shouldItemBeVisible)
         // And also filter nested ones.
-        .map(
-          item => (item.links ? { ...item, links: item.links.filter(shouldItemBeVisible) } : item),
+        .map(item =>
+          item.links ? { ...item, links: item.links.filter(shouldItemBeVisible) } : item,
         )
     );
   }
@@ -71,7 +71,7 @@ class Nav extends Component {
     const mobileOpenClass = mobileNav ? 'open' : '';
 
     return (
-      <div id="menu" className={`navigation-wrapper ${mobileOpenClass}`}>
+      <header id="menu" className={`navigation-wrapper ${mobileOpenClass}`}>
         <nav>
           <div className="logo">
             <Link href="/" onClick={this.closeMobileNavigation}>
@@ -175,7 +175,7 @@ class Nav extends Component {
             }
           `}
         </style>
-      </div>
+      </header>
     );
   }
 }

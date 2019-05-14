@@ -7,9 +7,11 @@ const PersonInfo = ({ WrappingElement, person, baseUrl, ...props }) => (
     <img src={`${baseUrl}${person.img}`} alt={person.fullName} />
     <div className="speaker-hover" />
     <div className="speaker-details">
-      <h5 aria-hidden="true">{person.fullName}</h5>
-      {person.position ? <h6>{person.position}</h6> : null}
-      {person.company ? <h6>{person.company}</h6> : null}
+      <div className="speaker-name" aria-hidden="true">
+        {person.fullName}
+      </div>
+      {person.position ? <div className="speaker-position">{person.position}</div> : null}
+      {person.company ? <div className="speaker-company">{person.company}</div> : null}
     </div>
     <style jsx>
       {`
@@ -45,15 +47,19 @@ const PersonInfo = ({ WrappingElement, person, baseUrl, ...props }) => (
           transform: translateY(-50%);
           opacity: 1;
         }
-        .speaker-details h5 {
+
+        .speaker-name {
           font-size: 24px;
           color: ${styles.mainColor3};
           margin: 10px 0;
+          font-weight: bold;
         }
-        .speaker-details h6 {
+        .speaker-position,
+        .speaker-company {
           font-size: 16px;
           color: ${styles.mainColor3};
           margin: 10px 0;
+          font-weight: bold;
         }
         .speaker-details {
           position: absolute;
@@ -64,6 +70,16 @@ const PersonInfo = ({ WrappingElement, person, baseUrl, ...props }) => (
           width: 100%;
           z-index: 2;
           text-align: center;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .speaker-details {
+            transition: none;
+          }
+
+          .speaker-hover {
+            transition: none;
+          }
         }
 
         @media (min-width: ${mediaQueries.XS}) {

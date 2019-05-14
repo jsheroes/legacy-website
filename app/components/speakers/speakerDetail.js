@@ -43,7 +43,7 @@ const SpeakerDetail = ({ speaker }) => {
               </div>
               <div className="details-container">
                 <div className="details hidden-lg hidden-md">
-                  <span className="name">{speaker.fullName}</span>
+                  <h1 className="name">{speaker.fullName}</h1>
                   <div>
                     <strong>{speaker.position}</strong>
                   </div>
@@ -53,21 +53,21 @@ const SpeakerDetail = ({ speaker }) => {
                 </div>
                 <div className="social-links">
                   {speaker.twitter ? (
-                    <Link href={speaker.twitter}>
+                    <Link title={`${speaker.firstName}'s twitter page`} href={speaker.twitter}>
                       <span className="twitter" />
                     </Link>
                   ) : (
                     ''
                   )}
                   {speaker.github ? (
-                    <Link href={speaker.github}>
+                    <Link title={`${speaker.firstName}'s github page`} href={speaker.github}>
                       <span className="github" />
                     </Link>
                   ) : (
                     ''
                   )}
                   {speaker.website ? (
-                    <Link href={speaker.website}>
+                    <Link title={`${speaker.firstName}'s website`} href={speaker.website}>
                       <span className="website" />
                     </Link>
                   ) : (
@@ -75,7 +75,7 @@ const SpeakerDetail = ({ speaker }) => {
                   )}
                 </div>
               </div>
-              <div className="hidden-sm-down">
+              <aside className="hidden-sm-down">
                 <div className="join">
                   <div>
                     Already curious to see <strong>{speaker.firstName}</strong>
@@ -86,7 +86,7 @@ const SpeakerDetail = ({ speaker }) => {
                 <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2020" align="left">
                   Buy Your Ticket
                 </CTAButton>
-              </div>
+              </aside>
             </div>
           </div>
           <div className="rightColumn">
@@ -266,17 +266,14 @@ function buildTalks(speaker) {
       {talk && buildCurrentTalk(talk, speaker)}
       {jsheroesTalks.length > 0 && (
         <div className="talks" key="jsheroes">
-          <h4>
-            See
-            {speaker.firstName} at previous JSHeroes events
-          </h4>
-          {jsheroesTalks}
+          <h2>See {speaker.firstName} at previous JSHeroes events</h2>
+          <ul>{jsheroesTalks}</ul>
         </div>
       )}
       {generalTalks.length > 0 && (
         <div className="talks" key="general">
-          <h4>See {speaker.firstName} at other conferences</h4>
-          {generalTalks}
+          <h2>See {speaker.firstName} at other conferences</h2>
+          <ul>{generalTalks}</ul>
         </div>
       )}
       <style jsx>
@@ -285,8 +282,12 @@ function buildTalks(speaker) {
             margin: 20px 0;
           }
 
-          h4 {
+          h2 {
             font-size: 18px;
+          }
+
+          ul {
+            list-style: none;
           }
         `}
       </style>
@@ -296,7 +297,7 @@ function buildTalks(speaker) {
 
 function talkRow({ url, name }) {
   return (
-    <div key={url}>
+    <li key={url}>
       <span className="blue-circle" />
       <Link href={url} theme={Link.THEME_DARK}>
         {name}
@@ -313,17 +314,16 @@ function talkRow({ url, name }) {
           }
         `}
       </style>
-    </div>
+    </li>
   );
 }
 
 function buildCurrentTalk({ title, description, message }, { firstName }) {
   return (
     <div>
-      <h3>
-        {firstName}
-        `s talk: {title}
-      </h3>
+      <h2>
+        {firstName}`s talk: {title}
+      </h2>
       <RawHtml content={description} />
       {message && (
         <div className="teaser">
@@ -335,12 +335,12 @@ function buildCurrentTalk({ title, description, message }, { firstName }) {
       )}
       <style jsx>
         {`
-          h3 {
+          h2 {
             margin: 20px 20px 5px 0;
             font-size: 18px;
           }
           @media (max-width: ${mediaQueries.L}) {
-            .h3 {
+            .h2 {
               margin: 20px 20px 20px 0;
             }
           }

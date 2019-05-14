@@ -6,7 +6,7 @@ import { styles, mediaQueries } from '../../constants';
 const DiversityTickets = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
     <div className="central-container">
-      <h2>Apply for our Diversity Tickets</h2>
+      <h1>Apply for our Diversity Tickets</h1>
       <p>
         At JSHeroes,<strong> we strive for an inclusive and diverse community</strong>. This has
         determined us over the years to put together a diversity program in order to help
@@ -53,7 +53,7 @@ const DiversityTickets = () => (
           text-align: left;
         }
 
-        h2 {
+        h1 {
           text-align: center;
         }
 
@@ -86,7 +86,7 @@ const DiversityTickets = () => (
             padding: 50px 16px 70px;
           }
 
-          h2 {
+          h1 {
             margin-bottom: 50px;
           }
 
@@ -102,7 +102,7 @@ const DiversityTickets = () => (
             padding: 60px 32px 80px;
           }
 
-          h2 {
+          h1 {
             margin-bottom: 60px;
           }
 
@@ -118,7 +118,7 @@ const DiversityTickets = () => (
             padding: 80px 0 100px;
           }
 
-          h2 {
+          h1 {
             margin-bottom: 80px;
           }
 
@@ -134,7 +134,7 @@ const DiversityTickets = () => (
             width: 66.7%;
           }
 
-          h2 {
+          h1 {
             margin-bottom: 80px;
           }
         }

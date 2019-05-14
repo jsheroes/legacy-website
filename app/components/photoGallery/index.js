@@ -47,11 +47,11 @@ const Component = ({ items = getPhotoItems() }) => (
         <div key={key} className={`grid-item-${type}-${index + 1}`}>
           {type === 'text' && (
             <div className="text-wrapper upper">
-              <h4 className="title">
+              <strong className="title">
                 <a href={value.url} target="_blank" rel="noopener noreferrer">
                   {value.title}
                 </a>
-              </h4>
+              </strong>
             </div>
           )}
           {type === 'photo' && (

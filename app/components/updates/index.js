@@ -6,6 +6,8 @@ import { mediaQueries, styles } from '../../constants';
 class Updates extends Component {
   tabRefs = news.map(() => React.createRef());
 
+  tabPanelRefs = news.map(() => React.createRef());
+
   state = { activeNewsIndex: 0 };
 
   // Enables keyboard tab activation/navigation.
@@ -15,12 +17,17 @@ class Updates extends Component {
     const { activeNewsIndex } = this.state;
     let targetIndex;
 
+    console.log(evt.keyCode);
     if (evt.keyCode === 37) {
       // <LEFT> arrow key
       targetIndex = Math.max(0, activeNewsIndex - 1);
     } else if (evt.keyCode === 39) {
       // <RIGHT> arrow key
       targetIndex = Math.min(news.length - 1, activeNewsIndex + 1);
+    } else if (evt.keyCode === 40) {
+      // <DOWN> arrow key
+      console.log(activeNewsIndex);
+      this.tabPanelRefs[activeNewsIndex].current.focus();
     }
 
     if (targetIndex != null && targetIndex !== activeNewsIndex) {
@@ -44,22 +51,22 @@ class Updates extends Component {
       const isActive = index === activeNewsIndex;
 
       return (
-        <div key={item.title} className={`news-item${isActive ? ' active' : ''}`}>
-          <span
-            id={`news-tab-${index}`}
-            ref={this.tabRefs[index]}
-            tabIndex={isActive ? 0 : -1}
-            role="tab"
-            onClick={this.activateTab(index)}
-            onMouseOver={this.activateTab(index)}
-            onFocus={this.activateTab(index)}
-            onKeyDown={this.onKeyDown}
-            aria-selected={isActive ? 'true' : 'false'}
-            aria-controls={`news-tab-content-${index}`}
-          >
-            <strong>{item.title}</strong>
-          </span>
-        </div>
+        <li
+          key={item.title}
+          className={`news-item${isActive ? ' active' : ''}`}
+          id={`news-tab-${index}`}
+          tabIndex={isActive ? '0' : '-1'}
+          ref={this.tabRefs[index]}
+          role="tab"
+          onClick={this.activateTab(index)}
+          onMouseOver={this.activateTab(index)}
+          onFocus={this.activateTab(index)}
+          onKeyDown={this.onKeyDown}
+          aria-selected={isActive ? 'true' : 'false'}
+          aria-controls={`news-tab-content-${index}`}
+        >
+          <strong>{item.title}</strong>
+        </li>
       );
     });
 
@@ -67,17 +74,18 @@ class Updates extends Component {
       <Section>
         <div id="news" className="wrapper">
           <h1>News</h1>
-          <div role="tablist">{newsData}</div>
+          <ul role="tablist">{newsData}</ul>
           {news.map((item, index) => (
-            <React.Fragment key={item.title}>
-              <section
-                id={`news-tab-content-${index}`}
-                role="tabpanel"
-                className={`content${index === activeNewsIndex ? '' : ' hidden'}`}
-                dangerouslySetInnerHTML={{ __html: news[index].content }}
-                aria-labelledby={`news-tab-${index}`}
-              />
-            </React.Fragment>
+            <section
+              key={item.title}
+              ref={this.tabPanelRefs[index]}
+              id={`news-tab-content-${index}`}
+              role="tabpanel"
+              tabIndex="-1"
+              className={`content${index === activeNewsIndex ? '' : ' hidden'}`}
+              dangerouslySetInnerHTML={{ __html: news[index].content }}
+              aria-labelledby={`news-tab-${index}`}
+            />
           ))}
         </div>
 

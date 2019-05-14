@@ -78,11 +78,13 @@ class Layout extends Component {
 
         <div className="nav-and-content">
           <Nav />
-          {children}
+          <main>
+            <CookiePrivacy />
+            {children}
+          </main>
         </div>
 
         <Footer />
-        <CookiePrivacy />
 
         {/* language=CSS */}
         <style jsx global>
