@@ -1,3 +1,5 @@
+import 'what-input';
+
 import Layout from '../app/components/layout';
 import Header from '../app/components/header';
 import Updates from '../app/components/updates';
@@ -14,10 +16,12 @@ import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
 import ContactForm from '../app/components/contactForm';
 import PhotoGallery from '../app/components/photoGallery';
-import store from '../app/data/2020';
-import 'what-input';
+import AfterMovie from '../app/components/afterMovie';
 
-const buildComponent = (currentStore, year = '2020') => {
+import store from '../app/data/2020';
+import store2019 from '../app/data/2019';
+
+const buildComponent = (currentStore, prevStore, year = '2020') => {
   const baseUrl = `static/img/${year}`;
   const { speakers, sponsors, partners, communities, schedule } = currentStore;
 
@@ -26,6 +30,7 @@ const buildComponent = (currentStore, year = '2020') => {
   const Component = () => (
     <Layout>
       <Header />
+      <AfterMovie {...{ year: 2019, videos: prevStore.videos }} />
       <Updates />
       <Speakers {...{ baseUrl, year, speakers }} />
       <Theme />
@@ -46,4 +51,4 @@ const buildComponent = (currentStore, year = '2020') => {
   return Component;
 };
 
-export default buildComponent(store);
+export default buildComponent(store, store2019);

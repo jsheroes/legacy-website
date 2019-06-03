@@ -29,7 +29,7 @@ function getPhotoItems() {
     },
   ];
 
-  for (let index = 0; index < 3; index += 1) {
+  for (let index = 0; index < data.length; index += 1) {
     items.splice((index + 1) * 5 - 1, 0, {
       type: 'text',
       key: uuid.v4(),
