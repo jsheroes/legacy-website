@@ -14,12 +14,14 @@ import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
 import ContactForm from '../app/components/contactForm';
 import PhotoGallery from '../app/components/photoGallery';
-import store from '../app/data/2019';
+import store from '../app/data/2020';
 import 'what-input';
 
-const buildComponent = (currentStore, year = '2019') => {
+const buildComponent = (currentStore, year = '2020') => {
   const baseUrl = `static/img/${year}`;
   const { speakers, sponsors, partners, communities, schedule } = currentStore;
+
+  const showMission = false;
 
   const Component = () => (
     <Layout>
@@ -28,7 +30,7 @@ const buildComponent = (currentStore, year = '2019') => {
       <Speakers {...{ baseUrl, year, speakers }} />
       <Theme />
       <Schedule {...{ baseUrl, year, schedule, speakers }} />
-      <Mission />
+      {showMission && <Mission />}
       <Sponsors {...{ baseUrl, sponsors }} />
       <Partners {...{ baseUrl, partners }} />
       <Communities {...{ baseUrl, communities }} />

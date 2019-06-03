@@ -74,7 +74,7 @@ class Header extends Component {
       <div>
         <img
           className="background-image"
-          src="/static/img/speakers_and_organizers.jpg"
+          src="/static/img/speakers_and_organizers_2.jpg"
           alt="background"
           aria-hidden="true"
         />

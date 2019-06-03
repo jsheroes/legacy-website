@@ -56,36 +56,36 @@ export default [
     id: 1.1,
     url: '#speakers',
     label: 'speakers',
-    whitelist: ['/2017', '/2018'],
+    whitelist: ['/2017', '/2018', '/2019'],
   },
   {
     id: 2,
     url: '/#schedule',
     label: 'schedule',
-    blacklist: ['/2017', '/2018'],
+    blacklist: ['/2017', '/2018', '/2019', '/2020'],
   },
   {
     id: 2.1,
     url: '#schedule',
     label: 'schedule',
-    whitelist: ['/2017', '/2018'],
+    whitelist: ['/2017', '/2018', '/2019'],
   },
-  {
-    id: 3,
-    url: '/#mission',
-    label: 'mission',
-  },
+  // {
+  //   id: 3,
+  //   url: '/#mission',
+  //   label: 'mission',
+  // },
   {
     id: 4,
     url: '/#organizers',
     label: 'organizers',
-    blacklist: ['/2017', '/2018'],
+    blacklist: ['/2017', '/2018', '/2019'],
   },
   {
     id: 4.1,
     url: '#sponsors',
     label: 'sponsors',
-    whitelist: ['/2017', '/2018'],
+    whitelist: ['/2017', '/2018', '/2019'],
   },
   {
     id: 5,
@@ -98,12 +98,17 @@ export default [
     url: '#',
     links: [
       {
-        id: 6.1,
+        id: 6.3,
+        url: '/2019',
+        label: '2019',
+      },
+      {
+        id: 6.2,
         url: '/2018',
         label: '2018',
       },
       {
-        id: 6.2,
+        id: 6.1,
         url: '/2017',
         label: '2017',
       },
@@ -111,8 +116,8 @@ export default [
   },
   {
     id: 7,
-    label: 'Back to 2019',
+    label: 'Back to 2020',
     url: '/',
-    whitelist: ['/2017', '/2018'],
+    whitelist: ['/2017', '/2018', '/2019'],
   },
 ];
