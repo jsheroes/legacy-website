@@ -10,7 +10,7 @@ describe('Website navigation', () => {
       cy.get(selectors.menuItems)
         .contains('speakers')
         .click();
-      cy.get(selectors.speakersSection).should('contain', 'Our 2019 Heroes');
+      cy.get(selectors.speakersSection).should('contain', 'Our 2020 Heroes');
     });
 
     it('past editions', () => {
@@ -19,7 +19,7 @@ describe('Website navigation', () => {
         .click();
       cy.get(selectors.linkLabel)
         .first()
-        .should('contain', '2018');
+        .should('contain', '2019');
       cy.get(selectors.linkLabel)
         .last()
         .should('contain', '2017');
