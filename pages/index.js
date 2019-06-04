@@ -40,7 +40,7 @@ const buildComponent = (currentStore, prevStore, year = '2020') => {
       <Partners {...{ baseUrl, partners }} />
       <Communities {...{ baseUrl, communities }} />
       <Statistics />
-      <PhotoGallery />
+      <PhotoGallery {...{ year: 2018 }} />
       <Organizers />
       <Venue />
       <ContactForm />

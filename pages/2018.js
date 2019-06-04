@@ -6,6 +6,7 @@ import Sponsors from '../app/components/sponsors';
 import Partners from '../app/components/partners';
 import Communities from '../app/components/communities';
 import ScrollBtn from '../app/components/scroll-btn';
+import PhotoGallery from '../app/components/photoGallery';
 import store from '../app/data/2018';
 
 const buildComponent = (currentStore, year = 2018) => {
@@ -20,6 +21,7 @@ const buildComponent = (currentStore, year = 2018) => {
       <Sponsors {...{ baseUrl, sponsors }} />
       <Partners {...{ baseUrl, partners }} />
       <Communities {...{ baseUrl, communities }} />
+      <PhotoGallery {...{ year }} />
       <ScrollBtn />
     </Layout>
   );
