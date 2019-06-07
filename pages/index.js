@@ -19,9 +19,8 @@ import PhotoGallery from '../app/components/photoGallery';
 import AfterMovie from '../app/components/afterMovie';
 
 import store from '../app/data/2020';
-import store2019 from '../app/data/2019';
 
-const buildComponent = (currentStore, prevStore, year = '2020') => {
+const buildComponent = (currentStore, year = '2020') => {
   const baseUrl = `static/img/${year}`;
   const { speakers, sponsors, partners, communities, schedule } = currentStore;
 
@@ -30,7 +29,7 @@ const buildComponent = (currentStore, prevStore, year = '2020') => {
   const Component = () => (
     <Layout>
       <Header />
-      <AfterMovie {...{ year: 2019, videos: prevStore.videos }} />
+      <AfterMovie {...{ year: 2019 }} />
       <Updates />
       <Speakers {...{ baseUrl, year, speakers }} />
       <Theme />
@@ -51,4 +50,4 @@ const buildComponent = (currentStore, prevStore, year = '2020') => {
   return Component;
 };
 
-export default buildComponent(store, store2019);
+export default buildComponent(store);

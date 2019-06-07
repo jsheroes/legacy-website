@@ -11,11 +11,11 @@ import store from '../app/data/2019';
 
 const buildComponent = (currentStore, year = 2019) => {
   const baseUrl = `static/img/${year}`;
-  const { videos, speakers, sponsors, partners, communities, schedule } = currentStore;
+  const { speakers, sponsors, partners, communities, schedule } = currentStore;
 
   const Component = () => (
     <Layout>
-      <AfterMovie {...{ year, videos }} />
+      <AfterMovie {...{ year }} />
       <Speakers {...{ baseUrl, year, speakers }} />
       <Schedule {...{ baseUrl, year, schedule, speakers }} />
       <Sponsors {...{ baseUrl, sponsors }} />
