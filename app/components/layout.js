@@ -52,9 +52,9 @@ class Layout extends Component {
             content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 23-24th 2020 in Cluj-Napoca, Romania!"
           />
           <meta property="og:locale" content="en_US" />
-          <meta property="og:site_name" content="JSHeroes 2020 | Open-Souce Community Event" />
+          <meta property="og:site_name" content="JSHeroes 2020 | Open-Source Community Event" />
           <meta name="twitter:site" content="@jsheroes" />
-          <meta name="twitter:title" content="JSHeroes 2020 | Open-Souce Community Event" />
+          <meta name="twitter:title" content="JSHeroes 2020 | Open-Source Community Event" />
           <meta
             name="twitter:description"
             content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 23-24th 2020 in Cluj-Napoca, Romania!"
