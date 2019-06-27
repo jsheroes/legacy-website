@@ -910,7 +910,7 @@ export default [
     twitter: 'https://twitter.com/@pfeiffer_andrei',
     github: 'https://github.com/andreipfeiffer/',
     website: 'https://medium.com/@andrei.pfeiffer',
-    description: `Andrei Pfeiffer is a "designer / developer hybrid", specialized in UI development, both on web and mobile. He organizes tim.js, the local JavaScript meetup in Timisoara/RO & revo.js conference. He's also a public speaker, trainer, mentor and technical writer.`,
+    description: `Andrei Pfeiffer is a "designer / developer hybrid", specialized in Front-End technologies and UI development, both on web and mobile. He organizes revo.js conference & tim.js which is the local JavaScript meetup in Timisoara/RO. He's also a public speaker, trainer, mentor and technical writer.`,
     talk: null,
     workshop: {
       title: 'Custom React Native Modules for iOS and Android',
