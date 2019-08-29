@@ -51,10 +51,11 @@ class Speakers extends Component {
             {isCurrentYear && (
               <div>
                 <p>
-                  The speakers that joined our mission are experts recognized by global communities.
+                  {/* The speakers that joined our mission are experts recognized by global communities.
                   They are people who define our working environment every day. Most of them are for
                   the first time in Romania and they’re really looking forward to our community
-                  event!
+                  event! */}
+                  Coming soon...
                 </p>
               </div>
             )}
@@ -67,12 +68,13 @@ class Speakers extends Component {
             ))}
           </div>
 
-          {isCurrentYear &&
-            cfpOpen && <CTAButton url="/speak-at-jsheroes">Give a Talk at JSHeroes</CTAButton>}
+          {isCurrentYear && cfpOpen && (
+            <CTAButton url="/speak-at-jsheroes">Give a Talk at JSHeroes</CTAButton>
+          )}
 
           {isCurrentYear && (
             <div className="section-header" id="ambassadors">
-              <h2>And Our Awesome Ambassadors</h2>
+              <h2>Our Awesome Ambassadors</h2>
               <div>
                 <p>
                   An amazing group of people who said yes to the challenge of working with us at
