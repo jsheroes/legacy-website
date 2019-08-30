@@ -1,17 +1,32 @@
 {
-  "extends": ["airbnb", "plugin:react/recommended", "prettier"],
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "prettier"
+  ],
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module"
   },
-  "plugins": ["jsx-a11y"],
+  "plugins": [
+    "jsx-a11y",
+    "cypress"
+  ],
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "jest": true,
+    "cypress/globals": true
   },
   "rules": {
     "semi": 2,
-    "no-use-before-define": 1,
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": true
+      }
+    ],
     "react/jsx-uses-vars": 2,
     "react/react-in-jsx-scope": 0,
     "react/prop-types": 0,
@@ -23,15 +38,24 @@
     "jsx-a11y/aria-role": 1,
     "jsx-a11y/anchor-is-valid": 0,
     "react/button-has-type": 0,
-    "complexity": [2, 14],
-    "max-statements": [1, 7],
+    "complexity": [
+      2,
+      14
+    ],
+    "max-statements": [
+      1,
+      7
+    ],
     "max-statements-per-line": [
       2,
       {
         "max": 2
       }
     ],
-    "max-nested-callbacks": [2, 3],
+    "max-nested-callbacks": [
+      2,
+      3
+    ],
     "max-depth": [
       2,
       {

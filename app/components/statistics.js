@@ -11,7 +11,7 @@ const Statistics = () => (
         <ul>
           <li>2017 - 450 attendees</li>
           <li>2018 - 600 attendees (80% romanians, 20% other nationalities) </li>
-          <li>2019 - 700 attendees (estimated)</li>
+          <li>2019 - 700 attendees (&gt;30% from outside Romania)</li>
         </ul>
       </div>
       <div className="statistics-box">
@@ -21,9 +21,9 @@ const Statistics = () => (
           </Link>
         </h3>
         <ul>
-          <li>Subscribers - 672 </li>
-          <li>Views - more than 28.3K (lifetime) </li>
-          <li>Hours of content watched - more than 2.5K (lifetime)</li>
+          <li>Subscribers - 1.5K </li>
+          <li>Views - more than 55K (lifetime) </li>
+          <li>Minutes of content watched - more than 305K (lifetime)</li>
         </ul>
       </div>
       <div className="statistics-box">
@@ -33,8 +33,8 @@ const Statistics = () => (
           </Link>
         </h3>
         <ul>
-          <li>Page Followers - 1.1K</li>
-          <li>Community Group - 1.3K</li>
+          <li>Page Followers - 1.3K</li>
+          <li>Community Group - 1.4K</li>
         </ul>
       </div>
       <div className="statistics-box">
@@ -44,8 +44,8 @@ const Statistics = () => (
           </Link>
         </h3>
         <ul>
-          <li>Followers - 1.6K </li>
-          <li>Tweets - over 1.6K</li>
+          <li>Followers - 3.1K </li>
+          <li>Tweets - over 1.8K</li>
         </ul>
       </div>
       <div className="statistics-box">
@@ -55,8 +55,8 @@ const Statistics = () => (
           </Link>
         </h3>
         <ul>
-          <li>Members - 1.5K</li>
-          <li>Meetups Organized - 76 </li>
+          <li>Members - 1.8K</li>
+          <li>Meetups Organized - 90 </li>
         </ul>
       </div>
       <div className="statistics-box">

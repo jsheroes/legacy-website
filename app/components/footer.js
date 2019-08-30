@@ -15,7 +15,7 @@ const Footer = () => (
         </span>
       </div>
       <div>
-        <span className="headline">JSHeroes 2019</span>
+        <span className="headline">JSHeroes 2020</span>
         <div>
           <span className="link">
             <Link href="https://ti.to/cluj-javascripters/jsheroes-2020">Buy Your Ticket</Link>
@@ -64,16 +64,13 @@ const Footer = () => (
       </div>
       <div>
         <span className="headline">Past Editions</span>
-        <div>
-          <span className="link">
-            <Link href="/2018">JSHeroes 2018</Link>
-          </span>
-        </div>
-        <div>
-          <span className="link">
-            <Link href="/2017">JSHeroes 2017</Link>
-          </span>
-        </div>
+        {[2019, 2018, 2017].map(year => (
+          <div key={`past_${year}`}>
+            <span className="link">
+              <Link href={`/${year}`}>{`JSHeroes ${year}`}</Link>
+            </span>
+          </div>
+        ))}
       </div>
     </div>
     <div className="copyright">

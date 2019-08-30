@@ -6,7 +6,7 @@ import news from './news';
 import socialmedia from './socialmedia';
 
 export default {
-  currentYear: '2019',
+  currentYear: '2020',
   data2017,
   data2018,
   data2019,

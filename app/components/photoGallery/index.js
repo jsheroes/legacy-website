@@ -3,44 +3,7 @@ import React from 'react';
 
 import { styles, mediaQueries } from '../../constants';
 
-function getPhotoItems() {
-  const items = [];
-
-  for (let index = 1; index <= 12; index += 1) {
-    items.push({
-      type: 'photo',
-      key: uuid.v4(),
-      value: { src: `jsheroes-2018-gallery-${index}.png` },
-    });
-  }
-
-  const data = [
-    {
-      title: 'View all 2018 photos',
-      url: 'https://www.facebook.com/pg/jsheroes/photos/?tab=album&album_id=2044909715746934',
-    },
-    {
-      title: 'Watch all 2018 videos',
-      url: 'https://www.youtube.com/playlist?list=PLB9NqTp0uKrRn_C80xQK8QEeO-vaBmN_9',
-    },
-    {
-      title: 'View all 2017 photos',
-      url: 'https://www.facebook.com/jsheroes/photos/?tab=album&album_id=1903947609843146',
-    },
-  ];
-
-  for (let index = 0; index < 3; index += 1) {
-    items.splice((index + 1) * 5 - 1, 0, {
-      type: 'text',
-      key: uuid.v4(),
-      value: { ...data[index] },
-    });
-  }
-
-  return items;
-}
-
-const Component = ({ items = getPhotoItems() }) => (
+const Component = ({ year, items = getPhotoItems(year) }) => (
   <React.Fragment>
     <div className="grid-container">
       {items.map(({ type, key, value }, index) => (
@@ -58,14 +21,14 @@ const Component = ({ items = getPhotoItems() }) => (
             <picture>
               <source
                 media={`(max-width: ${mediaQueries.XS})`}
-                srcSet={`static/img/photo_gallery/small/${value.src}`}
+                srcSet={`static/img/${year}/photo_gallery/small/${value.src}`}
               />
               <source
                 media={`(max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.XS})`}
-                srcSet={`static/img/photo_gallery/medium/${value.src}`}
+                srcSet={`static/img/${year}/photo_gallery/medium/${value.src}`}
               />
               <img
-                src={`static/img/photo_gallery/large/${value.src}`}
+                src={`static/img/${year}/photo_gallery/large/${value.src}`}
                 alt="gallery item"
                 className="image-wrapper"
               />
@@ -185,5 +148,64 @@ const Component = ({ items = getPhotoItems() }) => (
     </style>
   </React.Fragment>
 );
+
+function getPhotoItems(year) {
+  const items = [];
+
+  for (let index = 1; index <= 12; index += 1) {
+    items.push({
+      type: 'photo',
+      key: uuid.v4(),
+      value: { src: `jsheroes-${year}-gallery-${index}.png` },
+    });
+  }
+
+  const data = getData(year);
+
+  for (let index = 0; index < data.length; index += 1) {
+    items.splice((index + 1) * 5 - 1, 0, {
+      type: 'text',
+      key: uuid.v4(),
+      value: { ...data[index] },
+    });
+  }
+
+  return items;
+}
+
+function getData(year) {
+  let [photosUrl, videosUrl] = [];
+
+  switch (year) {
+    case 2019:
+      photosUrl =
+        'https://www.facebook.com/pg/jsheroes/photos/?tab=album&album_id=2275719352665968';
+      videosUrl =
+        'https://www.youtube.com/watch?v=jdr9eQGq97g&list=PLB9NqTp0uKrR8WFXitMvLMGd-kGGZ4RkX';
+      break;
+    case 2018:
+      photosUrl =
+        'https://www.facebook.com/pg/jsheroes/photos/?tab=album&album_id=2044909715746934';
+      videosUrl = 'https://www.youtube.com/playlist?list=PLB9NqTp0uKrRn_C80xQK8QEeO-vaBmN_9';
+      break;
+    default:
+      break;
+  }
+
+  return [
+    {
+      title: `View all ${year} photos`,
+      url: photosUrl,
+    },
+    {
+      title: `Watch all ${year} videos`,
+      url: videosUrl,
+    },
+    {
+      title: `Check out ${year} website`,
+      url: `/${year}`,
+    },
+  ];
+}
 
 export default Component;
