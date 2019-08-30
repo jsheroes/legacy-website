@@ -16,8 +16,8 @@ export default [
   {
     name: 'jeremias',
     fullName: 'Jeremias Menichelli',
-    position: 'Frontend Engineer in Design Systems',
-    company: 'TypeForm',
+    position: 'Independent Developer',
+    company: '',
     img: 'jeremias.jpg',
   },
   {

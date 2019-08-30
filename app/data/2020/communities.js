@@ -34,4 +34,14 @@ export default [
     img: 'logo_jsday.png',
     href: 'https://2019.jsday.it',
   },
+  {
+    title: 'IasiJS',
+    img: 'logo_iasijs.svg',
+    href: 'http://www.iasijs.com',
+  },
+  {
+    title: 'Frontend Hub',
+    img: 'logo_frontend_hub.png',
+    href: 'https://www.facebook.com/frontendhub/',
+  },
 ];
