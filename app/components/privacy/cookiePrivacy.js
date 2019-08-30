@@ -15,13 +15,14 @@ class CookiePrivacy extends Component {
   handleAccept = () => {
     localStorage.setItem('policy', 'true');
     this.setState({ visible: 'false' });
-    const header = document.querySelector('h1');
-    if (header) {
-      // after cookie consent, focus should be moved programmatically on the heading level one of that page
-      header.tabIndex = -1;
-      header.focus();
-      header.tabIndex = 0;
-    }
+    // TODO: move to h1 only on keyboard navigation
+    // const header = document.querySelector('h1');
+    // if (header) {
+    //   // after cookie consent, focus should be moved programmatically on the heading level one of that page
+    //   header.tabIndex = -1;
+    //   header.focus();
+    //   header.tabIndex = 0;
+    // }
   };
 
   createBanner = () => {

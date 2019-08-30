@@ -60,6 +60,7 @@ class Speakers extends Component {
               </div>
             )}
           </div>
+
           <div className="speaker-boxes">
             {speakers.map(speaker => (
               <div key={speaker.name} className="speaker-box">
