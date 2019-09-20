@@ -6,7 +6,7 @@ import store from '../../data';
 import CTAButton from '../common/ctaButton';
 import Link from '../common/link';
 
-const SpeakerDetail = ({ speaker }) => {
+const SpeakerDetail = ({ speaker, year = store.currentYear }) => {
   const talks = buildTalks(speaker);
   const imageExtension = speaker.img.split('.')[1];
   return (
@@ -17,7 +17,7 @@ const SpeakerDetail = ({ speaker }) => {
         <meta property="og:url" content={`https://jsheroes.io/speakers/${speaker.permalink}`} />
         <meta
           property="og:image"
-          content={`https://jsheroes.io//static/img/${store.currentYear}/speakers/${speaker.img}`}
+          content={`https://jsheroes.io//static/img/${year}/speakers/${speaker.img}`}
         />
         <meta property="og:image:type" content={`image/${imageExtension}`} />
         <meta property="og:description" content={speaker.description} />
@@ -35,10 +35,7 @@ const SpeakerDetail = ({ speaker }) => {
             <div className="side">
               <div className="speaker-info-box">
                 <div className="speaker-img">
-                  <img
-                    src={`/static/img/${store.currentYear}/speakers/${speaker.img}`}
-                    alt={speaker.fullName}
-                  />
+                  <img src={`/static/img/${year}/speakers/${speaker.img}`} alt={speaker.fullName} />
                 </div>
               </div>
               <div className="details-container">

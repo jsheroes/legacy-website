@@ -30,7 +30,7 @@ class Nav extends Component {
 
   filterMenuItems() {
     const {
-      router: { pathname },
+      router: { asPath },
     } = this.props;
 
     // A fairly naive pathname matching approach.
@@ -38,9 +38,9 @@ class Nav extends Component {
     // comparison if such needs arise.
     const urlMatchesRoute = url => {
       if (url instanceof RegExp) {
-        return url.test(pathname);
+        return url.test(asPath);
       }
-      return url === pathname;
+      return url === asPath;
     };
 
     const shouldItemBeVisible = ({ whitelist, blacklist }) => {

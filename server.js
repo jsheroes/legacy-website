@@ -46,6 +46,12 @@ const startServer = () => {
     return app.render(req, res, route, params);
   });
 
+  server.get('/:year/speakers/:name', (req, res) => {
+    const params = { name: req.params.name, year: req.params.year };
+    const route = '/speakers';
+    return app.render(req, res, route, params);
+  });
+
   server.get('/workshops', (req, res) => {
     res.redirect(301, '/');
   });

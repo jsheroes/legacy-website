@@ -50,7 +50,7 @@ export default [
     id: 1,
     url: '/#speakers',
     label: 'speakers',
-    blacklist: ['/2017', '/2018'],
+    blacklist: ['/2017', '/2018', '/2019'],
   },
   {
     id: 1.1,
@@ -62,7 +62,7 @@ export default [
     id: 2,
     url: '/#schedule',
     label: 'schedule',
-    blacklist: ['/2017', '/2018', '/2019', '/2020'],
+    blacklist: ['/2017', '/2018', '/2019'],
   },
   {
     id: 2.1,
@@ -118,6 +118,6 @@ export default [
     id: 7,
     label: 'Back to 2020',
     url: '/',
-    whitelist: ['/2017', '/2018', '/2019'],
+    whitelist: ['/2017', '/2018', /^\/2019/],
   },
 ];

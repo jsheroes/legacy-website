@@ -98,7 +98,7 @@ const PersonInfo = ({ WrappingElement, person, baseUrl, ...props }) => (
   </WrappingElement>
 );
 
-const PersonSpotlight = ({ person, baseUrl, activeLink = false }) => (
+const PersonSpotlight = ({ person, baseUrl, yearPrefix, activeLink = false }) => (
   <div>
     {/*
       The tricky thing is that, in order to reuse the same styles
@@ -114,11 +114,11 @@ const PersonSpotlight = ({ person, baseUrl, activeLink = false }) => (
         baseUrl={baseUrl}
         // Props to decorate the wrapper element.
         WrappingElement={Link}
-        href={`/speakers?name=${person.permalink}`}
-        as={`/speakers/${person.permalink}`}
+        href={`${yearPrefix}/speakers?name=${person.permalink}`}
+        as={`${yearPrefix}/speakers/${person.permalink}`}
         title={`Visit the page of ${person.fullName}`}
         onMouseEnter={() => {
-          Router.prefetch(`/speakers?name=${person.permalink}`);
+          Router.prefetch(`${yearPrefix}/speakers?name=${person.permalink}`);
         }}
       />
     ) : (

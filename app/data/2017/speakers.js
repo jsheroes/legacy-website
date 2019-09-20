@@ -5,6 +5,7 @@ export default [
     description:
       '<p>Guillermo is the founder of <a href="https://zeit.co/" target="_blank">zeit.co</a>, whose mission is to make cloud deployment simple, global and real time. He founded two startups previously: LearnBoost and CloudUp. He`s the creator of several popular Node.JS open source libraries like <a href="https://socket.io/" target="_blank">socket.io</a>, <a href="http://mongoosejs.com/" target="_blank">mongoose</a> and <a href="https://github.com/rauchg/slackin" target="_blank">slackin</a>. Prior to Node.JS, he was a core developer of the <a href="https://mootools.net/" target="_blank">MooTools</a> frontend toolkit. He’s a JSConf.ar curator, open source enthusiast and blogger</p>',
     fullName: 'Guillermo Rauch',
+    firstName: 'Guillermo',
     github: 'https://github.com/rauchg',
     img: 'GuillermoRauch.jpg',
     name: 'rauch',
@@ -29,6 +30,7 @@ export default [
     description:
       '<p>Liran is leading the core team for the MEAN.js JavaScript framework. He recently published Essential Node.js Security and authored other books in Agile, and Web development. Passionate about Open Source since an early age, he is continuously contributing to many projects on GitHub in Node.js, JavaScript, Docker, and Security.</p><p>Being an avid supporter and contributor to the open source movement, in 2007 Liran has redefined network RADIUS management by establishing daloRADIUS, a world-recognized and industry-leading <br><a href="http://www.daloradius.com" class="text-blue" target="_blank">open source project</a>.</p>',
     fullName: 'Liran Tal',
+    firstName: 'Liran',
     github: 'https://github.com/lirantal',
     img: 'liran.png',
     name: 'liran',
@@ -53,6 +55,7 @@ export default [
     description:
       '<p>Gautam is a Developer Evangelist at <a href="http://www.condenast.com/" target="_blank">Conde Nast</a>, an organizer of New York JavaScript where he runs NodeSchool NYC, and a self-published author at <a href="http://fullstackjs.com/" target="_blank">FullStack JavaScript</a>.</p>',
     fullName: 'Gautam Arora',
+    firstName: 'Gautam',
     github: 'https://github.com/gautamarora',
     img: 'gautam.jpeg',
     name: 'gautam',
@@ -77,6 +80,7 @@ export default [
     description:
       "<p>Mark Dalgleish is the co-creator of CSS Modules, lead organiser of MelbJS, and DesignOps Lead at SEEK, Australia's leading job site. Having got his start with HTML and UI design at a young age, Mark has since developed a love of open source and software engineering but always as a means to creating elegant, usable experiences.</p>",
     fullName: 'Mark Dalgleish',
+    firstName: 'Mark',
     github: 'https://github.com/markdalgleish',
     img: 'mark.jpg',
     name: 'mark',
@@ -101,6 +105,7 @@ export default [
     description:
       '<p>Developer, writer, educator and father, on a mission to contribute to a future where technology serves humanity - not the other way around. Expert diaper-changer with a ridiculous passion for Open Source.</p>',
     fullName: 'Dan Călinescu',
+    firstName: 'Dan',
     github: 'https://github.com/idancali',
     img: 'calinescu.jpg',
     name: 'calinescu',
@@ -125,6 +130,7 @@ export default [
     description:
       '<p>Developer, teacher, sports-fanatic. When he`s not working on simplifying online collaboration at join.me by LogMeIn, he`s researching the patterns and algorithms connecting basketball, trail running, and drums. His devotion for impeccable user interfaces is rivaled only by his constant search for the perfect brew of Chinese green tea. Benedek is also one of the organizers of the Budapest AngularJS community.</p>',
     fullName: 'Benedek Gagyi',
+    firstName: 'Benedek',
     github: '',
     img: 'BenedekGagyi.png',
     name: 'gagyi',
@@ -149,6 +155,7 @@ export default [
     description:
       '<p>Coder, blogger and tech enthusiast in general, passionate about JavaScript and Functional Programming, Alex is always happy to talk about coding and software development in general. He is a huge militant for clean code and teaching people core programming skills and paradigms. Currently he works as a full stack developer splitting his time between JavaScript and Ruby but outside work, he`s a big promoter of open source software and communities, as he`s co-organizing Cluj JavaScripters.</p>',
     fullName: 'Alex Moldovan',
+    firstName: 'Alex',
     github: 'https://github.com/alexnm',
     img: 'AlexMoldovan.jpg',
     name: 'moldovan',
@@ -173,6 +180,7 @@ export default [
     description:
       '<p>Cassi Lup is a Lead Developer with 3Pillar Global and a co-organizer of tim.js (probably the 1st JS Meetup in Romania). He has a passion for the web and tries to look at it with a creative, yet critical eye. He has a knack for all things JS, from trainings and workshops all the way to solving real-life problems with code. When not online, he loves hanging out with his wife and two kids.</p>',
     fullName: 'Cassi Lup',
+    firstName: 'Cassi',
     github: 'https://github.com/cassilup',
     img: 'cassi.jpg',
     name: 'cassi',
@@ -197,6 +205,7 @@ export default [
     description:
       '<p>Roxana is a technologist and communication expert engaged in social and disruptive innovation, passionate about future technologies, entrepreneurship and innovation in education. Her working experience with NGOs, international companies, governmental institutions, agencies and startups brought her to Simplon.co France where she learned Ruby &amp; Ruby on Rails for 6 months. After 10 years of experience in web, marketing, education and communication,  she wants to help more people to learn how to code, develop digital &amp; entrepreneurial skills to solve real problems with long term positive impact on societies.</p>',
     fullName: 'Roxana Rugină',
+    firstName: 'Roxana',
     github: '',
     img: 'RoxanaRugina.jpg',
     name: 'roxana',
@@ -220,6 +229,7 @@ export default [
     description:
       '<p>Passionate about programming since he was a kid, Tudor is never bored to talk about computers and software. Nowadays he spends his time learning new things and helping others reach their full potential. Never saying no to a challenge, Tudor co-organizes Cluj Javascripters, promoting free learning and open source.</p>',
     fullName: 'Tudor Gergely',
+    firstName: 'Tudor',
     github: 'https://github.com/tudorgergely',
     img: 'gergely.jpg',
     name: 'gergely',
@@ -244,6 +254,7 @@ export default [
     description:
       "<p>I'm passionate about open-source, and I build apps for early-stage startups as an independent developer for a living. I'm also the maintainer of two Apollo-related open-source projects: the Meteor's Apollo integration &amp; Telescope, one of the biggest Meteor open-source app running with React &amp; GraphQL.</p>",
     fullName: 'Xavier Cazalot',
+    firstName: 'Xavier',
     github: 'https://github.com/xavcz',
     img: 'xavier.jpeg',
     name: 'xavier',
@@ -268,6 +279,7 @@ export default [
     description:
       '<p>Maxim Salnikov is Oslo-based Web UI Engineer, a Google Developer Expert in Web Technologies and Angular. He develops complex web applications since the end of the last century and has extensive experience with all aspects of web front-end: UX/UI prototyping, HTML/CSS/JS, main frameworks, progressive web apps. Maxim is a founder and active contributor to two conferences: Mobile Era and ngVikings - Nordics’ main conferences for mobile and Angular developers respectively. Also, he leads Norway’s largest meetups dedicated to web front-end and mobile: Framsia, Angular Oslo, Mobile Meetup Oslo. Maxim is passionate about sharing his web front-end experience and knowledge with the community. He travels extensively for visiting developers events and speaking/training at conferences and meetups around the world.</p>',
     fullName: 'Maxim Salnikov',
+    firstName: 'Maxim',
     github: 'https://github.com/webmaxru',
     img: 'maximsalnikov.png',
     name: 'salnikov',
@@ -292,6 +304,7 @@ export default [
     description:
       '<p>Ovidiu is a React &amp; JS consultant. Previously Engineering Manager at [Hootsuite], leading the UI development of the Analytics product. Before that, he`s helped build countless web experiences working with startups, agencies and large organizations.</p><p>He spends most of his time creating user interfaces and open source software, such as [React Cosmos] and [Illustrated Algorithms]. He`s also founded the React.js Bucharest community, where he hosted a number of meetups and hackathons.</p>',
     fullName: 'Ovidiu Cherecheș',
+    firstName: 'Ovidiu',
     github: 'https://github.com/skidding',
     img: 'chereches.png',
     name: 'chereches',
@@ -316,6 +329,7 @@ export default [
     description:
       '<p>Israel-based Front-End and React Native developer at 500Tech. Worked on tens of projects using Angular, React and React Native. </p>',
     fullName: 'Vladimir Porton',
+    firstName: 'Vladimir',
     github: 'https://github.com/portons',
     img: 'vladimir_porton.png',
     name: 'vladimir',
@@ -340,6 +354,7 @@ export default [
     description:
       '<p>Filip is a frontend developer from Denmark, focusing on delivering great user-experiences to the end-user – often using Angular. He is the Frontend Manager at IMPACT, delivering large-scale commerce-products to well-known business and consumer brands. Filip is passionate about the web, and cares not only about clean and efficient code, but also about accessibility and performance, in order for the web to be available and accessible for everybody - without sacrificing great design and UX. In his local city of Aarhus, Denmark, Filip initiated an angular user group that has grown to become the biggest in the country. Filip is an active community member, and an experienced public speaker, loving to share knowledge and to mentor fellow developers and entrepreneurs. Filip lives in Aarhus, with his wife and two boys, and fluently speaks English and Danish.</p>',
     fullName: 'Filip Bech-Larsen',
+    firstName: 'Filip',
     github: 'https://github.com/filipbech',
     img: 'filip.jpg',
     name: 'filip',
@@ -364,6 +379,7 @@ export default [
     description:
       '<p>Google Developer Expert (GDE - web technologies, Angular), worldwide conference speaker, Angular evangelist and community activist. Currently acting as the head of Angular department at 500Tech - a top front-end consultancy. Nir organizes the largest Angular community in Israel (Angular-IL), talk and teach about front-end technologies around the world and an organizer of AngularUP conference.</p>',
     fullName: 'Nir Kaufman',
+    firstName: 'Nir',
     github: 'https://github.com/nirkaufman',
     img: 'NirKaufman.png',
     name: 'nir',
@@ -388,6 +404,7 @@ export default [
     description:
       '<p>Pavithra is a Bangalore based Web UI developer. She has been building web applications of various description from the past 6 years. She is a JS framework junkie who has written production applications in Backbone, Ember, Angular and now, React. She likes to participate in welcoming open source communities and is particularly interested in front-end developer tools. She listens to classic rock and loves to watch anime movies.</p>',
     fullName: 'Pavithra Kodmad',
+    firstName: 'Pavithra',
     github: 'https://github.com/pksjce',
     img: 'pavithra.png',
     name: 'pavithra',
@@ -435,6 +452,7 @@ export default [
     description:
       '<p>Robert is currently a Software Architect at Evozon, but has been writing code past a decade. He is passionate about JavaScript, application architectures and mentoring. Beside the daily programming routines, he is also a trainer at Scoala Informala de IT, in Cluj-Napoca, a speaker at serveral JS related conferences and finally a writer both on his blog and <a href="https://www.packtpub.com/web-development/mean-blueprints" target="_blank">traditional hardcover.</a></p>',
     fullName: 'Robert Onodi',
+    firstName: 'Robert',
     github: 'https://github.com/robert52',
     img: 'ronodi.png',
     name: 'ronodi',
