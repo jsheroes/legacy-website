@@ -41,7 +41,7 @@ const startServer = () => {
   });
 
   server.get('/speakers/:name', (req, res) => {
-    const params = { name: req.params.name };
+    const params = { name: req.params.name, year: '2020' };
     const route = '/speakers';
     return app.render(req, res, route, params);
   });

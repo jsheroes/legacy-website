@@ -10,12 +10,13 @@ const Speakers = ({ speaker, year }) => (
 );
 
 Speakers.getInitialProps = async ({ res, query }) => {
-  const speaker = store[`data${query.year}`].speakers.find(s => s.permalink === query.name);
+  const year = query.year || '2020';
+  const speaker = store[`data${year}`].speakers.find(s => s.permalink === query.name);
   if (!speaker) {
     Helpers.redirectTo({ res, path: '/' });
   }
 
-  return { speaker, year: query.year };
+  return { speaker, year };
 };
 
 export default Speakers;
