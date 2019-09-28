@@ -4,32 +4,55 @@ import { styles, mediaQueries } from '../constants';
 const Theme = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor6 } }}>
     <div id="theme">
-      <h2>Open Source, Accessibility and Mental Health</h2>
+      <h2>Our spotlight for 2020</h2>
       <p>
-        <strong>JSHeroes</strong> is mostly focused on technical talks, the{' '}
-        <strong>JavaScript</strong> ecosystem and the wonders of the <strong>Web</strong>. But each
-        year, we pick a couple of extra topics we want to raise awareness of. In 2019, we tackle a
-        major theme which impacts all of us one way or another:{' '}
-        <strong>open source software</strong>. We are also committed to bringing on stage speakers
-        that explore areas often overlooked by the community, namely:{' '}
-        <strong>Web Accessibility</strong>, <strong>Mental Health and Balance</strong>.
+        Each year at JSHeroes, we pick a couple of <strong>topics</strong> we want to spotlight. It
+        is not an exhaustive list, but we usually pick themes and topics we wish to{' '}
+        <strong>raise awareness</strong> on, or that we feel need a bit more focus during the event.
+        Nevertheless, JSHeroes is still focused on the technical side, the{' '}
+        <strong>JavaScript</strong> ecosystem and the wonders of the <strong>Web</strong>.
       </p>
+      <p className="list-heading">For 2020, we decided to focus on:</p>
+      <ul>
+        <li>
+          The past and future of <strong>JavaScript</strong> and the <strong>Web</strong> ecosystem
+        </li>
+        <li>
+          The impact of technology in <strong>society</strong>
+        </li>
+        <li>
+          The <strong>hardships</strong> of the day-by-day activities at tech companies
+        </li>
+      </ul>
       <p>
-        There were lots of choices to be made for the upcoming edition and one of the most difficult
-        ones was about our <strong>focus</strong>. Because we want to reach a greater impact on the
-        JavaScript ecosystem, we have decided to limit the number of talks which are addressing
-        specific frameworks and libraries inside the greater JavaScript/Web world. Most of them have
-        specialized events that are focusing particularly on the needs of those communities.
+        Because we want to reach a greater impact on the JavaScript ecosystem, we have decided to
+        limit the number of talks which are addressing specific frameworks and libraries inside the
+        greater JavaScript/Web world. Most of them have specialized events that are focusing
+        particularly on the needs of those communities.
       </p>
     </div>
     <style jsx>
       {`
+        .list-heading {
+          text-align: left;
+          margin-bottom: 10px;
+        }
+
+        ul {
+          font-size: 18px;
+          color: ${styles.mainColor3};
+          line-height: 32px;
+          font-weight: 300;
+          margin-top: 10px;
+          margin-bottom: 30px;
+          margin-left: 30px;
+        }
+
         div {
           padding: 140px 0;
         }
 
         h2 {
-          text-align: center;
           font-size: 54px;
           color: ${styles.mainColor3};
           font-weight: 700;
@@ -42,7 +65,6 @@ const Theme = () => (
           color: ${styles.mainColor3};
           line-height: 32px;
           font-weight: 300;
-          text-align: center;
         }
 
         @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
@@ -55,7 +77,6 @@ const Theme = () => (
           }
 
           p {
-            font-size: 17px;
             line-height: 30px;
             margin-bottom: 30px;
           }
@@ -71,7 +92,6 @@ const Theme = () => (
           }
 
           p {
-            font-size: 16px;
             line-height: 28px;
             margin-bottom: 20px;
           }

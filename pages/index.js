@@ -4,8 +4,8 @@ import Layout from '../app/components/layout';
 import Header from '../app/components/header';
 import Updates from '../app/components/updates';
 import Speakers from '../app/components/speakers';
-// import Theme from '../app/components/theme';
-// import Schedule from '../app/components/schedule';
+import Theme from '../app/components/theme';
+import Schedule from '../app/components/schedule';
 import Statistics from '../app/components/statistics';
 import Sponsors from '../app/components/sponsors';
 // import Partners from '../app/components/partners';
@@ -22,7 +22,7 @@ import store from '../app/data/2020';
 
 const buildComponent = (currentStore, year = '2020') => {
   const baseUrl = `static/img/${year}`;
-  const { speakers, sponsors, communities } = currentStore;
+  const { speakers, sponsors, communities, schedule } = currentStore;
 
   const Component = () => (
     <Layout>
@@ -30,8 +30,8 @@ const buildComponent = (currentStore, year = '2020') => {
       <AfterMovie {...{ year: 2019 }} />
       <Updates />
       <Speakers {...{ baseUrl, year, speakers }} />
-      {/* <Theme /> */}
-      {/* <Schedule {...{ baseUrl, year, schedule, speakers }} /> */}
+      <Theme />
+      <Schedule {...{ baseUrl, year, schedule, speakers }} />
       <Mission />
       <Sponsors {...{ baseUrl, sponsors }} />
       {/* <Partners {...{ baseUrl, partners }} /> */}

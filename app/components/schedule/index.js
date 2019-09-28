@@ -14,6 +14,7 @@ const Schedule = ({ year, schedule, baseUrl, speakers }) => (
           baseUrl={baseUrl}
           speakers={speakers}
         />
+        <p>will be announced soon...</p>
       </div>
     </div>
   </Section>

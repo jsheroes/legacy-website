@@ -26,7 +26,7 @@ class ScheduleTabSelector extends Component {
 
   buildCTAButton() {
     const { selectedTab } = this.state;
-    return selectedTab === 0 ? (
+    return selectedTab >= 0 ? (
       ''
     ) : (
       <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2020">

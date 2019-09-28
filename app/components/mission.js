@@ -32,7 +32,7 @@ const Mission = () => (
         }
 
         h2 {
-          text-align: center;
+          text-align: left;
           font-size: 54px;
           color: ${styles.mainColor3};
           font-weight: 700;
@@ -45,7 +45,7 @@ const Mission = () => (
           color: ${styles.mainColor3};
           line-height: 32px;
           font-weight: 300;
-          text-align: center;
+          text-align: left;
         }
 
         .link {

@@ -7,9 +7,9 @@ const news = [
       'Join us on the <strong>23th</strong> and <strong>24th</strong> of April 2020 for 2 days of <strong>conference</strong>, with a kick-off day full of <strong>workshops</strong> on the <strong>22th</strong>. Feel free to send us your suggestions over <a href="https://twitter.com/jsheroes" target="_blank" rel="noreferrer noopener">Twitter</a>, we’d be happy to hear from you.',
   },
   {
-    title: 'CFP Closed',
+    title: 'CFP Coming Soon',
     content:
-      "We received <strong>over 300 proposals</strong>  for JSHeroes 2019, thank you! We will let you know when CFP for 2020's edition is open!",
+      'The CFP will open around the <strong>end of October</strong>! Stay tuned for the announcement.',
   },
   {
     title: 'Sponsors',

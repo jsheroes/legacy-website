@@ -12,12 +12,12 @@ const SpeakAtJSHeroes = () => (
 
     <Section className="content">
       <Fragment>
-        <h1>Call for Papers is {data.cfpOpen ? 'OPEN' : 'CLOSED'}!</h1>
+        <h1>Call for Papers is currently {data.cfpOpen ? 'OPEN' : 'CLOSED'}!</h1>
         {data.cfpOpen && (
           <Fragment>
             <p>
               Our <strong>Call for Papers</strong> process is open until{' '}
-              <strong>December 1st!</strong> We encourage people of all ages, races, genders and
+              <strong>December 21st!</strong> We encourage people of all ages, races, genders and
               religions, to submit proposals and we would like to ensure everyone that our process
               of selecting the talks will be <strong>fair</strong> and <strong>transparent</strong>,
               as the entire concept behind JSHeroes.
@@ -32,9 +32,9 @@ const SpeakAtJSHeroes = () => (
         {!data.cfpOpen && (
           <p>
             We are running our <strong>Call for Papers</strong> process for{' '}
-            <strong>3 months</strong> and we are usually closing it 4 months before the event. If
-            you are interested at <strong>speaking</strong> at one of our future events, follow us
-            on{' '}
+            <strong>2 months</strong> and we are usually closing it about 4 months before the event.
+            If you are interested in <strong>speaking</strong> at one of our future events, follow
+            us on{' '}
             <Link href="https://twitter.com/jsheroes" theme={Link.THEME_DARK}>
               twitter
             </Link>
@@ -49,8 +49,8 @@ const SpeakAtJSHeroes = () => (
           What we are looking for
         </h2>
         <p>
-          JSHeroes is a <strong>single track 2-day conference</strong> dedicated to the entire JS
-          ecosystem. We are looking for a multitude of topics and perspectives, but most of all we
+          JSHeroes is a <strong>single track 2-day conference</strong> dedicated to the JS and Web
+          ecosystems. We are looking for a multitude of topics and perspectives, but most of all we
           value:
         </p>
         <ul>
@@ -61,7 +61,7 @@ const SpeakAtJSHeroes = () => (
             <strong>Practical</strong> ideas that attendees can apply at work the next day.
           </li>
           <li>
-            Trends and hot topics which are relevant in <strong>2019</strong> and beyond.
+            Trends and hot topics which are relevant in <strong>2020</strong> and beyond.
           </li>
           <li>
             Fresh <strong>perspectives</strong> on the JS ecosystem.
@@ -85,14 +85,14 @@ const SpeakAtJSHeroes = () => (
           How the selection will happen
         </h2>
         <p>
-          We are expecting to receive close to <strong>300 proposals</strong> for JSHeroes 2019.
-          With this in mind, we created a team of world wide subject matter experts that will go
-          through the proposals and will decide what to include in the conference agenda. This is a
-          rough estimation of our schedule and process:
+          We are expecting to receive over <strong>300 proposals</strong> for JSHeroes 2020. With
+          this in mind, we created a team of world wide subject matter experts that will go through
+          the proposals and will decide what to include on the final agenda. This is a rough
+          estimation of our schedule and process:
         </p>
         <ul>
           <li>
-            All the proposals are to be received until <strong>December 1st</strong>.
+            All the proposals are to be received until <strong>December 21st</strong>.
           </li>
           <li>
             Each member of the commitee will go through the proposals and will create their own{' '}
@@ -104,15 +104,11 @@ const SpeakAtJSHeroes = () => (
           </li>
           <li>
             The <strong>debate</strong> and <strong>selection</strong> process for the remaining
-            proposals will end around <strong>mid January</strong>.
+            proposals will end in <strong>January</strong>.
           </li>
           <li>
-            All the speakers will get a <strong>response</strong>, positive or negative, until the{' '}
-            <strong>end of January</strong>, at most until mid February.
-          </li>
-          <li>
-            At the end of the process we will publish the exact <strong>criteria</strong> on which
-            we based our selection.
+            All the speakers will get a <strong>response</strong>, positive or negative, at the the{' '}
+            <strong>beginning of February</strong>.
           </li>
         </ul>
         <h2>
@@ -122,12 +118,13 @@ const SpeakAtJSHeroes = () => (
           The perks we offer
         </h2>
         <p>
-          If your proposal gets selected and you accept to join <strong>JSHeroes 2019</strong> as a
+          If your proposal gets selected and you accept to join <strong>JSHeroes 2020</strong> as a
           speaker, we will make sure you have the best possible <strong>experience</strong> for your
           entire stay in Cluj. Here are some of the benefits we offer to speakers:
         </p>
         <ul>
           <li>Full payment for your travel to and from the event</li>
+          <li>A speaker fee of 500 EUR, as a token of appreciation for your effort</li>
           <li>4 nights at a 5 star hotel, right on top of the venue</li>
           <li>Free entrance at the conference and at any workshop on Day 0</li>
           <li>Extra ticket + double room, in case somebody is joining you</li>
