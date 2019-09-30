@@ -23,7 +23,7 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "google-map-react": "^1.1.2",
-    "helmet": "^3.15.0",
+    "helmet": "^3.21.1",
     "intersection-observer": "^0.5.1",
     "lighthousebot": "git+https://github.com/ebidel/lighthouse-ci.git",
     "next": "^7.0.2",
