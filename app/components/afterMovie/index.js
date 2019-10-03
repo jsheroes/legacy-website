@@ -51,7 +51,7 @@ const AfterMovie = ({ year }) => {
           }
 
           h1 {
-            color: #0098ff;
+            color: #0070df;
             margin-bottom: 30px;
             font-size: 36px;
             padding-top: 30px;

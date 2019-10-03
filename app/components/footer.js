@@ -23,11 +23,6 @@ const Footer = () => (
         </div>
         <div>
           <span className="link">
-            <Link href="/diversity-tickets">Diversity Tickets</Link>
-          </span>
-        </div>
-        <div>
-          <span className="link">
             <Link href="/become-a-sponsor">Become a Sponsor</Link>
           </span>
         </div>
@@ -46,11 +41,6 @@ const Footer = () => (
             </span>
           </div>
         )}
-        <div>
-          <span className="link">
-            <Link href="/adopt-a-jser">Adopt a JavaScripter</Link>
-          </span>
-        </div>
         <div>
           <span className="link">
             <Link href="/code-of-conduct">Code of Conduct</Link>

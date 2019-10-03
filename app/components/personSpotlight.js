@@ -37,15 +37,15 @@ const PersonInfo = ({ WrappingElement, person, baseUrl, ...props }) => (
           top: 0;
           transition: 0.5s ease-out;
           width: 100%;
-          background: rgba(0, 152, 255, 0.8) none repeat scroll 0 0 !important;
+          background: ${styles.mainColor6} none repeat scroll 0 0 !important;
           z-index: 1;
         }
         .speaker-info-box.active .speaker-hover {
-          opacity: 1;
+          opacity: 0.8;
         }
         .speaker-info-box.active .speaker-details {
           transform: translateY(-50%);
-          opacity: 1;
+          opacity: 0.8;
         }
 
         .speaker-name {
@@ -85,12 +85,12 @@ const PersonInfo = ({ WrappingElement, person, baseUrl, ...props }) => (
         @media (min-width: ${mediaQueries.XS}) {
           .speaker-info-box:hover .speaker-hover,
           .speaker-info-box:focus .speaker-hover {
-            opacity: 1;
+            opacity: 0.8;
           }
           .speaker-info-box:hover .speaker-details,
           .speaker-info-box:focus .speaker-details {
             transform: translateY(-50%);
-            opacity: 1;
+            opacity: 0.8;
           }
         }
       `}

@@ -79,7 +79,7 @@ const Statistics = () => (
         .statistics-box {
           width: 30%;
           margin-top: 30px;
-          background-color: rgb(0, 152, 255);
+          background-color: ${styles.mainColor6};
           padding: 5px 5px 15px 5px;
         }
 

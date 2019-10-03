@@ -127,4 +127,23 @@ export default [
   //   previousTalks: [],
   //   otherTalks: [],
   // },
+  // {
+  //   name: 'divya',
+  //   fullName: 'Divya Sasidharan',
+  //   permalink: 'divya-sasidharan',
+  //   firstName: 'Divya',
+  //   reference: 'her',
+  //   position: 'Developer Experience Engineer',
+  //   company: 'Netlify',
+  //   img: 'divya-sasidharan.jpg',
+  //   twitter: 'https://twitter.com/shortdiv',
+  //   description: `Divya Sasidharan is a web developer who is passionate about open source and the web. She is currently a developer advocate at Netlify, and believes that there is a better workflow for building and deploying sites that doesn’t require a server—ask her about the JAMstack. You will most likely find her in the sunniest spot in the room with a cup of tea in hand.`,
+  //   talk: {
+  //     title: 'TBA',
+  //     description: 'TBA',
+  //   },
+  //   workshop: null,
+  //   previousTalks: [],
+  //   otherTalks: [],
+  // },
 ];

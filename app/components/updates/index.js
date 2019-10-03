@@ -114,7 +114,7 @@ class Updates extends Component {
             }
 
             .wrapper .news-item:hover {
-              color: #0098ff;
+              color: ${styles.mainColor6};
             }
 
             .wrapper h1 {
@@ -135,7 +135,7 @@ class Updates extends Component {
               }
               .news-item.active {
                 position: relative;
-                color: #0098ff;
+                color: ${styles.mainColor6};
                 display: inline-block;
                 text-decoration: none;
               }
@@ -188,7 +188,7 @@ class Updates extends Component {
                 position: relative;
                 display: inline-block;
                 text-decoration: none;
-                color: #0098ff;
+                color: ${styles.mainColor6};
               }
 
               .news-item.active::before,
