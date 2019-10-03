@@ -4,7 +4,7 @@ import { styles, mediaQueries } from '../constants';
 const Theme = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor6 } }}>
     <div id="theme">
-      <h2>Our spotlight for 2020</h2>
+      <h2>Our Spotlight for 2020</h2>
       <p>
         Each year at JSHeroes, we pick a couple of <strong>topics</strong> we want to spotlight. It
         is not an exhaustive list, but we usually pick themes and topics we wish to{' '}
