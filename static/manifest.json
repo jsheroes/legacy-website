@@ -2,8 +2,8 @@
   "name": "jsheroes",
   "short_name": "jsheroes",
   "start_url": "/",
-  "background_color": "#0098ff",
-  "theme_color": "#0098ff",
+  "background_color": "#0070df",
+  "theme_color": "#0070df",
   "display": "standalone",
   "icons": [
     {

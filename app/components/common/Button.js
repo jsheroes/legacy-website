@@ -18,7 +18,7 @@ const Button = ({ primary = false, children, ...restProps }) => {
             padding: 10px 20px;
             background-color: ${backgroundColor};
             color: ${foregroundColor};
-            border: 1px solid #0098ff;
+            border: 1px solid ${styles.mainColor6};
             transition: all 0.5s;
             margin: auto;
             border-radius: 4px;

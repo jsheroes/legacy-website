@@ -17,7 +17,7 @@ const OrganizersHeader = () => (
     <style jsx>
       {`
         .logoJs {
-          color: #0098ff;
+          color: ${styles.mainColor6};
         }
         .logoHeroes {
           color: #e1ebef;

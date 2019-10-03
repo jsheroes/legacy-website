@@ -47,15 +47,15 @@ const Organizer = ({ role, image, name, twitter }) => (
           top: 0;
           transition: 0.5s ease-out;
           width: 100%;
-          background: rgba(0, 152, 255, 0.8) none repeat scroll 0 0 !important;
+          background: ${styles.mainColor6} none repeat scroll 0 0 !important;
           z-index: 1;
         }
         .organizer-info-box.active .organizer-hover {
-          opacity: 1;
+          opacity: 0.8;
         }
         .organizer-info-box.active .organizer-details {
           transform: translateY(-50%);
-          opacity: 1;
+          opacity: 0.8;
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -95,12 +95,12 @@ const Organizer = ({ role, image, name, twitter }) => (
         @media (min-width: ${mediaQueries.XS}) {
           .organizer-info-box:hover .organizer-hover,
           .organizer-info-box:focus .organizer-hover {
-            opacity: 1;
+            opacity: 0.8;
           }
           .organizer-info-box:hover .organizer-details,
           .organizer-info-box:focus .organizer-details {
             transform: translateY(-50%);
-            opacity: 1;
+            opacity: 0.8;
           }
         }
       `}

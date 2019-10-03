@@ -156,7 +156,7 @@ class Header extends Component {
           <style jsx>
             {`
               .logoJs {
-                color: #0098ff;
+                color: #e1ebef;
               }
               .logoHeroes {
                 color: #e1ebef;

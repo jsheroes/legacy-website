@@ -291,7 +291,7 @@ const AdoptAJSer = ({
         }
 
         .extend-with-border {
-          border: 2px solid #0098ff;
+          border: 2px solid ${styles.mainColor6};
           border-radius: 5px;
         }
 
