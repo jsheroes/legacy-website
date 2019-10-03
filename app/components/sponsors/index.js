@@ -12,7 +12,7 @@ const Sponsors = ({ baseUrl, sponsors }) => (
         <div>
           <p>
             If you wish to participate as a sponsor to our event contact us&nbsp;
-            <Link href="mailto: contact@jsheroes.io" target="_top" theme={Link.THEME_DARK}>
+            <Link href="mailto: welcome@jsheroes.io" target="_top" theme={Link.THEME_DARK}>
               <strong>welcome@jsheroes.io</strong>
             </Link>
           </p>

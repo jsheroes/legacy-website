@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Section from '../common/section';
-import { mediaQueries, styles } from '../../constants';
+import { mediaQueries } from '../../constants';
 import CTAButton from '../common/ctaButton';
 
 class Header extends Component {
@@ -156,7 +156,7 @@ class Header extends Component {
           <style jsx>
             {`
               .logoJs {
-                color: ${styles.mainColor6};
+                color: #e1ebef;
               }
               .logoHeroes {
                 color: #e1ebef;

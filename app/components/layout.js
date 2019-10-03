@@ -45,7 +45,7 @@ class Layout extends Component {
           <meta property="og:title" content="JSHeroes 2020 | Open-Source Community Event" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.jsheroes.io/" />
-          <meta property="og:image" content="https://jsheroes.io/static/img/meta.jpg" />
+          <meta property="og:image" content="https://jsheroes.io/static/img/meta-2020.jpg" />
           <meta property="og:image:type" content="image/png" />
           <meta
             property="og:description"
@@ -59,7 +59,7 @@ class Layout extends Component {
             name="twitter:description"
             content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 23-24th 2020 in Cluj-Napoca, Romania!"
           />
-          <meta name="twitter:image" content="https://jsheroes.io/static/img/meta.jpg" />
+          <meta name="twitter:image" content="https://jsheroes.io/static/img/meta-2020.jpg" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@jsheroes" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86169211-2" />

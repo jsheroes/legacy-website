@@ -6,7 +6,7 @@ import Updates from '../app/components/updates';
 import Speakers from '../app/components/speakers';
 import Theme from '../app/components/theme';
 import Schedule from '../app/components/schedule';
-import Statistics from '../app/components/statistics';
+// import Statistics from '../app/components/statistics';
 import Sponsors from '../app/components/sponsors';
 // import Partners from '../app/components/partners';
 import Communities from '../app/components/communities';
@@ -16,7 +16,7 @@ import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
 import ContactForm from '../app/components/contactForm';
 import PhotoGallery from '../app/components/photoGallery';
-import AfterMovie from '../app/components/afterMovie';
+// import AfterMovie from '../app/components/afterMovie';
 
 import store from '../app/data/2020';
 
@@ -27,7 +27,6 @@ const buildComponent = (currentStore, year = '2020') => {
   const Component = () => (
     <Layout>
       <Header />
-      <AfterMovie {...{ year: 2019 }} />
       <Updates />
       <Speakers {...{ baseUrl, year, speakers }} />
       <Theme />
@@ -36,11 +35,11 @@ const buildComponent = (currentStore, year = '2020') => {
       <Sponsors {...{ baseUrl, sponsors }} />
       {/* <Partners {...{ baseUrl, partners }} /> */}
       <Communities {...{ baseUrl, communities }} />
-      <Statistics />
-      <PhotoGallery {...{ year: 2019 }} />
-      <Organizers />
       <Venue />
       <ContactForm />
+      <PhotoGallery {...{ year: 2019 }} />
+      {/* <Statistics /> */}
+      <Organizers />
       <ScrollBtn />
     </Layout>
   );
