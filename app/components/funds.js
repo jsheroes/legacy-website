@@ -5,7 +5,7 @@ import Link from './common/link';
 const Funds = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
     <div className="section-wrapper" id="theme">
-      <h2 className="title">Announcing our support funds!</h2>
+      <h2 className="title">Announcing Our Support Funds!</h2>
       <p className="description">
         We are super excited to announce two awesome initiatives that we are putting under the same
         umbrella, called the support funds. They are:
