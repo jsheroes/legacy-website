@@ -10,7 +10,7 @@ const Footer = () => (
       <div>
         <span className="home-link">
           <Link href="/">
-            <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
+            <img alt="JSHeroes Mascot" src="/static/img/bear.png" />
           </Link>
         </span>
       </div>
@@ -102,14 +102,12 @@ const Footer = () => (
 
         .home-link {
           display: inline-block;
-          width: 150px;
           padding: 0;
-          margin: 60px 20px 35px;
         }
 
         .home-link img {
-          width: inherit;
           height: auto;
+          width: 150px;
         }
 
         .link {
