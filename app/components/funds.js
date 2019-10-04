@@ -16,7 +16,10 @@ const Funds = () => (
             <span aria-hidden>🎓</span> Scholarship Fund - €3,000
           </h3>
           <ul>
-            <li>Aimed at helping underrepresented or underpriviledged people to join the event</li>
+            <li>
+              Aimed at helping underrepresented or underprivileged tech enthusiasts to join the
+              event
+            </li>
             <li>Can cover a variety of costs: ticket, accommodation, transport</li>
             <li>Application forms will be available soon!</li>
           </ul>
