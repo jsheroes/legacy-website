@@ -1,5 +1,4 @@
 import Link from '../common/link';
-import { mediaQueries } from '../../constants';
 
 const Community = ({ href, title, img, baseUrl }) => (
   <li>
@@ -30,26 +29,6 @@ const Community = ({ href, title, img, baseUrl }) => (
 
         img:hover {
           filter: grayscale(0%);
-        }
-
-        @media (max-width: ${mediaQueries.L}) and (min-width: ${mediaQueries.S}) {
-          li {
-            margin-bottom: 25px;
-            margin-left: 30px;
-            margin-right: 30px;
-          }
-        }
-
-        @media only screen and (max-width: ${mediaQueries.S}) {
-          img {
-            width: 95px;
-          }
-
-          li {
-            margin-bottom: 31px;
-            margin-left: 12px;
-            margin-right: 12px;
-          }
         }
       `}
     </style>
