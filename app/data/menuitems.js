@@ -93,28 +93,6 @@ export default [
     label: 'contact',
   },
   {
-    id: 6,
-    label: 'Past Editions',
-    url: '#',
-    links: [
-      {
-        id: 6.3,
-        url: '/2019',
-        label: '2019',
-      },
-      {
-        id: 6.2,
-        url: '/2018',
-        label: '2018',
-      },
-      {
-        id: 6.1,
-        url: '/2017',
-        label: '2017',
-      },
-    ],
-  },
-  {
     id: 7,
     label: 'Back to 2020',
     url: '/',
