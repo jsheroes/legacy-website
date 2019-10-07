@@ -2,7 +2,7 @@ import 'what-input';
 
 import Layout from '../app/components/layout';
 import Header from '../app/components/header';
-import Updates from '../app/components/updates';
+import News from '../app/components/news';
 import Speakers from '../app/components/speakers';
 import Theme from '../app/components/theme';
 import Funds from '../app/components/funds';
@@ -29,7 +29,7 @@ const buildComponent = (currentStore, year = '2020') => {
   const Component = () => (
     <Layout>
       <Header />
-      <Updates />
+      <News />
       <Speakers {...{ baseUrl, year, speakers }} />
       <Theme />
       <Schedule {...{ baseUrl, year, schedule, speakers }} />

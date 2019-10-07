@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { styles } from '../constants';
+import { styles, mediaQueries } from '../constants';
 
 class ScrollBtn extends Component {
   constructor(props) {
@@ -52,6 +52,10 @@ class ScrollBtn extends Component {
               width: 52px;
               height: 52px;
               z-index: 3;
+            }
+
+            @media (max-width: ${mediaQueries.S}) {
+              display: none;
             }
 
             .go-to-anchor {

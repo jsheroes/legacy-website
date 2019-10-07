@@ -76,22 +76,26 @@ export default [
   //   label: 'mission',
   // },
   {
-    id: 4,
-    url: '/#organizers',
-    label: 'organizers',
-    blacklist: ['/2017', '/2018', '/2019'],
+    id: 3,
+    url: '#funds',
+    label: 'support funds',
   },
   {
-    id: 4.1,
+    id: 4,
     url: '#sponsors',
     label: 'sponsors',
-    whitelist: ['/2017', '/2018', '/2019'],
   },
   {
     id: 5,
     url: '/#contactForm',
     label: 'contact',
   },
+  // {
+  //   id: 6,
+  //   url: '/#organizers',
+  //   label: 'organizers',
+  //   blacklist: ['/2017', '/2018', '/2019'],
+  // },
   {
     id: 7,
     label: 'Back to 2020',

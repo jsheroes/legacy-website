@@ -11,7 +11,6 @@ export const mediaQueries = {
   XL: '1200px',
   LAPTOP: '1024px',
   L: '992px',
-  HAMBURGER_MENU: '885px',
   S: '768px',
   XS: '425px',
 };

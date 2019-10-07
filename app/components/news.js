@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Section from '../common/section';
-import news from '../../data/news';
-import { mediaQueries, styles } from '../../constants';
+import Section from './common/section';
+import news from '../data/news';
+import { mediaQueries, styles } from '../constants';
 
 class Updates extends Component {
   tabRefs = news.map(() => React.createRef());
@@ -93,7 +93,7 @@ class Updates extends Component {
         <style jsx global>
           {`
             .wrapper {
-              padding-top: 140px;
+              padding-top: 50px;
               text-align: center;
               max-width: 1100px;
               height: 350px;
@@ -119,6 +119,9 @@ class Updates extends Component {
 
             .wrapper h1 {
               margin: 0 0 50px;
+              font-size: 32px;
+              font-weight: 700;
+              color: ${styles.mainColor4};
             }
 
             .content.hidden {
@@ -126,6 +129,9 @@ class Updates extends Component {
             }
 
             @media (min-width: ${mediaQueries.S}) {
+              .wrapper h1 {
+                font-size: 46px;
+              }
               .wrapper [role='tablist'] {
                 display: flex;
                 justify-content: space-around;
