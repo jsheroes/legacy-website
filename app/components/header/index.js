@@ -35,9 +35,12 @@ const Header = () => {
             width: 100%;
           }
           .hero-logo {
-            height: 45px;
-            margin-left: 20px;
+            height: 60px;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             margin-bottom: 40px;
+            background-color: rgba(0, 0, 0, 0.6);
           }
 
           .hero-text {
