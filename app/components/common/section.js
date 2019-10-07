@@ -1,8 +1,8 @@
 import { mediaQueries } from '../../constants';
 
-const Section = ({ section = {}, mainContainer = {}, className = '', children }) => (
+const Section = ({ section = {}, className = '', children }) => (
   <section className={className} style={section.style}>
-    <div style={mainContainer.style}>
+    <div>
       <style jsx>
         {`
           div {

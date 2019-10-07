@@ -4,7 +4,7 @@ import Link from './common/link';
 
 const Funds = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
-    <div className="section-wrapper" id="theme">
+    <div className="section-wrapper" id="funds">
       <h2 className="title">Announcing Our Support Funds!</h2>
       <p className="description">
         We are super excited to announce two awesome initiatives that we are putting under the same

@@ -9,7 +9,7 @@ const HamburgerMenu = ({ isOpen, onClick }) => (
     <div className="last" />
     <style jsx>
       {`
-        @media (max-width: ${mediaQueries.HAMBURGER_MENU}) {
+        @media (max-width: ${mediaQueries.S}) {
           .hamburger-btn {
             display: block;
             width: 35px;

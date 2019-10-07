@@ -106,7 +106,7 @@ class Nav extends Component {
             }
 
             nav {
-              margin: 20px 20px 25px 40px;
+              margin: 18px 20px;
               display: flex;
               flex: 1;
               justify-content: space-between;
@@ -115,11 +115,12 @@ class Nav extends Component {
             .logo img {
               width: 150px;
               flex: 1;
+              margin-top: 5px;
             }
 
             ul.menu-items li {
               display: inline-block;
-              padding: 5px 20px;
+              padding: 5px 15px;
               position: relative;
             }
 
@@ -127,7 +128,7 @@ class Nav extends Component {
               padding: 5px 0 0 5px;
             }
 
-            @media (max-width: ${mediaQueries.HAMBURGER_MENU}) {
+            @media (max-width: ${mediaQueries.S}) {
               nav {
                 margin-bottom: 0;
               }
