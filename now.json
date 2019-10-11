@@ -2,9 +2,7 @@
   "version": 2,
   "name": "jsheroes",
   "alias": "jsheroes.io",
-  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "env": {
-    "NODE_ENV": "production",
     "SENDGRID_API_KEY": "@sendgrid_api_key"
   }
 }

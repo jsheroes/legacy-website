@@ -14,9 +14,7 @@ addons:
     organization: "jsheroes" # the key of the organization
 
 script:
-  - cp config.example.js config.js
   - npm run linter
   - npm run build
-  - npm start & wait-on http://localhost:4001
-  - npm run test:e2e
+  - npm run test:e2e:ci
   - sonar-scanner
