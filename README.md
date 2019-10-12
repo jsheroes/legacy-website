@@ -11,17 +11,17 @@ This repo contains the code for our JavaScript International Conference site hos
 Copy the repo in the current folder:
 
 ```bash
-git clone git@github.com:jsheroes/jsheroes.io.git .
+$ git clone git@github.com:jsheroes/jsheroes.io.git .
 ```
 
 Install dependencies
 
 ```bash
-npm i
+$ npm ci
 ```
 
-Copy `config.example.js` into `config.js` and put there your own settings and launch the server:
+Run project
 
 ```bash
-npm run dev
+$ npm run dev
 ```

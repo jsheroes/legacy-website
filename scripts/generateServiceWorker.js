@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const SW_FILEPATH = `${__dirname}/../offline/serviceWorker.js`;
-const GENERATED_SW_FILEPATH = `${__dirname}/../offline/dist/serviceWorker.js`;
+const GENERATED_SW_FILEPATH = `${__dirname}/../public/serviceWorker.js`;
 
 const isDifferent = (swFileContent, generatedFileContent) => {
   const content1 = swFileContent.replace(/jsheroesio-cache-{{version}}/i, '');

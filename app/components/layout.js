@@ -12,7 +12,7 @@ class Layout extends Component {
     const { publicRuntimeConfig } = getConfig();
     if (publicRuntimeConfig && publicRuntimeConfig.isProduction && 'serviceWorker' in navigator) {
       navigator.serviceWorker
-        .register('/sw.js')
+        .register('/serviceWorker.js')
         .catch(err => console.error('Service worker registration failed', err));
     }
   }

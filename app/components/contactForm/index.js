@@ -40,7 +40,7 @@ class ContactForm extends Component {
       body: JSON.stringify({ email, message }),
     };
 
-    fetch('/contact-form', emailOptions)
+    fetch('/api/contact-form', emailOptions)
       .then(response => response.json())
       .then(() => {
         this.setState({ status: 'Your message was sent.' }, () => {
