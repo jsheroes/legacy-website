@@ -6,3 +6,23 @@ patch:
   SNYK-JS-LODASH-450202:
     - next > babel-plugin-transform-define > lodash:
         patched: '2019-10-12T14:47:52.519Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-10-12T14:51:13.229Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-10-12T14:51:13.229Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-12T14:51:13.229Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-10-12T14:51:13.229Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-10-12T14:51:13.229Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2019-10-12T14:51:13.229Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-10-12T14:51:13.229Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-12T14:51:13.229Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > lodash:
+        patched: '2019-10-12T14:51:13.229Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-12T14:51:13.229Z'
