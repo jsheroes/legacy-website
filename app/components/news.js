@@ -17,7 +17,6 @@ class Updates extends Component {
     const { activeNewsIndex } = this.state;
     let targetIndex;
 
-    console.log(evt.keyCode);
     if (evt.keyCode === 37) {
       // <LEFT> arrow key
       targetIndex = Math.max(0, activeNewsIndex - 1);
@@ -26,7 +25,6 @@ class Updates extends Component {
       targetIndex = Math.min(news.length - 1, activeNewsIndex + 1);
     } else if (evt.keyCode === 40) {
       // <DOWN> arrow key
-      console.log(activeNewsIndex);
       this.tabPanelRefs[activeNewsIndex].current.focus();
     }
 
