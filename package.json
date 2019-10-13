@@ -9,7 +9,7 @@
     "format": "prettier --write '**/*.{js,css,md}'",
     "test:e2e": "cypress run",
     "test:e2e:debug": "cypress open",
-    "test:e2e:ci": "npm run dev & wait-on http://localhost:3000 && npm run test:e2e",
+    "test:e2e:ci": "npm run dev & wait-on http://localhost:3000 && npm run test:e2e -- --config video=false",
     "lh": "lighthouse-ci https://jsheroes.io",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
@@ -31,10 +31,10 @@
     "snyk": "^1.234.2"
   },
   "devDependencies": {
-    "axe-core": "^3.2.2",
+    "axe-core": "^3.3.2",
     "babel-eslint": "^10.0.1",
-    "cypress": "^3.1.5",
-    "cypress-axe": "^0.4.1",
+    "cypress": "^3.4.1",
+    "cypress-axe": "^0.5.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.0.0",
