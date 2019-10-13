@@ -40,6 +40,7 @@ class Speakers extends Component {
     const { year, speakers, baseUrl } = this.props;
     const title = `Our ${year} Heroes`;
     const isCurrentYear = year === data.currentYear;
+    const yearPrefix = isCurrentYear ? '' : `/${year}`;
     const { cfpOpen } = data;
     const speakerUrl = `${baseUrl}/speakers/`;
     const ambassadorUrl = `/static/img/ambassadors/`;
@@ -63,7 +64,12 @@ class Speakers extends Component {
           <div className="speaker-boxes">
             {speakers.map(speaker => (
               <div key={speaker.name} className="speaker-box">
-                <PersonSpotlight person={speaker} baseUrl={speakerUrl} activeLink />
+                <PersonSpotlight
+                  person={speaker}
+                  baseUrl={speakerUrl}
+                  yearPrefix={yearPrefix}
+                  activeLink
+                />
               </div>
             ))}
           </div>

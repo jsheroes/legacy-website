@@ -1,4 +1,3 @@
-import Router from 'next/router';
 import Link from '../common/link';
 import Section from '../common/section';
 import { styles, mediaQueries } from '../../constants';
@@ -15,13 +14,7 @@ const Organizers = () => (
       <p>They contribute hours of their time each year and we value this immensely.</p>
       <p>
         Thanks to all
-        <Link
-          href="/organizers"
-          onMouseEnter={() => {
-            Router.prefetch('/organizers');
-          }}
-          theme={Link.THEME_DARK}
-        >
+        <Link href="/organizers" theme={Link.THEME_DARK}>
           <strong> who supported us!</strong>
         </Link>
       </p>

@@ -1,5 +1,10 @@
 export default [
   {
+    title: 'Women in Tech Cluj',
+    img: 'logo_women_in_tech.png',
+    href: 'https://www.meetup.com/Women-in-Tech-Cluj/',
+  },
+  {
     title: 'ngBucharest',
     img: 'logo_ngbucharest.png',
     href: 'https://www.meetup.com/AngularJS-Bucharest/',

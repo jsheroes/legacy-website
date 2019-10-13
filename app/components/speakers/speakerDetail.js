@@ -6,9 +6,10 @@ import store from '../../data';
 import CTAButton from '../common/ctaButton';
 import Link from '../common/link';
 
-const SpeakerDetail = ({ speaker }) => {
+const SpeakerDetail = ({ speaker, year }) => {
   const talks = buildTalks(speaker);
   const imageExtension = speaker.img.split('.')[1];
+  const isCurrentYear = store.currentYear === year;
   return (
     <div>
       <Head>
@@ -17,7 +18,7 @@ const SpeakerDetail = ({ speaker }) => {
         <meta property="og:url" content={`https://jsheroes.io/speakers/${speaker.permalink}`} />
         <meta
           property="og:image"
-          content={`https://jsheroes.io//static/img/${store.currentYear}/speakers/${speaker.img}`}
+          content={`https://jsheroes.io//static/img/${year}/speakers/${speaker.img}`}
         />
         <meta property="og:image:type" content={`image/${imageExtension}`} />
         <meta property="og:description" content={speaker.description} />
@@ -35,10 +36,7 @@ const SpeakerDetail = ({ speaker }) => {
             <div className="side">
               <div className="speaker-info-box">
                 <div className="speaker-img">
-                  <img
-                    src={`/static/img/${store.currentYear}/speakers/${speaker.img}`}
-                    alt={speaker.fullName}
-                  />
+                  <img src={`/static/img/${year}/speakers/${speaker.img}`} alt={speaker.fullName} />
                 </div>
               </div>
               <div className="details-container">
@@ -75,18 +73,20 @@ const SpeakerDetail = ({ speaker }) => {
                   )}
                 </div>
               </div>
-              <aside className="hidden-sm-down">
-                <div className="join">
-                  <div>
-                    Already curious to see <strong>{speaker.firstName}</strong>
-                    `s talk?
+              {isCurrentYear && (
+                <aside className="hidden-sm-down">
+                  <div className="join">
+                    <div>
+                      Already curious to see <strong>{speaker.firstName}</strong>
+                      `s talk?
+                    </div>
+                    <div>Join {speaker.reference} at JSHeroes!</div>
                   </div>
-                  <div>Join {speaker.reference} at JSHeroes!</div>
-                </div>
-                <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2020" align="left">
-                  Buy Your Ticket
-                </CTAButton>
-              </aside>
+                  <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2020" align="left">
+                    Buy Your Ticket
+                  </CTAButton>
+                </aside>
+              )}
             </div>
           </div>
           <div className="rightColumn">
@@ -104,18 +104,20 @@ const SpeakerDetail = ({ speaker }) => {
             </div>
             <RawHtml className="description" content={speaker.description} />
             {talks}
-            <div className="hidden-md hidden-lg">
-              <div className="join">
-                <div>
-                  Already curious to see <strong>{speaker.firstName}</strong>
-                  `s talk?
+            {isCurrentYear && (
+              <div className="hidden-md hidden-lg">
+                <div className="join">
+                  <div>
+                    Already curious to see <strong>{speaker.firstName}</strong>
+                    `s talk?
+                  </div>
+                  <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
-                <div>Join {speaker.reference} at JSHeroes!</div>
+                <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2020">
+                  Buy Your Ticket
+                </CTAButton>
               </div>
-              <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2020">
-                Buy Your Ticket
-              </CTAButton>
-            </div>
+            )}
           </div>
         </div>
       </Section>

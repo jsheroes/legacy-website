@@ -1,13 +1,12 @@
 import Head from 'next/head';
-import Router from 'next/router';
-import Layout from '../app/components/layout';
-import Section from '../app/components/common/section';
-import Link from '../app/components/common/link';
-import CTAButton from '../app/components/common/ctaButton';
-import store from '../app/data/index';
-import { styles, mediaQueries } from '../app/constants';
-import RawHtml from '../app/components/common/rawHtml';
-import Helpers from '../app/helpers';
+import Layout from '../../app/components/layout';
+import Section from '../../app/components/common/section';
+import Link from '../../app/components/common/link';
+import CTAButton from '../../app/components/common/ctaButton';
+import store from '../../app/data/index';
+import { styles, mediaQueries } from '../../app/constants';
+import RawHtml from '../../app/components/common/rawHtml';
+import Helpers from '../../app/helpers';
 
 const Workshop = ({ speakers }) => {
   const firstSpeaker = speakers[0];
@@ -56,27 +55,13 @@ const Workshop = ({ speakers }) => {
             <span>
               by:&nbsp;
               <strong>
-                <Link
-                  href={`/speakers?name=${firstSpeaker.permalink}`}
-                  as={`/speakers/${firstSpeaker.permalink}`}
-                  onMouseEnter={() => {
-                    Router.prefetch(`/speakers?name=${firstSpeaker.permalink}`);
-                  }}
-                  theme={Link.THEME_DARK}
-                >
+                <Link href={`/speakers/${firstSpeaker.permalink}`} theme={Link.THEME_DARK}>
                   {firstSpeaker.fullName}
                 </Link>
                 {secondSpeaker && (
                   <span>
                     {' & '}
-                    <Link
-                      href={`/speakers?name=${secondSpeaker.permalink}`}
-                      as={`/speakers/${secondSpeaker.permalink}`}
-                      onMouseEnter={() => {
-                        Router.prefetch(`/speakers?name=${secondSpeaker.permalink}`);
-                      }}
-                      theme={Link.THEME_DARK}
-                    >
+                    <Link href={`/speakers/${secondSpeaker.permalink}`} theme={Link.THEME_DARK}>
                       {secondSpeaker.fullName}
                     </Link>
                   </span>
