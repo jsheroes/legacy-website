@@ -1,6 +1,7 @@
 import Section from './common/section';
 import { styles, mediaQueries } from '../constants';
 import Link from './common/link';
+import CTAButton from './common/ctaButton';
 
 const Funds = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
@@ -20,9 +21,13 @@ const Funds = () => (
               Aimed at helping underrepresented or underprivileged tech enthusiasts to join the
               event
             </li>
-            <li>Can cover a variety of costs: ticket, accommodation, transport</li>
-            <li>Application forms will be available soon!</li>
+            <li>When you buy a ticket, you can <Link href="https://ti.to/cluj-javascripters/jsheroes-2020" theme={Link.THEME_DARK}>add a donation for the scholarship fund</Link></li>
+            <li>Can cover a variety of costs: ticket, accommodation, transport</li>  
           </ul>
+
+          <CTAButton align="left" url="https://jsheroes-form.typeform.com/to/EAPVUS">
+            Apply for the scholarship fund
+          </CTAButton>
         </div>
         <div className="fund-container">
           <h3>
