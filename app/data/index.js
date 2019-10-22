@@ -15,5 +15,5 @@ export default {
   menuItems,
   news,
   socialmedia,
-  cfpOpen: false,
+  cfpOpen: true,
 };
