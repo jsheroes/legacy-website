@@ -17,13 +17,13 @@ const SpeakAtJSHeroes = () => (
           <Fragment>
             <p>
               Our <strong>Call for Papers</strong> process is open until{' '}
-              <strong>December 21st!</strong> We encourage people of all ages, races, genders and
+              <strong>December 20th!</strong> We encourage people of all ages, races, genders and
               religions, to submit proposals and we would like to ensure everyone that our process
               of selecting the talks will be <strong>fair</strong> and <strong>transparent</strong>,
               as the entire concept behind JSHeroes.
             </p>
 
-            <CTAButton url="https://jsheroes-form.typeform.com/to/IHohur">
+            <CTAButton url="https://jsheroes-form.typeform.com/to/MOoTUM">
               Submit Your Proposal Now
             </CTAButton>
           </Fragment>
@@ -92,11 +92,11 @@ const SpeakAtJSHeroes = () => (
         </p>
         <ul>
           <li>
-            All the proposals are to be received until <strong>December 21st</strong>.
+            All the proposals are to be received until <strong>December 20th</strong>.
           </li>
           <li>
-            Each member of the commitee will go through the proposals and will create their own{' '}
-            <strong>shortlist</strong>.
+            Each member of the commitee will go through the anonymized proposals and will create
+            their own <strong>shortlist</strong>.
           </li>
           <li>
             Based on the recurrence of a proposal on multiple shortlists we will proceed to place it
@@ -150,7 +150,7 @@ const SpeakAtJSHeroes = () => (
         </p>
 
         {data.cfpOpen && (
-          <CTAButton url="https://jsheroes-form.typeform.com/to/IHohur">
+          <CTAButton url="https://jsheroes-form.typeform.com/to/MOoTUM">
             Submit Your Proposal Now
           </CTAButton>
         )}
