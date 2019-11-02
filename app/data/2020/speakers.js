@@ -122,4 +122,76 @@ export default [
     previousTalks: [],
     otherTalks: [],
   },
+  {
+    name: 'anjana',
+    fullName: 'Anjana Vakil',
+    permalink: 'anjana-vakil',
+    firstName: 'Anjana',
+    reference: 'her',
+    position: 'Map Rendering Engineer',
+    company: 'Mapbox',
+    img: 'anjana.jpg',
+    github: 'https://github.com/vakila',
+    twitter: 'https://twitter.com/AnjanaVakil/',
+    website: 'vakila.github.io',
+    description:
+      "Anjana suffers from a debilitating case of curiosity, which led her from philosophy to English teaching to computational linguistics to software development. As a map rendering engineer at Mapbox, she can usually be found at her computer in San Francisco; that is, when she's not speaking at events around the world, trying to share the joy of coding and advocate for a more diverse & accessible tech industry. Ask her about the Recurse Center, Outreachy, and Mozilla!",
+    talk: {
+      title: 'A Tourist in Browserland',
+      description: `
+      <p>What is a map? What <i>could</i> a map be? When our web browser can see, hear, and talk to us, how can that reshape our image of & interactions with the physical world around us?</p>
+      <p>Apart from telling us where we need to go, a map can do much more: a city skyline can dance to the beat around us, a map style can match our fashion style, and we can fly through the world in new & unexpected ways.</p>
+      <p>By mixing the magic of web multimedia with the power of an open-source mapping library, in this demo-driven talk we'll go on a whirlwind tour through the landscape of modern Web APIs to expand our notions of what a map can be and how we can rethink interactivity on the web.</p>
+      `,
+      message: '',
+    },
+    workshop: null,
+    previousTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=FmiQr4nfoPQ',
+        name: 'Recursion, Iteration, and JavaScript: A Love Story',
+      },
+    ],
+    otherTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=Pg3UeB-5FdA',
+        name: 'Programming Across Paradigms @ GOTO 2017',
+      },
+      {
+        url: 'https://www.youtube.com/watch?v=Wo0qiGPSV-s',
+        name: 'Immutable data structures for functional JS @ JSConfEU 2017',
+      },
+    ],
+  },
+  {
+    name: 'charlie',
+    fullName: 'Charlie Gerard',
+    permalink: 'charlie-gerard',
+    firstName: 'Charlie',
+    reference: 'her',
+    position: 'Software Developer',
+    company: 'Atlassian',
+    img: 'charlie-gerard.jpg',
+    twitter: 'https://twitter.com/devdevcharlie',
+    website: 'http://charliegerard.github.io/',
+    description:
+      'Charlie is a front-end developer, Google Developer Expert and Mozilla Tech Speaker living in Sydney. She’s passionate about human-computer interaction and spends her personal time building interactive side projects using creative coding, machine learning and hardware. She also loves giving back to the community by making all her prototypes open-source, mentoring, blogging and speaking at conferences.',
+    talk: {
+      title: 'A Tourist in Browserland',
+      description: `
+        <p>What is a map? What <i>could</i> a map be? When our web browser can see, hear, and talk to us, how can that reshape our image of & interactions with the physical world around us?</p>
+        <p>Apart from telling us where we need to go, a map can do much more: a city skyline can dance to the beat around us, a map style can match our fashion style, and we can fly through the world in new & unexpected ways.</p>
+        <p>By mixing the magic of web multimedia with the power of an open-source mapping library, in this demo-driven talk we'll go on a whirlwind tour through the landscape of modern Web APIs to expand our notions of what a map can be and how we can rethink interactivity on the web.</p>
+        `,
+      message: '',
+    },
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [
+      {
+        name: 'Look mum, no hands! Mind control in JavaScript @ JSConf EU 2018',
+        url: 'https://youtu.be/7KhFO-qCVyg',
+      },
+    ],
+  },
 ];
