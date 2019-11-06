@@ -24,4 +24,9 @@ export default [
     img: 'logo_jsday.png',
     href: 'https://2019.jsday.it',
   },
+  {
+    title: 'DotNetDays',
+    img: 'logo_dotnetdays.png',
+    href: 'https://dotnetdays.ro/',
+  },
 ];
