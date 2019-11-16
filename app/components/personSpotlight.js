@@ -114,7 +114,7 @@ const PersonSpotlight = ({ person, baseUrl, yearPrefix = '', activeLink = false 
         // Props to decorate the wrapper element.
         WrappingElement={Link}
         href="/[year]/speakers/[name]"
-        as={`${yearPrefix}/speakers/${person.permalink}`}
+        as={`/${yearPrefix}/speakers/${person.permalink}`}
         title={`Visit the page of ${person.fullName}`}
       />
     ) : (
