@@ -57,7 +57,7 @@ const Footer = () => (
         {[2019, 2018, 2017].map(year => (
           <div key={`past_${year}`}>
             <span className="link">
-              <Link href={`/${year}`}>{`JSHeroes ${year}`}</Link>
+              <Link href="/[year]" as={`/${year}`}>{`JSHeroes ${year}`}</Link>
             </span>
           </div>
         ))}
