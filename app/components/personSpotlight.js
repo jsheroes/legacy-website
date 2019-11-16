@@ -100,7 +100,7 @@ const PersonInfo = ({ WrappingElement, person, baseUrl, ...props }) => (
 const PersonSpotlight = ({ person, baseUrl, yearPrefix = '', activeLink = false }) => {
   const href = yearPrefix ? '/[year]/speakers/[name]' : '/speakers/[name]';
   const as = yearPrefix
-    ? `/${yearPrefix}/speakers/${person.permalink}`
+    ? `${yearPrefix}/speakers/${person.permalink}`
     : `/speakers/${person.permalink}`;
   return (
     <div>
