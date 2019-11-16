@@ -55,13 +55,21 @@ const Workshop = ({ speakers }) => {
             <span>
               by:&nbsp;
               <strong>
-                <Link href={`/speakers/${firstSpeaker.permalink}`} theme={Link.THEME_DARK}>
+                <Link
+                  href="/speakers/[name]"
+                  as={`/speakers/${firstSpeaker.permalink}`}
+                  theme={Link.THEME_DARK}
+                >
                   {firstSpeaker.fullName}
                 </Link>
                 {secondSpeaker && (
                   <span>
                     {' & '}
-                    <Link href={`/speakers/${secondSpeaker.permalink}`} theme={Link.THEME_DARK}>
+                    <Link
+                      href="/speakers/[name]"
+                      as={`/speakers/${secondSpeaker.permalink}`}
+                      theme={Link.THEME_DARK}
+                    >
                       {secondSpeaker.fullName}
                     </Link>
                   </span>

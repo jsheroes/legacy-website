@@ -97,37 +97,44 @@ const PersonInfo = ({ WrappingElement, person, baseUrl, ...props }) => (
   </WrappingElement>
 );
 
-const PersonSpotlight = ({ person, baseUrl, yearPrefix = '', activeLink = false }) => (
-  <div>
-    {/*
+const PersonSpotlight = ({ person, baseUrl, yearPrefix = '', activeLink = false }) => {
+  const href = yearPrefix ? '/[year]/speakers/[name]' : '/speakers/[name]';
+  const as = yearPrefix
+    ? `${yearPrefix}/speakers/${person.permalink}`
+    : `/speakers/${person.permalink}`;
+  return (
+    <div>
+      {/*
       The tricky thing is that, in order to reuse the same styles
       for both interactive & non-interactive use cases
       and avoid leaking CSS, all elements involved need to be placed
       together in the same JSX structure due to how _styled-jsx_ works.
       (https://github.com/zeit/styled-jsx/issues/322)
       */}
-    {activeLink ? (
-      <PersonInfo
-        // Required props.
-        person={person}
-        baseUrl={baseUrl}
-        // Props to decorate the wrapper element.
-        WrappingElement={Link}
-        href={`${yearPrefix}/speakers/${person.permalink}`}
-        title={`Visit the page of ${person.fullName}`}
-      />
-    ) : (
-      <PersonInfo
-        // Required props.
-        person={person}
-        baseUrl={baseUrl}
-        // Props to decorate the wrapper element.
-        WrappingElement="div"
-        tabIndex="0"
-        role="button"
-      />
-    )}
-  </div>
-);
+      {activeLink ? (
+        <PersonInfo
+          // Required props.
+          person={person}
+          baseUrl={baseUrl}
+          // Props to decorate the wrapper element.
+          WrappingElement={Link}
+          href={href}
+          as={as}
+          title={`Visit the page of ${person.fullName}`}
+        />
+      ) : (
+        <PersonInfo
+          // Required props.
+          person={person}
+          baseUrl={baseUrl}
+          // Props to decorate the wrapper element.
+          WrappingElement="div"
+          tabIndex="0"
+          role="button"
+        />
+      )}
+    </div>
+  );
+};
 
 export default PersonSpotlight;

@@ -5,7 +5,9 @@ const ActivityDetails = ({ title, speakers = [], isSoldOut, activityType }) => {
   const activityTitle = isSoldOut ? `${title} ( SOLD OUT )` : title;
   const titleContent =
     speakers.length > 0 && activityType === 'workshops' ? (
-      <Link href={`/workshops/${speakers[0].workshop.permalink}`}>{activityTitle}</Link>
+      <Link href="/workshops/[name]" as={`/workshops/${speakers[0].workshop.permalink}`}>
+        {activityTitle}
+      </Link>
     ) : (
       activityTitle
     );
@@ -16,7 +18,11 @@ const ActivityDetails = ({ title, speakers = [], isSoldOut, activityType }) => {
       {speakers.map(speaker => (
         <div className="speaker-details" key={speaker.permalink}>
           <span className="speaker-name">
-            <Link href={`/speakers/${speaker.permalink}`} theme={Link.THEME_DARK}>
+            <Link
+              href="/speakers/[name]"
+              as={`/speakers/${speaker.permalink}`}
+              theme={Link.THEME_DARK}
+            >
               {speaker.fullName}
             </Link>
           </span>
