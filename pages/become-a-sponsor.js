@@ -14,7 +14,7 @@ const BecomeASponsorPage = () => (
         <h1>Become A Sponsor</h1>
         <p>
           View the&nbsp;
-          <Link openInNewTab theme={Link.THEME_DARK} href="/static/brochure.pdf">
+          <Link openInNewTab theme={Link.THEME_DARK} href="/static/brochure-2020.pdf">
             Sponsorship Brochure
           </Link>
         </p>
@@ -47,7 +47,7 @@ const BecomeASponsorPage = () => (
             welcome@jsheroes.io
           </Link>
           . We will follow-up and send you our current offer. Or you can download our{' '}
-          <Link openInNewTab theme={Link.THEME_DARK} href="/static/brochure.pdf">
+          <Link openInNewTab theme={Link.THEME_DARK} href="/static/brochure-2020.pdf">
             Sponsorship Brochure
           </Link>{' '}
           for more info.
