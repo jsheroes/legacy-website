@@ -18,7 +18,9 @@ const news = [
   },
   {
     title: 'Tickets',
-    content: `If PayPal is not your preferred payment method, you can also pay by invoice. Drop us a line at <a href="mailto:welcome@jsheroes.io">welcome@jsheroes.io</a> with your request, we’d be happy to help.`,
+    content: `<div>If PayPal is not your preferred payment method, you can also pay by invoice.</div>
+    <div>We also prepared two discounts: <b>15%</b> discount for Community Members, <b>20%</b> discount for Open Source Maintainers.</div>
+    <div>For more information drop us a line at <a href="mailto:welcome@jsheroes.io">welcome@jsheroes.io</a> with your request, we’d be happy to help.</div>`,
   },
 ];
 
