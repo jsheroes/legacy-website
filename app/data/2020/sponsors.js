@@ -1,6 +1,6 @@
 export default [
   {
-    title: 'TeleportHQ',
+    title: 'teleportHQ',
     img: 'logo_teleporthq.png',
     href: 'https://teleporthq.io/',
   },

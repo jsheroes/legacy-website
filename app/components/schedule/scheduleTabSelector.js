@@ -6,7 +6,7 @@ import CTAButton from '../common/ctaButton';
 
 class ScheduleTabSelector extends Component {
   state = {
-    selectedTab: 1,
+    selectedTab: 0,
   };
 
   buildContent(day) {
@@ -41,7 +41,7 @@ class ScheduleTabSelector extends Component {
 
     return (
       <div>
-        <Tabs defaultIndex={1} onChange={index => this.setState({ selectedTab: index })}>
+        <Tabs defaultIndex={0} onChange={index => this.setState({ selectedTab: index })}>
           <TabList className="tablist">
             {schedule.map(item => (
               <Tab key={item.id} className="tabselector-button">
