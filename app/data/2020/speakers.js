@@ -221,4 +221,32 @@ export default [
     previousTalks: [],
     otherTalks: [],
   },
+  {
+    name: 'jeffrey',
+    fullName: 'Jeffrey Lembeck',
+    permalink: 'jeffrey-lembeck',
+    firstName: 'Jeff',
+    reference: 'him',
+    position: 'Engineering Manager',
+    company: 'Eaze',
+    img: 'jeffrey-lembeck.jpg',
+    github: 'https://github.com/jefflembeck',
+    twitter: 'https://twitter.com/jefflembeck/',
+    description:
+      'Jeff Lembeck is an Engineering Manager with Eaze. He thinks about code and how people write it, talks a lot, and is the former organizer of SeattleJS. When far away from a computer, Jeff seeks out oyster happy hours and longs for a hot tub boat to call home.',
+    talk: {
+      title: 'How to Train Your Manager',
+      description: `
+      <p>A manager is a special beast, one that most every engineer must have. In order to truly succeed as a hero to your organization, you have to make sure that manager works with you. Unfortunately, they are a stubborn group and require a lot of training. But how?</p>
+      <p>That's where I come in. In this talk, I'll teach you how to speak their language, avoid common pitfalls, and help influence the culture of your engineering organization, all by training your manager.</p>`,
+    },
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=E7n7XThDewY',
+        name: 'Moneyball for Performance Metrics @ CSSConf.Asia 2015',
+      },
+    ],
+  },
 ];

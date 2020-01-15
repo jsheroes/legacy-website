@@ -32,7 +32,7 @@ export default [
     fullName: 'Sara Vieira',
     position: 'Developer',
     company: 'CodeSandbox',
-    img: 'sara.jpg',
+    img: 'sara-vieira.png',
   },
   {
     name: 'xavier',
@@ -58,7 +58,7 @@ export default [
   {
     name: 'andrei-antal',
     fullName: 'Andrei Antal',
-    position: 'Angular Consultant',
+    position: 'JSLeague',
     company: '',
     img: 'andrei-antal.jpeg',
   },
@@ -67,6 +67,6 @@ export default [
     fullName: 'Andrei Pfeiffer',
     position: 'Code Designer',
     company: '[e-spres-oh]',
-    img: 'andrei-pfeiffer.png',
+    img: 'andrei-pfeiffer.jpeg',
   },
 ];
