@@ -85,10 +85,10 @@ const SpeakAtJSHeroes = () => (
           How the selection will happen
         </h2>
         <p>
-          We are expecting to receive over <strong>300 proposals</strong> for JSHeroes 2020. With
-          this in mind, we created a team of world wide subject matter experts that will go through
-          the proposals and will decide what to include on the final agenda. This is a rough
-          estimation of our schedule and process:
+          We received <strong>299 proposals</strong> for JSHeroes 2020. With this in mind, we
+          created a team of world wide subject matter experts that will go through the proposals and
+          will decide what to include on the final agenda. This is a rough estimation of our
+          schedule and process:
         </p>
         <ul>
           <li>
