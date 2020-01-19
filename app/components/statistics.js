@@ -21,7 +21,7 @@ const Statistics = () => (
           </Link>
         </h3>
         <ul>
-          <li>Subscribers - 1.5K </li>
+          <li>Subscribers - 1.6K </li>
           <li>Views - more than 55K (lifetime) </li>
           <li>Minutes of content watched - more than 305K (lifetime)</li>
         </ul>
@@ -44,7 +44,7 @@ const Statistics = () => (
           </Link>
         </h3>
         <ul>
-          <li>Followers - 3.1K </li>
+          <li>Followers - 3.4K </li>
           <li>Tweets - over 1.8K</li>
         </ul>
       </div>
@@ -55,8 +55,8 @@ const Statistics = () => (
           </Link>
         </h3>
         <ul>
-          <li>Members - 1.8K</li>
-          <li>Meetups Organized - 90 </li>
+          <li>Members - 1.9K</li>
+          <li>Meetups Organized - 99</li>
         </ul>
       </div>
       <div className="statistics-box">
