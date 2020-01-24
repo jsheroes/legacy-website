@@ -24,4 +24,9 @@ export default [
     img: 'logo_macadamian.png',
     href: 'https://www.macadamian.com/',
   },
+  {
+    title: 'Steelcase',
+    img: 'logo_steelcase.svg',
+    href: 'https://www.steelcase.com/',
+  },
 ];
