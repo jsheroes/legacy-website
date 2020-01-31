@@ -29,4 +29,14 @@ export default [
     img: 'logo_steelcase.svg',
     href: 'https://www.steelcase.com/',
   },
+  {
+    title: 'Cloudflight',
+    img: 'logo_cloudflight.png',
+    href: 'https://cloudflight.io/',
+  },
+  {
+    title: 'moqups',
+    img: 'logo_moqups.png',
+    href: 'https://moqups.com/',
+  },
 ];
