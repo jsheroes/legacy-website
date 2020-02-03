@@ -6,6 +6,7 @@ export const styles = {
   mainColor5: '#228dcb', // blue
   mainColor6: '#0070df', // blue light
   mainColor7: '#555', // grey light
+  lightaccent: '#0098ff',
 };
 export const mediaQueries = {
   XL: '1200px',

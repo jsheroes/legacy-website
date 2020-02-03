@@ -22,7 +22,7 @@ const Workshop = ({ speakers }) => {
   return (
     <Layout page="workshop">
       <Head>
-        <title />
+        <title>{seoTitle}</title>
         <meta property="og:title" content={seoTitle} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://jsheroes.io/workshops/${workshop.permalink}`} />
@@ -84,7 +84,7 @@ const Workshop = ({ speakers }) => {
             <CTAButton
               primary
               align="left"
-              url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019"
+              url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2020"
             >
               Buy Your Ticket
             </CTAButton>
@@ -120,7 +120,7 @@ const Workshop = ({ speakers }) => {
               <CTAButton
                 primary
                 align="left"
-                url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2019"
+                url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2020"
               >
                 Buy Your Ticket
               </CTAButton>
@@ -223,7 +223,7 @@ Workshop.getInitialProps = async ({ res, query }) => {
     Helpers.redirectTo({ res, path: '/' });
   }
 
-  const speakers = store.data2019.speakers.filter(
+  const speakers = store.data2020.speakers.filter(
     s => s.workshop && s.workshop.permalink === workshopName,
   );
 
