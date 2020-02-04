@@ -1,13 +1,30 @@
 export default [
-  // {
-  //   id: 'day-0',
-  //   link: 'schedule-day-0',
-  //   section: 'WORKSHOPS',
-  //   date: 'April 22nd',
-  //   index: 0,
-  //   type: 'workshops',
-  //   activities: [],
-  // },
+  {
+    id: 'day-0',
+    link: 'schedule-day-0',
+    section: 'WORKSHOPS',
+    date: 'April 22nd',
+    index: 0,
+    type: 'workshops',
+    activities: [
+      {
+        speakerRef: 'andrei-antal',
+        time: '09:00 - 13:00',
+      },
+      {
+        speakerRef: 'bogdan-luca',
+        time: '14:00 - 18:00',
+      },
+      {
+        speakerRef: 'tomasz-lakomy',
+        time: '09:00 - 13:00',
+      },
+      {
+        speakerRef: 'andrei-pfeiffer',
+        time: '14:00 - 18:00',
+      },
+    ],
+  },
   {
     id: 'day-1',
     link: 'schedule-day-1',
@@ -32,48 +49,50 @@ export default [
       },
       {
         time: '10:10 - 10:35',
-        speakerRef: 'una-kravets',
+        speakerRef: 'sandrina-pereira',
       },
       {
         overrideTitle: 'Coffee Break',
-        time: '10:35 - 11:15',
+        time: '10:35 - 11:10',
       },
       {
-        speakerRef: 'christian-nwamba',
-        time: '11:15 - 11:40',
+        speakerRef: 'ujjwal-sharma',
+        time: '11:10 - 11:35',
       },
       {
-        time: '11:40 - 12:05',
+        speakerRef: 'tierney-cyren',
+        time: '11:35 - 12:00',
       },
       {
-        speakerRef: ['charlie-gerard', 'anjana-vakil'],
-        time: '12:05 - 12:30',
+        speakerRef: 'gil-tayar',
+        time: '12:00 - 12:30',
       },
       {
         overrideTitle: 'Lunch Break',
         time: '12:30 - 14:00',
       },
       {
-        speakerRef: 'katie-sylor-miller',
+        speakerRef: ['anjana-vakil', 'charlie-gerard'],
         time: '14:00 - 14:25',
       },
       {
-        speakerRef: 'tierney-cyren',
-        time: '14:25 - 14:50',
+        speakerRef: 'katie-sylor-miller',
+        time: '14:25 - 14:55',
       },
       {
-        time: '14:50 - 15:15',
+        speakerRef: 'christian-nwamba',
+        time: '14:55 - 15:20',
       },
       {
         overrideTitle: 'Coffee Break',
-        time: '15:15 - 16:00',
+        time: '15:20 - 16:00',
       },
       {
-        speakerRef: 'divya-sasidharan',
+        speakerRef: 'taylor-fairbank',
         time: '16:00 - 16:25',
       },
       {
-        speakerRef: 'peggy-rayzis',
+        speakerRef: 'jeffrey-lembeck',
         time: '16:25 - 16:50',
       },
     ],
@@ -91,13 +110,12 @@ export default [
         time: '08:30 - 09:30',
       },
       {
-        time: '09:30 - 09:55',
-      },
-      {
-        time: '09:40 - 10:00',
+        time: '09:30 - 10:00',
+        speakerRef: 'una-kravets',
       },
       {
         time: '10:00 - 10:30',
+        speakerRef: 'carolyn-stransky',
       },
       {
         overrideTitle: 'Coffee Break',
@@ -105,9 +123,11 @@ export default [
       },
       {
         time: '11:00 - 11:30',
+        speakerRef: 'tan-li-hau',
       },
       {
         time: '11:30 - 12:00',
+        speakerRef: 'vivek-nayyar',
       },
       {
         time: '12:00 - 12:30',
@@ -121,9 +141,11 @@ export default [
       },
       {
         time: '14:30 - 15:00',
+        speakerRef: 'divya-sasidharan',
       },
       {
         time: '15:00 - 15:30',
+        speakerRef: 'peggy-rayzis',
       },
       {
         overrideTitle: 'Coffee Break',
@@ -131,9 +153,11 @@ export default [
       },
       {
         time: '16:00 - 16:30',
+        speakerRef: 'stefan-judis',
       },
       {
         time: '16:30 - 17:00',
+        speakerRef: 'george-mandis',
       },
       {
         overrideTitle: 'Closing Ceremony',
