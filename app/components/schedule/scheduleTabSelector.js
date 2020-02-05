@@ -26,11 +26,13 @@ class ScheduleTabSelector extends Component {
 
   buildCTAButton() {
     const { selectedTab } = this.state;
-    return selectedTab >= 0 ? (
-      ''
-    ) : (
+    return selectedTab >= 1 ? (
       <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2020">
         Buy Your Conference Ticket
+      </CTAButton>
+    ) : (
+      <CTAButton primary url="https://ti.to/cluj-javascripters/workshops-day-jsheroes-2020">
+        Buy Your Workshop Ticket
       </CTAButton>
     );
   }

@@ -29,4 +29,9 @@ export default [
     img: 'logo_dotnetdays.png',
     href: 'https://dotnetdays.ro/',
   },
+  {
+    title: 'ngBigParty V',
+    img: 'logo_ngparty.jpg',
+    href: 'https://www.ngparty.cz/big-party-v',
+  },
 ];

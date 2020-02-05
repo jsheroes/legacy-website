@@ -441,11 +441,13 @@ export default [
     permalink: 'tan-li-hau',
     firstName: 'Tan',
     reference: 'him',
-    position: 'Frontend Developer',
+    position: 'Expert Engineer',
     company: 'Shopee',
     img: 'tan-li-hau.png',
     website: 'https://lihautan.com/',
-    description: ``,
+    github: 'https://github.com/tanhauhau',
+    twitter: 'https://twitter.com/lihautan',
+    description: `Originally from Malaysia, Li Hau is an expert engineer at Shopee, Svelte core member and Babel contributor. He is a polyglot. He speaks English, Chinese, Malay, JavaScript, CSS, and HTML. In his free time, he writes about JavaScript frameworks and tools.`,
     talk: {
       title: 'Under the hood of reactivity',
       description: `

@@ -67,9 +67,16 @@ const Sponsors = ({ baseUrl, sponsors }) => (
           </div>
           <div>
             <p>
-              <b>This package is available</b>
+              <b>Sponsored by</b>
             </p>
-            <CTAButton url="mailto:welcome@jsheroes.io">Sponsor This Cause</CTAButton>
+            <Link href="https://www.mozilla.org/en-US/">
+              <img
+                className="impact-sponsor"
+                src={`${baseUrl}/sponsors/logo_mozilla.png`}
+                title="Mozilla"
+                alt="Mozilla"
+              />
+            </Link>
           </div>
         </div>
       </div>
@@ -162,6 +169,10 @@ const Sponsors = ({ baseUrl, sponsors }) => (
           p {
             font-size: 17px;
             line-height: 30px;
+          }
+
+          .cause {
+            width: 260px;
           }
         }
 
