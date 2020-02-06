@@ -39,7 +39,11 @@ class ScrollBtn extends Component {
       <div className={`back-top ${show ? 'show' : ''}`}>
         <a
           className="go-to-anchor"
-          href={`${window.innerWidth}px` <= mediaQueries.S ? '#hero' : '#menu'}
+          href={
+            typeof window !== 'undefined' && `${window.innerWidth}px` <= mediaQueries.S
+              ? '#hero'
+              : '#menu'
+          }
         >
           <i className="fa fa-angle-up" />
         </a>
