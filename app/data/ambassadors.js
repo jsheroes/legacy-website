@@ -16,8 +16,8 @@ export default [
   {
     name: 'jeremias',
     fullName: 'Jeremias Menichelli',
-    position: 'Independent Developer',
-    company: '',
+    position: 'Software Engineer',
+    company: 'New Relic',
     img: 'jeremias.jpg',
   },
   {
