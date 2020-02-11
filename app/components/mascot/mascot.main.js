@@ -5,42 +5,33 @@ import { styles, mediaQueries } from '../../constants';
 const MascotMain = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
     <div className="central-container">
-      <div className="header">
-        <div className="header-section header-section--image">
-          <img className="image-bear-mascot" src="/static/img/bear.png" alt="ecma bear mascot" />
-        </div>
+      <h2>
+        Meet Ecma, the <span className="logoJS">JS</span>
+        <span>Heroes</span> bear mascot
+      </h2>
 
-        <div className="header-section">
-          <h2>
-            Meet Ecma, the <span className="logoJS">JS</span>
-            <span>Heroes</span> bear mascot
-          </h2>
+      <p>
+        We just needed a mascot to show the world how cute and fuzzy we are. Just kidding, we are
+        serious professional people, working hard to organise an awesome JavaScript conference each
+        year. Ecma the bear is our way to offer a bit of help to “The Millions of Friends”
+        Association and their{' '}
+        <Link theme={Link.THEME_DARK} href="https://millionsoffriends.org/en/libearty/">
+          LiBearty project.
+        </Link>
+      </p>
 
-          <p>
-            We just needed a mascot to show the world how cute and fuzzy we are. Just kidding, we
-            are serious professional people, working hard to organise an awesome JavaScript
-            conference each year. Ecma the bear is our way to offer a bit of help to “The Millions
-            of Friends” Association and their{' '}
-            <Link theme={Link.THEME_DARK} href="https://millionsoffriends.org/en/libearty/">
-              LiBearty project.
-            </Link>
-          </p>
+      <p>
+        LiBearty is the largest brown bear sanctuary in the world, located near the town of Zărnești
+        in the Carpathian Mountains. On 69 hectars of oak forest, it’s currently hosting over 100
+        bears that were saved from awful captivity in cages, zoos, circuses.
+      </p>
 
-          <p>
-            LiBearty is the largest brown bear sanctuary in the world, located near the town of
-            Zărnești in the Carpathian Mountains. On 69 hectars of oak forest, it’s currently
-            hosting over 100 bears that were saved from awful captivity in cages, zoos, circuses.
-          </p>
-
-          <p>
-            Romania is home to 40% of the entire brown bear population of Europe, meaning
-            approximately 6000 bears. The bears-humans relationship is a complicated one. Their
-            natural habitat is becoming more fragmented because of logging activities and the
-            expansion of tourist or residential areas, and this causes the bears to leave the
-            forests to search for food.
-          </p>
-        </div>
-      </div>
+      <p>
+        Romania is home to 40% of the entire brown bear population of Europe, meaning approximately
+        6000 bears. The bears-humans relationship is a complicated one. Their natural habitat is
+        becoming more fragmented because of logging activities and the expansion of tourist or
+        residential areas, and this causes the bears to leave the forests to search for food.
+      </p>
 
       <p>
         Trophy hunting for bears has been banned in 2016, through the EU Habitats Directive, with
