@@ -34,4 +34,14 @@ export default [
     img: 'logo_ngparty.jpg',
     href: 'https://www.ngparty.cz/big-party-v',
   },
+  {
+    title: 'React Day Bangalore',
+    img: 'React-Day-Logo-Dark.svg',
+    href: 'https://reactday.in',
+  },
+  {
+    title: 'Think About! Conf',
+    img: 'think-about-conf.png',
+    href: 'https://think-about.io',
+  },
 ];
