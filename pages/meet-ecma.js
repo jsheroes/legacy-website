@@ -4,7 +4,7 @@ import MascotMain from '../app/components/mascot/mascot.main';
 
 const MascotPage = () => (
   <Layout page="meet-ecma">
-    <HeaderImage imageUrl="static/img/meet-ecma-page.png" />
+    <HeaderImage imageUrl="static/img/mascot/meet-ecma-header.png" />
     <MascotMain />
   </Layout>
 );
