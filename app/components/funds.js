@@ -56,7 +56,11 @@ const Funds = () => (
               <Link href="https://opencollective.com/babel" theme={Link.THEME_DARK}>
                 Babel
               </Link>{' '}
-              with $200/month
+              with $200/month and{' '}
+              <Link href="https://code4.ro/" theme={Link.THEME_DARK}>
+                Code for Romania
+              </Link>{' '}
+              with 100€/month
             </li>
           </ul>
         </div>
