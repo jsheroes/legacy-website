@@ -39,4 +39,9 @@ export default [
     img: 'logo_moqups.png',
     href: 'https://moqups.com/',
   },
+  {
+    title: 'MCRO',
+    img: 'logo_mcro.png',
+    href: 'https://mcro.tech/',
+  },
 ];
