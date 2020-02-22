@@ -9,7 +9,7 @@ import Funds from '../app/components/funds';
 import Schedule from '../app/components/schedule';
 // import Statistics from '../app/components/statistics';
 import Sponsors from '../app/components/sponsors';
-// import Partners from '../app/components/partners';
+import Partners from '../app/components/partners';
 import Events from '../app/components/communities/events';
 import Communities from '../app/components/communities';
 import Mission from '../app/components/mission';
@@ -24,7 +24,7 @@ import store from '../app/data/2020';
 
 const buildComponent = (currentStore, year = '2020') => {
   const baseUrl = `static/img/${year}`;
-  const { speakers, sponsors, communities, events, schedule } = currentStore;
+  const { speakers, sponsors, communities, events, schedule, partners } = currentStore;
 
   const Component = () => (
     <Layout>
@@ -36,7 +36,7 @@ const buildComponent = (currentStore, year = '2020') => {
       <Funds />
       <Mission />
       <Sponsors {...{ baseUrl, sponsors }} />
-      {/* <Partners {...{ baseUrl, partners }} /> */}
+      <Partners {...{ baseUrl, partners }} />
       <Events {...{ baseUrl, events }} />
       <Communities {...{ baseUrl, communities }} />
       <Venue />
