@@ -44,4 +44,14 @@ export default [
     img: 'think-about-conf.png',
     href: 'https://think-about.io',
   },
+  {
+    title: 'React Norway',
+    img: 'React_Norway_Logotye_Pink.svg',
+    href: 'https://reactnorway.com',
+  },
+  {
+    title: 'React New York',
+    img: 'React_New_York.svg',
+    href: 'https://reactnewyork.com',
+  },
 ];
