@@ -344,7 +344,7 @@ export default [
       permalink: 'accessibility',
       logo: 'javascript.png',
       description: `
-      <p>The web is awesome, and everyone should be able to enjoy it. In this workshop we’ll examine some common web scenarios and understand why they may not be accessible. Then we’ll work together to make them work properly for everyone using a mouse or keyboard. We’ll also explore the basics of screen readers and how they work. At the end of the workshop, you’ll find out that building accessible webpages isn’t as hard as it seems, if done properly since the first day. You’ll also learn:</p>
+      <p>The web is awesome, and everyone should be able to enjoy it. In this workshop we’ll examine some common web scenarios and understand why they may not be accessible. Then we'll make them work properly for everyone using a mouse or keyboard. We’ll also explore the basics of screen readers and how they work. At the end of the workshop, you’ll find out that building accessible webpages isn’t as hard as it seems, if done properly since the first day. You’ll also learn:</p>
       <ul>
       <li>What web accessibility means</li>
       <li>How to build accessible web pages</li>
