@@ -344,7 +344,7 @@ export default [
       permalink: 'accessibility',
       logo: 'javascript.png',
       description: `
-      <p>The web is awesome, and everyone should be able to enjoy it. In this workshop we’ll examine some common web scenarios and understand why they may not be accessible. Then we’ll work together to make them work properly for everyone using a mouse or keyboard. We’ll also explore the basics of screen readers and how understand how they work. At the end of the workshop, you’ll find out that building accessible webpages isn’t as hard as it seems, if done properly since the first day. You’ll also learn:</p>
+      <p>The web is awesome, and everyone should be able to enjoy it. In this workshop we’ll examine some common web scenarios and understand why they may not be accessible. Then we’ll work together to make them work properly for everyone using a mouse or keyboard. We’ll also explore the basics of screen readers and how they work. At the end of the workshop, you’ll find out that building accessible webpages isn’t as hard as it seems, if done properly since the first day. You’ll also learn:</p>
       <ul>
       <li>What web accessibility means</li>
       <li>How to build accessible web pages</li>
@@ -353,7 +353,7 @@ export default [
       </ul>
       <p>We’ll cover the following topics:</p>   
       <ul>
-      <li>Accessibility Overview - what is it, guidelines, myths and laws.</li>
+      <li>Accessibility Overview - what it is, guidelines, myths and laws.</li>
       <li>Common accessibility mistakes</li>
       <li>Semantic markup</li>
       <li>Keyboard navigation</li>
@@ -363,7 +363,7 @@ export default [
       </ul>
       `,
       prerequisites: `Basic understanding of HTML and CSS is needed. A computer with internet connection and Google Chrome installed. Bring earphones with you, so we can explore screen readers with comfort. The exercises can be done on Codesandbox or, if you prefer, locally in your code editor.`,
-      seats: 12
+      seats: 12,
     },
     previousTalks: [],
     otherTalks: [],
