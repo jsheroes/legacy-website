@@ -338,7 +338,33 @@ export default [
       <p>Tell me, the last time you collaborated in a code review, did your team overcome feedback resistance and manage time expectations? Well, finding all the bugs and writing the perfect code isn't enough, if we can’t express our feedback in a healthy way, right?</p>
       <p>My talk will be full of practical tips for you to apply in your next code review - as an author or a reviewer, but mainly as a team member.</p>`,
     },
-    workshop: null,
+    workshop: {
+      title: 'Making the Web Accessible',
+      type: 'Half-Day Workshop',
+      permalink: 'accessibility',
+      logo: 'javascript.png',
+      description: `
+      <p>The web is awesome, and everyone should be able to enjoy it. In this workshop we’ll examine some common web scenarios and understand why they may not be accessible. Then we'll make them work properly for everyone using a mouse or keyboard. We’ll also explore the basics of screen readers and how they work. At the end of the workshop, you’ll find out that building accessible webpages isn’t as hard as it seems, if done properly since the first day. You’ll also learn:</p>
+      <ul>
+      <li>What web accessibility means</li>
+      <li>How to build accessible web pages</li>
+      <li>Identify accessibility issues</li>
+      <li>How to use accessibility tools</li>
+      </ul>
+      <p>We’ll cover the following topics:</p>   
+      <ul>
+      <li>Accessibility Overview - what it is, guidelines, myths and laws.</li>
+      <li>Common accessibility mistakes</li>
+      <li>Semantic markup</li>
+      <li>Keyboard navigation</li>
+      <li>Screen readers</li>
+      <li>ARIA attributes</li>
+      <li>Accessibility debugging tools</li>
+      </ul>
+      `,
+      prerequisites: `Basic understanding of HTML and CSS is needed. A computer with internet connection and Google Chrome installed. Bring earphones with you, so we can explore screen readers with comfort. The exercises can be done on Codesandbox or, if you prefer, locally in your code editor.`,
+      seats: 12,
+    },
     previousTalks: [],
     otherTalks: [],
   },
@@ -362,7 +388,24 @@ export default [
       <p>Why did it take so long? What were the major hurdles? Should we migrate? How does the migration path look like? Are they really better than CommonJS Modules? What is in store for the future?</p>
       <p>Gil Tayar, a former member of the Node.JS Modules Working Group, and now just a passionate observer of it, will try and navigate these confusing waters, and hopefully make you understand why, when, and how to migrate your Node.JS code to use ES Modules.</p>`,
     },
-    workshop: null,
+    workshop: {
+      title: 'Frontend Testing: Mapping Out the Territory',
+      type: 'Half-Day Workshop',
+      permalink: 'frontend-testing',
+      logo: 'javascript.png',
+      description: `
+      <p>Frontend testing is impossible! I don’t have time for it! It makes my productivity tank! My manager won’t allow me to do it!</p>
+      <p>These are all excuses for not writing tests for your frontend code. In the interest of time, I will focus on the real reasons - I don’t know how, I’m afraid to start - and alleviate the fear by just writing tests and showing how easy it is.. I will give a recipe that you can follow to ease your fear of the unknown—writing tests. I will discuss the various kinds of testing and how they fit together in a coherent way. In this workshop we will be writing:</p>
+      <ul>
+      <li>Unit tests using Mocha</li>
+      <li>Integration tests using JSDOM</li>
+      <li>End to End Browser Automation Tests using Cypress</li>
+      <li>Visual Testing using Applitools</li>
+      </ul>
+      <p>Come play with a working method to write tests that cover all your code and make you feel confident the next time you deploy your code.</p>        
+      `,
+      seats: 20,
+    },
     previousTalks: [],
     otherTalks: [],
   },
@@ -454,6 +497,27 @@ export default [
       <p>Reactivity is an essential piece in modern web frameworks. Change the state of your application, and the view updates automatically. In this talk, we will answer one question, "How does your framework know what and when your state has changed?"</p>
       <p>To answer the question, we will take a look at 3 modern web frameworks, Vue, React and Svelte. We will uncover their underlying mechanics, and learn about their strengths and limitations.</p>
       <p>At the end of the talk, you will have a deeper appreciation of the tradeoffs that have made by the frameworks.</p>`,
+    },
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'isabela',
+    fullName: 'Isabela Moreira',
+    permalink: 'isabela-moreira',
+    firstName: 'Isabela',
+    reference: 'her',
+    position: 'Senior UX Engineer',
+    company: 'Cedar AI',
+    img: 'isabela-moreira.jpg',
+    website: 'https://isabela.dev',
+    github: 'https://github.com/isabelacmor',
+    twitter: 'https://twitter.com/isabelacmor',
+    description: `Isabela is a senior UX engineer at a Seattle-based startup, Cedar AI, focusing on designing and coding user experiences for the freight train industry. Previously at Microsoft and Google, she's found her home wearing many hats in the startup world. Isabela is a huge fan of the intersection of code and design and also loves mechanical keyboards.`,
+    talk: {
+      title: 'The Startup’s Guide to Creating a Design System',
+      description: `A solid design system is one of the most important things to make sure your product and brand is consistent and relays the same message to users across the board. In this talk, we’ll cover how to create a design system that nails how you want to convey your brand - from colors to typography to tone.`,
     },
     workshop: null,
     previousTalks: [],
@@ -576,6 +640,30 @@ export default [
       </ul>
       `,
       prerequisites: `We're going to start completely from scratch, the only thing that's required is to be comfortable with writing JS code :)`,
+      seats: 20,
+    },
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'bram',
+    fullName: 'Bram Van Damme',
+    permalink: 'bram-van-damme',
+    firstName: 'Bram',
+    reference: 'him',
+    position: 'Freelance Developer',
+    img: 'bram-van-damme.png',
+    twitter: 'https://twitter.com/bramus',
+    description: `Bram Van Damme, nicknamed Bramus, is a 36 year old geezer from Belgium. From the moment he discovered the web at the age of 14 (way back in 1997), he fell in love with it and has been tinkering with it ever since. With his company 3RDS he works as a freelance developer, tackling both the frontend and the backend. His current focus is on JavaScript, React and React Native. Not limiting himself to only part of the stack, he also knows his way around supporting technologies. Before launching 3RDS, Bramus was a Lecturer Web & Mobile at a Technical University.`,
+    talk: null,
+    workshop: {
+      title: 'React Hooks',
+      type: 'Full-Day Workshop',
+      permalink: 'react-hooks',
+      logo: 'react.png',
+      description: `
+      <p>Ever since React was released in 2013, it has changed the way we think about web applications and user interface development. One of the most recent additions to React is "React Hooks". This workshop will help you transition from Class Components to Function Components, will walk you through all of React's basic hooks, and show you how to create and consume your own Hooks.</p>
+      `,
       seats: 20,
     },
     previousTalks: [],

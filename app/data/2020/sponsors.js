@@ -39,4 +39,14 @@ export default [
     img: 'logo_moqups.png',
     href: 'https://moqups.com/',
   },
+  {
+    title: 'MCRO',
+    img: 'logo_mcro.png',
+    href: 'https://mcro.tech/',
+  },
+  {
+    title: 'Metro Systems',
+    img: 'logo_metro_systems.png',
+    href: 'https://www.metrosystems.ro/',
+  },
 ];

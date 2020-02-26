@@ -9,7 +9,7 @@ const Footer = () => (
     <div className="footer-links">
       <div>
         <span className="home-link">
-          <Link href="/">
+          <Link href="/meet-ecma">
             <img alt="JSHeroes Mascot" src="/static/img/bear.png" />
           </Link>
         </span>

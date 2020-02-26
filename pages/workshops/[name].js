@@ -76,7 +76,7 @@ const Workshop = ({ speakers }) => {
                 )}
               </strong>
             </span>
-            <p className="workshop-type">{workshop.type}, April 10th</p>
+            <p className="workshop-type">{workshop.type}, April 22nd</p>
           </div>
         </div>
         <div className="workshop-description clearfix">

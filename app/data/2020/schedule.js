@@ -23,6 +23,18 @@ export default [
         speakerRef: 'andrei-pfeiffer',
         time: '14:00 - 18:00',
       },
+      {
+        speakerRef: 'sandrina-pereira',
+        time: '09:00 - 13:00',
+      },
+      {
+        speakerRef: 'gil-tayar',
+        time: '14:00 - 18:00',
+      },
+      {
+        speakerRef: 'bram-van-damme',
+        time: '09:00 - 18:00',
+      }
     ],
   },
   {
@@ -115,7 +127,7 @@ export default [
       },
       {
         time: '10:00 - 10:30',
-        speakerRef: 'carolyn-stransky',
+        speakerRef: 'isabela-moreira',
       },
       {
         overrideTitle: 'Coffee Break',
@@ -131,6 +143,7 @@ export default [
       },
       {
         time: '12:00 - 12:30',
+        speakerRef: 'carolyn-stransky'
       },
       {
         overrideTitle: 'Lunch Break',
