@@ -1,10 +1,15 @@
 import Link from '../common/link';
 import { mediaQueries } from '../../constants';
 
-const Sponsor = ({ href, title, img, baseUrl }) => (
+const Sponsor = ({ href, title, img, baseUrl, longText }) => (
   <li>
     <Link href={href}>
-      <img src={`${baseUrl}/sponsors/${img}`} title={`${title}`} alt={`${title}`} />
+      <img
+        className={`logo-sponsor ${longText ? 'logo-sponsor--long' : ''}`}
+        src={`${baseUrl}/sponsors/${img}`}
+        title={title}
+        alt={title}
+      />
     </Link>
 
     <style jsx>
@@ -18,7 +23,7 @@ const Sponsor = ({ href, title, img, baseUrl }) => (
           line-height: 30px;
         }
 
-        img {
+        .logo-sponsor {
           width: 188px;
           vertical-align: middle;
           border: 0;
@@ -28,7 +33,11 @@ const Sponsor = ({ href, title, img, baseUrl }) => (
           transition: all 0.5s ease;
         }
 
-        img:hover {
+        .logo-sponsor--long {
+          width: 245px;
+        }
+
+        .logo-sponsor:hover {
           -webkit-filter: grayscale(0%);
           -moz-filter: grayscale(0%);
           filter: grayscale(0%);
