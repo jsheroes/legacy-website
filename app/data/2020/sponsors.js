@@ -49,4 +49,9 @@ export default [
     img: 'logo_metro_systems.png',
     href: 'https://www.metrosystems.ro/',
   },
+  {
+    title: 'Metro Systems',
+    img: 'logo_accesa.png',
+    href: 'https://www.accesa.eu/',
+  },
 ];
