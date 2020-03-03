@@ -50,8 +50,14 @@ export default [
     href: 'https://www.metrosystems.ro/',
   },
   {
-    title: 'Metro Systems',
+    title: 'Accesa',
     img: 'logo_accesa.png',
     href: 'https://www.accesa.eu/',
+  },
+  {
+    title: 'Modus Create',
+    img: 'logo_modus.png',
+    href: 'https://moduscreate.com/',
+    longText: true,
   },
 ];
