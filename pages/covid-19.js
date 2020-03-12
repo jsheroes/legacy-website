@@ -18,12 +18,12 @@ const Covid19 = () => (
         </p>
         <p>
           As of today (12.03.2020), the Romanian government is forbidding any public event with more
-          than 1000 attendees and needs to give green light based on a review to all other events.
-          There are 49 confirmed cases in Romania, but there is consensus that this number will grow
-          as the numbers in Europe are still growing and a lot of people from Romania were in
-          contact with people from Italy, France, Spain and other countries. The situation is not
-          critical in Romania, but the authorities are pretty much in control and are raising more
-          and more restrictions with each passing day.
+          than 100 attendees until the end of the month and needs to give green light based on a
+          review to all other events. There are 49 confirmed cases in Romania, but there is
+          consensus that this number will grow as the numbers in Europe are still growing and a lot
+          of people from Romania were in contact with people from Italy, France, Spain and other
+          countries. The situation is not critical in Romania, but the authorities are pretty much
+          in control and are raising more and more restrictions with each passing day.
         </p>
         <p>
           However, we are preparing <strong>three separate scenarios</strong> due to all the
