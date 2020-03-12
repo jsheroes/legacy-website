@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Section from './common/section';
 import news from '../data/news';
 import { mediaQueries, styles } from '../constants';
+import Link from './common/link';
 
 class Updates extends Component {
   tabRefs = news.map(() => React.createRef());
@@ -72,6 +73,9 @@ class Updates extends Component {
       <Section>
         <div id="news" className="wrapper">
           <h1>News</h1>
+          <Link href="/covid-19" theme="theme-dark">
+            <h2>COVID-19 Statement</h2>
+          </Link>
           <ul role="tablist">{newsData}</ul>
           {news.map((item, index) => (
             <section
@@ -120,6 +124,10 @@ class Updates extends Component {
               font-size: 32px;
               font-weight: 700;
               color: ${styles.mainColor4};
+            }
+
+            .wrapper h2 {
+              margin-bottom: 40px;
             }
 
             .content.hidden {
