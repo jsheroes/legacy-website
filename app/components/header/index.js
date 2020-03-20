@@ -1,5 +1,5 @@
 import { mediaQueries } from '../../constants';
-import CTAButton from '../common/ctaButton';
+// import CTAButton from '../common/ctaButton';
 
 const Header = () => {
   return (
@@ -11,12 +11,17 @@ const Header = () => {
             <span className="black-stripe">Open-Source Community Event</span>
           </p>
           <p>
-            <span className="black-stripe">April 23-24th, 2020 in Cluj-Napoca, Romania</span>
+            <span className="black-stripe strikethrough">
+              April 23-24th, 2020 in Cluj-Napoca, Romania
+            </span>
+          </p>
+          <p>
+            <span className="black-stripe">April 15-16th, 2021 in Cluj-Napoca, Romania</span>
           </p>
         </div>
-        <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2020">
+        {/* <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2020">
           Buy Your Conference Ticket
-        </CTAButton>
+        </CTAButton> */}
       </div>
 
       <style jsx>
@@ -52,6 +57,10 @@ const Header = () => {
           .hero-text p {
             font-size: 20px;
             font-weight: 500;
+          }
+
+          .strikethrough {
+            text-decoration: line-through;
           }
 
           .black-stripe {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Section from './common/section';
 import news from '../data/news';
 import { mediaQueries, styles } from '../constants';
-import Link from './common/link';
+// import Link from './common/link';
 
 class Updates extends Component {
   tabRefs = news.map(() => React.createRef());
@@ -45,38 +45,44 @@ class Updates extends Component {
   };
 
   render() {
-    const { activeNewsIndex } = this.state;
-    const newsData = news.map((item, index) => {
-      const isActive = index === activeNewsIndex;
+    // const { activeNewsIndex } = this.state;
+    // const newsData = news.map((item, index) => {
+    //   const isActive = index === activeNewsIndex;
 
-      return (
-        <li
-          key={item.title}
-          className={`news-item${isActive ? ' active' : ''}`}
-          id={`news-tab-${index}`}
-          tabIndex={isActive ? '0' : '-1'}
-          ref={this.tabRefs[index]}
-          role="tab"
-          onClick={this.activateTab(index)}
-          onMouseOver={this.activateTab(index)}
-          onFocus={this.activateTab(index)}
-          onKeyDown={this.onKeyDown}
-          aria-selected={isActive ? 'true' : 'false'}
-          aria-controls={`news-tab-content-${index}`}
-        >
-          <strong>{item.title}</strong>
-        </li>
-      );
-    });
+    //   return (
+    //     <li
+    //       key={item.title}
+    //       className={`news-item${isActive ? ' active' : ''}`}
+    //       id={`news-tab-${index}`}
+    //       tabIndex={isActive ? '0' : '-1'}
+    //       ref={this.tabRefs[index]}
+    //       role="tab"
+    //       onClick={this.activateTab(index)}
+    //       onMouseOver={this.activateTab(index)}
+    //       onFocus={this.activateTab(index)}
+    //       onKeyDown={this.onKeyDown}
+    //       aria-selected={isActive ? 'true' : 'false'}
+    //       aria-controls={`news-tab-content-${index}`}
+    //     >
+    //       <strong>{item.title}</strong>
+    //     </li>
+    //   );
+    // });
 
     return (
       <Section>
         <div id="news" className="wrapper">
           <h1>News</h1>
-          <Link href="/covid-19" theme="theme-dark">
-            <h2>COVID-19 Statement</h2>
-          </Link>
-          <ul role="tablist">{newsData}</ul>
+          <p>
+            Due to #CoronavirusOutbreak, unfortunately, we are canceling this year`s edition of
+            #JSHeroes
+          </p>
+          <p>
+            We hope to see all of you next year, on April 15-16, at JSHeroes 2021. The tickets
+            bought for 2020 will be reported for the next year. If you need a refund, drop us a
+            line.
+          </p>
+          {/* <ul role="tablist">{newsData}</ul>
           {news.map((item, index) => (
             <section
               key={item.title}
@@ -88,7 +94,7 @@ class Updates extends Component {
               dangerouslySetInnerHTML={{ __html: news[index].content }}
               aria-labelledby={`news-tab-${index}`}
             />
-          ))}
+          ))} */}
         </div>
 
         {/* language=CSS */}
