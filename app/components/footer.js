@@ -15,12 +15,7 @@ const Footer = () => (
         </span>
       </div>
       <div>
-        <span className="headline">JSHeroes 2020</span>
-        <div>
-          <span className="link">
-            <Link href="https://ti.to/cluj-javascripters/jsheroes-2020">Buy Your Ticket</Link>
-          </span>
-        </div>
+        <span className="headline">JSHeroes 2021</span>
         <div>
           <span className="link">
             <Link href="/become-a-sponsor">Become a Sponsor</Link>
