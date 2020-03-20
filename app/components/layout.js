@@ -33,7 +33,7 @@ class Layout extends Component {
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <meta
             name="description"
-            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 23-24th 2020 in Cluj-Napoca, Romania!"
+            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 15-16 2021 in Cluj-Napoca, Romania!"
           />
           <meta
             name="keywords"
@@ -41,23 +41,23 @@ class Layout extends Component {
           />
           <link rel="manifest" href="/static/manifest.json" />
           <meta name="theme-color" content={styles.mainColor6} />
-          <title>JSHeroes 2020 | Open-Source Community Event</title>
-          <meta property="og:title" content="JSHeroes 2020 | Open-Source Community Event" />
+          <title>JSHeroes 2021 | Open-Source Community Event</title>
+          <meta property="og:title" content="JSHeroes 2021 | Open-Source Community Event" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.jsheroes.io/" />
           <meta property="og:image" content="https://jsheroes.io/static/img/meta-2021.png" />
           <meta property="og:image:type" content="image/png" />
           <meta
             property="og:description"
-            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 23-24th 2020 in Cluj-Napoca, Romania!"
+            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 15-16 2021 in Cluj-Napoca, Romania!"
           />
           <meta property="og:locale" content="en_US" />
-          <meta property="og:site_name" content="JSHeroes 2020 | Open-Source Community Event" />
+          <meta property="og:site_name" content="JSHeroes 2021 | Open-Source Community Event" />
           <meta name="twitter:site" content="@jsheroes" />
-          <meta name="twitter:title" content="JSHeroes 2020 | Open-Source Community Event" />
+          <meta name="twitter:title" content="JSHeroes 2021 | Open-Source Community Event" />
           <meta
             name="twitter:description"
-            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 23-24th 2020 in Cluj-Napoca, Romania!"
+            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 15-16 2021 in Cluj-Napoca, Romania!"
           />
           <meta name="twitter:image" content="https://jsheroes.io/static/img/meta-2021.png" />
           <meta name="twitter:card" content="summary_large_image" />
