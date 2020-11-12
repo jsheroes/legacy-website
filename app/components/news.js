@@ -71,16 +71,16 @@ class Updates extends Component {
 
     return (
       <Section>
-        <div id="news" className="wrapper">
+        <div id="news" className="wrapper text-left">
           <h1>News</h1>
           <p>
-            Due to #CoronavirusOutbreak, unfortunately, we are canceling this year`s edition of
-            #JSHeroes
+            Unfortunately, with the current status of the global pandemic, we cannot organize the safe on-site event that we want. 
           </p>
           <p>
-            We hope to see all of you next year, on April 15-16, at JSHeroes 2021. The tickets
-            bought for 2020 will be reported for the next year. If you need a refund, drop us a
-            line.
+            While waiting for the situation to improve, we hope to see you all at our next event, in 2021, 2022, or as soon we can create the same fun, engaging and cozy experience that you all came to know as JSHeroes. The tickets bought for 2020 will be refunded. 
+          </p>
+          <p>
+            THANK YOU everyone for all the support and for being part of our community for the past 3 years.
           </p>
           {/* <ul role="tablist">{newsData}</ul>
           {news.map((item, index) => (
@@ -102,7 +102,6 @@ class Updates extends Component {
           {`
             .wrapper {
               padding-top: 50px;
-              text-align: center;
               max-width: 1100px;
               height: 350px;
             }

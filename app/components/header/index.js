@@ -5,20 +5,18 @@ const Header = () => {
   return (
     <div id="hero" className="hero-wrapper">
       <div className="hero-content">
-        <img className="hero-logo" src="/static/img/website-logo.svg" alt="JSHeroes" />
+        {/* <img className="hero-logo" src="/static/img/website-logo.svg" alt="JSHeroes" />
         <div className="hero-text">
           <p>
             <span className="black-stripe">Open-Source Community Event</span>
           </p>
           <p>
-            <span className="black-stripe strikethrough">
+            <span className="black-stripe">
               April 23-24th, 2020 in Cluj-Napoca, Romania
             </span>
           </p>
-          <p>
-            <span className="black-stripe">April 15-16th, 2021 in Cluj-Napoca, Romania</span>
-          </p>
-        </div>
+          
+        </div> */}
         {/* <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2020">
           Buy Your Conference Ticket
         </CTAButton> */}

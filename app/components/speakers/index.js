@@ -110,27 +110,18 @@ class Speakers extends Component {
 
             h2 {
               padding-top: 30px;
-              text-align: center;
             }
 
-            h3 {
-              text-align: center;
-            }
             .speakers-section .section-header {
               margin-bottom: 45px;
-              padding-right: 15px;
-              padding-left: 15px;
             }
             .speakers-section .section-header.year {
               margin-bottom: 45px;
-              padding-right: 15px;
-              padding-left: 15px;
               padding-top: 70px;
             }
 
             .speakers-section .section-header h2 {
               padding-top: 60px;
-              text-align: center;
               font-size: 33px;
               color: ${styles.mainColor4};
               font-weight: 700;
@@ -144,15 +135,11 @@ class Speakers extends Component {
               color: #555;
               line-height: 28px;
               font-weight: 300;
-              text-align: center;
-              margin-left: auto;
-              margin-right: auto;
             }
 
             @media (min-width: ${mediaQueries.S}) {
               .speakers-section .section-header h2 {
                 font-size: 33px;
-                text-align: center;
               }
               .speakers-section .section-header p {
                 font-size: 16px;
@@ -164,7 +151,6 @@ class Speakers extends Component {
             @media (min-width: ${mediaQueries.L}) {
               .speakers-section .section-header h2 {
                 font-size: 46px;
-                text-align: center;
               }
               .speakers-section .section-header p {
                 font-size: 17px;
@@ -176,7 +162,6 @@ class Speakers extends Component {
             @media (min-width: ${mediaQueries.XL}) {
               .speakers-section .section-header h2 {
                 font-size: 52px;
-                text-align: center;
               }
               .speakers-section .section-header p {
                 font-size: 18px;
