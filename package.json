@@ -22,11 +22,11 @@
     "@sendgrid/mail": "^6.4.0",
     "google-map-react": "^1.1.5",
     "intersection-observer": "^0.7.0",
-    "next": "^9.1.4",
+    "next": "^9.3.4",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "snyk": "^1.278.2",
+    "snyk": "^1.465.0",
     "uuid": "^3.3.3",
     "what-input": "^5.2.6"
   },
