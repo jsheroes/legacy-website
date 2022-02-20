@@ -10,7 +10,7 @@ const AfterMovie = ({ year }) => {
   return (
     <Section>
       <div className="after-movie-wrapper">
-        <h2>Looking back at {year}</h2>
+        <h2>Looking Back at {year}</h2>
         <p>
           If you've never been to one of our events before, or you're just nostalgic thinking back,
           here's a little treat for you.
