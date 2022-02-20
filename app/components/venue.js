@@ -19,6 +19,7 @@ const Venue = () => (
         <Link theme={Link.THEME_LIGHT_CONTRAST} href={venueURL}>
           Google Maps
         </Link>
+        .
       </p>
 
       <p>
@@ -34,15 +35,16 @@ const Venue = () => (
     <style jsx>
       {`
         #venue {
-          padding: 40px 0;
+          padding: 140px 0;
         }
 
         p {
           color: ${styles.mainColor3};
+          font-size: 18px;
         }
 
         h2 {
-          font-size: 34px;
+          font-size: 54px;
           color: ${styles.mainColor3};
           font-weight: 700;
           margin: 0 auto 30px;
@@ -51,6 +53,14 @@ const Venue = () => (
         @media only screen and (max-width: ${mediaQueries.S}) {
           h2 {
             font-size: 28px;
+          }
+
+          p {
+            font-size: 16px;
+          }
+
+          #venue {
+            padding: 40px 0;
           }
         }
       `}
