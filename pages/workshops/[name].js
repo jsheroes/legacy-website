@@ -1,12 +1,12 @@
-import Head from 'next/head';
-import Layout from '../../app/components/layout';
-import Section from '../../app/components/common/section';
-import Link from '../../app/components/common/link';
-import CTAButton from '../../app/components/common/ctaButton';
-import store from '../../app/data/index';
-import { styles, mediaQueries } from '../../app/constants';
-import RawHtml from '../../app/components/common/rawHtml';
-import Helpers from '../../app/helpers';
+import Head from "next/head";
+import Layout from "../../app/components/layout";
+import Section from "../../app/components/common/section";
+import Link from "../../app/components/common/link";
+import CTAButton from "../../app/components/common/ctaButton";
+import store from "../../app/data/index";
+import { styles, mediaQueries } from "../../app/constants";
+import RawHtml from "../../app/components/common/rawHtml";
+import Helpers from "../../app/helpers";
 
 const Workshop = ({ speakers }) => {
   const firstSpeaker = speakers[0];
@@ -14,9 +14,13 @@ const Workshop = ({ speakers }) => {
 
   const { workshop } = firstSpeaker;
 
-  const workshopTitle = workshop.soldOut ? `${workshop.title} ( SOLD OUT )` : workshop.title;
+  const workshopTitle = workshop.soldOut
+    ? `${workshop.title} ( SOLD OUT )`
+    : workshop.title;
 
-  const secondSpeakerAddition = secondSpeaker ? ` and ${secondSpeaker.fullName}` : '';
+  const secondSpeakerAddition = secondSpeaker
+    ? ` and ${secondSpeaker.fullName}`
+    : "";
   const seoTitle = `${workshop.title} by ${firstSpeaker.fullName}${secondSpeakerAddition}`;
 
   return (
@@ -25,7 +29,10 @@ const Workshop = ({ speakers }) => {
         <title>{seoTitle}</title>
         <meta property="og:title" content={seoTitle} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://jsheroes.io/workshops/${workshop.permalink}`} />
+        <meta
+          property="og:url"
+          content={`https://jsheroes.io/workshops/${workshop.permalink}`}
+        />
         <meta
           property="og:image"
           content={`https://jsheroes.io/static/img/technologies/${workshop.logo}`}
@@ -64,7 +71,7 @@ const Workshop = ({ speakers }) => {
                 </Link>
                 {secondSpeaker && (
                   <span>
-                    {' & '}
+                    {" & "}
                     <Link
                       href="/speakers/[name]"
                       as={`/speakers/${secondSpeaker.permalink}`}
@@ -220,15 +227,15 @@ const Workshop = ({ speakers }) => {
 Workshop.getInitialProps = async ({ res, query }) => {
   const workshopName = query.name;
   if (!workshopName) {
-    Helpers.redirectTo({ res, path: '/' });
+    Helpers.redirectTo({ res, path: "/" });
   }
 
-  const speakers = store.data2020.speakers.filter(
-    s => s.workshop && s.workshop.permalink === workshopName,
+  const speakers = store.data2022.speakers.filter(
+    (s) => s.workshop && s.workshop.permalink === workshopName
   );
 
   if (speakers.length <= 0) {
-    Helpers.redirectTo({ res, path: '/' });
+    Helpers.redirectTo({ res, path: "/" });
   }
 
   return { speakers };

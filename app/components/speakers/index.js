@@ -132,7 +132,6 @@ class Speakers extends Component {
               width: 98%;
               margin-bottom: 20px;
               font-size: 16px;
-              color: #555;
               line-height: 28px;
               font-weight: 300;
             }

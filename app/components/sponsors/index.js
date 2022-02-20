@@ -1,94 +1,20 @@
-import Section from '../common/section';
-import Link from '../common/link';
-import { styles, mediaQueries } from '../../constants';
-import Sponsor from './sponsor';
-import CTAButton from '../common/ctaButton';
+import Section from "../common/section";
+import { styles, mediaQueries } from "../../constants";
+import Sponsor from "./sponsor";
+import CTAButton from "../common/ctaButton";
 
 const Sponsors = ({ baseUrl, sponsors }) => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
     <div id="sponsors">
-      <h2>Impact Sponsors</h2>
-      <p>
-        For 2020 we picked 3 causes for which we are gathering funds. Each package is worth{' '}
-        <b>€3,000</b> and will cover costs associated to a particular cause which is positively
-        impacting our event.
-      </p>
-      <div className="causes">
-        <div className="cause">
-          <div>
-            <h3>
-              <span aria-hidden>♿</span> Accessibility
-            </h3>
-            <p>
-              We want everyone to feel included and to enjoy the event. This package is covering the
-              costs for live captions during the two days of conference.
-            </p>
-          </div>
-          <div>
-            <p>
-              <b>Sponsored by</b>
-            </p>
-            <Link href="https://azure.microsoft.com/en-us/">
-              <img
-                className="impact-sponsor"
-                src={`${baseUrl}/sponsors/logo_microsoft.png`}
-                title="Microsoft"
-                alt="Microsoft"
-              />
-            </Link>
-          </div>
-        </div>
-        <div className="cause">
-          <div>
-            <h3>
-              <span aria-hidden>🌍</span> Environment
-            </h3>
-            <p>
-              Help us reduce waste and the overall carbon footprint of the event: reusable cups,
-              eco-friendly materials, recycling and selective disposal.
-            </p>
-          </div>
-          <div>
-            <p>
-              <b>This package is available</b>
-            </p>
-            <CTAButton url="mailto:welcome@jsheroes.io">Sponsor This Cause</CTAButton>
-          </div>
-        </div>
-        <div className="cause">
-          <div>
-            <h3>
-              <span aria-hidden>🎓</span> Diversity
-            </h3>
-            <p>
-              We received a lot of requests for accessing our scholarship fund, hence we are trying
-              to increase the total amount of the fund with this package.
-            </p>
-          </div>
-          <div>
-            <p>
-              <b>Sponsored by</b>
-            </p>
-            <Link href="https://www.mozilla.org/en-US/">
-              <img
-                className="impact-sponsor"
-                src={`${baseUrl}/sponsors/logo_mozilla.png`}
-                title="Mozilla"
-                alt="Mozilla"
-              />
-            </Link>
-          </div>
-        </div>
-      </div>
       <h2>Event Sponsors</h2>
       {sponsors.length > 0 && (
         <div>
           <p>
-            These are the companies that support our event financially through the <b>€2,000</b>{' '}
-            standard package:
+            These are the companies that support our event financially through
+            the <b>€2,000</b> standard package:
           </p>
           <ul>
-            {sponsors.map(sponsor => (
+            {sponsors.map((sponsor) => (
               <Sponsor {...sponsor} key={sponsor.title} baseUrl={baseUrl} />
             ))}
           </ul>

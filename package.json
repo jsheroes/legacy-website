@@ -48,9 +48,6 @@
     "prettier": "^1.19.1",
     "wait-on": "^3.3.0"
   },
-  "engines": {
-    "node": "^10.0.0"
-  },
   "lint-staged": {
     "*.{js}": [
       "prettier --write",
