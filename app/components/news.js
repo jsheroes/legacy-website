@@ -15,7 +15,7 @@ class Updates extends Component {
             we are creating together!
           </p>
           <p>
-            Are you ready for the <strong>#ReturnOfTheHeroes?</strong> Even if the pandemic is not
+            Are you ready for the <strong>#ReturnOfTheHeroes</strong>? Even if the pandemic is not
             over, we decided to take action and organize our community event this June. We’ll embody
             the JSHeroes experience into a <strong>one-day in-person event</strong>, designed with a
             limit of <strong>300</strong> people. It will be a new format and a new type of

@@ -51,12 +51,7 @@ class Speakers extends Component {
             <h2>{title}</h2>
             {isCurrentYear && (
               <div>
-                <p>
-                  The speakers that joined our mission are experts recognized by global communities.
-                  They are people who define our working environment every day. Most of them are for
-                  the first time in Romania and they’re really looking forward to our community
-                  event!
-                </p>
+                <p>Say hello to the first speakers from 2022!</p>
               </div>
             )}
           </div>
@@ -105,7 +100,6 @@ class Speakers extends Component {
             .speakers-section {
               padding-top: 30px;
               padding-bottom: 30px;
-              // margin: 30px 0;
             }
 
             h2 {
