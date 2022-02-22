@@ -33,33 +33,29 @@ class Layout extends Component {
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <meta
             name="description"
-            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 15-16 2021 in Cluj-Napoca, Romania!"
-          />
-          <meta
-            name="keywords"
-            content="tech event, tech conference, js conference, js event, javascript, conference, international javascript conference, js, jsheroes, heroes, cluj, cluj javascripters, javascripters, clujsers, june, grand hotel italia, cluj-napoca, cluj napoca, romania, transilvania, transylvania, open source, open-source, opensource, community, meetup, technical, event, knowledge, codecamp, evozon, fortech, speaker, call for speakers, web development, schedule, mission, diversity ticket, early bird, tickets, newsletter, sarah drasner, simona cotin, lin clark, harry roberts, heydon pickering, charlie Gerard, liran tal, sara vieira, xavier cazalot, benedek gagyi, gautam arora, ives vaan horne, jeremias menichelli, carmen popoviciu"
+            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on June 9th 2022 in Cluj-Napoca, Romania!"
           />
           <link rel="manifest" href="/static/manifest.json" />
           <meta name="theme-color" content={styles.mainColor6} />
-          <title>JSHeroes 2021 | Open-Source Community Event</title>
-          <meta property="og:title" content="JSHeroes 2021 | Open-Source Community Event" />
+          <title>JSHeroes 2022 | Open-Source Community Event</title>
+          <meta property="og:title" content="JSHeroes 2022 | Open-Source Community Event" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.jsheroes.io/" />
-          <meta property="og:image" content="https://jsheroes.io/static/img/meta-2021.png" />
+          <meta property="og:image" content="https://jsheroes.io/static/img/meta-2022.png" />
           <meta property="og:image:type" content="image/png" />
           <meta
             property="og:description"
-            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 15-16 2021 in Cluj-Napoca, Romania!"
+            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on June 9th 2022 in Cluj-Napoca, Romania!"
           />
           <meta property="og:locale" content="en_US" />
-          <meta property="og:site_name" content="JSHeroes 2021 | Open-Source Community Event" />
+          <meta property="og:site_name" content="JSHeroes 2022 | Open-Source Community Event" />
           <meta name="twitter:site" content="@jsheroes" />
-          <meta name="twitter:title" content="JSHeroes 2021 | Open-Source Community Event" />
+          <meta name="twitter:title" content="JSHeroes 2022 | Open-Source Community Event" />
           <meta
             name="twitter:description"
-            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 15-16 2021 in Cluj-Napoca, Romania!"
+            content="JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on June 9th 15-16 2022 in Cluj-Napoca, Romania!"
           />
-          <meta name="twitter:image" content="https://jsheroes.io/static/img/meta-2021.png" />
+          <meta name="twitter:image" content="https://jsheroes.io/static/img/meta-2022.png" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@jsheroes" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86169211-2" />
