@@ -8,48 +8,43 @@ const venueURL =
 const Venue = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor6 } }}>
     <div id="venue">
-      <div className="left-side">
-        <h2>Venue: Grand Hotel Italia</h2>
-        <p>Vasile Conta Street number 2, Cluj-Napoca, Romania</p>
+      <h2>Venue and Covid-19 Plan</h2>
+      <p>
+        We are hosting the JSHeroes 2022 conference at the <strong>Grand Hotel Italia</strong>{' '}
+        (Vasile Conta Street number 2, Cluj-Napoca, Romania).
+      </p>
 
+      <p>
+        See directions on{' '}
         <Link theme={Link.THEME_LIGHT_CONTRAST} href={venueURL}>
-          Directions on Google Maps
+          Google Maps
         </Link>
-      </div>
-      <div className="right-side">
-        <Link theme={Link.THEME_LIGHT_CONTRAST} href={venueURL}>
-          <img className="map-image" src="/static/img/venue.png" alt="Venue location on the map" />
-        </Link>
-      </div>
+        .
+      </p>
+
+      <p>
+        The health and safety of our staff, partners, and event participants is our top priority.
+        This year, we will be implementing new policies and procedures based on the latest guidance
+        from national and local health officials on preventing the transmission of COVID-19. We will
+        require everyone who joins us to provide <strong>valid proof of vaccination</strong>, wear a{' '}
+        <strong>mask</strong> while inside, and follow all other safety protocols as directed by
+        event organizers.
+      </p>
     </div>
 
     <style jsx>
       {`
-        .map-image {
-          max-width: 100%;
-        }
-
         #venue {
-          display: flex;
-          flex-wrap: wrap;
-          padding: 40px 0;
-        }
-
-        .left-side {
-          width: 50%;
-          margin-bottom: 20px;
-        }
-
-        .right-side {
-          width: 50%;
+          padding: 140px 0;
         }
 
         p {
           color: ${styles.mainColor3};
+          font-size: 18px;
         }
 
         h2 {
-          font-size: 34px;
+          font-size: 54px;
           color: ${styles.mainColor3};
           font-weight: 700;
           margin: 0 auto 30px;
@@ -60,12 +55,12 @@ const Venue = () => (
             font-size: 28px;
           }
 
-          .left-side {
-            width: 100%;
+          p {
+            font-size: 16px;
           }
 
-          .right-side {
-            width: 100%;
+          #venue {
+            padding: 40px 0;
           }
         }
       `}

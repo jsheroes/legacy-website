@@ -1,25 +1,22 @@
 import { mediaQueries } from '../../constants';
-// import CTAButton from '../common/ctaButton';
+import CTAButton from '../common/ctaButton';
 
 const Header = () => {
   return (
     <div id="hero" className="hero-wrapper">
       <div className="hero-content">
-        {/* <img className="hero-logo" src="/static/img/website-logo.svg" alt="JSHeroes" />
+        <img className="hero-logo" src="/static/img/website-logo.svg" alt="JSHeroes" />
         <div className="hero-text">
           <p>
             <span className="black-stripe">Open-Source Community Event</span>
           </p>
           <p>
-            <span className="black-stripe">
-              April 23-24th, 2020 in Cluj-Napoca, Romania
-            </span>
+            <span className="black-stripe">June 9th, 2022 in Cluj-Napoca, Romania</span>
           </p>
-          
-        </div> */}
-        {/* <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2020">
-          Buy Your Conference Ticket
-        </CTAButton> */}
+        </div>
+        <CTAButton primary url="https://ti.to/jsheroes/2022">
+          Buy Ticket
+        </CTAButton>
       </div>
 
       <style jsx>

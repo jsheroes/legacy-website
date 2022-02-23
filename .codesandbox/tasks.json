@@ -1,0 +1,14 @@
+{
+  "portTasks": {
+    "3000": {
+      "name": "Application",
+      "command": "yarn dev"
+    }
+  },
+  "tasks": {
+    "format": {
+      "name": "Format",
+      "command": "yarn format"
+    }
+  }
+}

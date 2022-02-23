@@ -48,15 +48,15 @@ Supported types of menu items:
 export default [
   {
     id: 1,
-    url: '/#speakers',
-    label: 'speakers',
-    blacklist: ['/2017', '/2018', '/2019'],
+    url: "/#speakers",
+    label: "speakers",
+    blacklist: ["/2017", "/2018", "/2019"],
   },
   {
     id: 1.1,
-    url: '#speakers',
-    label: 'speakers',
-    whitelist: ['/2017', '/2018', '/2019', '/2020'],
+    url: "#speakers",
+    label: "speakers",
+    whitelist: ["/2017", "/2018", "/2019", "/2022"],
   },
   // {
   //   id: 2,
@@ -78,19 +78,19 @@ export default [
   // },
   {
     id: 4,
-    url: '#sponsors',
-    label: 'sponsors',
+    url: "#sponsors",
+    label: "sponsors",
   },
   {
     id: 5,
-    url: '/#contactForm',
-    label: 'contact',
-    blacklist: ['/2017', '/2018', '/2019'],
+    url: "/#contactForm",
+    label: "contact",
+    blacklist: ["/2017", "/2018", "/2019"],
   },
   {
     id: 7,
-    label: 'Back to 2020',
-    url: '/',
-    whitelist: ['/2017', '/2018', '/2019'],
+    label: "Back to 2022",
+    url: "/",
+    whitelist: ["/2017", "/2018", "/2019"],
   },
 ];

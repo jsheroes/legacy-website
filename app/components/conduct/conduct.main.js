@@ -29,7 +29,7 @@ const ConductMain = () => (
         from using offensive language and imagery, and to report any derogatory or offensive
         behaviour to a member of the JSHeroes community or JSHeroes staff directly, or through email
         at{' '}
-        <Link href="mailto: welcome@jsheroes.io">
+        <Link href="mailto:welcome@jsheroes.io">
           <a target="_top">welcome@jsheroes.io</a>
         </Link>
       </p>

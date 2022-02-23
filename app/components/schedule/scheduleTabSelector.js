@@ -26,8 +26,8 @@ class ScheduleTabSelector extends Component {
 
   buildCTAButton() {
     const { selectedTab } = this.state;
-    return selectedTab >= 1 ? (
-      <CTAButton primary url="https://ti.to/cluj-javascripters/jsheroes-2020">
+    return selectedTab >= 0 ? (
+      <CTAButton primary url="https://ti.to/jsheroes/2022">
         Buy Your Conference Ticket
       </CTAButton>
     ) : (
@@ -44,14 +44,7 @@ class ScheduleTabSelector extends Component {
     return (
       <div>
         <Tabs defaultIndex={0} onChange={index => this.setState({ selectedTab: index })}>
-          <TabList className="tablist">
-            {schedule.map(item => (
-              <Tab key={item.id} className="tabselector-button">
-                <div>{item.section}</div>
-                <div>{item.date}</div>
-              </Tab>
-            ))}
-          </TabList>
+          <TabList className="tablist"></TabList>
           <TabPanels>
             {schedule.map((day, index) => (
               <TabPanel key={day.id}>{this.buildContent(index)}</TabPanel>

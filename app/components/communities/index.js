@@ -24,7 +24,7 @@ const Communities = ({ communities, baseUrl }) => (
         ))}
       </ul>
       <p>
-        <strong>#humansofjavascript</strong>
+        <strong>#ReturnOfTheHeroes</strong>
       </p>
     </div>
 

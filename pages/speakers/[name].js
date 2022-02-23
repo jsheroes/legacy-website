@@ -1,7 +1,7 @@
-import Layout from '../../app/components/layout';
-import SpeakerDetail from '../../app/components/speakers/speakerDetail';
-import Helpers from '../../app/helpers';
-import store from '../../app/data';
+import Layout from "../../app/components/layout";
+import SpeakerDetail from "../../app/components/speakers/speakerDetail";
+import Helpers from "../../app/helpers";
+import store from "../../app/data";
 
 const Speakers = ({ speaker, year }) => (
   <Layout page="speaker">
@@ -10,10 +10,12 @@ const Speakers = ({ speaker, year }) => (
 );
 
 Speakers.getInitialProps = async ({ res, query }) => {
-  const year = '2020';
-  const speaker = store[`data${year}`].speakers.find(s => s.permalink === query.name);
+  const year = "2022";
+  const speaker = store[`data${year}`].speakers.find(
+    (s) => s.permalink === query.name
+  );
   if (!speaker) {
-    Helpers.redirectTo({ res, path: '/' });
+    Helpers.redirectTo({ res, path: "/" });
   }
 
   return { speaker, year };

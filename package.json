@@ -1,7 +1,7 @@
 {
   "name": "jsheroes.io",
   "version": "1.0.0",
-  "description": "JSHeroes is an Open-Source Community Event, created by and for the JavaScript Community. Check the latest updates and join us on April 23-24th 2020 in Cluj-Napoca, Romania!",
+  "description": "Website for the jsheroes conference",
   "scripts": {
     "dev": "next",
     "build": "next build && node scripts/generateServiceWorker.js",
@@ -47,9 +47,6 @@
     "lint-staged": "^8.1.6",
     "prettier": "^1.19.1",
     "wait-on": "^3.3.0"
-  },
-  "engines": {
-    "node": "^10.0.0"
   },
   "lint-staged": {
     "*.{js}": [

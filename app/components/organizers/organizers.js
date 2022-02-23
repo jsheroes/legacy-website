@@ -1,6 +1,6 @@
-import Link from '../common/link';
-import Section from '../common/section';
-import { styles, mediaQueries } from '../../constants';
+import Link from "../common/link";
+import Section from "../common/section";
+import { styles, mediaQueries } from "../../constants";
 
 const Organizers = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor1 } }}>
@@ -8,10 +8,14 @@ const Organizers = () => (
       <h2>Organizers</h2>
 
       <p>
-        The <strong>JSHeroes</strong> Conference relies on <strong>volunteers</strong> and the
-        JSHeroes community to organize and drive the event.
+        The <strong>JSHeroes</strong> Conference relies on{" "}
+        <strong>volunteers</strong> and the JSHeroes community to organize and
+        drive the event.
       </p>
-      <p>They contribute hours of their time each year and we value this immensely.</p>
+      <p>
+        They contribute hours of their time each year and we value this
+        immensely.
+      </p>
       <p>
         Thanks to all
         <Link href="/organizers" theme={Link.THEME_DARK}>
@@ -28,7 +32,6 @@ const Organizers = () => (
         h2 {
           text-align: center;
           font-size: 54px;
-          color: ${styles.mainColor3};
           font-weight: 700;
           margin: 0 auto 30px;
         }

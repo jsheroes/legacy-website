@@ -1,28 +1,34 @@
-import { Component } from 'react';
-import Section from '../common/section';
-import { styles, mediaQueries } from '../../constants';
-import organizers from '../../data/organizers';
-import Organizer from './organizer';
+import { Component } from "react";
+import Section from "../common/section";
+import { styles, mediaQueries } from "../../constants";
+import organizers from "../../data/organizers";
+import Organizer from "./organizer";
 
 function addObserver() {
   const observer = new IntersectionObserver(handler, {
     threshold: 1,
-    rootMargin: '0px',
+    rootMargin: "0px",
   });
 
-  const boxes = document.querySelectorAll('.organizer-info-box');
-  boxes.forEach(box => observer.observe(box));
+  const boxes = document.querySelectorAll(".organizer-info-box");
+  boxes.forEach((box) => observer.observe(box));
 
   function handler(entries) {
-    entries.forEach(element => {
+    entries.forEach((element) => {
       if (element.isIntersecting && element.intersectionRatio === 1) {
-        if (element.target.className.indexOf('active') === -1 && window.innerWidth <= 425) {
+        if (
+          element.target.className.indexOf("active") === -1 &&
+          window.innerWidth <= 425
+        ) {
           // eslint-disable-next-line no-param-reassign
-          element.target.className += ' active';
+          element.target.className += " active";
         }
-      } else if (element.target.className.indexOf('active') > -1) {
+      } else if (element.target.className.indexOf("active") > -1) {
         // eslint-disable-next-line no-param-reassign
-        element.target.className = element.target.className.replace(' active', '');
+        element.target.className = element.target.className.replace(
+          " active",
+          ""
+        );
       }
     });
   }
@@ -30,7 +36,7 @@ function addObserver() {
 
 class OrganizersMain extends Component {
   componentDidMount() {
-    require('intersection-observer'); // eslint-disable-line global-require
+    require("intersection-observer"); // eslint-disable-line global-require
     addObserver();
   }
 
@@ -40,18 +46,20 @@ class OrganizersMain extends Component {
         <div id="organizers" className="organizers-container">
           <h2>Organizers</h2>
           <p>
-            The <strong>JSHeroes</strong> conference is organized by the JSHeroes{' '}
-            <strong>community</strong> and <strong>volunteers</strong>.
+            The <strong>JSHeroes</strong> conference is organized by the
+            JSHeroes <strong>community</strong> and <strong>volunteers</strong>.
           </p>
           <p>
-            Our thanks go to all the organizers and volunteers that help us each year in creating
-            this remarkable event.
+            Our thanks go to all the organizers and volunteers that help us each
+            year in creating this remarkable event.
           </p>
-          <p>If you`d like to contribute, please do not hesitate to contact us.</p>
-          <h3>Core Team</h3>
+          <p>
+            If you`d like to contribute, please do not hesitate to contact us.
+          </p>
+          <h3>JSHeroes Team</h3>
 
           <div className="organizer-boxes">
-            {organizers.coreTeam.map(organizer => (
+            {organizers.coreTeam.map((organizer) => (
               <div key={organizer.name} className="organizer-box">
                 <Organizer
                   image={organizer.img}
@@ -63,10 +71,10 @@ class OrganizersMain extends Component {
             ))}
           </div>
 
-          <h3>Still Friends</h3>
+          <h3>Old Friends</h3>
 
           <div className="organizer-boxes">
-            {organizers.oldHeroes.map(organizer => (
+            {organizers.oldHeroes.map((organizer) => (
               <div key={organizer.name} className="organizer-box">
                 <Organizer
                   image={organizer.img}
@@ -86,7 +94,6 @@ class OrganizersMain extends Component {
             }
 
             h3 {
-              font-weight: 400;
               font-size: 40px;
               margin-top: 40px;
               margin-bottom: 40px;
@@ -95,7 +102,6 @@ class OrganizersMain extends Component {
             h2 {
               text-align: center;
               font-size: 50px;
-              color: ${styles.mainColor6};
               margin: 0 auto 80px;
             }
 

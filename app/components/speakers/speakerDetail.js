@@ -82,7 +82,7 @@ const SpeakerDetail = ({ speaker, year }) => {
                     </div>
                     <div>Join {speaker.reference} at JSHeroes!</div>
                   </div>
-                  <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2020" align="left">
+                  <CTAButton url="https://ti.to/jsheroes/2022" align="left">
                     Buy Your Ticket
                   </CTAButton>
                 </aside>
@@ -113,9 +113,7 @@ const SpeakerDetail = ({ speaker, year }) => {
                   </div>
                   <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
-                <CTAButton url="https://ti.to/cluj-javascripters/jsheroes-2020">
-                  Buy Your Ticket
-                </CTAButton>
+                <CTAButton url="https://ti.to/jsheroes/2022">Buy Your Ticket</CTAButton>
               </div>
             )}
           </div>
@@ -126,7 +124,6 @@ const SpeakerDetail = ({ speaker, year }) => {
           .speakers-page {
             padding-top: 110px;
             margin-bottom: 30px;
-            // background-color: yellow;
             overflow: hidden;
           }
 

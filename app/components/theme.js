@@ -4,31 +4,21 @@ import { styles, mediaQueries } from '../constants';
 const Theme = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor6 } }}>
     <div id="theme">
-      <h2>Our Spotlight for 2020</h2>
+      <h2>Let's Reconnect in 2022</h2>
       <p>
-        Each year at JSHeroes, we pick a couple of <strong>topics</strong> we want to spotlight. It
-        is not an exhaustive list, but we usually pick themes and topics we wish to{' '}
-        <strong>raise awareness</strong> on, or that we feel need a bit more focus during the event.
-        Nevertheless, JSHeroes is still focused on the technical side, the{' '}
-        <strong>JavaScript</strong> ecosystem and the wonders of the <strong>Web</strong>.
+        We usually pick a few topics we want to spotlight and a general theme for each JSHeroes
+        event. But after two hard years of limited community interaction and in-person events, we
+        feel the best thing to do is to <strong>bring the community back together</strong>.
       </p>
-      <p className="list-heading">For 2020, we decided to focus on:</p>
-      <ul>
-        <li>
-          The past and future of <strong>JavaScript</strong> and the <strong>Web</strong> ecosystem
-        </li>
-        <li>
-          The impact of technology in <strong>society</strong>
-        </li>
-        <li>
-          The <strong>hardships</strong> of the day-by-day activities at tech companies
-        </li>
-      </ul>
       <p>
-        Because we want to reach a greater impact on the JavaScript ecosystem, we have decided to
-        limit the number of talks which are addressing specific frameworks and libraries inside the
-        greater JavaScript/Web world. Most of them have specialized events that are focusing
-        particularly on the needs of those communities.
+        So let's focus on <strong>rebuilding</strong> the amazing community we had before. We are
+        starting small, but with a clear objective of bringing{' '}
+        <strong>the same warm and engaging vibes</strong> that JSHeroes events always had.
+      </p>
+      <p>
+        Being part of an engaging community feels good! This year, communities are back together, to
+        share stories and catch up. Connection via peer groups can help us have a healthier mindset,
+        improved self worth, and greater enjoyment of life.
       </p>
     </div>
     <style jsx>

@@ -2,6 +2,7 @@ import React from 'react';
 
 import Section from '../common/section';
 import Link from '../common/link';
+import { styles, mediaQueries } from '../../constants';
 
 const AfterMovie = ({ year }) => {
   const { videos } = getData(year);
@@ -9,7 +10,11 @@ const AfterMovie = ({ year }) => {
   return (
     <Section>
       <div className="after-movie-wrapper">
-        <h1>JSHeroes {year} Highlights</h1>
+        <h2>Looking Back at {year}</h2>
+        <p>
+          If you've never been to one of our events before, or you're just nostalgic thinking back,
+          here's a little treat for you.
+        </p>
         <div className="video-wrapper">
           <iframe
             aria-label="JSHeroes After Movie"
@@ -23,7 +28,7 @@ const AfterMovie = ({ year }) => {
           />
         </div>
         <p>
-          You can find all the recorded talks on our youtube channel
+          You can find all the recorded talks on our youtube channel:
           <Link href={videos.playList} theme={Link.THEME_DARK}>
             <span className="link"> {year} playlist </span>
           </Link>
@@ -31,10 +36,6 @@ const AfterMovie = ({ year }) => {
       </div>
       <style jsx>
         {`
-          .after-movie-wrapper {
-            text-align: center;
-          }
-
           .video-wrapper {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 */
@@ -50,14 +51,52 @@ const AfterMovie = ({ year }) => {
             height: 100%;
           }
 
-          h1 {
-            color: #0070df;
-            margin-bottom: 30px;
-            font-size: 36px;
+          h2 {
             padding-top: 30px;
+            font-size: 33px;
+            color: ${styles.mainColor4};
+            font-weight: 700;
           }
+
           p {
-            padding-top: 20px;
+            width: 98%;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 300;
+          }
+
+          @media (min-width: ${mediaQueries.S}) {
+            h2 {
+              font-size: 33px;
+            }
+            p {
+              font-size: 16px;
+              line-height: 28px;
+              margin-bottom: 20px;
+            }
+          }
+
+          @media (min-width: ${mediaQueries.L}) {
+            h2 {
+              font-size: 46px;
+            }
+            p {
+              font-size: 17px;
+              line-height: 30px;
+              margin-bottom: 30px;
+            }
+          }
+
+          @media (min-width: ${mediaQueries.XL}) {
+            h2 {
+              font-size: 52px;
+            }
+            p {
+              font-size: 18px;
+              line-height: 32px;
+              margin-bottom: 40px;
+            }
           }
 
           .link {
