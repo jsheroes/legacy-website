@@ -5,14 +5,14 @@ const Header = () => {
   return (
     <div id="hero" className="hero-wrapper">
       <div className="hero-content">
-        <img className="hero-logo" src="/static/img/website-logo.svg" alt="JSHeroes" />
-        <div className="hero-text">
+        <img className="hero-logo" src="/static/img/website_logo_2022.svg" alt="JSHeroes" />
+        <div className="hero-text-wrapper">
+          <span className="hero-details hero-text-blue"><span className="hero-semibold-text">Open-Source</span> Community Event</span>
           <p>
-            <span className="black-stripe">Open-Source Community Event</span>
+            <span className="hero-date">June <span className="hero-date-day">9TH</span> 2022</span>
           </p>
-          <p>
-            <span className="black-stripe">June 9th, 2022 in Cluj-Napoca, Romania</span>
-          </p>
+          <p className="hero-details">in Cluj-Napoca, Romania</p>
+          <p className="hero-details">#ReturnOfTheHeroes</p>
         </div>
         <CTAButton primary url="https://ti.to/jsheroes/2022">
           Buy Ticket
@@ -22,7 +22,7 @@ const Header = () => {
       <style jsx>
         {`
           .hero-wrapper {
-            background: url('/static/img/speakers_and_organizers_grayscale.jpg') center top
+            background: url('/static/img/jsh-photo-homepage.jpg') center center
               no-repeat;
             background-size: 100%;
             height: 700px;
@@ -34,53 +34,84 @@ const Header = () => {
             text-align: center;
             width: 100%;
           }
+
           .hero-logo {
-            height: 60px;
-            padding-left: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            margin-bottom: 40px;
-            background-color: rgba(0, 0, 0, 0.6);
+            height: 100px;
           }
 
-          .hero-text {
+          .hero-text-wrapper {
             text-align: center;
-            margin-top: 15px;
             color: #fff;
           }
 
-          .hero-text p {
+          .hero-details {
             font-size: 20px;
+          }
+
+          .hero-semibold-text {
             font-weight: 500;
+          }
+
+          .hero-text-blue {
+            color: #4D88C9
+          }
+
+          .hero-date {
+            padding: 8px 16px;
+            border: 1px solid white;
+            border-radius: 16px;
+            font-size: 32px;
+          }
+
+          .hero-date-day {
+            font-size: 40px;
           }
 
           .strikethrough {
             text-decoration: line-through;
           }
 
-          .black-stripe {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 5px 20px;
+          @media (max-width: ${mediaQueries.XL}) {
+            .hero-wrapper {
+              background-size: 120%;
+            }
           }
 
-          @media (max-width: ${mediaQueries.XL}) {
+          @media (max-width: ${mediaQueries.L}) {
             .hero-wrapper {
               height: 500px;
               background-size: 150%;
-              background-position: center center;
+            }
+
+            .hero-logo {
+              height: 70px;
+            }
+
+            .hero-details {
+              font-size: 16px;
+            }
+
+            .hero-date {
+              font-size: 24px;
+            }
+
+            .hero-date-day {
+              font-size: 30px;
             }
           }
 
           @media (max-width: ${mediaQueries.S}) {
             .hero-wrapper {
-              height: 100vh;
-              background-size: 400%;
-              background-position: top center;
+              background-size: 300%;
               margin-top: 70px;
             }
 
             .hero-content {
               margin-top: 70px;
+            }
+
+            .hero-logo {
+              height: 70px;
             }
           }
         `}

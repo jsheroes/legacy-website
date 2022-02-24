@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Section from './common/section';
 import { mediaQueries, styles } from '../constants';
 
-class Updates extends Component {
-  render() {
+const Updates = () => {
     return (
       <Section>
         <div id="news" className="wrapper text-left">
@@ -27,48 +26,44 @@ class Updates extends Component {
         <style jsx global>
           {`
             .wrapper {
-              padding-top: 50px;
               max-width: 1100px;
-              height: 350px;
+              padding-top: 45px;
             }
-            p {
+
+            .wrapper p {
               margin-bottom: 20px;
               font-size: 16px;
             }
+
             .wrapper a {
               font-weight: bold;
               color: ${styles.mainColor5};
             }
+
             .wrapper a:hover {
               color: ${styles.mainColor6};
             }
 
-            h1 {
+            .wrapper h1 {
               margin: 0 0 50px;
               font-size: 32px;
               font-weight: 700;
               color: ${styles.mainColor4};
             }
 
-            @media (min-width: ${mediaQueries.S}) {
-              .wrapper {
-                padding-top: 80px;
-                padding-bottom: 80px;
-              }
-
-              h1 {
+            @media (max-width: ${mediaQueries.S}) {
+              .wrapper h1 {
                 font-size: 52px;
               }
 
-              p {
+              .wrapper p {
                 font-size: 18px;
               }
             }
           `}
         </style>
       </Section>
-    );
-  }
-}
+  );
+};
 
 export default Updates;
