@@ -97,25 +97,12 @@ class Speakers extends Component {
 
         <style jsx>
           {`
-            .speakers-section {
-              padding-top: 30px;
-              padding-bottom: 30px;
-            }
-
-            h2 {
-              padding-top: 30px;
-            }
-
             .speakers-section .section-header {
               margin-bottom: 45px;
-            }
-            .speakers-section .section-header.year {
-              margin-bottom: 45px;
-              padding-top: 70px;
+              margin-top: 45px;
             }
 
             .speakers-section .section-header h2 {
-              padding-top: 60px;
               font-size: 33px;
               color: ${styles.mainColor4};
               font-weight: 700;

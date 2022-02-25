@@ -75,7 +75,7 @@ class Nav extends Component {
         <nav>
           <div className="logo">
             <Link href="/" onClick={this.closeMobileNavigation}>
-              <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
+              <img alt="JSHeroes Logo" src="/static/img/website_logo_2022.svg" />
             </Link>
           </div>
           <div>
