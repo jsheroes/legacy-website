@@ -45,7 +45,7 @@ const Updates = () => {
             }
 
             .wrapper h1 {
-              margin: 0 0 50px;
+              margin: 0 0 30px;
               font-size: 32px;
               font-weight: 700;
               color: ${styles.mainColor4};
@@ -53,7 +53,7 @@ const Updates = () => {
 
             @media (max-width: ${mediaQueries.S}) {
               .wrapper h1 {
-                font-size: 52px;
+                font-size: 32px;
               }
 
               .wrapper p {
