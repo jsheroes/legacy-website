@@ -21,9 +21,9 @@ const Statistics = () => (
           </Link>
         </h3>
         <ul>
-          <li>Subscribers - 1.6K </li>
-          <li>Views - more than 55K (lifetime) </li>
-          <li>Minutes of content watched - more than 305K (lifetime)</li>
+          <li>Subscribers - 2.55K </li>
+          <li>Views - more than 110K (lifetime) </li>
+          <li>Hours of content watched - more than 10K (lifetime)</li>
         </ul>
       </div>
       <div className="statistics-box">
@@ -33,7 +33,7 @@ const Statistics = () => (
           </Link>
         </h3>
         <ul>
-          <li>Page Followers - 1.3K</li>
+          <li>Page Followers - 1.5K</li>
           <li>Community Group - 1.4K</li>
         </ul>
       </div>
@@ -44,8 +44,8 @@ const Statistics = () => (
           </Link>
         </h3>
         <ul>
-          <li>Followers - 3.4K </li>
-          <li>Tweets - over 1.8K</li>
+          <li>Followers - 3.6K </li>
+          <li>Tweets - over 1.6K</li>
         </ul>
       </div>
       <div className="statistics-box">
@@ -55,8 +55,8 @@ const Statistics = () => (
           </Link>
         </h3>
         <ul>
-          <li>Members - 1.9K</li>
-          <li>Meetups Organized - 99</li>
+          <li>Members - 2.5K</li>
+          <li>Meetups Organized - 122</li>
         </ul>
       </div>
       <div className="statistics-box">
