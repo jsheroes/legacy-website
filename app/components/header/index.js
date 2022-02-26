@@ -81,6 +81,7 @@ const Header = () => {
             .hero-wrapper {
               height: 500px;
               background-size: 150%;
+
             }
 
             .hero-logo {
@@ -102,8 +103,9 @@ const Header = () => {
 
           @media (max-width: ${mediaQueries.S}) {
             .hero-wrapper {
-              background-size: 300%;
-              margin-top: 70px;
+              background: url('/static/img/jsh-photo-homepage-tablet.jpg') center center
+              no-repeat;
+              margin-top: 50px;
             }
 
             .hero-content {

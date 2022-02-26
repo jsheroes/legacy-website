@@ -139,7 +139,6 @@ class Nav extends Component {
                 top: 0;
                 z-index: 3;
                 width: 100%;
-                border-bottom: 1px solid white;
               }
 
               .navigation-wrapper.open ul.menu-items {
