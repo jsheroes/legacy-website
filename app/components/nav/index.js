@@ -113,7 +113,7 @@ class Nav extends Component {
             }
 
             .logo img {
-              width: 150px;
+              width: 125px;
               flex: 1;
               margin-top: 5px;
             }
@@ -171,6 +171,10 @@ class Nav extends Component {
 
               .navigation-wrapper ul.menu-items li.with-link {
                 padding: 0;
+              }
+
+              .logo img {
+                margin-top: 0px;
               }
             }
           `}
