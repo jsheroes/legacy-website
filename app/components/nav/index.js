@@ -75,7 +75,7 @@ class Nav extends Component {
         <nav>
           <div className="logo">
             <Link href="/" onClick={this.closeMobileNavigation}>
-              <img alt="JSHeroes Logo" src="/static/img/website-logo.svg" />
+              <img alt="JSHeroes Logo" src="/static/img/website_logo_2022.svg" />
             </Link>
           </div>
           <div>
@@ -113,7 +113,7 @@ class Nav extends Component {
             }
 
             .logo img {
-              width: 150px;
+              width: 125px;
               flex: 1;
               margin-top: 5px;
             }
@@ -139,7 +139,6 @@ class Nav extends Component {
                 top: 0;
                 z-index: 3;
                 width: 100%;
-                border-bottom: 1px solid white;
               }
 
               .navigation-wrapper.open ul.menu-items {
@@ -172,6 +171,10 @@ class Nav extends Component {
 
               .navigation-wrapper ul.menu-items li.with-link {
                 padding: 0;
+              }
+
+              .logo img {
+                margin-top: 0px;
               }
             }
           `}
