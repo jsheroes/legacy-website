@@ -115,12 +115,14 @@ export default [
     permalink: 'carolyn-stransky',
     firstName: 'Carolyn',
     reference: 'her',
-    company: 'Meeshkan',
-    position: 'Open Source Engineer',
+    company: 'BRYTER',
+    position: 'Software Engineer',
     img: 'carolyn-stransky.jpeg',
     twitter: 'https://twitter.com/carolstran',
     website: 'https://dev.to/carolstran',
-    description: `Carolyn (she/her) is a frontend developer and former technical writer based in Berlin, Germany. She's currently working at Meeshkan, where she maintains an open-source testing library and API proxy. Out of the office, she’s a Mozilla Tech Speaker and organizer of the BerlinJS and QueerJS meetups. You’ll usually find her taking selfies in the nearest restroom mirror.`,
+    description: `<p>Carolyn (she/her) is a software engineer and former technical writer based in Berlin, Germany. She’s currently working as a frontend engineer at BRYTER, a no-code decision automation platform.</p> 
+
+<p>Out of office, Carolyn is a freelance journalist and writes about the intersections of technology and intimacy for outlets like Future of Sex, Autostraddle, Silicon Allee and <a href="https://workwithcarolyn.com/words" target="_blank">elsewhere</a>. You can find her most places on the Internet <a href="https://twitter.com/carolstran/" target="_blank">@carolstran</a>.</p>`,
     talk: null,
     workshop: null,
     previousTalks: [],

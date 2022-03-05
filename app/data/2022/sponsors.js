@@ -1,28 +1,33 @@
 export default [
   {
-    title: "Fortech",
-    img: "logo_fortech.png",
-    href: "http://www.fortech.ro/",
+    title: 'Fortech',
+    img: 'logo_fortech.png',
+    href: 'http://www.fortech.ro/',
   },
   {
-    title: "Evozon",
-    img: "logo_new_evozon.png",
-    href: "https://www.evozon.com/",
+    title: 'Evozon',
+    img: 'logo_new_evozon.png',
+    href: 'https://www.evozon.com/',
   },
   {
-    title: "Cloudflight",
-    img: "logo_cloudflight.png",
-    href: "https://cloudflight.io/",
+    title: 'Cloudflight',
+    img: 'logo_cloudflight.png',
+    href: 'https://cloudflight.io/',
   },
   {
-    title: "moqups",
-    img: "logo_moqups.png",
-    href: "https://moqups.com/",
+    title: 'moqups',
+    img: 'logo_moqups.png',
+    href: 'https://moqups.com/',
   },
   {
-    title: "MCRO",
-    img: "logo_mcro.png",
-    href: "https://mcro.tech/",
+    title: 'MCRO',
+    img: 'logo_mcro.png',
+    href: 'https://mcro.tech/',
+  },
+  {
+    title: 'CodeSandbox',
+    img: 'logo_codesandbox.svg',
+    href: 'https://codesandbox.io',
   },
   // {
   //   title: 'teleportHQ',

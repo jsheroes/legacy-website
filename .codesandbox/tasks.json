@@ -1,11 +1,10 @@
 {
-  "portTasks": {
-    "3000": {
-      "name": "Application",
-      "command": "yarn dev"
-    }
-  },
   "tasks": {
+    "start": {
+      "name": "Application",
+      "command": "yarn dev",
+      "runAtStart": true
+    },
     "format": {
       "name": "Format",
       "command": "yarn format"
