@@ -14,7 +14,7 @@ const BecomeASponsorPage = () => (
         <h1>Become A Sponsor</h1>
         <p>
           View the&nbsp;
-          <Link openInNewTab theme={Link.THEME_DARK} href="/static/brochure-2020.pdf">
+          <Link openInNewTab theme={Link.THEME_DARK} href="/static/brochure-2022.pdf">
             Sponsorship Brochure
           </Link>
         </p>
