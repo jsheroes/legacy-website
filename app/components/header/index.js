@@ -9,7 +9,7 @@ const Header = () => {
         <div className="hero-text-wrapper">
           <span className="hero-details hero-text-blue"><span className="hero-semibold-text">Open-Source</span> Community Event</span>
           <p>
-            <span className="hero-date">June <span className="hero-date-day">9TH</span> 2022</span>
+            <span className="hero-date">June <span className="hero-date-day">9th</span> 2022</span>
           </p>
           <p className="hero-details">in Cluj-Napoca, Romania</p>
           <p className="hero-details">#ReturnOfTheHeroes</p>
