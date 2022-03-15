@@ -29,6 +29,11 @@ export default [
     img: 'logo_codesandbox.svg',
     href: 'https://codesandbox.io',
   },
+  {
+    title: 'DevNest',
+    img: 'devnest_logo.jpeg',
+    href: 'https://devnest.ro/',
+  }
   // {
   //   title: 'teleportHQ',
   //   img: 'logo_teleporthq.png',
