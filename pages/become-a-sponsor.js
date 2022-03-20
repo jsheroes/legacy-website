@@ -47,7 +47,7 @@ const BecomeASponsorPage = () => (
             welcome@jsheroes.io
           </Link>
           . We will follow-up and send you our current offer. Or you can download our{' '}
-          <Link openInNewTab theme={Link.THEME_DARK} href="/static/brochure-2020.pdf">
+          <Link openInNewTab theme={Link.THEME_DARK} href="/static/brochure-2022.pdf">
             Sponsorship Brochure
           </Link>{' '}
           for more info.
