@@ -31,9 +31,14 @@ export default [
   },
   {
     title: 'DevNest',
-    img: 'devnest_logo.jpeg',
+    img: 'logo_devnest.jpeg',
     href: 'https://devnest.ro/',
-  }
+  },  
+  {
+    title: 'Victory Square Partners',
+    img: 'logo_victorysquarepartners.png',
+    href: 'https://www.victorysquarepartners.com/',
+  },
   // {
   //   title: 'teleportHQ',
   //   img: 'logo_teleporthq.png',
@@ -53,11 +58,6 @@ export default [
   //   title: 'Steelcase',
   //   img: 'logo_steelcase.svg',
   //   href: 'https://www.steelcase.com/',
-  // },
-  // {
-  //   title: 'Metro Systems',
-  //   img: 'logo_metro_systems.png',
-  //   href: 'https://www.metrosystems.ro/',
   // },
   // {
   //   title: 'Accesa',
