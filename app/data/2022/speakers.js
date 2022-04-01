@@ -23,47 +23,6 @@ export default [
   //   otherTalks: [],
   // },
   // {
-  //   name: "anjana",
-  //   fullName: "Anjana Vakil",
-  //   permalink: "anjana-vakil",
-  //   firstName: "Anjana",
-  //   reference: "her",
-  //   position: "Map Rendering Engineer",
-  //   company: "Mapbox",
-  //   img: "anjana.jpg",
-  //   github: "https://github.com/vakila",
-  //   twitter: "https://twitter.com/AnjanaVakil/",
-  //   website: "vakila.github.io",
-  //   description:
-  //     "Anjana suffers from a debilitating case of curiosity, which led her from philosophy to English teaching to computational linguistics to software development. As a map rendering engineer at Mapbox, she can usually be found at her computer in San Francisco; that is, when she's not speaking at events around the world, trying to share the joy of coding and advocate for a more diverse & accessible tech industry. Ask her about the Recurse Center, Outreachy, and Mozilla!",
-  //   talk: {
-  //     title: "A Tourist in Browserland",
-  //     description: `
-  //     <p>What is a map? What <i>could</i> a map be? When our web browser can see, hear, and talk to us, how can that reshape our image of & interactions with the physical world around us?</p>
-  //     <p>Apart from telling us where we need to go, a map can do much more: a city skyline can dance to the beat around us, a map style can match our fashion style, and we can fly through the world in new & unexpected ways.</p>
-  //     <p>By mixing the magic of web multimedia with the power of an open-source mapping library, in this demo-driven talk we'll go on a whirlwind tour through the landscape of modern Web APIs to expand our notions of what a map can be and how we can rethink interactivity on the web.</p>
-  //     `,
-  //     message: "",
-  //   },
-  //   workshop: null,
-  //   previousTalks: [
-  //     {
-  //       url: "https://www.youtube.com/watch?v=FmiQr4nfoPQ",
-  //       name: "Recursion, Iteration, and JavaScript: A Love Story",
-  //     },
-  //   ],
-  //   otherTalks: [
-  //     {
-  //       url: "https://www.youtube.com/watch?v=Pg3UeB-5FdA",
-  //       name: "Programming Across Paradigms @ GOTO 2017",
-  //     },
-  //     {
-  //       url: "https://www.youtube.com/watch?v=Wo0qiGPSV-s",
-  //       name: "Immutable data structures for functional JS @ JSConfEU 2017",
-  //     },
-  //   ],
-  // },
-  // {
   //   name: "jeffrey",
   //   fullName: "Jeffrey Lembeck",
   //   permalink: "jeffrey-lembeck",
@@ -155,6 +114,73 @@ export default [
     img: 'andrei-pfeiffer.png',
     twitter: 'https://twitter.com/pfeiffer_andrei',
     description: `Eclectic code designer, developing websites and web apps since 2000. Currently working as an UI Engineer, his everyday battles revolve around Clean Code Design, User & Developer Experience and fighting software entropy. He’s part of the core team at the revo.js conference and an organizer of tim.js since 2013, the local JavaScript meetup.`,
+    talk: null,
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'anjana',
+    fullName: 'Anjana Vakil',
+    permalink: 'anjana-vakil',
+    firstName: 'Anjana',
+    reference: 'her',
+    position: 'Senior Developer Advocate',
+    company: 'Hasura',
+    img: 'anjana.jpg',
+    github: 'https://github.com/vakila',
+    twitter: 'https://twitter.com/AnjanaVakil/',
+    description:
+      'A chronically curious teacher-turned-developer, Anjana spreads the joy of coding at events worldwide. She’s a Senior Developer Advocate at Hasura and alumna of the Recurse Center & Outreachy.',
+    talk: null,
+    workshop: null,
+    previousTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=FmiQr4nfoPQ',
+        name: 'Recursion, Iteration, and JavaScript: A Love Story',
+      },
+    ],
+    otherTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=Pg3UeB-5FdA',
+        name: 'Programming Across Paradigms @ GOTO 2017',
+      },
+      {
+        url: 'https://www.youtube.com/watch?v=Wo0qiGPSV-s',
+        name: 'Immutable data structures for functional JS @ JSConfEU 2017',
+      },
+    ],
+  },
+  {
+    name: 'ives',
+    fullName: 'Ives van Hoorne',
+    permalink: 'ives-van-hoorne',
+    firstName: 'Ives',
+    reference: 'him',
+    position: 'Founder',
+    company: 'CodeSandbox',
+    img: 'ives.jpg',
+    twitter: 'https://twitter.com/CompuIves',
+    github: 'https://github.com/CompuIves',
+    description:
+      'Ives loves building things that other people can use to build things. He started CodeSandbox as an open source project when he was studying, and as it grew he started working full-time on it.',
+    talk: null,
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'mada',
+    fullName: 'Madalina Tantareanu',
+    permalink: 'madalina-tantareanu',
+    firstName: 'Madalina',
+    reference: 'her',
+    position: 'Illustrator',
+    company: '',
+    img: 'madalina-tantareanu.jpg',
+    twitter: 'https://twitter.com/Madalinadraws',
+    website: 'https://www.madalinatantareanu.com/',
+    description: '',
     talk: null,
     workshop: null,
     previousTalks: [],

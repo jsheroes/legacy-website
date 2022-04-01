@@ -18,7 +18,6 @@ import Venue from '../app/components/venue';
 import ScrollBtn from '../app/components/scroll-btn';
 import ContactForm from '../app/components/contactForm';
 import PhotoGallery from '../app/components/photoGallery';
-import AfterMovie from '../app/components/afterMovie';
 
 import store from '../app/data/2022';
 
@@ -31,7 +30,7 @@ const buildComponent = (currentStore, year = '2022') => {
       <Header />
       <News />
       <Speakers {...{ baseUrl, year, speakers }} />
-      <AfterMovie year={2019} />
+      {/* <AfterMovie year={2019} /> */}
       <Theme />
       <Schedule {...{ baseUrl, year, schedule, speakers }} />
       {/* <Funds /> */}
