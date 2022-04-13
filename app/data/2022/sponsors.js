@@ -39,6 +39,11 @@ export default [
     img: 'logo_victorysquarepartners.png',
     href: 'https://www.victorysquarepartners.com/',
   },
+  {
+    title: 'Yonder',
+    img: 'logo_yonder.png',
+    href: 'https://tss-yonder.com/',
+  },
   // {
   //   title: 'teleportHQ',
   //   img: 'logo_teleporthq.png',
