@@ -46,6 +46,11 @@ const Footer = () => (
             <Link href="/privacy">Privacy Statement</Link>
           </span>
         </div>
+        <div>
+          <span className="link">
+            <Link href="/meet-ecma">Meet Ecma</Link>
+          </span>
+        </div>
       </div>
       <div>
         <span className="headline">Past Editions</span>

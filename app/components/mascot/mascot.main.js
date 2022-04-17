@@ -21,7 +21,7 @@ const MascotMain = () => (
       </p>
 
       <p>
-        <b>LiBearty</b> is the largest brown bear sanctuary in the world, located near the town of
+        <b>AMP LiBearty</b> is the largest brown bear sanctuary in the world, located near the town of
         Zărnești in the Carpathian Mountains. On 69 hectars of oak forest, with trees where the
         bears can climb, swimming pools where they can splash, food according to their diets studied
         by the veterinarians and the necessary medical care. It’s currently hosting over{' '}
@@ -57,7 +57,7 @@ const MascotMain = () => (
       </p>
 
       <p>
-        Support LiBearty by{` `}
+        Support AMP LiBearty by{` `}
         <Link
           theme={Link.THEME_DARK}
           href="https://millionsoffriends.org/en/libearty/adopt-a-bear/"
@@ -70,7 +70,7 @@ const MascotMain = () => (
         You can even watch the bears live{` `}
         <Link
           theme={Link.THEME_DARK}
-          href="https://www.youtube.com/watch?v=-61APDGMjc4&fbclid=IwAR2HQEt_b3DiMiyputmQm7kxAJCVBWmTj5x4PG4rop2viH-KXt165wsfPPg"
+          href="https://www.youtube.com/watch?v=V3aTpIxIGDg"
         >
           here.
         </Link>

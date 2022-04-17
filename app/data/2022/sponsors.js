@@ -44,6 +44,16 @@ export default [
     img: 'logo_yonder.png',
     href: 'https://tss-yonder.com/',
   },
+    {
+    title: 'Accesa',
+    img: 'logo_accesa.png',
+    href: 'https://careers.accesa.eu/',
+  },
+  {
+    title: 'Frequentis',
+    img: 'logo_frequentis.jpg',
+    href: 'https://www.frequentis.com/',
+  },
   // {
   //   title: 'teleportHQ',
   //   img: 'logo_teleporthq.png',
@@ -58,16 +68,6 @@ export default [
   //   title: 'Macadamian',
   //   img: 'logo_macadamian.png',
   //   href: 'https://www.macadamian.com/',
-  // },
-  // {
-  //   title: 'Steelcase',
-  //   img: 'logo_steelcase.svg',
-  //   href: 'https://www.steelcase.com/',
-  // },
-  // {
-  //   title: 'Accesa',
-  //   img: 'logo_accesa.png',
-  //   href: 'https://www.accesa.eu/',
   // },
   // {
   //   title: 'Modus Create',
