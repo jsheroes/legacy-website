@@ -1,55 +1,4 @@
 export default [
-  // {
-  //   name: "christian",
-  //   fullName: "Christian Nwamba",
-  //   permalink: "christian-nwamba",
-  //   firstName: "Christian",
-  //   reference: "him",
-  //   position: "Senior Cloud Developer Advocate",
-  //   company: "Microsoft",
-  //   img: "christian-nwamba.jpg",
-  //   twitter: "https://twitter.com/codebeast",
-  //   website: "https://www.codebeast.dev/",
-  //   description: `My name is Christian Nwamba, also called Codebeast. I’m a Software Engineer and love making things that might possibly work using JavaScript. I currently work as a Senior Cloud Developer Advocate🥑 at Microsoft. I was also a Developer Advocate for 2 years at Cloudinary before joining Microsoft.
-  //   Before becoming an advocate, I loved working as a consultant. I consulted as a Software Developer, Developer Advocate, Technical Writer and Community Champion for startups including Scotch.io, Auth0, Pusher, Cloudinary, Progress, deepstreamHub, Logrocket, Dialog Engineers, Manifold, etc.
-  //   I love working with the developer communities to build an ecosystem. With forces from colleagues and friends we built communities like forLoop Africa, Angular Nigeria, Concatenate Conference, Me.io, Frontstack.io and a lot more. I am responsible for expanding the forLoop Africa communities across new African countries and ecosystems while trying my best to sustain the existing ones.`,
-  //   talk: {
-  //     title: "Progressive Caching Beyond Service Workers",
-  //     description:
-  //       "Service workers give us access to the browser cache through the self.caches API. This gives you the arsenal of tools you need to go offline. What is uncommonly seen though is that you can access the cache API in the browser (not just through SW). You can do that using window.cache which is useful for progressively building a progressive web app.",
-  //   },
-  //   workshop: null,
-  //   previousTalks: [],
-  //   otherTalks: [],
-  // },
-  // {
-  //   name: "jeffrey",
-  //   fullName: "Jeffrey Lembeck",
-  //   permalink: "jeffrey-lembeck",
-  //   firstName: "Jeff",
-  //   reference: "him",
-  //   position: "Engineering Manager",
-  //   company: "Eaze",
-  //   img: "jeffrey-lembeck.jpg",
-  //   github: "https://github.com/jefflembeck",
-  //   twitter: "https://twitter.com/jefflembeck/",
-  //   description:
-  //     "Jeff Lembeck is an Engineering Manager with Eaze. He thinks about code and how people write it, talks a lot, and is the former organizer of SeattleJS. When far away from a computer, Jeff seeks out oyster happy hours and longs for a hot tub boat to call home.",
-  //   talk: {
-  //     title: "How to Train Your Manager",
-  //     description: `
-  //     <p>A manager is a special beast, one that most every engineer must have. In order to truly succeed as a hero to your organization, you have to make sure that manager works with you. Unfortunately, they are a stubborn group and require a lot of training. But how?</p>
-  //     <p>That's where I come in. In this talk, I'll teach you how to speak their language, avoid common pitfalls, and help influence the culture of your engineering organization, all by training your manager.</p>`,
-  //   },
-  //   workshop: null,
-  //   previousTalks: [],
-  //   otherTalks: [
-  //     {
-  //       url: "https://www.youtube.com/watch?v=E7n7XThDewY",
-  //       name: "Moneyball for Performance Metrics @ CSSConf.Asia 2015",
-  //     },
-  //   ],
-  // },
   {
     name: 'stefan',
     fullName: 'Stefan Judis',
@@ -65,7 +14,12 @@ export default [
     description: `Stefan fell in love with web performance, new technologies, and accessibility. He is also a curator of the online resource Tiny helpers, contributes to a variety of open source projects, and enjoys sharing nerdy discoveries.`,
     talk: null,
     workshop: null,
-    previousTalks: [],
+    previousTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=0cbCxfJMfx0',
+        name: 'What the v...DOM?',
+      },
+    ],
     otherTalks: [],
   },
   {
@@ -100,7 +54,12 @@ export default [
     description: `Sara is a Frontend Developer from Portugal 🇵🇹 living in Berlin 🇩🇪. She work at Remote and make a lot of random projects because she believes that the web needs some dumb shit. She also wrote a book called The Opinionated Guide to React.`,
     talk: null,
     workshop: null,
-    previousTalks: [],
+    previousTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=_XJFeSZV6FI',
+        name: 'The Dream of Styleguide Driven Development',
+      },
+    ],
     otherTalks: [],
   },
   {
@@ -166,7 +125,36 @@ export default [
       'Ives loves building things that other people can use to build things. He started CodeSandbox as an open source project when he was studying, and as it grew he started working full-time on it.',
     talk: null,
     workshop: null,
-    previousTalks: [],
+    previousTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=DQtj811KIT4',
+        name: 'CodeSandbox',
+      },
+    ],
+    otherTalks: [],
+  },
+  {
+    name: 'natalia',
+    fullName: 'Natalia Tepluhina',
+    permalink: 'natalia-tepluhina',
+    firstName: 'Natalia',
+    reference: 'her',
+    position: 'Core team member',
+    company: 'Vue.js',
+    img: 'natalia-tepluhina.jpg',
+    twitter: 'https://twitter.com/N_Tepluhina',
+    github: 'https://www.nataliatepluhina.com/',
+    description: `<p>Natalia Tepluhina is a Vue.js core team member and a Staff Frontend Engineer at GitLab.</p> 
+
+<p>She is a conference speaker and author of articles on different topics related to Vue.js. Thanks to these activities Natalia has got a title of Google Developer Expert in Web Technologies.</p>`,
+    talk: null,
+    workshop: null,
+    previousTalks: [
+      {
+        url: 'https://www.youtube.com/watch?v=vS1-jzngpmw',
+        name: 'The Magic of RxJS',
+      },
+    ],
     otherTalks: [],
   },
   {
