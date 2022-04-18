@@ -16,11 +16,11 @@ const Footer = () => (
       </div>
       <div>
         <span className="headline">JSHeroes 2022</span>
-        <div>
+        {/* <div>
           <span className="link">
             <Link href="/become-a-sponsor">Become a Sponsor</Link>
           </span>
-        </div>
+        </div> */}
         <div>
           <span className="link">
             <Link href="/speak-at-jsheroes">Give a Talk at JSHeroes</Link>
