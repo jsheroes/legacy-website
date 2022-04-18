@@ -47,7 +47,7 @@ export default [
     {
     title: 'Accesa',
     img: 'logo_accesa.png',
-    href: 'https://careers.accesa.eu/',
+    href: 'https://accesa.eu/',
   },
   {
     title: 'Frequentis',
