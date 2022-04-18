@@ -20,7 +20,7 @@ const Sponsors = ({ baseUrl, sponsors }) => (
           </ul>
         </div>
       )}
-      <CTAButton url="/become-a-sponsor">Become a Sponsor</CTAButton>
+      {/* <CTAButton url="/become-a-sponsor">Become a Sponsor</CTAButton> */}
     </div>
     <style jsx>
       {`
