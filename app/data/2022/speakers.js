@@ -12,7 +12,12 @@ export default [
     twitter: 'https://twitter.com/stefanjudis',
     website: 'https://www.stefanjudis.com',
     description: `Stefan fell in love with web performance, new technologies, and accessibility. He is also a curator of the online resource Tiny helpers, contributes to a variety of open source projects, and enjoys sharing nerdy discoveries.`,
-    talk: null,
+    talk: {
+      title: 'Back to boring',
+      description: `
+      <p>Web development reinvents itself every day. There are new tools, redefined best practices, and everything’s changing, always… But are we on the right track? And if so, what could possibly come next?</p>
+      <p>Let’s look at new (and old) Frontend trends to find out, if we're reinventing the wheel for a reason or if sites built yesterday are maybe as good as the cutting edge.</p>`,
+    },
     workshop: null,
     previousTalks: [
       {
@@ -36,7 +41,7 @@ export default [
     description: `<p>Carolyn (she/her) is a software engineer and former technical writer based in Berlin, Germany. She’s currently working as a frontend engineer at BRYTER, a no-code decision automation platform.</p> 
 
 <p>Out of office, Carolyn is a freelance journalist and writes about the intersections of technology and intimacy for outlets like Future of Sex, Autostraddle, Silicon Allee and <a href="https://workwithcarolyn.com/words" target="_blank">elsewhere</a>. You can find her most places on the Internet <a href="https://twitter.com/carolstran/" target="_blank">@carolstran</a>.</p>`,
-    talk: null,
+    talk: {},
     workshop: null,
     previousTalks: [],
     otherTalks: [],
@@ -52,7 +57,7 @@ export default [
     img: 'sara-vieira.png',
     twitter: 'https://twitter.com/NikkitaFTW',
     description: `Sara is a Frontend Developer from Portugal 🇵🇹 living in Berlin 🇩🇪. She work at Remote and make a lot of random projects because she believes that the web needs some dumb shit. She also wrote a book called The Opinionated Guide to React.`,
-    talk: null,
+    talk: {},
     workshop: null,
     previousTalks: [
       {
@@ -73,7 +78,12 @@ export default [
     img: 'andrei-pfeiffer.png',
     twitter: 'https://twitter.com/pfeiffer_andrei',
     description: `Eclectic code designer, developing websites and web apps since 2000. Currently working as an UI Engineer, his everyday battles revolve around Clean Code Design, User & Developer Experience and fighting software entropy. He’s part of the core team at the revo.js conference and an organizer of tim.js since 2013, the local JavaScript meetup.`,
-    talk: null,
+    talk: {
+      title: 'The evolution of scalable CSS',
+      description: `
+      <p>CSS is easy to learn but challenging to master. Writing and maintaining a large CSS codebase requires constant effort, strict rules, and proper tooling.</p>
+      <p>This talk is a well-researched chronicle describing how CSS tools and techniques have evolved during the past 20 years. The goal is to present an objective view of the current and future state of writing maintainable CSS at scale, dissecting the weapons and tactics at our disposal in fighting against CSS entropy.</p>`,
+    },
     workshop: null,
     previousTalks: [],
     otherTalks: [],
@@ -91,7 +101,7 @@ export default [
     twitter: 'https://twitter.com/AnjanaVakil/',
     description:
       'A chronically curious teacher-turned-developer, Anjana spreads the joy of coding at events worldwide. She’s a Senior Developer Advocate at Hasura and alumna of the Recurse Center & Outreachy.',
-    talk: null,
+    talk: {},
     workshop: null,
     previousTalks: [
       {
@@ -123,7 +133,7 @@ export default [
     github: 'https://github.com/CompuIves',
     description:
       'Ives loves building things that other people can use to build things. He started CodeSandbox as an open source project when he was studying, and as it grew he started working full-time on it.',
-    talk: null,
+    talk: {},
     workshop: null,
     previousTalks: [
       {
@@ -147,7 +157,7 @@ export default [
     description: `<p>Natalia Tepluhina is a Vue.js core team member and a Staff Frontend Engineer at GitLab.</p> 
 
 <p>She is a conference speaker and author of articles on different topics related to Vue.js. Thanks to these activities Natalia has got a title of Google Developer Expert in Web Technologies.</p>`,
-    talk: null,
+    talk: {},
     workshop: null,
     previousTalks: [
       {
@@ -155,6 +165,23 @@ export default [
         name: 'The Magic of RxJS',
       },
     ],
+    otherTalks: [],
+  },
+  {
+    name: 'rares',
+    fullName: 'Rares Matei',
+    permalink: 'rares-matei',
+    firstName: 'Rares',
+    reference: 'him',
+    position: 'NxCloud core team',
+    company: 'Nrwl.io',
+    img: 'rares-matei.png',
+    twitter: 'https://twitter.com/__rares',
+    description:
+      'From the faraway lands of Scotland (but without the Scottish accent), Rareș works at Nrwl.io on NxCloud, helping teams speed up and scale their development practices. He enjoys learning by teaching and has multiple courses on Egghead.io and is a Scotland organiser for Codebar.io.',
+    talk: {},
+    workshop: null,
+    previousTalks: [],
     otherTalks: [],
   },
   {
@@ -169,7 +196,7 @@ export default [
     twitter: 'https://twitter.com/Madalinadraws',
     website: 'https://www.madalinatantareanu.com/',
     description: '',
-    talk: null,
+    talk: {},
     workshop: null,
     previousTalks: [],
     otherTalks: [],
