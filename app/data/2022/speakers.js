@@ -101,7 +101,11 @@ export default [
     twitter: 'https://twitter.com/AnjanaVakil/',
     description:
       'A chronically curious teacher-turned-developer, Anjana spreads the joy of coding at events worldwide. She’s a Senior Developer Advocate at Hasura and alumna of the Recurse Center & Outreachy.',
-    talk: {},
+    talk: {
+      title: 'Big Time Realtime: Streaming data with GraphQL',
+      description: `<p>One of the advantages of GraphQL is that it provides great ergonomics for working with realtime data via subscriptions: long-lived, query-like operations that allow us to continuously receive data updates from the server, without worrying too much about the underlying data transfer details. But what <i>do</i> we need to worry about when developing realtime apps with GraphQL, especially if we’re trying to do so at scale? And if we run into performance problems (spoiler: we will!), what can we do about it?</p>
+      <p>In this talk, we’ll dig into how GraphQL subscriptions work, and some of the resulting challenges that crop up for developers when dealing with huge amounts of data. We’ll explore approaches to addressing those challenges as implemented in Hasura’s open-source GraphQL engine, with the goal of a better developer experience for building scalable realtime apps.</p>`,
+    },
     workshop: null,
     previousTalks: [
       {
@@ -157,7 +161,11 @@ export default [
     description: `<p>Natalia Tepluhina is a Vue.js core team member and a Staff Frontend Engineer at GitLab.</p> 
 
 <p>She is a conference speaker and author of articles on different topics related to Vue.js. Thanks to these activities Natalia has got a title of Google Developer Expert in Web Technologies.</p>`,
-    talk: {},
+    talk: {
+      title: 'Large scale refactoring: from start to finish',
+      description:
+        'Refactoring large codebase is a pain. You are not sure where to start, how to proceed and you don’t see the light at the end of this tunnel. In my talk, I’ll try to summarize techniques and tools that helped us make a few refactorings at GitLab. Also, I’ll share a history of our failures that taught us how to refactor better.',
+    },
     workshop: null,
     previousTalks: [
       {
@@ -179,6 +187,24 @@ export default [
     twitter: 'https://twitter.com/__rares',
     description:
       'From the faraway lands of Scotland (but without the Scottish accent), Rareș works at Nrwl.io on NxCloud, helping teams speed up and scale their development practices. He enjoys learning by teaching and has multiple courses on Egghead.io and is a Scotland organiser for Codebar.io.',
+    talk: {},
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'siddharth',
+    fullName: 'Siddharth Kshetrapal',
+    permalink: 'siddharth-kshetrapal',
+    firstName: 'Siddharth',
+    reference: 'him',
+    position: 'Design Systems Engineer',
+    company: 'GitHub',
+    img: 'sid.jpg',
+    twitter: 'https://twitter.com/siddharthkp',
+    website: 'https://sid.st/',
+    description:
+      'Siddharth loves thinking about components, he works on the design infrastructure team at GitHub and works on @uidevtools on the side.',
     talk: {},
     workshop: null,
     previousTalks: [],

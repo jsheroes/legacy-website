@@ -50,7 +50,7 @@ export default [
         time: '14:00 - 14:30',
       },
       {
-        speakerRef: '',
+        speakerRef: 'siddharth-kshetrapal',
         time: '14:30 - 15:00',
       },
       {
