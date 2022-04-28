@@ -54,15 +54,15 @@ export default [
     img: 'logo_frequentis.jpg',
     href: 'https://www.frequentis.com/',
   },
+  {
+    title: 'TEC: Digital Agency',
+    img: 'logo_tec.png',
+    href: 'https://www.tec-agency.com/',
+  },
   // {
   //   title: 'teleportHQ',
   //   img: 'logo_teleporthq.png',
   //   href: 'https://teleporthq.io/',
-  // },
-  // {
-  //   title: 'Arobs',
-  //   img: 'logo_arobs.png',
-  //   href: 'https://www.arobs.com/',
   // },
   // {
   //   title: 'Macadamian',
