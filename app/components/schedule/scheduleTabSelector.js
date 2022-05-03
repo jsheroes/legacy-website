@@ -39,7 +39,7 @@ class ScheduleTabSelector extends Component {
 
   render() {
     const { schedule } = this.props;
-    const button = this.buildCTAButton();
+    // const button = this.buildCTAButton();
 
     return (
       <div>
@@ -51,7 +51,7 @@ class ScheduleTabSelector extends Component {
             ))}
           </TabPanels>
         </Tabs>
-        <div className="cta-button clearfix">{button}</div>
+        {/* <div className="cta-button clearfix">{button}</div> */}
         <style jsx global>
           {`
             .tablist {

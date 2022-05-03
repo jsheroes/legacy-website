@@ -3,7 +3,7 @@ import Section from '../common/section';
 import RawHtml from '../common/rawHtml';
 import { styles, mediaQueries } from '../../constants';
 import store from '../../data';
-import CTAButton from '../common/ctaButton';
+// import CTAButton from '../common/ctaButton';
 import Link from '../common/link';
 
 const SpeakerDetail = ({ speaker, year }) => {
@@ -82,9 +82,9 @@ const SpeakerDetail = ({ speaker, year }) => {
                     </div>
                     <div>Join {speaker.reference} at JSHeroes!</div>
                   </div>
-                  <CTAButton url="https://ti.to/jsheroes/2022" align="left">
+                  {/* <CTAButton url="https://ti.to/jsheroes/2022" align="left">
                     Buy Your Ticket
-                  </CTAButton>
+                  </CTAButton> */}
                 </aside>
               )}
             </div>
@@ -113,7 +113,7 @@ const SpeakerDetail = ({ speaker, year }) => {
                   </div>
                   <div>Join {speaker.reference} at JSHeroes!</div>
                 </div>
-                <CTAButton url="https://ti.to/jsheroes/2022">Buy Your Ticket</CTAButton>
+                {/* <CTAButton url="https://ti.to/jsheroes/2022">Buy Your Ticket</CTAButton> */}
               </div>
             )}
           </div>
