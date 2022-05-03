@@ -6,7 +6,7 @@ export default [
     firstName: 'Stefan',
     reference: 'him',
     position: 'Devrel',
-    company: 'Contentful',
+    company: 'Checkly',
     img: 'stefan-judis.jpg',
     github: 'https://github.com/stefanjudis',
     twitter: 'https://twitter.com/stefanjudis',
@@ -57,7 +57,11 @@ export default [
     img: 'sara-vieira.png',
     twitter: 'https://twitter.com/NikkitaFTW',
     description: `Sara is a Frontend Developer from Portugal 🇵🇹 living in Berlin 🇩🇪. She work at Remote and make a lot of random projects because she believes that the web needs some dumb shit. She also wrote a book called The Opinionated Guide to React.`,
-    talk: {},
+    talk: {
+      title: 'Opening your appetite for 3D in the web',
+      description:
+        'Creating 3D experiences in the web can be something that sounds very daunting. I’m here to remove this idea from your mind and show you that the 3D world is for everyone. For that we will get a model from the 3D software Blender into the web packed with animations, accessibility controls and optimised for web use so join me in this journey as we make the web more awesome.',
+    },
     workshop: null,
     previousTalks: [
       {
@@ -181,13 +185,17 @@ export default [
     permalink: 'rares-matei',
     firstName: 'Rares',
     reference: 'him',
-    position: 'NxCloud core team',
+    position: 'Working on NxCloud',
     company: 'Nrwl.io',
     img: 'rares-matei.png',
     twitter: 'https://twitter.com/__rares',
     description:
       'From the faraway lands of Scotland (but without the Scottish accent), Rareș works at Nrwl.io on NxCloud, helping teams speed up and scale their development practices. He enjoys learning by teaching and has multiple courses on Egghead.io and is a Scotland organiser for Codebar.io.',
-    talk: {},
+    talk: {
+      title: 'The monorepo: self-organising codebases and automatic scaling',
+      description: `<p>The growing complexity and power of the JavaScript ecosystem has recently made monorepos popular as a way to collaborate across teams, increase developer mobility and solve the pains of shared library versioning. But because of how large they can grow, the architecture can quickly get messy and CI times can increase exponentially.</p>
+      <p>In this talk we’re going to look at what monorepos are, what problems they solve, pitfalls to watch out for, and then see how different tools can step in and make working in monorepos a delight. We’ll eventually focus in on the open source project Nx, which allows you to automate how your architecture is allowed to grow in a monorepo, and, with its deep knowledge of your project graph, it can optimise CI times, keeping them constant, sometimes making them faster, and in some cases, almost instant.</p>`,
+    },
     workshop: null,
     previousTalks: [],
     otherTalks: [],
@@ -206,6 +214,63 @@ export default [
     description:
       'Siddharth loves thinking about components, he works on the design infrastructure team at GitHub and works on @uidevtools on the side.',
     talk: {},
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'anca',
+    fullName: 'Anca Spatariu',
+    permalink: 'anca-spatariu',
+    firstName: 'Anca',
+    reference: 'her',
+    position: 'Frontend Developer',
+    company: 'WeVideo',
+    img: 'anca-spatariu.jpg',
+    twitter: 'https://twitter.com/anca_spatariu',
+    description:
+      "Anca works as a Frontend Developer at WeVideo, but in her spare time she loves playing with JavaScript and uses it in unexpected ways. She's an IoT enthusiast, loves her dog and would never turn down sushi 🍣 or pizza 🍕.",
+    talk: {
+      title: 'I can read your mind using JavaScript',
+    },
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'bogdan',
+    fullName: 'Bogdan Zaharia',
+    permalink: 'bogdan-zaharia',
+    firstName: 'Bogdan',
+    reference: 'him',
+    position: 'Staff Developer',
+    company: 'Hootsuite',
+    img: 'bogdan-zaharia.jpg',
+    twitter: 'https://twitter.com/zaboco',
+    description:
+      "Bogdan is passionate about the modern web and likes exploring the tools & technologies of the future. He's also in the quest of finding the cleanest architecture for web projects.",
+    talk: {
+      title: 'The web beyond node_modules',
+    },
+    workshop: null,
+    previousTalks: [],
+    otherTalks: [],
+  },
+  {
+    name: 'daniel',
+    fullName: 'Daniel Mocan',
+    permalink: 'daniel-mocan',
+    firstName: 'Daniel',
+    reference: 'him',
+    position: 'Software Developer',
+    company: 'Fortech',
+    img: 'daniel-mocan.png',
+    twitter: 'https://twitter.com/danielsmocan',
+    description: `<p>Daniel is a software engineer working at Fortech. At the beginng he started as a frontend developer but slowly moved to full stack development, working with React on the frontend and NodeJS on the backend. Passionate about knowledge sharing and communities he is involved in communities inside the company and in the local JS community.</p>
+    <p>In his spare time Daniel likes to travel, he especially enjoys driving through mountain areas.</p>`,
+    talk: {
+      title: 'The web beyond node_modules',
+    },
     workshop: null,
     previousTalks: [],
     otherTalks: [],

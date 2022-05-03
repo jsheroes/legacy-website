@@ -54,8 +54,16 @@ export default [
         time: '14:30 - 15:00',
       },
       {
-        overrideTitle: 'Lightning Talks',
-        time: '15:00 - 15:30',
+        speakerRef: 'daniel-mocan',
+        time: '15:00 - 15:10',
+      },
+      {
+        speakerRef: 'anca-spatariu',
+        time: '15:10 - 15:20',
+      },
+      {
+        speakerRef: 'bogdan-zaharia',
+        time: '15:20 - 15:30',
       },
       {
         overrideTitle: 'Coffee Break',

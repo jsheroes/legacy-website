@@ -1,5 +1,5 @@
 import { mediaQueries } from '../../constants';
-import CTAButton from '../common/ctaButton';
+// import CTAButton from '../common/ctaButton';
 
 const Header = () => {
   return (
@@ -7,23 +7,26 @@ const Header = () => {
       <div className="hero-content">
         <img className="hero-logo" src="/static/img/website_logo_2022.svg" alt="JSHeroes" />
         <div className="hero-text-wrapper">
-          <span className="hero-details hero-text-blue"><span className="hero-semibold-text">Open-Source</span> Community Event</span>
+          <span className="hero-details hero-text-blue">
+            <span className="hero-semibold-text">Open-Source</span> Community Event
+          </span>
           <p>
-            <span className="hero-date">June <span className="hero-date-day">9th</span> 2022</span>
+            <span className="hero-date">
+              June <span className="hero-date-day">9th</span> 2022
+            </span>
           </p>
           <p className="hero-details">in Cluj-Napoca, Romania</p>
           <p className="hero-details">#ReturnOfTheHeroes</p>
         </div>
-        <CTAButton primary url="https://ti.to/jsheroes/2022">
+        {/* <CTAButton primary url="https://ti.to/jsheroes/2022">
           Buy Ticket
-        </CTAButton>
+        </CTAButton> */}
       </div>
 
       <style jsx>
         {`
           .hero-wrapper {
-            background: url('/static/img/jsh-photo-homepage.jpg') center center
-              no-repeat;
+            background: url('/static/img/jsh-photo-homepage.jpg') center center no-repeat;
             background-size: 100%;
             height: 700px;
             display: flex;
@@ -53,7 +56,7 @@ const Header = () => {
           }
 
           .hero-text-blue {
-            color: #4D88C9
+            color: #4d88c9;
           }
 
           .hero-date {
@@ -81,7 +84,6 @@ const Header = () => {
             .hero-wrapper {
               height: 500px;
               background-size: 150%;
-
             }
 
             .hero-logo {
@@ -103,8 +105,7 @@ const Header = () => {
 
           @media (max-width: ${mediaQueries.S}) {
             .hero-wrapper {
-              background: url('/static/img/jsh-photo-homepage-tablet.jpg') center center
-              no-repeat;
+              background: url('/static/img/jsh-photo-homepage-tablet.jpg') center center no-repeat;
               margin-top: 50px;
             }
 
