@@ -269,7 +269,7 @@ export default [
     description: `<p>Daniel is a software engineer working at Fortech. At the beginng he started as a frontend developer but slowly moved to full stack development, working with React on the frontend and NodeJS on the backend. Passionate about knowledge sharing and communities he is involved in communities inside the company and in the local JS community.</p>
     <p>In his spare time Daniel likes to travel, he especially enjoys driving through mountain areas.</p>`,
     talk: {
-      title: 'The web beyond node_modules',
+      title: 'Simple data fetching with React Query',
     },
     workshop: null,
     previousTalks: [],
