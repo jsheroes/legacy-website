@@ -59,16 +59,17 @@ export default [
     img: 'logo_tec.png',
     href: 'https://www.tec-agency.com/',
   },
+    {
+    title: 'Flowx.AI',
+    img: 'logo_flowxai.png',
+    href: 'https://www.flowx.ai/',
+  },
   // {
   //   title: 'teleportHQ',
   //   img: 'logo_teleporthq.png',
   //   href: 'https://teleporthq.io/',
   // },
-  // {
-  //   title: 'Macadamian',
-  //   img: 'logo_macadamian.png',
-  //   href: 'https://www.macadamian.com/',
-  // },
+
   // {
   //   title: 'Modus Create',
   //   img: 'logo_modus.png',
