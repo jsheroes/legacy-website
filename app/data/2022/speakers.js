@@ -41,7 +41,12 @@ export default [
     description: `<p>Carolyn (she/her) is a software engineer and former technical writer based in Berlin, Germany. She’s currently working as a frontend engineer at BRYTER, a no-code decision automation platform.</p> 
 
 <p>Out of office, Carolyn is a freelance journalist and writes about the intersections of technology and intimacy for outlets like Future of Sex, Autostraddle, Silicon Allee and <a href="https://workwithcarolyn.com/words" target="_blank">elsewhere</a>. You can find her most places on the Internet <a href="https://twitter.com/carolstran/" target="_blank">@carolstran</a>.</p>`,
-    talk: {},
+    talk: {
+      title: 'Humanizing Your Documentation',
+      description: `
+      <p>It’s no secret that most people don’t read technical documentation for pleasure. Users often come to your docs when they are frustrated with your software, disappointed that they haven't been able to solve the problem on their own and generally feeling pretty low. This is sad, sure, but being aware of these feelings is key for developers and technical writers alike. These emotions frame the reader’s perspective and therefore, should shape the mood of our docs.</p>
+      <p>In this talk, we’ll discuss how the language we use affects our users and the first steps towards writing accessible, approachable and use case-driven documentation.</p>`,
+    },
     workshop: null,
     previousTalks: [],
     otherTalks: [],
