@@ -23,7 +23,7 @@ export default [
       },
       {
         time: '10:00 - 10:30',
-        speakerRef: 'ives-van-hoorne',
+        speakerRef: 'carolyn-stransky',
       },
       {
         overrideTitle: 'Coffee Break',
@@ -70,7 +70,7 @@ export default [
         time: '15:30 - 16:00',
       },
       {
-        speakerRef: 'carolyn-stransky',
+        speakerRef: 'ives-van-hoorne',
         time: '16:00 - 16:30',
       },
       {
