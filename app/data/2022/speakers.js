@@ -218,7 +218,9 @@ export default [
     website: 'https://sid.st/',
     description:
       'Siddharth loves thinking about components, he works on the design infrastructure team at GitHub and works on @uidevtools on the side.',
-    talk: {},
+    talk: {
+      title: 'Code crimes for good component APIs'
+    },
     workshop: null,
     previousTalks: [],
     otherTalks: [],
