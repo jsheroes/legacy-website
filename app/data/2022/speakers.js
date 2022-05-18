@@ -146,7 +146,9 @@ export default [
     github: 'https://github.com/CompuIves',
     description:
       'Ives loves building things that other people can use to build things. He started CodeSandbox as an open source project when he was studying, and as it grew he started working full-time on it.',
-    talk: {},
+    talk: {
+      title: 'Learnings from building a company from an open source project'
+    },
     workshop: null,
     previousTalks: [
       {
