@@ -58,12 +58,12 @@ export default [
     label: "speakers",
     whitelist: ["/2017", "/2018", "/2019", "/2022"],
   },
-  // {
-  //   id: 2,
-  //   url: '/#schedule',
-  //   label: 'schedule',
-  //   blacklist: ['/2017', '/2018', '/2019'],
-  // },
+  {
+    id: 2,
+    url: '/#schedule',
+    label: 'schedule',
+    blacklist: ['/2017', '/2018', '/2019', '/2022'],
+  },
   // {
   //   id: 2.1,
   //   url: '#schedule',

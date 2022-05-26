@@ -64,11 +64,11 @@ export default [
     img: 'logo_flowxai.png',
     href: 'https://www.flowx.ai/',
   },
-  // {
-  //   title: 'teleportHQ',
-  //   img: 'logo_teleporthq.png',
-  //   href: 'https://teleporthq.io/',
-  // },
+  {
+    title: 'teleportHQ',
+    img: 'logo_teleporthq.svg',
+    href: 'https://teleporthq.io/',
+  },
 
   // {
   //   title: 'Modus Create',
