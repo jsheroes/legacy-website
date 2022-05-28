@@ -103,17 +103,17 @@ export default [
     permalink: 'anjana-vakil',
     firstName: 'Anjana',
     reference: 'her',
-    position: 'Senior Developer Advocate',
-    company: 'Hasura',
+    position: 'Software Engineer & Educator',
+    company: '',
     img: 'anjana.jpg',
     github: 'https://github.com/vakila',
     twitter: 'https://twitter.com/AnjanaVakil/',
     description:
-      'A chronically curious teacher-turned-developer, Anjana spreads the joy of coding at events worldwide. She’s a Senior Developer Advocate at Hasura and alumna of the Recurse Center & Outreachy.',
+      'A chronically curious teacher-turned-developer, Anjana is a polyglot software engineer & public speaker who spreads the joy of coding at events worldwide. She`s an alumna of the Recurse Center & Outreachy and an avid karaoke enthusiast.',
     talk: {
-      title: 'Big Time Realtime: Streaming data with GraphQL',
-      description: `<p>One of the advantages of GraphQL is that it provides great ergonomics for working with realtime data via subscriptions: long-lived, query-like operations that allow us to continuously receive data updates from the server, without worrying too much about the underlying data transfer details. But what <i>do</i> we need to worry about when developing realtime apps with GraphQL, especially if we’re trying to do so at scale? And if we run into performance problems (spoiler: we will!), what can we do about it?</p>
-      <p>In this talk, we’ll dig into how GraphQL subscriptions work, and some of the resulting challenges that crop up for developers when dealing with huge amounts of data. We’ll explore approaches to addressing those challenges as implemented in Hasura’s open-source GraphQL engine, with the goal of a better developer experience for building scalable realtime apps.</p>`,
+      title: 'The Art of Functional Programming',
+      description: `<p>Functional Programming (FP), a paradigm in which programs are made up of pure, stateless functions, is adored by many programmers for how easy it makes it to predict, test, and debug the behavior of the code we write. Although FP has an unfortunate reputation as an ivory-tower domain full of obscure jargon comprehensible only to those with PhDs in category theory, the core concepts are straightforward ideas all of us can understand, and even have fun learning!</p>
+      <p>In this talk, we’ll create generative art as a way to explore fundamental FP concepts such as recursion and function composition, and tackle the practical challenges of FP in the real world, such as dealing with the tricky parts like side effects and randomness which don’t fit into the safe, sterile world of pure functions. By the end of the talk we’ll not only have the key concepts & techniques we need to start writing our own functional programs, we’ll have some nice SVG art to look at too!</p>`,
     },
     workshop: null,
     previousTalks: [
