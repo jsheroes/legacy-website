@@ -24,11 +24,9 @@ const Venue = () => (
 
       <p>
         The health and safety of our staff, partners, and event participants is our top priority.
-        This year, we will be implementing new policies and procedures based on the latest guidance
-        from national and local health officials on preventing the transmission of COVID-19. We will
-        require everyone who joins us to provide <strong>valid proof of vaccination</strong>, wear a{' '}
-        <strong>mask</strong> while inside, and follow all other safety protocols as directed by
-        event organizers.
+        We are following the latest policies and procedures issued by our
+        national and local health officials on preventing the transmission of COVID-19. Wearing masks is recommended, but not enforced.
+        If you do not have a mask with you, we can provide one at the registration.
       </p>
     </div>
 
