@@ -51,7 +51,7 @@ class Speakers extends Component {
             <h2>{title}</h2>
             {isCurrentYear && (
               <div>
-                <p>Say hello to this year's speakers!</p>
+                <p>Thank you to our wonderful speakers from 2022!</p>
               </div>
             )}
           </div>

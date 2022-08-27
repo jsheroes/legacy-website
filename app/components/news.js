@@ -6,24 +6,14 @@ const Updates = () => {
   return (
     <Section>
       <div id="news" className="wrapper text-left">
-        <h1>JSHeroes is back! (and sold out)</h1>
+        <h1>See You in 2023</h1>
         <p>
-          Hey folks! Did you miss us? Because we definitely missed you! We missed the busy hallways,
-          the full-house conference room, the enriching keynotes to share with like-minded people,
-          coffee breaks, laughs, and most of all, we missed the unique vibes we are creating
-          together!
+          We had a blast in 2022 and we were super happy to see you all in person again after 3
+          years. So based on this experience, we're coming back in 2023 with a two-day event, a
+          format that used to be our way to go in a pre-pandemic world.
         </p>
-        <p>
-          Are you ready for the <strong>#ReturnOfTheHeroes</strong>? Even if the pandemic is not
-          over, we decided to take action and organize our community event this June. We’ll embody
-          the JSHeroes experience into a <strong>one-day in-person event</strong>, designed with a
-          limit of <strong>300</strong> people. It will be a new format and a new type of challenge
-          for us. But we promise we’ll do our best to create the same fun, engaging and cozy
-          experience that you all came to know as <strong>JSHeroes</strong>.
-        </p>
-        <p>
-          As of May 2nd, we are officially <strong>SOLD OUT</strong>! See you all in June.
-        </p>
+
+        <p>Looking forward to seeing you all back in Cluj, on the 18th and 19th of May 2023!</p>
       </div>
 
       <style jsx global>
