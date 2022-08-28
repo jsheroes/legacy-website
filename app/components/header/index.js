@@ -12,7 +12,7 @@ const Header = () => {
           </span>
           <p>
             <span className="hero-date">
-              June <span className="hero-date-day">9th</span> 2022
+              May <span className="hero-date-day">18-19th</span> 2023
             </span>
           </p>
           <p className="hero-details">in Cluj-Napoca, Romania</p>

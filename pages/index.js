@@ -5,6 +5,7 @@ import Header from '../app/components/header';
 import News from '../app/components/news';
 import Speakers from '../app/components/speakers';
 import Theme from '../app/components/theme';
+import AfterMovie from '../app/components/afterMovie';
 // import Funds from '../app/components/funds';
 import Schedule from '../app/components/schedule';
 // import Statistics from '../app/components/statistics';
@@ -29,10 +30,10 @@ const buildComponent = (currentStore, year = '2022') => {
     <Layout>
       <Header />
       <News />
+      <AfterMovie year={2022} />
       <Speakers {...{ baseUrl, year, speakers }} />
-      {/* <AfterMovie year={2019} /> */}
-      <Theme />
-      <Schedule {...{ baseUrl, year, schedule, speakers }} />
+      {/* <Theme /> */}
+      {/* <Schedule {...{ baseUrl, year, schedule, speakers }} /> */}
       {/* <Funds /> */}
       <Mission />
       <Sponsors {...{ baseUrl, sponsors }} />
