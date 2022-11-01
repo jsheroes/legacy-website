@@ -1,10 +1,6 @@
-# jsheroes.io
+# Old jsheroes.io
 
-This repo contains the code for our JavaScript International Conference site hosted here: [https://jsheroes.io](https://jsheroes.io) The site is built on top of Next.js.
-
-[![Build Status](https://travis-ci.org/jsheroes/jsheroes.io.svg?branch=master)](https://travis-ci.org/jsheroes/jsheroes.io)
-
-[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=jsheroes_jsheroes.io&metric=alert_status)](https://sonarcloud.io/dashboard?id=jsheroes_jsheroes.io)
+This repo contains the old codebase for jsheroes.io, back when it was built with next.js
 
 ## Installation
 
