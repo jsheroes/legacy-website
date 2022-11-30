@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "name": "jsheroes",
-  "alias": "jsheroes.io",
-  "env": {
-    "SENDGRID_API_KEY": "@sendgrid_api_key"
-  }
-}
