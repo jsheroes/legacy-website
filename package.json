@@ -6,8 +6,8 @@
   "scripts": {
     "linter": "eslint -c .eslintrc.json app pages --quiet",
     "dev": "node server.js",
-    "build": "next build && node scripts/generateServiceWorker.js",
-    "start": "NODE_ENV=production node server.js",
+    "build": "next build",
+    "start": "next start",
     "format": "prettier --config .prettierrc --ignore-path .prettierignore --write '**/*.{js,css,md}'",
     "precommit": "lint-staged",
     "test:e2e": "cypress run",
