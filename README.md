@@ -26,3 +26,4 @@ Copy `config.example.js` into `config.js` and put there your own settings and la
 ```bash
 npm run dev
 ```
+
