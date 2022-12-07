@@ -44,7 +44,7 @@
     "eslint-plugin-react": "^7.17.0",
     "husky": "^3.1.0",
     "lighthouse-ci": "git+https://github.com/ebidel/lighthouse-ci.git",
-    "lint-staged": "^8.1.6",
+    "lint-staged": "^13.1.0",
     "prettier": "^1.19.1",
     "wait-on": "^3.3.0"
   },
