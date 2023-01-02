@@ -22,7 +22,7 @@
     "@sendgrid/mail": "^6.4.0",
     "google-map-react": "^1.1.5",
     "intersection-observer": "^0.7.0",
-    "next": "^9.1.4",
+    "next": "^9.5.5",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
